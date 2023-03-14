@@ -11,16 +11,19 @@ namespace JobStack
         private string email;
 
         private string senha;
+        private string nome;
 
-        public Coordenador(string n)
+        public Coordenador(string n,string a)
         {
             email = n;
             senha = "";
+            nome = a;
         }
-        public Coordenador(string e, string p)
+        public Coordenador(string e, string p,string m)
         {
             email = e;
             senha = p;
+            nome = m;
         }
 
         public string GetEmail()
@@ -32,6 +35,10 @@ namespace JobStack
         {
             return senha;
         }
+        public string GetNome()
+        {
+            return nome;
+        }
         public void SetEmail(string e)
         {
             email = e;
@@ -40,6 +47,10 @@ namespace JobStack
         public void SetSenha(string p)
         {
             senha = p;
+        }
+        public void SetNome(string m)
+        {
+            nome=m;
         }
     }
 }
