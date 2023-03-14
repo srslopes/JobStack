@@ -8,14 +8,14 @@ namespace JobStack
 {
     class BancodeDados
     {
-        public static List<Aluno> Alunos;
-        public static int indexAluno;
-        public static List<Empresa> Empresas;
-        public static int indexEmpresa;
-        public static List<Admin> Admins;
-        public static int indexAdmin;
-        public static List<Coordenador> Coordenadores;
-        public static int indexCoordenador;
+        private static List<Aluno> Alunos;
+        private static int indexAluno;
+        private static List<Empresa> Empresas;
+        private static int indexEmpresa;
+        private static List<Admin> Admins;
+        private static int indexAdmin;
+        private static List<Coordenador> Coordenadores;
+        private static int indexCoordenador;
         private string[] emails = {"a", "b", "c", "d", "e", "f", "g", "h"};
         private string[] senhas = {"123", "234", "345", "456", "567", "678", "789", "890"};
 
