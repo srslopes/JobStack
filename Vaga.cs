@@ -8,19 +8,19 @@ namespace JobStack
 {
    class Vaga
     {
-        public string tipo;
-        public int quantidade;
-        public string descricao;
-        public string nomeEmpresa;
-        public string status;
+        private string tipo;
+        private int quantidade;
+        private string descricao;
+        private string nomeEmpresa;
+        private int status;
         public Vaga(string a, string b, string c)
         {
             tipo = a;
             descricao = b;
             nomeEmpresa = c;
-            status = "";
+            status = 0;
         }
-        public Vaga(string e, string f, string g, string h)
+        public Vaga(string e, string f, string g, int h)
         {
            tipo = e;
             descricao = f;
@@ -42,7 +42,7 @@ namespace JobStack
         {
             return nomeEmpresa;
         }
-        public string GetStatus()
+        public int GetStatus()
         {
             return status;
         }
@@ -59,7 +59,7 @@ namespace JobStack
         {
             nomeEmpresa = g;
         }
-        public void SetStatus(string h)
+        public void SetStatus(int h)
         {
             status = h;
         }
