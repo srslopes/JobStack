@@ -9,24 +9,19 @@ namespace JobStack
     class Aluno
     {
         private string email;
-        private string nome;
-        private int  ra;
-        private int dataNascimento;
-
         private string senha;
+        
 
 
-        public Aluno(string n,string o,int r,int d)
+        public Aluno(string e)
         {
-            email = n;
-            nome = o;
+            email = e;
             senha = "";
         }
-        public Aluno(string e, string p,string a)
+        public Aluno(string e, string p)
         {
             email = e;
             senha = p;
-            nome = a;
 
         }
 
@@ -48,30 +43,13 @@ namespace JobStack
         {
             senha = p;
         }
-        public string Getnome()
+
+        public void ClonarDe(Aluno a)   //Copia os atributos do objeto indicado para esse objeto
         {
-            return nome;
+            this.SetEmail(a.GetEmail());
+            this.SetEmail(a.GetSenha());            
         }
        
-        
-        public void Setnome(string a)
-        {
-            nome=a;
-        }
-
-
-        public int  DataNascimento
-        {
-            get { return dataNascimento; }
-            set { dataNascimento = value; }
-        }
-
-
-        public int Ra
-        {
-            get { return ra; }
-            set { ra = value; }
-        }
 
     }
 }

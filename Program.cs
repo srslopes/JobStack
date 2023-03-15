@@ -31,7 +31,24 @@ namespace JobStack
             Console.WriteLine("Teste: Excluir Aluno");
             BancodeDados.ExcluirAluno(BancodeDados.BuscarAluno("fulano"));
             BancodeDados.ExibirAlunos();
+            /*
+            string email = "";
+            int usuario = BancodeDados.Login(email);
+            switch (usuario)
+            {
+                case 1:
 
+                    if(BancodeDados.BuscarAluno(email).GetSenha().Equals(campo senha))
+                    {
+                        abre a janela aluno
+                    }
+                    else
+                    {
+                        printa senha incorreta
+                    }
+                    break;
+            }
+            */
             
         }
     }

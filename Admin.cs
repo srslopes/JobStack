@@ -41,5 +41,10 @@ namespace JobStack
         {
             senha = p;
         }
+        public void ClonarDe(Admin a)   //Copia os atributos do objeto indicado para esse objeto
+        {
+            this.SetEmail(a.GetEmail());
+            this.SetEmail(a.GetSenha());
+        }
     }
 }

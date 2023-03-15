@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*********************************************************************************************************************************************
+/                                        MODELO DE BANCO DE DADOS USANDO MEMÓRIA PRINCIPAL                                                   /
+/                          Utiliza listas para armazenar os diferentes tipos de objetos usados no projeto                                    /
+/                                                        Autor: Samuel Lopes                                                                 /
+*********************************************************************************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +13,20 @@ namespace JobStack
 {
     class BancodeDados
     {
-        private static List<Aluno> Alunos;
-        private static int indexAluno;
-        private static List<Empresa> Empresas;
-        private static int indexEmpresa;
-        private static List<Admin> Admins;
-        private static int indexAdmin;
-        private static List<Coordenador> Coordenadores;
-        private static int indexCoordenador;
-        private string[] emails = {"a", "b", "c", "d", "e", "f", "g", "h"};
+        private static List<Aluno> Alunos;                  //Banco de dados dos alunos (Lista de objetos da classe Aluno)
+        private static int indexAluno;                      //Index da posição do aluno pesquisado
+
+        private static List<Empresa> Empresas;              //Banco de dados das empresas (Lista de objetos da classe Empresa)                           
+        private static int indexEmpresa;                    //Index da posição da empresa pesquisada
+
+        private static List<Admin> Admins;                  //Banco de dados dos administradores (Lista de objetos da classe Admin)
+        private static int indexAdmin;                      //Index da posição do administrador pesquisado
+
+        private static List<Coordenador> Coordenadores;     //Banco de dados dos coordenadores (Lista de objetos da classe Coordenador)
+        private static int indexCoordenador;                //Index da posição do coordenador pesquisado
+
+
+        private string[] emails = {"a", "b", "c", "d", "e", "f", "g", "h"};                     //emails e senhas de usuários para popular os bancos de dados
         private string[] senhas = {"123", "234", "345", "456", "567", "678", "789", "890"};
 
         public BancodeDados()
@@ -26,7 +36,7 @@ namespace JobStack
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
             {
                 CriarAluno(emails[i], senhas[i]);
                 
@@ -38,31 +48,37 @@ namespace JobStack
             }
         }
 
-        public static bool CriarAluno(string email, string senha)
+
+        public static bool CriarAluno(string email, string senha) //Método para criar um novo aluno e adicionalo ao banco de dados, retorna falso se o aluno ja existe
         {
             Aluno novo = new Aluno(email, senha);
             if (AlunoExiste(novo)) return false;            
             Alunos.Add(novo);
             return true;
         }
-        public static void ExcluirAluno(Aluno aluno)
+        public static void ExcluirAluno(Aluno aluno)    //Remove o aluno indicado
         {
             Alunos.Remove(aluno);
         }
 
-        public static Aluno BuscarAluno(string email)
+        public static Aluno BuscarAluno(string email)   //Retorna uma cópia do objeto aluno de mesmo email, retorna nulo se não existir
         {
             Aluno chk = new Aluno(email);
-            if (AlunoExiste(chk)) return Alunos[indexAluno];
+            if (AlunoExiste(chk))
+            {
+                chk.ClonarDe(Alunos[indexAluno]);
+                return chk;
+            }
             return null;            
         }
 
-        public static void SalvarAluno(Aluno aluno)
+
+        public static void SalvarAluno(Aluno aluno) //Salva as alterações feitas
         {
-            Alunos[indexAluno] = aluno;
+            Alunos[indexAluno].ClonarDe(aluno);
         }
 
-        public static bool AlunoExiste(Aluno aluno)
+        public static bool AlunoExiste(Aluno aluno) //Retorna verdadeiro se o aluno existe, falso se não
         {
             try
             {
@@ -72,21 +88,19 @@ namespace JobStack
                     return true;
                 }
                 indexAluno = 0;
+                return false;
             }
             catch (System.NullReferenceException)
             {
                 return false;
             }
-            
-            return false;
         }
 
-        public static void ExibirAlunos()
+        public static void ExibirAlunos()   //Exibe, no prompt, os dados dos alunos cadastrados
         {
             try
             {
-                for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++)
-                    Console.WriteLine("Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
+                for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++) Console.WriteLine("Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
             }
             catch(System.ArgumentNullException)
             {
@@ -112,29 +126,48 @@ namespace JobStack
         public static Empresa BuscarEmpresa(string email)
         {
             Empresa chk = new Empresa(email);
-            if (EmpresaExiste(chk)) return Empresas[indexEmpresa];
+            if (EmpresaExiste(chk))
+            {
+                chk.ClonarDe(Empresas[indexEmpresa]);
+                return chk;
+            }
             return null;
         }
 
         public static void SalvarEmpresa(Empresa empresa)
         {
-            Empresas[indexEmpresa] = empresa;
+            Empresas[indexEmpresa].ClonarDe(empresa);
         }
 
         public static bool EmpresaExiste(Empresa empresa)
         {
-            if (Empresas.Exists(obj => obj.GetEmail().Equals(empresa.GetEmail())))
+            try
             {
-                indexEmpresa = Empresas.FindIndex(obj => obj.GetEmail().Equals(empresa.GetEmail()));
-                return true;
+                if (Empresas.Exists(obj => obj.GetEmail().Equals(empresa.GetEmail())))
+                {
+                    indexEmpresa = Empresas.FindIndex(obj => obj.GetEmail().Equals(empresa.GetEmail()));
+                    return true;
+                }
+                indexEmpresa = 0;
+                return false;
             }
-            indexEmpresa = 0;
-            return false;
+            catch (System.NullReferenceException)
+            {
+                return false;
+            }
+
         }
         public static void ExibirEmpresas()
         {
-            for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++)
-                Console.WriteLine("Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+            try
+            {
+                for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++) Console.WriteLine("Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+            }
+            catch (System.ArgumentNullException)
+            {
+                Console.WriteLine("Falha ao exibir Empresas");
+            }
+            
         }
 
 
@@ -153,29 +186,48 @@ namespace JobStack
         public static Admin BuscarAdmin(string email)
         {
             Admin chk = new Admin(email);
-            if (AdminExiste(chk)) return Admins[indexAdmin];
+            if (AdminExiste(chk))
+            {
+                chk.ClonarDe(Admins[indexAdmin]);
+                return chk;
+            }
             return null;
         }
 
         public static void SalvarAdmin(Admin admin)
         {
-            Admins[indexAdmin] = admin;
+            Admins[indexAdmin].ClonarDe(admin);
         }
 
         public static bool AdminExiste(Admin admin)
         {
-            if (Admins.Exists(obj => obj.GetEmail().Equals(admin.GetEmail())))
+            try
             {
-                indexAdmin = Alunos.FindIndex(obj => obj.GetEmail().Equals(admin.GetEmail()));
-                return true;
+                if (Admins.Exists(obj => obj.GetEmail().Equals(admin.GetEmail())))
+                {
+                    indexAdmin = Alunos.FindIndex(obj => obj.GetEmail().Equals(admin.GetEmail()));
+                    return true;
+                }
+                indexAdmin = 0;
+                return false;
             }
-            indexAdmin = 0;
-            return false;
+            catch (System.NullReferenceException)
+            {
+                return false;
+            }
+            
         }
         public static void ExibirAdmins()
         {
-            for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++)
-                Console.WriteLine("Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
+            try
+            {
+                for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++) Console.WriteLine("Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
+            }
+            catch (System.ArgumentNullException)
+            {
+                Console.WriteLine("Falha ao exibir Admins");
+            }
+            
         }
 
 
@@ -196,29 +248,57 @@ namespace JobStack
         public static Coordenador BuscarCoordenador(string email)
         {
             Coordenador chk = new Coordenador(email);
-            if (CoordenadorExiste(chk)) return Coordenadores[indexCoordenador];
+            if (CoordenadorExiste(chk))
+            {
+                chk.ClonarDe(Coordenadores[indexCoordenador]);
+                return chk;
+            }
             return null;
         }
 
         public static void SalvarCoordenadora(Coordenador coordenador)
         {
-            Coordenadores[indexCoordenador] = coordenador;
+            Coordenadores[indexCoordenador].ClonarDe(coordenador);
         }
 
         public static bool CoordenadorExiste(Coordenador coordenador)
         {
-            if (Coordenadores.Exists(obj => obj.GetEmail().Equals(coordenador.GetEmail())))
+            try
             {
-                indexCoordenador = Coordenadores.FindIndex(obj => obj.GetEmail().Equals(coordenador.GetEmail()));
-                return true;
+                if (Coordenadores.Exists(obj => obj.GetEmail().Equals(coordenador.GetEmail())))
+                {
+                    indexCoordenador = Coordenadores.FindIndex(obj => obj.GetEmail().Equals(coordenador.GetEmail()));
+                    return true;
+                }
+                indexCoordenador = 0;
+                return false;
             }
-            indexCoordenador = 0;
-            return false;
+            catch (System.NullReferenceException)
+            {
+                return false;
+            }           
         }
+
         public static void ExibirCoordenadores()
         {
-            for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++)
-                Console.WriteLine("Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
+            try
+            {
+                for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++) Console.WriteLine("Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
+            }
+            catch (System.ArgumentNullException)
+            {
+                Console.WriteLine("Falha ao exibir Coordenadores");
+            }
+            
+        }
+
+        public static int Login(string email)
+        {
+            if (BuscarAluno(email) != null) return 1;
+            if (BuscarEmpresa(email) != null) return 2;
+            if (BuscarAdmin(email) != null) return 3;
+            if (BuscarCoordenador(email) != null) return 4;
+            return 0;
         }
 
     }

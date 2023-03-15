@@ -17,19 +17,15 @@ namespace JobStack
 
 
 
-        public Empresa(string n,string a,string b)
-        {
-            email = n;
-            senha = "";
-            nome = a;
-            endereco = b;
-        }
-        public Empresa(string e, string p,string c,string d)
+        public Empresa(string e)
         {
             email = e;
-            senha = p;
-            nome = c;
-            endereco = d;
+            senha = "";
+        }
+        public Empresa(string e, string s)
+        {
+            email = e;
+            senha =s;
 
         }
 
@@ -42,14 +38,7 @@ namespace JobStack
         {
             return senha;
         }
-        public string GetNome()
-        {
-            return nome;
-        }
-        public string GetEndereco()
-        {
-            return endereco;
-        }
+  
         public void SetEmail(string e)
         {
             email = e;
@@ -59,19 +48,11 @@ namespace JobStack
         {
             senha = p;
         }
-        public void SetNome(string c)
-        {
-            email = c;
-        }
-        public void SetEndereco(string d)
-        {
-            email = d;
-        }
 
-        public int Cnpj
+        public void ClonarDe(Empresa a) //Copia os atributos do objeto indicado para esse objeto
         {
-            get { return cnpj; }
-            set { cnpj = value; }
+            this.SetEmail(a.GetEmail());
+            this.SetEmail(a.GetSenha());
         }
 
     }

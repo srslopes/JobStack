@@ -11,19 +11,16 @@ namespace JobStack
         private string email;
 
         private string senha;
-        private string nome;
 
-        public Coordenador(string n,string a)
+        public Coordenador(string e)
         {
-            email = n;
+            email = e;
             senha = "";
-            nome = a;
         }
-        public Coordenador(string e, string p,string m)
+        public Coordenador(string e, string p)
         {
             email = e;
             senha = p;
-            nome = m;
         }
 
         public string GetEmail()
@@ -35,10 +32,7 @@ namespace JobStack
         {
             return senha;
         }
-        public string GetNome()
-        {
-            return nome;
-        }
+        
         public void SetEmail(string e)
         {
             email = e;
@@ -48,9 +42,12 @@ namespace JobStack
         {
             senha = p;
         }
-        public void SetNome(string m)
+  
+ 
+        public void ClonarDe(Coordenador a) //Copia os atributos do objeto indicado para esse objeto
         {
-            nome=m;
+            this.SetEmail(a.GetEmail());
+            this.SetEmail(a.GetSenha());
         }
     }
 }
