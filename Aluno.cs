@@ -10,9 +10,13 @@ namespace JobStack
     {
         private string email;
         private string senha;
-        
 
 
+        public Aluno()
+        {
+            email = "";
+            senha = "";
+        }
         public Aluno(string e)
         {
             email = e;
@@ -47,7 +51,7 @@ namespace JobStack
         public void ClonarDe(Aluno a)   //Copia os atributos do objeto indicado para esse objeto
         {
             this.SetEmail(a.GetEmail());
-            this.SetEmail(a.GetSenha());            
+            this.SetSenha(a.GetSenha());            
         }
        
 

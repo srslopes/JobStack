@@ -96,15 +96,22 @@ namespace JobStack
             }
         }
 
-        public static void ExibirAlunos()   //Exibe, no prompt, os dados dos alunos cadastrados
+        public static string ExibirAlunos()   //Exibe, no prompt, os dados dos alunos cadastrados
         {
+            string txt = "";
             try
             {
-                for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++) Console.WriteLine("Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
+                for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++)
+                {
+                    txt += "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() +"\n";
+                    Console.WriteLine("Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
+                }
+                return txt;
             }
             catch(System.ArgumentNullException)
             {
                 Console.WriteLine("Falha ao exibir Alunos");
+                return txt;
             }
         }
 

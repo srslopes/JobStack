@@ -17,3 +17,14 @@ C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs
 C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.exe
 C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.pdb
 C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.Login.resources
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csprojAssemblyReference.cache
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Login.resources
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Properties.Resources.resources
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteDB.resources
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.exe
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.pdb
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.exe.config
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.exe
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.pdb

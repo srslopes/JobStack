@@ -16,9 +16,10 @@ namespace JobStack
         {
             BancodeDados DB = new BancodeDados();
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
-            
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Login());
+            Application.Run(new TesteDB());
+
             //bool exec = true;
             Console.WriteLine("Teste: Exibir DB");
             //int op=0;
