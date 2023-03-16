@@ -30,7 +30,12 @@ namespace JobStack
             label2.Text = "Senha";
 
             string senha = textBox2.Text;
-            Console.WriteLine("Senha " + senha);
+            Console.WriteLine("Senha " + senha); label1.Visible = false;
+            textBox1.Visible = false;
+
+            label2.Visible = true;
+            textBox2.Visible = true;
+
 
 
             switch (BancodeDados.Login(email))
@@ -41,39 +46,22 @@ namespace JobStack
                         break;
                     case 1:
                         MessageBox.Show("Usuario é um aluno");
-                    label1.Visible = false;
-                    textBox1.Visible = false;
-
-                    label2.Visible = true;
-                    textBox2.Visible = true;
-                    
+                   
 
                     break;
                     case 2:
                         MessageBox.Show("Usuario é uma empresa");
-                    label1.Visible = false;
-                    textBox1.Visible = false;
-
-                    label2.Visible = true;
-                    textBox2.Visible = true;
+                  
                  
                     break;
                     case 3:
                         MessageBox.Show("Usuario é um administrador");
-                    label1.Visible = false;
-                    textBox1.Visible = false;
-
-                    label2.Visible = true;
-                    textBox2.Visible = true;
+                  
                     
                     break;
                     case 4:
                         MessageBox.Show("Usuario é um coordenador");
-                    label1.Visible = false;
-                    textBox1.Visible = false;
-
-                    label2.Visible = true;
-                    textBox2.Visible = true;
+                   
                
                     break;
               
