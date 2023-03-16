@@ -18,7 +18,7 @@ namespace JobStack
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
-            Application.Run(new TesteDB());
+            Application.Run(new Login());
 
             //bool exec = true;
             Console.WriteLine("Teste: Exibir DB");

@@ -15,28 +15,74 @@ namespace JobStack
         public Login()
         {
             InitializeComponent();
-        }
 
+           label2.Visible = false;
+            textBox2.Visible = false;
+        }
+       
         private void Button1_Click(object sender, EventArgs e)
         {
             label1.Text = "E-mail";
+
             string email = textBox1.Text;
+                Console.WriteLine("Email: " + email);
+
+            label2.Text = "Senha";
+
             string senha = textBox2.Text;
-            Console.WriteLine("Email: " + email);
-            Console.WriteLine("Senha: " + senha);
-            try
-            {
-                if (BancodeDados.BuscarAluno(email).GetSenha().Equals(textBox2.Text)) MessageBox.Show  ("Sucesso");
-                else label1.Text = "Fracasso 1";
+            Console.WriteLine("Senha " + senha);
+
+
+            switch (BancodeDados.Login(email))
+                {
+                    case 0:
+                        MessageBox.Show("Usuario não cadastrado");
+
+                        break;
+                    case 1:
+                        MessageBox.Show("Usuario é um aluno");
+                    label1.Visible = false;
+                    textBox1.Visible = false;
+
+                    label2.Visible = true;
+                    textBox2.Visible = true;
+                    
+
+                    break;
+                    case 2:
+                        MessageBox.Show("Usuario é uma empresa");
+                    label1.Visible = false;
+                    textBox1.Visible = false;
+
+                    label2.Visible = true;
+                    textBox2.Visible = true;
+                 
+                    break;
+                    case 3:
+                        MessageBox.Show("Usuario é um administrador");
+                    label1.Visible = false;
+                    textBox1.Visible = false;
+
+                    label2.Visible = true;
+                    textBox2.Visible = true;
+                    
+                    break;
+                    case 4:
+                        MessageBox.Show("Usuario é um coordenador");
+                    label1.Visible = false;
+                    textBox1.Visible = false;
+
+                    label2.Visible = true;
+                    textBox2.Visible = true;
                
-            }
-            catch (System.NullReferenceException)
-            {
-                label1.Text = "Fracasso 2";
+                    break;
+              
+
             }
 
-            
-            
+
+
+
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -48,6 +94,27 @@ namespace JobStack
             BancodeDados.SalvarAluno(chn);
             BancodeDados.ExibirAlunos();
             //textBox3.Text = BancodeDados.BuscarAluno("a").GetSenha();
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+           
         }
     }
 }

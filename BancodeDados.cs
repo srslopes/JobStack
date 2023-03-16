@@ -311,6 +311,6 @@ namespace JobStack
             if (BuscarCoordenador(email) != null) return 4;
             return 0;
         }
-
+       
     }
 }
