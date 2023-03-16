@@ -212,7 +212,7 @@ namespace JobStack
             {
                 if (Admins.Exists(obj => obj.GetEmail().Equals(admin.GetEmail())))
                 {
-                    indexAdmin = Alunos.FindIndex(obj => obj.GetEmail().Equals(admin.GetEmail()));
+                    indexAdmin = Admins.FindIndex(obj => obj.GetEmail().Equals(admin.GetEmail()));
                     return true;
                 }
                 indexAdmin = 0;
