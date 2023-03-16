@@ -71,5 +71,11 @@ namespace JobStack
                 AtualizarLista();
             }
         }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            BancodeDados.ExcluirAluno(BancodeDados.BuscarAluno(textBox1.Text));
+            AtualizarLista();
+        }
     }
 }

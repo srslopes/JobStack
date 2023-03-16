@@ -54,11 +54,12 @@ namespace JobStack
             Aluno novo = new Aluno(email, senha);
             if (AlunoExiste(novo)) return false;            
             Alunos.Add(novo);
+            indexAluno = Alunos.IndexOf(novo);
             return true;
         }
         public static void ExcluirAluno(Aluno aluno)    //Remove o aluno indicado
         {
-            Alunos.Remove(aluno);
+            Alunos.Remove(Alunos[indexAluno]);
         }
 
         public static Aluno BuscarAluno(string email)   //Retorna uma cópia do objeto aluno de mesmo email, retorna nulo se não existir
@@ -103,7 +104,7 @@ namespace JobStack
             {
                 for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++)
                 {
-                    txt += "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() +"\n";
+                    txt += "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() +" \n";
                     Console.WriteLine("Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
                 }
                 return txt;
@@ -122,6 +123,7 @@ namespace JobStack
             Empresa novo = new Empresa(email, senha);
             if (EmpresaExiste(novo)) return false;
             Empresas.Add(novo);
+            indexEmpresa = Empresas.IndexOf(novo);
             return true;
         }
 
@@ -183,6 +185,7 @@ namespace JobStack
             Admin novo = new Admin(email, senha);
             if (AdminExiste(novo)) return false;
             Admins.Add(novo);
+            indexAdmin = Admins.IndexOf(novo);
             return true;
         }
         public static void ExcluirAdmin(Admin admin)
@@ -243,6 +246,7 @@ namespace JobStack
             Coordenador novo = new Coordenador(email, senha);
             if (CoordenadorExiste(novo)) return false;
             Coordenadores.Add(novo);
+            indexCoordenador = Coordenadores.IndexOf(novo);
             return true;
         }
 
