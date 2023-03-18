@@ -53,7 +53,5 @@ namespace JobStack
             this.SetEmail(a.GetEmail());
             this.SetSenha(a.GetSenha());            
         }
-       
-
     }
 }

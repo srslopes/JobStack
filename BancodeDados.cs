@@ -38,7 +38,8 @@ namespace JobStack
 
             for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
             {
-                CriarAluno(emails[i], senhas[i]);
+                Aluno naluno = new Aluno(emails[i], senhas[i]);
+                CriarAluno(naluno);
                 
                 CriarEmpresa(emails[i + 2], senhas[i + 2]);
 
@@ -49,10 +50,11 @@ namespace JobStack
         }
 
 
-        public static bool CriarAluno(string email, string senha) //Método para criar um novo aluno e adicionalo ao banco de dados, retorna falso se o aluno ja existe
+        public static bool CriarAluno(Aluno aluno) //Método para criar um novo aluno e adicionalo ao banco de dados, retorna falso se o aluno ja existe
         {
-            Aluno novo = new Aluno(email, senha);
-            if (AlunoExiste(novo)) return false;            
+            if (AlunoExiste(aluno)) return false;
+            Aluno novo = new Aluno();
+            novo.ClonarDe(aluno);
             Alunos.Add(novo);
             indexAluno = Alunos.IndexOf(novo);
             return true;
@@ -310,7 +312,6 @@ namespace JobStack
             if (BuscarAdmin(email) != null) return 3;
             if (BuscarCoordenador(email) != null) return 4;
             return 0;
-        }
-       
+        }       
     }
 }
