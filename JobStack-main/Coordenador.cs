@@ -6,27 +6,21 @@ using System.Threading.Tasks;
 
 namespace JobStack
 {
-    class Aluno
+    class Coordenador
     {
         private string email;
+
         private string senha;
 
-
-        public Aluno()
-        {
-            email = "";
-            senha = "";
-        }
-        public Aluno(string e)
+        public Coordenador(string e)
         {
             email = e;
             senha = "";
         }
-        public Aluno(string e, string p)
+        public Coordenador(string e, string p)
         {
             email = e;
             senha = p;
-
         }
 
         public string GetEmail()
@@ -38,6 +32,7 @@ namespace JobStack
         {
             return senha;
         }
+        
         public void SetEmail(string e)
         {
             email = e;
@@ -47,13 +42,12 @@ namespace JobStack
         {
             senha = p;
         }
-
-        public void ClonarDe(Aluno a)   //Copia os atributos do objeto indicado para esse objeto
+  
+ 
+        public void ClonarDe(Coordenador a) //Copia os atributos do objeto indicado para esse objeto
         {
             this.SetEmail(a.GetEmail());
-            this.SetSenha(a.GetSenha());            
+            this.SetEmail(a.GetSenha());
         }
-       
-
     }
 }
