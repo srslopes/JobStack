@@ -72,7 +72,7 @@ namespace JobStack
             }
             return null;            
         }
-
+    
 
         public static void SalvarAluno(Aluno aluno) //Salva as alterações feitas
         {
@@ -96,7 +96,7 @@ namespace JobStack
                 return false;
             }
         }
-
+       
         public static string ExibirAlunos()   //Exibe, no prompt, os dados dos alunos cadastrados
         {
             string txt = "";
@@ -310,7 +310,9 @@ namespace JobStack
             if (BuscarAdmin(email) != null) return 3;
             if (BuscarCoordenador(email) != null) return 4;
             return 0;
+          
         }
+
        
     }
 }

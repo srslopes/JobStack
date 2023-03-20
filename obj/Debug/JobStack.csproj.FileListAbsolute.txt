@@ -53,3 +53,16 @@ D:\JobStack-main\obj\Debug\JobStack.csproj.GenerateResource.cache
 D:\JobStack-main\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 D:\JobStack-main\obj\Debug\JobStack.exe
 D:\JobStack-main\obj\Debug\JobStack.pdb
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\bin\Debug\JobStack.exe.config
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\bin\Debug\JobStack.exe
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\bin\Debug\JobStack.pdb
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.AssemblyReference.cache
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.SuggestedBindingRedirects.cache
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.Login.resources
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.Properties.Resources.resources
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.Senha.resources
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.TesteDB.resources
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.GenerateResource.cache
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.exe
+C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.pdb
