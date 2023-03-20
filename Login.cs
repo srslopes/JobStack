@@ -22,26 +22,26 @@ namespace JobStack
             textBox2.Enabled = false;
 
             label2.Visible = false;
-
             button1.Click += Button1_Click1;
+          
+
 
         }
 
         private bool pvez = true;
-        
-    
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            
 
-            
-        } private void Button1_Click1(object sender, EventArgs e)
+
+    private void Button1_Click(object sender, EventArgs e)
+        {
+
+
+        }
+        private void Button1_Click1(object sender, EventArgs e)
         {
             string email = textBox1.Text;
             Console.WriteLine("Email: " + email);
 
-
-
+            
             int usuario = BancodeDados.Login(email);
             if (textBox1.Text == "")
             {
@@ -58,19 +58,22 @@ namespace JobStack
             {
                 if (pvez)
                 {
-                    pvez = false;
                     Email();
 
                     button1.Click -= Button1_Click1;
 
                     button1.Click += Button1_Click2;
 
-                   
+
+                    pvez = false;
+
 
 
 
                 }
-            } }
+
+            }
+        }
 
         private void Button1_Click2(object sender, EventArgs e)
         {
@@ -79,18 +82,21 @@ namespace JobStack
             Senha();
             if (!pvez)
             {
-                pvez = true;
 
+                button1.Click += Button1_Click2;
                 button1.Click -= Button1_Click2;
 
+                button1.Click -= Button1_Click1;
 
 
 
-                button1.Click += Button1_Click1;
 
+                pvez = true;
 
 
             }
+      
+
 
         }
         private bool Emailm = false;
@@ -175,6 +181,11 @@ namespace JobStack
 
         private void Senha()
         {
+            button1.Click -= Button1_Click1;
+
+            button1.Click += Button1_Click2;
+            button1.Click -= Button1_Click2;
+
             if (textBox2.Text == "")
             {
                 MessageBox.Show(" campo senha vazio");
@@ -366,5 +377,9 @@ namespace JobStack
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -68,7 +68,7 @@ namespace JobStack
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 112);
+            this.label2.Location = new System.Drawing.Point(189, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 9;
@@ -78,7 +78,7 @@ namespace JobStack
             // textBox2
             // 
             this.textBox2.HideSelection = false;
-            this.textBox2.Location = new System.Drawing.Point(155, 142);
+            this.textBox2.Location = new System.Drawing.Point(156, 177);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 8;
@@ -86,7 +86,10 @@ namespace JobStack
             // 
             // button2
             // 
-            
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
             // 
             // Login
             // 
