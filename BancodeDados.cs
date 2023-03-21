@@ -15,15 +15,25 @@ namespace JobStack
     {
         private static List<Aluno> Alunos;                  //Banco de dados dos alunos (Lista de objetos da classe Aluno)
         private static int indexAluno;                      //Index da posição do aluno pesquisado
+        private static int proxIdAluno;                     //Id do próximo aluno
 
         private static List<Empresa> Empresas;              //Banco de dados das empresas (Lista de objetos da classe Empresa)                           
         private static int indexEmpresa;                    //Index da posição da empresa pesquisada
+        private static int proxIdEmpresa;                   //Id da próxima empresa
 
         private static List<Admin> Admins;                  //Banco de dados dos administradores (Lista de objetos da classe Admin)
         private static int indexAdmin;                      //Index da posição do administrador pesquisado
+        private static int proxIdAdmin;                     //Id do próximo Admin
 
         private static List<Coordenador> Coordenadores;     //Banco de dados dos coordenadores (Lista de objetos da classe Coordenador)
         private static int indexCoordenador;                //Index da posição do coordenador pesquisado
+        private static int proxIdCoordenador;               //Id do próximo coordenador
+
+        //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
+        // 00XX - Administradores do sistema
+        // 01XX - Coordenadores
+        // 1xxx ~ 5XXX - Alunos
+        // 6XXX ~ 9XXX - Empresas
 
 
         private string[] emails = {"a", "b", "c", "d", "e", "f", "g", "h"};                     //emails e senhas de usuários para popular os bancos de dados
@@ -35,6 +45,10 @@ namespace JobStack
             Empresas = new List<Empresa>();
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
+            proxIdAluno = 1000;
+            proxIdEmpresa = 6000;
+            proxIdAdmin = 0;
+            proxIdCoordenador = 100;
 
             for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
             {
@@ -45,6 +59,7 @@ namespace JobStack
                 CriarAdmin(emails[i+4], senhas[i+4]);
 
                 CriarCoordenador(emails[i+6], senhas[i+6]);
+
             }
         }
 
@@ -62,6 +77,8 @@ namespace JobStack
             Alunos.Remove(Alunos[indexAluno]);
         }
 
+
+
         public static Aluno BuscarAluno(string email)   //Retorna uma cópia do objeto aluno de mesmo email, retorna nulo se não existir
         {
             Aluno chk = new Aluno(email);
@@ -72,7 +89,18 @@ namespace JobStack
             }
             return null;            
         }
-    
+
+        public static int BuscarIdAluno(string email)   //Retorna uma cópia do objeto aluno de mesmo email, retorna nulo se não existir
+        {
+            Aluno chk = new Aluno(email);
+            if (AlunoExiste(chk))
+            {
+                chk.ClonarDe(Alunos[indexAluno]);
+                return chk.GetID();
+            }
+            return 0;
+        }
+
 
         public static void SalvarAluno(Aluno aluno) //Salva as alterações feitas
         {
@@ -114,6 +142,13 @@ namespace JobStack
                 Console.WriteLine("Falha ao exibir Alunos");
                 return txt;
             }
+        }
+
+        public static int GetNextIdAluno()
+        {
+            proxIdAluno++;
+            return proxIdAdmin;
+            
         }
 
 
@@ -312,7 +347,37 @@ namespace JobStack
             return 0;
           
         }
+        public static int BuscarID(string email)
+        {
+            int id = BuscarIdAluno(email);
+            if ( id != 0) return id;
+            if (BuscarEmpresa(email) != null) return 2;
+            if (BuscarAdmin(email) != null) return 3;
+            if (BuscarCoordenador(email) != null) return 4;
+            return 0;
 
-       
+        }
+
+        public static bool ExcluirUsuario(int id)    //Remove o aluno indicado
+        {
+            if(id/1000>5)
+            {
+
+            }
+            else if(id/1000>0)
+            {
+
+            }
+            else if(id/100==1)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+
     }
 }

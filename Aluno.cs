@@ -10,23 +10,26 @@ namespace JobStack
     {
         private string email;
         private string senha;
+        private int ID;
 
 
         public Aluno()
         {
             email = "";
             senha = "";
+            ID = BancodeDados.GetNextIdAluno();
         }
         public Aluno(string e)
         {
             email = e;
             senha = "";
+            ID = BancodeDados.GetNextIdAluno();
         }
         public Aluno(string e, string p)
         {
             email = e;
             senha = p;
-
+            ID = BancodeDados.GetNextIdAluno();
         }
 
         public string GetEmail()
@@ -46,6 +49,11 @@ namespace JobStack
         public void SetSenha(string p)
         {
             senha = p;
+        }
+
+        public int GetID()
+        {
+            return ID;
         }
 
         public void ClonarDe(Aluno a)   //Copia os atributos do objeto indicado para esse objeto
