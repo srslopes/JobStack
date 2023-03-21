@@ -79,24 +79,16 @@ namespace JobStack
 
 
 
-        public static Aluno BuscarAluno(string email)   //Retorna uma cópia do objeto aluno de mesmo email, retorna nulo se não existir
+        public static Aluno BuscarAluno(int id)   //Retorna uma cópia do objeto aluno de mesmo email, retorna nulo se não existir
         {
-            Aluno chk = new Aluno(email);
-            if (AlunoExiste(chk))
-            {
-                chk.ClonarDe(Alunos[indexAluno]);
-                return chk;
-            }
-            return null;            
+            return Alunos[(id % 1000) - 1];         
         }
 
         public static int BuscarIdAluno(string email)   //Retorna uma cópia do objeto aluno de mesmo email, retorna nulo se não existir
         {
-            Aluno chk = new Aluno(email);
-            if (AlunoExiste(chk))
+            for(int i=0; i<= proxIdAluno%1000; i++)
             {
-                chk.ClonarDe(Alunos[indexAluno]);
-                return chk.GetID();
+                if (Alunos[i].GetEmail().Equals(email)) return Alunos[i].GetID();
             }
             return 0;
         }
@@ -351,30 +343,33 @@ namespace JobStack
         {
             int id = BuscarIdAluno(email);
             if ( id != 0) return id;
-            if (BuscarEmpresa(email) != null) return 2;
-            if (BuscarAdmin(email) != null) return 3;
-            if (BuscarCoordenador(email) != null) return 4;
+            /*id = BuscarIdEmpresa(email);
+            if (id != 0) return id;
+            id = BuscarIdAdmin(email);
+            if (id != 0) return id;
+            id = BuscarIdCoordenador(email);
+            if (id != 0) return id;*/
             return 0;
 
         }
 
-        public static bool ExcluirUsuario(int id)    //Remove o aluno indicado
+        public void ExcluirUsuario(int id)    //Remove o aluno indicado
         {
             if(id/1000>5)
             {
-
+                //Empresas[(id % 1000) - 1].Limpar();
             }
             else if(id/1000>0)
             {
-
+                Alunos[(id % 1000) - 1].Limpar();
             }
             else if(id/100==1)
             {
-
+                //Coordenadores[(id % 100) - 1].Limpar();
             }
             else
             {
-
+                //Coordenadores[id - 1].Limpar();
             }
         }
 

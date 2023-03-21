@@ -55,13 +55,23 @@ namespace JobStack
         {
             return ID;
         }
+        public void SetID(int id)
+        {
+            ID = id;
+        }
 
         public void ClonarDe(Aluno a)   //Copia os atributos do objeto indicado para esse objeto
         {
             this.SetEmail(a.GetEmail());
-            this.SetSenha(a.GetSenha());            
+            this.SetSenha(a.GetSenha());
+            this.SetID(a.GetID());
         }
-       
+
+        public void Limpar()
+        {
+            this.SetEmail("");
+            this.SetSenha("");
+        }
 
     }
 }
