@@ -66,3 +66,6 @@ C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.cspr
 C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.exe
 C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.pdb
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.Login.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.Senha.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TesteDB.resources

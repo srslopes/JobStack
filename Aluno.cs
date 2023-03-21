@@ -17,19 +17,19 @@ namespace JobStack
         {
             email = "";
             senha = "";
-            ID = BancodeDados.GetNextIdAluno();
+            ID = 0;
         }
         public Aluno(string e)
         {
             email = e;
             senha = "";
-            ID = BancodeDados.GetNextIdAluno();
+            ID = 0;
         }
         public Aluno(string e, string p)
         {
             email = e;
             senha = p;
-            ID = BancodeDados.GetNextIdAluno();
+            ID = 0;
         }
 
         public string GetEmail()

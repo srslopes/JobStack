@@ -24,7 +24,7 @@ namespace JobStack
             label2.Visible = false;
             button1.Click += Button1_Click1;
           
-            textBox2.PasswordChar = "*";
+            textBox2.PasswordChar = '*';
 
 
         }
@@ -82,7 +82,7 @@ namespace JobStack
 
             Senha();
             if (!pvez)
-            {z
+            {
 
                 button1.Click += Button1_Click2;
                 button1.Click -= Button1_Click2;

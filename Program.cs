@@ -18,20 +18,11 @@ namespace JobStack
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
+            Aluno novo = new Aluno();
+            Console.WriteLine(novo.GetType());
             Application.Run(new Login());
 
-            //bool exec = true;
-            Console.WriteLine("Teste: Exibir DB");
-            //int op=0;
-            BancodeDados.ExibirAlunos();
 
-            Console.WriteLine("Teste: Criar Aluno");
-            BancodeDados.CriarAluno("fulano", "senha");
-            BancodeDados.ExibirAlunos();
-
-            Console.WriteLine("Teste: Excluir Aluno");
-            BancodeDados.ExcluirAluno(BancodeDados.BuscarAluno("fulano"));
-            BancodeDados.ExibirAlunos();
             /*
             string email = "";
             int usuario = BancodeDados.Login(email);
