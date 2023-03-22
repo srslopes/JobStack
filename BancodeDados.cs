@@ -29,7 +29,7 @@ namespace JobStack
         private static int indexCoordenador;                //Index da posição do coordenador pesquisado
         private static int proxIdCoordenador;               //Id do próximo coordenador
 
-        private static int IDuser;
+        private static int IdUser;
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
         // 00XX - Administradores do sistema
@@ -51,18 +51,21 @@ namespace JobStack
             proxIdEmpresa = 6000;
             proxIdAdmin = 0;
             proxIdCoordenador = 100;
-            IDuser = 0;
+            IdUser = 0;
 
             for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
             {
-                Aluno novo = new Aluno(emails[i], senhas[i]);
-                AdicionarAluno(novo);
-                
-                CriarEmpresa(emails[i + 2], senhas[i + 2]);
+                Aluno n1 = new Aluno(emails[i], senhas[i]);
+                AdicionarAluno(n1);
 
-                CriarAdmin(emails[i+4], senhas[i+4]);
+                Empresa n2 = new Empresa(emails[i + 2], senhas[i + 2]);
+                AdicionarEmpresa(n2);
 
-                CriarCoordenador(emails[i+6], senhas[i+6]);
+                Admin n3 = new Admin(emails[i + 4], senhas[i + 4]);
+                AdicionarAdmin(n3);
+
+                Coordenador n4 = new Coordenador(emails[i + 6], senhas[i + 6]);
+                AdicionarCoordenador(n4);
 
             }
         }
@@ -73,7 +76,7 @@ namespace JobStack
         
         public static bool AdicionarAluno(Aluno aluno)                  //Método para adicionar um novo aluno ao banco de dados,
         {                                                               //Retorna verdadeiro se o aluno foi adicionado com sucesso
-            if (BuscarIdAluno(aluno.GetEmail()) != 0) return false;     //Retorna falso se um aluno com mesmo email já existe
+            if (BuscarID(aluno.GetEmail()) != 0) return false;     //Retorna falso se um aluno com mesmo email já existe
             aluno.SetID(GetNextIdAluno());
             Alunos.Add(aluno);
             return true;
@@ -105,12 +108,12 @@ namespace JobStack
 
         public static bool SalvarAluno(Aluno aluno) //Salva o aluno na sua posição original
         {
-            if (aluno.GetID() == 0) return false;
+            if (aluno.GetID() == 0 || BuscarID(aluno.GetEmail()) != 0) return false;
             Alunos[(aluno.GetID()%1000)-1].ClonarDe(aluno);
             return true;
         }
 
-        public static int GetNextIdAluno()
+        public static int GetNextIdAluno()  //retorna um novo ID
         {
             proxIdAluno++;
             return proxIdAluno;
@@ -118,7 +121,7 @@ namespace JobStack
         }
 
         public static string ExibirAlunos()   //Exibe, no prompt, os dados dos alunos cadastrados
-        {
+        {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
             string txt = "";
             try
             {
@@ -136,7 +139,7 @@ namespace JobStack
             }
         }
 
-        public static void ResetarIdsAlunos()
+        public static void ResetarIdsAlunos()       //Reseta os IDs dos alunos mantendo a ordem da lista
         {
             proxIdAluno = 1000;
             for (int i = 0; i < Alunos.IndexOf(Alunos.Last()); i++) Alunos[i].SetID(GetNextIdAluno());
@@ -187,7 +190,7 @@ namespace JobStack
 
         public static bool AdicionarEmpresa(Empresa empresa)                  //Método para adicionar uma nova empresa ao banco de dados,
         {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
-            if (BuscarIdEmpresa(empresa.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
+            if (BuscarID(empresa.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
             empresa.SetID(GetNextIdEmpresa());
             Empresas.Add(empresa);
             return true;
@@ -219,7 +222,7 @@ namespace JobStack
 
         public static bool SalvarEmpresa(Empresa empresa) //Salva o aluno na sua posição original
         {
-            if (empresa.GetID() == 0) return false;
+            if (empresa.GetID() == 0 || BuscarID(empresa.GetEmail()) != 0) return false;
             Empresas[(empresa.GetID() % 1000) - 1].ClonarDe(empresa);
             return true;
         }
@@ -229,17 +232,23 @@ namespace JobStack
             return proxIdEmpresa;
         }
 
-        public static void ExibirEmpresas()
-        {
+        public static string ExibirEmpresas()   //Exibe, no prompt, os dados dos alunos cadastrados
+        {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
+            string txt = "";
             try
             {
-                for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++) Console.WriteLine("Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+                for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++)
+                {
+                    txt += "ID: " + Empresas[i].GetID() + ", Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha() + "?";
+                    Console.WriteLine("ID: " + Empresas[i].GetID() + "Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+                }
+                return txt;
             }
             catch (System.ArgumentNullException)
             {
                 Console.WriteLine("Falha ao exibir Empresas");
+                return txt;
             }
-
         }
 
         public static void ResetarIdsEmpresas()
@@ -302,7 +311,7 @@ namespace JobStack
 
         public static bool AdicionarAdmin(Admin admin)                  //Método para adicionar uma nova empresa ao banco de dados,
         {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
-            if (BuscarIdAdmin(admin.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
+            if (BuscarID(admin.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
             admin.SetID(GetNextIdAdmin());
             Admins.Add(admin);
             return true;
@@ -334,7 +343,7 @@ namespace JobStack
 
         public static bool SalvarAdmin(Admin admin) //Salva o aluno na sua posição original
         {
-            if (admin.GetID() == 0) return false;
+            if (admin.GetID() == 0 || BuscarID(admin.GetEmail()) != 0) return false;
             Admins[(admin.GetID() % 100) - 1].ClonarDe(admin);
             return true;
         }
@@ -344,17 +353,23 @@ namespace JobStack
             return proxIdAdmin;
         }
 
-        public static void ExibirAdmins()
-        {
+        public static string ExibirAdmins()   //Exibe, no prompt, os dados dos alunos cadastrados
+        {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
+            string txt = "";
             try
             {
-                for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++) Console.WriteLine("Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
+                for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++)
+                {
+                    txt += "ID: " + Admins[i].GetID() + ", Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha() + "?";
+                    Console.WriteLine("ID: " + Admins[i].GetID() + "Empresa: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
+                }
+                return txt;
             }
             catch (System.ArgumentNullException)
             {
                 Console.WriteLine("Falha ao exibir Admins");
+                return txt;
             }
-
         }
         public static void ResetarIdsAdmins()
         {
@@ -446,7 +461,7 @@ namespace JobStack
 
         public static bool SalvaCoordenador(Coordenador coordenador) //Salva o aluno na sua posição original
         {
-            if (coordenador.GetID() == 0) return false;
+            if (coordenador.GetID() == 0 || BuscarID(coordenador.GetEmail()) != 0) return false;
             Coordenadores[(coordenador.GetID() % 100) - 1].ClonarDe(coordenador);
             return true;
         }
@@ -456,17 +471,23 @@ namespace JobStack
             return proxIdCoordenador;
         }
 
-        public static void ExibirCoordenadores()
-        {
+        public static string ExibirCoordenadores()   //Exibe, no prompt, os dados dos alunos cadastrados
+        {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
+            string txt = "";
             try
             {
-                for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++) Console.WriteLine("Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
+                for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++)
+                {
+                    txt += "ID: " + Coordenadores[i].GetID() + ", Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha() + "?";
+                    Console.WriteLine("ID: " + Coordenadores[i].GetID() + "Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
+                }
+                return txt;
             }
             catch (System.ArgumentNullException)
             {
                 Console.WriteLine("Falha ao exibir Coordenadores");
+                return txt;
             }
-
         }
 
         public static void ResetarIdsCoordenadores()
@@ -547,26 +568,27 @@ namespace JobStack
             return false;
         }
 
-            public static int BuscarID(string email)
-        {
-            IDuser = BuscarIdAluno(email);
-            if ( IDuser != 0) return IDuser;
-            IDuser = BuscarIdEmpresa(email);
-            if (IDuser != 0) return IDuser;
-            IDuser = BuscarIdAdmin(email);
-            if (IDuser != 0) return IDuser;
-            IDuser = BuscarIdCoordenador(email);
-            if (IDuser != 0) return IDuser;
+        public static int BuscarID(string email)    //Procura no banco de dados o email inserido e retorna o id desse usuario,
+        {                                           //Retorna 0 se nao existir usuario com essa senha    
+            IdUser = BuscarIdAluno(email);
+            if ( IdUser != 0) return IdUser;
+            IdUser = BuscarIdEmpresa(email);
+            if (IdUser != 0) return IdUser;
+            IdUser = BuscarIdAdmin(email);
+            if (IdUser != 0) return IdUser;
+            IdUser = BuscarIdCoordenador(email);
+            if (IdUser != 0) return IdUser;
             return 0;
 
         }
 
         public static object BuscarUsuario(int id)
         {
+            IdUser = id;
             if (id / 1000 > 5) return Empresas[(id % 1000) - 1];
             else if (id / 1000 > 0) return Alunos[(id % 1000) - 1];
             else if (id / 100 == 1) return Coordenadores[(id % 100) - 1];
-            else return Coordenadores[id - 1];
+            else return Admins[id - 1];
         }
 
         public static bool AdicionarUsuario(Object obj)
@@ -632,7 +654,15 @@ namespace JobStack
                 ResetarIdsAdmins();
             }
         }
+        public static string ExibirDB()
+        {
+            return ExibirAlunos() + ExibirEmpresas() + ExibirAdmins() + ExibirCoordenadores();
+        }
 
+        public static int GetIdUser()
+        {
+            return IdUser;
+        }
 
     }
 }

@@ -63,7 +63,7 @@ namespace JobStack
         public void ClonarDe(Admin admin) //Copia os atributos do objeto indicado para esse objeto
         {
             this.SetEmail(admin.GetEmail());
-            this.SetEmail(admin.GetSenha());
+            this.SetSenha(admin.GetSenha());
             this.SetID(admin.GetID());
         }
         public void Limpar()
