@@ -69,3 +69,4 @@ C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.pdb
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.Login.resources
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.Senha.resources
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TesteDB.resources
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Senha.resources

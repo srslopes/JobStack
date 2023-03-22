@@ -12,11 +12,12 @@ namespace JobStack
 {
     public partial class TesteDB : Form
     {
-        bool car = false;
+        
+        Aluno aluno;
         public TesteDB()
         {
             InitializeComponent();
-            AtualizarLista();
+            AttLista();
         }
 
         private void Label2_Click(object sender, EventArgs e)
@@ -31,11 +32,9 @@ namespace JobStack
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if(!BancodeDados.CriarAluno(textBox1.Text, textBox2.Text))
-            {
-                label3.Text = "Usuario ja existe";
-            }
-            AtualizarLista();
+            Aluno novo = new Aluno(textBox1.Text, textBox2.Text);
+            if(!BancodeDados.AdicionarAluno(novo)) label3.Text = "Usuario ja existe";
+            AttLista();
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
@@ -43,39 +42,57 @@ namespace JobStack
             label3.Text = "";
         }
 
-        private void AtualizarLista()
-        {
-            textBox3.Text = BancodeDados.ExibirAlunos();
-        }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            AtualizarLista();
+            AttLista();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Aluno al = new Aluno();
-            al = BancodeDados.BuscarAluno(textBox1.Text);
-            textBox1.Text = al.GetEmail();
-            textBox2.Text = al.GetSenha();
-            car = true;
+            int id = int.Parse(textBox4.Text);
+            aluno = BancodeDados.BuscarAluno(id);
+            textBox4.Text = "" +aluno.GetID();
+            textBox1.Text =  aluno.GetEmail();
+            textBox2.Text = aluno.GetSenha();
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            if(car)
-            {
-                Aluno al = new Aluno(textBox1.Text, textBox2.Text);
-                BancodeDados.SalvarAluno(al);
-                AtualizarLista();
-            }
+            aluno.SetEmail(textBox1.Text);
+            aluno.SetSenha(textBox2.Text);
+            BancodeDados.SalvarUsuario(aluno);
+            AttLista();
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            BancodeDados.ExcluirAluno(BancodeDados.BuscarAluno(textBox1.Text));
-            AtualizarLista();
+            BancodeDados.ExcluirUsuario(aluno.GetID());
+            AttLista();
+        }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AttLista();            
+        }
+        public void AttLista()
+        {
+            listBox1.Items.Clear();
+            string[] lista = BancodeDados.ExibirAlunos().Split('?');
+            for (int i = 0; i < lista.Length; i++)
+            {
+                listBox1.Items.Add(lista[i]);
+            }
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

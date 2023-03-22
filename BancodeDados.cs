@@ -109,10 +109,11 @@ namespace JobStack
             Alunos[(aluno.GetID()%1000)-1].ClonarDe(aluno);
             return true;
         }
+
         public static int GetNextIdAluno()
         {
             proxIdAluno++;
-            return proxIdAdmin;
+            return proxIdAluno;
 
         }
 
@@ -123,7 +124,7 @@ namespace JobStack
             {
                 for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++)
                 {
-                    txt += "ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() + " \n";
+                    txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() + "?";
                     Console.WriteLine("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
                 }
                 return txt;
@@ -133,6 +134,12 @@ namespace JobStack
                 Console.WriteLine("Falha ao exibir Alunos");
                 return txt;
             }
+        }
+
+        public static void ResetarIdsAlunos()
+        {
+            proxIdAluno = 1000;
+            for (int i = 0; i < Alunos.IndexOf(Alunos.Last()); i++) Alunos[i].SetID(GetNextIdAluno());
         }
 
         //-------------------------------------------------------------------------------------------------
@@ -233,6 +240,12 @@ namespace JobStack
                 Console.WriteLine("Falha ao exibir Empresas");
             }
 
+        }
+
+        public static void ResetarIdsEmpresas()
+        {
+            proxIdEmpresa = 1000;
+            for (int i = 0; i < Empresas.IndexOf(Empresas.Last()); i++) Empresas[i].SetID(GetNextIdEmpresa());
         }
 
         //------------------------------------------------------------------------------------------------------------
@@ -343,6 +356,11 @@ namespace JobStack
             }
 
         }
+        public static void ResetarIdsAdmins()
+        {
+            proxIdAdmin = 1000;
+            for (int i = 0; i < Admins.IndexOf(Admins.Last()); i++) Admins[i].SetID(GetNextIdAdmin());
+        }
 
         //-------------------------------------------------------------------------------------------------------------------------
 
@@ -438,6 +456,24 @@ namespace JobStack
             return proxIdCoordenador;
         }
 
+        public static void ExibirCoordenadores()
+        {
+            try
+            {
+                for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++) Console.WriteLine("Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
+            }
+            catch (System.ArgumentNullException)
+            {
+                Console.WriteLine("Falha ao exibir Coordenadores");
+            }
+
+        }
+
+        public static void ResetarIdsCoordenadores()
+        {
+            proxIdCoordenador = 1000;
+            for (int i = 0; i < Coordenadores.IndexOf(Coordenadores.Last()); i++) Coordenadores[i].SetID(GetNextIdCoordenador());
+        }
 
         //------------------------------------------------------------------------------------------------------------------------
 
@@ -490,18 +526,7 @@ namespace JobStack
             }           
         }
 
-        public static void ExibirCoordenadores()
-        {
-            try
-            {
-                for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++) Console.WriteLine("Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
-            }
-            catch (System.ArgumentNullException)
-            {
-                Console.WriteLine("Falha ao exibir Coordenadores");
-            }
-            
-        }
+       
 
         public static int Login(string email)
         {
@@ -584,19 +609,27 @@ namespace JobStack
         {
             if(id/1000>5)
             {
-                Empresas[(id % 1000) - 1].Limpar();
+                //Empresas[(id % 1000) - 1].Limpar();
+                Empresas.Remove(Empresas[(id % 1000) - 1]);
+                ResetarIdsEmpresas();
             }
             else if(id/1000>0)
             {
-                Alunos[(id % 1000) - 1].Limpar();
+                //Alunos[(id % 1000) - 1].Limpar();
+                Alunos.Remove(Alunos[(id % 1000) - 1]);
+               ResetarIdsAlunos();
             }
             else if(id/100==1)
             {
-                Coordenadores[(id % 100) - 1].Limpar();
+                //Coordenadores[(id % 100) - 1].Limpar();
+               Coordenadores.Remove(Coordenadores[(id % 100) - 1]);
+                ResetarIdsCoordenadores();
             }
             else
             {
-                Coordenadores[id - 1].Limpar();
+                //Admins[id - 1].Limpar();
+                Admins.Remove(Admins[id - 1]);
+                ResetarIdsAdmins();
             }
         }
 
