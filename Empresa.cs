@@ -11,11 +11,14 @@ namespace JobStack
         private string email;
 
         private string senha;
-        private string nome;
-        private string endereco;
-        private int cnpj;
 
+        private int ID;
 
+        public Empresa()
+        {
+            email = "";
+            senha = "";
+        }
 
         public Empresa(string e)
         {
@@ -43,16 +46,33 @@ namespace JobStack
         {
             email = e;
         }
-
         public void SetSenha(string p)
         {
             senha = p;
         }
 
-        public void ClonarDe(Empresa a) //Copia os atributos do objeto indicado para esse objeto
+        public int GetID()
         {
-            this.SetEmail(a.GetEmail());
-            this.SetEmail(a.GetSenha());
+            return ID;
+        }
+
+        public void SetID(int id)
+        {
+            ID = id;
+        }
+
+        
+
+        public void ClonarDe(Empresa empresa) //Copia os atributos do objeto indicado para esse objeto
+        {
+            this.SetEmail(empresa.GetEmail());
+            this.SetEmail(empresa.GetSenha());
+            this.SetID(empresa.GetID());
+        }
+        public void Limpar()
+        {
+            this.SetEmail("");
+            this.SetSenha("");
         }
 
     }

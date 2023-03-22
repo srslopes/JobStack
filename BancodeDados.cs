@@ -73,7 +73,7 @@ namespace JobStack
         
         public static bool AdicionarAluno(Aluno aluno)                  //Método para adicionar um novo aluno ao banco de dados,
         {                                                               //Retorna verdadeiro se o aluno foi adicionado com sucesso
-            if (BuscarIdAluno(aluno.GetEmail()) != 0) return false;     //Retorna falso se um aluno de mesmo email já existe
+            if (BuscarIdAluno(aluno.GetEmail()) != 0) return false;     //Retorna falso se um aluno com mesmo email já existe
             aluno.SetID(GetNextIdAluno());
             Alunos.Add(aluno);
             return true;
@@ -101,7 +101,7 @@ namespace JobStack
             Aluno busc = new Aluno();
             busc.ClonarDe(Alunos[(id % 1000) - 1]);
             return busc;
-        }        
+        }
 
         public static bool SalvarAluno(Aluno aluno) //Salva o aluno na sua posição original
         {
@@ -135,10 +135,10 @@ namespace JobStack
             }
         }
 
+        //-------------------------------------------------------------------------------------------------
 
 
-
-        public static bool CriarAluno(string email, string senha) //Método para criar um novo aluno e adicionalo ao banco de dados, retorna falso se o aluno ja existe
+        public static bool CriarAluno(string email, string senha) //Método para criar um novo aluno e adiciona-lo ao banco de dados, retorna falso se o aluno ja existe
         {
             Aluno novo = new Aluno(email, senha);
             if (AlunoExiste(novo)) return false;
@@ -175,10 +175,67 @@ namespace JobStack
             }
         }
 
-       
-        
 
-        
+        //-------------------------------------------------------- Métodos - Empresas --------------------------------------------------------------------------
+
+        public static bool AdicionarEmpresa(Empresa empresa)                  //Método para adicionar uma nova empresa ao banco de dados,
+        {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
+            if (BuscarIdEmpresa(empresa.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
+            empresa.SetID(GetNextIdEmpresa());
+            Empresas.Add(empresa);
+            return true;
+        }
+
+        public static int BuscarIdEmpresa(string email)               //Retorna o ID do aluno com o email inserido,
+        {                                                           //Retorna 0 se esse aluno não existir
+            try
+            {
+                for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++)
+                {
+                    if (Empresas[i].GetEmail().Equals(email)) return Empresas[i].GetID();
+                }
+                return 0;
+            }
+            catch (System.InvalidOperationException)
+            {
+                return 0;
+            }
+
+        }
+
+        public static Empresa BuscarEmpresa(int id)         //Retorna o objeto aluno com o ID indicado,
+        {
+            Empresa busc = new Empresa();
+            busc.ClonarDe(Empresas[(id % 1000) - 1]);
+            return busc;
+        }
+
+        public static bool SalvarEmpresa(Empresa empresa) //Salva o aluno na sua posição original
+        {
+            if (empresa.GetID() == 0) return false;
+            Empresas[(empresa.GetID() % 1000) - 1].ClonarDe(empresa);
+            return true;
+        }
+        public static int GetNextIdEmpresa()
+        {
+            proxIdEmpresa++;
+            return proxIdEmpresa;
+        }
+
+        public static void ExibirEmpresas()
+        {
+            try
+            {
+                for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++) Console.WriteLine("Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+            }
+            catch (System.ArgumentNullException)
+            {
+                Console.WriteLine("Falha ao exibir Empresas");
+            }
+
+        }
+
+        //------------------------------------------------------------------------------------------------------------
 
 
 
@@ -207,10 +264,6 @@ namespace JobStack
             return null;
         }
 
-        public static void SalvarEmpresa(Empresa empresa)
-        {
-            Empresas[indexEmpresa].ClonarDe(empresa);
-        }
 
         public static bool EmpresaExiste(Empresa empresa)
         {
@@ -230,18 +283,69 @@ namespace JobStack
             }
 
         }
-        public static void ExibirEmpresas()
+        
+
+        //--------------------------------------------------------------- Métodos - Administradores ----------------------------------------------------------------------------
+
+        public static bool AdicionarAdmin(Admin admin)                  //Método para adicionar uma nova empresa ao banco de dados,
+        {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
+            if (BuscarIdAdmin(admin.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
+            admin.SetID(GetNextIdAdmin());
+            Admins.Add(admin);
+            return true;
+        }
+
+        public static int BuscarIdAdmin(string email)               //Retorna o ID do aluno com o email inserido,
+        {                                                           //Retorna 0 se esse aluno não existir
+            try
+            {
+                for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++)
+                {
+                    if (Admins[i].GetEmail().Equals(email)) return Admins[i].GetID();
+                }
+                return 0;
+            }
+            catch (System.InvalidOperationException)
+            {
+                return 0;
+            }
+
+        }
+
+        public static Admin BuscarAdmin(int id)         //Retorna o objeto aluno com o ID indicado,
+        {
+            Admin busc = new Admin();
+            busc.ClonarDe(Admins[(id % 100) - 1]);
+            return busc;
+        }
+
+        public static bool SalvarAdmin(Admin admin) //Salva o aluno na sua posição original
+        {
+            if (admin.GetID() == 0) return false;
+            Admins[(admin.GetID() % 100) - 1].ClonarDe(admin);
+            return true;
+        }
+        public static int GetNextIdAdmin()
+        {
+            proxIdAdmin++;
+            return proxIdAdmin;
+        }
+
+        public static void ExibirAdmins()
         {
             try
             {
-                for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++) Console.WriteLine("Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+                for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++) Console.WriteLine("Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
             }
             catch (System.ArgumentNullException)
             {
-                Console.WriteLine("Falha ao exibir Empresas");
+                Console.WriteLine("Falha ao exibir Admins");
             }
-            
+
         }
+
+        //-------------------------------------------------------------------------------------------------------------------------
+
 
 
         public static bool CriarAdmin(string email, string senha)
@@ -267,11 +371,7 @@ namespace JobStack
             }
             return null;
         }
-
-        public static void SalvarAdmin(Admin admin)
-        {
-            Admins[indexAdmin].ClonarDe(admin);
-        }
+       
 
         public static bool AdminExiste(Admin admin)
         {
@@ -291,19 +391,55 @@ namespace JobStack
             }
             
         }
-        public static void ExibirAdmins()
-        {
-            try
-            {
-                for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++) Console.WriteLine("Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
-            }
-            catch (System.ArgumentNullException)
-            {
-                Console.WriteLine("Falha ao exibir Admins");
-            }
-            
+
+        //---------------------------------------------------------------  Métodos - Coordenadores --------------------------------------------------------------------
+
+        public static bool AdicionarCoordenador(Coordenador coordenador)                  //Método para adicionar uma nova empresa ao banco de dados,
+        {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
+            if (BuscarIdCoordenador(coordenador.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
+            coordenador.SetID(GetNextIdCoordenador());
+            Coordenadores.Add(coordenador);
+            return true;
         }
 
+        public static int BuscarIdCoordenador(string email)               //Retorna o ID do aluno com o email inserido,
+        {                                                           //Retorna 0 se esse aluno não existir
+            try
+            {
+                for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++)
+                {
+                    if (Coordenadores[i].GetEmail().Equals(email)) return Coordenadores[i].GetID();
+                }
+                return 0;
+            }
+            catch (System.InvalidOperationException)
+            {
+                return 0;
+            }
+
+        }
+
+        public static Coordenador BuscarCoordenador(int id)         //Retorna o objeto aluno com o ID indicado,
+        {
+            Coordenador busc = new Coordenador();
+            busc.ClonarDe(Coordenadores[(id % 100) - 1]);
+            return busc;
+        }
+
+        public static bool SalvaCoordenador(Coordenador coordenador) //Salva o aluno na sua posição original
+        {
+            if (coordenador.GetID() == 0) return false;
+            Coordenadores[(coordenador.GetID() % 100) - 1].ClonarDe(coordenador);
+            return true;
+        }
+        public static int GetNextIdCoordenador()
+        {
+            proxIdCoordenador++;
+            return proxIdCoordenador;
+        }
+
+
+        //------------------------------------------------------------------------------------------------------------------------
 
         public static bool CriarCoordenador(string email, string senha)
         {
@@ -390,12 +526,12 @@ namespace JobStack
         {
             IDuser = BuscarIdAluno(email);
             if ( IDuser != 0) return IDuser;
-            /*IDuser = BuscarIdEmpresa(email);
+            IDuser = BuscarIdEmpresa(email);
             if (IDuser != 0) return IDuser;
             IDuser = BuscarIdAdmin(email);
             if (IDuser != 0) return IDuser;
             IDuser = BuscarIdCoordenador(email);
-            if (IDuser != 0) return IDuser;*/
+            if (IDuser != 0) return IDuser;
             return 0;
 
         }
@@ -414,12 +550,12 @@ namespace JobStack
             {
                 case "JobStack.Aluno":
                     return AdicionarAluno((Aluno)obj);
-                /*case "JobStack.Empresa":
+                case "JobStack.Empresa":
                     return AdicionarEmpresa((Empresa)obj);
                 case "JobStack.Admin":
                     return AdicionarAdmin((Admin)obj);
                 case "JobStack.Coordenador":
-                    return AdicionarCoordenador((Coordenador)obj);*/
+                    return AdicionarCoordenador((Coordenador)obj);
             }
             return false;
         }
@@ -448,7 +584,7 @@ namespace JobStack
         {
             if(id/1000>5)
             {
-                //Empresas[(id % 1000) - 1].Limpar();
+                Empresas[(id % 1000) - 1].Limpar();
             }
             else if(id/1000>0)
             {
@@ -456,11 +592,11 @@ namespace JobStack
             }
             else if(id/100==1)
             {
-                //Coordenadores[(id % 100) - 1].Limpar();
+                Coordenadores[(id % 100) - 1].Limpar();
             }
             else
             {
-                //Coordenadores[id - 1].Limpar();
+                Coordenadores[id - 1].Limpar();
             }
         }
 
