@@ -29,104 +29,123 @@ namespace JobStack
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.botaoLogin = new System.Windows.Forms.Button();
+            this.campoEmail = new System.Windows.Forms.TextBox();
+            this.textoEmail = new System.Windows.Forms.Label();
+            this.textoSenha = new System.Windows.Forms.Label();
+            this.campoSenha = new System.Windows.Forms.TextBox();
+            this.botaoVoltar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // botaoLogin
             // 
-            this.button1.Location = new System.Drawing.Point(156, 247);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.botaoLogin.Location = new System.Drawing.Point(786, 327);
+            this.botaoLogin.Name = "botaoLogin";
+            this.botaoLogin.Size = new System.Drawing.Size(121, 46);
+            this.botaoLogin.TabIndex = 0;
+            this.botaoLogin.Text = "Login";
+            this.botaoLogin.UseVisualStyleBackColor = true;
+            this.botaoLogin.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // textBox1
+            // campoEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.campoEmail.Location = new System.Drawing.Point(716, 136);
+            this.campoEmail.Multiline = true;
+            this.campoEmail.Name = "campoEmail";
+            this.campoEmail.Size = new System.Drawing.Size(260, 29);
+            this.campoEmail.TabIndex = 1;
+            this.campoEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label1
+            // textoEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(189, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Email";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.textoEmail.AutoSize = true;
+            this.textoEmail.Location = new System.Drawing.Point(823, 110);
+            this.textoEmail.Name = "textoEmail";
+            this.textoEmail.Size = new System.Drawing.Size(32, 13);
+            this.textoEmail.TabIndex = 2;
+            this.textoEmail.Text = "Email";
+            this.textoEmail.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // label2
+            // textoSenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Senha";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
+            this.textoSenha.AutoSize = true;
+            this.textoSenha.Location = new System.Drawing.Point(823, 236);
+            this.textoSenha.Name = "textoSenha";
+            this.textoSenha.Size = new System.Drawing.Size(38, 13);
+            this.textoSenha.TabIndex = 9;
+            this.textoSenha.Text = "Senha";
+            this.textoSenha.Click += new System.EventHandler(this.Label2_Click);
             // 
-            // textBox2
+            // campoSenha
             // 
-            this.textBox2.HideSelection = false;
-            this.textBox2.Location = new System.Drawing.Point(156, 177);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.campoSenha.HideSelection = false;
+            this.campoSenha.Location = new System.Drawing.Point(716, 252);
+            this.campoSenha.Multiline = true;
+            this.campoSenha.Name = "campoSenha";
+            this.campoSenha.Size = new System.Drawing.Size(260, 29);
+            this.campoSenha.TabIndex = 8;
+            this.campoSenha.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
-            // button2
+            // botaoVoltar
             // 
-            this.button2.Location = new System.Drawing.Point(66, 40);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Voltar";
+            this.botaoVoltar.Location = new System.Drawing.Point(901, 669);
+            this.botaoVoltar.Name = "botaoVoltar";
+            this.botaoVoltar.Size = new System.Drawing.Size(75, 23);
+            this.botaoVoltar.TabIndex = 10;
+            this.botaoVoltar.Text = "Voltar";
+            this.botaoVoltar.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(189, 200);
+            this.label3.Location = new System.Drawing.Point(829, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Email";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(189, 88);
+            this.label4.Location = new System.Drawing.Point(823, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Senha";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JobStack.Properties.Resources.fundo_tela_de_login_vazio;
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -130);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(664, 939);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 299);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textoSenha);
+            this.Controls.Add(this.campoSenha);
+            this.Controls.Add(this.textoEmail);
+            this.Controls.Add(this.campoEmail);
+            this.Controls.Add(this.botaoLogin);
+            this.Controls.Add(this.botaoVoltar);
             this.Name = "Login";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,14 +153,15 @@ namespace JobStack
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button botaoLogin;
+        private System.Windows.Forms.TextBox campoEmail;
+        private System.Windows.Forms.Label textoEmail;
+        private System.Windows.Forms.Label textoSenha;
+        private System.Windows.Forms.TextBox campoSenha;
+        private System.Windows.Forms.Button botaoVoltar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

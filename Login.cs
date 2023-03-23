@@ -18,28 +18,28 @@ namespace JobStack
             InitializeComponent();
             // Esconder o campo de senha
 
-            textBox2.Visible = false;
+            campoSenha.Visible = false;
             // Desabilitar o campo de senha
 
-            textBox2.Enabled = false;
+            campoSenha.Enabled = false;
             // Esconder a label de aviso
 
-            label2.Visible = false;
+            textoSenha.Visible = false;
             // Adicionar evento de clique ao botão
-            button1.Click += Button1_Click1;
+            botaoLogin.Click += Button1_Click1;
             // Esconder a senha digitada com asteriscos
 
-            textBox2.PasswordChar = '*';
+            campoSenha.PasswordChar = '*';
             // Esconder o botão 
 
-            button2.Visible = false;
+            botaoVoltar.Visible = false;
             // Esconder as labels 
 
             label3.Visible = false;
             label4.Visible = false;
             // Mudar o texto do botão para "Próximo"
 
-            button1.Text = "Próximo";
+            botaoLogin.Text = "Próximo";
 
 
         }
@@ -56,7 +56,7 @@ namespace JobStack
         private void Button1_Click1(object sender, EventArgs e)
         {    // Obter o email digitado pelo usuário
 
-            string email = textBox1.Text;
+            string email = campoEmail.Text;
             Console.WriteLine("Email: " + email);
 
             // Buscar o ID do usuário no banco de dados
@@ -64,7 +64,7 @@ namespace JobStack
             int id = BancodeDados.BuscarID(email);
             // Verificar se o campo de email está vazio
 
-            if (textBox1.Text == "")
+            if (campoEmail.Text == "")
             {
                 label4.Visible = true;
 
@@ -89,15 +89,15 @@ namespace JobStack
                 if (pvez)
                 {
                     label4.Visible = false;
-                    button1.Text = "Entrar";
+                    botaoLogin.Text = "Entrar";
                     // Chamar o método Email para exibir informações sobre o usuário
 
                     Email();
                     // Remover o evento de clique anterior e adicionar o novo evento
 
-                    button1.Click -= Button1_Click1;
+                    botaoLogin.Click -= Button1_Click1;
 
-                    button1.Click += Button1_Click2;
+                    botaoLogin.Click += Button1_Click2;
 
                     // Atualizar a variável de controle para saber que o botão já foi clicado uma vez
 
@@ -122,10 +122,10 @@ namespace JobStack
             if (!pvez)
             {
 
-                button1.Click += Button1_Click2;
-                button1.Click -= Button1_Click2;
+                botaoLogin.Click += Button1_Click2;
+                botaoLogin.Click -= Button1_Click2;
 
-                button1.Click -= Button1_Click1;
+                botaoLogin.Click -= Button1_Click1;
 
 
 
@@ -145,25 +145,25 @@ namespace JobStack
         {
             // Obter o email digitado pelo usuário
 
-            string email = textBox1.Text;
+            string email = campoEmail.Text;
             Console.WriteLine("Email: " + email);
             // Buscar o ID do usuário no banco de dados
 
             int id = BancodeDados.BuscarID(email);
             // Exibir o email do usuário na label
 
-            label1.Text = textBox1.Text;
+            textoEmail.Text = campoEmail.Text;
             // Desabilita e esconde a primeira caixa de texto
 
-            textBox1.Enabled = false;
+            campoEmail.Enabled = false;
 
-            textBox1.Visible = false;
+            campoEmail.Visible = false;
             // Mostra a segunda caixa de texto, o rótulo e o botão
 
-            label2.Visible = true;
-            textBox2.Visible = true;
-            textBox2.Enabled = true;
-            button2.Visible = true;
+            textoSenha.Visible = true;
+            campoSenha.Visible = true;
+            campoSenha.Enabled = true;
+            botaoVoltar.Visible = true;
             // Identifica o tipo de usuário com base em seu ID
 
             if (id / 1000 > 0 && id / 1000 < 6)
@@ -222,36 +222,36 @@ namespace JobStack
         private void Senha()
         {    // Desassocia o evento Button1_Click1 do botão button1
 
-            button1.Click -= Button1_Click1;
+            botaoLogin.Click -= Button1_Click1;
             // Associa o evento Button1_Click2 ao botão button1
 
-            button1.Click += Button1_Click2;
+            botaoLogin.Click += Button1_Click2;
             // Desassocia o evento Button1_Click2 do botão button1
 
-            button1.Click -= Button1_Click2;
+            botaoLogin.Click -= Button1_Click2;
             // Define o texto do label1 como o texto inserido no textBox1
 
-            label1.Text = textBox1.Text;
+            textoEmail.Text = campoEmail.Text;
             // Torna o textBox1 invisível
 
-            textBox1.Visible = false;
+            campoEmail.Visible = false;
             // Torna o label2 visível
 
-            label2.Visible = true;
+            textoSenha.Visible = true;
             // Torna o textBox2 visível e habilitado
 
-            textBox2.Visible = true;
-            textBox2.Enabled = true;
+            campoSenha.Visible = true;
+            campoSenha.Enabled = true;
             // Obtém o e-mail e a senha inseridos nos textBoxes
 
-            string email = textBox1.Text;
-            string senha = textBox2.Text;
+            string email = campoEmail.Text;
+            string senha = campoSenha.Text;
             // Obtém o ID do usuário a partir do e-mail
 
             int id = BancodeDados.BuscarID(email);
             // Verifica se o campo senha está vazio e exibe uma mensagem de erro caso esteja
 
-            if (textBox2.Text == "")
+            if (campoSenha.Text == "")
             {
                 label3.Visible = true;
                 label3.Text = "Campo senha vazio";
@@ -382,6 +382,20 @@ namespace JobStack
 
         }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
