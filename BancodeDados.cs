@@ -564,7 +564,7 @@ namespace JobStack
             if ((id / 1000 > 5) && (Empresas[(id % 1000) - 1].GetSenha().Equals(senha))) return true;
             else if ((id / 1000 > 0) && (id / 1000 < 5) && (Alunos[(id % 1000) - 1].GetSenha().Equals(senha))) return true;
             else if ((id / 1000 == 0) && (id / 100 == 1) && (Coordenadores[(id % 100) - 1].GetSenha().Equals(senha))) return true;
-            else if ((id / 1000 == 0) && (id / 100 != 1) && (Coordenadores[id - 1].GetSenha().Equals(senha))) return true;
+            else if ((id / 1000 == 0) && (id / 100 == 0) && (Admins[id - 1].GetSenha().Equals(senha))) return true;
             return false;
         }
 
