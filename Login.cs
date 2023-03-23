@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -25,6 +26,11 @@ namespace JobStack
             button1.Click += Button1_Click1;
           
             textBox2.PasswordChar = '*';
+            button2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            button1.Text = "Próximo";
+            button2.Click += new EventHandler(botaoRetornar_Click);
 
 
         }
@@ -42,23 +48,31 @@ namespace JobStack
             string email = textBox1.Text;
             Console.WriteLine("Email: " + email);
 
-            
-            int usuario = BancodeDados.Login(email);
+
+            int id = BancodeDados.BuscarID(email);
             if (textBox1.Text == "")
             {
-                MessageBox.Show("Campo email vazio");
+                label4.Visible = true;
+
+                label4.Text="Campo email vazio";
 
             }
           
-             else if (usuario == 0)
+             else if (id==0)
+
             {
-                MessageBox.Show("Usuario nao cadastrado");
+                label4.Visible = true;
+
+                label4.Text = "Usuario não cadastrado";
 
             }
             else
             {
                 if (pvez)
                 {
+                    label4.Visible = false;
+                    button1.Text = "Entrar";
+
                     Email();
 
                     button1.Click -= Button1_Click1;
@@ -106,78 +120,63 @@ namespace JobStack
 
             string email = textBox1.Text;
             Console.WriteLine("Email: " + email);
+            int id = BancodeDados.BuscarID(email);
+            label1.Text = textBox1.Text;
+            textBox1.Enabled = false;
 
+            textBox1.Visible = false;
+            label2.Visible = true;
+            textBox2.Visible = true;
+            textBox2.Enabled = true;
+            button2.Visible = true;
 
-
-            int usuario = BancodeDados.Login(email);
-            switch (usuario)
+            if (id / 1000 > 0 && id / 1000 < 6)
             {
-                case 1:
-                    label1.Enabled = false;
-                    textBox1.Enabled = false;
-                    label1.Visible = false;
-                    textBox1.Visible = false;
-                    label2.Visible = true;
-                    textBox2.Visible = true;
-                    textBox2.Enabled = true;
-                    if (!Emailm)
-                    {
-                        MessageBox.Show("Usuario é um aluno");
-                        Emailm = true;
-                    }
-                    break;
-                case 2:
-                    label1.Enabled = false;
-                    textBox1.Enabled = false;
-                    label1.Visible = false;
-                    textBox1.Visible = false;
-                    label2.Visible = true;
-                    textBox2.Visible = true;
-                    textBox2.Enabled = true;
+               
 
-                    if (!Emailm)
-                    {
-                        MessageBox.Show("Usuario é uma empresa");
-                        Emailm = true;
-                    }
+                if (!Emailm)
+                {
+                    MessageBox.Show("Usuario é um aluno");
+                    Emailm = true;
+                }
+            }
+            else if (id / 1000 > 5)
 
-                    break;
-                case 3:
-                    label1.Enabled = false;
-                    textBox1.Enabled = false;
-                    label1.Visible = false;
-                    textBox1.Visible = false;
-                    label2.Visible = true;
-                    textBox2.Visible = true;
-                    textBox2.Enabled = true;
+            {
+                
 
-                    if (!Emailm)
-                    {
-                        MessageBox.Show("Usuario é um Admin");
-                        Emailm = true;
-                    }
-
-                    break;
-                case 4:
-                    label1.Enabled = false;
-                    textBox1.Enabled = false;
-                    label1.Visible = false;
-                    textBox1.Visible = false;
-                    label2.Visible = true;
-                    textBox2.Visible = true;
-                    textBox2.Enabled = true;
-
-                    if (!Emailm)
-                    {
-                        MessageBox.Show("Usuario é um Coordenador");
-                        Emailm = true;
-                    }
-
-                    break;
-
+                if (!Emailm)
+                {
+                    MessageBox.Show("Usuario é uma empresa");
+                    Emailm = true;
+                }
 
             }
+
+
+
+            else if (id / 100 == 1)
+            {
+               
+                if (!Emailm)
+                {
+                    MessageBox.Show("Usuario é um Coordenador");
+                    Emailm = true;
+                }
+            }
+            else
+            {
+
+                if (!Emailm)
+                {
+                    MessageBox.Show("Usuario é um Admin");
+                    Emailm = true;
+                }
+
+            }
+
         }
+
 
 
         private void Senha()
@@ -186,165 +185,85 @@ namespace JobStack
 
             button1.Click += Button1_Click2;
             button1.Click -= Button1_Click2;
+            label1.Text = textBox1.Text;
+            textBox1.Visible = false;
+            label2.Visible = true;
+            textBox2.Visible = true;
+            textBox2.Enabled = true;
+            string email = textBox1.Text;
+            string senha = textBox2.Text;
 
+            int id = BancodeDados.BuscarID(email);
             if (textBox2.Text == "")
             {
-                MessageBox.Show(" campo senha vazio");
+                label3.Visible = true;
+                label3.Text = "Campo senha vazio";
+
             }
-            else
+           if (BancodeDados.Login(id, senha))
             {
-                string email = textBox1.Text;
 
 
 
 
 
 
-
-                int usuario = BancodeDados.Login(email);
-
-
-                switch (usuario)
+                if (id / 1000 > 0 && id / 1000 < 6)
                 {
-                    case 1:
-                        label1.Enabled = false;
-                        textBox1.Enabled = false;
-                        label1.Visible = false;
-                        textBox1.Visible = false;
-                        label2.Visible = true;
-                        textBox2.Visible = true;
-                        textBox2.Enabled = true;
 
-                        if (BancodeDados.BuscarAluno(email).GetSenha().Equals(textBox2.Text))
-                        {
 
-                            MessageBox.Show("sucesso");
-                            Aluno1 p = new Aluno1();
-                            p.ShowDialog();
-                        }
+                    Aluno1 p = new Aluno1();
 
-                        else
-                        {
-                            label1.Enabled = false;
-                            textBox1.Enabled = false;
-                            label1.Visible = false;
-                            textBox1.Visible = false;
-                            label2.Visible = true;
-                            textBox2.Visible = true;
-                            textBox2.Enabled = true;
+                    p.ShowDialog();
+                }
 
-                            MessageBox.Show("erro");
 
-                        }
 
-                        break;
-                    case 2:
-                        label1.Enabled = false;
-                        textBox1.Enabled = false;
-                        label1.Visible = false;
-                        textBox1.Visible = false;
-                        label2.Visible = true;
-                        textBox2.Visible = true;
-                        textBox2.Enabled = true;
 
-                        if (BancodeDados.BuscarEmpresa(email).GetSenha().Equals(textBox2.Text))
-                        {
 
-                            MessageBox.Show("sucesso");
-                            Aluno1 p = new Aluno1();
-                            p.ShowDialog();
-                        }
-                        else if (textBox2.Text == "")
-                        {
-                            MessageBox.Show(" campo senha vazio");
-                        }
-                        else
-                        {
-                            label1.Enabled = false;
-                            textBox1.Enabled = false;
-                            label1.Visible = false;
-                            textBox1.Visible = false;
-                            label2.Visible = true;
-                            textBox2.Visible = true;
-                            textBox2.Enabled = true;
-                            MessageBox.Show("erro");
 
-                        }
+                if (id / 1000 > 5)
+                {
 
-                        break;
-                    case 3:
-                        label1.Enabled = false;
-                        textBox1.Enabled = false;
-                        label1.Visible = false;
-                        textBox1.Visible = false;
-                        label2.Visible = true;
-                        textBox2.Visible = true;
-                        textBox2.Enabled = true;
-                        if (BancodeDados.BuscarAdmin(email).GetSenha().Equals(textBox2.Text))
-                        {
+                    Empresa1 p = new Empresa1();
+                    p.ShowDialog();
+                }
 
-                            MessageBox.Show("sucesso");
-                            Aluno1 p = new Aluno1();
-                            p.ShowDialog();
-                        }
-                        else if (textBox2.Text == "")
-                        {
-                            MessageBox.Show(" campo senha vazio");
-                        }
-                        else
-                        {
-                            label1.Enabled = false;
-                            textBox1.Enabled = false;
-                            label1.Visible = false;
-                            textBox1.Visible = false;
-                            label2.Visible = true;
-                            textBox2.Visible = true;
-                            textBox2.Enabled = true;
-                            MessageBox.Show("erro");
 
-                        }
 
-                        break;
-                    case 4:
+                else if (id / 100 == 1)
+                {
 
-                        label1.Enabled = false;
-                        textBox1.Enabled = false;
-                        label1.Visible = false;
-                        textBox1.Visible = false;
-                        label2.Visible = true;
-                        textBox2.Visible = true;
-                        textBox2.Enabled = true;
-                        if (BancodeDados.BuscarCoordenador(email).GetSenha().Equals(textBox2.Text))
-                        {
 
-                            MessageBox.Show("sucesso");
-                            Aluno1 p = new Aluno1();
-                            p.ShowDialog();
-                        }
-                        else if (textBox2.Text == "")
-                        {
-                            MessageBox.Show(" campo senha vazio");
-                        }
-                        else
-                        {
-                            label1.Enabled = false;
-                            textBox1.Enabled = false;
-                            label1.Visible = false;
-                            textBox1.Visible = false;
-                            label2.Visible = true;
-                            textBox2.Visible = true;
-                            textBox2.Enabled = true;
-                            MessageBox.Show("erro");
 
-                        }
+                    Coordenador1 p = new Coordenador1();
+                    p.ShowDialog();
+                }
 
-                        break;
+
+               else if( id / 100 == 0)
+                {
+
+
+                    Admin1 p = new Admin1();
+                    p.ShowDialog();
                 }
             }
-        }
+          
+            
+        
 
 
 
+
+
+
+
+
+
+
+    }
+        
 
 
 
@@ -378,6 +297,66 @@ namespace JobStack
 
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void botaoRetornar_Click(object sender,EventArgs e)
+        {
+            string email = textBox1.Text;
+            Console.WriteLine("Email: " + email);
+
+
+            int id = BancodeDados.BuscarID(email);
+            if (textBox1.Text == "")
+            {
+                label4.Visible = true;
+
+                label4.Text = "Campo email vazio";
+
+            }
+
+            else if (id == 0)
+
+            {
+                label4.Visible = true;
+
+                label4.Text = "Usuario não cadastrado";
+
+            }
+            else
+            {
+                if (pvez)
+                {
+                    label4.Visible = false;
+                    button1.Text = "Entrar";
+
+                    Email();
+
+                    button1.Click -= Button1_Click1;
+
+                    button1.Click += Button1_Click2;
+
+
+                    pvez = false;
+
+
+
+
+                }
+
+            }
+        }
     }
 }

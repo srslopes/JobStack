@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="Admin1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin1.Designer.cs">
+      <DependentUpon>Admin1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Aluno.cs" />
     <Compile Include="Aluno1.cs">
       <SubType>Form</SubType>
@@ -56,7 +62,19 @@
     </Compile>
     <Compile Include="BancodeDados.cs" />
     <Compile Include="Coordenador.cs" />
+    <Compile Include="Coordenador1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordenador1.Designer.cs">
+      <DependentUpon>Coordenador1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empresa.cs" />
+    <Compile Include="Empresa1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empresa1.Designer.cs">
+      <DependentUpon>Empresa1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
