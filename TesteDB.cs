@@ -143,7 +143,7 @@ namespace JobStack
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            BancodeDados.ExcluirUsuario(aluno.GetID());
+            BancodeDados.ExcluirUsuario(int.Parse(textBox4.Text));
             AttLista();
         }
 

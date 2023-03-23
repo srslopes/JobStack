@@ -113,12 +113,6 @@ namespace JobStack
             return true;
         }
 
-        public static int GetNextIdAluno()  //retorna um novo ID
-        {
-            proxIdAluno++;
-            return proxIdAluno;
-
-        }
 
         public static string ExibirAlunos()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
@@ -142,7 +136,14 @@ namespace JobStack
         public static void ResetarIdsAlunos()       //Reseta os IDs dos alunos mantendo a ordem da lista
         {
             proxIdAluno = 1000;
-            for (int i = 0; i < Alunos.IndexOf(Alunos.Last()); i++) Alunos[i].SetID(GetNextIdAluno());
+            for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++) Alunos[i].SetID(GetNextIdAluno());
+        }
+
+        public static int GetNextIdAluno()  //retorna um novo ID
+        {
+            proxIdAluno++;
+            return proxIdAluno;
+
         }
 
         //-------------------------------------------------------------------------------------------------
@@ -226,11 +227,7 @@ namespace JobStack
             Empresas[(empresa.GetID() % 1000) - 1].ClonarDe(empresa);
             return true;
         }
-        public static int GetNextIdEmpresa()
-        {
-            proxIdEmpresa++;
-            return proxIdEmpresa;
-        }
+        
 
         public static string ExibirEmpresas()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
@@ -253,8 +250,13 @@ namespace JobStack
 
         public static void ResetarIdsEmpresas()
         {
-            proxIdEmpresa = 1000;
-            for (int i = 0; i < Empresas.IndexOf(Empresas.Last()); i++) Empresas[i].SetID(GetNextIdEmpresa());
+            proxIdEmpresa = 6000;
+            for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++) Empresas[i].SetID(GetNextIdEmpresa());
+        }
+        public static int GetNextIdEmpresa()
+        {
+            proxIdEmpresa++;
+            return proxIdEmpresa;
         }
 
         //------------------------------------------------------------------------------------------------------------
@@ -347,11 +349,6 @@ namespace JobStack
             Admins[(admin.GetID() % 100) - 1].ClonarDe(admin);
             return true;
         }
-        public static int GetNextIdAdmin()
-        {
-            proxIdAdmin++;
-            return proxIdAdmin;
-        }
 
         public static string ExibirAdmins()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
@@ -373,10 +370,15 @@ namespace JobStack
         }
         public static void ResetarIdsAdmins()
         {
-            proxIdAdmin = 1000;
-            for (int i = 0; i < Admins.IndexOf(Admins.Last()); i++) Admins[i].SetID(GetNextIdAdmin());
+            proxIdAdmin = 0000;
+            for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++) Admins[i].SetID(GetNextIdAdmin());
         }
 
+        public static int GetNextIdAdmin()
+        {
+            proxIdAdmin++;
+            return proxIdAdmin;
+        }
         //-------------------------------------------------------------------------------------------------------------------------
 
 
@@ -465,11 +467,7 @@ namespace JobStack
             Coordenadores[(coordenador.GetID() % 100) - 1].ClonarDe(coordenador);
             return true;
         }
-        public static int GetNextIdCoordenador()
-        {
-            proxIdCoordenador++;
-            return proxIdCoordenador;
-        }
+        
 
         public static string ExibirCoordenadores()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
@@ -492,8 +490,14 @@ namespace JobStack
 
         public static void ResetarIdsCoordenadores()
         {
-            proxIdCoordenador = 1000;
-            for (int i = 0; i < Coordenadores.IndexOf(Coordenadores.Last()); i++) Coordenadores[i].SetID(GetNextIdCoordenador());
+            proxIdCoordenador = 100;
+            for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++) Coordenadores[i].SetID(GetNextIdCoordenador());
+        }
+
+        public static int GetNextIdCoordenador()
+        {
+            proxIdCoordenador++;
+            return proxIdCoordenador;
         }
 
         //------------------------------------------------------------------------------------------------------------------------
