@@ -145,45 +145,6 @@ namespace JobStack
             for (int i = 0; i < Alunos.IndexOf(Alunos.Last()); i++) Alunos[i].SetID(GetNextIdAluno());
         }
 
-        //-------------------------------------------------------------------------------------------------
-
-
-        public static bool CriarAluno(string email, string senha) //Método para criar um novo aluno e adiciona-lo ao banco de dados, retorna falso se o aluno ja existe
-        {
-            Aluno novo = new Aluno(email, senha);
-            if (AlunoExiste(novo)) return false;
-            Alunos.Add(novo);
-            indexAluno = Alunos.IndexOf(novo);
-            return true;
-        }
-
-        public static Aluno BuscarAluno(string email)         //Retorna o objeto aluno com o ID indicado,
-        {
-            Aluno busc = new Aluno();
-            busc.ClonarDe(Alunos[1]);
-            return busc;
-        }
-        public static void ExcluirAluno(Aluno aluno)    //Remove o aluno indicado
-        {
-            Alunos.Remove(Alunos[indexAluno]);
-        }
-        public static bool AlunoExiste(Aluno aluno) //Retorna verdadeiro se o aluno existe, falso se não
-        {
-            try
-            {
-                if (Alunos.Exists(obj => obj.GetEmail().Equals(aluno.GetEmail())))
-                {
-                    indexAluno = Alunos.FindIndex(obj => obj.GetEmail().Equals(aluno.GetEmail()));
-                    return true;
-                }
-                indexAluno = 0;
-                return false;
-            }
-            catch (System.NullReferenceException)
-            {
-                return false;
-            }
-        }
 
 
         //-------------------------------------------------------- Métodos - Empresas --------------------------------------------------------------------------
@@ -257,57 +218,10 @@ namespace JobStack
             for (int i = 0; i < Empresas.IndexOf(Empresas.Last()); i++) Empresas[i].SetID(GetNextIdEmpresa());
         }
 
-        //------------------------------------------------------------------------------------------------------------
-
-
-
-        public static bool CriarEmpresa(string email, string senha)
-        {
-            Empresa novo = new Empresa(email, senha);
-            if (EmpresaExiste(novo)) return false;
-            Empresas.Add(novo);
-            indexEmpresa = Empresas.IndexOf(novo);
-            return true;
-        }
-
-        public static void ExcluirEmpresa(Empresa empresa)
-        {
-            Empresas.Remove(empresa);
-        }
-
-        public static Empresa BuscarEmpresa(string email)
-        {
-            Empresa chk = new Empresa(email);
-            if (EmpresaExiste(chk))
-            {
-                chk.ClonarDe(Empresas[indexEmpresa]);
-                return chk;
-            }
-            return null;
-        }
-
-
-        public static bool EmpresaExiste(Empresa empresa)
-        {
-            try
-            {
-                if (Empresas.Exists(obj => obj.GetEmail().Equals(empresa.GetEmail())))
-                {
-                    indexEmpresa = Empresas.FindIndex(obj => obj.GetEmail().Equals(empresa.GetEmail()));
-                    return true;
-                }
-                indexEmpresa = 0;
-                return false;
-            }
-            catch (System.NullReferenceException)
-            {
-                return false;
-            }
-
-        }
+ 
         
 
-        //--------------------------------------------------------------- Métodos - Administradores ----------------------------------------------------------------------------
+        //-------------------------------------------------- Métodos - Administradores ----------------------------------------------------------------------------
 
         public static bool AdicionarAdmin(Admin admin)                  //Método para adicionar uma nova empresa ao banco de dados,
         {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
@@ -377,55 +291,9 @@ namespace JobStack
             for (int i = 0; i < Admins.IndexOf(Admins.Last()); i++) Admins[i].SetID(GetNextIdAdmin());
         }
 
-        //-------------------------------------------------------------------------------------------------------------------------
 
 
-
-        public static bool CriarAdmin(string email, string senha)
-        {
-            Admin novo = new Admin(email, senha);
-            if (AdminExiste(novo)) return false;
-            Admins.Add(novo);
-            indexAdmin = Admins.IndexOf(novo);
-            return true;
-        }
-        public static void ExcluirAdmin(Admin admin)
-        {
-            Admins.Remove(admin);
-        }
-
-        public static Admin BuscarAdmin(string email)
-        {
-            Admin chk = new Admin(email);
-            if (AdminExiste(chk))
-            {
-                chk.ClonarDe(Admins[indexAdmin]);
-                return chk;
-            }
-            return null;
-        }
-       
-
-        public static bool AdminExiste(Admin admin)
-        {
-            try
-            {
-                if (Admins.Exists(obj => obj.GetEmail().Equals(admin.GetEmail())))
-                {
-                    indexAdmin = Admins.FindIndex(obj => obj.GetEmail().Equals(admin.GetEmail()));
-                    return true;
-                }
-                indexAdmin = 0;
-                return false;
-            }
-            catch (System.NullReferenceException)
-            {
-                return false;
-            }
-            
-        }
-
-        //---------------------------------------------------------------  Métodos - Coordenadores --------------------------------------------------------------------
+        //-------------------------------------------- Métodos - Coordenadores --------------------------------------------------------------------
 
         public static bool AdicionarCoordenador(Coordenador coordenador)                  //Método para adicionar uma nova empresa ao banco de dados,
         {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
@@ -459,7 +327,7 @@ namespace JobStack
             return busc;
         }
 
-        public static bool SalvaCoordenador(Coordenador coordenador) //Salva o aluno na sua posição original
+        public static bool SalvarCoordenador(Coordenador coordenador) //Salva o aluno na sua posição original
         {
             if (coordenador.GetID() == 0 || BuscarID(coordenador.GetEmail()) != 0) return false;
             Coordenadores[(coordenador.GetID() % 100) - 1].ClonarDe(coordenador);
@@ -496,71 +364,12 @@ namespace JobStack
             for (int i = 0; i < Coordenadores.IndexOf(Coordenadores.Last()); i++) Coordenadores[i].SetID(GetNextIdCoordenador());
         }
 
-        //------------------------------------------------------------------------------------------------------------------------
-
-        public static bool CriarCoordenador(string email, string senha)
-        {
-            Coordenador novo = new Coordenador(email, senha);
-            if (CoordenadorExiste(novo)) return false;
-            Coordenadores.Add(novo);
-            indexCoordenador = Coordenadores.IndexOf(novo);
-            return true;
-        }
-
-        public static void ExcluirCoordenador(Coordenador coordenador)
-        {
-            Coordenadores.Remove(coordenador);
-        }
+        //--------------------------------------------------------- Métodos Universais ---------------------------------------------------------------
+                                                         //Interagem com todos os tipos de usuário
 
 
-        public static Coordenador BuscarCoordenador(string email)
-        {
-            Coordenador chk = new Coordenador(email);
-            if (CoordenadorExiste(chk))
-            {
-                chk.ClonarDe(Coordenadores[indexCoordenador]);
-                return chk;
-            }
-            return null;
-        }
-
-        public static void SalvarCoordenador(Coordenador coordenador)
-        {
-            Coordenadores[indexCoordenador].ClonarDe(coordenador);
-        }
-
-        public static bool CoordenadorExiste(Coordenador coordenador)
-        {
-            try
-            {
-                if (Coordenadores.Exists(obj => obj.GetEmail().Equals(coordenador.GetEmail())))
-                {
-                    indexCoordenador = Coordenadores.FindIndex(obj => obj.GetEmail().Equals(coordenador.GetEmail()));
-                    return true;
-                }
-                indexCoordenador = 0;
-                return false;
-            }
-            catch (System.NullReferenceException)
-            {
-                return false;
-            }           
-        }
-
-       
-
-        public static int Login(string email)
-        {
-            if (BuscarAluno(email) != null) return 1;
-            if (BuscarEmpresa(email) != null) return 2;
-            if (BuscarAdmin(email) != null) return 3;
-            if (BuscarCoordenador(email) != null) return 4;
-            return 0;
-          
-        }
-
-        public static bool Login(int id, string senha)
-        {
+        public static bool Login(int id, string senha)  //Retorna verdadeiro se a senha inserida é a mesma que a do usuário com o ID indicado
+        {                                               //Retorna falso se a senha estiver incorreta
             if ((id / 1000 > 5) && (Empresas[(id % 1000) - 1].GetSenha().Equals(senha))) return true;
             else if ((id / 1000 > 0) && (id / 1000 < 5) && (Alunos[(id % 1000) - 1].GetSenha().Equals(senha))) return true;
             else if ((id / 1000 == 0) && (id / 100 == 1) && (Coordenadores[(id % 100) - 1].GetSenha().Equals(senha))) return true;
@@ -568,8 +377,8 @@ namespace JobStack
             return false;
         }
 
-        public static int BuscarID(string email)    //Procura no banco de dados o email inserido e retorna o id desse usuario,
-        {                                           //Retorna 0 se nao existir usuario com essa senha    
+        public static int BuscarID(string email)    //Procura no banco de dados o usuário com o  email inserido e retorna o id dele,
+        {                                           //Retorna 0 se nao existir usuario com esse email    
             IdUser = BuscarIdAluno(email);
             if ( IdUser != 0) return IdUser;
             IdUser = BuscarIdEmpresa(email);
@@ -582,7 +391,7 @@ namespace JobStack
 
         }
 
-        public static object BuscarUsuario(int id)
+        public static object BuscarUsuario(int id)      //Retorna o usuario que possui o ID inserido
         {
             IdUser = id;
             if (id / 1000 > 5) return Empresas[(id % 1000) - 1];
@@ -591,7 +400,7 @@ namespace JobStack
             else return Admins[id - 1];
         }
 
-        public static bool AdicionarUsuario(Object obj)
+        public static bool AdicionarUsuario(Object obj) 
         {
             switch(obj.GetType().ToString())
             {
