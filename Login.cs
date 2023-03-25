@@ -290,8 +290,8 @@ namespace JobStack
             {
                 this.Hide();
 
-                Empresa1 p = new Empresa1();
-                p.ShowDialog();
+                //Empresa1 p = new Empresa1();
+                //p.ShowDialog();
             }
 
 
@@ -303,8 +303,8 @@ namespace JobStack
 
                 this.Hide();
 
-                Coordenador1 p = new Coordenador1();
-                p.ShowDialog();
+                //Coordenador1 p = new Coordenador1();
+                //p.ShowDialog();
             }
 
 
@@ -313,8 +313,8 @@ namespace JobStack
 
                 this.Hide();
 
-                Admin1 p = new Admin1();
-                p.ShowDialog();
+                //Admin1 p = new Admin1();
+                //p.ShowDialog();
             }
         }
 

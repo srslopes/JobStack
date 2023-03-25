@@ -14,22 +14,21 @@ namespace JobStack
     class BancodeDados
     {
         private static List<Aluno> Alunos;                  //Banco de dados dos alunos (Lista de objetos da classe Aluno)
-        private static int indexAluno;                      //Index da posição do aluno pesquisado
         private static int proxIdAluno;                     //Id do próximo aluno
 
-        private static List<Empresa> Empresas;              //Banco de dados das empresas (Lista de objetos da classe Empresa)                           
-        private static int indexEmpresa;                    //Index da posição da empresa pesquisada
+        private static List<Empresa> Empresas;              //Banco de dados das empresas (Lista de objetos da classe Empresa)
         private static int proxIdEmpresa;                   //Id da próxima empresa
 
         private static List<Admin> Admins;                  //Banco de dados dos administradores (Lista de objetos da classe Admin)
-        private static int indexAdmin;                      //Index da posição do administrador pesquisado
         private static int proxIdAdmin;                     //Id do próximo Admin
 
         private static List<Coordenador> Coordenadores;     //Banco de dados dos coordenadores (Lista de objetos da classe Coordenador)
-        private static int indexCoordenador;                //Index da posição do coordenador pesquisado
         private static int proxIdCoordenador;               //Id do próximo coordenador
 
-        private static int IdUser;
+        private static int IdUser;                          //ID do usuário 
+
+        private static List<Vaga> Vagas;                    //Lista de vagas
+        private static int proxIdVaga;
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
         // 00XX - Administradores do sistema
@@ -51,6 +50,7 @@ namespace JobStack
             proxIdEmpresa = 6000;
             proxIdAdmin = 0;
             proxIdCoordenador = 100;
+            proxIdVaga = 0;
             IdUser = 0;
 
             for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
@@ -86,7 +86,7 @@ namespace JobStack
         {                                                           //Retorna 0 se esse aluno não existir
             try
             {
-                for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++)
+                for (int i = 0; i < Alunos.Count; i++)
                 {
                     if (Alunos[i].GetEmail().Equals(email)) return Alunos[i].GetID();
                 }
@@ -125,7 +125,7 @@ namespace JobStack
             string txt = "";
             try
             {
-                for (int i = 0; i <= Alunos.IndexOf(Alunos.Last()); i++)
+                for (int i = 0; i < Alunos.Count; i++)
                 {
                     txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() + "?";
                     Console.WriteLine("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
@@ -142,7 +142,7 @@ namespace JobStack
         public static void ResetarIdsAlunos()       //Reseta os IDs dos alunos mantendo a ordem da lista
         {
             proxIdAluno = 1000;
-            for (int i = 0; i < Alunos.IndexOf(Alunos.Last()); i++) Alunos[i].SetID(GetNextIdAluno());
+            for (int i = 0; i < Alunos.Count; i++) Alunos[i].SetID(GetNextIdAluno());
         }
 
 
@@ -161,7 +161,7 @@ namespace JobStack
         {                                                           //Retorna 0 se esse aluno não existir
             try
             {
-                for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++)
+                for (int i = 0; i < Empresas.Count; i++)
                 {
                     if (Empresas[i].GetEmail().Equals(email)) return Empresas[i].GetID();
                 }
@@ -198,7 +198,7 @@ namespace JobStack
             string txt = "";
             try
             {
-                for (int i = 0; i <= Empresas.IndexOf(Empresas.Last()); i++)
+                for (int i = 0; i < Empresas.Count; i++)
                 {
                     txt += "ID: " + Empresas[i].GetID() + ", Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha() + "?";
                     Console.WriteLine("ID: " + Empresas[i].GetID() + "Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
@@ -215,7 +215,7 @@ namespace JobStack
         public static void ResetarIdsEmpresas()
         {
             proxIdEmpresa = 1000;
-            for (int i = 0; i < Empresas.IndexOf(Empresas.Last()); i++) Empresas[i].SetID(GetNextIdEmpresa());
+            for (int i = 0; i < Empresas.Count; i++) Empresas[i].SetID(GetNextIdEmpresa());
         }
 
  
@@ -235,7 +235,7 @@ namespace JobStack
         {                                                           //Retorna 0 se esse aluno não existir
             try
             {
-                for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++)
+                for (int i = 0; i < Admins.Count; i++)
                 {
                     if (Admins[i].GetEmail().Equals(email)) return Admins[i].GetID();
                 }
@@ -272,7 +272,7 @@ namespace JobStack
             string txt = "";
             try
             {
-                for (int i = 0; i <= Admins.IndexOf(Admins.Last()); i++)
+                for (int i = 0; i < Admins.Count; i++)
                 {
                     txt += "ID: " + Admins[i].GetID() + ", Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha() + "?";
                     Console.WriteLine("ID: " + Admins[i].GetID() + "Empresa: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
@@ -288,7 +288,7 @@ namespace JobStack
         public static void ResetarIdsAdmins()
         {
             proxIdAdmin = 1000;
-            for (int i = 0; i < Admins.IndexOf(Admins.Last()); i++) Admins[i].SetID(GetNextIdAdmin());
+            for (int i = 0; i < Admins.Count; i++) Admins[i].SetID(GetNextIdAdmin());
         }
 
 
@@ -307,7 +307,7 @@ namespace JobStack
         {                                                           //Retorna 0 se esse aluno não existir
             try
             {
-                for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++)
+                for (int i = 0; i < Coordenadores.Count; i++)
                 {
                     if (Coordenadores[i].GetEmail().Equals(email)) return Coordenadores[i].GetID();
                 }
@@ -344,7 +344,7 @@ namespace JobStack
             string txt = "";
             try
             {
-                for (int i = 0; i <= Coordenadores.IndexOf(Coordenadores.Last()); i++)
+                for (int i = 0; i < Coordenadores.Count; i++)
                 {
                     txt += "ID: " + Coordenadores[i].GetID() + ", Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha() + "?";
                     Console.WriteLine("ID: " + Coordenadores[i].GetID() + "Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
@@ -361,7 +361,7 @@ namespace JobStack
         public static void ResetarIdsCoordenadores()
         {
             proxIdCoordenador = 1000;
-            for (int i = 0; i < Coordenadores.IndexOf(Coordenadores.Last()); i++) Coordenadores[i].SetID(GetNextIdCoordenador());
+            for (int i = 0; i < Coordenadores.Count; i++) Coordenadores[i].SetID(GetNextIdCoordenador());
         }
 
         //--------------------------------------------------------- Métodos Universais ---------------------------------------------------------------
@@ -473,5 +473,46 @@ namespace JobStack
             return IdUser;
         }
 
+
+        //----------------------------------- Métodos - Vagas ---------------------------------------------------------
+
+        public static int AdicionarVaga(Vaga vaga)                  //Método para adicionar um novo aluno ao banco de dados,
+        {
+            Vagas.Add(vaga);
+            return Vagas.IndexOf(vaga);
+        }        
+
+        public static Vaga BuscarVaga(int id)         //Retorna o objeto aluno com o ID indicado,
+        {
+            Vaga busc = Vagas[id];
+            return busc;
+        }
+ 
+
+        public static int GetNextIdVaga()  //retorna um novo ID
+        {
+            proxIdVaga++;
+            return proxIdVaga;
+
+        }
+
+        public static string ExibirVagas()   //Exibe, no prompt, os dados dos alunos cadastrados
+        {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
+            string txt = "";
+            try
+            {
+                for (int i = 0; i < Alunos.Count; i++)
+                {
+                    txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() + "?";
+                    Console.WriteLine("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
+                }
+                return txt;
+            }
+            catch (System.ArgumentNullException)
+            {
+                Console.WriteLine("Falha ao exibir Alunos");
+                return txt;
+            }
+        }
     }
 }
