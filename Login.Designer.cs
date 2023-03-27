@@ -29,27 +29,18 @@ namespace JobStack
         /// </summary>
         private void InitializeComponent()
         {
-            this.botaoLogin = new System.Windows.Forms.Button();
             this.campoEmail = new System.Windows.Forms.TextBox();
             this.textoEmail = new System.Windows.Forms.Label();
             this.textoSenha = new System.Windows.Forms.Label();
             this.campoSenha = new System.Windows.Forms.TextBox();
             this.botaoVoltar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.CondicaoSenha = new System.Windows.Forms.Label();
+            this.CondicaoEmail = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BotaoProximo = new System.Windows.Forms.Button();
+            this.BotaoLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // botaoLogin
-            // 
-            this.botaoLogin.Location = new System.Drawing.Point(786, 327);
-            this.botaoLogin.Name = "botaoLogin";
-            this.botaoLogin.Size = new System.Drawing.Size(121, 46);
-            this.botaoLogin.TabIndex = 0;
-            this.botaoLogin.Text = "Login";
-            this.botaoLogin.UseVisualStyleBackColor = true;
-            this.botaoLogin.Click += new System.EventHandler(this.Button1_Click);
             // 
             // campoEmail
             // 
@@ -73,7 +64,7 @@ namespace JobStack
             // textoSenha
             // 
             this.textoSenha.AutoSize = true;
-            this.textoSenha.Location = new System.Drawing.Point(823, 236);
+            this.textoSenha.Location = new System.Drawing.Point(823, 281);
             this.textoSenha.Name = "textoSenha";
             this.textoSenha.Size = new System.Drawing.Size(38, 13);
             this.textoSenha.TabIndex = 9;
@@ -83,7 +74,7 @@ namespace JobStack
             // campoSenha
             // 
             this.campoSenha.HideSelection = false;
-            this.campoSenha.Location = new System.Drawing.Point(716, 252);
+            this.campoSenha.Location = new System.Drawing.Point(716, 308);
             this.campoSenha.Multiline = true;
             this.campoSenha.Name = "campoSenha";
             this.campoSenha.Size = new System.Drawing.Size(260, 29);
@@ -97,26 +88,26 @@ namespace JobStack
             this.botaoVoltar.Size = new System.Drawing.Size(75, 23);
             this.botaoVoltar.TabIndex = 10;
             this.botaoVoltar.Text = "Voltar";
-            this.botaoVoltar.Click += new System.EventHandler(this.button2_Click_1);
+            this.botaoVoltar.Click += new System.EventHandler(this.BotaoVoltar_Click);
             // 
-            // label3
+            // CondicaoSenha
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(829, 295);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Email";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
+            this.CondicaoSenha.AutoSize = true;
+            this.CondicaoSenha.Location = new System.Drawing.Point(804, 356);
+            this.CondicaoSenha.Name = "CondicaoSenha";
+            this.CondicaoSenha.Size = new System.Drawing.Size(83, 13);
+            this.CondicaoSenha.TabIndex = 11;
+            this.CondicaoSenha.Text = "CondicaoSenha";
+            this.CondicaoSenha.Click += new System.EventHandler(this.label3_Click_1);
             // 
-            // label4
+            // CondicaoEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(823, 177);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Senha";
+            this.CondicaoEmail.AutoSize = true;
+            this.CondicaoEmail.Location = new System.Drawing.Point(823, 177);
+            this.CondicaoEmail.Name = "CondicaoEmail";
+            this.CondicaoEmail.Size = new System.Drawing.Size(80, 13);
+            this.CondicaoEmail.TabIndex = 12;
+            this.CondicaoEmail.Text = "Condicao Email";
             // 
             // pictureBox1
             // 
@@ -128,19 +119,40 @@ namespace JobStack
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // BotaoProximo
+            // 
+            this.BotaoProximo.Location = new System.Drawing.Point(812, 193);
+            this.BotaoProximo.Name = "BotaoProximo";
+            this.BotaoProximo.Size = new System.Drawing.Size(75, 23);
+            this.BotaoProximo.TabIndex = 15;
+            this.BotaoProximo.Text = "Proximo";
+            this.BotaoProximo.UseVisualStyleBackColor = true;
+            this.BotaoProximo.Click += new System.EventHandler(this.BotaoProximo_Click);
+            // 
+            // BotaoLogin
+            // 
+            this.BotaoLogin.Location = new System.Drawing.Point(812, 401);
+            this.BotaoLogin.Name = "BotaoLogin";
+            this.BotaoLogin.Size = new System.Drawing.Size(75, 23);
+            this.BotaoLogin.TabIndex = 16;
+            this.BotaoLogin.Text = "Login";
+            this.BotaoLogin.UseVisualStyleBackColor = true;
+            this.BotaoLogin.Click += new System.EventHandler(this.BotaoLogin_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.BotaoLogin);
+            this.Controls.Add(this.BotaoProximo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.CondicaoEmail);
+            this.Controls.Add(this.CondicaoSenha);
             this.Controls.Add(this.textoSenha);
             this.Controls.Add(this.campoSenha);
             this.Controls.Add(this.textoEmail);
             this.Controls.Add(this.campoEmail);
-            this.Controls.Add(this.botaoLogin);
             this.Controls.Add(this.botaoVoltar);
             this.Name = "Login";
             this.Text = "Form1";
@@ -152,16 +164,16 @@ namespace JobStack
         }
 
         #endregion
-
-        private System.Windows.Forms.Button botaoLogin;
         private System.Windows.Forms.TextBox campoEmail;
         private System.Windows.Forms.Label textoEmail;
         private System.Windows.Forms.Label textoSenha;
         private System.Windows.Forms.TextBox campoSenha;
         private System.Windows.Forms.Button botaoVoltar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label CondicaoSenha;
+        private System.Windows.Forms.Label CondicaoEmail;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BotaoProximo;
+        private System.Windows.Forms.Button BotaoLogin;
     }
 }
 

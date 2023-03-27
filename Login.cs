@@ -16,305 +16,218 @@ namespace JobStack
         public Login()
         {
             InitializeComponent();
-            // Esconder o campo de senha
+            // Executa o método Passo1()
 
-            campoSenha.Visible = false;
-            // Desabilitar o campo de senha
-
-            campoSenha.Enabled = false;
-            // Esconder a label de aviso
-
-            textoSenha.Visible = false;
-            // Adicionar evento de clique ao botão
-            botaoLogin.Click += Button1_Click1;
-            // Esconder a senha digitada com asteriscos
-
-            campoSenha.PasswordChar = '*';
-            // Esconder o botão 
-
-            botaoVoltar.Visible = false;
-            // Esconder as labels 
-
-            label3.Visible = false;
-            label4.Visible = false;
-            // Mudar o texto do botão para "Próximo"
-
-            botaoLogin.Text = "Próximo";
-
-
+            Passo1();
         }
-        // Variável de controle para saber se o botão já foi clicado antes
-
-        private bool pvez = true;
-
-
-        private void Button1_Click(object sender, EventArgs e)
+        private void Passo1()
         {
+            // Método Passo1() que define a interface do login
 
+            // Esconder o campo de senha
+            campoSenha.Visible = false;
+
+            // Desabilitar o campo de senha
+            campoSenha.Enabled = false;
+
+            // Esconder a label de aviso
+            campoEmail.Visible = true;
+            campoEmail.Enabled = true;
+            textoEmail.Visible = true;
+            textoEmail.Enabled = true;
+
+            // Limpar os campos de email e senha
+            campoEmail.Text = "";
+            textoEmail.Text = "Email";
+            campoSenha.Text = "";
+
+            // Esconder a label de condição da senha
+            textoSenha.Visible = false;
+            CondicaoSenha.Text = " ";
+
+            // Limpar a label de condição do email
+            CondicaoEmail.Text = "";
+
+            // Adicionar evento de clique ao botão
+
+            // Esconder a senha digitada com asteriscos
+            campoSenha.PasswordChar = '*';
+
+            // Esconder o botão de voltar
+            botaoVoltar.Visible = false;
+
+            // Esconder as labels de condição de senha e email
+            CondicaoSenha.Visible = false;
+            CondicaoEmail.Visible = false;
+
+            // Mudar o texto do botão para "Próximo"
+            BotaoLogin.Visible = false;
+            BotaoLogin.Enabled = false;
+            BotaoProximo.Visible = true;
+            BotaoProximo.Enabled = true;
 
         }
-        private void Button1_Click1(object sender, EventArgs e)
-        {    // Obter o email digitado pelo usuário
-
-            string email = campoEmail.Text;
-            Console.WriteLine("Email: " + email);
-
-            // Buscar o ID do usuário no banco de dados
-
-            int id = BancodeDados.BuscarID(email);
-            // Verificar se o campo de email está vazio
-
-            if (campoEmail.Text == "")
-            {
-                label4.Visible = true;
-
-                label4.Text = "Campo email vazio";
-
-            }
-            // Verificar se o usuário não está cadastrado
-
-            else if (id == 0)
-
-            {
-                label4.Visible = true;
-
-                label4.Text = "Usuario não cadastrado";
-
-            }
-            // Se for a primeira vez que o botão é clicado, exibir o campo de senha e mudar o texto do botão
-
-            else
-
-            {
-                if (pvez)
-                {
-                    label4.Visible = false;
-                    botaoLogin.Text = "Entrar";
-                    // Chamar o método Email para exibir informações sobre o usuário
-
-                    Email();
-                    // Remover o evento de clique anterior e adicionar o novo evento
-
-                    botaoLogin.Click -= Button1_Click1;
-
-                    botaoLogin.Click += Button1_Click2;
-
-                    // Atualizar a variável de controle para saber que o botão já foi clicado uma vez
-
-                    pvez = false;
 
 
 
-
-                }
-
-            }
-        }
+        
+        
 
         private void Button1_Click2(object sender, EventArgs e)
         {
 
             // Chamar o método Senha para validar a senha digitada
 
-            Senha();
             // Se não for a primeira vez que o botão é clicado, remover o evento de clique atual e adicionar o evento anterior
 
-            if (!pvez)
-            {
-
-                botaoLogin.Click += Button1_Click2;
-                botaoLogin.Click -= Button1_Click2;
-
-                botaoLogin.Click -= Button1_Click1;
-
-
-
-
-                pvez = true;
-
-
-            }
+               
 
 
 
         }
-        // Variável de controle para saber se as informações do usuário já foram exibidas
-
-        private bool Emailm = false;
+        
         private void Email()
         {
-            // Obter o email digitado pelo usuário
-
+            // Obter o email digitado pelo usuário e exibir no console
             string email = campoEmail.Text;
             Console.WriteLine("Email: " + email);
+
             // Buscar o ID do usuário no banco de dados
-
             int id = BancodeDados.BuscarID(email);
+
             // Exibir o email do usuário na label
-
             textoEmail.Text = campoEmail.Text;
+
             // Desabilita e esconde a primeira caixa de texto
-
             campoEmail.Enabled = false;
-
             campoEmail.Visible = false;
-            // Mostra a segunda caixa de texto, o rótulo e o botão
 
+            // Mostra a segunda caixa de texto, o rótulo e o botão
             textoSenha.Visible = true;
             campoSenha.Visible = true;
             campoSenha.Enabled = true;
             botaoVoltar.Visible = true;
-            // Identifica o tipo de usuário com base em seu ID
 
-            if (id / 1000 > 0 && id / 1000 < 6)
+            // Verifica se o campo de email está vazio
+            if (email.Equals(""))
             {
-
-                // Se for um aluno, exibe uma mensagem
-
-                if (!Emailm)
-                {
-                    MessageBox.Show("Usuario é um aluno");
-                    Emailm = true;
-                }
+                CondicaoEmail.Visible = true;
+                CondicaoEmail.Text = "Campo email vazio";
             }
-            else if (id / 1000 > 5)
-
+            // Verificar se o usuário não está cadastrado
+            else if (id == 0)
             {
-
-                // Se for uma empresa, exibe uma mensagem
-
-                if (!Emailm)
-                {
-                    MessageBox.Show("Usuario é uma empresa");
-                    Emailm = true;
-                }
-
+                CondicaoEmail.Visible = true;
+                CondicaoEmail.Text = "Usuario não cadastrado";
             }
-
-
-
-            else if (id / 100 == 1)
-            {
-                // Se for um coordenador, exibe uma mensagem
-
-                if (!Emailm)
-                {
-                    MessageBox.Show("Usuario é um Coordenador");
-                    Emailm = true;
-                }
-            }
+            // Se o usuário está cadastrado, identifica o tipo de usuário com base em seu ID
             else
             {
-                // Se for um admin, exibe uma mensagem
+                // Esconde o botão "Próximo" e mostra o botão "Login"
+                BotaoProximo.Visible = false;
+                BotaoProximo.Enabled = false;
+                BotaoLogin.Visible = true;
+                BotaoLogin.Enabled = true;
 
-                if (!Emailm)
+                // Verifica o tipo de usuário
+                if (id / 1000 > 0 && id / 1000 < 6)
                 {
-                    MessageBox.Show("Usuario é um Admin");
-                    Emailm = true;
+                    // Se for um aluno, exibe uma mensagem
+                 
+                     //   MessageBox.Show("Usuario é um aluno");
+                     
                 }
-
+                else if (id / 1000 > 5)
+                {
+                    // Se for uma empresa, exibe uma mensagem
+                 
+                       // MessageBox.Show("Usuario é uma empresa");
+                   
+                }
+                else if (id / 100 == 1)
+                {
+                    // Se for um coordenador, exibe uma mensagem
+                  
+                      //  MessageBox.Show("Usuario é um Coordenador");
+                       
+                }
+                else
+                {
+                    // Se for um admin, exibe uma mensagem
+                   
+                      //  MessageBox.Show("Usuario é um Admin");
+                    
+                }
             }
-
         }
 
 
 
-        private void Senha()
-        {    // Desassocia o evento Button1_Click1 do botão button1
-
-            botaoLogin.Click -= Button1_Click1;
-            // Associa o evento Button1_Click2 ao botão button1
-
-            botaoLogin.Click += Button1_Click2;
-            // Desassocia o evento Button1_Click2 do botão button1
-
-            botaoLogin.Click -= Button1_Click2;
-            // Define o texto do label1 como o texto inserido no textBox1
-
+                private void Senha()
+        {     // Exibe o e-mail digitado pelo usuário na label correspondente
             textoEmail.Text = campoEmail.Text;
-            // Torna o textBox1 invisível
 
+            // Esconde o campo de texto do e-mail
             campoEmail.Visible = false;
-            // Torna o label2 visível
 
+            // Exibe o campo de texto da senha
             textoSenha.Visible = true;
-            // Torna o textBox2 visível e habilitado
 
+            // Torna o campo de texto da senha visível e habilitado
             campoSenha.Visible = true;
             campoSenha.Enabled = true;
-            // Obtém o e-mail e a senha inseridos nos textBoxes
 
+            // Obtém o e-mail e a senha inseridos nos campos de texto
             string email = campoEmail.Text;
             string senha = campoSenha.Text;
-            // Obtém o ID do usuário a partir do e-mail
 
+            // Obtém o ID do usuário a partir do e-mail inserido
             int id = BancodeDados.BuscarID(email);
-            // Verifica se o campo senha está vazio e exibe uma mensagem de erro caso esteja
 
+            // Verifica se o campo senha está vazio e exibe uma mensagem de erro caso esteja
             if (campoSenha.Text == "")
             {
-                label3.Visible = true;
-                label3.Text = "Campo senha vazio";
-
+                CondicaoSenha.Visible = true;
+                CondicaoSenha.Text = "Campo senha vazio";
             }
-            // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
 
+            // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
             else if (!BancodeDados.Login(id, senha))
             {
-                label3.Visible = true;
-                label3.Text = "Senha incorreta";
+                CondicaoSenha.Visible = true;
+                CondicaoSenha.Text = "Senha incorreta";
             }
 
-
-
-
-
             // Verifica se o usuário é um aluno e exibe a janela do formulário Aluno1
-
             else if (id / 1000 > 0 && id / 1000 < 6)
             {
-
                 this.Hide();
                 Aluno1 p = new Aluno1();
-
                 p.ShowDialog();
             }
 
-
-
-
-
             // Verifica se o usuário é uma empresa e exibe a janela do formulário Empresa1
-
             else if (id / 1000 > 5)
             {
                 this.Hide();
-
-                //Empresa1 p = new Empresa1();
-                //p.ShowDialog();
+                TEmpresa p = new TEmpresa();
+                p.ShowDialog();
             }
-
 
             // Verifica se o usuário é um coordenador e exibe a janela do formulário Coordenador1
-
             else if (id / 100 == 1)
             {
-
-
                 this.Hide();
-
-                //Coordenador1 p = new Coordenador1();
-                //p.ShowDialog();
+                TCoordenador p = new TCoordenador();
+                p.ShowDialog();
             }
 
-
+            // Se não for nenhum dos tipos anteriores, exibe a janela do formulário TAdmin
             else
             {
-
                 this.Hide();
-
-                //Admin1 p = new Admin1();
-                //p.ShowDialog();
+                TAdmin p = new TAdmin();
+                p.ShowDialog();
             }
         }
 
@@ -352,7 +265,6 @@ namespace JobStack
         {
 
 
-
         }
 
 
@@ -366,11 +278,7 @@ namespace JobStack
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Button1_Click1(sender, e);
-
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -382,10 +290,7 @@ namespace JobStack
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label3_Click_1(object sender, EventArgs e)
         {
@@ -395,6 +300,56 @@ namespace JobStack
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void BotaoLogin_Click(object sender, EventArgs e)
+        {
+            Senha();
+        }
+
+        private void BotaoProximo_Click(object sender, EventArgs e)
+        {
+            // Obter o email digitado pelo usuário
+            string email = campoEmail.Text;
+            Console.WriteLine("Email: " + email);
+
+            // Buscar o ID do usuário no banco de dados
+            int id = BancodeDados.BuscarID(email);
+
+            // Verificar se o campo de email está vazio
+            if (email.Equals(""))
+            {
+                CondicaoEmail.Visible = true;
+                CondicaoEmail.Text = "Campo email vazio";
+            }
+            // Verificar se o usuário não está cadastrado
+            else if (id == 0)
+            {
+                CondicaoEmail.Visible = true;
+                CondicaoEmail.Text = "Usuario não cadastrado";
+            }
+            // Se for a primeira vez que o botão é clicado, exibir o campo de senha e mudar o texto do botão
+            else
+            {
+                CondicaoEmail.Visible = false;
+                // Chamar o método Email para exibir informações sobre o usuário
+                Email();
+                // Remover o evento de clique anterior e adicionar o novo evento
+                // Atualizar a variável de controle para saber que o botão já foi clicado uma vez
+            }
+        
+        }
+
+        private void ButtonLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotaoVoltar_Click(object sender, EventArgs e)
+        {
+            Passo1();
         }
     }
 }

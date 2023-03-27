@@ -47,12 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
-    <Compile Include="Admin1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin1.Designer.cs">
-      <DependentUpon>Admin1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Aluno.cs" />
     <Compile Include="Aluno1.cs">
       <SubType>Form</SubType>
@@ -62,19 +56,7 @@
     </Compile>
     <Compile Include="BancodeDados.cs" />
     <Compile Include="Coordenador.cs" />
-    <Compile Include="Coordenador1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Coordenador1.Designer.cs">
-      <DependentUpon>Coordenador1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Empresa.cs" />
-    <Compile Include="Empresa1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Empresa1.Designer.cs">
-      <DependentUpon>Empresa1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +70,24 @@
     </Compile>
     <Compile Include="Senha.Designer.cs">
       <DependentUpon>Senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAdmin.Designer.cs">
+      <DependentUpon>TAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCoordenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCoordenador.Designer.cs">
+      <DependentUpon>TCoordenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEmpresa.Designer.cs">
+      <DependentUpon>TEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="TesteDB.cs">
       <SubType>Form</SubType>
