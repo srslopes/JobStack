@@ -95,6 +95,18 @@
     <Compile Include="TesteDB.Designer.cs">
       <DependentUpon>TesteDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="TesteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesteMenu.Designer.cs">
+      <DependentUpon>TesteMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TesteVagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesteVagas.Designer.cs">
+      <DependentUpon>TesteVagas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vaga.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -114,6 +126,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TesteDB.resx">
       <DependentUpon>TesteDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TesteMenu.resx">
+      <DependentUpon>TesteMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TesteVagas.resx">
+      <DependentUpon>TesteVagas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

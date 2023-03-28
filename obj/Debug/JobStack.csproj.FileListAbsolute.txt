@@ -91,3 +91,5 @@ C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.pdb
 C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.exe.config
 C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.exe
 C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.pdb
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteMenu.resources
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteVagas.resources

@@ -19,6 +19,8 @@ namespace JobStack
             // Executa o método Passo1()
 
             Passo1();
+
+         
         }
         private void Passo1()
         {
@@ -311,6 +313,8 @@ namespace JobStack
 
         private void BotaoProximo_Click(object sender, EventArgs e)
         {
+            
+
             // Obter o email digitado pelo usuário
             string email = campoEmail.Text;
             Console.WriteLine("Email: " + email);
