@@ -273,9 +273,9 @@ namespace JobStack
         //--------------------------------------------------------- Métodos Universais ---------------------------------------------------------------
                                                          //Interagem com todos os tipos de usuário
 
-
-        public static bool Login(int id, string senha)  //Retorna verdadeiro se a senha inserida é a mesma que a do usuário com o ID indicado
+        public static bool Login(string senha)  //Retorna verdadeiro se a senha inserida é a mesma que a do usuário com o ID indicado
         {                                               //Retorna falso se a senha estiver incorreta
+            int id = GetIdUser();
             if ((id / 1000 > 5) && (Empresas[(id % 1000) - 1].GetSenha().Equals(senha))) return true;
             else if ((id / 1000 > 0) && (id / 1000 < 5) && (Alunos[(id % 1000) - 1].GetSenha().Equals(senha))) return true;
             else if ((id / 1000 == 0) && (id / 100 == 1) && (Coordenadores[(id % 100) - 1].GetSenha().Equals(senha))) return true;

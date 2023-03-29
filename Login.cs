@@ -194,7 +194,7 @@ namespace JobStack
             }
 
             // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
-            else if (!BancodeDados.Login(id, senha))
+            else if (!BancodeDados.Login(senha))
             {
                 CondicaoSenha.Visible = true;
                 CondicaoSenha.Text = "Senha incorreta";
