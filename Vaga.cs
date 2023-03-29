@@ -24,6 +24,10 @@ namespace JobStack
         {
             return ID;
         }
+        public int GetIdEmpresa()
+        {
+            return IdEmpresa;
+        }
 
         public string GetStatus()
         {

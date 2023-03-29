@@ -83,68 +83,43 @@ namespace JobStack
         }
 
         public static int BuscarIdAluno(string email)               //Retorna o ID do aluno com o email inserido,
-        {                                                           //Retorna 0 se esse aluno não existir
-            try
+        {                                                           //Retorna 0 se esse aluno não existir        
+            for (int i = 0; i < Alunos.Count; i++)
             {
-                for (int i = 0; i < Alunos.Count; i++)
-                {
-                    if (Alunos[i].GetEmail().Equals(email)) return Alunos[i].GetID();
-                }
-                return 0;
+                if (Alunos[i].GetEmail().Equals(email)) return Alunos[i].GetID();
             }
-            catch (System.InvalidOperationException)
-            {
-                return 0;
-            }
-            
+            return 0;           
         }
 
         public static Aluno BuscarAluno(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            Aluno busc = new Aluno();
-            busc.ClonarDe(Alunos[(id % 1000) - 1]);
-            return busc;
+            if(id/1000>=1 && id/1000<6) return Alunos[(id % 1000) - 1];
+            return null;
         }
 
-        public static bool SalvarAluno(Aluno aluno) //Salva o aluno na sua posição original
+        public static Aluno CarregarAluno()         //Retorna o objeto aluno com o ID indicado,
         {
-            if (aluno.GetID() == 0 || BuscarID(aluno.GetEmail()) != 0) return false;
-            Alunos[(aluno.GetID()%1000)-1].ClonarDe(aluno);
-            return true;
+            int id = GetIdUser();
+            if (id / 1000 >= 1 && id / 1000 < 6) return Alunos[(id % 1000) - 1];
+            return null;
         }
 
         public static int GetNextIdAluno()  //retorna um novo ID
         {
             proxIdAluno++;
             return proxIdAluno;
-
         }
 
         public static string ExibirAlunos()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
             string txt = "";
-            try
+            for (int i = 0; i < Alunos.Count; i++)
             {
-                for (int i = 0; i < Alunos.Count; i++)
-                {
-                    txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() + "?";
-                    Console.WriteLine("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
-                }
-                return txt;
+                txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() + "?";
+                Console.WriteLine("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
             }
-            catch (System.ArgumentNullException)
-            {
-                Console.WriteLine("Falha ao exibir Alunos");
-                return txt;
-            }
+            return txt;
         }
-
-        public static void ResetarIdsAlunos()       //Reseta os IDs dos alunos mantendo a ordem da lista
-        {
-            proxIdAluno = 1000;
-            for (int i = 0; i < Alunos.Count; i++) Alunos[i].SetID(GetNextIdAluno());
-        }
-
 
 
         //-------------------------------------------------------- Métodos - Empresas --------------------------------------------------------------------------
@@ -159,34 +134,26 @@ namespace JobStack
 
         public static int BuscarIdEmpresa(string email)               //Retorna o ID do aluno com o email inserido,
         {                                                           //Retorna 0 se esse aluno não existir
-            try
+            for (int i = 0; i < Empresas.Count; i++)
             {
-                for (int i = 0; i < Empresas.Count; i++)
-                {
-                    if (Empresas[i].GetEmail().Equals(email)) return Empresas[i].GetID();
-                }
-                return 0;
+                if (Empresas[i].GetEmail().Equals(email)) return Empresas[i].GetID();
             }
-            catch (System.InvalidOperationException)
-            {
-                return 0;
-            }
-
+            return 0;
         }
 
         public static Empresa BuscarEmpresa(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            Empresa busc = new Empresa();
-            busc.ClonarDe(Empresas[(id % 1000) - 1]);
-            return busc;
+            if (id / 1000 >= 6 && id / 1000 < 10) return Empresas[(id % 1000) - 1];
+            return null;
         }
 
-        public static bool SalvarEmpresa(Empresa empresa) //Salva o aluno na sua posição original
+        public static Empresa CarregarEmpresa()         //Retorna o objeto aluno logado,
         {
-            if (empresa.GetID() == 0 || BuscarID(empresa.GetEmail()) != 0) return false;
-            Empresas[(empresa.GetID() % 1000) - 1].ClonarDe(empresa);
-            return true;
+            int id = GetIdUser();
+            if (id / 1000 >= 6 && id / 1000 < 10) return Empresas[(id % 1000) - 1];
+            return null;
         }
+
         public static int GetNextIdEmpresa()
         {
             proxIdEmpresa++;
@@ -196,30 +163,13 @@ namespace JobStack
         public static string ExibirEmpresas()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
             string txt = "";
-            try
+            for (int i = 0; i < Empresas.Count; i++)
             {
-                for (int i = 0; i < Empresas.Count; i++)
-                {
-                    txt += "ID: " + Empresas[i].GetID() + ", Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha() + "?";
-                    Console.WriteLine("ID: " + Empresas[i].GetID() + "Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
-                }
-                return txt;
+                txt += "ID: " + Empresas[i].GetID() + ", Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha() + "?";
+                Console.WriteLine("ID: " + Empresas[i].GetID() + "Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
             }
-            catch (System.ArgumentNullException)
-            {
-                Console.WriteLine("Falha ao exibir Empresas");
-                return txt;
-            }
-        }
-
-        public static void ResetarIdsEmpresas()
-        {
-            proxIdEmpresa = 1000;
-            for (int i = 0; i < Empresas.Count; i++) Empresas[i].SetID(GetNextIdEmpresa());
-        }
-
- 
-        
+            return txt;           
+        }        
 
         //-------------------------------------------------- Métodos - Administradores ----------------------------------------------------------------------------
 
@@ -233,34 +183,27 @@ namespace JobStack
 
         public static int BuscarIdAdmin(string email)               //Retorna o ID do aluno com o email inserido,
         {                                                           //Retorna 0 se esse aluno não existir
-            try
+            for (int i = 0; i < Admins.Count; i++)
             {
-                for (int i = 0; i < Admins.Count; i++)
-                {
-                    if (Admins[i].GetEmail().Equals(email)) return Admins[i].GetID();
-                }
-                return 0;
+                if (Admins[i].GetEmail().Equals(email)) return Admins[i].GetID();
             }
-            catch (System.InvalidOperationException)
-            {
-                return 0;
-            }
-
+            return 0;
         }
 
         public static Admin BuscarAdmin(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            Admin busc = new Admin();
-            busc.ClonarDe(Admins[(id % 100) - 1]);
-            return busc;
+            if (id/1000 == 0 && id/100 == 0) return Admins[(id % 100) - 1];
+            return null;
         }
 
-        public static bool SalvarAdmin(Admin admin) //Salva o aluno na sua posição original
+        public static Admin CarregarAdmin()         //Retorna o objeto aluno com o ID indicado,
         {
-            if (admin.GetID() == 0 || BuscarID(admin.GetEmail()) != 0) return false;
-            Admins[(admin.GetID() % 100) - 1].ClonarDe(admin);
-            return true;
+            int id = GetIdUser();
+            if (id / 1000 == 0 && id / 100 == 0) return Admins[(id % 100) - 1];
+            return null;
         }
+
+
         public static int GetNextIdAdmin()
         {
             proxIdAdmin++;
@@ -270,28 +213,13 @@ namespace JobStack
         public static string ExibirAdmins()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
             string txt = "";
-            try
+            for (int i = 0; i < Admins.Count; i++)
             {
-                for (int i = 0; i < Admins.Count; i++)
-                {
-                    txt += "ID: " + Admins[i].GetID() + ", Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha() + "?";
-                    Console.WriteLine("ID: " + Admins[i].GetID() + "Empresa: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
-                }
-                return txt;
+                txt += "ID: " + Admins[i].GetID() + ", Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha() + "?";
+                Console.WriteLine("ID: " + Admins[i].GetID() + "Empresa: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
             }
-            catch (System.ArgumentNullException)
-            {
-                Console.WriteLine("Falha ao exibir Admins");
-                return txt;
-            }
+            return txt;            
         }
-        public static void ResetarIdsAdmins()
-        {
-            proxIdAdmin = 1000;
-            for (int i = 0; i < Admins.Count; i++) Admins[i].SetID(GetNextIdAdmin());
-        }
-
-
 
         //-------------------------------------------- Métodos - Coordenadores --------------------------------------------------------------------
 
@@ -305,34 +233,26 @@ namespace JobStack
 
         public static int BuscarIdCoordenador(string email)               //Retorna o ID do aluno com o email inserido,
         {                                                           //Retorna 0 se esse aluno não existir
-            try
+            for (int i = 0; i < Coordenadores.Count; i++)
             {
-                for (int i = 0; i < Coordenadores.Count; i++)
-                {
-                    if (Coordenadores[i].GetEmail().Equals(email)) return Coordenadores[i].GetID();
-                }
-                return 0;
+                if (Coordenadores[i].GetEmail().Equals(email)) return Coordenadores[i].GetID();
             }
-            catch (System.InvalidOperationException)
-            {
-                return 0;
-            }
-
+            return 0;            
         }
 
         public static Coordenador BuscarCoordenador(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            Coordenador busc = new Coordenador();
-            busc.ClonarDe(Coordenadores[(id % 100) - 1]);
-            return busc;
+            if (id/1000 ==0 && id/100 ==1) return Coordenadores[(id % 100) - 1];
+            return null;
         }
 
-        public static bool SalvarCoordenador(Coordenador coordenador) //Salva o aluno na sua posição original
+        public static Coordenador CarregarCoordenador()         //Retorna o objeto aluno com o ID indicado,
         {
-            if (coordenador.GetID() == 0 || BuscarID(coordenador.GetEmail()) != 0) return false;
-            Coordenadores[(coordenador.GetID() % 100) - 1].ClonarDe(coordenador);
-            return true;
+            int id = GetIdUser();
+            if (id / 1000 == 0 && id / 100 == 1) return Coordenadores[(id % 100) - 1];
+            return null;
         }
+
         public static int GetNextIdCoordenador()
         {
             proxIdCoordenador++;
@@ -342,26 +262,12 @@ namespace JobStack
         public static string ExibirCoordenadores()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
             string txt = "";
-            try
+            for (int i = 0; i < Coordenadores.Count; i++)
             {
-                for (int i = 0; i < Coordenadores.Count; i++)
-                {
-                    txt += "ID: " + Coordenadores[i].GetID() + ", Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha() + "?";
-                    Console.WriteLine("ID: " + Coordenadores[i].GetID() + "Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
-                }
-                return txt;
+                txt += "ID: " + Coordenadores[i].GetID() + ", Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha() + "?";
+                Console.WriteLine("ID: " + Coordenadores[i].GetID() + "Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
             }
-            catch (System.ArgumentNullException)
-            {
-                Console.WriteLine("Falha ao exibir Coordenadores");
-                return txt;
-            }
-        }
-
-        public static void ResetarIdsCoordenadores()
-        {
-            proxIdCoordenador = 1000;
-            for (int i = 0; i < Coordenadores.Count; i++) Coordenadores[i].SetID(GetNextIdCoordenador());
+            return txt;            
         }
 
         //--------------------------------------------------------- Métodos Universais ---------------------------------------------------------------
@@ -388,7 +294,6 @@ namespace JobStack
             IdUser = BuscarIdCoordenador(email);
             if (IdUser != 0) return IdUser;
             return 0;
-
         }
 
         public static object BuscarUsuario(int id)      //Retorna o usuario que possui o ID inserido
@@ -415,54 +320,7 @@ namespace JobStack
             }
             return false;
         }
-
-        public static bool SalvarUsuario(Object obj)
-        {
-            switch (obj.GetType().ToString())
-            {
-                case "JobStack.Aluno":
-                    SalvarAluno((Aluno)obj);
-                    break;
-                case "JobStack.Empresa":
-                    SalvarEmpresa((Empresa)obj);
-                    break;
-                case "JobStack.Admin":
-                    SalvarAdmin((Admin)obj);
-                    break;
-                case "JobStack.Coordenador":
-                    SalvarCoordenador((Coordenador)obj);
-                    break;
-            }
-            return false;
-        }
-
-        public static void ExcluirUsuario(int id)    //Remove o aluno indicado
-        {
-            if(id/1000>5)
-            {
-                //Empresas[(id % 1000) - 1].Limpar();
-                Empresas.Remove(Empresas[(id % 1000) - 1]);
-                ResetarIdsEmpresas();
-            }
-            else if(id/1000>0)
-            {
-                //Alunos[(id % 1000) - 1].Limpar();
-                Alunos.Remove(Alunos[(id % 1000) - 1]);
-               ResetarIdsAlunos();
-            }
-            else if(id/100==1)
-            {
-                //Coordenadores[(id % 100) - 1].Limpar();
-               Coordenadores.Remove(Coordenadores[(id % 100) - 1]);
-                ResetarIdsCoordenadores();
-            }
-            else
-            {
-                //Admins[id - 1].Limpar();
-                Admins.Remove(Admins[id - 1]);
-                ResetarIdsAdmins();
-            }
-        }
+    
         public static string ExibirDB()
         {
             return ExibirAlunos() + ExibirEmpresas() + ExibirAdmins() + ExibirCoordenadores();
@@ -484,35 +342,25 @@ namespace JobStack
 
         public static Vaga BuscarVaga(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            Vaga busc = Vagas[id];
-            return busc;
-        }
- 
+            return Vagas[id];
+        } 
 
         public static int GetNextIdVaga()  //retorna um novo ID
         {
             proxIdVaga++;
             return proxIdVaga;
-
         }
 
         public static string ExibirVagas()   //Exibe, no prompt, os dados dos alunos cadastrados
         {                                     //Retorna uma string com os dados dos alunos, separados pelo char '?' 
             string txt = "";
-            try
+            for (int i = 0; i < Vagas.Count; i++)
             {
-                for (int i = 0; i < Alunos.Count; i++)
-                {
-                    txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() + "?";
-                    Console.WriteLine("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
-                }
-                return txt;
+                txt += "ID: " + Vagas[i].GetID() + ", Empresa: " + BuscarEmpresa(Vagas[i].GetIdEmpresa()).GetEmail() + ", Status: " + Vagas[i].GetStatus() + "?";
+                Console.WriteLine("ID: " + Vagas[i].GetID() + "Empresa: " + BuscarEmpresa(Vagas[i].GetIdEmpresa()).GetEmail() + ", Status: " + Vagas[i].GetStatus());
             }
-            catch (System.ArgumentNullException)
-            {
-                Console.WriteLine("Falha ao exibir Alunos");
-                return txt;
-            }
+            return txt;
+            
         }
     }
 }
