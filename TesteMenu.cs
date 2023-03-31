@@ -40,7 +40,6 @@ namespace JobStack
         {
             db.Hide();
             vg.Show();
-            //vg. = System.Windows.Forms.FormPosition.CenterParent;
         }
 
         private void TesteMenu_Load(object sender, EventArgs e)

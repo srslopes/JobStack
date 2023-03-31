@@ -356,8 +356,15 @@ namespace JobStack
             string txt = "";
             for (int i = 0; i < Vagas.Count; i++)
             {
-                txt += "ID: " + Vagas[i].GetID() + ", Empresa: " + BuscarEmpresa(Vagas[i].GetIdEmpresa()).GetEmail() + ", Status: " + Vagas[i].GetStatus() + "?";
-                Console.WriteLine("ID: " + Vagas[i].GetID() + "Empresa: " + BuscarEmpresa(Vagas[i].GetIdEmpresa()).GetEmail() + ", Status: " + Vagas[i].GetStatus());
+                txt += "ID: " + Vagas[i].GetID() + ", Empresa: " + BuscarEmpresa(Vagas[i].GetIdEmpresa()).GetEmail() + ", Status: " + Vagas[i].GetStatus();
+                Console.Write("ID: " + Vagas[i].GetID() + "Empresa: " + BuscarEmpresa(Vagas[i].GetIdEmpresa()).GetEmail() + ", Status: " + Vagas[i].GetStatus());
+                for (int j = 0; j<Vagas[i].GetLista().Count; j++)
+                {
+                    txt += ", ID " + (j + 1) + ": " + Vagas[i].GetLista()[j];
+                    Console.Write(", ID " + (j + 1) + ": " + Vagas[i].GetLista()[j]);
+                }
+                txt += "?";
+                Console.WriteLine();
             }
             return txt;
             

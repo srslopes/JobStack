@@ -16,6 +16,7 @@ namespace JobStack
         public Vaga(int idEmpresa)                  //Cria uma nova vaga; (Obrigatória entrada do ID da empresa)
         {                                           //Vaga salva na lista de vagas não aprovadas
             IdEmpresa = idEmpresa;                  //Status estabelecido como "Aguardando Aprovação"
+            Inscritos = new List<int>();
             Status = "Aguardando aprovação";
             ID = BancodeDados.AdicionarVaga(this);
         }
@@ -37,6 +38,11 @@ namespace JobStack
         public void SetStatus(string status)
         {
             Status = status;
+        }
+
+        public List<int> GetLista()
+        {
+            return Inscritos;
         }
 
         public void Inscrever(int id)       //Adiciona o ID do usuario inscrito à lista de inscritos
