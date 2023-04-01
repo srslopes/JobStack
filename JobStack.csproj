@@ -89,11 +89,41 @@
     <Compile Include="Senha.Designer.cs">
       <DependentUpon>Senha.cs</DependentUpon>
     </Compile>
+    <Compile Include="TAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAdmin.Designer.cs">
+      <DependentUpon>TAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCoordenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCoordenador.Designer.cs">
+      <DependentUpon>TCoordenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEmpresa.Designer.cs">
+      <DependentUpon>TEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="TesteDB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TesteDB.Designer.cs">
       <DependentUpon>TesteDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TesteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesteMenu.Designer.cs">
+      <DependentUpon>TesteMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TesteVagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesteVagas.Designer.cs">
+      <DependentUpon>TesteVagas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vaga.cs" />
     <EmbeddedResource Include="Login.resx">
@@ -107,12 +137,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Senha.resx">
       <DependentUpon>Senha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TesteDB.resx">
       <DependentUpon>TesteDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TesteMenu.resx">
+      <DependentUpon>TesteMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TesteVagas.resx">
+      <DependentUpon>TesteVagas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -126,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo-tela-de-login-vazio.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,25 +11,21 @@ namespace JobStack
         private string email;
         private string senha;
         private int ID;
+        private List<int> Vagas;
 
 
         public Aluno()
         {
-            email = "";
-            senha = "";
             ID = 0;
+            Vagas = new List<int>();
         }
-        public Aluno(string e)
-        {
-            email = e;
-            senha = "";
-            ID = 0;
-        }
+        
         public Aluno(string e, string p)
         {
-            email = e;
+            SetEmail(e);
             senha = p;
             ID = 0;
+            Vagas = new List<int>();
         }
 
         public string GetEmail()
@@ -59,12 +55,34 @@ namespace JobStack
         {
             ID = id;
         }
-
-        public void ClonarDe(Aluno a)   //Copia os atributos do objeto indicado para esse objeto
+        public void AdicionarVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
         {
-            this.SetEmail(a.GetEmail());
-            this.SetSenha(a.GetSenha());
-            this.SetID(a.GetID());
+            for (int i = 0; i < Vagas.Count; i++) if (Vagas[i] == id) return;
+            Vagas.Add(id);
+        }
+
+        public void RemoverVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
+        {
+            for (int i = 0; i < Vagas.Count; i++) if (Vagas[i] == id) Vagas.RemoveAt(i);
+        }
+
+        public List<int> GetVagas()
+        {
+            return Vagas;
+        }
+
+        public void SetVagas(List<int> vagas)
+        {
+            Vagas.Clear();
+            for (int i = 0; i <= vagas.IndexOf(vagas.Last()); i++) Vagas.Add(vagas[i]);
+        }
+
+        public void ClonarDe(Aluno aluno)   //Copia os atributos do objeto indicado para esse objeto
+        {
+            this.SetEmail(aluno.GetEmail());
+            this.SetSenha(aluno.GetSenha());
+            this.SetID(aluno.GetID());
+            this.SetVagas(aluno.GetVagas());
         }
 
         public void Limpar()

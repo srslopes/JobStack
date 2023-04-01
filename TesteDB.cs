@@ -115,25 +115,21 @@ namespace JobStack
             {
                 empresa.SetEmail(textBox1.Text);
                 empresa.SetSenha(textBox2.Text);
-                BancodeDados.SalvarUsuario(empresa);
             }
             else if (id / 1000 > 0)
             {
                 aluno.SetEmail(textBox1.Text);
                 aluno.SetSenha(textBox2.Text);
-                BancodeDados.SalvarUsuario(aluno);
             }
             else if (id / 100 == 1)
             {
                 coordenador.SetEmail(textBox1.Text);
                 coordenador.SetSenha(textBox2.Text);
-                BancodeDados.SalvarUsuario(coordenador);
             }
             else if (id / 100 ==0)
             {
                 admin.SetEmail(textBox1.Text);
                 admin.SetSenha(textBox2.Text);
-                BancodeDados.SalvarUsuario(admin);
             }
 
             
@@ -142,7 +138,6 @@ namespace JobStack
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            BancodeDados.ExcluirUsuario(aluno.GetID());
             AttLista();
         }
 

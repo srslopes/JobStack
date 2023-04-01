@@ -8,66 +8,73 @@ namespace JobStack
 {
    class Vaga
     {
-        private string tipo;
-        private int quantidade;
-        private string descricao;
-        private string nomeEmpresa;
-        private int status;
-        public Vaga(string a, string b, string c)
-        {
-            tipo = a;
-            descricao = b;
-            nomeEmpresa = c;
-            status = 0;
-        }
-        public Vaga(string e, string f, string g, int h)
-        {
-           tipo = e;
-            descricao = f;
-            nomeEmpresa = g;
-            status = h;
+        private int ID;                 //ID de 4 digitos, se o primeiro digito for 0 a vaga ainda não foi aprovada
+        private int IdEmpresa;
+        private List<int> Inscritos;
+        private string Status;
 
+        public Vaga(int idEmpresa)                  //Cria uma nova vaga; (Obrigatória entrada do ID da empresa)
+        {                                           //Vaga salva na lista de vagas não aprovadas
+            IdEmpresa = idEmpresa;                  //Status estabelecido como "Aguardando Aprovação"
+            Inscritos = new List<int>();
+            Status = "Aguardando aprovação";
+            ID = BancodeDados.AdicionarVaga(this);
         }
-
-        public string GetTipo()
+        
+        public int GetID()
         {
-            return tipo;
+            return ID;
+        }
+        public int GetIdEmpresa()
+        {
+            return IdEmpresa;
         }
 
-        public string GetDescricao()
+        public string GetStatus()
         {
-            return descricao;
-        }
-        public string GetNomeEmpresa()
-        {
-            return nomeEmpresa;
-        }
-        public int GetStatus()
-        {
-            return status;
-        }
-        public void SetTipo(string e)
-        {
-            tipo = e;
+            return Status;
         }
 
-        public void SetDescricao(string f)
+        public void SetStatus(string status)
         {
-           descricao = f;
-        }
-        public void SetNomeEmpresa(string g)
-        {
-            nomeEmpresa = g;
-        }
-        public void SetStatus(int h)
-        {
-            status = h;
+            Status = status;
         }
 
-        public int Quantidade
+        public List<int> GetLista()
         {
-            get { return quantidade; }
-            set { quantidade = value; }
+            return Inscritos;
+        }
+
+        public void Inscrever(int id)       //Adiciona o ID do usuario inscrito à lista de inscritos
+        {
+            for(int i=0; i< Inscritos.Count; i++) if(Inscritos[i] == id) return;
+            Inscritos.Add(id);
+        }
+
+        public void Desinscrever(int id)    //Remove o ID do Usuario da lista de inscritos
+        {
+            for (int i = 0; i < Inscritos.Count; i++)
+            {
+                if (Inscritos[i] == id) Inscritos.RemoveAt(i);
+            }
+        }
+
+        public void Aprovar()   //Muda o status para 'aprovada'
+        {
+            if (Status.Equals("Aguardando aprovação"))
+            {
+                Status = "Aprovada";
+            }
+        }
+
+        public void Desaprovar()
+        {
+            Status = "Desaprovada";
+        }
+
+        public void Encerrar()
+        {
+            Status = "Encerrada";
         }
     }
 }
