@@ -83,3 +83,9 @@ C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.
 C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\bin\Debug\JobStack.exe.config
 C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\bin\Debug\JobStack.exe
 C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\bin\Debug\JobStack.pdb
+C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TesteMenu.resources
+C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TesteVagas.resources
+C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.Aluno1.resources
+C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TAdmin.resources
+C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TCoordenador.resources
+C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TEmpresa.resources

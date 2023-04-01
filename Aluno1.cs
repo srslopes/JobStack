@@ -16,5 +16,13 @@ namespace JobStack
         {
             InitializeComponent();
         }
+
+        private void BotaoVoltar_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Login p = new Login();
+            p.ShowDialog();
+        }
     }
 }

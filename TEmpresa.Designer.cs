@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.BotaoVoltar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // BotaoVoltar
+            // 
+            this.BotaoVoltar.Location = new System.Drawing.Point(713, 415);
+            this.BotaoVoltar.Name = "BotaoVoltar";
+            this.BotaoVoltar.Size = new System.Drawing.Size(75, 23);
+            this.BotaoVoltar.TabIndex = 0;
+            this.BotaoVoltar.Text = "Voltar";
+            this.BotaoVoltar.UseVisualStyleBackColor = true;
+            this.BotaoVoltar.Click += new System.EventHandler(this.BotaoVoltar_Click);
+            // 
+            // TEmpresa
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BotaoVoltar);
+            this.Name = "TEmpresa";
             this.Text = "TEmpresa";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button BotaoVoltar;
     }
 }
