@@ -36,7 +36,6 @@ namespace JobStack
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.CondicaoSenha = new System.Windows.Forms.Label();
             this.CondicaoEmail = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BotaoProximo = new System.Windows.Forms.Button();
             this.BotaoLogin = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -44,16 +43,21 @@ namespace JobStack
             this.painelSenha = new System.Windows.Forms.Panel();
             this.copiarEmail = new System.Windows.Forms.Label();
             this.painelSuporte = new System.Windows.Forms.Panel();
-            this.perguntaSuporte = new System.Windows.Forms.Label();
-            this.erro = new System.Windows.Forms.ComboBox();
+            this.CondicaoEmailS = new System.Windows.Forms.Label();
+            this.botaoEnviar = new System.Windows.Forms.Button();
             this.campoEmailPessoal = new System.Windows.Forms.TextBox();
             this.emailPessoal = new System.Windows.Forms.Label();
-            this.botaoEnviar = new System.Windows.Forms.Button();
-            this.CondicaoEmailS = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.erro = new System.Windows.Forms.ComboBox();
+            this.perguntaSuporte = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.botaoMinimizar = new System.Windows.Forms.PictureBox();
+            this.botaoFechar = new System.Windows.Forms.PictureBox();
             this.painelEmail.SuspendLayout();
             this.painelSenha.SuspendLayout();
             this.painelSuporte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // campoEmail
@@ -68,21 +72,23 @@ namespace JobStack
             // textoEmail
             // 
             this.textoEmail.AutoSize = true;
-            this.textoEmail.Location = new System.Drawing.Point(153, 52);
+            this.textoEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoEmail.Location = new System.Drawing.Point(140, 46);
             this.textoEmail.Name = "textoEmail";
-            this.textoEmail.Size = new System.Drawing.Size(32, 13);
+            this.textoEmail.Size = new System.Drawing.Size(54, 19);
             this.textoEmail.TabIndex = 2;
-            this.textoEmail.Text = "Email";
+            this.textoEmail.Text = "EMAIL";
             this.textoEmail.Click += new System.EventHandler(this.Label1_Click);
             // 
             // textoSenha
             // 
             this.textoSenha.AutoSize = true;
-            this.textoSenha.Location = new System.Drawing.Point(147, 46);
+            this.textoSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoSenha.Location = new System.Drawing.Point(140, 40);
             this.textoSenha.Name = "textoSenha";
-            this.textoSenha.Size = new System.Drawing.Size(38, 13);
+            this.textoSenha.Size = new System.Drawing.Size(60, 19);
             this.textoSenha.TabIndex = 9;
-            this.textoSenha.Text = "Senha";
+            this.textoSenha.Text = "SENHA";
             this.textoSenha.Click += new System.EventHandler(this.Label2_Click);
             // 
             // campoSenha
@@ -123,16 +129,6 @@ namespace JobStack
             this.CondicaoEmail.Size = new System.Drawing.Size(80, 13);
             this.CondicaoEmail.TabIndex = 12;
             this.CondicaoEmail.Text = "Condicao Email";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::JobStack.Properties.Resources.fundo_tela_de_login_vazio;
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -130);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(664, 939);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // BotaoProximo
             // 
@@ -195,7 +191,7 @@ namespace JobStack
             // copiarEmail
             // 
             this.copiarEmail.AutoSize = true;
-            this.copiarEmail.Location = new System.Drawing.Point(147, 19);
+            this.copiarEmail.Location = new System.Drawing.Point(138, 11);
             this.copiarEmail.Name = "copiarEmail";
             this.copiarEmail.Size = new System.Drawing.Size(66, 13);
             this.copiarEmail.TabIndex = 17;
@@ -216,25 +212,24 @@ namespace JobStack
             this.painelSuporte.Visible = false;
             this.painelSuporte.Paint += new System.Windows.Forms.PaintEventHandler(this.PainelSuporte_Paint);
             // 
-            // perguntaSuporte
+            // CondicaoEmailS
             // 
-            this.perguntaSuporte.AutoSize = true;
-            this.perguntaSuporte.Location = new System.Drawing.Point(40, 29);
-            this.perguntaSuporte.Name = "perguntaSuporte";
-            this.perguntaSuporte.Size = new System.Drawing.Size(104, 13);
-            this.perguntaSuporte.TabIndex = 0;
-            this.perguntaSuporte.Text = "Qual o seu problema";
-            this.perguntaSuporte.Click += new System.EventHandler(this.Label1_Click_1);
+            this.CondicaoEmailS.AutoSize = true;
+            this.CondicaoEmailS.Location = new System.Drawing.Point(25, 128);
+            this.CondicaoEmailS.Name = "CondicaoEmailS";
+            this.CondicaoEmailS.Size = new System.Drawing.Size(51, 13);
+            this.CondicaoEmailS.TabIndex = 24;
+            this.CondicaoEmailS.Text = "condicao";
             // 
-            // erro
+            // botaoEnviar
             // 
-            this.erro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.erro.FormattingEnabled = true;
-            this.erro.Location = new System.Drawing.Point(17, 45);
-            this.erro.Name = "erro";
-            this.erro.Size = new System.Drawing.Size(161, 21);
-            this.erro.TabIndex = 21;
-            this.erro.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            this.botaoEnviar.Location = new System.Drawing.Point(55, 158);
+            this.botaoEnviar.Name = "botaoEnviar";
+            this.botaoEnviar.Size = new System.Drawing.Size(75, 23);
+            this.botaoEnviar.TabIndex = 23;
+            this.botaoEnviar.Text = "Enviar";
+            this.botaoEnviar.UseVisualStyleBackColor = true;
+            this.botaoEnviar.Click += new System.EventHandler(this.BotaoEnviar_Click);
             // 
             // campoEmailPessoal
             // 
@@ -253,46 +248,87 @@ namespace JobStack
             this.emailPessoal.TabIndex = 22;
             this.emailPessoal.Text = "Qual o seu email pessoal?";
             // 
-            // botaoEnviar
+            // erro
             // 
-            this.botaoEnviar.Location = new System.Drawing.Point(55, 158);
-            this.botaoEnviar.Name = "botaoEnviar";
-            this.botaoEnviar.Size = new System.Drawing.Size(75, 23);
-            this.botaoEnviar.TabIndex = 23;
-            this.botaoEnviar.Text = "Enviar";
-            this.botaoEnviar.UseVisualStyleBackColor = true;
-            this.botaoEnviar.Click += new System.EventHandler(this.BotaoEnviar_Click);
+            this.erro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.erro.FormattingEnabled = true;
+            this.erro.Location = new System.Drawing.Point(17, 45);
+            this.erro.Name = "erro";
+            this.erro.Size = new System.Drawing.Size(161, 21);
+            this.erro.TabIndex = 21;
+            this.erro.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
-            // CondicaoEmailS
+            // perguntaSuporte
             // 
-            this.CondicaoEmailS.AutoSize = true;
-            this.CondicaoEmailS.Location = new System.Drawing.Point(25, 128);
-            this.CondicaoEmailS.Name = "CondicaoEmailS";
-            this.CondicaoEmailS.Size = new System.Drawing.Size(51, 13);
-            this.CondicaoEmailS.TabIndex = 24;
-            this.CondicaoEmailS.Text = "condicao";
+            this.perguntaSuporte.AutoSize = true;
+            this.perguntaSuporte.Location = new System.Drawing.Point(40, 29);
+            this.perguntaSuporte.Name = "perguntaSuporte";
+            this.perguntaSuporte.Size = new System.Drawing.Size(104, 13);
+            this.perguntaSuporte.TabIndex = 0;
+            this.perguntaSuporte.Text = "Qual o seu problema";
+            this.perguntaSuporte.Click += new System.EventHandler(this.Label1_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JobStack.Properties.Resources.fundo_tela_de_login_vazio;
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -130);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(664, 939);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // botaoMinimizar
+            // 
+            this.botaoMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoMinimizar.Image = global::JobStack.Properties.Resources.botao_minimizar;
+            this.botaoMinimizar.Location = new System.Drawing.Point(929, 12);
+            this.botaoMinimizar.Name = "botaoMinimizar";
+            this.botaoMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.botaoMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.botaoMinimizar.TabIndex = 22;
+            this.botaoMinimizar.TabStop = false;
+            this.botaoMinimizar.Click += new System.EventHandler(this.botaoMinimizar_Click);
+            // 
+            // botaoFechar
+            // 
+            this.botaoFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoFechar.Image = global::JobStack.Properties.Resources.botao_fechar;
+            this.botaoFechar.Location = new System.Drawing.Point(971, 12);
+            this.botaoFechar.Name = "botaoFechar";
+            this.botaoFechar.Size = new System.Drawing.Size(25, 25);
+            this.botaoFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.botaoFechar.TabIndex = 21;
+            this.botaoFechar.TabStop = false;
+            this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 682);
+            this.Controls.Add(this.botaoMinimizar);
+            this.Controls.Add(this.botaoFechar);
             this.Controls.Add(this.painelSuporte);
             this.Controls.Add(this.painelSenha);
             this.Controls.Add(this.painelEmail);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.botaoVoltar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.painelEmail.ResumeLayout(false);
             this.painelEmail.PerformLayout();
             this.painelSenha.ResumeLayout(false);
             this.painelSenha.PerformLayout();
             this.painelSuporte.ResumeLayout(false);
             this.painelSuporte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,6 +356,8 @@ namespace JobStack
         private System.Windows.Forms.TextBox campoEmailPessoal;
         private System.Windows.Forms.Label emailPessoal;
         private System.Windows.Forms.Label CondicaoEmailS;
+        private System.Windows.Forms.PictureBox botaoMinimizar;
+        private System.Windows.Forms.PictureBox botaoFechar;
     }
 }
 

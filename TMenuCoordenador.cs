@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JobStack
 {
-    public partial class TEmpresa : Form
+    public partial class TMenuCoordenador : Form
     {
-        public TEmpresa()
+        public TMenuCoordenador()
         {
             InitializeComponent();
         }

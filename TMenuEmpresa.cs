@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JobStack
 {
-    public partial class Aluno1 : Form
+    public partial class TMenuEmpresa : Form
     {
-        public Aluno1()
+        public TMenuEmpresa()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace JobStack
 {
-    partial class Aluno1
+    partial class TMenuEmpresa
     {
         /// <summary>
         /// Required designer variable.
@@ -33,22 +33,22 @@
             // 
             // BotaoVoltar
             // 
-            this.BotaoVoltar.Location = new System.Drawing.Point(682, 385);
+            this.BotaoVoltar.Location = new System.Drawing.Point(713, 415);
             this.BotaoVoltar.Name = "BotaoVoltar";
             this.BotaoVoltar.Size = new System.Drawing.Size(75, 23);
-            this.BotaoVoltar.TabIndex = 2;
+            this.BotaoVoltar.TabIndex = 0;
             this.BotaoVoltar.Text = "Voltar";
             this.BotaoVoltar.UseVisualStyleBackColor = true;
             this.BotaoVoltar.Click += new System.EventHandler(this.BotaoVoltar_Click);
             // 
-            // Aluno1
+            // TEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BotaoVoltar);
-            this.Name = "Aluno1";
-            this.Text = "Aluno1";
+            this.Name = "TEmpresa";
+            this.Text = "TEmpresa";
             this.ResumeLayout(false);
 
         }

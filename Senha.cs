@@ -22,7 +22,7 @@ namespace JobStack
             label1.Text = "Senha";
             string senha = textBox1.Text;
             Console.WriteLine("Senha " + senha);
-            Aluno1 p = new Aluno1();
+            TMenuAluno p = new TMenuAluno();
             this.Hide();
 
             p.ShowDialog();

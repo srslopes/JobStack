@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -150,11 +151,11 @@ namespace JobStack
 
             }
 
-            // Verifica se o usuário é um aluno e exibe a janela do formulário Aluno1
+            // Verifica se o usuário é um aluno e exibe a janela do formulário TMenuAluno (menu do aluno)
             else if (id / 1000 > 0 && id / 1000 < 6)
             {
                 this.Hide();
-                Aluno1 p = new Aluno1();
+                TMenuAluno p = new TMenuAluno();
                 p.ShowDialog();
             }
 
@@ -162,7 +163,7 @@ namespace JobStack
             else if (id / 1000 > 5)
             {
                 this.Hide();
-                TEmpresa p = new TEmpresa();
+                TMenuEmpresa p = new TMenuEmpresa();
                 p.ShowDialog();
             }
 
@@ -170,7 +171,7 @@ namespace JobStack
             else if (id / 100 == 1)
             {
                 this.Hide();
-                TCoordenador p = new TCoordenador();
+                TMenuCoordenador p = new TMenuCoordenador();
                 p.ShowDialog();
             }
 
@@ -410,6 +411,19 @@ namespace JobStack
         private void CampoEmailPessoal_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        //faz a picturebox, assim que for clicada, fechar o programa
+        private void botaoFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //faz a picturebox, assim que clicada, minimizar a janela
+        private void botaoMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

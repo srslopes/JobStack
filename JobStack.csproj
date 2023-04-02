@@ -48,11 +48,23 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Aluno.cs" />
-    <Compile Include="Aluno1.cs">
+    <Compile Include="TCadastroVaga.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aluno1.Designer.cs">
-      <DependentUpon>Aluno1.cs</DependentUpon>
+    <Compile Include="TCadastroVaga.Designer.cs">
+      <DependentUpon>TCadastroVaga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCadatroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCadatroUsuario.Designer.cs">
+      <DependentUpon>TCadatroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMenuAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMenuAluno.Designer.cs">
+      <DependentUpon>TMenuAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="BancodeDados.cs" />
     <Compile Include="Coordenador.cs" />
@@ -71,23 +83,23 @@
     <Compile Include="Senha.Designer.cs">
       <DependentUpon>Senha.cs</DependentUpon>
     </Compile>
-    <Compile Include="TAdmin.cs">
+    <Compile Include="TMenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TAdmin.Designer.cs">
-      <DependentUpon>TAdmin.cs</DependentUpon>
+    <Compile Include="TMenuAdmin.Designer.cs">
+      <DependentUpon>TMenuAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="TCoordenador.cs">
+    <Compile Include="TMenuCoordenador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TCoordenador.Designer.cs">
-      <DependentUpon>TCoordenador.cs</DependentUpon>
+    <Compile Include="TMenuCoordenador.Designer.cs">
+      <DependentUpon>TMenuCoordenador.cs</DependentUpon>
     </Compile>
-    <Compile Include="TEmpresa.cs">
+    <Compile Include="TMenuEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TEmpresa.Designer.cs">
-      <DependentUpon>TEmpresa.cs</DependentUpon>
+    <Compile Include="TMenuEmpresa.Designer.cs">
+      <DependentUpon>TMenuEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="TesteDB.cs">
       <SubType>Form</SubType>
@@ -108,8 +120,14 @@
       <DependentUpon>TesteVagas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vaga.cs" />
-    <EmbeddedResource Include="Aluno1.resx">
-      <DependentUpon>Aluno1.cs</DependentUpon>
+    <EmbeddedResource Include="TCadastroVaga.resx">
+      <DependentUpon>TCadastroVaga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCadatroUsuario.resx">
+      <DependentUpon>TCadatroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMenuAluno.resx">
+      <DependentUpon>TMenuAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -127,14 +145,14 @@
     <EmbeddedResource Include="Senha.resx">
       <DependentUpon>Senha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TAdmin.resx">
-      <DependentUpon>TAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="TMenuAdmin.resx">
+      <DependentUpon>TMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TCoordenador.resx">
-      <DependentUpon>TCoordenador.cs</DependentUpon>
+    <EmbeddedResource Include="TMenuCoordenador.resx">
+      <DependentUpon>TMenuCoordenador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TEmpresa.resx">
-      <DependentUpon>TEmpresa.cs</DependentUpon>
+    <EmbeddedResource Include="TMenuEmpresa.resx">
+      <DependentUpon>TMenuEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TesteDB.resx">
       <DependentUpon>TesteDB.cs</DependentUpon>
@@ -160,6 +178,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fundo-tela-de-login-vazio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone menu pesquisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone notificacoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone notificacoes corrigido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone inscricoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone notificacoes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone inscricoes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone favoritos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone favoritos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone fav 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone abre menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon abremenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon configuracoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon configuracoes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon meu perfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone notificacoes2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

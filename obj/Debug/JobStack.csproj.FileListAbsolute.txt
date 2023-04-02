@@ -89,3 +89,23 @@ C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.
 C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TAdmin.resources
 C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TCoordenador.resources
 C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TEmpresa.resources
+C:\Users\nicol\source\repos\JobStack\bin\Debug\JobStack.exe.config
+C:\Users\nicol\source\repos\JobStack\bin\Debug\JobStack.exe
+C:\Users\nicol\source\repos\JobStack\bin\Debug\JobStack.pdb
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.Login.resources
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.Properties.Resources.resources
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.Senha.resources
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TAdmin.resources
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TesteDB.resources
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TesteMenu.resources
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TesteVagas.resources
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.exe
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.pdb
+C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TMenuAluno.resources
+C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
+C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
+C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
+C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
