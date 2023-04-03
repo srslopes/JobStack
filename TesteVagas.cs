@@ -20,6 +20,7 @@ namespace JobStack
         private void ButtonCriar_Click(object sender, EventArgs e)
         {
             Vaga n = new Vaga(int.Parse(textBoxIdEmpresa.Text));
+            BancodeDados.AdicionarVaga(n);
             AttLista();
         }
 
@@ -41,11 +42,15 @@ namespace JobStack
         private void ButtonInscrever_Click(object sender, EventArgs e)
         {
             BancodeDados.BuscarVaga(int.Parse(textBoxIdVaga.Text)).Inscrever(int.Parse(textBoxIdAluno.Text));
+            BancodeDados.BuscarAluno(int.Parse(textBoxIdAluno.Text)).AdicionarVaga(int.Parse(textBoxIdVaga.Text));
+            AttLista();
         }
 
         private void ButtonDesinscrever_Click(object sender, EventArgs e)
         {
             BancodeDados.BuscarVaga(int.Parse(textBoxIdVaga.Text)).Desinscrever(int.Parse(textBoxIdAluno.Text));
+            BancodeDados.BuscarAluno(int.Parse(textBoxIdAluno.Text)).RemoverVaga(int.Parse(textBoxIdVaga.Text));
+            AttLista();
         }
     }
 }

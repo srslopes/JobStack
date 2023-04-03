@@ -46,6 +46,7 @@ namespace JobStack
             Empresas = new List<Empresa>();
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
+            Vagas = new List<Vaga>();
             proxIdAluno = 1000;
             proxIdEmpresa = 6000;
             proxIdAdmin = 0;
@@ -115,8 +116,15 @@ namespace JobStack
             string txt = "";
             for (int i = 0; i < Alunos.Count; i++)
             {
-                txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha() + "?";
-                Console.WriteLine("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
+                txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha();
+                Console.Write("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
+                for (int j = 0; j < Alunos[i].GetVagas().Count; j++)
+                {
+                    txt += ", ID " + (j + 1) + ": " + Alunos[i].GetVagas()[j];
+                    Console.Write(", ID " + (j + 1) + ": " + Alunos[i].GetVagas()[j]);
+                }
+                txt += "?";
+                Console.WriteLine();
             }
             return txt;
         }
@@ -165,8 +173,15 @@ namespace JobStack
             string txt = "";
             for (int i = 0; i < Empresas.Count; i++)
             {
-                txt += "ID: " + Empresas[i].GetID() + ", Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha() + "?";
-                Console.WriteLine("ID: " + Empresas[i].GetID() + "Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+                txt += "ID: " + Empresas[i].GetID() + ", Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha();
+                Console.Write("ID: " + Empresas[i].GetID() + "Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+                for (int j = 0; j < Empresas[i].GetVagas().Count; j++)
+                {
+                    txt += ", ID " + (j + 1) + ": " + Empresas[i].GetVagas()[j];
+                    Console.Write(", ID " + (j + 1) + ": " + Empresas[i].GetVagas()[j]);
+                }
+                txt += "?";
+                Console.WriteLine();
             }
             return txt;           
         }        
@@ -334,10 +349,10 @@ namespace JobStack
 
         //----------------------------------- Métodos - Vagas ---------------------------------------------------------
 
-        public static int AdicionarVaga(Vaga vaga)                  //Método para adicionar um novo aluno ao banco de dados,
+        public static void AdicionarVaga(Vaga vaga)                  //Método para adicionar um novo aluno ao banco de dados,
         {
             Vagas.Add(vaga);
-            return Vagas.IndexOf(vaga);
+            vaga.SetID(Vagas.IndexOf(vaga));
         }        
 
         public static Vaga BuscarVaga(int id)         //Retorna o objeto aluno com o ID indicado,

@@ -34,7 +34,7 @@
             // 
             // buttonDB
             // 
-            this.buttonDB.Location = new System.Drawing.Point(234, 12);
+            this.buttonDB.Location = new System.Drawing.Point(713, 35);
             this.buttonDB.Name = "buttonDB";
             this.buttonDB.Size = new System.Drawing.Size(75, 23);
             this.buttonDB.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // buttonVagas
             // 
-            this.buttonVagas.Location = new System.Drawing.Point(387, 12);
+            this.buttonVagas.Location = new System.Drawing.Point(713, 73);
             this.buttonVagas.Name = "buttonVagas";
             this.buttonVagas.Size = new System.Drawing.Size(75, 23);
             this.buttonVagas.TabIndex = 1;

@@ -72,7 +72,7 @@
             this.listBoxVagas.FormattingEnabled = true;
             this.listBoxVagas.Location = new System.Drawing.Point(227, 22);
             this.listBoxVagas.Name = "listBoxVagas";
-            this.listBoxVagas.Size = new System.Drawing.Size(550, 355);
+            this.listBoxVagas.Size = new System.Drawing.Size(459, 355);
             this.listBoxVagas.TabIndex = 3;
             // 
             // buttonAtt
