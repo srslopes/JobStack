@@ -21,6 +21,7 @@ namespace JobStack
         {
             Vaga n = new Vaga(int.Parse(textBoxIdEmpresa.Text));
             BancodeDados.AdicionarVaga(n);
+            BancodeDados.BuscarEmpresa(int.Parse(textBoxIdEmpresa.Text)).AdicionarVaga(n.GetID());
             AttLista();
         }
 

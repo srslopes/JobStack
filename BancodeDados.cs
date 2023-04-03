@@ -118,10 +118,11 @@ namespace JobStack
             {
                 txt += "ID: " + Alunos[i].GetID() + ", Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha();
                 Console.Write("ID: " + Alunos[i].GetID() + "Aluno: " + Alunos[i].GetEmail() + ", senha: " + Alunos[i].GetSenha());
+                if (Alunos[i].GetVagas().Count > 0) txt += " Vagas:";
                 for (int j = 0; j < Alunos[i].GetVagas().Count; j++)
                 {
-                    txt += ", ID " + (j + 1) + ": " + Alunos[i].GetVagas()[j];
-                    Console.Write(", ID " + (j + 1) + ": " + Alunos[i].GetVagas()[j]);
+                    txt += " ID: " + Alunos[i].GetVagas()[j] +",";
+                    Console.Write(", ID: " + Alunos[i].GetVagas()[j]);
                 }
                 txt += "?";
                 Console.WriteLine();
@@ -175,10 +176,11 @@ namespace JobStack
             {
                 txt += "ID: " + Empresas[i].GetID() + ", Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha();
                 Console.Write("ID: " + Empresas[i].GetID() + "Empresa: " + Empresas[i].GetEmail() + ", senha: " + Empresas[i].GetSenha());
+                if (Empresas[i].GetVagas().Count > 0) txt += " Vagas:";
                 for (int j = 0; j < Empresas[i].GetVagas().Count; j++)
                 {
-                    txt += ", ID " + (j + 1) + ": " + Empresas[i].GetVagas()[j];
-                    Console.Write(", ID " + (j + 1) + ": " + Empresas[i].GetVagas()[j]);
+                    txt += " ID: " + Empresas[i].GetVagas()[j] +",";
+                    Console.Write(", ID: " + Empresas[i].GetVagas()[j]);
                 }
                 txt += "?";
                 Console.WriteLine();

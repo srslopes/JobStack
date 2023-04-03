@@ -32,6 +32,7 @@ namespace JobStack
         private void ButtonDB_Click(object sender, EventArgs e)
         {
             vg.Hide();
+            db.AttLista();
             db.Show();
             
         }
@@ -39,6 +40,7 @@ namespace JobStack
         private void ButtonVagas_Click(object sender, EventArgs e)
         {
             db.Hide();
+            vg.AttLista();
             vg.Show();
         }
 
