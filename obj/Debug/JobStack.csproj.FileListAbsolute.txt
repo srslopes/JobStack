@@ -109,3 +109,11 @@ C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
 C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
 C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
 C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TMenuAluno.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TAdmin.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TesteMenu.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TesteVagas.resources
