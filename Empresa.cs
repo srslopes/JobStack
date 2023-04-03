@@ -18,12 +18,14 @@ namespace JobStack
 
         public Empresa()
         {
+            ID = 0;
             Vagas = new List<int>();
         }
         public Empresa(string e, string s)
         {
-            email = e;
+            SetEmail(e);
             senha =s;
+            ID = 0;
             Vagas = new List<int>();
         }
 
@@ -37,9 +39,11 @@ namespace JobStack
             return senha;
         }
   
-        public void SetEmail(string e)
+        public bool SetEmail(string e)
         {
+            if (BancodeDados.BuscarID(e) != 0) return false;
             email = e;
+            return true;
         }
         public void SetSenha(string p)
         {
@@ -80,14 +84,14 @@ namespace JobStack
 
         public void ClonarDe(Empresa empresa) //Copia os atributos do objeto indicado para esse objeto
         {
-            this.SetEmail(empresa.GetEmail());
+            email = empresa.GetEmail();
             this.SetSenha(empresa.GetSenha());
             this.SetID(empresa.GetID());
             this.SetVagas(empresa.GetVagas());
         }
         public void Limpar()
         {
-            this.SetEmail("");
+            email = "";
             this.SetSenha("");
         }
 

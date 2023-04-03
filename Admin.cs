@@ -16,19 +16,13 @@ namespace JobStack
 
         public Admin()
         {
-            email = "";
-            senha = "";
-        }
-
-        public Admin(string n)
-        {
-            email = n;
-            senha = "";
+            ID = 0;
         }
         public Admin(string e, string p)
         {
-            email = e;
+            SetEmail(e);
             senha = p;
+            ID = 0;
         }
 
         public string GetEmail()
@@ -40,9 +34,11 @@ namespace JobStack
         {
             return senha;
         }
-        public void SetEmail(string e)
+        public bool SetEmail(string e)
         {
+            if (BancodeDados.BuscarID(e) != 0) return false;
             email = e;
+            return true;
         }
 
         public void SetSenha(string p)
@@ -62,13 +58,13 @@ namespace JobStack
 
         public void ClonarDe(Admin admin) //Copia os atributos do objeto indicado para esse objeto
         {
-            this.SetEmail(admin.GetEmail());
+            email = admin.GetEmail();
             this.SetSenha(admin.GetSenha());
             this.SetID(admin.GetID());
         }
         public void Limpar()
         {
-            this.SetEmail("");
+            email = "";
             this.SetSenha("");
         }
     }

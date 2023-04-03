@@ -37,9 +37,11 @@ namespace JobStack
         {
             return senha;
         }
-        public void SetEmail(string e)
+        public bool SetEmail(string e)
         {
+            if (BancodeDados.BuscarID(e) != 0) return false;
             email = e;
+            return true;
         }
 
         public void SetSenha(string p)
@@ -79,7 +81,7 @@ namespace JobStack
 
         public void ClonarDe(Aluno aluno)   //Copia os atributos do objeto indicado para esse objeto
         {
-            this.SetEmail(aluno.GetEmail());
+            email = aluno.GetEmail();
             this.SetSenha(aluno.GetSenha());
             this.SetID(aluno.GetID());
             this.SetVagas(aluno.GetVagas());
@@ -87,7 +89,7 @@ namespace JobStack
 
         public void Limpar()
         {
-            this.SetEmail("");
+            email = "";
             this.SetSenha("");
         }
 

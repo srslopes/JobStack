@@ -15,19 +15,13 @@ namespace JobStack
         private int ID;
         public Coordenador()
         {
-            email = "";
-            senha = "";
-        }
-
-        public Coordenador(string e)
-        {
-            email = e;
-            senha = "";
+            ID = 0;
         }
         public Coordenador(string e, string p)
         {
-            email = e;
+            SetEmail(e);
             senha = p;
+            ID = 0;
         }
 
         public string GetEmail()
@@ -40,9 +34,11 @@ namespace JobStack
             return senha;
         }
         
-        public void SetEmail(string e)
+        public bool SetEmail(string e)
         {
+            if (BancodeDados.BuscarID(e) != 0) return false;
             email = e;
+            return true;
         }
 
         public void SetSenha(string p)
@@ -62,13 +58,13 @@ namespace JobStack
 
         public void ClonarDe(Coordenador coordenador) //Copia os atributos do objeto indicado para esse objeto
         {
-            this.SetEmail(coordenador.GetEmail());
+            email = coordenador.GetEmail();
             this.SetSenha(coordenador.GetSenha());
             this.SetID(coordenador.GetID());
         }
         public void Limpar()
         {
-            this.SetEmail("");
+            email = "";
             this.SetSenha("");
         }
     }
