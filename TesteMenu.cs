@@ -27,6 +27,8 @@ namespace JobStack
             vg.MdiParent = this;
             vg.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;            
             vg.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            db.AttLista();
+            db.Show();
         }
 
         private void ButtonDB_Click(object sender, EventArgs e)
