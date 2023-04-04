@@ -18,7 +18,7 @@ namespace JobStack
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());            
-            Application.Run(new TesteMenu());
+            Application.Run(new Login());
 
 
             /*

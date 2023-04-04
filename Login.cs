@@ -18,6 +18,12 @@ namespace JobStack
         {
 
             InitializeComponent();
+            // Define BotaoProximo como o botão padrão
+            this.AcceptButton = BotaoProximo;
+
+            // Define BotaoLogin como o botão padrão quando o campo de senha tem o foco
+            campoSenha.Enter += (sender, e) => { this.AcceptButton = BotaoLogin; };
+            campoSenha.Leave += (sender, e) => { this.AcceptButton = BotaoProximo; };
             // Adiciona itens para o comobobox erro
 
             erro.Items.Add("Esqueci meu email");
@@ -25,6 +31,7 @@ namespace JobStack
             erro.Items.Add("Esqueci minha senha ");
             erro.Items.Add("Solicitar cadastro ");
             // Executa o método Passo1()
+         
 
             Passo1();
         }
@@ -387,7 +394,9 @@ namespace JobStack
         }
         // O método "BotaoEnviar_Click" é acionado quando o botão de enviar é clicado pelo usuário.
         private void BotaoEnviar_Click(object sender, EventArgs e)
-        {// Verifica se o campo de email pessoal está vazio.
+        {
+         
+            // Verifica se o campo de email pessoal está vazio.
 
             if (campoEmailPessoal.Text.Equals(""))
             {// Se estiver vazio, exibe uma mensagem de erro ao usuário
@@ -410,7 +419,8 @@ namespace JobStack
         }
         private void CampoEmailPessoal_TextChanged(object sender, EventArgs e)
         {
-
+         
+            
         }
 
 
@@ -424,6 +434,11 @@ namespace JobStack
         private void botaoMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BotaoEnviar_KeyDown(object sender, KeyEventArgs e)
+        {
+            
         }
     }
 }
