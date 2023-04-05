@@ -337,6 +337,8 @@ namespace JobStack
             this.painelSenha.Location = this.painelEmail.Location;
             // Exibir o email do usuário na label
             copiarEmail.Text = campoEmail.Text;
+            painelSenha.BringToFront();
+
         }
 
         private void Label1_Click_1(object sender, EventArgs e)

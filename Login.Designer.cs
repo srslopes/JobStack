@@ -183,7 +183,7 @@ namespace JobStack
             this.painelSenha.Controls.Add(this.textoSenha);
             this.painelSenha.Location = new System.Drawing.Point(647, 328);
             this.painelSenha.Name = "painelSenha";
-            this.painelSenha.Size = new System.Drawing.Size(320, 136);
+            this.painelSenha.Size = new System.Drawing.Size(335, 168);
             this.painelSenha.TabIndex = 19;
             this.painelSenha.Visible = false;
             this.painelSenha.Paint += new System.Windows.Forms.PaintEventHandler(this.PainelSenha_Paint);
