@@ -32,180 +32,156 @@ namespace JobStack
 
         private ListViewItem lvItem;
 
+        // Método Passo1() que realiza várias configurações iniciais do formulário
         private void Passo1()
         {
-            erro.SelectedIndex = 0;
-
-
-            // Define BotaoProximo como o botão padrão
+            // Define o botão padrão do formulário como BotaoProximo
             this.AcceptButton = BotaoProximo;
 
-            // Define BotaoLogin como o botão padrão quando o campo de senha tem o foco
+            // Define o botão padrão do formulário como BotaoLogin quando o campo de senha recebe o foco
             campoSenha.Enter += (sender, e) => { this.AcceptButton = BotaoLogin; };
             campoSenha.Leave += (sender, e) => { this.AcceptButton = BotaoProximo; };
-           
-            // Esconde as mensagens de erro relacionadas ao email e senha
 
+            // Limpa os campos de email e senha
             campoEmail.Text = "";
             textoEmail.Text = "Email";
             campoSenha.Text = "";
-            CondicaoEmail.Visible = false;
 
-            CondicaoSenha.Text = " ";
+            // Esconde as mensagens de erro relacionadas ao email e senha
+            CondicaoEmail.Visible = false;
             CondicaoSenha.Visible = false;
 
-            CondicaoEmail.Text = "";
             // Define o caracter utilizado para representar a senha como um asterisco
-
             campoSenha.PasswordChar = '*';
         }
 
+        // Evento de clique do botão Button1
         private void Button1_Click2(object sender, EventArgs e)
         {
-
+            // Este método não faz nada
         }
+
+        // Método para inicializar o combobox de erro
         private void InicializarComboBox()
         {
-
             // Verifica se o combobox já possui itens antes de adicioná-los
             if (erro.Items.Count == 0)
             {
-
+                // Adiciona os itens "Esqueci meu email", "Esqueci minha senha" e "Solicitar cadastro"
                 erro.Items.Add("Esqueci meu email");
                 erro.Items.Add("Esqueci minha senha ");
                 erro.Items.Add("Solicitar cadastro ");
-             
-
             }
         }
+
+        // Método para validar o email inserido pelo usuário
         private void Email()
         {
-            // Obter o email digitado pelo usuário e exibir no console
+            // Obtém o email digitado pelo usuário e exibe no console
             string email = campoEmail.Text;
             Console.WriteLine("Email: " + email);
 
-            // Buscar o ID do usuário no banco de dados
+            // Busca o ID do usuário no banco de dados
             int id = BancodeDados.BuscarID(email);
-
-
 
             // Verifica se o campo de email está vazio
             if (email.Equals(""))
             {
+                // Exibe uma mensagem de erro indicando que o campo de email está vazio
                 CondicaoEmail.Visible = true;
                 CondicaoEmail.Text = "Campo email vazio";
             }
-            // Verificar se o usuário não está cadastrado
+            // Verifica se o usuário não está cadastrado
             else if (id == 0)
             {
+                // Exibe uma mensagem de erro indicando que o usuário não está cadastrado
                 CondicaoEmail.Visible = true;
                 CondicaoEmail.Text = "Usuario não cadastrado";
             }
             // Se o usuário está cadastrado, identifica o tipo de usuário com base em seu ID
             else
             {
+                // Exibe o painel de senha e esconde o painel de email
                 painelSenha.Visible = true;
-                painelEmail.Visible = false;
-
-                // Verifica o tipo de usuário
-                if (id / 1000 > 0 && id / 1000 < 6)
-                {
-                    // Se for um aluno, exibe uma mensagem
-
-                    //   MessageBox.Show("Usuario é um aluno");
-
-                }
-                else if (id / 1000 > 5)
-                {
-                    // Se for uma empresa, exibe uma mensagem
-
-                    // MessageBox.Show("Usuario é uma empresa");
-
-                }
-                else if (id / 100 == 1)
-                {
-                    // Se for um coordenador, exibe uma mensagem
-
-                    //  MessageBox.Show("Usuario é um Coordenador");
-
-                }
-                else
-                {
-                    // Se for um admin, exibe uma mensagem
-
-                    //  MessageBox.Show("Usuario é um Admin");
-
-                }
-
+                // Método executado quando o botão "Entrar" é clicado
             }
         }
+        private void BotaoEntrar_Click(object sender, EventArgs e)
+                {
+                    // Chama o método Senha
+                    Senha();
+                }
 
+                // Método que verifica a senha e exibe as telas correspondentes
+                private void Senha()
+                {
+                    // Exibe o e-mail digitado pelo usuário na label correspondente
+                    textoEmail.Text = campoEmail.Text;
 
+                    // Obtém o e-mail e a senha inseridos nos campos de texto
+                    string email = campoEmail.Text;
+                    string senha = campoSenha.Text;
 
-        private void Senha()
-        {     // Exibe o e-mail digitado pelo usuário na label correspondente
-            textoEmail.Text = campoEmail.Text;
+                    // Obtém o ID do usuário a partir do e-mail inserido
+                    int id = BancodeDados.BuscarID(email);
 
+                    // Verifica se o campo senha está vazio e exibe uma mensagem de erro caso esteja
+                    if (campoSenha.Text == "")
+                    {
+                        CondicaoSenha.Visible = true;
+                        CondicaoSenha.Text = "Campo senha vazio";
+                        campoSenha.Clear();
+                    }
 
-            // Obtém o e-mail e a senha inseridos nos campos de texto
-            string email = campoEmail.Text;
-            string senha = campoSenha.Text;
+                    // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
+                    else if (!BancodeDados.Login(senha))
+                    {
+                        CondicaoSenha.Visible = true;
+                        CondicaoSenha.Text = "Senha incorreta";
+                        campoSenha.Clear();
+                    }
 
-            // Obtém o ID do usuário a partir do e-mail inserido
-            int id = BancodeDados.BuscarID(email);
+                    // Verifica o tipo de usuário
+                    else if (id / 1000 > 0 && id / 1000 < 6) // se for um aluno
+                    {
+                        // Esconde a tela atual
+                        this.Hide();
 
-            // Verifica se o campo senha está vazio e exibe uma mensagem de erro caso esteja
-            if (campoSenha.Text == "")
-            {
-                CondicaoSenha.Visible = true;
-                CondicaoSenha.Text = "Campo senha vazio";
-                campoSenha.Clear();
+                        // Cria e exibe a janela do formulário TMenuAluno (menu do aluno)
+                        TMenuAluno p = new TMenuAluno();
+                        p.ShowDialog();
+                    }
+                    else if (id / 1000 > 5) // se for uma empresa
+                    {
+                        // Esconde a tela atual
+                        this.Hide();
 
-            }
+                        // Cria e exibe a janela do formulário Empresa1
+                        TMenuEmpresa p = new TMenuEmpresa();
+                        p.ShowDialog();
+                    }
+                    else if (id / 100 == 1) // se for um coordenador
+                    {
+                        // Esconde a tela atual
+                        this.Hide();
 
-            // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
-            else if (!BancodeDados.Login(senha))
-            {
-                CondicaoSenha.Visible = true;
-                CondicaoSenha.Text = "Senha incorreta";
-                campoSenha.Clear();
+                        // Cria e exibe a janela do formulário Coordenador1
+                        TMenuCoordenador p = new TMenuCoordenador();
+                        p.ShowDialog();
+                    }
+                    else // se for um admin
+                    {
+                        // Esconde a tela atual
+                        this.Hide();
 
-            }
+                        // Cria e exibe a janela do formulário TAdmin
+                        TAdmin p = new TAdmin();
+                        p.ShowDialog();
+                    }
+                }
 
-            // Verifica se o usuário é um aluno e exibe a janela do formulário TMenuAluno (menu do aluno)
-            else if (id / 1000 > 0 && id / 1000 < 6)
-            {
-                this.Hide();
-                TMenuAluno p = new TMenuAluno();
-                p.ShowDialog();
-            }
-
-            // Verifica se o usuário é uma empresa e exibe a janela do formulário Empresa1
-            else if (id / 1000 > 5)
-            {
-                this.Hide();
-                TMenuEmpresa p = new TMenuEmpresa();
-                p.ShowDialog();
-            }
-
-            // Verifica se o usuário é um coordenador e exibe a janela do formulário Coordenador1
-            else if (id / 100 == 1)
-            {
-                this.Hide();
-                TMenuCoordenador p = new TMenuCoordenador();
-                p.ShowDialog();
-            }
-
-            // Se não for nenhum dos tipos anteriores, exibe a janela do formulário TAdmin
-            else
-            {
-                this.Hide();
-                TAdmin p = new TAdmin();
-                p.ShowDialog();
-            }
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
+            
+                private void Label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -267,21 +243,20 @@ namespace JobStack
         }
 
         private void BotaoProximo_Click(object sender, EventArgs e)
-        {
-            // Obter o email digitado pelo usuário
+        {// Obter o email digitado pelo usuário
             string email = campoEmail.Text;
             Console.WriteLine("Email: " + email);
 
             // Buscar o ID do usuário no banco de dados
             int id = BancodeDados.BuscarID(email);
 
-            // Verificar se o campo de email está vazio
+            // Verificar se o campo de email está vazio e exibir mensagem de erro caso esteja vazio
             if (email.Equals(""))
             {
                 CondicaoEmail.Visible = true;
                 CondicaoEmail.Text = "Campo email vazio";
             }
-            // Verificar se o usuário não está cadastrado
+            // Verificar se o usuário não está cadastrado no banco de dados e exibir mensagem de erro caso não esteja
             else if (id == 0)
             {
                 CondicaoEmail.Visible = true;
@@ -294,10 +269,7 @@ namespace JobStack
                 CondicaoEmail.Visible = false;
                 // Chamar o método Email para exibir informações sobre o usuário
                 Email();
-
             }
-
-
 
         }
 
@@ -306,17 +278,14 @@ namespace JobStack
 
         }
 
+        // Este método é chamado quando o botão "Voltar" é clicado
         private void BotaoVoltar_Click(object sender, EventArgs e)
         {
-            // Oculta o painel de senha
-
+            // Oculta o painel de senha e exibe o painel de e-mail
             painelSenha.Visible = false;
-            // Exibe o painel de e-mail
             painelEmail.Visible = true;
-
             // Oculta o painel de suporte
             painelSuporte.Visible = false;
-         
 
             // Oculta o botão "Voltar"
             botaoVoltar.Visible = false;
@@ -325,32 +294,37 @@ namespace JobStack
             campoEmailPessoal.Clear();
 
             // Verifica se os itens já foram adicionados antes de adicioná-los novamente
-            
 
             // Chama o método Passo1() para atualizar a interface do usuário
             Passo1();
             InicializarComboBox();
-
         }
+
         // Esse método é chamado quando o usuário clica no link "Suporte" no formulário
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {// Oculta o painel de recuperação de senha, se estiver visível
+        {
+            // Oculta o painel de recuperação de senha, se estiver visível
             painelSenha.Visible = false;
+
             // Oculta o painel de entrada de email, se estiver visível
-
             painelEmail.Visible = false;
-            // Exibe o painel de suporte
 
+            // Exibe o painel de suporte
             painelSuporte.Visible = true;
-            // Exibe o painel de suporte
 
+            // Exibe o botão "Voltar" para que o usuário possa voltar ao painel anterior
             botaoVoltar.Visible = true;
-            // Exibe o painel de suporte
 
+            // Oculta a mensagem de erro que possa estar visível
             CondicaoEmailS.Visible = false;
+
+            // Inicializa o ComboBox para permitir que o usuário escolha o tipo de suporte desejado
             InicializarComboBox();
+
+            // Define a seleção do ComboBox como a primeira opção (Esqueci meu email)
             erro.SelectedIndex = 0;
         }
+
 
         private void PainelEmail_Paint(object sender, PaintEventArgs e)
         {
@@ -469,13 +443,15 @@ namespace JobStack
 
         private void CampoEmailPessoal_KeyDown(object sender, KeyEventArgs e)
         {
-
+            // verifica se a tecla pressionada é "Enter".
             if (e.KeyCode == Keys.Enter)
-            {
+            {// define o foco no botão "Enviar".
                 BotaoEnviar.Focus();
-
+                //simula o clique no botão "Enviar".
                 BotaoEnviar.PerformClick();
+                //informa que o evento já foi tratado e não precisa ser propagado para outros controles.
                 e.Handled = true;
+                //informa ao sistema para suprimir a tecla "Enter" pressionada 
                 e.SuppressKeyPress = true;
             }
 
