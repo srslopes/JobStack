@@ -311,8 +311,7 @@ namespace JobStack
 
             // Oculta o painel de suporte
             painelSuporte.Visible = false;
-            // Redefine a seleção do erro para o primeiro item da lista suspensa
-            erro.SelectedIndex = 0;
+         
 
             // Oculta o botão "Voltar"
             botaoVoltar.Visible = false;
