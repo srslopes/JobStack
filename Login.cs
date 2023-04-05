@@ -18,6 +18,23 @@ namespace JobStack
         {
 
             InitializeComponent();
+
+           
+            // Executa o método Passo1()
+
+
+            Passo1();
+        }
+        // declaração da variavel ListViewItem com nome  lvItem
+
+
+
+
+        private ListViewItem lvItem;
+
+        private void Passo1()
+        {
+
             // Define BotaoProximo como o botão padrão
             this.AcceptButton = BotaoProximo;
 
@@ -30,20 +47,7 @@ namespace JobStack
             erro.SelectedIndex = 0;
             erro.Items.Add("Esqueci minha senha ");
             erro.Items.Add("Solicitar cadastro ");
-            // Executa o método Passo1()
-         
-
-            Passo1();
-        }
-        // declaração da variavel ListViewItem com nome  lvItem
-
-
-
-
-        private ListViewItem lvItem;
-
-        private void Passo1()
-        {// Esconde as mensagens de erro relacionadas ao email e senha
+            // Esconde as mensagens de erro relacionadas ao email e senha
 
             campoEmail.Text = "";
             textoEmail.Text = "Email";
@@ -63,7 +67,7 @@ namespace JobStack
         {
 
         }
-        
+
         private void Email()
         {
             // Obter o email digitado pelo usuário e exibir no console
@@ -73,7 +77,7 @@ namespace JobStack
             // Buscar o ID do usuário no banco de dados
             int id = BancodeDados.BuscarID(email);
 
-            
+
 
             // Verifica se o campo de email está vazio
             if (email.Equals(""))
@@ -97,30 +101,30 @@ namespace JobStack
                 if (id / 1000 > 0 && id / 1000 < 6)
                 {
                     // Se for um aluno, exibe uma mensagem
-                 
-                     //   MessageBox.Show("Usuario é um aluno");
-                     
+
+                    //   MessageBox.Show("Usuario é um aluno");
+
                 }
                 else if (id / 1000 > 5)
                 {
                     // Se for uma empresa, exibe uma mensagem
-                 
-                       // MessageBox.Show("Usuario é uma empresa");
-                   
+
+                    // MessageBox.Show("Usuario é uma empresa");
+
                 }
                 else if (id / 100 == 1)
                 {
                     // Se for um coordenador, exibe uma mensagem
-                  
-                      //  MessageBox.Show("Usuario é um Coordenador");
-                       
+
+                    //  MessageBox.Show("Usuario é um Coordenador");
+
                 }
                 else
                 {
                     // Se for um admin, exibe uma mensagem
-                   
-                      //  MessageBox.Show("Usuario é um Admin");
-                    
+
+                    //  MessageBox.Show("Usuario é um Admin");
+
                 }
 
             }
@@ -128,10 +132,10 @@ namespace JobStack
 
 
 
-                private void Senha()
+        private void Senha()
         {     // Exibe o e-mail digitado pelo usuário na label correspondente
             textoEmail.Text = campoEmail.Text;
-            
+
 
             // Obtém o e-mail e a senha inseridos nos campos de texto
             string email = campoEmail.Text;
@@ -150,7 +154,7 @@ namespace JobStack
             }
 
             // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
-            else if (!BancodeDados.Login( senha))
+            else if (!BancodeDados.Login(senha))
             {
                 CondicaoSenha.Visible = true;
                 CondicaoSenha.Text = "Senha incorreta";
@@ -219,7 +223,7 @@ namespace JobStack
 
         }
 
-        
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -231,7 +235,7 @@ namespace JobStack
 
         }
 
-       
+
 
         private void label3_Click_1(object sender, EventArgs e)
         {
@@ -243,7 +247,7 @@ namespace JobStack
 
         }
 
-       
+
 
         private void BotaoLogin_Click(object sender, EventArgs e)
         {
@@ -280,11 +284,11 @@ namespace JobStack
                 CondicaoEmail.Visible = false;
                 // Chamar o método Email para exibir informações sobre o usuário
                 Email();
-               
+
             }
 
 
-        
+
         }
 
         private void ButtonLogin_Click(object sender, EventArgs e)
@@ -357,7 +361,8 @@ namespace JobStack
             // responsável por ajustar posição do painel "PainelSuporte"
             // ficando alinhado ao painel "painelEmail"
             this.painelSuporte.Location = this.painelEmail.Location;
-          
+            this.AcceptButton = BotaoEnviar;
+
 
         }
 
@@ -395,7 +400,6 @@ namespace JobStack
         // O método "BotaoEnviar_Click" é acionado quando o botão de enviar é clicado pelo usuário.
         private void BotaoEnviar_Click(object sender, EventArgs e)
         {
-         
             // Verifica se o campo de email pessoal está vazio.
 
             if (campoEmailPessoal.Text.Equals(""))
@@ -408,19 +412,20 @@ namespace JobStack
 
             else if (erro.SelectedItem != null)
             {
-             // Se houver algum erro selecionado, oculta a mensagem de erro anterior,
-             // informa que a mensagem foi enviada para o email e exibe uma mensagem de sucesso
-             // ao usuário.
+                // Se houver algum erro selecionado, oculta a mensagem de erro anterior,
+                // informa que a mensagem foi enviada para o email e exibe uma mensagem de sucesso
+                // ao usuário.
                 CondicaoEmailS.Visible = false;
 
                 MessageBox.Show(" Mensagem enviada para o email");
 
             }
         }
+       
         private void CampoEmailPessoal_TextChanged(object sender, EventArgs e)
         {
-         
-            
+
+
         }
 
 
@@ -436,10 +441,22 @@ namespace JobStack
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void BotaoEnviar_KeyDown(object sender, KeyEventArgs e)
+        private void CampoEmailPessoal_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                BotaoEnviar.Focus();
+
+                BotaoEnviar.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+
         }
+
+
     }
 }
+
 
