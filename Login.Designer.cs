@@ -307,7 +307,7 @@ namespace JobStack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 598);
+            this.ClientSize = new System.Drawing.Size(1020, 683);
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
             this.Controls.Add(this.painelSuporte);

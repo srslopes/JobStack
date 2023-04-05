@@ -41,12 +41,7 @@ namespace JobStack
             // Define BotaoLogin como o botão padrão quando o campo de senha tem o foco
             campoSenha.Enter += (sender, e) => { this.AcceptButton = BotaoLogin; };
             campoSenha.Leave += (sender, e) => { this.AcceptButton = BotaoProximo; };
-            // Adiciona itens para o comobobox erro
-
-            erro.Items.Add("Esqueci meu email");
-            erro.SelectedIndex = 0;
-            erro.Items.Add("Esqueci minha senha ");
-            erro.Items.Add("Solicitar cadastro ");
+           
             // Esconde as mensagens de erro relacionadas ao email e senha
 
             campoEmail.Text = "";
@@ -67,7 +62,17 @@ namespace JobStack
         {
 
         }
-
+        private void InicializarComboBox()
+        {
+            // Verifica se o combobox já possui itens antes de adicioná-los
+            if (erro.Items.Count == 0)
+            {
+                erro.Items.Add("Esqueci meu email");
+                erro.SelectedIndex = 0;
+                erro.Items.Add("Esqueci minha senha ");
+                erro.Items.Add("Solicitar cadastro ");
+            }
+        }
         private void Email()
         {
             // Obter o email digitado pelo usuário e exibir no console
@@ -297,7 +302,8 @@ namespace JobStack
         }
 
         private void BotaoVoltar_Click(object sender, EventArgs e)
-        {// Oculta o painel de senha
+        {
+            // Oculta o painel de senha
 
             painelSenha.Visible = false;
             // Exibe o painel de e-mail
@@ -305,7 +311,6 @@ namespace JobStack
 
             // Oculta o painel de suporte
             painelSuporte.Visible = false;
-
             // Redefine a seleção do erro para o primeiro item da lista suspensa
             erro.SelectedIndex = 0;
 
@@ -315,8 +320,12 @@ namespace JobStack
             // Limpa o campo de e-mail pessoal
             campoEmailPessoal.Clear();
 
+            // Verifica se os itens já foram adicionados antes de adicioná-los novamente
+            
+
             // Chama o método Passo1() para atualizar a interface do usuário
             Passo1();
+            InicializarComboBox();
 
         }
         // Esse método é chamado quando o usuário clica no link "Suporte" no formulário
@@ -335,7 +344,7 @@ namespace JobStack
             // Exibe o painel de suporte
 
             CondicaoEmailS.Visible = false;
-
+            InicializarComboBox();
         }
 
         private void PainelEmail_Paint(object sender, PaintEventArgs e)
