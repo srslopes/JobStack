@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,7 +20,6 @@ namespace JobStack
 
             InitializeComponent();
 
-           
             // Executa o método Passo1()
 
 
@@ -34,6 +34,8 @@ namespace JobStack
 
         private void Passo1()
         {
+            erro.SelectedIndex = 0;
+
 
             // Define BotaoProximo como o botão padrão
             this.AcceptButton = BotaoProximo;
@@ -64,13 +66,16 @@ namespace JobStack
         }
         private void InicializarComboBox()
         {
+
             // Verifica se o combobox já possui itens antes de adicioná-los
             if (erro.Items.Count == 0)
             {
+
                 erro.Items.Add("Esqueci meu email");
-                erro.SelectedIndex = 0;
                 erro.Items.Add("Esqueci minha senha ");
                 erro.Items.Add("Solicitar cadastro ");
+             
+
             }
         }
         private void Email()
@@ -344,6 +349,7 @@ namespace JobStack
 
             CondicaoEmailS.Visible = false;
             InicializarComboBox();
+            erro.SelectedIndex = 0;
         }
 
         private void PainelEmail_Paint(object sender, PaintEventArgs e)
@@ -409,32 +415,44 @@ namespace JobStack
         private void BotaoEnviar_Click(object sender, EventArgs e)
         {
             // Verifica se o campo de email pessoal está vazio.
-
             if (campoEmailPessoal.Text.Equals(""))
             {// Se estiver vazio, exibe uma mensagem de erro ao usuário
              // e informa que o campo está vazio.
                 CondicaoEmailS.Visible = true;
                 CondicaoEmailS.Text = "Campo email vazio";
+                return;
             }
-            // Caso contrário, verifica se há algum erro selecionado no campo "erro".
 
-            else if (erro.SelectedItem != null)
+            // Verifica se o valor do campo de email corresponde ao formato de email
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            if (!regex.IsMatch(campoEmailPessoal.Text))
             {
-                // Se houver algum erro selecionado, oculta a mensagem de erro anterior,
-                // informa que a mensagem foi enviada para o email e exibe uma mensagem de sucesso
-                // ao usuário.
-                CondicaoEmailS.Visible = false;
+                // Se o valor não corresponder, exibe uma mensagem de erro
+                CondicaoEmailS.Visible = true;
+                CondicaoEmailS.Text = "Formato de email inválido";
+                return;
+            }
 
-                MessageBox.Show(" Mensagem enviada para o email");
+            // Caso contrário, oculta a mensagem de erro
+            CondicaoEmailS.Visible = false;
 
+            // Verifica se há algum erro selecionado no campo "erro".
+            if (erro.SelectedItem != null)
+            {
+                // Se houver algum erro selecionado, informa que a mensagem foi enviada para o email
+                // e exibe uma mensagem de sucesso ao usuário.
+                MessageBox.Show("Mensagem enviada para o email");
             }
         }
-       
+
+
         private void CampoEmailPessoal_TextChanged(object sender, EventArgs e)
-        {
+            {
+               
+            }
 
 
-        }
+        
 
 
         //faz a picturebox, assim que for clicada, fechar o programa
