@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BotaoVoltar = new System.Windows.Forms.Button();
             this.botaoMinimizar = new System.Windows.Forms.PictureBox();
             this.botaoFechar = new System.Windows.Forms.PictureBox();
-            this.sidebarContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.fundoMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBarraeLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.botaoAbreMenu = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.botaoPesquisar = new System.Windows.Forms.Button();
@@ -45,13 +45,12 @@
             this.botaoInscricoes = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.botaoFavoritos = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.botaoConfig = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.botaoPerfil = new System.Windows.Forms.Button();
+            this.fundoMenuTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
-            this.sidebarContainer.SuspendLayout();
+            this.fundoMenu.SuspendLayout();
             this.panelBarraeLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,7 +58,6 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,42 +95,31 @@
             this.botaoFechar.TabStop = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
-            // sidebarContainer
+            // fundoMenu
             // 
-            this.sidebarContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.sidebarContainer.Controls.Add(this.panelBarraeLogo);
-            this.sidebarContainer.Controls.Add(this.panel2);
-            this.sidebarContainer.Controls.Add(this.panel1);
-            this.sidebarContainer.Controls.Add(this.panel3);
-            this.sidebarContainer.Controls.Add(this.panel4);
-            this.sidebarContainer.Controls.Add(this.panel5);
-            this.sidebarContainer.Controls.Add(this.panel6);
-            this.sidebarContainer.Controls.Add(this.panel7);
-            this.sidebarContainer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebarContainer.Location = new System.Drawing.Point(0, 0);
-            this.sidebarContainer.Name = "sidebarContainer";
-            this.sidebarContainer.Size = new System.Drawing.Size(250, 729);
-            this.sidebarContainer.TabIndex = 5;
+            this.fundoMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.fundoMenu.Controls.Add(this.panelBarraeLogo);
+            this.fundoMenu.Controls.Add(this.panel2);
+            this.fundoMenu.Controls.Add(this.panel1);
+            this.fundoMenu.Controls.Add(this.panel3);
+            this.fundoMenu.Controls.Add(this.panel4);
+            this.fundoMenu.Controls.Add(this.panel5);
+            this.fundoMenu.Controls.Add(this.panel7);
+            this.fundoMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.fundoMenu.Location = new System.Drawing.Point(0, 0);
+            this.fundoMenu.MaximumSize = new System.Drawing.Size(250, 729);
+            this.fundoMenu.MinimumSize = new System.Drawing.Size(77, 729);
+            this.fundoMenu.Name = "fundoMenu";
+            this.fundoMenu.Size = new System.Drawing.Size(250, 729);
+            this.fundoMenu.TabIndex = 5;
             // 
             // panelBarraeLogo
             // 
-            this.panelBarraeLogo.Controls.Add(this.label1);
             this.panelBarraeLogo.Controls.Add(this.botaoAbreMenu);
             this.panelBarraeLogo.Location = new System.Drawing.Point(3, 3);
             this.panelBarraeLogo.Name = "panelBarraeLogo";
             this.panelBarraeLogo.Size = new System.Drawing.Size(247, 118);
             this.panelBarraeLogo.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(81, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LOGO/MENU";
             // 
             // botaoAbreMenu
             // 
@@ -144,6 +131,7 @@
             this.botaoAbreMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.botaoAbreMenu.TabIndex = 0;
             this.botaoAbreMenu.TabStop = false;
+            this.botaoAbreMenu.Click += new System.EventHandler(this.botaoAbreMenu_Click);
             // 
             // panel2
             // 
@@ -269,35 +257,10 @@
             this.botaoFavoritos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoFavoritos.UseVisualStyleBackColor = false;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.botaoConfig);
-            this.panel6.Location = new System.Drawing.Point(3, 457);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(247, 60);
-            this.panel6.TabIndex = 8;
-            // 
-            // botaoConfig
-            // 
-            this.botaoConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.botaoConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoConfig.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoConfig.ForeColor = System.Drawing.Color.White;
-            this.botaoConfig.Image = global::JobStack.Properties.Resources.icon_configuracoes1;
-            this.botaoConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoConfig.Location = new System.Drawing.Point(-13, -9);
-            this.botaoConfig.Name = "botaoConfig";
-            this.botaoConfig.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.botaoConfig.Size = new System.Drawing.Size(269, 80);
-            this.botaoConfig.TabIndex = 3;
-            this.botaoConfig.Text = "            CONFIGURAÇÕES";
-            this.botaoConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoConfig.UseVisualStyleBackColor = false;
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.botaoPerfil);
-            this.panel7.Location = new System.Drawing.Point(3, 523);
+            this.panel7.Location = new System.Drawing.Point(3, 457);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(247, 60);
             this.panel7.TabIndex = 9;
@@ -319,13 +282,18 @@
             this.botaoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoPerfil.UseVisualStyleBackColor = false;
             // 
+            // fundoMenuTimer
+            // 
+            this.fundoMenuTimer.Interval = 7;
+            this.fundoMenuTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // TMenuAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.sidebarContainer);
+            this.Controls.Add(this.fundoMenu);
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
             this.Controls.Add(this.BotaoVoltar);
@@ -333,9 +301,11 @@
             this.Name = "TMenuAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TMenuAluno";
+            this.Load += new System.EventHandler(this.TMenuAluno_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TMenuAluno_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
-            this.sidebarContainer.ResumeLayout(false);
+            this.fundoMenu.ResumeLayout(false);
             this.panelBarraeLogo.ResumeLayout(false);
             this.panelBarraeLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).EndInit();
@@ -344,7 +314,6 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -355,9 +324,8 @@
         private System.Windows.Forms.Button BotaoVoltar;
         private System.Windows.Forms.PictureBox botaoMinimizar;
         private System.Windows.Forms.PictureBox botaoFechar;
-        private System.Windows.Forms.FlowLayoutPanel sidebarContainer;
+        private System.Windows.Forms.FlowLayoutPanel fundoMenu;
         private System.Windows.Forms.Panel panelBarraeLogo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox botaoAbreMenu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button botaoPesquisar;
@@ -369,9 +337,8 @@
         private System.Windows.Forms.Button botaoInscricoes;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button botaoFavoritos;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button botaoConfig;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button botaoPerfil;
+        private System.Windows.Forms.Timer fundoMenuTimer;
     }
 }

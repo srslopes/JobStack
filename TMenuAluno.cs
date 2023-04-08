@@ -36,5 +36,46 @@ namespace JobStack
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        //Esse método vai definir o tamanho máximo e mínimo que o menu vertical vai possuir
+        bool fundoMenuExpand;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (fundoMenuExpand)
+            {
+                //se o menu está expandido/grande, esse comando vai encurtá-lo
+                fundoMenu.Width -= 10;
+                if(fundoMenu.Width == fundoMenu.MinimumSize.Width)
+                {
+                    fundoMenuExpand = false;
+                    fundoMenuTimer.Stop();
+                }
+            }
+            else
+            {
+                //se o menu está encurtado, isso vai expandi-lo
+                fundoMenu.Width += 10;
+                if(fundoMenu.Width == fundoMenu.MaximumSize.Width)
+                {
+                    fundoMenuExpand = true;
+                    fundoMenuTimer.Stop();
+                }
+            }
+        }
+
+        //Esse botão vai ativar o timer que expande e diminui a barra de menu vertical
+        private void botaoAbreMenu_Click(object sender, EventArgs e)
+        {
+            fundoMenuTimer.Start();
+        }
+
+        private void TMenuAluno_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void TMenuAluno_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

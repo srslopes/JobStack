@@ -24,10 +24,13 @@ namespace JobStack
 
 
             Passo1();
+
+            //Chamando os métodos para mover a tela de login a partir do clique do usuário
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Login_MouseUp);
         }
         // declaração da variavel ListViewItem com nome  lvItem
-
-
 
 
         private ListViewItem lvItem;
@@ -458,9 +461,50 @@ namespace JobStack
             }
 
         }
+        
 
+        private void copiarEmail_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void copiarEmail_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void copiarEmail_MouseUp(object sender, MouseEventArgs e)
+        {
+        }
+
+        //Configurando a janela para se mover de acordo com o clique do usuario
+        //A variavel dragging indica que o usuario está "segurando" a tela
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void Login_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void Login_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
 
     }
-}
+    }
 
 

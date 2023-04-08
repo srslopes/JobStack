@@ -62,6 +62,7 @@ namespace JobStack
             // 
             // campoEmail
             // 
+            this.campoEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoEmail.Location = new System.Drawing.Point(40, 68);
             this.campoEmail.Multiline = true;
             this.campoEmail.Name = "campoEmail";
@@ -75,9 +76,9 @@ namespace JobStack
             this.textoEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textoEmail.Location = new System.Drawing.Point(140, 46);
             this.textoEmail.Name = "textoEmail";
-            this.textoEmail.Size = new System.Drawing.Size(54, 19);
+            this.textoEmail.Size = new System.Drawing.Size(61, 19);
             this.textoEmail.TabIndex = 2;
-            this.textoEmail.Text = "EMAIL";
+            this.textoEmail.Text = "E-MAIL";
             this.textoEmail.Click += new System.EventHandler(this.Label1_Click);
             // 
             // textoSenha
@@ -93,6 +94,7 @@ namespace JobStack
             // 
             // campoSenha
             // 
+            this.campoSenha.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoSenha.HideSelection = false;
             this.campoSenha.Location = new System.Drawing.Point(40, 62);
             this.campoSenha.Multiline = true;
@@ -153,13 +155,14 @@ namespace JobStack
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(785, 596);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(82, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(115, 19);
             this.linkLabel1.TabIndex = 17;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Suporte técnico";
+            this.linkLabel1.Text = "Suporte Técnico";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // painelEmail
@@ -191,11 +194,15 @@ namespace JobStack
             // copiarEmail
             // 
             this.copiarEmail.AutoSize = true;
+            this.copiarEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copiarEmail.Location = new System.Drawing.Point(138, 11);
             this.copiarEmail.Name = "copiarEmail";
-            this.copiarEmail.Size = new System.Drawing.Size(66, 13);
+            this.copiarEmail.Size = new System.Drawing.Size(91, 19);
             this.copiarEmail.TabIndex = 17;
             this.copiarEmail.Text = "emailPessoa";
+            this.copiarEmail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.copiarEmail_MouseDown);
+            this.copiarEmail.MouseMove += new System.Windows.Forms.MouseEventHandler(this.copiarEmail_MouseMove);
+            this.copiarEmail.MouseUp += new System.Windows.Forms.MouseEventHandler(this.copiarEmail_MouseUp);
             // 
             // painelSuporte
             // 
@@ -223,6 +230,7 @@ namespace JobStack
             // 
             // BotaoEnviar
             // 
+            this.BotaoEnviar.Font = new System.Drawing.Font("SF Pro Display", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotaoEnviar.Location = new System.Drawing.Point(55, 158);
             this.BotaoEnviar.Name = "BotaoEnviar";
             this.BotaoEnviar.Size = new System.Drawing.Size(75, 23);
@@ -233,9 +241,10 @@ namespace JobStack
             // 
             // campoEmailPessoal
             // 
+            this.campoEmailPessoal.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoEmailPessoal.Location = new System.Drawing.Point(17, 105);
             this.campoEmailPessoal.Name = "campoEmailPessoal";
-            this.campoEmailPessoal.Size = new System.Drawing.Size(161, 20);
+            this.campoEmailPessoal.Size = new System.Drawing.Size(161, 23);
             this.campoEmailPessoal.TabIndex = 21;
             this.campoEmailPessoal.TextChanged += new System.EventHandler(this.CampoEmailPessoal_TextChanged);
             this.campoEmailPessoal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CampoEmailPessoal_KeyDown);
@@ -243,30 +252,33 @@ namespace JobStack
             // emailPessoal
             // 
             this.emailPessoal.AutoSize = true;
-            this.emailPessoal.Location = new System.Drawing.Point(25, 89);
+            this.emailPessoal.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailPessoal.Location = new System.Drawing.Point(14, 84);
             this.emailPessoal.Name = "emailPessoal";
-            this.emailPessoal.Size = new System.Drawing.Size(130, 13);
+            this.emailPessoal.Size = new System.Drawing.Size(171, 18);
             this.emailPessoal.TabIndex = 22;
             this.emailPessoal.Text = "Qual o seu email pessoal?";
             // 
             // erro
             // 
             this.erro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.erro.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.erro.FormattingEnabled = true;
             this.erro.Location = new System.Drawing.Point(17, 45);
             this.erro.Name = "erro";
-            this.erro.Size = new System.Drawing.Size(161, 21);
+            this.erro.Size = new System.Drawing.Size(161, 23);
             this.erro.TabIndex = 21;
             this.erro.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // perguntaSuporte
             // 
             this.perguntaSuporte.AutoSize = true;
-            this.perguntaSuporte.Location = new System.Drawing.Point(40, 29);
+            this.perguntaSuporte.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.perguntaSuporte.Location = new System.Drawing.Point(14, 24);
             this.perguntaSuporte.Name = "perguntaSuporte";
-            this.perguntaSuporte.Size = new System.Drawing.Size(104, 13);
+            this.perguntaSuporte.Size = new System.Drawing.Size(145, 18);
             this.perguntaSuporte.TabIndex = 0;
-            this.perguntaSuporte.Text = "Qual o seu problema";
+            this.perguntaSuporte.Text = "Qual o seu problema?\r\n";
             this.perguntaSuporte.Click += new System.EventHandler(this.Label1_Click_1);
             // 
             // pictureBox1
@@ -307,6 +319,7 @@ namespace JobStack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1020, 683);
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
@@ -321,6 +334,9 @@ namespace JobStack
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Login_MouseUp);
             this.painelEmail.ResumeLayout(false);
             this.painelEmail.PerformLayout();
             this.painelSenha.ResumeLayout(false);
