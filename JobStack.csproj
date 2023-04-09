@@ -233,5 +233,23 @@
   <ItemGroup>
     <None Include="Resources\icone notificacoes2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone vagas emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone cadusuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone cadusuario 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone analisar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone analisar2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

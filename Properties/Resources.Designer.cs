@@ -143,6 +143,46 @@ namespace JobStack.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icone_analisar {
+            get {
+                object obj = ResourceManager.GetObject("icone analisar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_analisar2 {
+            get {
+                object obj = ResourceManager.GetObject("icone analisar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_cadusuario {
+            get {
+                object obj = ResourceManager.GetObject("icone cadusuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_cadusuario_2 {
+            get {
+                object obj = ResourceManager.GetObject("icone cadusuario 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_chat {
             get {
                 object obj = ResourceManager.GetObject("icone chat", resourceCulture);
@@ -246,6 +286,26 @@ namespace JobStack.Properties {
         internal static System.Drawing.Bitmap icone_notificacoes2 {
             get {
                 object obj = ResourceManager.GetObject("icone notificacoes2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_usuarios {
+            get {
+                object obj = ResourceManager.GetObject("icone usuarios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_vagas_emp {
+            get {
+                object obj = ResourceManager.GetObject("icone vagas emp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

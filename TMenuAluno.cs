@@ -15,6 +15,12 @@ namespace JobStack
         public TMenuAluno()
         {
             InitializeComponent();
+
+            //Chamando os métodos para mover a tela de login a partir do clique do usuário
+ 
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TMenuAluno_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TMenuAluno_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TMenuAluno_MouseUp);
         }
 
         private void BotaoVoltar_Click(object sender, EventArgs e)
@@ -69,13 +75,31 @@ namespace JobStack
             fundoMenuTimer.Start();
         }
 
-        private void TMenuAluno_Load(object sender, EventArgs e)
-        {
+        //Configurando a janela para se mover de acordo com o clique do usuario
+        //A variavel dragging indica que o usuario está "segurando" a tela
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
 
-        }
         private void TMenuAluno_MouseDown(object sender, MouseEventArgs e)
         {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
 
+        private void TMenuAluno_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void TMenuAluno_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
         }
     }
 }

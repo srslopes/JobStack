@@ -47,7 +47,7 @@ namespace JobStack
 
             // Limpa os campos de email e senha
             campoEmail.Text = "";
-            textoEmail.Text = "Email";
+            textoEmail.Text = "Insira o seu email";
             campoSenha.Text = "";
 
             // Esconde as mensagens de erro relacionadas ao email e senha
@@ -200,7 +200,6 @@ namespace JobStack
 
 
         }
-
 
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -63,7 +63,7 @@ namespace JobStack
             // campoEmail
             // 
             this.campoEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoEmail.Location = new System.Drawing.Point(40, 68);
+            this.campoEmail.Location = new System.Drawing.Point(40, 56);
             this.campoEmail.Multiline = true;
             this.campoEmail.Name = "campoEmail";
             this.campoEmail.Size = new System.Drawing.Size(260, 29);
@@ -73,23 +73,23 @@ namespace JobStack
             // textoEmail
             // 
             this.textoEmail.AutoSize = true;
-            this.textoEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoEmail.Location = new System.Drawing.Point(140, 46);
+            this.textoEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoEmail.Location = new System.Drawing.Point(101, 34);
             this.textoEmail.Name = "textoEmail";
-            this.textoEmail.Size = new System.Drawing.Size(61, 19);
+            this.textoEmail.Size = new System.Drawing.Size(58, 19);
             this.textoEmail.TabIndex = 2;
-            this.textoEmail.Text = "E-MAIL";
+            this.textoEmail.Text = "EMAIL";
             this.textoEmail.Click += new System.EventHandler(this.Label1_Click);
             // 
             // textoSenha
             // 
             this.textoSenha.AutoSize = true;
-            this.textoSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoSenha.Location = new System.Drawing.Point(140, 40);
+            this.textoSenha.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoSenha.Location = new System.Drawing.Point(101, 40);
             this.textoSenha.Name = "textoSenha";
-            this.textoSenha.Size = new System.Drawing.Size(60, 19);
+            this.textoSenha.Size = new System.Drawing.Size(129, 19);
             this.textoSenha.TabIndex = 9;
-            this.textoSenha.Text = "SENHA";
+            this.textoSenha.Text = "Insira sua senha";
             this.textoSenha.Click += new System.EventHandler(this.Label2_Click);
             // 
             // campoSenha
@@ -116,9 +116,10 @@ namespace JobStack
             // CondicaoSenha
             // 
             this.CondicaoSenha.AutoSize = true;
-            this.CondicaoSenha.Location = new System.Drawing.Point(133, 94);
+            this.CondicaoSenha.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CondicaoSenha.Location = new System.Drawing.Point(102, 103);
             this.CondicaoSenha.Name = "CondicaoSenha";
-            this.CondicaoSenha.Size = new System.Drawing.Size(83, 13);
+            this.CondicaoSenha.Size = new System.Drawing.Size(97, 15);
             this.CondicaoSenha.TabIndex = 11;
             this.CondicaoSenha.Text = "CondicaoSenha";
             this.CondicaoSenha.Click += new System.EventHandler(this.label3_Click_1);
@@ -126,15 +127,16 @@ namespace JobStack
             // CondicaoEmail
             // 
             this.CondicaoEmail.AutoSize = true;
-            this.CondicaoEmail.Location = new System.Drawing.Point(131, 100);
+            this.CondicaoEmail.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CondicaoEmail.Location = new System.Drawing.Point(102, 97);
             this.CondicaoEmail.Name = "CondicaoEmail";
-            this.CondicaoEmail.Size = new System.Drawing.Size(80, 13);
+            this.CondicaoEmail.Size = new System.Drawing.Size(94, 15);
             this.CondicaoEmail.TabIndex = 12;
             this.CondicaoEmail.Text = "Condicao Email";
             // 
             // BotaoProximo
             // 
-            this.BotaoProximo.Location = new System.Drawing.Point(136, 116);
+            this.BotaoProximo.Location = new System.Drawing.Point(134, 128);
             this.BotaoProximo.Name = "BotaoProximo";
             this.BotaoProximo.Size = new System.Drawing.Size(75, 23);
             this.BotaoProximo.TabIndex = 15;
@@ -144,7 +146,7 @@ namespace JobStack
             // 
             // BotaoLogin
             // 
-            this.BotaoLogin.Location = new System.Drawing.Point(136, 110);
+            this.BotaoLogin.Location = new System.Drawing.Point(134, 131);
             this.BotaoLogin.Name = "BotaoLogin";
             this.BotaoLogin.Size = new System.Drawing.Size(75, 23);
             this.BotaoLogin.TabIndex = 16;

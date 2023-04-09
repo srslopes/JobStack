@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.BotaoVoltar = new System.Windows.Forms.Button();
-            this.botaoMinimizar = new System.Windows.Forms.PictureBox();
-            this.botaoFechar = new System.Windows.Forms.PictureBox();
             this.fundoMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBarraeLogo = new System.Windows.Forms.Panel();
             this.botaoAbreMenu = new System.Windows.Forms.PictureBox();
@@ -48,8 +46,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.botaoPerfil = new System.Windows.Forms.Button();
             this.fundoMenuTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
+            this.botaoMinimizar = new System.Windows.Forms.PictureBox();
+            this.botaoFechar = new System.Windows.Forms.PictureBox();
             this.fundoMenu.SuspendLayout();
             this.panelBarraeLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).BeginInit();
@@ -59,6 +57,8 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // BotaoVoltar
@@ -70,30 +70,6 @@
             this.BotaoVoltar.Text = "Voltar";
             this.BotaoVoltar.UseVisualStyleBackColor = true;
             this.BotaoVoltar.Click += new System.EventHandler(this.BotaoVoltar_Click);
-            // 
-            // botaoMinimizar
-            // 
-            this.botaoMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoMinimizar.Image = global::JobStack.Properties.Resources.botao_minimizar;
-            this.botaoMinimizar.Location = new System.Drawing.Point(929, 12);
-            this.botaoMinimizar.Name = "botaoMinimizar";
-            this.botaoMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.botaoMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.botaoMinimizar.TabIndex = 4;
-            this.botaoMinimizar.TabStop = false;
-            this.botaoMinimizar.Click += new System.EventHandler(this.botaoMinimizar_Click);
-            // 
-            // botaoFechar
-            // 
-            this.botaoFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoFechar.Image = global::JobStack.Properties.Resources.botao_fechar;
-            this.botaoFechar.Location = new System.Drawing.Point(971, 12);
-            this.botaoFechar.Name = "botaoFechar";
-            this.botaoFechar.Size = new System.Drawing.Size(25, 25);
-            this.botaoFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.botaoFechar.TabIndex = 3;
-            this.botaoFechar.TabStop = false;
-            this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
             // fundoMenu
             // 
@@ -250,10 +226,10 @@
             this.botaoFavoritos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoFavoritos.Location = new System.Drawing.Point(-13, -10);
             this.botaoFavoritos.Name = "botaoFavoritos";
-            this.botaoFavoritos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.botaoFavoritos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.botaoFavoritos.Size = new System.Drawing.Size(269, 80);
             this.botaoFavoritos.TabIndex = 3;
-            this.botaoFavoritos.Text = "             FAVORITOS";
+            this.botaoFavoritos.Text = "           FAVORITOS";
             this.botaoFavoritos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoFavoritos.UseVisualStyleBackColor = false;
             // 
@@ -275,17 +251,41 @@
             this.botaoPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoPerfil.Location = new System.Drawing.Point(-13, -10);
             this.botaoPerfil.Name = "botaoPerfil";
-            this.botaoPerfil.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.botaoPerfil.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.botaoPerfil.Size = new System.Drawing.Size(269, 80);
             this.botaoPerfil.TabIndex = 3;
-            this.botaoPerfil.Text = "             MEU PERFIL";
+            this.botaoPerfil.Text = "            MEU PERFIL";
             this.botaoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoPerfil.UseVisualStyleBackColor = false;
             // 
             // fundoMenuTimer
             // 
-            this.fundoMenuTimer.Interval = 7;
+            this.fundoMenuTimer.Interval = 1;
             this.fundoMenuTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // botaoMinimizar
+            // 
+            this.botaoMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoMinimizar.Image = global::JobStack.Properties.Resources.botao_minimizar;
+            this.botaoMinimizar.Location = new System.Drawing.Point(929, 12);
+            this.botaoMinimizar.Name = "botaoMinimizar";
+            this.botaoMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.botaoMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.botaoMinimizar.TabIndex = 4;
+            this.botaoMinimizar.TabStop = false;
+            this.botaoMinimizar.Click += new System.EventHandler(this.botaoMinimizar_Click);
+            // 
+            // botaoFechar
+            // 
+            this.botaoFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoFechar.Image = global::JobStack.Properties.Resources.botao_fechar;
+            this.botaoFechar.Location = new System.Drawing.Point(971, 12);
+            this.botaoFechar.Name = "botaoFechar";
+            this.botaoFechar.Size = new System.Drawing.Size(25, 25);
+            this.botaoFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.botaoFechar.TabIndex = 3;
+            this.botaoFechar.TabStop = false;
+            this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
             // TMenuAluno
             // 
@@ -301,10 +301,9 @@
             this.Name = "TMenuAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TMenuAluno";
-            this.Load += new System.EventHandler(this.TMenuAluno_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TMenuAluno_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TMenuAluno_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TMenuAluno_MouseUp);
             this.fundoMenu.ResumeLayout(false);
             this.panelBarraeLogo.ResumeLayout(false);
             this.panelBarraeLogo.PerformLayout();
@@ -315,6 +314,8 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
             this.ResumeLayout(false);
 
         }
