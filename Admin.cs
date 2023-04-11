@@ -14,15 +14,20 @@ namespace JobStack
 
         private int ID;
 
+        private bool status;
+
+
         public Admin()
         {
             ID = 0;
+            SetStatus(false);
         }
         public Admin(string e, string p)
         {
             SetEmail(e);
             senha = p;
             ID = 0;
+            SetStatus(false);
         }
 
         public string GetEmail()
@@ -66,6 +71,11 @@ namespace JobStack
         {
             email = "";
             this.SetSenha("");
+        }
+        
+        public void SetStatus(bool valor)
+        {
+            status = valor;
         }
     }
 }

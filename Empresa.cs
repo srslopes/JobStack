@@ -16,10 +16,13 @@ namespace JobStack
 
         private List<int> Vagas;
 
+        private bool status;
+
         public Empresa()
         {
             ID = 0;
             Vagas = new List<int>();
+            SetStatus(false);
         }
         public Empresa(string e, string s)
         {
@@ -27,6 +30,7 @@ namespace JobStack
             senha =s;
             ID = 0;
             Vagas = new List<int>();
+            SetStatus(false);
         }
 
         public string GetEmail()
@@ -93,6 +97,11 @@ namespace JobStack
         {
             email = "";
             this.SetSenha("");
+        }
+
+        public void SetStatus(bool valor)
+        {
+            status = valor;
         }
 
     }

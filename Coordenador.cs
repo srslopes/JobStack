@@ -13,15 +13,20 @@ namespace JobStack
         private string senha;
 
         private int ID;
+
+        private bool status;
+
         public Coordenador()
         {
             ID = 0;
+            SetStatus(false);
         }
         public Coordenador(string e, string p)
         {
             SetEmail(e);
             senha = p;
             ID = 0;
+            SetStatus(false);
         }
 
         public string GetEmail()
@@ -66,6 +71,10 @@ namespace JobStack
         {
             email = "";
             this.SetSenha("");
+        }
+        public void SetStatus(bool valor)
+        {
+            status = valor;
         }
     }
 }

@@ -79,6 +79,7 @@ namespace JobStack
         {                                                               //Retorna verdadeiro se o aluno foi adicionado com sucesso
             if (BuscarID(aluno.GetEmail()) != 0) return false;     //Retorna falso se um aluno com mesmo email já existe
             aluno.SetID(GetNextIdAluno());
+            aluno.SetStatus(true);
             Alunos.Add(aluno);
             return true;
         }
@@ -137,6 +138,7 @@ namespace JobStack
         {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
             if (BuscarID(empresa.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
             empresa.SetID(GetNextIdEmpresa());
+            empresa.SetStatus(true);
             Empresas.Add(empresa);
             return true;
         }
@@ -194,6 +196,7 @@ namespace JobStack
         {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
             if (BuscarID(admin.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
             admin.SetID(GetNextIdAdmin());
+            admin.SetStatus(true);
             Admins.Add(admin);
             return true;
         }
@@ -244,6 +247,7 @@ namespace JobStack
         {                                                               //Retorna verdadeiro se a empresa foi adicionada com sucesso
             if (BuscarIdCoordenador(coordenador.GetEmail()) != 0) return false;     //Retorna falso se uma empresa com mesmo email já existe
             coordenador.SetID(GetNextIdCoordenador());
+            coordenador.SetStatus(true);
             Coordenadores.Add(coordenador);
             return true;
         }
