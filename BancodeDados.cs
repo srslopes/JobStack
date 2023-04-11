@@ -326,6 +326,14 @@ namespace JobStack
             else return Admins[id - 1];
         }
 
+        public static bool GetStatusUsuario(int id)
+        {
+            if (id / 1000 > 5) return Empresas[(id % 1000) - 1].GetStatus();
+            else if (id / 1000 > 0) return Alunos[(id % 1000) - 1].GetStatus();
+            else if (id / 100 == 1) return Coordenadores[(id % 100) - 1].GetStatus();
+            else return Admins[id - 1].GetStatus();
+        }
+
         public static bool AdicionarUsuario(Object obj) 
         {
             switch(obj.GetType().ToString())

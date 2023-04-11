@@ -95,6 +95,11 @@ namespace JobStack
             status = valor;
         }
 
+        public bool GetStatus()
+        {
+            return status;
+        }
+
         public void Limpar()
         {
             email = "";

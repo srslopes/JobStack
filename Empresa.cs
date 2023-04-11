@@ -103,6 +103,10 @@ namespace JobStack
         {
             status = valor;
         }
+        public bool GetStatus()
+        {
+            return status;
+        }
 
     }
 }
