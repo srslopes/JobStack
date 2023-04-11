@@ -413,7 +413,8 @@ namespace JobStack
             }
 
             // Verifica se o valor do campo de email corresponde ao formato de email
-            Regex regex = new Regex(@"^([\w.\-]+)@([\w\-]+)?(\.\w{2,3})?((\.com\.br)?)?$");
+            Regex regex = new Regex(@"^([\w.\-]+)@([\w\-]+)(\.\w{2,3})?((\.com\.br)?)?$");
+
             if (!regex.IsMatch(campoEmailPessoal.Text))
             {
                 // Se o valor não corresponder, exibe uma mensagem de erro
