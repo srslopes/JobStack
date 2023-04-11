@@ -62,21 +62,23 @@ namespace JobStack
             // 
             // campoEmail
             // 
-            this.campoEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoEmail.Location = new System.Drawing.Point(40, 56);
+            this.campoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoEmail.Location = new System.Drawing.Point(60, 86);
+            this.campoEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campoEmail.Multiline = true;
             this.campoEmail.Name = "campoEmail";
-            this.campoEmail.Size = new System.Drawing.Size(260, 29);
+            this.campoEmail.Size = new System.Drawing.Size(388, 42);
             this.campoEmail.TabIndex = 1;
             this.campoEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textoEmail
             // 
             this.textoEmail.AutoSize = true;
-            this.textoEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoEmail.Location = new System.Drawing.Point(101, 34);
+            this.textoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoEmail.Location = new System.Drawing.Point(152, 52);
+            this.textoEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.textoEmail.Name = "textoEmail";
-            this.textoEmail.Size = new System.Drawing.Size(58, 19);
+            this.textoEmail.Size = new System.Drawing.Size(88, 29);
             this.textoEmail.TabIndex = 2;
             this.textoEmail.Text = "EMAIL";
             this.textoEmail.Click += new System.EventHandler(this.Label1_Click);
@@ -84,30 +86,33 @@ namespace JobStack
             // textoSenha
             // 
             this.textoSenha.AutoSize = true;
-            this.textoSenha.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoSenha.Location = new System.Drawing.Point(101, 40);
+            this.textoSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoSenha.Location = new System.Drawing.Point(152, 62);
+            this.textoSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.textoSenha.Name = "textoSenha";
-            this.textoSenha.Size = new System.Drawing.Size(129, 19);
+            this.textoSenha.Size = new System.Drawing.Size(202, 29);
             this.textoSenha.TabIndex = 9;
             this.textoSenha.Text = "Insira sua senha";
             this.textoSenha.Click += new System.EventHandler(this.Label2_Click);
             // 
             // campoSenha
             // 
-            this.campoSenha.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoSenha.HideSelection = false;
-            this.campoSenha.Location = new System.Drawing.Point(40, 62);
+            this.campoSenha.Location = new System.Drawing.Point(60, 95);
+            this.campoSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campoSenha.Multiline = true;
             this.campoSenha.Name = "campoSenha";
-            this.campoSenha.Size = new System.Drawing.Size(260, 29);
+            this.campoSenha.Size = new System.Drawing.Size(388, 42);
             this.campoSenha.TabIndex = 8;
             this.campoSenha.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // botaoVoltar
             // 
-            this.botaoVoltar.Location = new System.Drawing.Point(921, 647);
+            this.botaoVoltar.Location = new System.Drawing.Point(1382, 995);
+            this.botaoVoltar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botaoVoltar.Name = "botaoVoltar";
-            this.botaoVoltar.Size = new System.Drawing.Size(75, 23);
+            this.botaoVoltar.Size = new System.Drawing.Size(112, 35);
             this.botaoVoltar.TabIndex = 10;
             this.botaoVoltar.Text = "Voltar";
             this.botaoVoltar.Visible = false;
@@ -116,10 +121,11 @@ namespace JobStack
             // CondicaoSenha
             // 
             this.CondicaoSenha.AutoSize = true;
-            this.CondicaoSenha.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CondicaoSenha.Location = new System.Drawing.Point(102, 103);
+            this.CondicaoSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CondicaoSenha.Location = new System.Drawing.Point(153, 158);
+            this.CondicaoSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CondicaoSenha.Name = "CondicaoSenha";
-            this.CondicaoSenha.Size = new System.Drawing.Size(97, 15);
+            this.CondicaoSenha.Size = new System.Drawing.Size(154, 25);
             this.CondicaoSenha.TabIndex = 11;
             this.CondicaoSenha.Text = "CondicaoSenha";
             this.CondicaoSenha.Click += new System.EventHandler(this.label3_Click_1);
@@ -127,18 +133,20 @@ namespace JobStack
             // CondicaoEmail
             // 
             this.CondicaoEmail.AutoSize = true;
-            this.CondicaoEmail.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CondicaoEmail.Location = new System.Drawing.Point(102, 97);
+            this.CondicaoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CondicaoEmail.Location = new System.Drawing.Point(153, 149);
+            this.CondicaoEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CondicaoEmail.Name = "CondicaoEmail";
-            this.CondicaoEmail.Size = new System.Drawing.Size(94, 15);
+            this.CondicaoEmail.Size = new System.Drawing.Size(149, 25);
             this.CondicaoEmail.TabIndex = 12;
             this.CondicaoEmail.Text = "Condicao Email";
             // 
             // BotaoProximo
             // 
-            this.BotaoProximo.Location = new System.Drawing.Point(134, 128);
+            this.BotaoProximo.Location = new System.Drawing.Point(201, 197);
+            this.BotaoProximo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotaoProximo.Name = "BotaoProximo";
-            this.BotaoProximo.Size = new System.Drawing.Size(75, 23);
+            this.BotaoProximo.Size = new System.Drawing.Size(112, 35);
             this.BotaoProximo.TabIndex = 15;
             this.BotaoProximo.Text = "Proximo";
             this.BotaoProximo.UseVisualStyleBackColor = true;
@@ -146,9 +154,10 @@ namespace JobStack
             // 
             // BotaoLogin
             // 
-            this.BotaoLogin.Location = new System.Drawing.Point(134, 131);
+            this.BotaoLogin.Location = new System.Drawing.Point(201, 202);
+            this.BotaoLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotaoLogin.Name = "BotaoLogin";
-            this.BotaoLogin.Size = new System.Drawing.Size(75, 23);
+            this.BotaoLogin.Size = new System.Drawing.Size(112, 35);
             this.BotaoLogin.TabIndex = 16;
             this.BotaoLogin.Text = "Login";
             this.BotaoLogin.UseVisualStyleBackColor = true;
@@ -157,11 +166,10 @@ namespace JobStack
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(785, 596);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(1178, 917);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(115, 19);
+            this.linkLabel1.Size = new System.Drawing.Size(191, 29);
             this.linkLabel1.TabIndex = 17;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Suporte Técnico";
@@ -173,9 +181,10 @@ namespace JobStack
             this.painelEmail.Controls.Add(this.BotaoProximo);
             this.painelEmail.Controls.Add(this.textoEmail);
             this.painelEmail.Controls.Add(this.CondicaoEmail);
-            this.painelEmail.Location = new System.Drawing.Point(647, 159);
+            this.painelEmail.Location = new System.Drawing.Point(970, 245);
+            this.painelEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.painelEmail.Name = "painelEmail";
-            this.painelEmail.Size = new System.Drawing.Size(320, 154);
+            this.painelEmail.Size = new System.Drawing.Size(480, 237);
             this.painelEmail.TabIndex = 18;
             this.painelEmail.Paint += new System.Windows.Forms.PaintEventHandler(this.PainelEmail_Paint);
             // 
@@ -186,9 +195,10 @@ namespace JobStack
             this.painelSenha.Controls.Add(this.CondicaoSenha);
             this.painelSenha.Controls.Add(this.campoSenha);
             this.painelSenha.Controls.Add(this.textoSenha);
-            this.painelSenha.Location = new System.Drawing.Point(647, 328);
+            this.painelSenha.Location = new System.Drawing.Point(970, 505);
+            this.painelSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.painelSenha.Name = "painelSenha";
-            this.painelSenha.Size = new System.Drawing.Size(335, 168);
+            this.painelSenha.Size = new System.Drawing.Size(502, 258);
             this.painelSenha.TabIndex = 19;
             this.painelSenha.Visible = false;
             this.painelSenha.Paint += new System.Windows.Forms.PaintEventHandler(this.PainelSenha_Paint);
@@ -196,10 +206,11 @@ namespace JobStack
             // copiarEmail
             // 
             this.copiarEmail.AutoSize = true;
-            this.copiarEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.copiarEmail.Location = new System.Drawing.Point(138, 11);
+            this.copiarEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.copiarEmail.Location = new System.Drawing.Point(207, 17);
+            this.copiarEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.copiarEmail.Name = "copiarEmail";
-            this.copiarEmail.Size = new System.Drawing.Size(91, 19);
+            this.copiarEmail.Size = new System.Drawing.Size(153, 29);
             this.copiarEmail.TabIndex = 17;
             this.copiarEmail.Text = "emailPessoa";
             this.copiarEmail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.copiarEmail_MouseDown);
@@ -214,9 +225,10 @@ namespace JobStack
             this.painelSuporte.Controls.Add(this.emailPessoal);
             this.painelSuporte.Controls.Add(this.erro);
             this.painelSuporte.Controls.Add(this.perguntaSuporte);
-            this.painelSuporte.Location = new System.Drawing.Point(120, 211);
+            this.painelSuporte.Location = new System.Drawing.Point(180, 325);
+            this.painelSuporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.painelSuporte.Name = "painelSuporte";
-            this.painelSuporte.Size = new System.Drawing.Size(214, 224);
+            this.painelSuporte.Size = new System.Drawing.Size(321, 345);
             this.painelSuporte.TabIndex = 20;
             this.painelSuporte.Visible = false;
             this.painelSuporte.Paint += new System.Windows.Forms.PaintEventHandler(this.PainelSuporte_Paint);
@@ -224,18 +236,20 @@ namespace JobStack
             // CondicaoEmailS
             // 
             this.CondicaoEmailS.AutoSize = true;
-            this.CondicaoEmailS.Location = new System.Drawing.Point(25, 128);
+            this.CondicaoEmailS.Location = new System.Drawing.Point(38, 197);
+            this.CondicaoEmailS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CondicaoEmailS.Name = "CondicaoEmailS";
-            this.CondicaoEmailS.Size = new System.Drawing.Size(51, 13);
+            this.CondicaoEmailS.Size = new System.Drawing.Size(73, 20);
             this.CondicaoEmailS.TabIndex = 24;
             this.CondicaoEmailS.Text = "condicao";
             // 
             // BotaoEnviar
             // 
-            this.BotaoEnviar.Font = new System.Drawing.Font("SF Pro Display", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotaoEnviar.Location = new System.Drawing.Point(55, 158);
+            this.BotaoEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoEnviar.Location = new System.Drawing.Point(82, 243);
+            this.BotaoEnviar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotaoEnviar.Name = "BotaoEnviar";
-            this.BotaoEnviar.Size = new System.Drawing.Size(75, 23);
+            this.BotaoEnviar.Size = new System.Drawing.Size(112, 35);
             this.BotaoEnviar.TabIndex = 23;
             this.BotaoEnviar.Text = "Enviar";
             this.BotaoEnviar.UseVisualStyleBackColor = true;
@@ -243,10 +257,11 @@ namespace JobStack
             // 
             // campoEmailPessoal
             // 
-            this.campoEmailPessoal.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoEmailPessoal.Location = new System.Drawing.Point(17, 105);
+            this.campoEmailPessoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoEmailPessoal.Location = new System.Drawing.Point(26, 162);
+            this.campoEmailPessoal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campoEmailPessoal.Name = "campoEmailPessoal";
-            this.campoEmailPessoal.Size = new System.Drawing.Size(161, 23);
+            this.campoEmailPessoal.Size = new System.Drawing.Size(240, 30);
             this.campoEmailPessoal.TabIndex = 21;
             this.campoEmailPessoal.TextChanged += new System.EventHandler(this.CampoEmailPessoal_TextChanged);
             this.campoEmailPessoal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CampoEmailPessoal_KeyDown);
@@ -254,31 +269,34 @@ namespace JobStack
             // emailPessoal
             // 
             this.emailPessoal.AutoSize = true;
-            this.emailPessoal.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailPessoal.Location = new System.Drawing.Point(14, 84);
+            this.emailPessoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailPessoal.Location = new System.Drawing.Point(21, 129);
+            this.emailPessoal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailPessoal.Name = "emailPessoal";
-            this.emailPessoal.Size = new System.Drawing.Size(171, 18);
+            this.emailPessoal.Size = new System.Drawing.Size(297, 29);
             this.emailPessoal.TabIndex = 22;
             this.emailPessoal.Text = "Qual o seu email pessoal?";
             // 
             // erro
             // 
             this.erro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.erro.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.erro.FormattingEnabled = true;
-            this.erro.Location = new System.Drawing.Point(17, 45);
+            this.erro.Location = new System.Drawing.Point(26, 69);
+            this.erro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.erro.Name = "erro";
-            this.erro.Size = new System.Drawing.Size(161, 23);
+            this.erro.Size = new System.Drawing.Size(240, 33);
             this.erro.TabIndex = 21;
             this.erro.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // perguntaSuporte
             // 
             this.perguntaSuporte.AutoSize = true;
-            this.perguntaSuporte.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.perguntaSuporte.Location = new System.Drawing.Point(14, 24);
+            this.perguntaSuporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.perguntaSuporte.Location = new System.Drawing.Point(21, 37);
+            this.perguntaSuporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.perguntaSuporte.Name = "perguntaSuporte";
-            this.perguntaSuporte.Size = new System.Drawing.Size(145, 18);
+            this.perguntaSuporte.Size = new System.Drawing.Size(250, 29);
             this.perguntaSuporte.TabIndex = 0;
             this.perguntaSuporte.Text = "Qual o seu problema?\r\n";
             this.perguntaSuporte.Click += new System.EventHandler(this.Label1_Click_1);
@@ -286,9 +304,10 @@ namespace JobStack
             // pictureBox1
             // 
             this.pictureBox1.Image = global::JobStack.Properties.Resources.fundo_tela_de_login_vazio;
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -130);
+            this.pictureBox1.Location = new System.Drawing.Point(-34, -200);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(664, 939);
+            this.pictureBox1.Size = new System.Drawing.Size(996, 1445);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -297,9 +316,10 @@ namespace JobStack
             // 
             this.botaoMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoMinimizar.Image = global::JobStack.Properties.Resources.botao_minimizar;
-            this.botaoMinimizar.Location = new System.Drawing.Point(929, 12);
+            this.botaoMinimizar.Location = new System.Drawing.Point(1394, 18);
+            this.botaoMinimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botaoMinimizar.Name = "botaoMinimizar";
-            this.botaoMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.botaoMinimizar.Size = new System.Drawing.Size(38, 38);
             this.botaoMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.botaoMinimizar.TabIndex = 22;
             this.botaoMinimizar.TabStop = false;
@@ -309,9 +329,10 @@ namespace JobStack
             // 
             this.botaoFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoFechar.Image = global::JobStack.Properties.Resources.botao_fechar;
-            this.botaoFechar.Location = new System.Drawing.Point(971, 12);
+            this.botaoFechar.Location = new System.Drawing.Point(1456, 18);
+            this.botaoFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botaoFechar.Name = "botaoFechar";
-            this.botaoFechar.Size = new System.Drawing.Size(25, 25);
+            this.botaoFechar.Size = new System.Drawing.Size(38, 38);
             this.botaoFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.botaoFechar.TabIndex = 21;
             this.botaoFechar.TabStop = false;
@@ -319,10 +340,10 @@ namespace JobStack
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1020, 683);
+            this.ClientSize = new System.Drawing.Size(1530, 1051);
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
             this.Controls.Add(this.painelSuporte);
@@ -332,6 +353,7 @@ namespace JobStack
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.botaoVoltar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

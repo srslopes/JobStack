@@ -29,6 +29,7 @@ namespace JobStack
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Login_MouseUp);
+            campoEmail.Select();
         }
         // declaração da variavel ListViewItem com nome  lvItem
 
@@ -104,8 +105,15 @@ namespace JobStack
             // Se o usuário está cadastrado, identifica o tipo de usuário com base em seu ID
             else
             {
-                // Exibe o painel de senha e esconde o painel de email
-                painelSenha.Visible = true;
+                if (BancodeDados.GetStatusUsuario(id))
+                {
+                    // Exibe o painel de senha e esconde o painel de email
+                    painelSenha.Visible = true;
+                }
+                else
+                {
+
+                }
                 // Método executado quando o botão "Entrar" é clicado
             }
         }
@@ -271,6 +279,7 @@ namespace JobStack
                 CondicaoEmail.Visible = false;
                 // Chamar o método Email para exibir informações sobre o usuário
                 Email();
+                campoSenha.Select();
             }
 
         }
@@ -325,6 +334,8 @@ namespace JobStack
 
             // Define a seleção do ComboBox como a primeira opção (Esqueci meu email)
             erro.SelectedIndex = 0;
+
+            campoEmailPessoal.Select();
         }
 
 
@@ -402,7 +413,7 @@ namespace JobStack
             }
 
             // Verifica se o valor do campo de email corresponde ao formato de email
-            Regex regex = new Regex(@"^([\w.\-]+)@([\w\-]+)?(\.\w{2,3})?(outlook\.com(\.br)?)?$");
+            Regex regex = new Regex(@"^([\w.\-]+)@([\w\-]+)?(\.\w{2,3})?((\.com\.br)?)?$");
             if (!regex.IsMatch(campoEmailPessoal.Text))
             {
                 // Se o valor não corresponder, exibe uma mensagem de erro
