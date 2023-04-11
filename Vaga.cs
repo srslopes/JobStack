@@ -11,13 +11,18 @@ namespace JobStack
         private int ID;                 //ID de 4 digitos, se o primeiro digito for 0 a vaga ainda não foi aprovada
         private int IdEmpresa;
         private List<int> Inscritos;
-        private string Status;
+        private int status;
+        //         Status
+        // 0 : Aguardando aprovação
+        // 1 : Aprovação rejeitada
+        // 2 : Aprovado
+        // 3 : Encerrado
 
         public Vaga(int idEmpresa)                  //Cria uma nova vaga; (Obrigatória entrada do ID da empresa)
         {                                           //Vaga salva na lista de vagas não aprovadas
             IdEmpresa = idEmpresa;                  //Status estabelecido como "Aguardando Aprovação"
             Inscritos = new List<int>();
-            Status = "Aguardando aprovação";
+            status = 0;
         }
         
         public int GetID()
@@ -33,14 +38,24 @@ namespace JobStack
             return IdEmpresa;
         }
 
-        public string GetStatus()
+        public int GetStatus()
         {
-            return Status;
+            return status;
         }
 
-        public void SetStatus(string status)
+        public void Aprovar()
         {
-            Status = status;
+            status = 2;
+        }
+
+        public void Rejeitar()
+        {
+            status = 1;
+        }
+
+        public void Encerrar()
+        {
+            status = 3;
         }
 
         public List<int> GetLista()
@@ -62,22 +77,5 @@ namespace JobStack
             }
         }
 
-        public void Aprovar()   //Muda o status para 'aprovada'
-        {
-            if (Status.Equals("Aguardando aprovação"))
-            {
-                Status = "Aprovada";
-            }
-        }
-
-        public void Desaprovar()
-        {
-            Status = "Desaprovada";
-        }
-
-        public void Encerrar()
-        {
-            Status = "Encerrada";
-        }
     }
 }
