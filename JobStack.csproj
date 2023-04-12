@@ -121,6 +121,7 @@
     <Compile Include="Testes\TesteVagas.Designer.cs">
       <DependentUpon>TesteVagas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuários\Usuario.cs" />
     <Compile Include="Vaga.cs" />
     <EmbeddedResource Include="TCadastroVaga.resx">
       <DependentUpon>TCadastroVaga.cs</DependentUpon>

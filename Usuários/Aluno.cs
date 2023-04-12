@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JobStack
 {
-    class Aluno
+    class Aluno : Usua
     {
         private string email;
         private string senha;
