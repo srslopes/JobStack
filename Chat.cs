@@ -25,9 +25,9 @@ namespace JobStack
             else if (participante1 / 100 == 1) BancodeDados.BuscarCoordenador(participante1).AdicionarChat(id);
             else BancodeDados.BuscarAdmin(participante1).AdicionarChat(id);
 
-            if (participante1 / 1000 > 5) BancodeDados.BuscarEmpresa(participante2).AdicionarChat(id);
-            else if (participante1 / 1000 > 0) BancodeDados.BuscarAluno(participante2).AdicionarChat(id);
-            else if (participante1 / 100 == 1) BancodeDados.BuscarCoordenador(participante2).AdicionarChat(id);
+            if (participante2 / 1000 > 5) BancodeDados.BuscarEmpresa(participante2).AdicionarChat(id);
+            else if (participante2 / 1000 > 0) BancodeDados.BuscarAluno(participante2).AdicionarChat(id);
+            else if (participante2 / 100 == 1) BancodeDados.BuscarCoordenador(participante2).AdicionarChat(id);
             else BancodeDados.BuscarAdmin(participante2).AdicionarChat(id);
         }
 
