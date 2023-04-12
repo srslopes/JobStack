@@ -12,13 +12,16 @@ namespace JobStack
         private string senha;
         private int ID;
         private List<int> Vagas;
+        private List<int> Chats;
         private bool status;
+        
 
 
         public Aluno()
         {
             ID = 0;
             Vagas = new List<int>();
+            Chats = new List<int>();
             SetStatus(false);
         }
         
@@ -28,6 +31,7 @@ namespace JobStack
             senha = p;
             ID = 0;
             Vagas = new List<int>();
+            Chats = new List<int>();
             SetStatus(false);
         }
 
@@ -63,7 +67,7 @@ namespace JobStack
         public void AdicionarVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
         {
             for (int i = 0; i < Vagas.Count; i++) if (Vagas[i] == id) return;
-            Vagas.Add(id);
+            Vagas.Prepend(id);
         }
 
         public void RemoverVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
@@ -80,6 +84,17 @@ namespace JobStack
         {
             Vagas.Clear();
             for (int i = 0; i <= vagas.IndexOf(vagas.Last()); i++) Vagas.Add(vagas[i]);
+        }
+
+        public void AdicionarChat(int id)
+        {
+            for (int i = 0; i < Chats.Count; i++) if (Chats[i] == id) return;
+            Chats.Prepend(id);
+        }
+
+        public List<int> GetChats()
+        {
+            return Chats;
         }
 
         public void ClonarDe(Aluno aluno)   //Copia os atributos do objeto indicado para esse objeto

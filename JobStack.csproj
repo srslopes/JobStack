@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
-    <Compile Include="Aluno.cs" />
+    <Compile Include="Usuários\Admin.cs" />
+    <Compile Include="Usuários\Aluno.cs" />
+    <Compile Include="Chat.cs" />
+    <Compile Include="Mensagem.cs" />
     <Compile Include="TCadastroVaga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +69,8 @@
       <DependentUpon>TMenuAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="BancodeDados.cs" />
-    <Compile Include="Coordenador.cs" />
-    <Compile Include="Empresa.cs" />
+    <Compile Include="Usuários\Coordenador.cs" />
+    <Compile Include="Usuários\Empresa.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

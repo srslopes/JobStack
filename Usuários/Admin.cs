@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace JobStack
 {
-    class Coordenador
+    class Admin
     {
         private string email;
-
         private string senha;
-
         private int ID;
-
         private bool status;
+        private List<int> Chats;
 
-        public Coordenador()
+
+        public Admin()
         {
             ID = 0;
             SetStatus(false);
+            Chats = new List<int>();
         }
-        public Coordenador(string e, string p)
+        public Admin(string e, string p)
         {
             SetEmail(e);
             senha = p;
             ID = 0;
             SetStatus(false);
+            Chats = new List<int>();
         }
 
         public string GetEmail()
@@ -38,7 +39,6 @@ namespace JobStack
         {
             return senha;
         }
-        
         public bool SetEmail(string e)
         {
             if (BancodeDados.BuscarID(e) != 0) return false;
@@ -50,7 +50,7 @@ namespace JobStack
         {
             senha = p;
         }
-
+        
         public int GetID()
         {
             return ID;
@@ -61,17 +61,18 @@ namespace JobStack
             ID = id;
         }
 
-        public void ClonarDe(Coordenador coordenador) //Copia os atributos do objeto indicado para esse objeto
+        public void ClonarDe(Admin admin) //Copia os atributos do objeto indicado para esse objeto
         {
-            email = coordenador.GetEmail();
-            this.SetSenha(coordenador.GetSenha());
-            this.SetID(coordenador.GetID());
+            email = admin.GetEmail();
+            this.SetSenha(admin.GetSenha());
+            this.SetID(admin.GetID());
         }
         public void Limpar()
         {
             email = "";
             this.SetSenha("");
         }
+        
         public void SetStatus(bool valor)
         {
             status = valor;
@@ -80,5 +81,16 @@ namespace JobStack
         {
             return status;
         }
+        public void AdicionarChat(int id)
+        {
+            for (int i = 0; i < Chats.Count; i++) if (Chats[i] == id) return;
+            Chats.Prepend(id);
+        }
+
+        public List<int> GetChats()
+        {
+            return Chats;
+        }
+
     }
 }

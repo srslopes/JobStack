@@ -6,31 +6,27 @@ using System.Threading.Tasks;
 
 namespace JobStack
 {
-    class Empresa
+    class Coordenador
     {
         private string email;
-
         private string senha;
-
         private int ID;
-
-        private List<int> Vagas;
-
         private bool status;
+        private List<int> Chats;
 
-        public Empresa()
+        public Coordenador()
         {
             ID = 0;
-            Vagas = new List<int>();
             SetStatus(false);
+            Chats = new List<int>();
         }
-        public Empresa(string e, string s)
+        public Coordenador(string e, string p)
         {
             SetEmail(e);
-            senha =s;
+            senha = p;
             ID = 0;
-            Vagas = new List<int>();
             SetStatus(false);
+            Chats = new List<int>();
         }
 
         public string GetEmail()
@@ -42,13 +38,14 @@ namespace JobStack
         {
             return senha;
         }
-  
+        
         public bool SetEmail(string e)
         {
             if (BancodeDados.BuscarID(e) != 0) return false;
             email = e;
             return true;
         }
+
         public void SetSenha(string p)
         {
             senha = p;
@@ -64,41 +61,17 @@ namespace JobStack
             ID = id;
         }
 
-        public List<int> GetVagas()
+        public void ClonarDe(Coordenador coordenador) //Copia os atributos do objeto indicado para esse objeto
         {
-            return Vagas;
-        }
-
-        public void SetVagas(List<int> vagas)
-        {
-            Vagas.Clear();
-            for (int i = 0; i < vagas.Count; i++) Vagas.Add(vagas[i]);
-        }
-
-        public void AdicionarVaga(int id)   //Adiciona o ID da vaga à lista de vagas criadas
-        {
-            Vagas.Add(id);
-        }
-
-        public void RemoverVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
-        {
-            for (int i = 0; i < Vagas.Count; i++) if (Vagas[i] == id) Vagas.RemoveAt(i);
-        }
-
-
-        public void ClonarDe(Empresa empresa) //Copia os atributos do objeto indicado para esse objeto
-        {
-            email = empresa.GetEmail();
-            this.SetSenha(empresa.GetSenha());
-            this.SetID(empresa.GetID());
-            this.SetVagas(empresa.GetVagas());
+            email = coordenador.GetEmail();
+            this.SetSenha(coordenador.GetSenha());
+            this.SetID(coordenador.GetID());
         }
         public void Limpar()
         {
             email = "";
             this.SetSenha("");
         }
-
         public void SetStatus(bool valor)
         {
             status = valor;
@@ -106,6 +79,16 @@ namespace JobStack
         public bool GetStatus()
         {
             return status;
+        }
+        public void AdicionarChat(int id)
+        {
+            for (int i = 0; i < Chats.Count; i++) if (Chats[i] == id) return;
+            Chats.Prepend(id);
+        }
+
+        public List<int> GetChats()
+        {
+            return Chats;
         }
 
     }

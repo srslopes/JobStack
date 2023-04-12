@@ -30,6 +30,9 @@ namespace JobStack
         private static List<Vaga> Vagas;                    //Lista de vagas
         private static int proxIdVaga;
 
+        private static List<Chat> Chats;                    //Lista de Conversas
+
+
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
         // 00XX - Administradores do sistema
         // 01XX - Coordenadores
@@ -47,6 +50,7 @@ namespace JobStack
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
             Vagas = new List<Vaga>();
+            Chats = new List<Chat>();
             proxIdAluno = 1000;
             proxIdEmpresa = 6000;
             proxIdAdmin = 0;
@@ -397,6 +401,17 @@ namespace JobStack
             }
             return txt;
             
+        }
+        //--------------------------------------- Métodos - Chats --------------------------------------------------------
+        public static void AdicionarChat(Chat chat)
+        {
+            Chats.Add(chat);
+            chat.SetID(Chats.IndexOf(chat));
+        }
+
+        public static Chat BuscarChat(int id)
+        {
+            return Chats[id];
         }
     }
 }
