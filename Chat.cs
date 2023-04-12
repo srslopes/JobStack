@@ -19,38 +19,9 @@ namespace JobStack
             participante2 = id;
             Mensagens = new List<Mensagem>();
             BancodeDados.AdicionarChat(this);
+            ((Usuario)BancodeDados.BuscarUsuario(participante1)).AdicionarChat(id);
+            ((Usuario)BancodeDados.BuscarUsuario(participante2)).AdicionarChat(id);
 
-            switch (BancodeDados.BuscarUsuario(participante1).GetType().ToString())
-            {
-                case "JobStack.Aluno":
-                    BancodeDados.BuscarAluno(participante1).AdicionarChat(id);
-                    break;
-                case "JobStack.Empresa":
-                    BancodeDados.BuscarEmpresa(participante1).AdicionarChat(id);
-                    break;
-                case "JobStack.Admin":
-                    BancodeDados.BuscarAdmin(participante1).AdicionarChat(id);
-                    break;
-                case "JobStack.Coordenador":
-                    BancodeDados.BuscarCoordenador(participante1).AdicionarChat(id);
-                    break;
-            }
-
-            switch (BancodeDados.BuscarUsuario(participante2).GetType().ToString())
-            {
-                case "JobStack.Aluno":
-                    BancodeDados.BuscarAluno(participante2).AdicionarChat(id);
-                    break;
-                case "JobStack.Empresa":
-                    BancodeDados.BuscarEmpresa(participante2).AdicionarChat(id);
-                    break;
-                case "JobStack.Admin":
-                    BancodeDados.BuscarAdmin(participante2).AdicionarChat(id);
-                    break;
-                case "JobStack.Coordenador":
-                    BancodeDados.BuscarCoordenador(participante2).AdicionarChat(id);
-                    break;
-            }
         }
 
         public void NovaMensagem(string mensagem)

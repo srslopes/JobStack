@@ -4,15 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JobStack.Usuários
+namespace JobStack
 {
-    class Usuario
+    class Usuario 
     {
         private string email;
         private string senha;
         private int ID;
         private bool status;
         private List<int> Chats;
+
+        public Usuario()
+        {
+            ID = 0;
+            SetStatus(false);
+            Chats = new List<int>();
+        }
+        public Usuario(string e, string s)
+        {
+            SetEmail(e);
+            SetSenha(s);
+            ID = 0;
+            SetStatus(false);
+            Chats = new List<int>();
+        }
+
 
         public string GetEmail()
         {

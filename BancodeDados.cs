@@ -301,11 +301,7 @@ namespace JobStack
         public static bool Login(string senha)  //Retorna verdadeiro se a senha inserida é a mesma que a do usuário com o ID indicado
         {                                               //Retorna falso se a senha estiver incorreta
             int id = GetIdUser();
-            if ((id / 1000 > 5) && (Empresas[(id % 1000) - 1].GetSenha().Equals(senha))) return true;
-            else if ((id / 1000 > 0) && (id / 1000 < 5) && (Alunos[(id % 1000) - 1].GetSenha().Equals(senha))) return true;
-            else if ((id / 1000 == 0) && (id / 100 == 1) && (Coordenadores[(id % 100) - 1].GetSenha().Equals(senha))) return true;
-            else if ((id / 1000 == 0) && (id / 100 == 0) && (Admins[id - 1].GetSenha().Equals(senha))) return true;
-            return false;
+            return ((Usuario)BuscarUsuario(GetIdUser())).GetSenha().Equals(senha);
         }
 
         public static int BuscarID(string email)    //Procura no banco de dados o usuário com o  email inserido e retorna o id dele,
