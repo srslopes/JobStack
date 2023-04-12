@@ -20,15 +20,37 @@ namespace JobStack
             Mensagens = new List<Mensagem>();
             BancodeDados.AdicionarChat(this);
 
-            if (participante1 / 1000 > 5) BancodeDados.BuscarEmpresa(participante1).AdicionarChat(id);
-            else if (participante1 / 1000 > 0) BancodeDados.BuscarAluno(participante1).AdicionarChat(id);
-            else if (participante1 / 100 == 1) BancodeDados.BuscarCoordenador(participante1).AdicionarChat(id);
-            else BancodeDados.BuscarAdmin(participante1).AdicionarChat(id);
+            switch (BancodeDados.BuscarUsuario(participante1).GetType().ToString())
+            {
+                case "JobStack.Aluno":
+                    BancodeDados.BuscarAluno(participante1).AdicionarChat(id);
+                    break;
+                case "JobStack.Empresa":
+                    BancodeDados.BuscarEmpresa(participante1).AdicionarChat(id);
+                    break;
+                case "JobStack.Admin":
+                    BancodeDados.BuscarAdmin(participante1).AdicionarChat(id);
+                    break;
+                case "JobStack.Coordenador":
+                    BancodeDados.BuscarCoordenador(participante1).AdicionarChat(id);
+                    break;
+            }
 
-            if (participante2 / 1000 > 5) BancodeDados.BuscarEmpresa(participante2).AdicionarChat(id);
-            else if (participante2 / 1000 > 0) BancodeDados.BuscarAluno(participante2).AdicionarChat(id);
-            else if (participante2 / 100 == 1) BancodeDados.BuscarCoordenador(participante2).AdicionarChat(id);
-            else BancodeDados.BuscarAdmin(participante2).AdicionarChat(id);
+            switch (BancodeDados.BuscarUsuario(participante2).GetType().ToString())
+            {
+                case "JobStack.Aluno":
+                    BancodeDados.BuscarAluno(participante2).AdicionarChat(id);
+                    break;
+                case "JobStack.Empresa":
+                    BancodeDados.BuscarEmpresa(participante2).AdicionarChat(id);
+                    break;
+                case "JobStack.Admin":
+                    BancodeDados.BuscarAdmin(participante2).AdicionarChat(id);
+                    break;
+                case "JobStack.Coordenador":
+                    BancodeDados.BuscarCoordenador(participante2).AdicionarChat(id);
+                    break;
+            }
         }
 
         public void NovaMensagem(string mensagem)

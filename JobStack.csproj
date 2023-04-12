@@ -103,22 +103,22 @@
     <Compile Include="TMenuEmpresa.Designer.cs">
       <DependentUpon>TMenuEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="TesteDB.cs">
+    <Compile Include="Testes\TesteDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TesteDB.Designer.cs">
+    <Compile Include="Testes\TesteDB.Designer.cs">
       <DependentUpon>TesteDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="TesteMenu.cs">
+    <Compile Include="Testes\TesteMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TesteMenu.Designer.cs">
+    <Compile Include="Testes\TesteMenu.Designer.cs">
       <DependentUpon>TesteMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="TesteVagas.cs">
+    <Compile Include="Testes\TesteVagas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TesteVagas.Designer.cs">
+    <Compile Include="Testes\TesteVagas.Designer.cs">
       <DependentUpon>TesteVagas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vaga.cs" />
@@ -156,13 +156,13 @@
     <EmbeddedResource Include="TMenuEmpresa.resx">
       <DependentUpon>TMenuEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TesteDB.resx">
+    <EmbeddedResource Include="Testes\TesteDB.resx">
       <DependentUpon>TesteDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TesteMenu.resx">
+    <EmbeddedResource Include="Testes\TesteMenu.resx">
       <DependentUpon>TesteMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TesteVagas.resx">
+    <EmbeddedResource Include="Testes\TesteVagas.resx">
       <DependentUpon>TesteVagas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
