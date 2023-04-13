@@ -92,7 +92,7 @@ namespace JobStack
         public void AdicionarVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
         {
             for (int i = 0; i < Vagas.Count; i++) if (Vagas[i] == id) return;
-            Vagas.Add(id);
+            Vagas.Insert(0, id);
         }
 
         public void RemoverVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
