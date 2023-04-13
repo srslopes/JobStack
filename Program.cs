@@ -17,11 +17,9 @@ namespace JobStack
             BancodeDados DB = new BancodeDados();
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());    
-            Console.WriteLine("Senha : 123");
-            Console.WriteLine("Criptografada: " + BancodeDados.CriptografarSenha("123"));           
-            Application.Run(new Login());
-         
+            //Application.Run(new Login());            
+            Application.Run(new TesteMenu());
+
 
             /*
             string email = "";
@@ -41,7 +39,7 @@ namespace JobStack
                     break;
             }
             */
-
+            
         }
     }
 }

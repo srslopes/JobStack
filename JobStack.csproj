@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Testes\TesteChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\TesteChat.Designer.cs">
+      <DependentUpon>TesteChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuários\Admin.cs" />
     <Compile Include="Usuários\Aluno.cs" />
     <Compile Include="Chat.cs" />
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TCadatroUsuario.resx">
       <DependentUpon>TCadatroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\TesteChat.resx">
+      <DependentUpon>TesteChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMenuAluno.resx">
       <DependentUpon>TMenuAluno.cs</DependentUpon>
