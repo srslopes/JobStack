@@ -20,7 +20,6 @@ namespace JobStack
         private void ButtonCriar_Click(object sender, EventArgs e)
         {
             Vaga n = new Vaga(int.Parse(textBoxIdEmpresa.Text));
-            BancodeDados.AdicionarVaga(n);
             BancodeDados.BuscarEmpresa(int.Parse(textBoxIdEmpresa.Text)).AdicionarVaga(n.GetID());
             AttLista();
         }

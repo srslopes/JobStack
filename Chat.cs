@@ -27,7 +27,7 @@ namespace JobStack
         public void NovaMensagem(string mensagem)
         {
             Mensagem msg = new Mensagem( participante1 == BancodeDados.GetIdUser(), mensagem);
-            Mensagens.Prepend(msg);
+            Mensagens.Insert(0, msg);
         }
        
         public Mensagem GetMensagem(int id)

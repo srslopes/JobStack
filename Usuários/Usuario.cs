@@ -20,16 +20,7 @@ namespace JobStack
             SetStatus(false);
             Chats = new List<int>();
         }
-        public Usuario(string e, string s)
-        {
-            SetEmail(e);
-            SetSenha(s);
-            ID = 0;
-            SetStatus(false);
-            Chats = new List<int>();
-        }
-
-
+       
         public string GetEmail()
         {
             return email;

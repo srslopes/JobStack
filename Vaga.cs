@@ -23,6 +23,7 @@ namespace JobStack
             IdEmpresa = idEmpresa;                  //Status estabelecido como "Aguardando Aprovação"
             Inscritos = new List<int>();
             status = 0;
+            BancodeDados.AdicionarVaga(this);
         }
         
         public int GetID()
