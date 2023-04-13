@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -123,74 +124,98 @@ namespace JobStack
                     Senha();
                 }
 
-                // Método que verifica a senha e exibe as telas correspondentes
-                private void Senha()
+        // Método que verifica a senha e exibe as telas correspondentes
+        private void Senha()
+        {
+            // Exibe o e-mail digitado pelo usuário na label correspondente
+            textoEmail.Text = campoEmail.Text;
+
+
+
+            // Obtém o e-mail e a senha inseridos nos campos de texto
+            string email = campoEmail.Text;
+            string senha = campoSenha.Text;
+
+            SHA256 sha256 = SHA256.Create();
+            byte[] bytesSenha = Encoding.UTF8.GetBytes(senha);
+            byte[] hashSenha = sha256.ComputeHash(bytesSenha);
+            string senhaCriptografada = BitConverter.ToString(hashSenha).Replace("-", "").Substring(0, 8);
+
+
+
+            // Obtém o ID do usuário a partir do e-mail inserido
+            int id = BancodeDados.BuscarID(email);
+
+
+
+                // Verifica se o campo senha está vazio e exibe uma mensagem de erro caso esteja
+                if (campoSenha.Text == "")
                 {
-                    // Exibe o e-mail digitado pelo usuário na label correspondente
-                    textoEmail.Text = campoEmail.Text;
-
-                    // Obtém o e-mail e a senha inseridos nos campos de texto
-                    string email = campoEmail.Text;
-                    string senha = campoSenha.Text;
-
-                    // Obtém o ID do usuário a partir do e-mail inserido
-                    int id = BancodeDados.BuscarID(email);
-
-                    // Verifica se o campo senha está vazio e exibe uma mensagem de erro caso esteja
-                    if (campoSenha.Text == "")
-                    {
-                        CondicaoSenha.Visible = true;
-                        CondicaoSenha.Text = "Campo senha vazio";
-                        campoSenha.Clear();
-                    }
-
-                    // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
-                    else if (!BancodeDados.Login(senha))
-                    {
-                        CondicaoSenha.Visible = true;
-                        CondicaoSenha.Text = "Senha incorreta";
-                        campoSenha.Clear();
-                    }
-
-                    // Verifica o tipo de usuário
-                    else if (id / 1000 > 0 && id / 1000 < 6) // se for um aluno
-                    {
-                        // Esconde a tela atual
-                        this.Hide();
-
-                        // Cria e exibe a janela do formulário TMenuAluno (menu do aluno)
-                        TMenuAluno p = new TMenuAluno();
-                        p.ShowDialog();
-                    }
-                    else if (id / 1000 > 5) // se for uma empresa
-                    {
-                        // Esconde a tela atual
-                        this.Hide();
-
-                        // Cria e exibe a janela do formulário Empresa1
-                        TMenuEmpresa p = new TMenuEmpresa();
-                        p.ShowDialog();
-                    }
-                    else if (id / 100 == 1) // se for um coordenador
-                    {
-                        // Esconde a tela atual
-                        this.Hide();
-
-                        // Cria e exibe a janela do formulário Coordenador1
-                        TMenuCoordenador p = new TMenuCoordenador();
-                        p.ShowDialog();
-                    }
-                    else // se for um admin
-                    {
-                        // Esconde a tela atual
-                        this.Hide();
-
-                        // Cria e exibe a janela do formulário TAdmin
-                        TAdmin p = new TAdmin();
-                        p.ShowDialog();
-                    }
+                    CondicaoSenha.Visible = true;
+                    CondicaoSenha.Text = "Campo senha vazio";
+                    campoSenha.Clear();
                 }
 
+
+
+                // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
+                else if (!BancodeDados.Login(senhaCriptografada))
+                {
+                    CondicaoSenha.Visible = true;
+                    CondicaoSenha.Text = "Senha incorreta";
+                    campoSenha.Clear();
+                }
+
+
+
+                // Verifica o tipo de usuário
+                else if (id / 1000 > 0 && id / 1000 < 6) // se for um aluno
+                {
+                    // Esconde a tela atual
+                    this.Hide();
+
+
+
+                    // Cria e exibe a janela do formulário TMenuAluno (menu do aluno)
+                    TMenuAluno p = new TMenuAluno();
+                    p.ShowDialog();
+                }
+                else if (id / 1000 > 5) // se for uma empresa
+                {
+                    // Esconde a tela atual
+                    this.Hide();
+
+
+
+                    // Cria e exibe a janela do formulário Empresa1
+                    TMenuEmpresa p = new TMenuEmpresa();
+                    p.ShowDialog();
+                }
+                else if (id / 100 == 1) // se for um coordenador
+                {
+                    // Esconde a tela atual
+                    this.Hide();
+
+
+
+                    // Cria e exibe a janela do formulário Coordenador1
+                    TMenuCoordenador p = new TMenuCoordenador();
+                    p.ShowDialog();
+                }
+                else // se for um admin
+                {
+                    // Esconde a tela atual
+                    this.Hide();
+
+
+
+                    // Cria e exibe a janela do formulário TAdmin
+                    TAdmin p = new TAdmin();
+                    p.ShowDialog();
+                   
+                
+            }
+        }
             
                 private void Label1_Click(object sender, EventArgs e)
         {

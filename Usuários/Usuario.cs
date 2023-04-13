@@ -49,7 +49,7 @@ namespace JobStack
 
         public void SetSenha(string p)
         {
-            senha = p;
+            senha = BancodeDados.CriptografarSenha(p);
         }
 
         public int GetID()

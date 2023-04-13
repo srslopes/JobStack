@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -301,8 +302,24 @@ namespace JobStack
         public static bool Login(string senha)  //Retorna verdadeiro se a senha inserida é a mesma que a do usuário com o ID indicado
         {                                               //Retorna falso se a senha estiver incorreta
             int id = GetIdUser();
-            return ((Usuario)BuscarUsuario(GetIdUser())).GetSenha().Equals(senha);
+            return ((Usuario)BuscarUsuario(GetIdUser())).GetSenha().Equals(CriptografarSenha(senha));
         }
+        public static string CriptografarSenha(string senha)
+        {
+
+
+            SHA256 sha256 = SHA256.Create();
+            byte[] bytesSenha = Encoding.UTF8.GetBytes(senha);
+            byte[] hashSenha = sha256.ComputeHash(bytesSenha);
+            string senhaCriptografada = BitConverter.ToString(hashSenha).Replace("-", "").Substring(0, 8);
+            return senhaCriptografada;
+
+
+
+
+        }
+
+
 
         public static int BuscarID(string email)    //Procura no banco de dados o usuário com o  email inserido e retorna o id dele,
         {                                           //Retorna 0 se nao existir usuario com esse email    
