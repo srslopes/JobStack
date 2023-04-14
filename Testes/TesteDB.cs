@@ -170,5 +170,11 @@ namespace JobStack
         {
 
         }
+
+        private void ButtonLogin_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+        }
     }
 }

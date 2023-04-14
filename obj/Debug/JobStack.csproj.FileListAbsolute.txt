@@ -186,3 +186,8 @@ C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cac
 C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.exe
 C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.pdb
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Testes.TesteChat.resources
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\BCrypt.Net.dll
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\BCrypt.Net.pdb
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\BCrypt.Net.xml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.CopyComplete

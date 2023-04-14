@@ -6,9 +6,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
+
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+
 
 namespace JobStack
 {
@@ -304,20 +306,22 @@ namespace JobStack
             int id = GetIdUser();
             return ((Usuario)BuscarUsuario(GetIdUser())).GetSenha().Equals(CriptografarSenha(senha));
         }
-        public static string CriptografarSenha(string senha)
-        {
+        public static string CriptografarSenha(string senha) { 
+           // Cria o objeto de hash SHA256
+            SHA256 sha256 = new SHA256Managed();
 
+            // Calcula o hash da senha em bytes
+            byte[] hashSenha = sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
 
-            SHA256 sha256 = SHA256.Create();
-            byte[] bytesSenha = Encoding.UTF8.GetBytes(senha);
-            byte[] hashSenha = sha256.ComputeHash(bytesSenha);
-            string senhaCriptografada = BitConverter.ToString(hashSenha).Replace("-", "").Substring(0, 8);
+            // Converte o hash em uma string em formato hexadecimal
+            string senhaCriptografada = BitConverter.ToString(hashSenha).Replace("-", string.Empty);
+
+            // Trunca a senha criptografada para 8 caracteres
+            senhaCriptografada = senhaCriptografada.Substring(0, senha.Length);
             return senhaCriptografada;
-
-
-
-
+        
         }
+
 
 
 

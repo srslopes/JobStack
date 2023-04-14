@@ -11,6 +11,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+
 
 namespace JobStack
 {
@@ -136,10 +138,10 @@ namespace JobStack
             string email = campoEmail.Text;
             string senha = campoSenha.Text;
 
-            SHA256 sha256 = SHA256.Create();
-            byte[] bytesSenha = Encoding.UTF8.GetBytes(senha);
-            byte[] hashSenha = sha256.ComputeHash(bytesSenha);
-            string senhaCriptografada = BitConverter.ToString(hashSenha).Replace("-", "").Substring(0, 8);
+           
+
+
+
 
 
 
@@ -159,7 +161,7 @@ namespace JobStack
 
 
                 // Verifica se a senha inserida está incorreta e exibe uma mensagem de erro caso esteja
-                else if (!BancodeDados.Login(senhaCriptografada))
+                else if (!BancodeDados.Login(senha))
                 {
                     CondicaoSenha.Visible = true;
                     CondicaoSenha.Text = "Senha incorreta";
