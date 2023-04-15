@@ -118,79 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon configuracoes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon configuracoes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone favoritos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone favoritos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon meu perfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon meu perfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone inscricoes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone inscricoes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone abre menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone abre menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon abremenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon abremenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botao minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone cadusuario 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone cadusuario 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon configuracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon configuracoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone notificacoes corrigido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone notificacoes corrigido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone vagas emp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone vagas emp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone menu pesquisa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone menu pesquisa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone analisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone analisar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone chat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone notificacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone notificacoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone inscricoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone inscricoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone notificacoes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone notificacoes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone notificacoes2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone notificacoes2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fundo-tela-de-login-vazio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fundo-tela-de-login-vazio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone cadusuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone cadusuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone fav 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone fav 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone favoritos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone favoritos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon configuracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon configuracoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botao minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botao minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone notificacoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone notificacoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone cadusuario 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone cadusuario 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon meu perfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon meu perfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo-versao3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-versao3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone menu pesquisa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone menu pesquisa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone abre menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone abre menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo-tela-de-login-vazio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundo-tela-de-login-vazio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone notificacoes2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone notificacoes2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone inscricoes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone inscricoes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botao fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botao fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icone fav 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone fav 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone inscricoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone inscricoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon abremenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon abremenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone chat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone analisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone analisar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone favoritos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone favoritos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone vagas emp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone vagas emp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone cadusuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone cadusuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone analisar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone analisar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone notificacoes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone notificacoes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone notificacoes corrigido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone notificacoes corrigido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon configuracoes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon configuracoes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo-versao-3-ajustada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-versao-3-ajustada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon log out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon log out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

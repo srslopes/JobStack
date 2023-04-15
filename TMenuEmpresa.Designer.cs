@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.BotaoVoltar = new System.Windows.Forms.Button();
             this.fundoMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBarraeLogo = new System.Windows.Forms.Panel();
             this.botaoAbreMenu = new System.Windows.Forms.PictureBox();
@@ -44,6 +43,10 @@
             this.fundoMenuTimer = new System.Windows.Forms.Timer(this.components);
             this.botaoMinimizar = new System.Windows.Forms.PictureBox();
             this.botaoFechar = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.botaoLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fundoMenu.SuspendLayout();
             this.panelBarraeLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).BeginInit();
@@ -53,17 +56,9 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BotaoVoltar
-            // 
-            this.BotaoVoltar.Location = new System.Drawing.Point(909, 683);
-            this.BotaoVoltar.Name = "BotaoVoltar";
-            this.BotaoVoltar.Size = new System.Drawing.Size(75, 23);
-            this.BotaoVoltar.TabIndex = 0;
-            this.BotaoVoltar.Text = "Voltar";
-            this.BotaoVoltar.UseVisualStyleBackColor = true;
-            this.BotaoVoltar.Click += new System.EventHandler(this.BotaoVoltar_Click);
             // 
             // fundoMenu
             // 
@@ -73,6 +68,8 @@
             this.fundoMenu.Controls.Add(this.panel3);
             this.fundoMenu.Controls.Add(this.panel4);
             this.fundoMenu.Controls.Add(this.panel7);
+            this.fundoMenu.Controls.Add(this.panel11);
+            this.fundoMenu.Controls.Add(this.panel13);
             this.fundoMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.fundoMenu.Location = new System.Drawing.Point(0, 0);
             this.fundoMenu.MaximumSize = new System.Drawing.Size(250, 729);
@@ -83,10 +80,11 @@
             // 
             // panelBarraeLogo
             // 
+            this.panelBarraeLogo.Controls.Add(this.pictureBox1);
             this.panelBarraeLogo.Controls.Add(this.botaoAbreMenu);
             this.panelBarraeLogo.Location = new System.Drawing.Point(3, 3);
             this.panelBarraeLogo.Name = "panelBarraeLogo";
-            this.panelBarraeLogo.Size = new System.Drawing.Size(247, 118);
+            this.panelBarraeLogo.Size = new System.Drawing.Size(247, 176);
             this.panelBarraeLogo.TabIndex = 0;
             // 
             // botaoAbreMenu
@@ -104,7 +102,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.botaoNotificacoes);
-            this.panel1.Location = new System.Drawing.Point(3, 127);
+            this.panel1.Location = new System.Drawing.Point(3, 185);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 60);
             this.panel1.TabIndex = 1;
@@ -125,11 +123,13 @@
             this.botaoNotificacoes.Text = "            NOTIFICAÇÕES";
             this.botaoNotificacoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoNotificacoes.UseVisualStyleBackColor = false;
+            this.botaoNotificacoes.MouseEnter += new System.EventHandler(this.botaoNotificacoes_MouseEnter);
+            this.botaoNotificacoes.MouseLeave += new System.EventHandler(this.botaoNotificacoes_MouseLeave);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.botaoChat);
-            this.panel3.Location = new System.Drawing.Point(3, 193);
+            this.panel3.Location = new System.Drawing.Point(3, 251);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(247, 60);
             this.panel3.TabIndex = 5;
@@ -150,11 +150,13 @@
             this.botaoChat.Text = "            CHAT";
             this.botaoChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoChat.UseVisualStyleBackColor = false;
+            this.botaoChat.MouseEnter += new System.EventHandler(this.botaoChat_MouseEnter);
+            this.botaoChat.MouseLeave += new System.EventHandler(this.botaoChat_MouseLeave);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.botaoVagas);
-            this.panel4.Location = new System.Drawing.Point(3, 259);
+            this.panel4.Location = new System.Drawing.Point(3, 317);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(247, 60);
             this.panel4.TabIndex = 6;
@@ -175,11 +177,13 @@
             this.botaoVagas.Text = "            VAGAS";
             this.botaoVagas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoVagas.UseVisualStyleBackColor = false;
+            this.botaoVagas.MouseEnter += new System.EventHandler(this.botaoVagas_MouseEnter);
+            this.botaoVagas.MouseLeave += new System.EventHandler(this.botaoVagas_MouseLeave);
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.botaoPerfil);
-            this.panel7.Location = new System.Drawing.Point(3, 325);
+            this.panel7.Location = new System.Drawing.Point(3, 383);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(247, 60);
             this.panel7.TabIndex = 9;
@@ -200,6 +204,9 @@
             this.botaoPerfil.Text = "            MEU PERFIL";
             this.botaoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoPerfil.UseVisualStyleBackColor = false;
+            this.botaoPerfil.MouseEnter += new System.EventHandler(this.botaoPerfil_MouseEnter);
+            this.botaoPerfil.MouseLeave += new System.EventHandler(this.botaoPerfil_MouseLeave);
+            this.botaoPerfil.MouseMove += new System.Windows.Forms.MouseEventHandler(this.botaoPerfil_MouseMove);
             // 
             // fundoMenuTimer
             // 
@@ -230,6 +237,52 @@
             this.botaoFechar.TabStop = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(3, 449);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(248, 206);
+            this.panel11.TabIndex = 30;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.botaoLogout);
+            this.panel13.Location = new System.Drawing.Point(3, 661);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(247, 60);
+            this.panel13.TabIndex = 31;
+            // 
+            // botaoLogout
+            // 
+            this.botaoLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.botaoLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.botaoLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoLogout.ForeColor = System.Drawing.Color.White;
+            this.botaoLogout.Image = global::JobStack.Properties.Resources.icon_log_out;
+            this.botaoLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoLogout.Location = new System.Drawing.Point(-13, -10);
+            this.botaoLogout.Name = "botaoLogout";
+            this.botaoLogout.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.botaoLogout.Size = new System.Drawing.Size(269, 80);
+            this.botaoLogout.TabIndex = 3;
+            this.botaoLogout.Text = "             SAIR/LOG OUT";
+            this.botaoLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoLogout.UseVisualStyleBackColor = false;
+            this.botaoLogout.Click += new System.EventHandler(this.botaoLogout_Click);
+            this.botaoLogout.MouseEnter += new System.EventHandler(this.botaoLogout_MouseEnter);
+            this.botaoLogout.MouseLeave += new System.EventHandler(this.botaoLogout_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JobStack.Properties.Resources.logo_versao_3_ajustada;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // TMenuEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,7 +292,6 @@
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.fundoMenu);
             this.Controls.Add(this.botaoFechar);
-            this.Controls.Add(this.BotaoVoltar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TMenuEmpresa";
             this.Text = "TEmpresa";
@@ -256,13 +308,13 @@
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
+            this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BotaoVoltar;
         private System.Windows.Forms.FlowLayoutPanel fundoMenu;
         private System.Windows.Forms.Panel panelBarraeLogo;
         private System.Windows.Forms.PictureBox botaoAbreMenu;
@@ -277,5 +329,9 @@
         private System.Windows.Forms.Timer fundoMenuTimer;
         private System.Windows.Forms.PictureBox botaoMinimizar;
         private System.Windows.Forms.PictureBox botaoFechar;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button botaoLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

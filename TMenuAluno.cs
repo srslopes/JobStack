@@ -101,5 +101,118 @@ namespace JobStack
         {
             dragging = false;
         }
+
+        private void botaoInscricoes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TMenuAluno_Load(object sender, EventArgs e)
+        {
+            //Faz com que a janela, ao ser maximizada, não oculte a barra de tarefa do windows
+            Rectangle areaTrabalho = Screen.GetWorkingArea(this);
+            this.MaximumSize = new Size(areaTrabalho.Width, areaTrabalho.Height);
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login p = new Login();
+            p.ShowDialog();
+        }
+
+        private void fundoMenu_StyleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fundoMenu_SizeChanged(object sender, EventArgs e)
+        {
+            // Obtém o tamanho da área cliente do Form
+            var size = this.ClientSize;
+
+            // Define a altura do FlowLayoutPanel para ocupar toda a área cliente
+            this.fundoMenu.Height = size.Height;
+        }
+
+        //toda vez que o usuário passar o mouse em cima do botão, ele vai mudar a cor
+        private void botaoPesquisar_MouseEnter(object sender, EventArgs e)
+        {
+            botaoPesquisar.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        //toda vez que o usuário tirar o mouse de cima do botão, ele vai voltar ao normal
+        private void botaoPesquisar_MouseLeave(object sender, EventArgs e)
+        {
+            botaoPesquisar.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        //dá a função para a picturebox "botaoMaximizar" maximizar a janela
+        private void botaoMaximizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void botaoNotificacoes_MouseEnter(object sender, EventArgs e)
+        {
+            botaoNotificacoes.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoNotificacoes_MouseLeave(object sender, EventArgs e)
+        {
+            botaoNotificacoes.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoChat_MouseEnter(object sender, EventArgs e)
+        {
+            botaoChat.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoChat_MouseLeave(object sender, EventArgs e)
+        {
+            botaoChat.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoInscricoes_MouseEnter(object sender, EventArgs e)
+        {
+            botaoInscricoes.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoInscricoes_MouseLeave(object sender, EventArgs e)
+        {
+            botaoInscricoes.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoFavoritos_MouseEnter(object sender, EventArgs e)
+        {
+            botaoFavoritos.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoFavoritos_MouseLeave(object sender, EventArgs e)
+        {
+            botaoFavoritos.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoPerfil_MouseEnter(object sender, EventArgs e)
+        {
+            botaoPerfil.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoPerfil_MouseLeave(object sender, EventArgs e)
+        {
+            botaoPerfil.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoLogout_MouseEnter(object sender, EventArgs e)
+        {
+            botaoLogout.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoLogout_MouseLeave(object sender, EventArgs e)
+        {
+            botaoLogout.BackColor = Color.FromArgb(0, 31, 153);
+        }
     }
+
 }

@@ -103,5 +103,69 @@ namespace JobStack
         {
             fundoMenuTimer.Start();
         }
+
+        private void botaoLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login p = new Login();
+            p.ShowDialog();
+        }
+
+        //toda vez que o usuário passar o mouse em cima do botão, ele vai mudar a cor
+        private void botaoNotificacoes_MouseEnter(object sender, EventArgs e)
+        {
+            botaoNotificacoes.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoNotificacoes_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        //toda vez que o usuário tirar o mouse de cima do botão, ele vai voltar ao normal
+        private void botaoNotificacoes_MouseLeave(object sender, EventArgs e)
+        {
+            botaoNotificacoes.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoChat_MouseEnter(object sender, EventArgs e)
+        {
+            botaoChat.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoChat_MouseLeave(object sender, EventArgs e)
+        {
+            botaoChat.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoAnalisar_MouseEnter(object sender, EventArgs e)
+        {
+            botaoAnalisar.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoAnalisar_MouseLeave(object sender, EventArgs e)
+        {
+            botaoAnalisar.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoPerfil_MouseEnter(object sender, EventArgs e)
+        {
+            botaoPerfil.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoPerfil_MouseLeave(object sender, EventArgs e)
+        {
+            botaoPerfil.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        private void botaoLogout_MouseEnter(object sender, EventArgs e)
+        {
+            botaoLogout.BackColor = Color.FromArgb(72, 106, 208);
+        }
+
+        private void botaoLogout_MouseLeave(object sender, EventArgs e)
+        {
+            botaoLogout.BackColor = Color.FromArgb(0, 31, 153);
+        }
     }
 }

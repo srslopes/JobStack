@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TAdmUsuários.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAdmUsuários.Designer.cs">
+      <DependentUpon>TAdmUsuários.cs</DependentUpon>
+    </Compile>
     <Compile Include="Testes\TesteChat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </Compile>
     <Compile Include="Usuários\Usuario.cs" />
     <Compile Include="Vaga.cs" />
+    <EmbeddedResource Include="TAdmUsuários.resx">
+      <DependentUpon>TAdmUsuários.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TCadastroVaga.resx">
       <DependentUpon>TCadastroVaga.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +188,10 @@
       <DependentUpon>TesteVagas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Admin.datasource" />
+    <None Include="Properties\DataSources\Aluno.datasource" />
+    <None Include="Properties\DataSources\Coordenador.datasource" />
+    <None Include="Properties\DataSources\Empresa.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -269,6 +282,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+    <None Include="Resources\icon log out.png" />
+    <None Include="Resources\logo-versao-3-ajustada.png" />
+    <None Include="Resources\logo-versao3.png" />
+    <None Include="Resources\icone-maximizar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

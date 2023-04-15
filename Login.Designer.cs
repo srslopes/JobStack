@@ -105,7 +105,7 @@ namespace JobStack
             // 
             // botaoVoltar
             // 
-            this.botaoVoltar.Location = new System.Drawing.Point(921, 647);
+            this.botaoVoltar.Location = new System.Drawing.Point(929, 694);
             this.botaoVoltar.Name = "botaoVoltar";
             this.botaoVoltar.Size = new System.Drawing.Size(75, 23);
             this.botaoVoltar.TabIndex = 10;
@@ -285,8 +285,10 @@ namespace JobStack
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = global::JobStack.Properties.Resources.fundo_tela_de_login_vazio;
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -130);
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -101);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(664, 939);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -297,7 +299,7 @@ namespace JobStack
             // 
             this.botaoMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoMinimizar.Image = global::JobStack.Properties.Resources.botao_minimizar;
-            this.botaoMinimizar.Location = new System.Drawing.Point(929, 12);
+            this.botaoMinimizar.Location = new System.Drawing.Point(942, 12);
             this.botaoMinimizar.Name = "botaoMinimizar";
             this.botaoMinimizar.Size = new System.Drawing.Size(25, 25);
             this.botaoMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -307,9 +309,10 @@ namespace JobStack
             // 
             // botaoFechar
             // 
+            this.botaoFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoFechar.Image = global::JobStack.Properties.Resources.botao_fechar;
-            this.botaoFechar.Location = new System.Drawing.Point(971, 12);
+            this.botaoFechar.Location = new System.Drawing.Point(984, 12);
             this.botaoFechar.Name = "botaoFechar";
             this.botaoFechar.Size = new System.Drawing.Size(25, 25);
             this.botaoFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -322,7 +325,7 @@ namespace JobStack
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1113, 683);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
             this.Controls.Add(this.painelSuporte);

@@ -123,6 +123,16 @@ namespace JobStack.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_log_out {
+            get {
+                object obj = ResourceManager.GetObject("icon log out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_meu_perfil {
             get {
                 object obj = ResourceManager.GetObject("icon meu perfil", resourceCulture);
@@ -243,6 +253,16 @@ namespace JobStack.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icone_maximizar {
+            get {
+                object obj = ResourceManager.GetObject("icone-maximizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_menu_pesquisa {
             get {
                 object obj = ResourceManager.GetObject("icone menu pesquisa", resourceCulture);
@@ -306,6 +326,26 @@ namespace JobStack.Properties {
         internal static System.Drawing.Bitmap icone_vagas_emp {
             get {
                 object obj = ResourceManager.GetObject("icone vagas emp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_versao_3_ajustada {
+            get {
+                object obj = ResourceManager.GetObject("logo-versao-3-ajustada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_versao3 {
+            get {
+                object obj = ResourceManager.GetObject("logo-versao3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
