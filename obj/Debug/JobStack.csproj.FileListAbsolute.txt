@@ -198,3 +198,10 @@ C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Test
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.csproj.CopyComplete
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAdmUsuários.resources
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAdmUsuários.resources
+C:\Users\aluno\Documents\JobStack\bin\Debug\BCrypt.Net.dll
+C:\Users\aluno\Documents\JobStack\bin\Debug\BCrypt.Net.pdb
+C:\Users\aluno\Documents\JobStack\bin\Debug\BCrypt.Net.xml
+C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TAdmUsuários.resources
+C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.Testes.ListaConv.resources
+C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.Testes.TesteChat.resources
+C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.CopyComplete

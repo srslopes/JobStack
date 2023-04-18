@@ -10,7 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
-
+using System.Drawing;
+using System.IO;
 
 namespace JobStack
 {
@@ -35,6 +36,8 @@ namespace JobStack
 
         private static List<Chat> Chats;                    //Lista de Conversas
 
+        private static List<byte[]> Imagens;             //Lista de imagens
+
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
         // 00XX - Administradores do sistema
@@ -54,6 +57,7 @@ namespace JobStack
             Coordenadores = new List<Coordenador>();
             Vagas = new List<Vaga>();
             Chats = new List<Chat>();
+            Imagens = new List<byte[]>();
             proxIdAluno = 1000;
             proxIdEmpresa = 6000;
             proxIdAdmin = 0;
@@ -438,6 +442,33 @@ namespace JobStack
         public static Chat BuscarChat(int id)
         {
             return Chats[id];
+        }
+        //--------------------------------------- Métodos - Imagens --------------------------------------------------------
+        // Método que adiciona uma imagem à lista de imagens
+        public static void AdicionarImagem(string caminhoDaImagem)
+        {
+            // Carrega a imagem a partir do caminho do arquivo especificado
+            Image imagem = Image.FromFile(caminhoDaImagem);
+
+            // Converte a imagem em um array de bytes
+            byte[] bytesDaImagem = ConverterImagemParaBytes(imagem);
+
+            // Adiciona o array de bytes da imagem à lista de imagens
+            Imagens.Add(bytesDaImagem);
+        }
+
+        // Método que converte uma imagem em um array de bytes
+        private static byte[] ConverterImagemParaBytes(Image imagem)
+        {
+            // Cria um MemoryStream para armazenar a imagem
+            using (MemoryStream ms = new MemoryStream())
+            {
+                // Salva a imagem no MemoryStream no formato PNG
+                imagem.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+
+                // Retorna o array de bytes da imagem armazenada no MemoryStream
+                return ms.ToArray();
+            }
         }
     }
 }
