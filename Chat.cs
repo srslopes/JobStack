@@ -29,6 +29,16 @@ namespace JobStack
             Mensagem msg = new Mensagem( participante1 == BancodeDados.GetIdUser(), mensagem);
             Mensagens.Insert(0, msg);
         }
+
+        public int GetParticipante1()
+        {
+            return participante1;
+        }
+
+        public int GetParticipante2()
+        {
+            return participante2;
+        }
        
         public Mensagem GetMensagem(int id)
         {

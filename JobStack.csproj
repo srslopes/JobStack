@@ -55,6 +55,12 @@
     <Compile Include="TAdmUsuários.Designer.cs">
       <DependentUpon>TAdmUsuários.cs</DependentUpon>
     </Compile>
+    <Compile Include="Testes\ListaConv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\ListaConv.Designer.cs">
+      <DependentUpon>ListaConv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Testes\TesteChat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TCadatroUsuario.resx">
       <DependentUpon>TCadatroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\ListaConv.resx">
+      <DependentUpon>ListaConv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Testes\TesteChat.resx">
       <DependentUpon>TesteChat.cs</DependentUpon>

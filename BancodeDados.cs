@@ -347,6 +347,15 @@ namespace JobStack
             else return Admins[id - 1];
         }
 
+        public static object BuscarUsuario()      //Retorna o usuario que possui o ID inserido
+        {
+            int id = IdUser;
+            if (id / 1000 > 5) return Empresas[(id % 1000) - 1];
+            else if (id / 1000 > 0) return Alunos[(id % 1000) - 1];
+            else if (id / 100 == 1) return Coordenadores[(id % 100) - 1];
+            else return Admins[id - 1];
+        }
+
         public static bool GetStatusUsuario(int id)
         {
             if (id / 1000 > 5) return Empresas[(id % 1000) - 1].GetStatus();
