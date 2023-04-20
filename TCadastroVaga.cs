@@ -47,5 +47,10 @@ namespace JobStack
         {
 
         }
+
+        private void textoRequisitos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

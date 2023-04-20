@@ -31,31 +31,31 @@
             this.components = new System.ComponentModel.Container();
             this.fundoMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBarraeLogo = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.fundoMenuTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.botaoAbreMenu = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.botaoNotificacoes = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.botaoChat = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.botaoUsuarios = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.botaoCadastrarUsuario = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.botaoLogout = new System.Windows.Forms.Button();
+            this.fundoMenuTimer = new System.Windows.Forms.Timer(this.components);
             this.botaoMinimizar = new System.Windows.Forms.PictureBox();
             this.botaoFechar = new System.Windows.Forms.PictureBox();
             this.fundoMenu.SuspendLayout();
             this.panelBarraeLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
             this.SuspendLayout();
@@ -85,67 +85,15 @@
             this.panelBarraeLogo.Controls.Add(this.botaoAbreMenu);
             this.panelBarraeLogo.Location = new System.Drawing.Point(3, 3);
             this.panelBarraeLogo.Name = "panelBarraeLogo";
-            this.panelBarraeLogo.Size = new System.Drawing.Size(247, 181);
+            this.panelBarraeLogo.Size = new System.Drawing.Size(247, 126);
             this.panelBarraeLogo.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.botaoNotificacoes);
-            this.panel1.Location = new System.Drawing.Point(3, 190);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 60);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.botaoChat);
-            this.panel3.Location = new System.Drawing.Point(3, 256);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(247, 60);
-            this.panel3.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.botaoUsuarios);
-            this.panel4.Location = new System.Drawing.Point(3, 322);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(247, 60);
-            this.panel4.TabIndex = 6;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.botaoCadastrarUsuario);
-            this.panel7.Location = new System.Drawing.Point(3, 388);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(247, 60);
-            this.panel7.TabIndex = 9;
-            // 
-            // fundoMenuTimer
-            // 
-            this.fundoMenuTimer.Interval = 1;
-            this.fundoMenuTimer.Tick += new System.EventHandler(this.fundoMenuTimer_Tick);
-            // 
-            // panel11
-            // 
-            this.panel11.Location = new System.Drawing.Point(3, 454);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(248, 249);
-            this.panel11.TabIndex = 26;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.botaoLogout);
-            this.panel13.Location = new System.Drawing.Point(3, 709);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(247, 60);
-            this.panel13.TabIndex = 28;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::JobStack.Properties.Resources.logo_versao_3_ajustada;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 58);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -154,13 +102,21 @@
             // 
             this.botaoAbreMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoAbreMenu.Image = global::JobStack.Properties.Resources.icon_abremenu;
-            this.botaoAbreMenu.Location = new System.Drawing.Point(19, 35);
+            this.botaoAbreMenu.Location = new System.Drawing.Point(19, 23);
             this.botaoAbreMenu.Name = "botaoAbreMenu";
             this.botaoAbreMenu.Size = new System.Drawing.Size(46, 39);
             this.botaoAbreMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.botaoAbreMenu.TabIndex = 0;
             this.botaoAbreMenu.TabStop = false;
             this.botaoAbreMenu.Click += new System.EventHandler(this.botaoAbreMenu_Click_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.botaoNotificacoes);
+            this.panel1.Location = new System.Drawing.Point(3, 135);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(247, 60);
+            this.panel1.TabIndex = 1;
             // 
             // botaoNotificacoes
             // 
@@ -181,6 +137,14 @@
             this.botaoNotificacoes.MouseEnter += new System.EventHandler(this.botaoNotificacoes_MouseEnter);
             this.botaoNotificacoes.MouseLeave += new System.EventHandler(this.botaoNotificacoes_MouseLeave);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.botaoChat);
+            this.panel3.Location = new System.Drawing.Point(3, 201);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(247, 60);
+            this.panel3.TabIndex = 5;
+            // 
             // botaoChat
             // 
             this.botaoChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
@@ -199,6 +163,14 @@
             this.botaoChat.UseVisualStyleBackColor = false;
             this.botaoChat.MouseEnter += new System.EventHandler(this.botaoChat_MouseEnter);
             this.botaoChat.MouseLeave += new System.EventHandler(this.botaoChat_MouseLeave);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.botaoUsuarios);
+            this.panel4.Location = new System.Drawing.Point(3, 267);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(247, 60);
+            this.panel4.TabIndex = 6;
             // 
             // botaoUsuarios
             // 
@@ -220,6 +192,14 @@
             this.botaoUsuarios.MouseEnter += new System.EventHandler(this.botaoUsuarios_MouseEnter);
             this.botaoUsuarios.MouseLeave += new System.EventHandler(this.botaoUsuarios_MouseLeave);
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.botaoCadastrarUsuario);
+            this.panel7.Location = new System.Drawing.Point(3, 333);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(247, 60);
+            this.panel7.TabIndex = 9;
+            // 
             // botaoCadastrarUsuario
             // 
             this.botaoCadastrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
@@ -238,6 +218,21 @@
             this.botaoCadastrarUsuario.UseVisualStyleBackColor = false;
             this.botaoCadastrarUsuario.MouseEnter += new System.EventHandler(this.botaoCadastrarUsuario_MouseEnter);
             this.botaoCadastrarUsuario.MouseLeave += new System.EventHandler(this.botaoCadastrarUsuario_MouseLeave);
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(3, 399);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(248, 136);
+            this.panel11.TabIndex = 26;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.botaoLogout);
+            this.panel13.Location = new System.Drawing.Point(3, 541);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(247, 60);
+            this.panel13.TabIndex = 28;
             // 
             // botaoLogout
             // 
@@ -259,6 +254,11 @@
             this.botaoLogout.Click += new System.EventHandler(this.botaoLogout_Click);
             this.botaoLogout.MouseEnter += new System.EventHandler(this.botaoLogout_MouseEnter);
             this.botaoLogout.MouseLeave += new System.EventHandler(this.botaoLogout_MouseLeave);
+            // 
+            // fundoMenuTimer
+            // 
+            this.fundoMenuTimer.Interval = 1;
+            this.fundoMenuTimer.Tick += new System.EventHandler(this.fundoMenuTimer_Tick);
             // 
             // botaoMinimizar
             // 
@@ -289,7 +289,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.fundoMenu);
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
@@ -302,13 +302,13 @@
             this.fundoMenu.ResumeLayout(false);
             this.panelBarraeLogo.ResumeLayout(false);
             this.panelBarraeLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
             this.ResumeLayout(false);

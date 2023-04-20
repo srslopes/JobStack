@@ -213,6 +213,11 @@ namespace JobStack
         {
             botaoLogout.BackColor = Color.FromArgb(0, 31, 153);
         }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

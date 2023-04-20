@@ -49,21 +49,21 @@ namespace JobStack
             this.emailPessoal = new System.Windows.Forms.Label();
             this.erro = new System.Windows.Forms.ComboBox();
             this.perguntaSuporte = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.botaoMinimizar = new System.Windows.Forms.PictureBox();
             this.botaoFechar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.painelEmail.SuspendLayout();
             this.painelSenha.SuspendLayout();
             this.painelSuporte.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // campoEmail
             // 
             this.campoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoEmail.Location = new System.Drawing.Point(40, 56);
+            this.campoEmail.Location = new System.Drawing.Point(40, 57);
             this.campoEmail.Multiline = true;
             this.campoEmail.Name = "campoEmail";
             this.campoEmail.Size = new System.Drawing.Size(260, 29);
@@ -74,11 +74,11 @@ namespace JobStack
             // 
             this.textoEmail.AutoSize = true;
             this.textoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoEmail.Location = new System.Drawing.Point(101, 34);
+            this.textoEmail.Location = new System.Drawing.Point(89, 34);
             this.textoEmail.Name = "textoEmail";
-            this.textoEmail.Size = new System.Drawing.Size(63, 20);
+            this.textoEmail.Size = new System.Drawing.Size(156, 20);
             this.textoEmail.TabIndex = 2;
-            this.textoEmail.Text = "EMAIL";
+            this.textoEmail.Text = "Insira o seu e-mail";
             this.textoEmail.Click += new System.EventHandler(this.Label1_Click);
             // 
             // textoSenha
@@ -105,7 +105,7 @@ namespace JobStack
             // 
             // botaoVoltar
             // 
-            this.botaoVoltar.Location = new System.Drawing.Point(929, 694);
+            this.botaoVoltar.Location = new System.Drawing.Point(865, 555);
             this.botaoVoltar.Name = "botaoVoltar";
             this.botaoVoltar.Size = new System.Drawing.Size(75, 23);
             this.botaoVoltar.TabIndex = 10;
@@ -158,7 +158,7 @@ namespace JobStack
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(785, 596);
+            this.linkLabel1.Location = new System.Drawing.Point(717, 529);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(125, 20);
@@ -173,9 +173,9 @@ namespace JobStack
             this.painelEmail.Controls.Add(this.BotaoProximo);
             this.painelEmail.Controls.Add(this.textoEmail);
             this.painelEmail.Controls.Add(this.CondicaoEmail);
-            this.painelEmail.Location = new System.Drawing.Point(647, 159);
+            this.painelEmail.Location = new System.Drawing.Point(605, 159);
             this.painelEmail.Name = "painelEmail";
-            this.painelEmail.Size = new System.Drawing.Size(320, 154);
+            this.painelEmail.Size = new System.Drawing.Size(335, 154);
             this.painelEmail.TabIndex = 18;
             this.painelEmail.Paint += new System.Windows.Forms.PaintEventHandler(this.PainelEmail_Paint);
             // 
@@ -186,7 +186,7 @@ namespace JobStack
             this.painelSenha.Controls.Add(this.CondicaoSenha);
             this.painelSenha.Controls.Add(this.campoSenha);
             this.painelSenha.Controls.Add(this.textoSenha);
-            this.painelSenha.Location = new System.Drawing.Point(647, 328);
+            this.painelSenha.Location = new System.Drawing.Point(605, 328);
             this.painelSenha.Name = "painelSenha";
             this.painelSenha.Size = new System.Drawing.Size(335, 168);
             this.painelSenha.TabIndex = 19;
@@ -214,7 +214,7 @@ namespace JobStack
             this.painelSuporte.Controls.Add(this.emailPessoal);
             this.painelSuporte.Controls.Add(this.erro);
             this.painelSuporte.Controls.Add(this.perguntaSuporte);
-            this.painelSuporte.Location = new System.Drawing.Point(120, 211);
+            this.painelSuporte.Location = new System.Drawing.Point(147, 193);
             this.painelSuporte.Name = "painelSuporte";
             this.painelSuporte.Size = new System.Drawing.Size(214, 224);
             this.painelSuporte.TabIndex = 20;
@@ -283,23 +283,11 @@ namespace JobStack
             this.perguntaSuporte.Text = "Qual o seu problema?\r\n";
             this.perguntaSuporte.Click += new System.EventHandler(this.Label1_Click_1);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = global::JobStack.Properties.Resources.fundo_tela_de_login_vazio;
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -101);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(664, 939);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // botaoMinimizar
             // 
             this.botaoMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoMinimizar.Image = global::JobStack.Properties.Resources.botao_minimizar;
-            this.botaoMinimizar.Location = new System.Drawing.Point(942, 12);
+            this.botaoMinimizar.Location = new System.Drawing.Point(880, 12);
             this.botaoMinimizar.Name = "botaoMinimizar";
             this.botaoMinimizar.Size = new System.Drawing.Size(25, 25);
             this.botaoMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -312,7 +300,7 @@ namespace JobStack
             this.botaoFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoFechar.Image = global::JobStack.Properties.Resources.botao_fechar;
-            this.botaoFechar.Location = new System.Drawing.Point(984, 12);
+            this.botaoFechar.Location = new System.Drawing.Point(923, 12);
             this.botaoFechar.Name = "botaoFechar";
             this.botaoFechar.Size = new System.Drawing.Size(25, 25);
             this.botaoFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -320,12 +308,24 @@ namespace JobStack
             this.botaoFechar.TabStop = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = global::JobStack.Properties.Resources.fundo_login_exemplo;
+            this.pictureBox1.Location = new System.Drawing.Point(-83, -103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(699, 796);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
             this.Controls.Add(this.painelSuporte);
@@ -348,9 +348,9 @@ namespace JobStack
             this.painelSenha.PerformLayout();
             this.painelSuporte.ResumeLayout(false);
             this.painelSuporte.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +364,6 @@ namespace JobStack
         private System.Windows.Forms.Button botaoVoltar;
         private System.Windows.Forms.Label CondicaoSenha;
         private System.Windows.Forms.Label CondicaoEmail;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BotaoProximo;
         private System.Windows.Forms.Button BotaoLogin;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -380,6 +379,7 @@ namespace JobStack
         private System.Windows.Forms.Label CondicaoEmailS;
         private System.Windows.Forms.PictureBox botaoMinimizar;
         private System.Windows.Forms.PictureBox botaoFechar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

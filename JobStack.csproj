@@ -291,6 +291,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+    <None Include="Resources\fundo login exemplo.png" />
     <None Include="Resources\icon log out.png" />
     <None Include="Resources\logo-versao-3-ajustada.png" />
     <None Include="Resources\logo-versao3.png" />

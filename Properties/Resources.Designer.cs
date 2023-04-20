@@ -83,6 +83,16 @@ namespace JobStack.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundo_login_exemplo {
+            get {
+                object obj = ResourceManager.GetObject("fundo login exemplo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fundo_tela_de_login_vazio {
             get {
                 object obj = ResourceManager.GetObject("fundo-tela-de-login-vazio", resourceCulture);
