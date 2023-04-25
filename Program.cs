@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JobStack.Testes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace JobStack
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());            
-            Application.Run(new TesteDB());
+            Application.Run(new TesteImagens());
 
 
             /*
