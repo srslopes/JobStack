@@ -17,6 +17,7 @@ namespace JobStack.Testes
         public TesteImagens()
         {
             InitializeComponent();
+
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -26,6 +27,8 @@ namespace JobStack.Testes
 
         private void BotãoProcurarImagem_Click(object sender, EventArgs e)
         {
+            PictureBox picImagem = new PictureBox();
+
             // Exibe um OpenFileDialog para permitir que o usuário selecione um arquivo de imagem
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Arquivos de imagem|*.bmp;*.jpg;*.jpeg;*.png";
