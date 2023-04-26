@@ -208,3 +208,32 @@ C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.CopyComplete
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Testes.ListaConv.resources
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Testes.ListaConv.resources
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Testes.TesteImagens.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\JobStack.exe.config
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\JobStack.exe
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\JobStack.pdb
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\BCrypt.Net.dll
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\BCrypt.Net.pdb
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\BCrypt.Net.xml
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.SuggestedBindingRedirects.cache
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TAdmUsuários.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Testes.ListaConv.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Testes.TesteChat.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Testes.TesteImagens.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TMenuAluno.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Login.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Properties.Resources.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Senha.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TAdmin.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TesteDB.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TesteMenu.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TesteVagas.resources
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.CopyComplete
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.exe
+C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.pdb

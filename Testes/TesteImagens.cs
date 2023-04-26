@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace JobStack.Testes
 {
+
     public partial class TesteImagens : Form
     {
+
   
         public TesteImagens()
         {
@@ -27,15 +30,17 @@ namespace JobStack.Testes
 
         private void BotãoProcurarImagem_Click(object sender, EventArgs e)
         {
-            PictureBox picImagem = new PictureBox();
-
-            // Exibe um OpenFileDialog para permitir que o usuário selecione um arquivo de imagem
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Arquivos de imagem|*.bmp;*.jpg;*.jpeg;*.png";
+            openFileDialog.Filter = "Arquivos de Imagem (*.jpg;*.jpeg;*.gif;*.bmp;*.png)|*.jpg;*.jpeg;*.gif;*.bmp;*.png";
+            openFileDialog.Title = "Selecione a foto de perfil";
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Carrega a imagem selecionada pelo usuário na PictureBox
-                picImagem.Image = Image.FromFile(openFileDialog.FileName);
+                // Adiciona a imagem à lista de imagens
+                BancodeDados.AdicionarImagem(openFileDialog.FileName);
+
+                // Carrega a imagem no PictureBox
+                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
             }
         }
 
@@ -43,5 +48,11 @@ namespace JobStack.Testes
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

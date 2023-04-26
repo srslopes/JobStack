@@ -36,7 +36,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(81, 38);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(273, 247);
             this.pictureBox1.TabIndex = 0;
@@ -46,11 +46,11 @@
             // botãoProcurarImagem
             // 
             this.botãoProcurarImagem.Location = new System.Drawing.Point(507, 117);
-            this.botãoProcurarImagem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botãoProcurarImagem.Margin = new System.Windows.Forms.Padding(2);
             this.botãoProcurarImagem.Name = "botãoProcurarImagem";
-            this.botãoProcurarImagem.Size = new System.Drawing.Size(50, 19);
+            this.botãoProcurarImagem.Size = new System.Drawing.Size(128, 19);
             this.botãoProcurarImagem.TabIndex = 1;
-            this.botãoProcurarImagem.Text = "button1";
+            this.botãoProcurarImagem.Text = "Adicionar Imagem";
             this.botãoProcurarImagem.UseVisualStyleBackColor = true;
             this.botãoProcurarImagem.Click += new System.EventHandler(this.BotãoProcurarImagem_Click);
             // 
@@ -61,7 +61,7 @@
             this.ClientSize = new System.Drawing.Size(699, 292);
             this.Controls.Add(this.botãoProcurarImagem);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TesteImagens";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
