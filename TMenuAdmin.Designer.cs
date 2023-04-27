@@ -47,6 +47,7 @@
             this.fundoMenuTimer = new System.Windows.Forms.Timer(this.components);
             this.botaoMinimizar = new System.Windows.Forms.PictureBox();
             this.botaoFechar = new System.Windows.Forms.PictureBox();
+            this.panelprincipal1 = new System.Windows.Forms.Panel();
             this.fundoMenu.SuspendLayout();
             this.panelBarraeLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -134,6 +135,7 @@
             this.botaoNotificacoes.Text = "            NOTIFICAÇÕES";
             this.botaoNotificacoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoNotificacoes.UseVisualStyleBackColor = false;
+            this.botaoNotificacoes.Click += new System.EventHandler(this.botaoNotificacoes_Click);
             this.botaoNotificacoes.MouseEnter += new System.EventHandler(this.botaoNotificacoes_MouseEnter);
             this.botaoNotificacoes.MouseLeave += new System.EventHandler(this.botaoNotificacoes_MouseLeave);
             // 
@@ -161,6 +163,7 @@
             this.botaoChat.Text = "            CHAT";
             this.botaoChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoChat.UseVisualStyleBackColor = false;
+            this.botaoChat.Click += new System.EventHandler(this.botaoChat_Click);
             this.botaoChat.MouseEnter += new System.EventHandler(this.botaoChat_MouseEnter);
             this.botaoChat.MouseLeave += new System.EventHandler(this.botaoChat_MouseLeave);
             // 
@@ -216,6 +219,7 @@
             this.botaoCadastrarUsuario.Text = "              CADASTRAR";
             this.botaoCadastrarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botaoCadastrarUsuario.UseVisualStyleBackColor = false;
+            this.botaoCadastrarUsuario.Click += new System.EventHandler(this.botaoCadastrarUsuario_Click);
             this.botaoCadastrarUsuario.MouseEnter += new System.EventHandler(this.botaoCadastrarUsuario_MouseEnter);
             this.botaoCadastrarUsuario.MouseLeave += new System.EventHandler(this.botaoCadastrarUsuario_MouseLeave);
             // 
@@ -264,7 +268,7 @@
             // 
             this.botaoMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoMinimizar.Image = global::JobStack.Properties.Resources.botao_minimizar;
-            this.botaoMinimizar.Location = new System.Drawing.Point(945, 12);
+            this.botaoMinimizar.Location = new System.Drawing.Point(883, 12);
             this.botaoMinimizar.Name = "botaoMinimizar";
             this.botaoMinimizar.Size = new System.Drawing.Size(25, 25);
             this.botaoMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -276,13 +280,20 @@
             // 
             this.botaoFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoFechar.Image = global::JobStack.Properties.Resources.botao_fechar;
-            this.botaoFechar.Location = new System.Drawing.Point(987, 12);
+            this.botaoFechar.Location = new System.Drawing.Point(924, 12);
             this.botaoFechar.Name = "botaoFechar";
             this.botaoFechar.Size = new System.Drawing.Size(25, 25);
             this.botaoFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.botaoFechar.TabIndex = 23;
             this.botaoFechar.TabStop = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
+            // 
+            // panelprincipal1
+            // 
+            this.panelprincipal1.Location = new System.Drawing.Point(74, 43);
+            this.panelprincipal1.Name = "panelprincipal1";
+            this.panelprincipal1.Size = new System.Drawing.Size(887, 557);
+            this.panelprincipal1.TabIndex = 26;
             // 
             // TAdmin
             // 
@@ -293,9 +304,12 @@
             this.Controls.Add(this.fundoMenu);
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
+            this.Controls.Add(this.panelprincipal1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TAdmin";
+            this.Load += new System.EventHandler(this.TAdmin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TAdmin_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TAdmin_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TAdmin_MouseUp);
@@ -334,5 +348,6 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button botaoLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelprincipal1;
     }
 }

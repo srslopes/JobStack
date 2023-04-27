@@ -31,31 +31,30 @@
             this.components = new System.ComponentModel.Container();
             this.fundoMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBarraeLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.botaoAbreMenu = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.botaoPesquisar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.botaoNotificacoes = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.botaoChat = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.botaoInscricoes = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.botaoFavoritos = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.botaoPerfil = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.botaoLogout = new System.Windows.Forms.Button();
             this.fundoMenuTimer = new System.Windows.Forms.Timer(this.components);
+            this.panelprincipal = new System.Windows.Forms.Panel();
             this.botaoMinimizar = new System.Windows.Forms.PictureBox();
             this.botaoFechar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.botaoAbreMenu = new System.Windows.Forms.PictureBox();
+            this.botaoPesquisar = new System.Windows.Forms.Button();
+            this.botaoNotificacoes = new System.Windows.Forms.Button();
+            this.botaoChat = new System.Windows.Forms.Button();
+            this.botaoInscricoes = new System.Windows.Forms.Button();
+            this.botaoFavoritos = new System.Windows.Forms.Button();
+            this.botaoPerfil = new System.Windows.Forms.Button();
+            this.botaoLogout = new System.Windows.Forms.Button();
             this.fundoMenu.SuspendLayout();
             this.panelBarraeLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,6 +65,8 @@
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // fundoMenu
@@ -99,28 +100,6 @@
             this.panelBarraeLogo.Size = new System.Drawing.Size(247, 126);
             this.panelBarraeLogo.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::JobStack.Properties.Resources.logo_versao_3_ajustada;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // botaoAbreMenu
-            // 
-            this.botaoAbreMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoAbreMenu.Image = global::JobStack.Properties.Resources.icon_abremenu;
-            this.botaoAbreMenu.Location = new System.Drawing.Point(19, 23);
-            this.botaoAbreMenu.Name = "botaoAbreMenu";
-            this.botaoAbreMenu.Size = new System.Drawing.Size(46, 39);
-            this.botaoAbreMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.botaoAbreMenu.TabIndex = 0;
-            this.botaoAbreMenu.TabStop = false;
-            this.botaoAbreMenu.Click += new System.EventHandler(this.botaoAbreMenu_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.botaoPesquisar);
@@ -128,25 +107,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(247, 60);
             this.panel2.TabIndex = 4;
-            // 
-            // botaoPesquisar
-            // 
-            this.botaoPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.botaoPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoPesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoPesquisar.ForeColor = System.Drawing.Color.White;
-            this.botaoPesquisar.Image = global::JobStack.Properties.Resources.icone_menu_pesquisa;
-            this.botaoPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoPesquisar.Location = new System.Drawing.Point(-13, -10);
-            this.botaoPesquisar.Name = "botaoPesquisar";
-            this.botaoPesquisar.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.botaoPesquisar.Size = new System.Drawing.Size(269, 80);
-            this.botaoPesquisar.TabIndex = 3;
-            this.botaoPesquisar.Text = "            PESQUISAR VAGAS";
-            this.botaoPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoPesquisar.UseVisualStyleBackColor = false;
-            this.botaoPesquisar.MouseEnter += new System.EventHandler(this.botaoPesquisar_MouseEnter);
-            this.botaoPesquisar.MouseLeave += new System.EventHandler(this.botaoPesquisar_MouseLeave);
             // 
             // panel1
             // 
@@ -156,25 +116,6 @@
             this.panel1.Size = new System.Drawing.Size(247, 60);
             this.panel1.TabIndex = 1;
             // 
-            // botaoNotificacoes
-            // 
-            this.botaoNotificacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.botaoNotificacoes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoNotificacoes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoNotificacoes.ForeColor = System.Drawing.Color.White;
-            this.botaoNotificacoes.Image = global::JobStack.Properties.Resources.icone_notificacoes2;
-            this.botaoNotificacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoNotificacoes.Location = new System.Drawing.Point(-13, -10);
-            this.botaoNotificacoes.Name = "botaoNotificacoes";
-            this.botaoNotificacoes.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.botaoNotificacoes.Size = new System.Drawing.Size(269, 80);
-            this.botaoNotificacoes.TabIndex = 3;
-            this.botaoNotificacoes.Text = "            NOTIFICAÇÕES";
-            this.botaoNotificacoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoNotificacoes.UseVisualStyleBackColor = false;
-            this.botaoNotificacoes.MouseEnter += new System.EventHandler(this.botaoNotificacoes_MouseEnter);
-            this.botaoNotificacoes.MouseLeave += new System.EventHandler(this.botaoNotificacoes_MouseLeave);
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.botaoChat);
@@ -182,25 +123,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(247, 60);
             this.panel3.TabIndex = 5;
-            // 
-            // botaoChat
-            // 
-            this.botaoChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.botaoChat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoChat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoChat.ForeColor = System.Drawing.Color.White;
-            this.botaoChat.Image = global::JobStack.Properties.Resources.icone_chat;
-            this.botaoChat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoChat.Location = new System.Drawing.Point(-13, -10);
-            this.botaoChat.Name = "botaoChat";
-            this.botaoChat.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.botaoChat.Size = new System.Drawing.Size(269, 80);
-            this.botaoChat.TabIndex = 3;
-            this.botaoChat.Text = "            CHAT";
-            this.botaoChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoChat.UseVisualStyleBackColor = false;
-            this.botaoChat.MouseEnter += new System.EventHandler(this.botaoChat_MouseEnter);
-            this.botaoChat.MouseLeave += new System.EventHandler(this.botaoChat_MouseLeave);
             // 
             // panel4
             // 
@@ -210,25 +132,6 @@
             this.panel4.Size = new System.Drawing.Size(247, 60);
             this.panel4.TabIndex = 6;
             // 
-            // botaoInscricoes
-            // 
-            this.botaoInscricoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.botaoInscricoes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoInscricoes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoInscricoes.ForeColor = System.Drawing.Color.White;
-            this.botaoInscricoes.Image = global::JobStack.Properties.Resources.icone_inscricoes1;
-            this.botaoInscricoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoInscricoes.Location = new System.Drawing.Point(-13, -10);
-            this.botaoInscricoes.Name = "botaoInscricoes";
-            this.botaoInscricoes.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.botaoInscricoes.Size = new System.Drawing.Size(269, 80);
-            this.botaoInscricoes.TabIndex = 3;
-            this.botaoInscricoes.Text = "        MINHAS INSCRIÇÕES";
-            this.botaoInscricoes.UseVisualStyleBackColor = false;
-            this.botaoInscricoes.Click += new System.EventHandler(this.botaoInscricoes_Click);
-            this.botaoInscricoes.MouseEnter += new System.EventHandler(this.botaoInscricoes_MouseEnter);
-            this.botaoInscricoes.MouseLeave += new System.EventHandler(this.botaoInscricoes_MouseLeave);
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.botaoFavoritos);
@@ -236,25 +139,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(247, 60);
             this.panel5.TabIndex = 7;
-            // 
-            // botaoFavoritos
-            // 
-            this.botaoFavoritos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.botaoFavoritos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoFavoritos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoFavoritos.ForeColor = System.Drawing.Color.White;
-            this.botaoFavoritos.Image = global::JobStack.Properties.Resources.icone_fav_2;
-            this.botaoFavoritos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoFavoritos.Location = new System.Drawing.Point(-13, -10);
-            this.botaoFavoritos.Name = "botaoFavoritos";
-            this.botaoFavoritos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.botaoFavoritos.Size = new System.Drawing.Size(269, 80);
-            this.botaoFavoritos.TabIndex = 3;
-            this.botaoFavoritos.Text = "           FAVORITOS";
-            this.botaoFavoritos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoFavoritos.UseVisualStyleBackColor = false;
-            this.botaoFavoritos.MouseEnter += new System.EventHandler(this.botaoFavoritos_MouseEnter);
-            this.botaoFavoritos.MouseLeave += new System.EventHandler(this.botaoFavoritos_MouseLeave);
             // 
             // panel7
             // 
@@ -264,25 +148,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(247, 60);
             this.panel7.TabIndex = 9;
-            // 
-            // botaoPerfil
-            // 
-            this.botaoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.botaoPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoPerfil.ForeColor = System.Drawing.Color.White;
-            this.botaoPerfil.Image = global::JobStack.Properties.Resources.icon_meu_perfil;
-            this.botaoPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoPerfil.Location = new System.Drawing.Point(-13, -10);
-            this.botaoPerfil.Name = "botaoPerfil";
-            this.botaoPerfil.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.botaoPerfil.Size = new System.Drawing.Size(269, 80);
-            this.botaoPerfil.TabIndex = 3;
-            this.botaoPerfil.Text = "            MEU PERFIL";
-            this.botaoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoPerfil.UseVisualStyleBackColor = false;
-            this.botaoPerfil.MouseEnter += new System.EventHandler(this.botaoPerfil_MouseEnter);
-            this.botaoPerfil.MouseLeave += new System.EventHandler(this.botaoPerfil_MouseLeave);
             // 
             // panel6
             // 
@@ -307,31 +172,20 @@
             this.panel13.Size = new System.Drawing.Size(247, 60);
             this.panel13.TabIndex = 14;
             // 
-            // botaoLogout
-            // 
-            this.botaoLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.botaoLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
-            this.botaoLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoLogout.ForeColor = System.Drawing.Color.White;
-            this.botaoLogout.Image = global::JobStack.Properties.Resources.icon_log_out;
-            this.botaoLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoLogout.Location = new System.Drawing.Point(-13, -10);
-            this.botaoLogout.Name = "botaoLogout";
-            this.botaoLogout.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.botaoLogout.Size = new System.Drawing.Size(269, 80);
-            this.botaoLogout.TabIndex = 3;
-            this.botaoLogout.Text = "             SAIR/LOG OUT";
-            this.botaoLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoLogout.UseVisualStyleBackColor = false;
-            this.botaoLogout.Click += new System.EventHandler(this.button2_Click);
-            this.botaoLogout.MouseEnter += new System.EventHandler(this.botaoLogout_MouseEnter);
-            this.botaoLogout.MouseLeave += new System.EventHandler(this.botaoLogout_MouseLeave);
-            // 
             // fundoMenuTimer
             // 
             this.fundoMenuTimer.Interval = 1;
             this.fundoMenuTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panelprincipal
+            // 
+            this.panelprincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelprincipal.Location = new System.Drawing.Point(74, 43);
+            this.panelprincipal.Name = "panelprincipal";
+            this.panelprincipal.Size = new System.Drawing.Size(887, 557);
+            this.panelprincipal.TabIndex = 6;
             // 
             // botaoMinimizar
             // 
@@ -359,6 +213,168 @@
             this.botaoFechar.TabStop = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JobStack.Properties.Resources.logo_versao_3_ajustada;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // botaoAbreMenu
+            // 
+            this.botaoAbreMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoAbreMenu.Image = global::JobStack.Properties.Resources.icon_abremenu;
+            this.botaoAbreMenu.Location = new System.Drawing.Point(19, 23);
+            this.botaoAbreMenu.Name = "botaoAbreMenu";
+            this.botaoAbreMenu.Size = new System.Drawing.Size(46, 39);
+            this.botaoAbreMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.botaoAbreMenu.TabIndex = 0;
+            this.botaoAbreMenu.TabStop = false;
+            this.botaoAbreMenu.Click += new System.EventHandler(this.botaoAbreMenu_Click);
+            // 
+            // botaoPesquisar
+            // 
+            this.botaoPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.botaoPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoPesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoPesquisar.ForeColor = System.Drawing.Color.White;
+            this.botaoPesquisar.Image = global::JobStack.Properties.Resources.icone_menu_pesquisa;
+            this.botaoPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoPesquisar.Location = new System.Drawing.Point(-13, -10);
+            this.botaoPesquisar.Name = "botaoPesquisar";
+            this.botaoPesquisar.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.botaoPesquisar.Size = new System.Drawing.Size(269, 80);
+            this.botaoPesquisar.TabIndex = 3;
+            this.botaoPesquisar.Text = "            PESQUISAR VAGAS";
+            this.botaoPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoPesquisar.UseVisualStyleBackColor = false;
+            this.botaoPesquisar.Click += new System.EventHandler(this.botaoPesquisar_Click);
+            this.botaoPesquisar.MouseEnter += new System.EventHandler(this.botaoPesquisar_MouseEnter);
+            this.botaoPesquisar.MouseLeave += new System.EventHandler(this.botaoPesquisar_MouseLeave);
+            // 
+            // botaoNotificacoes
+            // 
+            this.botaoNotificacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.botaoNotificacoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoNotificacoes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoNotificacoes.ForeColor = System.Drawing.Color.White;
+            this.botaoNotificacoes.Image = global::JobStack.Properties.Resources.icone_notificacoes2;
+            this.botaoNotificacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoNotificacoes.Location = new System.Drawing.Point(-13, -10);
+            this.botaoNotificacoes.Name = "botaoNotificacoes";
+            this.botaoNotificacoes.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.botaoNotificacoes.Size = new System.Drawing.Size(269, 80);
+            this.botaoNotificacoes.TabIndex = 3;
+            this.botaoNotificacoes.Text = "            NOTIFICAÇÕES";
+            this.botaoNotificacoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoNotificacoes.UseVisualStyleBackColor = false;
+            this.botaoNotificacoes.Click += new System.EventHandler(this.botaoNotificacoes_Click);
+            this.botaoNotificacoes.MouseEnter += new System.EventHandler(this.botaoNotificacoes_MouseEnter);
+            this.botaoNotificacoes.MouseLeave += new System.EventHandler(this.botaoNotificacoes_MouseLeave);
+            // 
+            // botaoChat
+            // 
+            this.botaoChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.botaoChat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoChat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoChat.ForeColor = System.Drawing.Color.White;
+            this.botaoChat.Image = global::JobStack.Properties.Resources.icone_chat;
+            this.botaoChat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoChat.Location = new System.Drawing.Point(-13, -10);
+            this.botaoChat.Name = "botaoChat";
+            this.botaoChat.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.botaoChat.Size = new System.Drawing.Size(269, 80);
+            this.botaoChat.TabIndex = 3;
+            this.botaoChat.Text = "            CHAT";
+            this.botaoChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoChat.UseVisualStyleBackColor = false;
+            this.botaoChat.Click += new System.EventHandler(this.botaoChat_Click);
+            this.botaoChat.MouseEnter += new System.EventHandler(this.botaoChat_MouseEnter);
+            this.botaoChat.MouseLeave += new System.EventHandler(this.botaoChat_MouseLeave);
+            // 
+            // botaoInscricoes
+            // 
+            this.botaoInscricoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.botaoInscricoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoInscricoes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoInscricoes.ForeColor = System.Drawing.Color.White;
+            this.botaoInscricoes.Image = global::JobStack.Properties.Resources.icone_inscricoes1;
+            this.botaoInscricoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoInscricoes.Location = new System.Drawing.Point(-13, -10);
+            this.botaoInscricoes.Name = "botaoInscricoes";
+            this.botaoInscricoes.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.botaoInscricoes.Size = new System.Drawing.Size(269, 80);
+            this.botaoInscricoes.TabIndex = 3;
+            this.botaoInscricoes.Text = "        MINHAS INSCRIÇÕES";
+            this.botaoInscricoes.UseVisualStyleBackColor = false;
+            this.botaoInscricoes.Click += new System.EventHandler(this.botaoInscricoes_Click);
+            this.botaoInscricoes.MouseEnter += new System.EventHandler(this.botaoInscricoes_MouseEnter);
+            this.botaoInscricoes.MouseLeave += new System.EventHandler(this.botaoInscricoes_MouseLeave);
+            // 
+            // botaoFavoritos
+            // 
+            this.botaoFavoritos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.botaoFavoritos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoFavoritos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoFavoritos.ForeColor = System.Drawing.Color.White;
+            this.botaoFavoritos.Image = global::JobStack.Properties.Resources.icone_fav_2;
+            this.botaoFavoritos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoFavoritos.Location = new System.Drawing.Point(-13, -10);
+            this.botaoFavoritos.Name = "botaoFavoritos";
+            this.botaoFavoritos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.botaoFavoritos.Size = new System.Drawing.Size(269, 80);
+            this.botaoFavoritos.TabIndex = 3;
+            this.botaoFavoritos.Text = "           FAVORITOS";
+            this.botaoFavoritos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoFavoritos.UseVisualStyleBackColor = false;
+            this.botaoFavoritos.Click += new System.EventHandler(this.botaoFavoritos_Click);
+            this.botaoFavoritos.MouseEnter += new System.EventHandler(this.botaoFavoritos_MouseEnter);
+            this.botaoFavoritos.MouseLeave += new System.EventHandler(this.botaoFavoritos_MouseLeave);
+            // 
+            // botaoPerfil
+            // 
+            this.botaoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.botaoPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoPerfil.ForeColor = System.Drawing.Color.White;
+            this.botaoPerfil.Image = global::JobStack.Properties.Resources.icon_meu_perfil;
+            this.botaoPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoPerfil.Location = new System.Drawing.Point(-13, -10);
+            this.botaoPerfil.Name = "botaoPerfil";
+            this.botaoPerfil.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.botaoPerfil.Size = new System.Drawing.Size(269, 80);
+            this.botaoPerfil.TabIndex = 3;
+            this.botaoPerfil.Text = "            MEU PERFIL";
+            this.botaoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoPerfil.UseVisualStyleBackColor = false;
+            this.botaoPerfil.Click += new System.EventHandler(this.botaoPerfil_Click);
+            this.botaoPerfil.MouseEnter += new System.EventHandler(this.botaoPerfil_MouseEnter);
+            this.botaoPerfil.MouseLeave += new System.EventHandler(this.botaoPerfil_MouseLeave);
+            // 
+            // botaoLogout
+            // 
+            this.botaoLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.botaoLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(153)))));
+            this.botaoLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoLogout.ForeColor = System.Drawing.Color.White;
+            this.botaoLogout.Image = global::JobStack.Properties.Resources.icon_log_out;
+            this.botaoLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoLogout.Location = new System.Drawing.Point(-13, -10);
+            this.botaoLogout.Name = "botaoLogout";
+            this.botaoLogout.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.botaoLogout.Size = new System.Drawing.Size(269, 80);
+            this.botaoLogout.TabIndex = 3;
+            this.botaoLogout.Text = "             SAIR/LOG OUT";
+            this.botaoLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoLogout.UseVisualStyleBackColor = false;
+            this.botaoLogout.Click += new System.EventHandler(this.button2_Click);
+            this.botaoLogout.MouseEnter += new System.EventHandler(this.botaoLogout_MouseEnter);
+            this.botaoLogout.MouseLeave += new System.EventHandler(this.botaoLogout_MouseLeave);
+            // 
             // TMenuAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,6 +384,7 @@
             this.Controls.Add(this.botaoMinimizar);
             this.Controls.Add(this.botaoFechar);
             this.Controls.Add(this.fundoMenu);
+            this.Controls.Add(this.panelprincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TMenuAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -379,8 +396,6 @@
             this.fundoMenu.ResumeLayout(false);
             this.panelBarraeLogo.ResumeLayout(false);
             this.panelBarraeLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -391,6 +406,8 @@
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoAbreMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,5 +436,6 @@
         private System.Windows.Forms.Button botaoLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button botaoPerfil;
+        private System.Windows.Forms.Panel panelprincipal;
     }
 }

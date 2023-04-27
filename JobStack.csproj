@@ -49,11 +49,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TAdmChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAdmChat.Designer.cs">
+      <DependentUpon>TAdmChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAdmNotificacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAdmNotificacoes.Designer.cs">
+      <DependentUpon>TAdmNotificacoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="TAdmUsuários.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TAdmUsuários.Designer.cs">
       <DependentUpon>TAdmUsuários.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAlunoChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAlunoChat.Designer.cs">
+      <DependentUpon>TAlunoChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAlunoFavoritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAlunoFavoritos.Designer.cs">
+      <DependentUpon>TAlunoFavoritos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAlunoNotificacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAlunoNotificacoes.Designer.cs">
+      <DependentUpon>TAlunoNotificacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAlunoPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAlunoPerfil.Designer.cs">
+      <DependentUpon>TAlunoPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAlunoPesquisarVagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAlunoPesquisarVagas.Designer.cs">
+      <DependentUpon>TAlunoPesquisarVagas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAlunosIncricoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAlunosIncricoes.Designer.cs">
+      <DependentUpon>TAlunosIncricoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCoordenadorAnalise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCoordenadorAnalise.Designer.cs">
+      <DependentUpon>TCoordenadorAnalise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCoordenadorChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCoordenadorChat.Designer.cs">
+      <DependentUpon>TCoordenadorChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCoordenadorNotificacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCoordenadorNotificacoes.Designer.cs">
+      <DependentUpon>TCoordenadorNotificacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCoordenadorPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCoordenadorPerfil.Designer.cs">
+      <DependentUpon>TCoordenadorPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEmpresaChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEmpresaChat.Designer.cs">
+      <DependentUpon>TEmpresaChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEmpresaNotificacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEmpresaNotificacoes.Designer.cs">
+      <DependentUpon>TEmpresaNotificacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEmpresaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEmpresaPerfil.Designer.cs">
+      <DependentUpon>TEmpresaPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEmpresaVagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEmpresaVagas.Designer.cs">
+      <DependentUpon>TEmpresaVagas.cs</DependentUpon>
     </Compile>
     <Compile Include="Testes\TesteImagens.cs">
       <SubType>Form</SubType>
@@ -150,14 +246,62 @@
     </Compile>
     <Compile Include="Usuários\Usuario.cs" />
     <Compile Include="Vaga.cs" />
+    <EmbeddedResource Include="TAdmChat.resx">
+      <DependentUpon>TAdmChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAdmNotificacoes.resx">
+      <DependentUpon>TAdmNotificacoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TAdmUsuários.resx">
       <DependentUpon>TAdmUsuários.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAlunoChat.resx">
+      <DependentUpon>TAlunoChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAlunoFavoritos.resx">
+      <DependentUpon>TAlunoFavoritos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAlunoNotificacoes.resx">
+      <DependentUpon>TAlunoNotificacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAlunoPerfil.resx">
+      <DependentUpon>TAlunoPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAlunoPesquisarVagas.resx">
+      <DependentUpon>TAlunoPesquisarVagas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAlunosIncricoes.resx">
+      <DependentUpon>TAlunosIncricoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TCadastroVaga.resx">
       <DependentUpon>TCadastroVaga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TCadatroUsuario.resx">
       <DependentUpon>TCadatroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCoordenadorAnalise.resx">
+      <DependentUpon>TCoordenadorAnalise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCoordenadorChat.resx">
+      <DependentUpon>TCoordenadorChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCoordenadorNotificacoes.resx">
+      <DependentUpon>TCoordenadorNotificacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCoordenadorPerfil.resx">
+      <DependentUpon>TCoordenadorPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEmpresaChat.resx">
+      <DependentUpon>TEmpresaChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEmpresaNotificacoes.resx">
+      <DependentUpon>TEmpresaNotificacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEmpresaPerfil.resx">
+      <DependentUpon>TEmpresaPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEmpresaVagas.resx">
+      <DependentUpon>TEmpresaVagas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Testes\ListaConv.resx">
       <DependentUpon>ListaConv.cs</DependentUpon>

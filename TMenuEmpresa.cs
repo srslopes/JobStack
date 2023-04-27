@@ -23,6 +23,19 @@ namespace JobStack
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TMenuEmpresa_MouseUp);
         }
 
+        //Faz aparecer um form dentro do panel "panelprincipal"
+        public void abrirForms(object Form)
+        {
+            if (this.panelprincipal.Controls.Count > 0)
+                this.panelprincipal.Controls.RemoveAt(0);
+            Form x = Form as Form;
+            x.TopLevel = false;
+            x.Dock = DockStyle.Fill;
+            this.panelprincipal.Controls.Add(x);
+            this.panelprincipal.Tag = x;
+            x.Show();
+        }
+
         private void BotaoVoltar_Click(object sender, EventArgs e)
         {
 
@@ -162,6 +175,30 @@ namespace JobStack
         private void botaoLogout_MouseLeave(object sender, EventArgs e)
         {
             botaoLogout.BackColor = Color.FromArgb(0, 31, 153);
+        }
+
+        //chama o forms correspondente do botão
+        private void botaoNotificacoes_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TEmpresaNotificacoes());
+        }
+
+        //chama o forms correspondente do botão
+        private void botaoChat_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TEmpresaChat());
+        }
+
+        //chama o forms correspondente do botão
+        private void botaoVagas_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TCadastroVaga());
+        }
+
+        //chama o forms correspondente do botão
+        private void botaoPerfil_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TEmpresaVagas());
         }
     }
 }

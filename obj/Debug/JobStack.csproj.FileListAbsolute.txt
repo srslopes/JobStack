@@ -237,3 +237,20 @@ C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobSt
 C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.CopyComplete
 C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.exe
 C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.pdb
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoPesquisarVagas.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Testes.TesteImagens.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoChat.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoFavoritos.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoNotificacoes.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoPerfil.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunosIncricoes.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TEmpresaChat.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TEmpresaNotificacoes.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TEmpresaPerfil.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TEmpresaVagas.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAdmChat.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAdmNotificacoes.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCoordenadorAnalise.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCoordenadorChat.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCoordenadorNotificacoes.resources
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCoordenadorPerfil.resources

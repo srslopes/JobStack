@@ -23,6 +23,19 @@ namespace JobStack
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TMenuAluno_MouseUp);
         }
 
+        //Faz aparecer um form dentro do panel "panelprincipal"
+        public void abrirForms(object Form)
+        {
+            if (this.panelprincipal.Controls.Count > 0)
+                this.panelprincipal.Controls.RemoveAt(0);
+            Form x = Form as Form;
+            x.TopLevel = false;
+            x.Dock = DockStyle.Fill;
+            this.panelprincipal.Controls.Add(x);
+            this.panelprincipal.Tag = x;
+            x.Show();
+        }
+
         private void BotaoVoltar_Click(object sender, EventArgs e)
         {
 
@@ -102,9 +115,10 @@ namespace JobStack
             dragging = false;
         }
 
+        //faz o botão chamar sua tela/forms correspondente
         private void botaoInscricoes_Click(object sender, EventArgs e)
         {
-
+            abrirForms(new TAlunosIncricoes());
         }
 
         private void TMenuAluno_Load(object sender, EventArgs e)
@@ -217,6 +231,36 @@ namespace JobStack
         private void panel11_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        //faz o botão chamar sua tela/forms correspondente
+        private void botaoPesquisar_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TAlunoPesquisarVagas());
+        }
+
+        //faz o botão chamar sua tela/forms correspondente
+        private void botaoNotificacoes_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TAlunoNotificacoes());
+        }
+
+        //faz o botão chamar sua tela/forms correspondente
+        private void botaoChat_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TAlunoChat());
+        }
+
+        //faz o botão chamar sua tela/forms correspondente
+        private void botaoFavoritos_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TAlunoFavoritos());
+        }
+
+        //faz o botão chamar sua tela/forms correspondente
+        private void botaoPerfil_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TAlunoPerfil());
         }
     }
 

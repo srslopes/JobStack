@@ -22,7 +22,19 @@ namespace JobStack
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TAdmin_MouseUp);
         }
 
-        private void BotaoVoltar_Click(object sender, EventArgs e)
+        //Faz aparecer um form dentro do panel "panelprincipal"
+        public void abrirForms(object Form)
+        {
+            if (this.panelprincipal1.Controls.Count > 0)
+                this.panelprincipal1.Controls.RemoveAt(0);
+            Form x = Form as Form;
+            x.TopLevel = false;
+            x.Dock = DockStyle.Fill;
+            this.panelprincipal1.Controls.Add(x);
+            this.panelprincipal1.Tag = x;
+            x.Show();
+        }
+            private void BotaoVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login p = new Login();
@@ -163,11 +175,32 @@ namespace JobStack
             p.ShowDialog();
         }
 
+        //mostra o forms correspondente ao botão
         private void botaoUsuarios_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            TAdmUsuários p = new TAdmUsuários();
-            p.ShowDialog();
+            abrirForms(new TAdmUsuários());
+        }
+
+        //mostra o forms correspondente ao botão
+        private void botaoNotificacoes_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TAdmNotificacoes());
+        }
+
+        //mostra o forms correspondente ao botão
+        private void botaoChat_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TAdmChat());
+        }
+
+        private void botaoCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+            abrirForms(new TCadatroUsuario());
+        }
+
+        private void TAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,8 +29,6 @@ namespace JobStack
         /// </summary>
         private void InitializeComponent()
         {
-            this.botaoMinimizar = new System.Windows.Forms.PictureBox();
-            this.botaoFechar = new System.Windows.Forms.PictureBox();
             this.tituloTela = new System.Windows.Forms.Label();
             this.textoTipoUsuario = new System.Windows.Forms.Label();
             this.textoEmail = new System.Windows.Forms.Label();
@@ -41,33 +39,7 @@ namespace JobStack
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.botaoLimpar = new System.Windows.Forms.Button();
             this.botaoCadUsuario = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // botaoMinimizar
-            // 
-            this.botaoMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoMinimizar.Image = global::JobStack.Properties.Resources.botao_minimizar;
-            this.botaoMinimizar.Location = new System.Drawing.Point(929, 12);
-            this.botaoMinimizar.Name = "botaoMinimizar";
-            this.botaoMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.botaoMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.botaoMinimizar.TabIndex = 8;
-            this.botaoMinimizar.TabStop = false;
-            this.botaoMinimizar.Click += new System.EventHandler(this.botaoMinimizar_Click);
-            // 
-            // botaoFechar
-            // 
-            this.botaoFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoFechar.Image = global::JobStack.Properties.Resources.botao_fechar;
-            this.botaoFechar.Location = new System.Drawing.Point(971, 12);
-            this.botaoFechar.Name = "botaoFechar";
-            this.botaoFechar.Size = new System.Drawing.Size(25, 25);
-            this.botaoFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.botaoFechar.TabIndex = 7;
-            this.botaoFechar.TabStop = false;
-            this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
             // tituloTela
             // 
@@ -140,7 +112,7 @@ namespace JobStack
             // 
             // botaoVoltar
             // 
-            this.botaoVoltar.Location = new System.Drawing.Point(686, 694);
+            this.botaoVoltar.Location = new System.Drawing.Point(576, 504);
             this.botaoVoltar.Name = "botaoVoltar";
             this.botaoVoltar.Size = new System.Drawing.Size(75, 23);
             this.botaoVoltar.TabIndex = 26;
@@ -150,7 +122,7 @@ namespace JobStack
             // 
             // botaoLimpar
             // 
-            this.botaoLimpar.Location = new System.Drawing.Point(781, 694);
+            this.botaoLimpar.Location = new System.Drawing.Point(657, 504);
             this.botaoLimpar.Name = "botaoLimpar";
             this.botaoLimpar.Size = new System.Drawing.Size(75, 23);
             this.botaoLimpar.TabIndex = 28;
@@ -159,7 +131,7 @@ namespace JobStack
             // 
             // botaoCadUsuario
             // 
-            this.botaoCadUsuario.Location = new System.Drawing.Point(875, 694);
+            this.botaoCadUsuario.Location = new System.Drawing.Point(738, 504);
             this.botaoCadUsuario.Name = "botaoCadUsuario";
             this.botaoCadUsuario.Size = new System.Drawing.Size(110, 23);
             this.botaoCadUsuario.TabIndex = 29;
@@ -171,7 +143,7 @@ namespace JobStack
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(887, 557);
             this.Controls.Add(this.botaoCadUsuario);
             this.Controls.Add(this.botaoLimpar);
             this.Controls.Add(this.botaoVoltar);
@@ -182,24 +154,17 @@ namespace JobStack
             this.Controls.Add(this.textoEmail);
             this.Controls.Add(this.textoTipoUsuario);
             this.Controls.Add(this.tituloTela);
-            this.Controls.Add(this.botaoMinimizar);
-            this.Controls.Add(this.botaoFechar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TCadatroUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TCadatroUsuario";
             this.Load += new System.EventHandler(this.TCadatroUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.botaoMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox botaoMinimizar;
-        private System.Windows.Forms.PictureBox botaoFechar;
         private System.Windows.Forms.Label tituloTela;
         private System.Windows.Forms.Label textoTipoUsuario;
         private System.Windows.Forms.Label textoEmail;
