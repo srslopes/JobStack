@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +16,7 @@ namespace JobStack.Testes
     public partial class TesteImagens : Form
     {
 
-  
+
         public TesteImagens()
         {
             InitializeComponent();
@@ -36,10 +36,12 @@ namespace JobStack.Testes
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Adiciona a imagem à lista de imagens
-                BancodeDados.AdicionarImagem(openFileDialog.FileName);
+                // Adiciona a imagem à lista de imagens e obtém o ID associado
+                int id = BancodeDados.AdicionarImagem(openFileDialog.FileName);
 
-                // Carrega a imagem no PictureBox
+                // Busca a imagem pelo ID e carrega no PictureBox
+
+
                 pictureBox1.Image = new Bitmap(openFileDialog.FileName);
             }
         }
@@ -59,5 +61,21 @@ namespace JobStack.Testes
             Login log = new Login();
             log.Show();
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            // Exibe o OpenFileDialog para o usuário selecionar a imagem a ser carregada
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivos de Imagem (*.jpg;*.jpeg;*.gif;*.bmp;*.png)|*.jpg;*.jpeg;*.gif;*.bmp;*.png";
+            openFileDialog.Title = "Selecione a imagem a ser carregada";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Carrega a imagem selecionada no PictureBox
+
+            }
+
+        }
     }
 }
+

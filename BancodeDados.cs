@@ -38,7 +38,6 @@ namespace JobStack
 
         private static List<byte[]> Imagens;             //Lista de imagens
 
-
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
         // 00XX - Administradores do sistema
         // 01XX - Coordenadores
@@ -64,7 +63,6 @@ namespace JobStack
             proxIdCoordenador = 100;
             proxIdVaga = 0;
             IdUser = 0;
-
             for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
             {
                 Aluno n1 = new Aluno(emails[i], senhas[i]);
@@ -445,7 +443,7 @@ namespace JobStack
         }
         //--------------------------------------- Métodos - Imagens --------------------------------------------------------
         // Método que adiciona uma imagem à lista de imagens
-        public static void AdicionarImagem(string caminhoDaImagem)
+        public static int AdicionarImagem(string caminhoDaImagem)
         {
             // Carrega a imagem a partir do caminho do arquivo especificado
             Image imagem = Image.FromFile(caminhoDaImagem);
@@ -455,6 +453,7 @@ namespace JobStack
 
             // Adiciona o array de bytes da imagem à lista de imagens
             Imagens.Add(bytesDaImagem);
+            return Imagens.IndexOf(bytesDaImagem);
         }
 
         // Método que converte uma imagem em um array de bytes
@@ -470,5 +469,14 @@ namespace JobStack
                 return ms.ToArray();
             }
         }
+        public static byte[] BuscarImagem(int id)
+        {
+            return Imagens[id];
+        }
+        // Método que adiciona uma imagem à lista de imagens e atribui um ID a ela
+       
+
+
+
     }
 }
