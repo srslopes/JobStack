@@ -10,32 +10,38 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JobStack
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para TLogin.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TLogin : Window
     {
-        public MainWindow()
+        public TLogin()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        internal class GetWindow : TLogin
         {
-            BatePapo bp = new BatePapo();
-            bp.Show();
-            this.Hide();
+            private MainWindow mainWindow;
+
+            public GetWindow(MainWindow mainWindow)
+            {
+                this.mainWindow = mainWindow;
+            }
         }
 
-        private void botaoLogin_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            TLogin x = new TLogin();
-            x.Show();
+            this.Close();
+        }
+
+        private void botaoFechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
