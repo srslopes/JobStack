@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="JobStack.DesignVaga"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JobStack"
+             mc:Ignorable="d" 
+             d:DesignHeight="230" d:DesignWidth="1025">
+    <Grid>
+        <Rectangle Fill="#F4F7FF" RadiusX="10" RadiusY="10"/>
+        <TextBlock x:Name="NomeEmpresa" Text="Nome Empresa" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="90,30,0,0" FontSize="30" FontFamily="Poppins"/>
+        <TextBlock x:Name="TipoVaga" Text="Tipo da Vaga" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,80,0,0" FontSize="24" FontFamily="Poppins" Foreground="#002495"/>
+        <TextBlock x:Name="DescricaoVaga" Text="Descrição da Vaga" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,120,0,0" FontSize="16" FontFamily="Poppins" />
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="JobStack.Mensagem_R"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JobStack"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="200"
+             HorizontalAlignment="Right" VerticalAlignment="Bottom"
+             Margin="0,0,25,0">
+    <Grid>
+        <Grid Margin="0,0,6,0">
+            <Grid.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>                
+            </Grid.Resources>
+            <Grid.Effect>
+                <DropShadowEffect/>
+            </Grid.Effect>
+            <Border x:Name="Borda" Height="70" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" CornerRadius="25" Margin="0,0,6,8">
+                <Grid>
+                    <Rectangle x:Name="Msg" Fill="#006CBB"
+                       Height="45" Width="50"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       RadiusY="15" RadiusX="15">
+                    </Rectangle>
+                    <TextBlock x:Name="Mensagem" Text="M" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontStyle="Italic" MaxWidth="180" TextWrapping="Wrap"  Height="Auto" Width="Auto">
+
+                    </TextBlock>
+                </Grid>
+                
+
+            </Border>
+            
+        </Grid>
+        
+        <TextBlock x:Name="Data" Text="Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="12" Margin="0,0,18,0" FontStyle="Italic">
+            
+        </TextBlock>
+
+    </Grid>
+
+</UserControl>

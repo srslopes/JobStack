@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.33328.57
+VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobStack", "JobStack.csproj", "{37771184-DB81-4687-B608-CD6695232D78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobStack", "JobStack.csproj", "{06B69426-C5F9-403C-A445-87A6FFB3868E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{37771184-DB81-4687-B608-CD6695232D78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37771184-DB81-4687-B608-CD6695232D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37771184-DB81-4687-B608-CD6695232D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37771184-DB81-4687-B608-CD6695232D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B69426-C5F9-403C-A445-87A6FFB3868E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B69426-C5F9-403C-A445-87A6FFB3868E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B69426-C5F9-403C-A445-87A6FFB3868E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B69426-C5F9-403C-A445-87A6FFB3868E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C1274B75-B33A-4A62-BC9C-EC5021D67B44}
+		SolutionGuid = {A6637B43-134F-4F6F-82E4-1C7FF3FCDA3B}
 	EndGlobalSection
 EndGlobal

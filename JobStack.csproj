@@ -4,12 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{37771184-DB81-4687-B608-CD6695232D78}</ProjectGuid>
+    <ProjectGuid>{06B69426-C5F9-403C-A445-87A6FFB3868E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>JobStack</RootNamespace>
     <AssemblyName>JobStack</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -33,422 +35,101 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
-      <HintPath>packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TAdmChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAdmChat.Designer.cs">
-      <DependentUpon>TAdmChat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TAdmNotificacoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAdmNotificacoes.Designer.cs">
-      <DependentUpon>TAdmNotificacoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TAdmUsuários.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAdmUsuários.Designer.cs">
-      <DependentUpon>TAdmUsuários.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TAlunoChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAlunoChat.Designer.cs">
-      <DependentUpon>TAlunoChat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TAlunoFavoritos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAlunoFavoritos.Designer.cs">
-      <DependentUpon>TAlunoFavoritos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TAlunoNotificacoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAlunoNotificacoes.Designer.cs">
-      <DependentUpon>TAlunoNotificacoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TAlunoPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAlunoPerfil.Designer.cs">
-      <DependentUpon>TAlunoPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TAlunoPesquisarVagas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAlunoPesquisarVagas.Designer.cs">
-      <DependentUpon>TAlunoPesquisarVagas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TAlunosIncricoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TAlunosIncricoes.Designer.cs">
-      <DependentUpon>TAlunosIncricoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TCoordenadorAnalise.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TCoordenadorAnalise.Designer.cs">
-      <DependentUpon>TCoordenadorAnalise.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TCoordenadorChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TCoordenadorChat.Designer.cs">
-      <DependentUpon>TCoordenadorChat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TCoordenadorNotificacoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TCoordenadorNotificacoes.Designer.cs">
-      <DependentUpon>TCoordenadorNotificacoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TCoordenadorPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TCoordenadorPerfil.Designer.cs">
-      <DependentUpon>TCoordenadorPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TEmpresaChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TEmpresaChat.Designer.cs">
-      <DependentUpon>TEmpresaChat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TEmpresaNotificacoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TEmpresaNotificacoes.Designer.cs">
-      <DependentUpon>TEmpresaNotificacoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TEmpresaPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TEmpresaPerfil.Designer.cs">
-      <DependentUpon>TEmpresaPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TEmpresaVagas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TEmpresaVagas.Designer.cs">
-      <DependentUpon>TEmpresaVagas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Testes\TesteImagens.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Testes\TesteImagens.Designer.cs">
-      <DependentUpon>TesteImagens.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Testes\ListaConv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Testes\ListaConv.Designer.cs">
-      <DependentUpon>ListaConv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Testes\TesteChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Testes\TesteChat.Designer.cs">
-      <DependentUpon>TesteChat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuários\Admin.cs" />
-    <Compile Include="Usuários\Aluno.cs" />
-    <Compile Include="Chat.cs" />
-    <Compile Include="Mensagem.cs" />
-    <Compile Include="TCadastroVaga.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TCadastroVaga.Designer.cs">
-      <DependentUpon>TCadastroVaga.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TCadatroUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TCadatroUsuario.Designer.cs">
-      <DependentUpon>TCadatroUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TMenuAluno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TMenuAluno.Designer.cs">
-      <DependentUpon>TMenuAluno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BancodeDados.cs" />
-    <Compile Include="Usuários\Coordenador.cs" />
-    <Compile Include="Usuários\Empresa.cs" />
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Senha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Senha.Designer.cs">
-      <DependentUpon>Senha.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TMenuAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TMenuAdmin.Designer.cs">
-      <DependentUpon>TMenuAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TMenuCoordenador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TMenuCoordenador.Designer.cs">
-      <DependentUpon>TMenuCoordenador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TMenuEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TMenuEmpresa.Designer.cs">
-      <DependentUpon>TMenuEmpresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Testes\TesteDB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Testes\TesteDB.Designer.cs">
-      <DependentUpon>TesteDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Testes\TesteMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Testes\TesteMenu.Designer.cs">
-      <DependentUpon>TesteMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Testes\TesteVagas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Testes\TesteVagas.Designer.cs">
-      <DependentUpon>TesteVagas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuários\Usuario.cs" />
-    <Compile Include="Vaga.cs" />
-    <EmbeddedResource Include="TAdmChat.resx">
-      <DependentUpon>TAdmChat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TAdmNotificacoes.resx">
-      <DependentUpon>TAdmNotificacoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TAdmUsuários.resx">
-      <DependentUpon>TAdmUsuários.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TAlunoChat.resx">
-      <DependentUpon>TAlunoChat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TAlunoFavoritos.resx">
-      <DependentUpon>TAlunoFavoritos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TAlunoNotificacoes.resx">
-      <DependentUpon>TAlunoNotificacoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TAlunoPerfil.resx">
-      <DependentUpon>TAlunoPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TAlunoPesquisarVagas.resx">
-      <DependentUpon>TAlunoPesquisarVagas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TAlunosIncricoes.resx">
-      <DependentUpon>TAlunosIncricoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TCadastroVaga.resx">
-      <DependentUpon>TCadastroVaga.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TCadatroUsuario.resx">
-      <DependentUpon>TCadatroUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TCoordenadorAnalise.resx">
-      <DependentUpon>TCoordenadorAnalise.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TCoordenadorChat.resx">
-      <DependentUpon>TCoordenadorChat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TCoordenadorNotificacoes.resx">
-      <DependentUpon>TCoordenadorNotificacoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TCoordenadorPerfil.resx">
-      <DependentUpon>TCoordenadorPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TEmpresaChat.resx">
-      <DependentUpon>TEmpresaChat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TEmpresaNotificacoes.resx">
-      <DependentUpon>TEmpresaNotificacoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TEmpresaPerfil.resx">
-      <DependentUpon>TEmpresaPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TEmpresaVagas.resx">
-      <DependentUpon>TEmpresaVagas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Testes\ListaConv.resx">
-      <DependentUpon>ListaConv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Testes\TesteChat.resx">
-      <DependentUpon>TesteChat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Testes\TesteImagens.resx">
-      <DependentUpon>TesteImagens.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TMenuAluno.resx">
-      <DependentUpon>TMenuAluno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </ApplicationDefinition>
+    <Compile Include="BackEnd\Usuarios\Admin.cs" />
+    <Compile Include="BackEnd\Usuarios\Aluno.cs" />
+    <Compile Include="BackEnd\Vaga.cs" />
+    <Compile Include="BackEnd\Usuarios\Coordenador.cs" />
+    <Compile Include="BackEnd\Usuarios\Empresa.cs" />
+    <Compile Include="BackEnd\Usuarios\Usuario.cs" />
+    <Page Include="BatePapo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Contato.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DesignVaga.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Chat.cs" />
+    <Compile Include="Contato.xaml.cs" />
+    <Compile Include="BackEnd\BancodeDados.cs" />
+    <Compile Include="BatePapo.xaml.cs" />
+    <Compile Include="DesignVaga.xaml.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Mensagem_L.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mensagem_R.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackEnd\Mensagem.cs" />
+    <Compile Include="Mensagem_L.xaml.cs" />
+    <Compile Include="Mensagem_R.xaml.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Senha.resx">
-      <DependentUpon>Senha.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TMenuAdmin.resx">
-      <DependentUpon>TMenuAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TMenuCoordenador.resx">
-      <DependentUpon>TMenuCoordenador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TMenuEmpresa.resx">
-      <DependentUpon>TMenuEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Testes\TesteDB.resx">
-      <DependentUpon>TesteDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Testes\TesteMenu.resx">
-      <DependentUpon>TesteMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Testes\TesteVagas.resx">
-      <DependentUpon>TesteVagas.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\DataSources\Admin.datasource" />
-    <None Include="Properties\DataSources\Aluno.datasource" />
-    <None Include="Properties\DataSources\Coordenador.datasource" />
-    <None Include="Properties\DataSources\Empresa.datasource" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fundo-tela-de-login-vazio.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\botao fechar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\botao minimizar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone menu pesquisa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone notificacoes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone notificacoes corrigido.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone chat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone inscricoes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone notificacoes1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone inscricoes1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone favoritos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone favoritos1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone fav 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone abre menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon abremenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon configuracoes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon configuracoes1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon meu perfil.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone notificacoes2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone vagas emp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone usuarios.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone cadusuario.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone cadusuario 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone analisar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icone analisar2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="LICENSE.txt" />
-    <None Include="Resources\fundo login exemplo.png" />
-    <None Include="Resources\icon log out.png" />
-    <None Include="Resources\logo-versao-3-ajustada.png" />
-    <None Include="Resources\logo-versao3.png" />
-    <None Include="Resources\icone-maximizar.png" />
+    <Resource Include="blank-profile-picture-973460_1280-1-705x705.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

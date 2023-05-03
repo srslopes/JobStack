@@ -1,272 +1,50 @@
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\BatePapo.g.cs
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\Contato.g.cs
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\DesignVaga.g.cs
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\MainWindow.g.cs
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\Mensagem_L.g.cs
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\Mensagem_R.g.cs
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\App.g.cs
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack_MarkupCompile.cache
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack_MarkupCompile.lref
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\bin\Debug\JobStack.exe.config
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\bin\Debug\JobStack.exe
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\bin\Debug\JobStack.pdb
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\BatePapo.baml
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\Contato.baml
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\DesignVaga.baml
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\MainWindow.baml
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\Mensagem_L.baml
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\Mensagem_R.baml
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack.g.resources
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack.Properties.Resources.resources
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack.exe
+C:\Users\SaMuK\OneDrive\Documentos\JobStack\obj\Debug\JobStack.pdb
 C:\Users\SaMuK\source\repos\JobStack\bin\Debug\JobStack.exe.config
 C:\Users\SaMuK\source\repos\JobStack\bin\Debug\JobStack.exe
 C:\Users\SaMuK\source\repos\JobStack\bin\Debug\JobStack.pdb
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\BatePapo.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Contato.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignVaga.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\MainWindow.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Mensagem_L.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Mensagem_R.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\App.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack_MarkupCompile.cache
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack_MarkupCompile.lref
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\BatePapo.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Contato.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignVaga.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\MainWindow.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Mensagem_L.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Mensagem_R.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.g.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.Properties.Resources.resources
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.exe
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.pdb
-C:\Users\aluno\source\repos\JobStack\bin\Debug\JobStack.exe.config
-C:\Users\aluno\source\repos\JobStack\bin\Debug\JobStack.exe
-C:\Users\aluno\source\repos\JobStack\bin\Debug\JobStack.pdb
-C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.csprojAssemblyReference.cache
-C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.exe
-C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.pdb
-C:\Users\aluno\source\repos\JobStack\obj\Debug\JobStack.Login.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csprojAssemblyReference.cache
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Login.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteDB.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.exe
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.pdb
-C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.exe.config
-C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.exe
-C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.pdb
-C:\Users\aluno\Downloads\JobStack-main\bin\Debug\JobStack.exe.config
-C:\Users\aluno\Downloads\JobStack-main\bin\Debug\JobStack.exe
-C:\Users\aluno\Downloads\JobStack-main\bin\Debug\JobStack.pdb
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.csprojAssemblyReference.cache
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.Login.resources
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.TesteDB.resources
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.exe
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.pdb
-C:\Users\aluno\Downloads\JobStack-main\obj\Debug\JobStack.Senha.resources
-D:\JobStack-main\bin\Debug\JobStack.exe.config
-D:\JobStack-main\bin\Debug\JobStack.exe
-D:\JobStack-main\bin\Debug\JobStack.pdb
-D:\JobStack-main\obj\Debug\JobStack.csproj.AssemblyReference.cache
-D:\JobStack-main\obj\Debug\JobStack.csproj.SuggestedBindingRedirects.cache
-D:\JobStack-main\obj\Debug\JobStack.Login.resources
-D:\JobStack-main\obj\Debug\JobStack.Properties.Resources.resources
-D:\JobStack-main\obj\Debug\JobStack.Senha.resources
-D:\JobStack-main\obj\Debug\JobStack.TesteDB.resources
-D:\JobStack-main\obj\Debug\JobStack.csproj.GenerateResource.cache
-D:\JobStack-main\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-D:\JobStack-main\obj\Debug\JobStack.exe
-D:\JobStack-main\obj\Debug\JobStack.pdb
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\bin\Debug\JobStack.exe.config
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\bin\Debug\JobStack.exe
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\bin\Debug\JobStack.pdb
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.AssemblyReference.cache
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.SuggestedBindingRedirects.cache
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.Login.resources
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.Senha.resources
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.TesteDB.resources
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.exe
-C:\Users\breno_000\Downloads\JobStack-main\JobStack-main\obj\Debug\JobStack.pdb
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.Login.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.Senha.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TesteDB.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Senha.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.csproj.AssemblyReference.cache
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.csproj.SuggestedBindingRedirects.cache
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.Login.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.Senha.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TesteDB.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.exe
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.pdb
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\bin\Debug\JobStack.exe.config
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\bin\Debug\JobStack.exe
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\bin\Debug\JobStack.pdb
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TesteMenu.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TesteVagas.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.Aluno1.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TAdmin.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TCoordenador.resources
-C:\Users\breno_000\Downloads\JobStack-main (1)\JobStack-main\obj\Debug\JobStack.TEmpresa.resources
-C:\Users\nicol\source\repos\JobStack\bin\Debug\JobStack.exe.config
-C:\Users\nicol\source\repos\JobStack\bin\Debug\JobStack.exe
-C:\Users\nicol\source\repos\JobStack\bin\Debug\JobStack.pdb
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.Login.resources
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.Senha.resources
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TAdmin.resources
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TesteDB.resources
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TesteMenu.resources
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TesteVagas.resources
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.exe
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.pdb
-C:\Users\nicol\source\repos\JobStack\obj\Debug\JobStack.TMenuAluno.resources
-C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
-C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
-C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
-C:\Users\nicol\Source\Repos\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TMenuAluno.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TAdmin.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TesteMenu.resources
-C:\Users\SaMuK\source\repos\JobStack\obj\Debug\JobStack.TesteVagas.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TMenuAluno.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAdmin.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteMenu.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteVagas.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\bin\Debug\JobStack.exe.config
-C:\Users\breno_000\Documents\GitHub\JobStack\bin\Debug\JobStack.exe
-C:\Users\breno_000\Documents\GitHub\JobStack\bin\Debug\JobStack.pdb
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.SuggestedBindingRedirects.cache
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TMenuAluno.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.Login.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.Senha.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TAdmin.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteDB.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteMenu.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.TesteVagas.resources
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.exe
-C:\Users\breno_000\Documents\GitHub\JobStack\obj\Debug\JobStack.pdb
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\bin\Debug\JobStack.exe.config
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\bin\Debug\JobStack.exe
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\bin\Debug\JobStack.pdb
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TMenuAluno.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Login.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Senha.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAdmin.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TesteDB.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TesteMenu.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TesteVagas.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.exe
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.pdb
-C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.exe.config
-C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.exe
-C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.pdb
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csprojAssemblyReference.cache
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TMenuAluno.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.Login.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.Senha.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TAdmin.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TesteDB.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TesteMenu.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TesteVagas.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.exe
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.pdb
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Testes.TesteChat.resources
-C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\BCrypt.Net.dll
-C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\BCrypt.Net.pdb
-C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\BCrypt.Net.xml
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.CopyComplete
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\bin\Debug\BCrypt.Net.dll
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\bin\Debug\BCrypt.Net.pdb
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\bin\Debug\BCrypt.Net.xml
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Testes.TesteChat.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.csproj.CopyComplete
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAdmUsuários.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAdmUsuários.resources
-C:\Users\aluno\Documents\JobStack\bin\Debug\BCrypt.Net.dll
-C:\Users\aluno\Documents\JobStack\bin\Debug\BCrypt.Net.pdb
-C:\Users\aluno\Documents\JobStack\bin\Debug\BCrypt.Net.xml
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.TAdmUsuários.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.Testes.ListaConv.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.Testes.TesteChat.resources
-C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.CopyComplete
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Testes.ListaConv.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Testes.ListaConv.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Testes.TesteImagens.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\JobStack.exe.config
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\JobStack.exe
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\JobStack.pdb
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\BCrypt.Net.dll
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\BCrypt.Net.pdb
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\bin\Debug\BCrypt.Net.xml
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.AssemblyReference.cache
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.SuggestedBindingRedirects.cache
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TAdmUsuários.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TCadastroVaga.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TCadatroUsuario.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Testes.ListaConv.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Testes.TesteChat.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Testes.TesteImagens.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TMenuAluno.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Login.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Properties.Resources.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.Senha.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TAdmin.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TMenuCoordenador.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TMenuEmpresa.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TesteDB.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TesteMenu.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.TesteVagas.resources
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.csproj.CopyComplete
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.exe
-C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\JobStack.pdb
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoPesquisarVagas.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.Testes.TesteImagens.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoChat.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoFavoritos.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoNotificacoes.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunoPerfil.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAlunosIncricoes.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TEmpresaChat.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TEmpresaNotificacoes.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TEmpresaPerfil.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TEmpresaVagas.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAdmChat.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TAdmNotificacoes.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCoordenadorAnalise.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCoordenadorChat.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCoordenadorNotificacoes.resources
-C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\JobStack.TCoordenadorPerfil.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAdmChat.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAdmNotificacoes.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAlunoChat.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAlunoFavoritos.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAlunoNotificacoes.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAlunoPerfil.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAlunoPesquisarVagas.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TAlunosIncricoes.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TCoordenadorAnalise.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TCoordenadorChat.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TCoordenadorNotificacoes.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TCoordenadorPerfil.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TEmpresaChat.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TEmpresaNotificacoes.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TEmpresaPerfil.resources
-C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.TEmpresaVagas.resources
