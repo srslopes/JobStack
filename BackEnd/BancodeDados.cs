@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Drawing;
 using System.IO;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace JobStack
 {
@@ -46,8 +48,8 @@ namespace JobStack
         // 6XXX ~ 9XXX - Empresas
 
 
-        private string[] emails = {"a", "b", "c", "d", "e", "f", "g", "h"};                     //emails e senhas de usuários para popular os bancos de dados
-        private string[] senhas = {"123", "234", "345", "456", "567", "678", "789", "890"};
+        private string[] emails = { "a", "b", "c", "d", "e", "f", "g", "h" };                     //emails e senhas de usuários para popular os bancos de dados
+        private string[] senhas = { "123", "234", "345", "456", "567", "678", "789", "890" };
 
         public BancodeDados()
         {
@@ -82,10 +84,10 @@ namespace JobStack
             }
         }
 
-        
+
         //------------------------------------------ Métodos - Alunos -----------------------------------------------------
-        
-        
+
+
         public static bool AdicionarAluno(Aluno aluno)                  //Método para adicionar um novo aluno ao banco de dados,
         {                                                               //Retorna verdadeiro se o aluno foi adicionado com sucesso
             if (BuscarID(aluno.GetEmail()) != 0) return false;     //Retorna falso se um aluno com mesmo email já existe
@@ -101,12 +103,12 @@ namespace JobStack
             {
                 if (Alunos[i].GetEmail().Equals(email)) return Alunos[i].GetID();
             }
-            return 0;           
+            return 0;
         }
 
         public static Aluno BuscarAluno(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            if(id/1000>=1 && id/1000<6) return Alunos[(id % 1000) - 1];
+            if (id / 1000 >= 1 && id / 1000 < 6) return Alunos[(id % 1000) - 1];
             return null;
         }
 
@@ -133,7 +135,7 @@ namespace JobStack
                 if (Alunos[i].GetVagas().Count > 0) txt += " Vagas:";
                 for (int j = 0; j < Alunos[i].GetVagas().Count; j++)
                 {
-                    txt += " ID: " + Alunos[i].GetVagas()[j] +",";
+                    txt += " ID: " + Alunos[i].GetVagas()[j] + ",";
                     Console.Write(", ID: " + Alunos[i].GetVagas()[j]);
                 }
                 txt += "?";
@@ -192,14 +194,14 @@ namespace JobStack
                 if (Empresas[i].GetVagas().Count > 0) txt += " Vagas:";
                 for (int j = 0; j < Empresas[i].GetVagas().Count; j++)
                 {
-                    txt += " ID: " + Empresas[i].GetVagas()[j] +",";
+                    txt += " ID: " + Empresas[i].GetVagas()[j] + ",";
                     Console.Write(", ID: " + Empresas[i].GetVagas()[j]);
                 }
                 txt += "?";
                 Console.WriteLine();
             }
-            return txt;           
-        }        
+            return txt;
+        }
 
         //-------------------------------------------------- Métodos - Administradores ----------------------------------------------------------------------------
 
@@ -223,7 +225,7 @@ namespace JobStack
 
         public static Admin BuscarAdmin(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            if (id/1000 == 0 && id/100 == 0) return Admins[(id % 100) - 1];
+            if (id / 1000 == 0 && id / 100 == 0) return Admins[(id % 100) - 1];
             return null;
         }
 
@@ -249,7 +251,7 @@ namespace JobStack
                 txt += "ID: " + Admins[i].GetID() + ", Admin: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha() + "?";
                 Console.WriteLine("ID: " + Admins[i].GetID() + "Empresa: " + Admins[i].GetEmail() + ", senha: " + Admins[i].GetSenha());
             }
-            return txt;            
+            return txt;
         }
 
         //-------------------------------------------- Métodos - Coordenadores --------------------------------------------------------------------
@@ -269,12 +271,12 @@ namespace JobStack
             {
                 if (Coordenadores[i].GetEmail().Equals(email)) return Coordenadores[i].GetID();
             }
-            return 0;            
+            return 0;
         }
 
         public static Coordenador BuscarCoordenador(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            if (id/1000 ==0 && id/100 ==1) return Coordenadores[(id % 100) - 1];
+            if (id / 1000 == 0 && id / 100 == 1) return Coordenadores[(id % 100) - 1];
             return null;
         }
 
@@ -299,19 +301,20 @@ namespace JobStack
                 txt += "ID: " + Coordenadores[i].GetID() + ", Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha() + "?";
                 Console.WriteLine("ID: " + Coordenadores[i].GetID() + "Coordenador: " + Coordenadores[i].GetEmail() + ", senha: " + Coordenadores[i].GetSenha());
             }
-            return txt;            
+            return txt;
         }
 
         //--------------------------------------------------------- Métodos Universais ---------------------------------------------------------------
-                                                         //Interagem com todos os tipos de usuário
+        //Interagem com todos os tipos de usuário
 
         public static bool Login(string senha)  //Retorna verdadeiro se a senha inserida é a mesma que a do usuário com o ID indicado
         {                                               //Retorna falso se a senha estiver incorreta
             int id = GetIdUser();
             return ((Usuario)BuscarUsuario(GetIdUser())).GetSenha().Equals(CriptografarSenha(senha));
         }
-        public static string CriptografarSenha(string senha) { 
-           // Cria o objeto de hash SHA256
+        public static string CriptografarSenha(string senha)
+        {
+            // Cria o objeto de hash SHA256
             SHA256 sha256 = new SHA256Managed();
 
             // Calcula o hash da senha em bytes
@@ -323,7 +326,7 @@ namespace JobStack
             // Trunca a senha criptografada para 8 caracteres
             senhaCriptografada = senhaCriptografada.Substring(0, senha.Length);
             return senhaCriptografada;
-        
+
         }
 
 
@@ -332,7 +335,7 @@ namespace JobStack
         public static int BuscarID(string email)    //Procura no banco de dados o usuário com o  email inserido e retorna o id dele,
         {                                           //Retorna 0 se nao existir usuario com esse email    
             IdUser = BuscarIdAluno(email);
-            if ( IdUser != 0) return IdUser;
+            if (IdUser != 0) return IdUser;
             IdUser = BuscarIdEmpresa(email);
             if (IdUser != 0) return IdUser;
             IdUser = BuscarIdAdmin(email);
@@ -367,9 +370,9 @@ namespace JobStack
             else return Admins[id - 1].GetStatus();
         }
 
-        public static bool AdicionarUsuario(Object obj) 
+        public static bool AdicionarUsuario(Object obj)
         {
-            switch(obj.GetType().ToString())
+            switch (obj.GetType().ToString())
             {
                 case "JobStack.Aluno":
                     return AdicionarAluno((Aluno)obj);
@@ -382,7 +385,7 @@ namespace JobStack
             }
             return false;
         }
-    
+
         public static string ExibirDB()
         {
             return ExibirAlunos() + ExibirEmpresas() + ExibirAdmins() + ExibirCoordenadores();
@@ -404,12 +407,12 @@ namespace JobStack
         {
             Vagas.Add(vaga);
             vaga.SetID(Vagas.IndexOf(vaga));
-        }        
+        }
 
         public static Vaga BuscarVaga(int id)         //Retorna o objeto aluno com o ID indicado,
         {
             return Vagas[id];
-        } 
+        }
 
         public static int GetNextIdVaga()  //retorna um novo ID
         {
@@ -424,7 +427,7 @@ namespace JobStack
             {
                 txt += "ID: " + Vagas[i].GetID() + ", Empresa: " + BuscarEmpresa(Vagas[i].GetIdEmpresa()).GetEmail() + ", Status: " + Vagas[i].GetStatus();
                 Console.Write("ID: " + Vagas[i].GetID() + "Empresa: " + BuscarEmpresa(Vagas[i].GetIdEmpresa()).GetEmail() + ", Status: " + Vagas[i].GetStatus());
-                for (int j = 0; j<Vagas[i].GetLista().Count; j++)
+                for (int j = 0; j < Vagas[i].GetLista().Count; j++)
                 {
                     txt += ", ID " + (j + 1) + ": " + Vagas[i].GetLista()[j];
                     Console.Write(", ID " + (j + 1) + ": " + Vagas[i].GetLista()[j]);
@@ -433,7 +436,7 @@ namespace JobStack
                 Console.WriteLine();
             }
             return txt;
-            
+
         }
         //--------------------------------------- Métodos - Chats --------------------------------------------------------
         public static int AdicionarChat(Chat chat)
@@ -454,32 +457,39 @@ namespace JobStack
         }
         //--------------------------------------- Métodos - Imagens --------------------------------------------------------
         // Método que adiciona uma imagem à lista de imagens
-        /*
-        public static void AdicionarImagem(string caminhoDaImagem)
+        public static int AdicionarImagem(string caminhoDaImagem)
         {
             // Carrega a imagem a partir do caminho do arquivo especificado
-            Image imagem = Image.FromFile(caminhoDaImagem);
+            BitmapImage imagem = new BitmapImage(new Uri(caminhoDaImagem));
 
             // Converte a imagem em um array de bytes
             byte[] bytesDaImagem = ConverterImagemParaBytes(imagem);
 
             // Adiciona o array de bytes da imagem à lista de imagens
             Imagens.Add(bytesDaImagem);
+            return Imagens.IndexOf(bytesDaImagem);
         }
 
         // Método que converte uma imagem em um array de bytes
-        private static byte[] ConverterImagemParaBytes(Image imagem)
+        private static byte[] ConverterImagemParaBytes(BitmapImage imagem)
         {
             // Cria um MemoryStream para armazenar a imagem
             using (MemoryStream ms = new MemoryStream())
             {
                 // Salva a imagem no MemoryStream no formato PNG
-                imagem.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                PngBitmapEncoder encoder = new PngBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(imagem));
+                encoder.Save(ms);
 
                 // Retorna o array de bytes da imagem armazenada no MemoryStream
                 return ms.ToArray();
             }
         }
-        */
+
+        public static byte[] BuscarImagem(int id)
+        {
+            return Imagens[id];
+        }
+
     }
 }

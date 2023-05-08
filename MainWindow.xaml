@@ -11,5 +11,6 @@
             <TextBlock Text="Bate Papo" FontSize="18"/>
         </Button>
         <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Height="52" Margin="30,109,0,0" VerticalAlignment="Top" Width="100" Click="botaoLogin_Click"/>
+        <Button x:Name="BImagem" Content="Imagem" HorizontalAlignment="Left" Height="78" Margin="30,187,0,0" VerticalAlignment="Top" Width="100" Click="BImagem_Click"/>
     </Grid>
 </Window>

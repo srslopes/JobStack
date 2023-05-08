@@ -37,5 +37,11 @@ namespace JobStack
             TLogin x = new TLogin();
             x.Show();
         }
+
+        private void BImagem_Click(object sender, RoutedEventArgs e)
+        {
+          TesteImagem x = new TesteImagem();
+            x.Show();
+        }
     }
 }

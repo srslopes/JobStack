@@ -61,6 +61,9 @@
     <Compile Include="BackEnd\Usuarios\Coordenador.cs" />
     <Compile Include="BackEnd\Usuarios\Empresa.cs" />
     <Compile Include="BackEnd\Usuarios\Usuario.cs" />
+    <Compile Include="TesteImagem.xaml.cs">
+      <DependentUpon>TesteImagem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TLogin.xaml.cs">
       <DependentUpon>TLogin.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,10 @@
     <Page Include="Mensagem_R.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TesteImagem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TLogin.xaml">
       <SubType>Designer</SubType>
