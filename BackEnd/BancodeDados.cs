@@ -466,6 +466,10 @@ namespace JobStack
             byte[] bytesDaImagem = ConverterImagemParaBytes(imagem);
 
             // Adiciona o array de bytes da imagem à lista de imagens
+            // Inicializa a lista de imagens (antes de utilizá-la)
+            List<byte[]> Imagens = new List<byte[]>();
+
+            // Adiciona a imagem à lista de imagens
             Imagens.Add(bytesDaImagem);
             return Imagens.IndexOf(bytesDaImagem);
         }
