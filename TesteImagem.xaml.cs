@@ -58,15 +58,8 @@ namespace JobStack
 
             if (imagemBytes != null)
             {
-                using (var ms = new MemoryStream(imagemBytes))
-                {
-                    BitmapImage bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.StreamSource = ms;
-                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                    bitmap.EndInit();
-                    Imagem.Source = bitmap;
-                }
+                BitmapImage bitmap = BancodeDados.ConverterBytesParaImagem(imagemBytes);
+                Imagem.Source = bitmap;
             }
         }
 

@@ -23,6 +23,7 @@ namespace JobStack
         public MainWindow()
         {
             InitializeComponent();
+            BancodeDados db = new BancodeDados();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

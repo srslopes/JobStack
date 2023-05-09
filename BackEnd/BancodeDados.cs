@@ -38,7 +38,7 @@ namespace JobStack
 
         private static List<Chat> Chats;                    //Lista de Conversas
 
-        private static List<byte[]> Imagens;             //Lista de imagens
+        private static List<byte[]> Imagens;
 
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
@@ -57,16 +57,16 @@ namespace JobStack
             Empresas = new List<Empresa>();
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
+            Imagens = new List<byte[]>();
+
             Vagas = new List<Vaga>();
             Chats = new List<Chat>();
-            Imagens = new List<byte[]>();
             proxIdAluno = 1000;
             proxIdEmpresa = 6000;
             proxIdAdmin = 0;
             proxIdCoordenador = 100;
             proxIdVaga = 0;
             IdUser = 0;
-
             for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
             {
                 Aluno n1 = new Aluno(emails[i], senhas[i]);
@@ -456,23 +456,7 @@ namespace JobStack
             else return BuscarChat(id).GetParticipante1();
         }
         //--------------------------------------- Métodos - Imagens --------------------------------------------------------
-        // Método que adiciona uma imagem à lista de imagens
-        public static int AdicionarImagem(string caminhoDaImagem)
-        {
-            // Carrega a imagem a partir do caminho do arquivo especificado
-            BitmapImage imagem = new BitmapImage(new Uri(caminhoDaImagem));
-
-            // Converte a imagem em um array de bytes
-            byte[] bytesDaImagem = ConverterImagemParaBytes(imagem);
-
-            // Adiciona o array de bytes da imagem à lista de imagens
-            // Inicializa a lista de imagens (antes de utilizá-la)
-            List<byte[]> Imagens = new List<byte[]>();
-
-            // Adiciona a imagem à lista de imagens
-            Imagens.Add(bytesDaImagem);
-            return Imagens.IndexOf(bytesDaImagem);
-        }
+      
 
         // Método que converte uma imagem em um array de bytes
         private static byte[] ConverterImagemParaBytes(BitmapImage imagem)
@@ -489,10 +473,40 @@ namespace JobStack
                 return ms.ToArray();
             }
         }
+        public static BitmapImage ConverterBytesParaImagem(byte[] origem)
+        {
+            using (MemoryStream ms = new MemoryStream(origem))
+            {
+                BitmapImage imagem = new BitmapImage();
+                imagem.BeginInit();
+                imagem.CacheOption = BitmapCacheOption.OnLoad;
+                imagem.StreamSource = ms;
+                imagem.EndInit();
 
+                return imagem;
+            }
+        }
+
+        // Método que adiciona uma imagem à lista de imagens
+        public static int AdicionarImagem(string caminho)
+        {
+            // Converte a imagem para um array de bytes
+            byte[] imagemBytes = ConverterImagemParaBytes(new BitmapImage(new Uri(caminho)));
+
+            // Adiciona a imagem à lista de imagens
+            Imagens.Add(imagemBytes);
+
+            // Retorna o ID da imagem adicionada
+            return Imagens.Count - 1;
+        }
         public static byte[] BuscarImagem(int id)
         {
-            return Imagens[id];
+            if (Imagens != null && id >= 0 && id < Imagens.Count)
+            {
+                return Imagens[id];
+            }
+
+            return null;
         }
 
     }
