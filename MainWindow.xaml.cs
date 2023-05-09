@@ -22,6 +22,8 @@ namespace JobStack
     {
         public MainWindow()
         {
+
+            BancodeDados bd = new BancodeDados();
             InitializeComponent();
             BancodeDados db = new BancodeDados();
         }

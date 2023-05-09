@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="JobStack.ChatFiller"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JobStack"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="200"
+             HorizontalAlignment="Center">
+    <Grid Height="100" Width="200">
+            
+    </Grid>
+</UserControl>

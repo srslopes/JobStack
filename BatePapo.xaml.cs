@@ -26,7 +26,6 @@ namespace JobStack
         public BatePapo()
         {
 
-            BancodeDados bd = new BancodeDados();
             msg = true;
             InitializeComponent();
             Cabecalho.Visibility = Visibility.Hidden;
@@ -125,8 +124,11 @@ namespace JobStack
         public void attChat()
         {
             msg = true;
-            CaixaDeTexto.Text = "Mensagem";
+            CaixaDeTexto.Text = "";
+            if (!CaixaDeTexto.IsSelectionActive) CaixaDeTexto.Text = "Mensagem";
             Chat.Children.Clear();
+            ChatFiller x = new ChatFiller();
+            Chat.Children.Add(x);
             if (idChat == -1) return;
             Chat.Height = 0;
             List <Mensagem> msgs = BancodeDados.BuscarChat(idChat).GetChat();

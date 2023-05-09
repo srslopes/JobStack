@@ -61,6 +61,9 @@
     <Compile Include="BackEnd\Usuarios\Coordenador.cs" />
     <Compile Include="BackEnd\Usuarios\Empresa.cs" />
     <Compile Include="BackEnd\Usuarios\Usuario.cs" />
+    <Compile Include="ChatFiller.xaml.cs">
+      <DependentUpon>ChatFiller.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TesteImagem.xaml.cs">
       <DependentUpon>TesteImagem.xaml</DependentUpon>
     </Compile>
@@ -70,6 +73,10 @@
     <Page Include="BatePapo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChatFiller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Contato.xaml">
       <Generator>MSBuild:Compile</Generator>

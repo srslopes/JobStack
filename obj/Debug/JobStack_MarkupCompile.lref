@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< Updated upstream
 FC:\Users\aluno\Documents\JobStack\App.xaml;;
 FC:\Users\aluno\Documents\JobStack\BatePapo.xaml;;
 FC:\Users\aluno\Documents\JobStack\Contato.xaml;;
@@ -8,4 +9,16 @@ FC:\Users\aluno\Documents\JobStack\Mensagem_L.xaml;;
 FC:\Users\aluno\Documents\JobStack\Mensagem_R.xaml;;
 FC:\Users\aluno\Documents\JobStack\TesteImagem.xaml;;
 FC:\Users\aluno\Documents\JobStack\TLogin.xaml;;
+=======
+FC:\Users\aluno\Documents\GitHub\JobStack\App.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\BatePapo.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\Contato.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\DesignVaga.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\MainWindow.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\Mensagem_L.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\Mensagem_R.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\TesteImagem.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\TLogin.xaml;;
+FC:\Users\aluno\Documents\GitHub\JobStack\ChatFiller.xaml;;
+>>>>>>> Stashed changes
 

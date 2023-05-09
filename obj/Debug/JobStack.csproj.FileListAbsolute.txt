@@ -106,6 +106,7 @@ C:\Users\BRUNO\Documents\GitHub\JobStack\obj\Debug\JobStack.exe
 C:\Users\BRUNO\Documents\GitHub\JobStack\obj\Debug\JobStack.pdb
 C:\Users\BRUNO\Documents\GitHub\JobStack\obj\Debug\TesteImagem.g.cs
 C:\Users\BRUNO\Documents\GitHub\JobStack\obj\Debug\TesteImagem.baml
+<<<<<<< Updated upstream
 C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.exe.config
 C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.exe
 C:\Users\aluno\Documents\JobStack\bin\Debug\JobStack.pdb
@@ -136,3 +137,37 @@ C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cac
 C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.exe
 C:\Users\aluno\Documents\JobStack\obj\Debug\JobStack.pdb
+=======
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.exe.config
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.exe
+C:\Users\aluno\Documents\GitHub\JobStack\bin\Debug\JobStack.pdb
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csprojAssemblyReference.cache
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\BatePapo.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\Contato.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVaga.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\MainWindow.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\Mensagem_L.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\Mensagem_R.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TesteImagem.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TLogin.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\App.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack_MarkupCompile.cache
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack_MarkupCompile.lref
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\App.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\BatePapo.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\Contato.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVaga.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\MainWindow.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\Mensagem_L.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\Mensagem_R.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TesteImagem.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TLogin.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.g.resources
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.Properties.Resources.resources
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cache
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.exe
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.pdb
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\ChatFiller.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\ChatFiller.baml
+>>>>>>> Stashed changes

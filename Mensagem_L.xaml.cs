@@ -60,7 +60,6 @@ namespace JobStack
             largura = 2 * borda + comprimento * 12 + 6;
 
             this.Height = altura + 25;
-            this.Width = 206;
             Borda.Height = altura + 31;
             Borda.Width = largura;
             Msg.Height = altura;
