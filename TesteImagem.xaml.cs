@@ -24,6 +24,7 @@ namespace JobStack
         public TesteImagem()
         {
             InitializeComponent();
+           
         }
 
         private void ProcurarImagem_Click(object sender, RoutedEventArgs e)

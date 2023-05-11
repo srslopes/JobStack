@@ -171,3 +171,5 @@ C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\JobStack.pdb
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\ChatFiller.g.cs
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\ChatFiller.baml
 >>>>>>> Stashed changes
+C:\Users\BRUNO\Documents\GitHub\JobStack\obj\Debug\ChatFiller.g.cs
+C:\Users\BRUNO\Documents\GitHub\JobStack\obj\Debug\ChatFiller.baml

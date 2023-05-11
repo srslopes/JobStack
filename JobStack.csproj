@@ -158,5 +158,10 @@
   <ItemGroup>
     <Resource Include="mdi_window-close.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="73027003-bd4d-4c64-8d94-2fcf04792ed6.png" />
+    <Resource Include="dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png" />
+    <Resource Include="f7b6822a-38f7-4974-bb0f-acda7e4b1916.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

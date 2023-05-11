@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mdi_window-close.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("73027003-bd4d-4c64-8d94-2fcf04792ed6.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("f7b6822a-38f7-4974-bb0f-acda7e4b1916.png")]
 
 

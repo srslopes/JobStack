@@ -39,7 +39,7 @@ namespace JobStack
         private static List<Chat> Chats;                    //Lista de Conversas
 
         private static List<byte[]> Imagens;
-
+       
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
         // 00XX - Administradores do sistema
@@ -53,11 +53,13 @@ namespace JobStack
 
         public BancodeDados()
         {
+            
             Alunos = new List<Aluno>();
             Empresas = new List<Empresa>();
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
             Imagens = new List<byte[]>();
+            AdicionarImagensIniciais();
 
             Vagas = new List<Vaga>();
             Chats = new List<Chat>();
@@ -490,17 +492,26 @@ namespace JobStack
         // Método que adiciona uma imagem à lista de imagens
         public static int AdicionarImagem(string caminho)
         {
+            
             // Converte a imagem para um array de bytes
             byte[] imagemBytes = ConverterImagemParaBytes(new BitmapImage(new Uri(caminho)));
-
             // Adiciona a imagem à lista de imagens
             Imagens.Add(imagemBytes);
-
+            
             // Retorna o ID da imagem adicionada
             return Imagens.Count - 1;
         }
+        
+        public static void AdicionarImagensIniciais()
+        {
+          AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\73027003-bd4d-4c64-8d94-2fcf04792ed6.png"); // ID 0
+          AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png"); // ID 1
+          AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\f7b6822a-38f7-4974-bb0f-acda7e4b1916.png"); // ID 2
+
+        }
         public static byte[] BuscarImagem(int id)
         {
+           
             if (Imagens != null && id >= 0 && id < Imagens.Count)
             {
                 return Imagens[id];
