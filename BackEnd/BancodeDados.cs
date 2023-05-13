@@ -59,7 +59,7 @@ namespace JobStack
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
             Imagens = new List<byte[]>();
-            AdicionarImagensIniciais();
+            AdicionarImagensIniciais();//chamar o metodo quando inciar o codigo
 
             Vagas = new List<Vaga>();
             Chats = new List<Chat>();
@@ -475,18 +475,31 @@ namespace JobStack
                 return ms.ToArray();
             }
         }
+        // Método que converte um array de bytes em uma imagem
+
         public static BitmapImage ConverterBytesParaImagem(byte[] origem)
         {
             using (MemoryStream ms = new MemoryStream(origem))
             {
+                // Cria uma instância de BitmapImage para armazenar a imagem
                 BitmapImage imagem = new BitmapImage();
+
+                // Inicia a configuração da imagem
                 imagem.BeginInit();
+
+                // Define a opção de cache para a imagem
                 imagem.CacheOption = BitmapCacheOption.OnLoad;
+
+                // Define a origem do fluxo de dados da imagem como o MemoryStream
                 imagem.StreamSource = ms;
+
+                // Finaliza a configuração da imagem
                 imagem.EndInit();
 
+                // Retorna a imagem configurada
                 return imagem;
             }
+
         }
 
         // Método que adiciona uma imagem à lista de imagens
@@ -501,7 +514,8 @@ namespace JobStack
             // Retorna o ID da imagem adicionada
             return Imagens.Count - 1;
         }
-        
+        // Método que adiciona imagens iniciais à lista de imagens
+
         public static void AdicionarImagensIniciais()
         {
           AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\73027003-bd4d-4c64-8d94-2fcf04792ed6.png"); // ID 0
@@ -511,14 +525,17 @@ namespace JobStack
         }
         public static byte[] BuscarImagem(int id)
         {
-           
+            // Verifica se a lista de imagens não é nula e se o ID está dentro dos limites da lista
             if (Imagens != null && id >= 0 && id < Imagens.Count)
             {
+                // Retorna a imagem correspondente ao ID
                 return Imagens[id];
             }
 
+            // Caso a lista de imagens seja nula ou o ID esteja fora dos limites, retorna null
             return null;
         }
+
 
     }
 }
