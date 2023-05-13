@@ -518,7 +518,10 @@ namespace JobStack
 
         public static void AdicionarImagensIniciais()
         {
-          AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\73027003-bd4d-4c64-8d94-2fcf04792ed6.png"); // ID 0
+            // Chama o método AdicionarImagem para adicionar imagens iniciais à lista
+    // Cada chamada do método adiciona uma imagem e retorna o ID atribuído a ela
+    // As imagens são adicionadas com IDs sequenciais (0, 1, 2, ...)
+            AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\73027003-bd4d-4c64-8d94-2fcf04792ed6.png"); // ID 0
           AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png"); // ID 1
           AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\f7b6822a-38f7-4974-bb0f-acda7e4b1916.png"); // ID 2
 
