@@ -8,6 +8,8 @@ namespace JobStack
 {
     class Admin : Usuario
     {
+        private static List<int> Chats;
+
         public Admin(string e, string p)
         {
             SetEmail(e);

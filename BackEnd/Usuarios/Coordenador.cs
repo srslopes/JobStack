@@ -8,6 +8,8 @@ namespace JobStack
 {
     class Coordenador : Usuario
     {
+        private static List<int> Chats;
+
         public Coordenador(string e, string s)
         {
             SetEmail(e);

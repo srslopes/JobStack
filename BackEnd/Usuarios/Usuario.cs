@@ -13,6 +13,7 @@ namespace JobStack
         private int ID;
         private bool status;
         private List<int> Chats;
+        private int IdImg;
 
         public Usuario()
         {
@@ -70,6 +71,15 @@ namespace JobStack
         public List<int> GetChats()
         {
             return Chats;
+        }
+
+        public int GetIdImg()
+        {
+            return IdImg;
+        }
+        public void SetIdImg(int id)
+        {
+            IdImg = id;
         }
 
     }

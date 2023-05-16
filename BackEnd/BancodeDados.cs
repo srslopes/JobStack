@@ -508,11 +508,11 @@ namespace JobStack
         // Método que adiciona uma imagem à lista de imagens
         public static int AdicionarImagem(string caminho)
         {
-            
+
             // Converte a imagem para um array de bytes
-            byte[] imagemBytes = ConverterImagemParaBytes(new BitmapImage(new Uri(caminho)));
+            //byte[] imagemBytes = ConverterImagemParaBytes(new BitmapImage(new Uri(caminho)));
             // Adiciona a imagem à lista de imagens
-            Imagens.Add(imagemBytes);
+            //Imagens.Add(imagemBytes);
             
             // Retorna o ID da imagem adicionada
             return Imagens.Count - 1;

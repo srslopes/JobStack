@@ -25,7 +25,6 @@ namespace JobStack
 
             BancodeDados bd = new BancodeDados();
             InitializeComponent();
-            BancodeDados db = new BancodeDados();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
