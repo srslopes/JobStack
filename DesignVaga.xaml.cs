@@ -25,7 +25,7 @@ namespace JobStack
         public DesignVaga(int id)
         {
             InitializeComponent();
-            vaga = BancodeDados.BuscarVaga(id);
+      
         }
     }
 }
