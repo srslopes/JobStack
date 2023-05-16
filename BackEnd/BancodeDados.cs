@@ -39,6 +39,8 @@ namespace JobStack
         private static List<Chat> Chats;                    //Lista de Conversas
 
         private static List<byte[]> Imagens;
+
+        private static List<BitmapImage> Imgs;
        
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
@@ -58,6 +60,7 @@ namespace JobStack
             Empresas = new List<Empresa>();
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
+            Imgs = new List<BitmapImage>();
             Imagens = new List<byte[]>();
             AdicionarImagensIniciais();//chamar o metodo quando inciar o codigo
 
@@ -537,6 +540,17 @@ namespace JobStack
 
             // Caso a lista de imagens seja nula ou o ID esteja fora dos limites, retorna null
             return null;
+        }
+
+        public int SalvarImg(BitmapImage imagem)
+        {
+            Imgs.Add(imagem);
+            return Imgs.IndexOf(imagem);
+        }
+
+        public BitmapImage BuscarImg(int id)
+        {
+            return Imgs[id];
         }
 
 
