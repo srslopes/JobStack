@@ -36,39 +36,46 @@ namespace JobStack
 
             if (openFileDialog.ShowDialog() == true)
             {
-                // Adiciona a imagem à lista de imagens e obtém o ID associado
-                int id = BancodeDados.AdicionarImagem(openFileDialog.FileName);
-
-                // Busca a imagem pelo ID e carrega no Image
-
+                // Carrega a imagem selecionada em um objeto BitmapImage
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
                 bitmap.UriSource = new Uri(openFileDialog.FileName);
                 bitmap.EndInit();
-                Imagem.Source = bitmap;
+
+                // Adiciona a imagem à lista de imagens e obtém o ID associado
+                int id = BancodeDados.SalvarImg(bitmap);
+
+                // Busca a imagem pelo ID e carrega no Image
+                Imagem.Source = BancodeDados.BuscarImg(id);
             }
 
         }
 
         private void CarregarImagem_Click(object sender, RoutedEventArgs e)
         {
-            int id = int.Parse(textID.Text);
-
-            // Busca a imagem pelo ID e carrega no Image
-            byte[] imagemBytes = BancodeDados.BuscarImagem(id);
-
-            if (imagemBytes != null)
+            int id;
+            if (int.TryParse(textID.Text, out id))
             {
-                BitmapImage bitmap = BancodeDados.ConverterBytesParaImagem(imagemBytes);
-                Imagem.Source = bitmap;
+                // Busca a imagem pelo ID
+                BitmapImage imagem = BancodeDados.BuscarImg(id);
+
+                if (imagem != null)
+                {
+                    Imagem.Source = imagem;
+                }
+            }
+            else
+            {
+                // Lidar com entrada inválida do ID (por exemplo, exibir uma mensagem de erro)
             }
         }
-
-
-
-
-
-
-
     }
+
+
+
+
+
+
+
+    
 }

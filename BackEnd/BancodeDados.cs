@@ -38,7 +38,6 @@ namespace JobStack
 
         private static List<Chat> Chats;                    //Lista de Conversas
 
-        private static List<byte[]> Imagens;
 
         private static List<BitmapImage> Imgs;
        
@@ -61,9 +60,7 @@ namespace JobStack
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
             Imgs = new List<BitmapImage>();
-            Imagens = new List<byte[]>();
-            AdicionarImagensIniciais();//chamar o metodo quando inciar o codigo
-
+            AdicionarImagens();
             Vagas = new List<Vaga>();
             Chats = new List<Chat>();
             proxIdAluno = 1000;
@@ -480,78 +477,30 @@ namespace JobStack
         }
         // Método que converte um array de bytes em uma imagem
 
-        public static BitmapImage ConverterBytesParaImagem(byte[] origem)
-        {
-            using (MemoryStream ms = new MemoryStream(origem))
-            {
-                // Cria uma instância de BitmapImage para armazenar a imagem
-                BitmapImage imagem = new BitmapImage();
+    
 
-                // Inicia a configuração da imagem
-                imagem.BeginInit();
-
-                // Define a opção de cache para a imagem
-                imagem.CacheOption = BitmapCacheOption.OnLoad;
-
-                // Define a origem do fluxo de dados da imagem como o MemoryStream
-                imagem.StreamSource = ms;
-
-                // Finaliza a configuração da imagem
-                imagem.EndInit();
-
-                // Retorna a imagem configurada
-                return imagem;
-            }
-
-        }
-
-        // Método que adiciona uma imagem à lista de imagens
-        public static int AdicionarImagem(string caminho)
-        {
-
-            // Converte a imagem para um array de bytes
-            //byte[] imagemBytes = ConverterImagemParaBytes(new BitmapImage(new Uri(caminho)));
-            // Adiciona a imagem à lista de imagens
-            //Imagens.Add(imagemBytes);
-            
-            // Retorna o ID da imagem adicionada
-            return Imagens.Count - 1;
-        }
-        // Método que adiciona imagens iniciais à lista de imagens
-
-        public static void AdicionarImagensIniciais()
-        {
-            // Chama o método AdicionarImagem para adicionar imagens iniciais à lista
-    // Cada chamada do método adiciona uma imagem e retorna o ID atribuído a ela
-    // As imagens são adicionadas com IDs sequenciais (0, 1, 2, ...)
-            AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\73027003-bd4d-4c64-8d94-2fcf04792ed6.png"); // ID 0
-          AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png"); // ID 1
-          AdicionarImagem(@"C:\Users\BRUNO\Documents\GitHub\JobStack\f7b6822a-38f7-4974-bb0f-acda7e4b1916.png"); // ID 2
-
-        }
-        public static byte[] BuscarImagem(int id)
-        {
-            // Verifica se a lista de imagens não é nula e se o ID está dentro dos limites da lista
-            if (Imagens != null && id >= 0 && id < Imagens.Count)
-            {
-                // Retorna a imagem correspondente ao ID
-                return Imagens[id];
-            }
-
-            // Caso a lista de imagens seja nula ou o ID esteja fora dos limites, retorna null
-            return null;
-        }
-
-        public int SalvarImg(BitmapImage imagem)
+        public static  int SalvarImg(BitmapImage imagem)
         {
             Imgs.Add(imagem);
             return Imgs.IndexOf(imagem);
         }
-
-        public BitmapImage BuscarImg(int id)
+        public static void AdicionarImagens()
         {
-            return Imgs[id];
+            Imgs.Add(new BitmapImage(new Uri("Imagens/73027003-bd4d-4c64-8d94-2fcf04792ed6.png", UriKind.Relative)));
+            Imgs.Add(new BitmapImage(new Uri("Imagens/dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png", UriKind.Relative)));
+            Imgs.Add(new BitmapImage(new Uri("Imagens/f7b6822a-38f7-4974-bb0f-acda7e4b1916.png", UriKind.Relative)));
         }
+
+        public static BitmapImage BuscarImg(int id)
+        {
+            if (id >= 0 && id < Imgs.Count)
+            {
+                return Imgs[id];
+            }
+
+            return null;
+        }
+      
 
 
     }
