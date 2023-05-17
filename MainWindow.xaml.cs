@@ -35,8 +35,9 @@ namespace JobStack
 
         private void botaoLogin_Click(object sender, RoutedEventArgs e)
         {
-            TLogin x = new TLogin();
+            telaLogin x = new telaLogin();
             x.Show();
+            this.Hide();
         }
 
         private void BImagem_Click(object sender, RoutedEventArgs e)

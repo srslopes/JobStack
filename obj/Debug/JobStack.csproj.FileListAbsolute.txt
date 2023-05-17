@@ -205,3 +205,5 @@ C:\Users\BRUNO\Documents\JobStack\obj\Debug\JobStack.csproj.GenerateResource.cac
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\JobStack.exe
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\JobStack.pdb
+C:\Users\BRUNO\Documents\JobStack\obj\Debug\telaLogin.g.cs
+C:\Users\BRUNO\Documents\JobStack\obj\Debug\telaLogin.baml

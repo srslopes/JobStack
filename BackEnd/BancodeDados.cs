@@ -486,7 +486,7 @@ namespace JobStack
 
 
         // Método que converte uma imagem em um array de bytes
-        private static byte[] ConverterImagemParaBytes(BitmapImage imagem)
+       /* private static byte[] ConverterImagemParaBytes(BitmapImage imagem)
         {
             // Cria um MemoryStream para armazenar a imagem
             using (MemoryStream ms = new MemoryStream())
@@ -499,7 +499,7 @@ namespace JobStack
                 // Retorna o array de bytes da imagem armazenada no MemoryStream
                 return ms.ToArray();
             }
-        }
+        }*/
         // Método que converte um array de bytes em uma imagem
 
     
