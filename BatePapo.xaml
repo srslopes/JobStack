@@ -63,14 +63,14 @@
                           Width="810" Height="531" 
                           HorizontalScrollBarVisibility="Disabled" 
                           HorizontalAlignment="Left" VerticalAlignment="Center" >
-                <StackPanel Name="Chat" Width="800" Height="0" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                <StackPanel Name="Chat" Width="800" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Left">
                     
                 </StackPanel>
             </ScrollViewer>
             <Grid x:Name="Cabecalho" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0">
                 <Border x:Name="FotoPerfil"  Height="50" Width="50" CornerRadius="25" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.Background>
-                        <ImageBrush ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
+                        <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
                     </Border.Background>
                     <Border.Effect>
                         <DropShadowEffect/>

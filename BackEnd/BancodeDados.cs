@@ -40,7 +40,11 @@ namespace JobStack
 
 
         private static List<BitmapImage> Imgs;
-       
+
+        private static List<int> ChatsAdm;
+
+        private static List<int> ChatsCoord;
+
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
         // 00XX - Administradores do sistema
@@ -60,6 +64,8 @@ namespace JobStack
             Admins = new List<Admin>();
             Coordenadores = new List<Coordenador>();
             Imgs = new List<BitmapImage>();
+            ChatsAdm = new List<int>();
+            ChatsCoord = new List<int>();
             AdicionarImagens();
             Vagas = new List<Vaga>();
             Chats = new List<Chat>();
@@ -457,8 +463,27 @@ namespace JobStack
             if (BuscarChat(id).GetParticipante1() == GetIdUser()) return BuscarChat(id).GetParticipante2();
             else return BuscarChat(id).GetParticipante1();
         }
+
+        public static List<int> GetChatsAdm()
+        {
+            return ChatsAdm;
+        }
+
+        public static void SetChatsAdm(List<int> lista)
+        {
+            ChatsAdm = lista;
+        }
+        public static List<int> GetChatsCoord()
+        {
+            return ChatsCoord;
+        }
+
+        public static void SetChatsCoord(List<int> lista)
+        {
+            ChatsCoord = lista;
+        }
         //--------------------------------------- Métodos - Imagens --------------------------------------------------------
-      
+
 
         // Método que converte uma imagem em um array de bytes
         private static byte[] ConverterImagemParaBytes(BitmapImage imagem)

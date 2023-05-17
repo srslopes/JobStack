@@ -64,11 +64,10 @@ namespace JobStack
             Borda.Width = largura;
             Msg.Height = altura;
             Msg.Width = largura;
-
         }
-        public int getAltura()
+        public double getAltura()
         {
-            return altura + 25;
+            return altura+25;
         }
     }
 }

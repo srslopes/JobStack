@@ -31,13 +31,13 @@ namespace JobStack
         {
             Mensagem msg = new Mensagem(mensagem);
             Mensagens.Add(msg);
-            if (BancodeDados.GetIdUser() == participante1) notificacoes2++;
+            if (BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(participante1).GetType().ToString())) notificacoes2++;
             else notificacoes1++;
         }
 
         public int GetParticipante()
         {
-            if (BancodeDados.GetIdUser()==participante1) return participante2;
+            if (BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(participante1).GetType().ToString())) return participante2;
             return participante1;
         }
         public int GetParticipante1()
@@ -72,7 +72,7 @@ namespace JobStack
 
         public int GetNotificacoes()
         {
-            if (BancodeDados.GetIdUser() == participante1) return notificacoes1;
+            if (BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(participante1).GetType().ToString())) return notificacoes1;
             return notificacoes2;
         }
 
@@ -87,7 +87,7 @@ namespace JobStack
 
         public void SetNotificacoes()
         {
-            if (BancodeDados.GetIdUser() == participante1) notificacoes1 = 0;
+            if (BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(participante1).GetType().ToString())) notificacoes1 = 0;
             else notificacoes2 = 0;
         }
 

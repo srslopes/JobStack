@@ -31,7 +31,6 @@ namespace JobStack
         {
             BatePapo bp = new BatePapo();
             bp.Show();
-            this.Hide();
         }
 
         private void botaoLogin_Click(object sender, RoutedEventArgs e)

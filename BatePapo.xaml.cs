@@ -31,30 +31,27 @@ namespace JobStack
             Cabecalho.Visibility = Visibility.Hidden;
             idChat = -1;
             BancodeDados.SetIdUser(1001);
-            Chat n1 = new Chat(1002);
             Chat n2 = new Chat(6001);
             Chat n3 = new Chat(6002);
-            n1.NovaMensagem("Olá b");
+            Chat n7 = new Chat(1);
+            Chat n8 = new Chat(101);
             n2.NovaMensagem("Hey c");
             n3.NovaMensagem("Opa d");
+            n7.NovaMensagem("Hey");
+            n8.NovaMensagem("Opa");
             BancodeDados.SetIdUser(1002);
-            n1.NovaMensagem("Opa a");
             Chat n4 = new Chat(6001);
             Chat n5 = new Chat(6002);
             n4.NovaMensagem("Bom dia c");
             n5.NovaMensagem("Oi d");
             BancodeDados.SetIdUser(6001);
-            Chat n6 = new Chat(6002);
             n2.NovaMensagem("Oi a");
-            n6.NovaMensagem("Fala d");
             BancodeDados.SetIdUser(6002);
             n3.NovaMensagem("Hey a");
             BancodeDados.SetIdUser(1001);
-            n1.NovaMensagem("Td bem, b?");
             n2.NovaMensagem("Td certo, c?");
             n3.NovaMensagem("Td ok, d?");
             BancodeDados.SetIdUser(1002);
-            n1.NovaMensagem("Sim, a");
             BancodeDados.SetIdUser(6001);
             n2.NovaMensagem("cerrtissimo, a");
             BancodeDados.SetIdUser(6002);
@@ -128,16 +125,19 @@ namespace JobStack
             if (!CaixaDeTexto.IsSelectionActive) CaixaDeTexto.Text = "Mensagem";
             Chat.Children.Clear();
             ChatFiller x = new ChatFiller();
+            Chat.Height += 200;
             Chat.Children.Add(x);
+            ScrollMensagens.ScrollToBottom();
             if (idChat == -1) return;
             Chat.Height = 0;
             List <Mensagem> msgs = BancodeDados.BuscarChat(idChat).GetChat();
             for(int i =0; i<msgs.Count; i++)
             {
-                if (BancodeDados.GetIdUser() == msgs[i].GetParticipante()) adicionarMensagemR(msgs[i].GetMensagem(), msgs[i].GetData());
+                if ( BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(msgs[i].GetParticipante()).GetType().ToString())) adicionarMensagemR(msgs[i].GetMensagem(), msgs[i].GetData());
                 else adicionarMensagemL(msgs[i].GetMensagem(), msgs[i].GetData());
             }
             Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(BancodeDados.BuscarOutroParticipante(idChat))).GetEmail();
+            Img.ImageSource = BancodeDados.BuscarImg(((Usuario)BancodeDados.BuscarUsuario(BancodeDados.BuscarOutroParticipante(idChat))).GetIdImg());
             Cabecalho.Visibility = Visibility.Visible;
         }
 

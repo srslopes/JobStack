@@ -18,6 +18,7 @@ namespace JobStack
         public Usuario()
         {
             ID = 0;
+            IdImg = 0;
             SetStatus(false);
             Chats = new List<int>();
         }
@@ -71,6 +72,11 @@ namespace JobStack
         public List<int> GetChats()
         {
             return Chats;
+        }
+
+        public void SetChats(List<int> lista)
+        {
+            Chats = lista;
         }
 
         public int GetIdImg()

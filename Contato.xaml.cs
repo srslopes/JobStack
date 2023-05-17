@@ -30,7 +30,7 @@ namespace JobStack
             conversa = BancodeDados.BuscarChat(id);
             InitializeComponent();
             Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetEmail();
-            
+            Img.ImageSource = BancodeDados.BuscarImg(((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetIdImg());            
             if (conversa.GetNotificacoes() == 0) Notificacao.Visibility = Visibility.Hidden;
             else
             {

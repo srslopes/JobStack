@@ -24,7 +24,7 @@
             <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="74" Width="381">
                 <Border x:Name="FotoPerfil" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="12,0,0,0" Height="50" Width="50" CornerRadius="25">
                     <Border.Background>
-                        <ImageBrush ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
+                        <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
                     </Border.Background>
                     <Border.Effect>
                         <DropShadowEffect/>
