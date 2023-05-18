@@ -15,6 +15,9 @@ namespace JobStack
             SetEmail(e);
             SetSenha(p);
             SetIdImg(1);
+            BancodeDados.AdicionarCoordenador(this);
+            BancodeDados.SetIdUser(GetID());
+            Chat adm = new Chat(1);
         }
        
 

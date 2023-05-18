@@ -9,84 +9,17 @@ namespace JobStack
     class Empresa : Usuario
     {
         private List<int> Vagas;
-        /*
-        private string email;
-        private string senha;
-        private int ID;
-        
-        private List<int> Chats;
-        private bool status;
-
-        public Empresa()
-        {
-            ID = 0;
-            Vagas = new List<int>();
-            Chats = new List<int>();
-            SetStatus(false);
-        }
-        */
-        public Empresa()
-        {
-            Vagas = new List<int>();
-        }
+     
         public Empresa(string e, string s)
         {
             SetEmail(e);
             SetSenha(s);
             Vagas = new List<int>();
+            BancodeDados.AdicionarEmpresa(this);
+            BancodeDados.SetIdUser(GetID());
+            Chat adm = new Chat(1);
+            Chat coo = new Chat(101);
         }
-
-        /*
-        public string GetEmail()
-        {
-            return email;
-        }
-
-        public string GetSenha()
-        {
-            return senha;
-        }
-  
-        public bool SetEmail(string e)
-        {
-            if (BancodeDados.BuscarID(e) != 0) return false;
-            email = e;
-            return true;
-        }
-        public void SetSenha(string p)
-        {
-            senha = p;
-        }
-
-        public int GetID()
-        {
-            return ID;
-        }
-
-        public void SetID(int id)
-        {
-            ID = id;
-        }        
-
-        public void SetStatus(bool valor)
-        {
-            status = valor;
-        }
-        public bool GetStatus()
-        {
-            return status;
-        }
-        public void AdicionarChat(int id)
-        {
-            for (int i = 0; i < Chats.Count; i++) if (Chats[i] == id) return;
-            Chats.Prepend(id);
-        }
-
-        public List<int> GetChats()
-        {
-            return Chats;
-        }
-        */
         public List<int> GetVagas()
         {
             return Vagas;

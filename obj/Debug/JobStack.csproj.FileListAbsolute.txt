@@ -207,3 +207,5 @@ C:\Users\BRUNO\Documents\JobStack\obj\Debug\JobStack.exe
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\JobStack.pdb
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\telaLogin.g.cs
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\telaLogin.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\telaLogin.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\telaLogin.baml

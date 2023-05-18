@@ -77,17 +77,13 @@ namespace JobStack
             IdUser = 0;
             for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
             {
-                Aluno n1 = new Aluno(emails[i], senhas[i]);
-                AdicionarAluno(n1);
-
-                Empresa n2 = new Empresa(emails[i + 2], senhas[i + 2]);
-                AdicionarEmpresa(n2);
-
                 Admin n3 = new Admin(emails[i + 4], senhas[i + 4]);
-                AdicionarAdmin(n3);
 
                 Coordenador n4 = new Coordenador(emails[i + 6], senhas[i + 6]);
-                AdicionarCoordenador(n4);
+
+                Aluno n1 = new Aluno(emails[i], senhas[i]);
+
+                Empresa n2 = new Empresa(emails[i + 2], senhas[i + 2]);              
 
             }
         }

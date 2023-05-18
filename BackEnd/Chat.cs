@@ -31,6 +31,7 @@ namespace JobStack
         {
             Mensagem msg = new Mensagem(mensagem);
             Mensagens.Add(msg);
+
             if (BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(participante1).GetType().ToString())) notificacoes2++;
             else notificacoes1++;
         }

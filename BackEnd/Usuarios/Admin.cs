@@ -15,6 +15,7 @@ namespace JobStack
             SetEmail(e);
             SetSenha(p);
             SetIdImg(2);
+            BancodeDados.AdicionarAdmin(this);
         }   
 
     }

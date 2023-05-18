@@ -66,7 +66,15 @@ namespace JobStack
         public void AdicionarChat(int id)
         {
             for (int i = 0; i < Chats.Count; i++) if (Chats[i] == id) return;
-            Chats.Add(id);
+            if (Chats.Count < 3) Chats.Add(id);
+            else Chats.Insert(2, id);
+        }
+
+        public void AddTopo(int id)
+        {
+            Chats.Remove(id);
+            if (Chats.Count < 3) Chats.Add(id);
+            else Chats.Insert(2, id);
         }
 
         public List<int> GetChats()

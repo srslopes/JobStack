@@ -129,7 +129,6 @@ namespace JobStack
             Chat.Children.Add(x);
             ScrollMensagens.ScrollToBottom();
             if (idChat == -1) return;
-            Chat.Height = 0;
             List <Mensagem> msgs = BancodeDados.BuscarChat(idChat).GetChat();
             for(int i =0; i<msgs.Count; i++)
             {
