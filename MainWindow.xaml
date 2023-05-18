@@ -12,5 +12,9 @@
         </Button>
         <Button x:Name="botaoLogin" Content="Login" HorizontalAlignment="Left" Height="52" Margin="30,109,0,0" VerticalAlignment="Top" Width="100" Click="botaoLogin_Click"/>
         <Button x:Name="BImagem" Content="Imagem" HorizontalAlignment="Left" Height="78" Margin="30,187,0,0" VerticalAlignment="Top" Width="100" Click="BImagem_Click"/>
+        <Button Content="MenuAluno" x:Name="BtnMenuAluno" HorizontalAlignment="Left" Height="32" Margin="30,294,0,0" VerticalAlignment="Top" Width="96" Click="btnMenuAluno_Click"/>
+        <Button Content="MenuEmpresa" x:Name="BtnMenuEmpresa" HorizontalAlignment="Left" Height="28" Margin="30,344,0,0" VerticalAlignment="Top" Width="120" Click="btnMenuEmpresa_Click"/>
+        <Button Content="MenuCoordenador" x:Name="BtnMenuCoordenador" HorizontalAlignment="Left" Height="28" Margin="30,385,0,0" VerticalAlignment="Top" Width="150" Click="BtnMenuCoordenador_Click"/>
+        <Button Content="MenuAdministrador" x:Name="BtnMenuAdm" HorizontalAlignment="Left" Height="30" Margin="30,422,0,0" VerticalAlignment="Top" Width="167" Click="BtnMenuAdm_Click"/>
     </Grid>
 </Window>

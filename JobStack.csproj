@@ -73,6 +73,18 @@
     <Compile Include="TLogin.xaml.cs">
       <DependentUpon>TLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TMenuAdministrador.xaml.cs">
+      <DependentUpon>TMenuAdministrador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TMenuAluno.xaml.cs">
+      <DependentUpon>TMenuAluno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TMenuCoordenador.xaml.cs">
+      <DependentUpon>TMenuCoordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TMenuEmpresa.xaml.cs">
+      <DependentUpon>TMenuEmpresa.xaml</DependentUpon>
+    </Compile>
     <Page Include="BatePapo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -126,6 +138,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TMenuAdministrador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TMenuAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TMenuCoordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TMenuEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackEnd\Mensagem.cs" />
@@ -170,6 +198,21 @@
     <Resource Include="Imagens\dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png" />
     <Resource Include="Imagens\f7b6822a-38f7-4974-bb0f-acda7e4b1916.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icones\icon analisar.png" />
+    <Resource Include="Icones\icon cad_usuarios.png" />
+    <Resource Include="Icones\icon inscricoes.png" />
+    <Resource Include="Icones\icon logout .png" />
+    <Resource Include="Icones\icon menu bar 2.png" />
+    <Resource Include="Icones\icon menu bar.png" />
+    <Resource Include="Icones\icon notifications 2.png" />
+    <Resource Include="Icones\icon perfil.png" />
+    <Resource Include="Icones\icon search.png" />
+    <Resource Include="Icones\icon usuarios.png" />
+    <Resource Include="Icones\icon vagas.png" />
+    <Resource Include="Icones\icon-jobstack.png" />
+    <Resource Include="Icones\icon_chat.png" />
+    <Resource Include="Icones\logo-versao-3-ajustada.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,8 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("73027003-bd4d-4c64-8d94-2fcf04792ed6.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("f7b6822a-38f7-4974-bb0f-acda7e4b1916.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20analisar.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20cad_usuarios.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20inscricoes.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20logout%20.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20menu%20bar%202.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20menu%20bar.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20notifications%202.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20perfil.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20search.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20usuarios.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20vagas.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon-jobstack.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon_chat.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/logo-versao-3-ajustada.png")]
 
 

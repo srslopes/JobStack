@@ -218,3 +218,17 @@ C:\Users\SaMuK\source\repos\JobStack\obj\Debug\ChatFiller.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\telaLogin.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TesteImagem.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TLogin.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\ChatFiller.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\telaLogin.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TesteImagem.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMenuAdministrador.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMenuAluno.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMenuCoordenador.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMenuEmpresa.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\ChatFiller.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\telaLogin.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TesteImagem.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMenuAdministrador.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMenuAluno.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMenuCoordenador.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMenuEmpresa.baml

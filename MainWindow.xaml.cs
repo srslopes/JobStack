@@ -45,5 +45,29 @@ namespace JobStack
           TesteImagem x = new TesteImagem();
             x.Show();
         }
+
+        private void btnMenuAluno_Click(object sender, RoutedEventArgs e)
+        {
+            TMenuAluno x = new TMenuAluno();
+            x.Show();
+        }
+
+        private void btnMenuEmpresa_Click(object sender, RoutedEventArgs e)
+        {
+            TMenuEmpresa s = new TMenuEmpresa();
+            s.Show();
+        }
+
+        private void BtnMenuCoordenador_Click(object sender, RoutedEventArgs e)
+        {
+            TMenuCoordenador a = new TMenuCoordenador();
+            a.Show();
+        }
+
+        private void BtnMenuAdm_Click(object sender, RoutedEventArgs e)
+        {
+            TMenuAdministrador i = new TMenuAdministrador();
+            i.Show();
+        }
     }
 }

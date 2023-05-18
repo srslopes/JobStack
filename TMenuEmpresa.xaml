@@ -1,0 +1,359 @@
+﻿<Window x:Class="JobStack.TMenuEmpresa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JobStack"
+        mc:Ignorable="d"
+        Title="TMenuEmpresa" 
+        Height="629.333" 
+        Width="960"
+        ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="False">
+    <Window.Resources>
+        <!-- Definindo estilo dos textos -->
+        <Style x:Key="font_style" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment"
+                    Value="Center"/>
+            <Setter Property="FontSize"
+                    Value="20"/>
+        </Style>
+        <!-- Configurando o estilo do botão do menu -->
+        <ImageBrush x:Key="tb_mouse_over"
+                    ImageSource="Icones/icon menu bar 2.png"/>
+        <Style x:Key="tb_style" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True"></Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_mouse_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_mouse_over}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_mouse_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_mouse_over}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Definindo estilo dos tooltips -->
+        <Style TargetType="ToolTip" x:Key="tt_style">
+            <Setter Property="Placement" Value="Right"/>
+            <Setter Property="Margin" Value="20, 0, 0, 0"/>
+            <Setter Property="Background" Value="#FF003964"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="PlacementRectangle" Value="60, 0, 0, 0"/>
+            <Setter Property="HorizontalOffset" Value="15"/>
+            <Setter Property="VerticalOffset" Value="6"/>
+            <Setter Property="HasDropShadow" Value="True"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Border CornerRadius="20" BorderThickness="0" Background="Transparent">
+        <Grid>
+            <!-- Definindo cor de fundo da janela -->
+            <Grid Background="#FFD9EBFB">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="11*"/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="barra_menu"
+                  HorizontalAlignment="Left"
+                  Width="70">
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF003964" Offset="0"/>
+                            <GradientStop Color="#FF04121D" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <StackPanel x:Name="panel_btnmenu">
+                        <Grid Height="88.667">
+                            <!-- Criando o botão que diminui e expande o menu -->
+                            <ToggleButton x:Name="BotaoMenu"
+                                      Grid.Column="0"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Left"
+                                      Margin="15,25.998,0,22.669"
+                                      Height="40"
+                                      Width="40"
+                                      BorderThickness="0"
+                                      Style="{StaticResource tb_style}" Unchecked="BotaoMenu_Unchecked">
+                                <ToggleButton.Background>
+                                    <ImageBrush ImageSource="Icones/icon menu bar.png"
+                                            Stretch="Uniform"/>
+                                </ToggleButton.Background>
+                                <!-- Programando as animações para diminuir e expandir o menu -->
+                                <ToggleButton.Triggers>
+                                    <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                        <BeginStoryboard>
+                                            <Storyboard x:Name="DiminuiMenu">
+                                                <DoubleAnimation
+                                                Storyboard.TargetName="barra_menu"
+                                                Storyboard.TargetProperty="Width"
+                                                BeginTime="0:0:0"
+                                                From="250" To="70"
+                                                Duration="0:0:0:0.3"></DoubleAnimation>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                        <BeginStoryboard>
+                                            <Storyboard x:Name="ExpandeMenu">
+                                                <DoubleAnimation
+                                                Storyboard.TargetName="barra_menu"
+                                                Storyboard.TargetProperty="Width"
+                                                BeginTime="0:0:0"
+                                                From="70" To="250"
+                                                Duration="0:0:0:0.3"></DoubleAnimation>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </ToggleButton.Triggers>
+                            </ToggleButton>
+
+                        </Grid>
+                        <Grid
+                            Height="60"
+                            Width="250" 
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                            <Image Source="Icones/icon-jobstack.png"
+                                   Width="250"
+                                   Height="65"
+                                   HorizontalAlignment="Left" Margin="11,-9,-11,0" VerticalAlignment="Top">
+
+                            </Image>
+
+                        </Grid>
+                        <ListView x:Name="ItensMenu"
+                              Background="Transparent"
+                              BorderBrush="Transparent" Height="542.167">
+
+
+                            <!-- NOTIFICAÇÕES -->
+                            <ListViewItem HorizontalAlignment="Left"
+                                      Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
+                                <Grid x:Name="LVbtnNotificacoes"
+                                      Width="250"
+                                      Height="50"
+                                      HorizontalAlignment="Left">
+                                    <Image Source="Icones/icon notifications 2.png"
+                                          x:Name="iconBtnNotifications"
+                                          Width="40.75"
+                                          Stretch="UniformToFill"
+                                          HorizontalAlignment="Left" Margin="7.925,4.5,0,2"
+                                         />
+                                    <TextBlock x:Name="txtBtnNotificacoes"
+                                               Width="250"
+                                               Height="50"
+                                               FontFamily="Century Gothic"
+                                               FontSize="18"
+                                               Foreground="White"
+                                               Text="NOTIFICAÇÕES"
+                                               VerticalAlignment="Center"
+                                               Padding="62, 13, 0, 0">
+                                    </TextBlock>
+                                </Grid>
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tt_notificacoes"
+                                             Content="Notificações"
+                                             Style="{StaticResource tt_style}"
+                                             Width="140"
+                                             Height="50"/>
+                                </ListViewItem.ToolTip>
+                            </ListViewItem>
+                            <!-- CHAT -->
+                            <ListViewItem HorizontalAlignment="Left"
+                                      Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
+                                <Grid x:Name="LVBtnChat"
+                                      Width="250"
+                                      Height="50"
+                                      HorizontalAlignment="Left">
+                                    <Image Source="Icones/icon_chat.png"
+                                           Stretch="UniformToFill"
+                                           HorizontalAlignment="Left"
+                                           Width="40"
+                                           Height="40" Margin="9.158,3.664,0,6.335"/>
+                                    <TextBlock x:Name="txtBtnChat"
+                                               Width="250"
+                                               Height="50"
+                                               FontFamily="Century Gothic"
+                                               Text="CHAT"
+                                               Foreground="White"
+                                               FontSize="18"
+                                               VerticalAlignment="Center"
+                                               Padding="62, 13, 0, 0"
+                                               >
+
+                                    </TextBlock>
+                                </Grid>
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tt_chat"
+                                             Content="Chat"
+                                             Style="{StaticResource tt_style}"
+                                             Width="90"
+                                             Height="50"/>
+                                </ListViewItem.ToolTip>
+                            </ListViewItem>
+
+                            <!--VAGAS-->
+                            <ListViewItem HorizontalAlignment="Left" Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
+                                <Grid x:Name="LVBtnVagas"
+                                      Width="250"
+                                      Height="50"
+                                      HorizontalAlignment="Left">
+                                    <Image Source="Icones/icon vagas.png"
+                                           Stretch="UniformToFill"
+                                           HorizontalAlignment="Left"
+                                           Width="38" Margin="12,6.002,0,8.998"/>
+                                    <TextBlock x:Name="txtBtnVagas"
+                                               Width="250"
+                                               Height="50"
+                                               HorizontalAlignment="Left"
+                                               Text="VAGAS"
+                                               FontFamily="Century Gothic"
+                                               FontSize="18"
+                                               Foreground="White"
+                                               VerticalAlignment="Center"
+                                               Padding="62, 13, 0, 0"
+                                               >
+
+                                    </TextBlock>
+                                </Grid>
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tt_vagas"
+                                             Content="Vagas"
+                                             Style="{StaticResource tt_style}"
+                                             Width="100"
+                                             Height="50"/>
+                                </ListViewItem.ToolTip>
+                            </ListViewItem>
+
+                            <!--MEU PERFIL-->
+                            <ListViewItem HorizontalAlignment="Left" Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
+                                <Grid x:Name="LVBtnPerfil"
+                                      Width="250"
+                                      Height="50"
+                                      HorizontalAlignment="Center"
+                                                                    >
+                                    <Image Source="Icones/icon perfil.png"
+                                       Stretch="UniformToFill"
+                                       HorizontalAlignment="Left"
+                                       Width="38.5" Margin="14.674,6.085,0,5.416"/>
+                                    <TextBlock x:Name="txtBtnPerfil"
+                                           Height="50"
+                                           Width="250"
+                                           Text="MEU PERFIL"
+                                           FontFamily="Century Gothic"
+                                           FontSize="18"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"
+                                           Padding="65, 13, 0, 0"
+                                           />
+                                </Grid>
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tt_perfil"
+                                             Content="Meu perfil"
+                                             Style="{StaticResource tt_style}"
+                                             Width="110"
+                                             Height="50"/>
+                                </ListViewItem.ToolTip>
+                            </ListViewItem>
+
+                            <!--LOG OUT-->
+                            <ListViewItem HorizontalAlignment="Left" Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
+                                <Grid x:Name="LVBtnLogout"
+                                      Width="250"
+                                      Height="50"
+                                      HorizontalAlignment="Left">
+                                    <Image Source="Icones/icon logout .png"
+                                             Width="40"
+                                             Height="40"
+                                             Stretch="UniformToFill"
+                                             HorizontalAlignment="Left" Margin="10.655,5.662,0,4.337"/>
+                                    <TextBlock x:Name="txtBtnLogout"
+                                               Height="50"
+                                               Width="250"
+                                               Text="LOG OUT/SAIR"
+                                               FontFamily="Century Gothic"
+                                               FontSize="18"
+                                               Foreground="White"
+                                               VerticalAlignment="Center"
+                                               Padding="60, 13, 0, 0">
+
+                                    </TextBlock>
+                                </Grid>
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tt_logout"
+                                             Content="Sair"
+                                             Style="{StaticResource tt_style}"
+                                             Width="90"
+                                             Height="50"/>
+                                </ListViewItem.ToolTip>
+                            </ListViewItem>
+
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                                <Border x:Name="borda"
+                                                        Height="60"
+                                                        Width="250"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                                        Background="{TemplateBinding Background}"
+                                                        Padding="{TemplateBinding Padding}"
+                                                        SnapsToDevicePixels="True">
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <MultiTrigger>
+                                                        <MultiTrigger.Conditions>
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+                                                        </MultiTrigger.Conditions>
+                                                        <Setter Property="Background"
+                                                                TargetName="borda"
+                                                                Value="#014C85"/>
+                                                        <Setter Property="BorderBrush"
+                                                                TargetName="borda"
+                                                                Value="#014C85"/>
+
+                                                    </MultiTrigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                        </ListView>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
