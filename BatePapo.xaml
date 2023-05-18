@@ -130,7 +130,7 @@
             </TextBox>
 
         </Grid>
-        <TextBox x:Name="ID" HorizontalAlignment="Left" Height="19.5" Margin="42.667,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98.666"/>
+        <TextBox x:Name="ID" HorizontalAlignment="Left" Height="19.5" Margin="42.667,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98.666" KeyDown="ID_KeyDown"/>
         <Button VerticalAlignment="Top" HorizontalAlignment="Left" Width="30" Height="20" Margin="150,0,0,0" Content="OK" Click="Button_Click">
             
         </Button>

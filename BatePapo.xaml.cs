@@ -120,6 +120,15 @@ namespace JobStack
             attContatos();
         }
 
+        private void ID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.Key == Key.Enter) || (e.Key == Key.Return))
+            {
+                BancodeDados.SetIdUser(int.Parse(ID.Text));
+                attContatos();
+            }            
+        }
+
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
             if ((idChat != -1) && ((e.Key == Key.Enter)||(e.Key == Key.Return)))
@@ -138,5 +147,6 @@ namespace JobStack
                 CaixaDeTexto.Text = "";
             }
         }
+        
     }
 }

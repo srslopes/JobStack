@@ -405,11 +405,15 @@ namespace JobStack
             Coordenador n3 = new Coordenador(emails[6], senhas[6]);
             Coordenador n4 = new Coordenador(emails[7], senhas[7]);
 
-            
+            IdUser = 101;
+            Chat c = new Chat(1);
+            IdUser = 0;
 
-            //Aluno n1 = new Aluno(emails[i], senhas[i]);
+            Aluno n5 = new Aluno(emails[0], senhas[0]);
+            Aluno n6 = new Aluno(emails[1], senhas[1]);
 
-            //Empresa n2 = new Empresa(emails[i + 2], senhas[i + 2]);
+            Empresa n7 = new Empresa(emails[2], senhas[2]);
+            Empresa n8 = new Empresa(emails[3], senhas[3]);
         }
         //----------------------------------- Métodos - Vagas ---------------------------------------------------------
 

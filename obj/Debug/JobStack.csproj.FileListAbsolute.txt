@@ -209,3 +209,12 @@ C:\Users\BRUNO\Documents\JobStack\obj\Debug\telaLogin.g.cs
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\telaLogin.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\telaLogin.g.cs
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\telaLogin.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\ChatFiller.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\telaLogin.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TesteImagem.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TLogin.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\App.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\ChatFiller.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\telaLogin.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TesteImagem.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TLogin.baml
