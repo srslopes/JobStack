@@ -31,32 +31,6 @@ namespace JobStack
             Cabecalho.Visibility = Visibility.Hidden;
             idChat = -1;
             BancodeDados.SetIdUser(1001);
-            Chat n2 = new Chat(6001);
-            Chat n3 = new Chat(6002);
-            Chat n7 = new Chat(1);
-            Chat n8 = new Chat(101);
-            n2.NovaMensagem("Hey c");
-            n3.NovaMensagem("Opa d");
-            n7.NovaMensagem("Hey");
-            n8.NovaMensagem("Opa");
-            BancodeDados.SetIdUser(1002);
-            Chat n4 = new Chat(6001);
-            Chat n5 = new Chat(6002);
-            n4.NovaMensagem("Bom dia c");
-            n5.NovaMensagem("Oi d");
-            BancodeDados.SetIdUser(6001);
-            n2.NovaMensagem("Oi a");
-            BancodeDados.SetIdUser(6002);
-            n3.NovaMensagem("Hey a");
-            BancodeDados.SetIdUser(1001);
-            n2.NovaMensagem("Td certo, c?");
-            n3.NovaMensagem("Td ok, d?");
-            BancodeDados.SetIdUser(1002);
-            BancodeDados.SetIdUser(6001);
-            n2.NovaMensagem("cerrtissimo, a");
-            BancodeDados.SetIdUser(6002);
-            n3.NovaMensagem("Td, a");
-            BancodeDados.SetIdUser(1001);
             attContatos();
 
         }

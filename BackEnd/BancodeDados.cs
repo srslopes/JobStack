@@ -75,17 +75,9 @@ namespace JobStack
             proxIdCoordenador = 100;
             proxIdVaga = 0;
             IdUser = 0;
-            for (int i = 0; i < 2; i++) //Popula o banco de dados com os usuarios
-            {
-                Admin n3 = new Admin(emails[i + 4], senhas[i + 4]);
-
-                Coordenador n4 = new Coordenador(emails[i + 6], senhas[i + 6]);
-
-                Aluno n1 = new Aluno(emails[i], senhas[i]);
-
-                Empresa n2 = new Empresa(emails[i + 2], senhas[i + 2]);              
-
-            }
+            
+            PopularUsuarios();
+            PopularChat();
         }
 
 
@@ -405,6 +397,20 @@ namespace JobStack
             IdUser = id;
         }
 
+        private void PopularUsuarios()
+        {
+            Admin n1 = new Admin(emails[4], senhas[4]);
+            Admin n2 = new Admin(emails[5], senhas[5]);
+
+            Coordenador n3 = new Coordenador(emails[6], senhas[6]);
+            Coordenador n4 = new Coordenador(emails[7], senhas[7]);
+
+            
+
+            //Aluno n1 = new Aluno(emails[i], senhas[i]);
+
+            //Empresa n2 = new Empresa(emails[i + 2], senhas[i + 2]);
+        }
         //----------------------------------- Métodos - Vagas ---------------------------------------------------------
 
         public static void AdicionarVaga(Vaga vaga)                  //Método para adicionar um novo aluno ao banco de dados,
@@ -478,6 +484,19 @@ namespace JobStack
         {
             ChatsCoord = lista;
         }
+         private static void PopularChat()
+        {
+            
+            BancodeDados.SetIdUser(1001);
+            Chat n2 = new Chat(6001);
+            Chat n3 = new Chat(6002);            
+            BancodeDados.SetIdUser(1002);
+            Chat n4 = new Chat(6001);
+            Chat n5 = new Chat(6002);            
+            BancodeDados.SetIdUser(0);
+           
+        }
+
         //--------------------------------------- Métodos - Imagens --------------------------------------------------------
 
 

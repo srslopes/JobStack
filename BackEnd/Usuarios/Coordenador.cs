@@ -16,10 +16,15 @@ namespace JobStack
             SetSenha(p);
             SetIdImg(1);
             BancodeDados.AdicionarCoordenador(this);
-            BancodeDados.SetIdUser(GetID());
-            Chat adm = new Chat(1);
+            
         }
-       
+        public new void AddTopo(int id)
+        {
+            GetChats().Remove(id);
+            if (GetChats().Count < 2) GetChats().Add(id);
+            else GetChats().Insert(1, id);
+        }
+
 
     }
 }
