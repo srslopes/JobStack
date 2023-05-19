@@ -31,8 +31,12 @@ namespace JobStack
         {
             Mensagem msg = new Mensagem(mensagem);
             Mensagens.Add(msg);
-            if (participante1 > 1000 || (participante1 < 1000 && participante2 < 100)) ((Usuario)BancodeDados.BuscarUsuario(participante1)).AddTopo(id);
-            if (participante2 > 1000 || (participante2 < 1000 && participante1 < 100)) ((Usuario)BancodeDados.BuscarUsuario(participante2)).AddTopo(id);
+            if (participante1 > 1000 && participante2 > 1000)
+            {
+                ((Usuario)BancodeDados.BuscarUsuario(participante1)).AddTopo(id);
+                ((Usuario)BancodeDados.BuscarUsuario(participante2)).AddTopo(id);
+            }
+
             if (BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(participante1).GetType().ToString())) notificacoes2++;
             else notificacoes1++;
         }
