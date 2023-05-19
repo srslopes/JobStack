@@ -27,9 +27,22 @@ namespace JobStack
         {
             InitializeComponent();
             Passo1();
+            InicializarComboBox();
             textBoxEmail.Focus();
         }
+        private void InicializarComboBox()
+        {
+            // Verifica se o combobox já possui itens antes de adicioná-los
+            if (erro.Items.Count == 0)
+            {
+                // Adiciona os itens "Esqueci meu email", "Esqueci minha senha" e "Solicitar cadastro"
+                erro.Items.Add("Esqueci meu email");
+                erro.Items.Add("Esqueci minha senha ");
+                erro.Items.Add("Solicitar cadastro ");
+                erro.SelectedIndex = 0;
 
+            }
+        }
         private void Passo1()
         {
             // Limpa os campos de email e senha
@@ -43,17 +56,7 @@ namespace JobStack
             textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
         }
 
-        private void InicializarComboBox()
-        {
-            // Verifica se o combobox já possui itens antes de adicioná-los
-            if (comboBoxErro.Items.Count == 0)
-            {
-                // Adiciona os itens "Esqueci meu email", "Esqueci minha senha" e "Solicitar cadastro"
-                comboBoxErro.Items.Add("Esqueci meu email");
-                comboBoxErro.Items.Add("Esqueci minha senha ");
-                comboBoxErro.Items.Add("Solicitar cadastro ");
-            }
-        }
+       
         // Método para validar o email inserido pelo usuário
         private void Email()
         {
@@ -85,6 +88,25 @@ namespace JobStack
                 {
                     // Exibe o painel de senha e esconde o painel de email
                     gridSenha.Visibility = Visibility.Visible;
+                    textBlockEmailDaPessoa.Visibility = Visibility.Visible;
+                    gridSenha.Margin = gridEmail.Margin;
+                    textBlockCondiçãoSenha.Margin = textBlockCondiçãoEmail.Margin;
+                    passwordBoxSenha.Margin = textBoxEmail.Margin;
+                    textBlockSenha.Margin = textBlockEmail.Margin;
+                    botãoLogin.Margin=botãoPróximoLogin.Margin;
+                    passwordBoxSenha.Width= textBoxEmail.Width;
+                    textBlockSenha.Width = textBlockEmail.Width;
+                    textBlockCondiçãoSenha.Width = textBlockCondiçãoEmail.Width;
+                    botãoLogin.Width = botãoPróximoLogin.Width;
+                    textBlockSenha.UseLayoutRounding = textBlockEmail.UseLayoutRounding;
+                    // Defina as margens corretas para o textBlockEmailDaPessoa
+                    textBlockEmailDaPessoa.Margin = new Thickness(
+    textBlockEmailDaPessoa.Margin.Left - 20,   // Subtrai um valor da margem esquerda existente
+    textBlockSenha.Margin.Top - textBlockEmailDaPessoa.ActualHeight - 5,  // Define a margem superior acima do textBlockSenha
+                        textBlockEmailDaPessoa.Margin.Right,  // Mantém a margem direita existente
+                        textBlockEmailDaPessoa.Margin.Bottom   // Mantém a margem inferior existente
+                    );
+
                 }
                 else
                 {
@@ -171,7 +193,7 @@ namespace JobStack
         {
             // Verifica se o usuário selecionou a primeira opção no ComboBox1
 
-            if (comboBoxErro.SelectedIndex == 0)
+            if (erro.SelectedIndex == 0)
             {
                 // Esconde o label CondicaoEmailS e limpa o campo de email
 
@@ -275,7 +297,7 @@ namespace JobStack
             condiçãoEmailProblema.Visibility = Visibility.Hidden;
 
             // Verifica se há algum erro selecionado no campo "erro".
-            if (comboBoxErro.SelectedItem != null)
+            if (erro.SelectedItem != null)
             {
                 // Se houver algum erro selecionado, informa que a mensagem foi enviada para o email
                 // e exibe uma mensagem de sucesso ao usuário.

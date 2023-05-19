@@ -279,3 +279,15 @@ C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\Teste
 C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\TAdmin.g.cs
 C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\TesteLogin.baml
 C:\Users\pedri\OneDrive\Documentos\GitHub repositórios\JobStack\obj\Debug\TAdmin.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TAdmin.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TesteLogin.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuAdministrador.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuAluno.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuCoordenador.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuEmpresa.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TAdmin.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TesteLogin.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuAdministrador.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuAluno.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuCoordenador.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuEmpresa.baml
