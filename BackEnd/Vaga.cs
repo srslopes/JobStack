@@ -10,8 +10,11 @@ namespace JobStack
     {
         private int ID;                 //ID de 4 digitos, se o primeiro digito for 0 a vaga ainda não foi aprovada
         private int IdEmpresa;
+        private string nome;
+        private string descricao;
         private List<int> Inscritos;
         private int status;
+
         //         Status
         // 0 : Aguardando aprovação
         // 1 : Aprovação rejeitada
@@ -23,6 +26,8 @@ namespace JobStack
             IdEmpresa = idEmpresa;                  //Status estabelecido como "Aguardando Aprovação"
             Inscritos = new List<int>();
             status = 0;
+            nome = "";
+            descricao = "";
             BancodeDados.AdicionarVaga(this);
         }
         
@@ -78,5 +83,23 @@ namespace JobStack
             }
         }
 
+        public void SetNome(string nome)
+        {
+
+        }
+
+        public string getNome()
+        {
+            return nome;
+        }
+        public void SetDescricao(string nome)
+        {
+
+        }
+
+        public string getDescricao()
+        {
+            return descricao;
+        }
     }
 }
