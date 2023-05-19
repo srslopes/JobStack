@@ -147,6 +147,10 @@ namespace JobStack
                 CaixaDeTexto.Text = "";
             }
         }
-   
+
+        private void ID_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

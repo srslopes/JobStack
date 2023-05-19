@@ -86,26 +86,7 @@ namespace JobStack
             {
                 if (BancodeDados.GetStatusUsuario(id))
                 {
-                    // Exibe o painel de senha e esconde o painel de email
-                    gridSenha.Visibility = Visibility.Visible;
-                    textBlockEmailDaPessoa.Visibility = Visibility.Visible;
-                    gridSenha.Margin = gridEmail.Margin;
-                    textBlockCondiçãoSenha.Margin = textBlockCondiçãoEmail.Margin;
-                    passwordBoxSenha.Margin = textBoxEmail.Margin;
-                    textBlockSenha.Margin = textBlockEmail.Margin;
-                    botãoLogin.Margin=botãoPróximoLogin.Margin;
-                    passwordBoxSenha.Width= textBoxEmail.Width;
-                    textBlockSenha.Width = textBlockEmail.Width;
-                    textBlockCondiçãoSenha.Width = textBlockCondiçãoEmail.Width;
-                    botãoLogin.Width = botãoPróximoLogin.Width;
-                    textBlockSenha.UseLayoutRounding = textBlockEmail.UseLayoutRounding;
-                    // Defina as margens corretas para o textBlockEmailDaPessoa
-                    textBlockEmailDaPessoa.Margin = new Thickness(
-    textBlockEmailDaPessoa.Margin.Left - 20,   // Subtrai um valor da margem esquerda existente
-    textBlockSenha.Margin.Top - textBlockEmailDaPessoa.ActualHeight - 5,  // Define a margem superior acima do textBlockSenha
-                        textBlockEmailDaPessoa.Margin.Right,  // Mantém a margem direita existente
-                        textBlockEmailDaPessoa.Margin.Bottom   // Mantém a margem inferior existente
-                    );
+                  
 
                 }
                 else
@@ -113,6 +94,32 @@ namespace JobStack
 
                 }
                 // Método executado quando o botão "Entrar" é clicado
+                // Exibe o painel de senha e esconde o painel de email
+                gridSenha.Visibility = Visibility.Visible;
+                textBlockEmailDaPessoa.Visibility = Visibility.Visible;
+                gridSenha.Margin = gridEmail.Margin;
+                textBlockCondiçãoSenha.Margin = textBlockCondiçãoEmail.Margin;
+                passwordBoxSenha.Margin = textBoxEmail.Margin;
+                textBlockSenha.Margin = textBlockEmail.Margin;
+                botãoLogin.Margin = botãoPróximoLogin.Margin;
+                passwordBoxSenha.Width = textBoxEmail.Width;
+                textBlockSenha.Width = textBlockEmail.Width;
+                textBlockCondiçãoSenha.Width = textBlockCondiçãoEmail.Width;
+                botãoLogin.Width = botãoPróximoLogin.Width;
+                textBlockSenha.UseLayoutRounding = textBlockEmail.UseLayoutRounding;
+                // Defina as margens corretas para o textBlockEmailDaPessoa
+                textBlockEmailDaPessoa.Margin = new Thickness(
+textBlockEmailDaPessoa.Margin.Left - 20,   // Subtrai um valor da margem esquerda existente
+textBlockSenha.Margin.Top - textBlockEmailDaPessoa.ActualHeight - 5,  // Define a margem superior acima do textBlockSenha
+                    textBlockEmailDaPessoa.Margin.Right,  // Mantém a margem direita existente
+                    textBlockEmailDaPessoa.Margin.Bottom   // Mantém a margem inferior existente
+                );
+                gridEmail.Visibility = Visibility.Hidden;
+                textBlockCondiçãoSenha.Visibility= Visibility.Hidden;
+                botãoVoltar.Visibility = Visibility.Visible;
+                textBlockEmailDaPessoa.Text = textBoxEmail.Text;
+
+
             }
         }
         private void Senha()
@@ -311,6 +318,24 @@ namespace JobStack
             gridSenha.Visibility = Visibility.Hidden;
             botãoVoltar.Visibility = Visibility.Visible;
             textBlockSuporteTécnico.Visibility = Visibility.Hidden;
+        }
+
+        private void TextBoxEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.Key == Key.Enter) || (e.Key == Key.Return))
+            {
+
+                Email();
+            }
+        }
+
+        private void PasswordBoxSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.Key == Key.Enter) || (e.Key == Key.Return))
+            {
+
+                Senha();
+            }
         }
     }
 }

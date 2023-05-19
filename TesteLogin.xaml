@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <Grid x:Name="gridEmail" Margin="45,67,46,225" Grid.Column="1">
             <TextBlock x:Name="textBlockEmail" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Insira o seu e-mail" VerticalAlignment="Top" Height="25" Width="132" FontSize="16"/>
-            <TextBox x:Name="textBoxEmail" HorizontalAlignment="Center" Margin="0,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="textBoxEmail" HorizontalAlignment="Center" Margin="0,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184" TextChanged="TextBox_TextChanged" KeyDown="TextBoxEmail_KeyDown"/>
             <TextBlock x:Name="textBlockCondiçãoEmail" HorizontalAlignment="Center" Margin="0,58,0,0" TextWrapping="Wrap" Text="Condição email" VerticalAlignment="Top" FontSize="16"/>
             <Button x:Name="botãoPróximoLogin" Content="Próximo" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="botãoPróximoLogin_Click"/>
         </Grid>
@@ -28,7 +28,7 @@
         <Grid x:Name="gridSenha" Margin="45,210,46,70" Grid.Column="1" Visibility="Visible">
 
             <TextBlock x:Name="textBlockSenha" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Insira a sua senha" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.524,-0.139" Grid.ColumnSpan="2"/>
-            <PasswordBox x:Name="passwordBoxSenha" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2" />
+            <PasswordBox x:Name="passwordBoxSenha" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2" KeyDown="PasswordBoxSenha_KeyDown" />
             <TextBlock x:Name="textBlockCondiçãoSenha" HorizontalAlignment="Center" Margin="0,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição senha" Grid.ColumnSpan="2"/>
             <Button x:Name="botãoLogin" Content="Login" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="botãoLogin_Click" Grid.ColumnSpan="2"/>
             <TextBlock x:Name="textBlockEmailDaPessoa" HorizontalAlignment="Center" Margin="0,0,31,0" TextWrapping="Wrap" Text="Email da pessoa" VerticalAlignment="Top" FontSize="16" Width="247"/>
