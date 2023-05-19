@@ -64,11 +64,14 @@
     <Compile Include="ChatFiller.xaml.cs">
       <DependentUpon>ChatFiller.xaml</DependentUpon>
     </Compile>
-    <Compile Include="telaLogin.xaml.cs">
-      <DependentUpon>telaLogin.xaml</DependentUpon>
+    <Compile Include="TAdmin.xaml.cs">
+      <DependentUpon>TAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="TesteImagem.xaml.cs">
       <DependentUpon>TesteImagem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TesteLogin.xaml.cs">
+      <DependentUpon>TesteLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="TLogin.xaml.cs">
       <DependentUpon>TLogin.xaml</DependentUpon>
@@ -126,11 +129,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="telaLogin.xaml">
+    <Page Include="TAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TesteImagem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesteLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

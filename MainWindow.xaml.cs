@@ -35,7 +35,7 @@ namespace JobStack
 
         private void botaoLogin_Click(object sender, RoutedEventArgs e)
         {
-            telaLogin x = new telaLogin();
+            TesteLogin x = new TesteLogin();
             x.Show();
             this.Hide();
         }
