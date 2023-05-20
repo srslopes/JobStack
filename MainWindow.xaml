@@ -17,5 +17,6 @@
         <Button Content="MenuCoordenador" x:Name="BtnMenuCoordenador" HorizontalAlignment="Left" Height="28" Margin="30,385,0,0" VerticalAlignment="Top" Width="150" Click="BtnMenuCoordenador_Click"/>
         <Button Content="MenuAdministrador" x:Name="BtnMenuAdm" HorizontalAlignment="Left" Height="30" Margin="30,422,0,0" VerticalAlignment="Top" Width="167" Click="BtnMenuAdm_Click"/>
         <Button Content="Pesquisar (aluno)" x:Name="BtnPesquisar" HorizontalAlignment="Left" Height="30" Margin="30,465,0,0" VerticalAlignment="Top" Width="167" Click="BtnPesquisar_Click"/>
+        <Button Content="Tela Vagas (empresa)" x:Name="BtnVagaEmpresa" HorizontalAlignment="Left" Height="31" Margin="30,506,0,0" VerticalAlignment="Top" Width="167" Click="BtnVagaEmpresa_Click"/>
     </Grid>
 </Window>

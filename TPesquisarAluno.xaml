@@ -8,6 +8,7 @@
         Title="Pesquisar vaga" 
         Height="600" 
         Width="960"
+        ResizeMode="NoResize"
         Background="#FFD9EBFB">
     <Window.Resources>
         <!-- ESTILO DA TEXTBOX DA BARRA DE PESQUISA -->

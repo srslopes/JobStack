@@ -91,6 +91,9 @@
     <Compile Include="TPesquisarAluno.xaml.cs">
       <DependentUpon>TPesquisarAluno.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TVagasEmpresa.xaml.cs">
+      <DependentUpon>TVagasEmpresa.xaml</DependentUpon>
+    </Compile>
     <Page Include="BatePapo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -165,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TPesquisarAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TVagasEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
