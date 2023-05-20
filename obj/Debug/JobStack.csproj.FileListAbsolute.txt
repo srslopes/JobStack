@@ -291,3 +291,9 @@ C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuAdministrador.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuAluno.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuCoordenador.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TMenuEmpresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TAdmin.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TesteLogin.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TAdmin.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TesteLogin.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TPesquisarAluno.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TPesquisarAluno.baml

@@ -69,5 +69,11 @@ namespace JobStack
             TMenuAdministrador i = new TMenuAdministrador();
             i.Show();
         }
+
+        private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
+        {
+            TPesquisarAluno a = new TPesquisarAluno();
+            a.Show();
+        }
     }
 }

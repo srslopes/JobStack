@@ -8,19 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20analisar.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20cad_usuarios.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20inscricoes.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20logout%20.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20menu%20bar%202.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20menu%20bar.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20notifications%202.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20perfil.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20search.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20usuarios.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon%20vagas.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon-jobstack.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/icon_chat.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/logo-versao-3-ajustada.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/lupa.png")]
 
 

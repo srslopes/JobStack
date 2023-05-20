@@ -88,6 +88,9 @@
     <Compile Include="TMenuEmpresa.xaml.cs">
       <DependentUpon>TMenuEmpresa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TPesquisarAluno.xaml.cs">
+      <DependentUpon>TPesquisarAluno.xaml</DependentUpon>
+    </Compile>
     <Page Include="BatePapo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -161,6 +164,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TPesquisarAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackEnd\Mensagem.cs" />
@@ -220,6 +227,9 @@
     <Resource Include="Icones\icon-jobstack.png" />
     <Resource Include="Icones\icon_chat.png" />
     <Resource Include="Icones\logo-versao-3-ajustada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\lupa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
