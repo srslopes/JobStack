@@ -313,6 +313,8 @@ textBlockSenha.Margin.Top - textBlockEmailDaPessoa.ActualHeight - 5,  // Define 
         }
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
+            Grid.SetColumn(gridProblema, 1);
+            gridProblema.Margin = gridEmail.Margin;
             gridProblema.Visibility = Visibility.Visible;
             gridEmail.Visibility = Visibility.Hidden;
             gridSenha.Visibility = Visibility.Hidden;
