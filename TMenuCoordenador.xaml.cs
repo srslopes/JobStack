@@ -49,5 +49,16 @@ namespace JobStack
                 tt_analisar.Visibility = Visibility.Visible;
             }
         }
+
+        private void txtBtnAnalisar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "ANALISAR")
+            {
+                TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(analisar);
+            }
+        }
     }
 }

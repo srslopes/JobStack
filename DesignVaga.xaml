@@ -29,7 +29,7 @@
         <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -50,8 +50,8 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>

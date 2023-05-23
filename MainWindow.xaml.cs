@@ -70,16 +70,5 @@ namespace JobStack
             i.Show();
         }
 
-        private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
-        {
-            TPesquisarAluno a = new TPesquisarAluno();
-            a.Show();
-        }
-
-        private void BtnVagaEmpresa_Click(object sender, RoutedEventArgs e)
-        {
-            TVagasEmpresa w = new TVagasEmpresa();
-            w.Show();
-        }
     }
 }

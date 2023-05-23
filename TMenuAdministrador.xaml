@@ -12,7 +12,8 @@
         WindowStyle="SingleBorderWindow"
         Topmost="True"
         WindowStartupLocation="CenterScreen"
-        AllowsTransparency="False">
+        AllowsTransparency="False"
+        >
     <Window.Resources>
         <!-- Definindo estilo dos textos -->
         <Style x:Key="font_style" TargetType="TextBlock">

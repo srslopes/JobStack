@@ -49,5 +49,27 @@ namespace JobStack
         {
 
         }
+
+        private void txtBtnVagas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "VAGAS")
+            {
+                TVagasEmpresa vagas = new TVagasEmpresa();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(vagas);
+            }
+        }
+
+        private void txtBtnNotificacoes_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "NOTIFICAÇÕES")
+            {
+                TNotificacoes notificar = new TNotificacoes();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(notificar);
+            }
+        }
     }
 }

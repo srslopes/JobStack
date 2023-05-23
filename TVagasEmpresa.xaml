@@ -1,68 +1,66 @@
-﻿<Window x:Class="JobStack.TVagasEmpresa"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:JobStack"
-        mc:Ignorable="d"
-        Title="Vagas" 
-        Height="600" 
-        Width="960"
-        ResizeMode="NoResize"
-        Background="#FFD9EBFB">
+﻿<UserControl x:Class="JobStack.TVagasEmpresa"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JobStack"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="890"
+             Background="#FFD9EBFB">
     <Grid>
         <Grid x:Name="GridSubMenu"
               HorizontalAlignment="Center"
               VerticalAlignment="Top"
-              Width="960"
+              Width="890
+              "
               Height="50" 
               Margin="-4,0"
               Background="AliceBlue">
             <Button x:Name="BtnCriar"
-                    Width="192"
+                    Width="178"
                     Height="50"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Background="AliceBlue"
                     Content="CRIAR"
                     FontFamily="Century Gothic"
-                    FontSize="20"/>
+                    FontSize="20" Margin="-1,0,0,0"/>
             <Button x:Name="BtnPendentes"
-                    Width="192"
+                    Width="178"
                     Height="50"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Background="AliceBlue"
                     Content="PENDENTES"
                     FontFamily="Century Gothic"
-                    FontSize="20" Margin="191,0,0,0"/>
+                    FontSize="20" Margin="176,0,0,0"/>
             <Button x:Name="BtnEmAberto"
-                    Width="192"
+                    Width="178"
                     Height="50"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Background="AliceBlue"
                     Content="EM ABERTO"
                     FontFamily="Century Gothic"
-                    FontSize="20" Margin="383,0,0,0"/>
+                    FontSize="20" Margin="353,0,0,0"/>
             <Button x:Name="BtnFinalizadas"
-                    Width="192"
+                    Width="178"
                     Height="50"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Background="AliceBlue"
                     Content="FINALIZADAS"
                     FontFamily="Century Gothic"
-                    FontSize="20" Margin="575,0,0,0"/>
+                    FontSize="20" Margin="530,0,0,0"/>
             <Button x:Name="BtnHistoricoVaga"
-                    Width="192"
+                    Width="183"
                     Height="50"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Background="AliceBlue"
                     Content="HISTÓRICO GERAL"
                     FontFamily="Century Gothic"
-                    FontSize="19" Margin="766,0,0,0"/>
+                    FontSize="19" Margin="707,0,0,0"/>
         </Grid>
         <!-- GRID PARA PUXAR AS PÁGINAS DAS VAGAS E FORMULÁRIOS -->
         <Grid x:Name="GridConteudo"
@@ -83,4 +81,4 @@
             </Rectangle>
         </Grid>
     </Grid>
-</Window>
+</UserControl>

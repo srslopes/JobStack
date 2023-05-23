@@ -64,6 +64,12 @@
     <Compile Include="ChatFiller.xaml.cs">
       <DependentUpon>ChatFiller.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DesignVagaCoordenador.xaml.cs">
+      <DependentUpon>DesignVagaCoordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DesignVaga_Empresa.xaml.cs">
+      <DependentUpon>DesignVaga_Empresa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TAdmin.xaml.cs">
       <DependentUpon>TAdmin.xaml</DependentUpon>
     </Compile>
@@ -88,8 +94,14 @@
     <Compile Include="TMenuEmpresa.xaml.cs">
       <DependentUpon>TMenuEmpresa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TNotificacoes.xaml.cs">
+      <DependentUpon>TNotificacoes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TPesquisarAluno.xaml.cs">
       <DependentUpon>TPesquisarAluno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TSolicitacoesVagasCoordenador.xaml.cs">
+      <DependentUpon>TSolicitacoesVagasCoordenador.xaml</DependentUpon>
     </Compile>
     <Compile Include="TVagasEmpresa.xaml.cs">
       <DependentUpon>TVagasEmpresa.xaml</DependentUpon>
@@ -109,6 +121,14 @@
     <Page Include="DesignVaga.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DesignVagaCoordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DesignVaga_Empresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -167,7 +187,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TNotificacoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TPesquisarAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TSolicitacoesVagasCoordenador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

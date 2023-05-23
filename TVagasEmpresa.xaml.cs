@@ -10,14 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JobStack
 {
     /// <summary>
-    /// Lógica interna para TVagasEmpresa.xaml
+    /// Interação lógica para TVagasEmpresa.xam
     /// </summary>
-    public partial class TVagasEmpresa : Window
+    public partial class TVagasEmpresa : UserControl
     {
         public TVagasEmpresa()
         {

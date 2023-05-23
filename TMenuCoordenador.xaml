@@ -12,7 +12,8 @@
         WindowStyle="SingleBorderWindow"
         Topmost="True"
         WindowStartupLocation="CenterScreen"
-        AllowsTransparency="False">
+        AllowsTransparency="False"
+        Background="#FFD9EBFB">
     <Window.Resources>
         <!-- Definindo estilo dos textos -->
         <Style x:Key="font_style" TargetType="TextBlock">
@@ -74,13 +75,16 @@
     </Window.Resources>
     <Border CornerRadius="20" BorderThickness="0" Background="Transparent">
         <Grid>
-            <!-- Definindo cor de fundo da janela -->
-            <Grid Background="#FFD9EBFB">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="11*"/>
-                </Grid.ColumnDefinitions>
-                
+            <Grid x:Name="ConteudoJanela"
+                  Width="890" 
+                  Height="600"
+                  Margin="70,0,-6,0"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  >
+
+            </Grid>
+            <Grid>
                 <Grid x:Name="barra_menu"
                   HorizontalAlignment="Left"
                   Width="70">
@@ -243,7 +247,7 @@
                                                Foreground="White"
                                                VerticalAlignment="Center"
                                                Padding="62, 13, 0, 0"
-                                               >
+                                               MouseLeftButtonDown="txtBtnAnalisar_MouseLeftButtonDown">
 
                                     </TextBlock>
                                 </Grid>

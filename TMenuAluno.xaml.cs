@@ -51,5 +51,38 @@ namespace JobStack
                 tt_inscricoes.Visibility = Visibility.Visible;
             }
         }
+
+       /* private void txtBtnPesquisa_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if(textBlock.Text == "PESQUISAR VAGA")
+            {
+                TPesquisarAluno pesquisar = new TPesquisarAluno();
+                conteudoFrame.Content = pesquisar;
+            }
+        }*/
+
+
+        private void txtBtnPesquisa_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "PESQUISAR VAGA")
+            {
+                TPesquisarAluno pesquisar = new TPesquisarAluno();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(pesquisar);
+            }
+            }
+
+        private void txtBtnNotificacoes_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "NOTIFICAÇÕES")
+            {
+                TNotificacoes notificar = new TNotificacoes();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(notificar);
+            }
+        }
     }
 }

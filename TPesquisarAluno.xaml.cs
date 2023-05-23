@@ -10,14 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JobStack
 {
     /// <summary>
-    /// Lógica interna para TPesquisarAluno.xaml
+    /// Interação lógica para TPesquisarAluno.xam
     /// </summary>
-    public partial class TPesquisarAluno : Window
+    public partial class TPesquisarAluno : UserControl
     {
         public TPesquisarAluno()
         {
@@ -28,12 +29,11 @@ namespace JobStack
         {
             //oculta o texto da textbox quando o usuário clica pela primeira vez
             TextBox textBox = (TextBox)sender;
-            if(textBox.Text == "Pesquisar")
+            if (textBox.Text == "Pesquisar")
             {
                 textBox.Text = " ";
                 textBox.Foreground = Brushes.Black;
             }
         }
-
     }
 }

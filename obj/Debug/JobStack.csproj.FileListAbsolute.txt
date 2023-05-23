@@ -317,3 +317,11 @@ C:\Users\aluno\Documents\JobStack\obj\Debug\TMenuCoordenador.baml
 C:\Users\aluno\Documents\JobStack\obj\Debug\TMenuEmpresa.baml
 C:\Users\aluno\Documents\JobStack\obj\Debug\TPesquisarAluno.baml
 C:\Users\aluno\Documents\JobStack\obj\Debug\TVagasEmpresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignVagaCoordenador.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignVaga_Empresa.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TSolicitacoesVagasCoordenador.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignVagaCoordenador.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignVaga_Empresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TSolicitacoesVagasCoordenador.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TNotificacoes.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TNotificacoes.baml
