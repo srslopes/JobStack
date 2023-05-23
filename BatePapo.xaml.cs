@@ -76,6 +76,7 @@ namespace JobStack
 
         public void attContatos()
         {
+            Lista.Height = 0;
             idChat = -1;
             Cabecalho.Visibility = Visibility.Hidden;
             Chat.Children.Clear();
