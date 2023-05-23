@@ -18,22 +18,24 @@
             <Button x:Name="botãoPróximoLogin" Content="Próximo" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="botãoPróximoLogin_Click"/>
         </Grid>
         <Grid x:Name="gridProblema" Margin="89,89,27.333,143.667" Visibility="Visible" Grid.Column="0">
-            <TextBlock x:Name="textBlockQualSeuProblema" HorizontalAlignment="Center" Margin="61,10,60,0" TextWrapping="Wrap" Text="Qual o seu problema?" VerticalAlignment="Top" FontSize="16"/>
+            <Button x:Name="botãoVoltarProblema" Content="Voltar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" FontSize="16" Click="botãoVoltar_Click_1" Height="19" RenderTransformOrigin="-2.076,-2.3" Margin="20,7,0,0"/>
+
+            <TextBlock x:Name="textBlockQualSeuProblema" HorizontalAlignment="Center" Margin="76,5,75.667,0" TextWrapping="Wrap" Text="Qual o seu problema?" VerticalAlignment="Top" FontSize="16"/>
             <ComboBox x:Name="erro" HorizontalAlignment="Center" Margin="29,31,29,0" VerticalAlignment="Top" Width="218" SelectionChanged="ComboBox_SelectionChanged"/>
             <TextBlock x:Name="textBlockEmailProblema" HorizontalAlignment="Center" Margin="75,58,75,0" TextWrapping="Wrap" Text="Qual o seu email?" VerticalAlignment="Top" FontSize="16"/>
             <TextBox x:Name="textBoxEmailProblema" HorizontalAlignment="Center" Margin="29,84,29,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" TextChanged="textBoxEmailProblema_TextChanged"/>
             <Button x:Name="botãoEnviarProblema" Content="Enviar" HorizontalAlignment="Center" Margin="101,136,101,0" VerticalAlignment="Top" Width="74" FontSize="16" RenderTransformOrigin="0.747,-0.078" Click="Button_Click"/>
             <TextBlock x:Name="condiçãoEmailProblema" HorizontalAlignment="Center" Margin="29,107,29,62" TextWrapping="Wrap" Text="Condição do email problema" FontSize="16" Width="218"/>
         </Grid>
-        <Grid x:Name="gridSenha" Margin="45,210,46,70" Grid.Column="1" Visibility="Visible">
+        <Grid x:Name="gridSenha" Margin="45,227,46,38" Grid.Column="1" Visibility="Visible">
+            <Button x:Name="botãoVoltar" Content="Voltar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" FontSize="16" Click="botãoVoltar_Click_1" Height="19" RenderTransformOrigin="-2.076,-2.3" Margin="69,2,0,0"/>
 
-            <TextBlock x:Name="textBlockSenha" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Insira a sua senha" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.524,-0.139" Grid.ColumnSpan="2"/>
-            <PasswordBox x:Name="passwordBoxSenha" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2" KeyDown="PasswordBoxSenha_KeyDown" />
-            <TextBlock x:Name="textBlockCondiçãoSenha" HorizontalAlignment="Center" Margin="0,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição senha" Grid.ColumnSpan="2"/>
-            <Button x:Name="botãoLogin" Content="Login" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="botãoLogin_Click" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="textBlockEmailDaPessoa" HorizontalAlignment="Center" Margin="0,0,31,0" TextWrapping="Wrap" Text="Email da pessoa" VerticalAlignment="Top" FontSize="16" Width="247"/>
+            <TextBlock x:Name="textBlockSenha" HorizontalAlignment="Center" Margin="77,26,76,0" TextWrapping="Wrap" Text="Insira a sua senha" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.524,-0.139"/>
+            <PasswordBox x:Name="passwordBoxSenha" HorizontalAlignment="Center" Margin="48,55,46,0" VerticalAlignment="Top" Width="184" KeyDown="PasswordBoxSenha_KeyDown" />
+            <TextBlock x:Name="textBlockCondiçãoSenha" HorizontalAlignment="Center" Margin="77,78,88,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição senha"/>
+            <Button x:Name="botãoLogin" Content="Login" HorizontalAlignment="Center" Margin="94,104,94,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="botãoLogin_Click"/>
+            <TextBlock x:Name="textBlockEmailDaPessoa" HorizontalAlignment="Center" Margin="124,2,-93,0" TextWrapping="Wrap" Text="Email da pessoa" VerticalAlignment="Top" FontSize="16" Width="247"/>
         </Grid>
-        <Button x:Name="botãoVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="264,380,0,0" VerticalAlignment="Top" Width="72" FontSize="16" Click="botãoVoltar_Click_1" Height="25" Grid.Column="1"/>
         <TextBlock x:Name="textBlockSuporteTécnico" HorizontalAlignment="Left" Margin="322,377,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="132" FontSize="16">
         <Hyperlink NavigateUri="http://www.example.com" RequestNavigate="Hyperlink_RequestNavigate">Suporte técnico</Hyperlink>
         </TextBlock>

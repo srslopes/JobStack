@@ -109,11 +109,18 @@ namespace JobStack
                 textBlockSenha.UseLayoutRounding = textBlockEmail.UseLayoutRounding;
                 // Defina as margens corretas para o textBlockEmailDaPessoa
                 textBlockEmailDaPessoa.Margin = new Thickness(
-textBlockEmailDaPessoa.Margin.Left - 20,   // Subtrai um valor da margem esquerda existente
+textBlockEmailDaPessoa.Margin.Left ,   // Subtrai um valor da margem esquerda existente
 textBlockSenha.Margin.Top - textBlockEmailDaPessoa.ActualHeight - 5,  // Define a margem superior acima do textBlockSenha
                     textBlockEmailDaPessoa.Margin.Right,  // Mantém a margem direita existente
                     textBlockEmailDaPessoa.Margin.Bottom   // Mantém a margem inferior existente
                 );
+                botãoVoltar.Margin = new Thickness(
+botãoVoltar.Margin.Left ,   // Subtrai um valor da margem esquerda existente
+textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem superior acima do textBlockSenha
+                  botãoVoltar.Margin.Right,  // Mantém a margem direita existente
+                    botãoVoltar.Margin.Bottom   // Mantém a margem inferior existente
+                );
+
                 gridEmail.Visibility = Visibility.Hidden;
                 textBlockCondiçãoSenha.Visibility= Visibility.Hidden;
                 botãoVoltar.Visibility = Visibility.Visible;
