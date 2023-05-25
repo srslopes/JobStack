@@ -79,6 +79,9 @@
     <Compile Include="TesteLogin.xaml.cs">
       <DependentUpon>TesteLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TExibirUsuários.xaml.cs">
+      <DependentUpon>TExibirUsuários.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TLogin.xaml.cs">
       <DependentUpon>TLogin.xaml</DependentUpon>
     </Compile>
@@ -164,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TesteLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TExibirUsuários.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

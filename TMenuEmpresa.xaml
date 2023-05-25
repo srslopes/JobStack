@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:JobStack"
         mc:Ignorable="d"
         Title="TMenuEmpresa" 
-        Height="629.333" 
-        Width="960"
+        Height="640" 
+        Width="1024"
         ResizeMode="NoResize"
         WindowStyle="SingleBorderWindow"
         Topmost="True"
@@ -75,8 +75,8 @@
     <Border CornerRadius="20" BorderThickness="0" Background="Transparent">
         <Grid>
             <Grid x:Name="ConteudoJanela"
-                  Width="890" 
-                  Height="600"
+                  Width="954" 
+                  Height="640"
                   Margin="70,0,-6,0"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center"

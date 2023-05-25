@@ -5,63 +5,117 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="890"
+            d:DesignHeight="640" 
+             d:DesignWidth="954"
              Background="#FFD9EBFB">
+    <UserControl.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="BotaoSubMenuStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" >
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-        <Grid x:Name="GridSubMenu"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Top"
-              Width="890
-              "
-              Height="50" 
-              Margin="-4,0"
-              Background="AliceBlue">
-            <Button x:Name="BtnCriar"
-                    Width="178"
-                    Height="50"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Background="AliceBlue"
-                    Content="CRIAR"
-                    FontFamily="Century Gothic"
-                    FontSize="20" Margin="-1,0,0,0"/>
-            <Button x:Name="BtnPendentes"
-                    Width="178"
-                    Height="50"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Background="AliceBlue"
-                    Content="PENDENTES"
-                    FontFamily="Century Gothic"
-                    FontSize="20" Margin="176,0,0,0"/>
-            <Button x:Name="BtnEmAberto"
-                    Width="178"
-                    Height="50"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Background="AliceBlue"
-                    Content="EM ABERTO"
-                    FontFamily="Century Gothic"
-                    FontSize="20" Margin="353,0,0,0"/>
-            <Button x:Name="BtnFinalizadas"
-                    Width="178"
-                    Height="50"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Background="AliceBlue"
-                    Content="FINALIZADAS"
-                    FontFamily="Century Gothic"
-                    FontSize="20" Margin="530,0,0,0"/>
-            <Button x:Name="BtnHistoricoVaga"
-                    Width="183"
-                    Height="50"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Background="AliceBlue"
-                    Content="HISTÓRICO GERAL"
-                    FontFamily="Century Gothic"
-                    FontSize="19" Margin="707,0,0,0"/>
-        </Grid>
+        <Button x:Name="BtnCriar"
+                Width="100"
+                Height="40"
+                Content="CRIAR"
+                Background="#FF27597E"
+                FontFamily="Century Gothic"
+                FontSize="14"
+                Foreground="White"
+                Style="{DynamicResource BotaoSubMenuStyle}" 
+                Margin="74.876,29.75,779.123,570.25"/>
+        <Button x:Name="BtnPendentes"
+                Width="130"
+                Height="40"
+                Content="PENDENTES"
+                Background="#FF27597E"
+                FontFamily="Century Gothic"
+                FontSize="14"
+                Foreground="White"
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="205.037,29.926,618.962,570.073" 
+                />
+        <Button x:Name="BtnEmAberto"
+                Width="130"
+                Height="40"
+                Content="EM ABERTO"
+                Background="#FF27597E"
+                FontFamily="Century Gothic"
+                FontSize="14"
+                Foreground="White"
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="365.604,30.169,458.395,569.83"
+            />
+        <Button x:Name="BtnFinalizadas"
+                Width="130"
+                Height="40"
+                Content="FINALIZADAS"
+                Background="#FF27597E"
+                FontFamily="Century Gothic"
+                FontSize="14"
+                Foreground="White"
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="526.964,30.011,297.035,569.988"
+            />
+        <Button x:Name="BtnHistoricoVagas"
+                Width="180"
+                Height="40"
+                Content="HISTÓRICO DE VAGAS"
+                Background="#FF27597E"
+                FontFamily="Century Gothic"
+                FontSize="14"
+                Foreground="White"
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="686.5,30.25,87.5,569.75"
+            />
         <!-- GRID PARA PUXAR AS PÁGINAS DAS VAGAS E FORMULÁRIOS -->
         <Grid x:Name="GridConteudo"
               HorizontalAlignment="Center"

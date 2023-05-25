@@ -6,13 +6,14 @@
         xmlns:local="clr-namespace:JobStack"
         mc:Ignorable="d"
         Title="TMenuAdministrador" 
-       Height="629.333" 
-        Width="960"
+        Height="640" 
+        Width="1024"
         ResizeMode="NoResize"
         WindowStyle="SingleBorderWindow"
         Topmost="True"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="False"
+        Background="#FFD9EBFB"
         >
     <Window.Resources>
         <!-- Definindo estilo dos textos -->
@@ -76,13 +77,16 @@
     </Window.Resources>
     <Border CornerRadius="20" BorderThickness="0" Background="Transparent">
         <Grid>
-            <!-- Definindo cor de fundo da janela -->
-            <Grid Background="#FFD9EBFB">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="11*"/>
-                </Grid.ColumnDefinitions>
+            <Grid x:Name="ConteudoJanela"
+                  Width="954" 
+                  Height="640"
+                  Margin="70,0,-6,0"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  >
 
+            </Grid>
+            <Grid>
                 <Grid x:Name="barra_menu"
                   HorizontalAlignment="Left"
                   Width="70">

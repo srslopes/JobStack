@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="890"
+             d:DesignHeight="640" 
+             d:DesignWidth="954"
              Background="#FFD9EBFB">
     <UserControl.Resources>
         <!-- ESTILO DA TEXTBOX DA BARRA DE PESQUISA -->
@@ -196,7 +197,7 @@
                      Width="600"
                      Height="50"
                      Grid.Column="0" 
-                     Margin="10" 
+                     Margin="14,18,6,2" 
                      VerticalAlignment="Center"
                      FontFamily="Century Gothic"
                      FontSize="20"
@@ -210,7 +211,7 @@
                 <Button x:Name="BtnPesquisar"
                     Width="60"
                     Height="50" 
-                    Margin="609,10,31,10" 
+                    Margin="613,18,27,2" 
                     VerticalAlignment="Center" 
                     Grid.ColumnSpan="2" 
                     Background="#003964"
@@ -223,10 +224,9 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle x:Name="FundoGridVagas"
                        RadiusX="10"
-                       RadiusY="10"
-                       Width="750" 
-                       Margin="62,84,60,55"
-                       Fill="AliceBlue"
+                       RadiusY="10" 
+                       Margin="55,102,68,72"
+                       Fill="AliceBlue" Grid.ColumnSpan="2"
                        >
                     <Rectangle.Effect>
                         <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
@@ -235,8 +235,8 @@
                 <ScrollViewer x:Name="SVVagas"
                           HorizontalAlignment="Right"
                           VerticalAlignment="Center"
-                          Width="740"
-                          Height="440" Margin="0,95,67,65" RenderTransformOrigin="0,0">
+                          Width="831"
+                          Height="451" Margin="0,110,68,79" RenderTransformOrigin="0,0" Grid.ColumnSpan="2">
                     <ScrollViewer.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -254,14 +254,14 @@
                 <Button x:Name="BtnVoltar"
                     Width="80"
                     Height="25" 
-                    Margin="0,0,10,17"
+                    Margin="0,0,30,31"
                     Content="Voltar"
                     FontSize="12"
                     FontFamily="Century Gothic"
                     Background="#FF27597E"
                     Foreground="White"
                     HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom" Style="{DynamicResource RoundedButtonStyle}"/>
+                    VerticalAlignment="Bottom" Style="{DynamicResource RoundedButtonStyle}" Grid.ColumnSpan="2"/>
             </Grid>
         </Grid>
     </Border>

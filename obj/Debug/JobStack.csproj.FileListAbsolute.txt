@@ -349,3 +349,5 @@ C:\Users\BRUNO\Documents\JobStack\obj\Debug\TNotificacoes.baml
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\TPesquisarAluno.baml
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\TSolicitacoesVagasCoordenador.baml
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\TVagasEmpresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TExibirUsuários.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TExibirUsuários.baml
