@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="230" d:DesignWidth="960">
+             d:DesignHeight="230" d:DesignWidth="960"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Center">
     <!-- DESIGN DA EXIBIÇÃO DE VAGA PARA A INTERFACE DO ALUNO -->
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
@@ -122,7 +124,7 @@
                 Margin="0,0,129,18"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Style="{DynamicResource RoundedButtonStyle}"
+                Style="{DynamicResource RoundedButtonStyle}" Click="BtnInscreverse_Click"
             />
     </Grid>
 </UserControl>

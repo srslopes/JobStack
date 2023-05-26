@@ -80,6 +80,7 @@ namespace JobStack
             
             PopularUsuarios();
             PopularChat();
+            PopularVagas();
         }
 
 
@@ -458,6 +459,14 @@ namespace JobStack
             }
             return txt;
 
+        }
+
+        public static void PopularVagas()
+        {
+            IdUser = 6001;
+            Vaga n = new Vaga(6001);
+            n.SetNome("vaga 1");
+            n.SetDescricao("desc 1");
         }
         //--------------------------------------- Métodos - Chats --------------------------------------------------------
         public static int AdicionarChat(Chat chat)

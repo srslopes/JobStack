@@ -246,9 +246,12 @@
                         </TransformGroup>
                     </ScrollViewer.RenderTransform>
                     <StackPanel x:Name="SPVagas"
+                                Orientation="Vertical"
                             Width="740"
                             Height="0"
-                            >
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center"
+                                >
                     </StackPanel>
                 </ScrollViewer>
                 <Button x:Name="BtnVoltar"
