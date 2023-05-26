@@ -10,7 +10,7 @@ namespace JobStack
     {
         private List<int> Vagas;
 
-      
+        private int ra;
         public Aluno(string e, string p)
         {
             SetEmail(e);
@@ -21,6 +21,8 @@ namespace JobStack
             Chat adm = new Chat(1);
             Chat coo = new Chat(101);
         }
+
+
         
         public void AdicionarVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
         {
@@ -52,9 +54,20 @@ namespace JobStack
             }
             return false;
         }
+        public int GetRa()
+        {
+            return ra;
+        }
 
-        
+        public void SetRa(int Ra)
+        {
+            ra = Ra;
+        }
 
+        public void adicionarRa()
+        {
+
+        }
 
     }
 }

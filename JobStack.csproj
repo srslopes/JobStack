@@ -73,6 +73,9 @@
     <Compile Include="TAdmin.xaml.cs">
       <DependentUpon>TAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TesteCadastrarAluno.xaml.cs">
+      <DependentUpon>TesteCadastrarAluno.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TesteImagem.xaml.cs">
       <DependentUpon>TesteImagem.xaml</DependentUpon>
     </Compile>
@@ -159,6 +162,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="TAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesteCadastrarAluno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
