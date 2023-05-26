@@ -45,6 +45,8 @@ namespace JobStack
 
         private static List<int> ChatsCoord;
 
+        public static TMenuAluno MenuAluno;
+
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
         // 00XX - Administradores do sistema
@@ -432,6 +434,11 @@ namespace JobStack
         {
             proxIdVaga++;
             return proxIdVaga;
+        }
+
+        public static List<Vaga> GetListaVagas()
+        {
+            return Vagas;
         }
 
         public static string ExibirVagas()   //Exibe, no prompt, os dados dos alunos cadastrados

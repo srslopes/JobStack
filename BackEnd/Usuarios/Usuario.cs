@@ -10,6 +10,7 @@ namespace JobStack
     {
         private string email;
         private string senha;
+        private string nome;
         private int ID;
         private bool status;
         private List<int> Chats;
@@ -19,8 +20,14 @@ namespace JobStack
         {
             ID = 0;
             IdImg = 0;
+            nome = "";
             SetStatus(false);
             Chats = new List<int>();
+        }
+
+        public string GetNome()
+        {
+            return nome;
         }
        
         public string GetEmail()
@@ -31,6 +38,11 @@ namespace JobStack
         public string GetSenha()
         {
             return senha;
+        }
+
+        public void SetNome(string Nome)
+        {
+            nome = Nome;
         }
 
         public bool SetEmail(string e)

@@ -12,6 +12,7 @@ namespace JobStack
         private int IdEmpresa;
         private string nome;
         private string descricao;
+        private string tipo;
         private List<int> Inscritos;
         private int status;
 
@@ -83,18 +84,26 @@ namespace JobStack
             }
         }
 
-        public void SetNome(string nome)
+        public void SetNome(string Nome)
         {
-
+            nome = Nome;
         }
 
-        public string getNome()
+        public string GetNome()
         {
             return nome;
         }
-        public void SetDescricao(string nome)
+        public void SetDescricao(string Descricao)
         {
-
+            descricao = Descricao;
+        }
+        public string GetTipo()
+        {
+            return tipo;
+        }
+        public void SetTipo(string Tipo)
+        {
+            tipo = Tipo;
         }
 
         public string getDescricao()

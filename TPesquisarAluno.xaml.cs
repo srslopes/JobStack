@@ -20,9 +20,14 @@ namespace JobStack
     /// </summary>
     public partial class TPesquisarAluno : UserControl
     {
+        private Aluno aluno; 
+
         public TPesquisarAluno()
         {
             InitializeComponent();
+            aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
+            AttVagas();
+
         }
 
         private void CaixaPesquisa_GotFocus(object sender, RoutedEventArgs e)
@@ -33,6 +38,21 @@ namespace JobStack
             {
                 textBox.Text = " ";
                 textBox.Foreground = Brushes.Black;
+            }
+        }
+
+        private void AttVagas()
+        {
+            SPVagas.Children.Clear();
+            SPVagas.Height = 0;
+            List<Vaga> Vagas = BancodeDados.GetListaVagas();
+            for(int i=0; i<Vagas.Count; i++)
+            {
+                if (!aluno.VagaInscrita(i))
+                {
+                    DesignVaga v = new DesignVaga(i);
+                    SPVagas.Children.Add(v);
+                }
             }
         }
     }

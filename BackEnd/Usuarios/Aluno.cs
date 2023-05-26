@@ -9,6 +9,7 @@ namespace JobStack
     class Aluno : Usuario
     {
         private List<int> Vagas;
+
       
         public Aluno(string e, string p)
         {
@@ -41,6 +42,15 @@ namespace JobStack
         {
             Vagas.Clear();
             for (int i = 0; i <= vagas.IndexOf(vagas.Last()); i++) Vagas.Add(vagas[i]);
+        }
+
+        public bool VagaInscrita(int idVaga)
+        {
+            for(int i=0; i<Vagas.Count; i++)
+            {
+                if (Vagas[i] == idVaga) return true;
+            }
+            return false;
         }
 
         

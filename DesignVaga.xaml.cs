@@ -25,7 +25,10 @@ namespace JobStack
         public DesignVaga(int id)
         {
             InitializeComponent();
-      
+            vaga = BancodeDados.BuscarVaga(id);
+            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
+            TipoVaga.Text = vaga.GetTipo();
+            DescricaoVaga.Text = vaga.getDescricao();      
         }
     }
 }

@@ -247,7 +247,7 @@
                     </ScrollViewer.RenderTransform>
                     <StackPanel x:Name="SPVagas"
                             Width="740"
-                            Height="515"
+                            Height="0"
                             >
                     </StackPanel>
                 </ScrollViewer>
