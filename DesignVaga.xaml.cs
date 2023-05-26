@@ -21,14 +21,25 @@ namespace JobStack
     public partial class DesignVaga : UserControl
     {
         private Vaga vaga;
+        private Aluno aluno;
+        private TPesquisarAluno parent;
 
-        public DesignVaga(int id)
+        public DesignVaga(int id, TPesquisarAluno janela)
         {
+            parent = janela;
             InitializeComponent();
             vaga = BancodeDados.BuscarVaga(id);
+            aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
             NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
             TipoVaga.Text = vaga.GetTipo();
             DescricaoVaga.Text = vaga.getDescricao();      
+        }
+
+        private void BtnInscreverse_Click(object sender, RoutedEventArgs e)
+        {
+            aluno.AdicionarVaga(vaga.GetID());
+            vaga.Inscrever(aluno.GetID());
+            parent.AttVagas();
         }
     }
 }

@@ -41,7 +41,7 @@ namespace JobStack
             }
         }
 
-        private void AttVagas()
+        public void AttVagas()
         {
             SPVagas.Children.Clear();
             SPVagas.Height = 0;
@@ -50,8 +50,9 @@ namespace JobStack
             {
                 if (!aluno.VagaInscrita(i))
                 {
-                    DesignVaga v = new DesignVaga(i);
+                    DesignVaga v = new DesignVaga(i, this);
                     SPVagas.Children.Add(v);
+                    SPVagas.Height += 230;
                 }
             }
         }

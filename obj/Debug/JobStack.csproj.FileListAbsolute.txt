@@ -351,3 +351,17 @@ C:\Users\BRUNO\Documents\JobStack\obj\Debug\TSolicitacoesVagasCoordenador.baml
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\TVagasEmpresa.baml
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TExibirUsuários.g.cs
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TExibirUsuários.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVagaCoordenador.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVaga_Empresa.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TExibirUsuários.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TNotificacoes.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TPesquisarAluno.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TSolicitacoesVagasCoordenador.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TVagasEmpresa.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVagaCoordenador.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVaga_Empresa.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TExibirUsuários.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TNotificacoes.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TPesquisarAluno.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TSolicitacoesVagasCoordenador.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TVagasEmpresa.baml
