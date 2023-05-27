@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="230" d:DesignWidth="960"
+             d:DesignHeight="200" d:DesignWidth="820"
              VerticalAlignment="Top"
              HorizontalAlignment="Center">
     <!-- DESIGN DA EXIBIÇÃO DE VAGA PARA A INTERFACE DO ALUNO -->
@@ -67,10 +67,15 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Rectangle Fill="#F4F7FF" 
+        
+        <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10" 
-                   Margin="0,-1,0,1"/>
+                   Margin="0,-1,0,1">
+            <Rectangle.Effect>
+                <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+            </Rectangle.Effect>
+        </Rectangle>
         <TextBlock x:Name="NomeEmpresa" 
                    Text="Nome da Empresa" 
                    VerticalAlignment="Top" 

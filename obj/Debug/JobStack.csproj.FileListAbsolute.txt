@@ -365,3 +365,5 @@ C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TNotificacoes.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TPesquisarAluno.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TSolicitacoesVagasCoordenador.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TVagasEmpresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TesteCadastrarAluno.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TesteCadastrarAluno.baml

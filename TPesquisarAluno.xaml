@@ -235,8 +235,8 @@
                 <ScrollViewer x:Name="SVVagas"
                           HorizontalAlignment="Right"
                           VerticalAlignment="Center"
-                          Width="831"
-                          Height="451" Margin="0,110,68,79" RenderTransformOrigin="0,0" Grid.ColumnSpan="2">
+                          Width="830"
+                          Height="450" Margin="0,110,68,79" RenderTransformOrigin="0,0" Grid.ColumnSpan="2">
                     <ScrollViewer.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="230" d:DesignWidth="800">
+             d:DesignHeight="200" d:DesignWidth="820">
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -64,10 +64,14 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Rectangle Fill="#F4F7FF" 
+        <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10" 
-                   Margin="0,-1,0,1"/>
+                   Margin="0,-1,0,1">
+            <Rectangle.Effect>
+                <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+            </Rectangle.Effect>
+        </Rectangle>
         <Grid x:Name="GridIconeEmpresa"/>
         <TextBlock x:Name="TituloVaga" 
                    Text="Título da Vaga" 
@@ -88,7 +92,7 @@
         <Button x:Name="BtnVerMais"
                 Width="90" 
                 Height="26" 
-                Margin="0,169,25,35" 
+                Margin="0,152,25,22" 
                 Content="Ver mais" 
                 FontSize="12" 
                 FontFamily="Century Gothic"
@@ -107,7 +111,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Margin="0,133,25,71"
+                Margin="0,118,25,56"
                 Style="{DynamicResource RoundedButtonStyle}"/>
         <Button x:Name="BtnFinalizar" 
                 Width="90" 
@@ -119,7 +123,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Margin="0,98,25,107"
+                Margin="0,83,25,92"
                 Style="{DynamicResource RoundedButtonStyle}"
                 />
 
