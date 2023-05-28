@@ -20,6 +20,20 @@ namespace JobStack
             Chat adm = new Chat(1);
             Chat coo = new Chat(101);
         }
+
+        public Empresa()
+        {
+            SetID(-1);
+        }
+
+        public void salvar()
+        {
+            if (GetID() != -1) return;
+            Vagas = new List<int>();
+            BancodeDados.AdicionarEmpresa(this);            
+            Chat adm = new Chat(GetID(),1);
+            Chat coo = new Chat(GetID(),101);
+        }
         public List<int> GetVagas()
         {
             return Vagas;

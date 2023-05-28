@@ -26,6 +26,17 @@ namespace JobStack
             ((Usuario)BancodeDados.BuscarUsuario(participante1)).AdicionarChat(id);
             ((Usuario)BancodeDados.BuscarUsuario(participante2)).AdicionarChat(id);
         }
+        public Chat(int ID1, int ID2)
+        {
+            participante1 = ID1;
+            participante2 = ID2;
+            Mensagens = new List<Mensagem>();
+            notificacoes1 = 0;
+            notificacoes2 = 0;
+            id = BancodeDados.AdicionarChat(this);
+            ((Usuario)BancodeDados.BuscarUsuario(participante1)).AdicionarChat(id);
+            ((Usuario)BancodeDados.BuscarUsuario(participante2)).AdicionarChat(id);
+        }
 
         public void NovaMensagem(string mensagem)
         {
