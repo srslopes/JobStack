@@ -10,6 +10,7 @@ FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\MainWindow.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\Mensagem_L.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\Mensagem_R.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TAdmin.xaml;;
+FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TCadastrarVagaEmpresa.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TesteCadastrarAluno.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TesteImagem.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TesteLogin.xaml;;
@@ -23,4 +24,8 @@ FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TNotificacoes.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TPesquisarAluno.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TSolicitacoesVagasCoordenador.xaml;;
 FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TVagasEmpresa.xaml;;
+FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TVagasFinalizadasEmpresa.xaml;;
+FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TVagasPendentesEmpresa.xaml;;
+FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\TCadastrarUsuarioAdm.xaml;;
+FC:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\THistoricoVagasEmpresa.xaml;;
 

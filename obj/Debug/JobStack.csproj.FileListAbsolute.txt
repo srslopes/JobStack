@@ -367,3 +367,13 @@ C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TSolicitacoesVagasCoordenador
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TVagasEmpresa.baml
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TesteCadastrarAluno.g.cs
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TesteCadastrarAluno.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TCadastrarVagaEmpresa.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TCadastrarUsuarioAdm.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\THistoricoVagasEmpresa.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagasFinalizadasEmpresa.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagasPendentesEmpresa.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TCadastrarVagaEmpresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagasFinalizadasEmpresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagasPendentesEmpresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TCadastrarUsuarioAdm.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\THistoricoVagasEmpresa.baml

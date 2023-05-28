@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace JobStack
 {
     /// <summary>
-    /// Interação lógica para TCadastroVagas.xam
+    /// Interação lógica para THistoricoVagasEmpresa.xam
     /// </summary>
-    public partial class TCadastroVagas : UserControl
+    public partial class THistoricoVagasEmpresa : UserControl
     {
-        public TCadastroVagas()
+        public THistoricoVagasEmpresa()
         {
             InitializeComponent();
-        }
-
-        private void BtnMais_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

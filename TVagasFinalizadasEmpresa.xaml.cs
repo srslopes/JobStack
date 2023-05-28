@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace JobStack
 {
     /// <summary>
-    /// Interação lógica para TCriarVagaEmpresa.xam
+    /// Interação lógica para TVagasFinalizadasEmpresa.xam
     /// </summary>
-    public partial class TCriarVagaEmpresa : Page
+    public partial class TVagasFinalizadasEmpresa : UserControl
     {
-        public TCriarVagaEmpresa()
+        public TVagasFinalizadasEmpresa()
         {
             InitializeComponent();
         }

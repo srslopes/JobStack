@@ -73,6 +73,12 @@
     <Compile Include="TAdmin.xaml.cs">
       <DependentUpon>TAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TCadastrarUsuarioAdm.xaml.cs">
+      <DependentUpon>TCadastrarUsuarioAdm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TCadastrarVagaEmpresa.xaml.cs">
+      <DependentUpon>TCadastrarVagaEmpresa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TesteCadastrarAluno.xaml.cs">
       <DependentUpon>TesteCadastrarAluno.xaml</DependentUpon>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="TExibirUsuários.xaml.cs">
       <DependentUpon>TExibirUsuários.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="THistoricoVagasEmpresa.xaml.cs">
+      <DependentUpon>THistoricoVagasEmpresa.xaml</DependentUpon>
     </Compile>
     <Compile Include="TLogin.xaml.cs">
       <DependentUpon>TLogin.xaml</DependentUpon>
@@ -111,6 +120,12 @@
     </Compile>
     <Compile Include="TVagasEmpresa.xaml.cs">
       <DependentUpon>TVagasEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TVagasFinalizadasEmpresa.xaml.cs">
+      <DependentUpon>TVagasFinalizadasEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TVagasPendentesEmpresa.xaml.cs">
+      <DependentUpon>TVagasPendentesEmpresa.xaml</DependentUpon>
     </Compile>
     <Page Include="BatePapo.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -165,6 +180,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TCadastrarUsuarioAdm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TCadastrarVagaEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TesteCadastrarAluno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -178,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TExibirUsuários.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="THistoricoVagasEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -214,6 +241,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TVagasEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TVagasFinalizadasEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TVagasPendentesEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
