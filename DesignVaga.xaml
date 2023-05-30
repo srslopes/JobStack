@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
-             mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="820"
+             mc:Ignorable="d"
              VerticalAlignment="Top"
-             HorizontalAlignment="Center">
+             HorizontalAlignment="Center"
+             Margin=" 0,0,0,20">
     <!-- DESIGN DA EXIBIÇÃO DE VAGA PARA A INTERFACE DO ALUNO -->
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
@@ -66,23 +66,37 @@
             </Setter>
         </Style>
     </UserControl.Resources>
+
+
     <Grid>
-        
+        <Grid.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.Effect>
+            <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+        </Grid.Effect>
+
         <Rectangle Fill="White" 
                    RadiusX="10" 
-                   RadiusY="10" 
-                   Margin="0,-1,0,1">
+                   RadiusY="10"
+                   Width="810" Height="200"
+                    VerticalAlignment="Center" HorizontalAlignment="Center"
+                   >
             <Rectangle.Effect>
                 <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
             </Rectangle.Effect>
         </Rectangle>
+
         <TextBlock x:Name="NomeEmpresa" 
                    Text="Nome da Empresa" 
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
                    Margin="66,29,0,0" 
                    FontSize="22" 
-                   FontFamily="Century Gothic"/>
+                   FontFamily="Century Gothic"
+                   Foreground="Black"/>
         <Grid x:Name="GridIconeEmpresa">
             <Rectangle Width="30" 
                        Height="30" 
@@ -131,5 +145,7 @@
                 VerticalAlignment="Bottom"
                 Style="{DynamicResource RoundedButtonStyle}" Click="BtnInscreverse_Click"
             />
+
+
     </Grid>
 </UserControl>
