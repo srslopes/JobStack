@@ -52,7 +52,7 @@ namespace JobStack
                 {
                     DesignVaga v = new DesignVaga(i, this);
                     SPVagas.Children.Add(v);
-                    SPVagas.Height += 230;
+                    SPVagas.Height += 210;
                 }
             }
         }

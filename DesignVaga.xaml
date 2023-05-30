@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
-             mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="820"
+             mc:Ignorable="d"
              VerticalAlignment="Top"
-             HorizontalAlignment="Center">
+             HorizontalAlignment="Center"
+             Margin=" 0,0,0,10">
     <!-- DESIGN DA EXIBIÇÃO DE VAGA PARA A INTERFACE DO ALUNO -->
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
@@ -66,32 +66,47 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid>
-        
-        <Rectangle Fill="White" 
+
+
+    <Grid Height="200" Width="790">
+        <Grid.Effect>
+            <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+        </Grid.Effect>
+        <Grid.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </Grid.Resources>
+        <Border x:Name="Borda" Height="200" Width="790" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="10">
+            <Grid>   
+                <Rectangle Fill="White" 
                    RadiusX="10" 
-                   RadiusY="10" 
-                   Margin="0,-1,0,1">
-            <Rectangle.Effect>
-                <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
-            </Rectangle.Effect>
-        </Rectangle>
-        <TextBlock x:Name="NomeEmpresa" 
+                   RadiusY="10"
+                   Width="790" Height="200"
+                    VerticalAlignment="Center" HorizontalAlignment="Center"
+                   >
+                    <Rectangle.Effect>
+                        <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+
+                <TextBlock x:Name="NomeEmpresa" 
                    Text="Nome da Empresa" 
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
                    Margin="66,29,0,0" 
                    FontSize="22" 
-                   FontFamily="Century Gothic"/>
-        <Grid x:Name="GridIconeEmpresa">
-            <Rectangle Width="30" 
+                   FontFamily="Century Gothic"
+                   Foreground="Black"/>
+                <Grid x:Name="GridIconeEmpresa">
+                    <Rectangle Width="30" 
                        Height="30" 
                        HorizontalAlignment="Left" 
                        VerticalAlignment="Top" 
                        Fill="LightGray" 
                        Margin="27,28,0,0"/>
-        </Grid>
-        <TextBlock x:Name="TipoVaga" 
+                </Grid>
+                <TextBlock x:Name="TipoVaga" 
                    Text="Tipo da Vaga" 
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
@@ -99,14 +114,14 @@
                    FontSize="24" 
                    FontFamily="Century Gothic" 
                    Foreground="#FF003964"/>
-        <TextBlock x:Name="DescricaoVaga" 
+                <TextBlock x:Name="DescricaoVaga" 
                    Text="Descrição da Vaga" 
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
                    Margin="30,103,0,0" 
                    FontSize="16" 
                    FontFamily="Century Gothic" />
-        <Button x:Name="BtnVerMais"
+                <Button x:Name="BtnVerMais"
                 Width="90" 
                 Height="25" 
                 Margin="0,0,25,18" 
@@ -118,7 +133,7 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom" 
                 Style="{DynamicResource RoundedButtonStyle}"/>
-        <Button x:Name="BtnInscreverse"
+                <Button x:Name="BtnInscreverse"
                 Width="100"
                 Height="25"
                 Content="Inscrever-se"
@@ -131,5 +146,10 @@
                 VerticalAlignment="Bottom"
                 Style="{DynamicResource RoundedButtonStyle}" Click="BtnInscreverse_Click"
             />
+            </Grid>
+        </Border>
+        
+
+
     </Grid>
 </UserControl>

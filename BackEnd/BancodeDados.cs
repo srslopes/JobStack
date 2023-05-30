@@ -464,9 +464,39 @@ namespace JobStack
         public static void PopularVagas()
         {
             IdUser = 6001;
-            Vaga n = new Vaga(6001);
-            n.SetNome("vaga 1");
-            n.SetDescricao("desc 1");
+            Vaga n1 = new Vaga(6001);
+            n1.SetNome("vaga 1");
+            n1.SetTipo("estágio");
+            n1.SetDescricao("desc 1");
+            Vaga n2 = new Vaga(6001);
+            n2.SetNome("vaga 2");
+            n2.SetTipo("estágio");
+            n2.SetDescricao("desc 2");
+            Vaga n3 = new Vaga(6001);
+            n3.SetNome("vaga 3");
+            n3.SetTipo("Junior");
+            n3.SetDescricao("desc 3");
+            Vaga n4 = new Vaga(6001);
+            n4.SetNome("vaga 4");
+            n4.SetTipo("Junior");
+            n4.SetDescricao("desc 4");
+            IdUser = 6002;
+            Vaga n5 = new Vaga(6002);
+            n5.SetNome("vaga 5");
+            n5.SetTipo("estágio");
+            n5.SetDescricao("desc 5");
+            Vaga n6 = new Vaga(6002);
+            n6.SetNome("vaga 6");
+            n6.SetTipo("estágio");
+            n6.SetDescricao("desc 6");
+            Vaga n7 = new Vaga(6002);
+            n7.SetNome("vaga 7");
+            n7.SetTipo("Junior");
+            n7.SetDescricao("desc 7");
+            Vaga n8 = new Vaga(6002);
+            n8.SetNome("vaga 8");
+            n8.SetTipo("Junior");
+            n8.SetDescricao("desc 8");
         }
         //--------------------------------------- Métodos - Chats --------------------------------------------------------
         public static int AdicionarChat(Chat chat)

@@ -30,7 +30,7 @@ namespace JobStack
             InitializeComponent();
             vaga = BancodeDados.BuscarVaga(id);
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
-            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
+            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetEmail();
             TipoVaga.Text = vaga.GetTipo();
             DescricaoVaga.Text = vaga.getDescricao();      
         }
