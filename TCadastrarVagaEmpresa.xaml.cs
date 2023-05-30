@@ -24,5 +24,23 @@ namespace JobStack
         {
             InitializeComponent();
         }
+
+        private void BtnMais_Click(object sender, RoutedEventArgs e)
+        {
+            int i = Convert.ToInt32(BtnNumero.Content);
+            if(i < 99)
+            {
+                BtnNumero.Content = i + 1;
+            }
+        }
+
+        private void BtnMenos_Click(object sender, RoutedEventArgs e)
+        {
+            int i = Convert.ToInt32(BtnNumero.Content);
+            if(i > 0)
+            {
+                BtnNumero.Content = i - 1;
+            }
+        }
     }
 }
