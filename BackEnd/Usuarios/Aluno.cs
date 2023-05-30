@@ -11,6 +11,7 @@ namespace JobStack
         private List<int> Vagas;
 
         private int ra;
+      
         public Aluno(string e, string p)
         {
             SetEmail(e);
@@ -75,11 +76,9 @@ namespace JobStack
         {
             ra = Ra;
         }
+       
 
-        public void adicionarRa()
-        {
-
-        }
+        
 
     }
 }

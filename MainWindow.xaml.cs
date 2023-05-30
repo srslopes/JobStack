@@ -72,5 +72,11 @@ namespace JobStack
             i.Show();
         }
 
+        private void BotaoCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            TelaCadastrarAluno c = new TelaCadastrarAluno();
+
+            c.Show();
+        }
     }
 }
