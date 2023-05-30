@@ -12,7 +12,6 @@
         <TextBlock x:Name="textBlockEmail" HorizontalAlignment="Left" Margin="126,174,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" RenderTransformOrigin="0.419,1.326"/>
         <TextBlock x:Name="textBlockRa" HorizontalAlignment="Left" Margin="134,226,0,0" TextWrapping="Wrap" Text="RA" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlockSenha" HorizontalAlignment="Left" Margin="116,294,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxSenha" HorizontalAlignment="Left" Height="23" Margin="205,287,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxNome" HorizontalAlignment="Left" Height="23" Margin="196,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.039,3.364"/>
         <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="23" Margin="196,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxRa" HorizontalAlignment="Left" Height="23" Margin="205,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
@@ -22,6 +21,7 @@
         <TextBlock x:Name="textBlockCondiçãoRa" HorizontalAlignment="Center" Margin="220,254,317.333,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição ra" Width="256"/>
         <TextBlock x:Name="textBlockCondiçãoEmail" HorizontalAlignment="Center" Margin="207,200,339.333,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição email" Width="247"/>
         <TextBlock x:Name="textBlockCondiçãoNome" HorizontalAlignment="Center" Margin="186,139,451.333,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição nome" Width="156"/>
+        <PasswordBox x:Name="PasswordBoxSenha" HorizontalAlignment="Left" Margin="184,292,0,0" VerticalAlignment="Top" Width="157"/>
 
 
     </Grid>

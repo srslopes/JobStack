@@ -36,8 +36,9 @@ namespace JobStack
         }
         private void BotaoCadastrar_Click(object sender, RoutedEventArgs e)
         {
-          
-            if(textBoxNome.Text.Equals("")&& textBoxRa.Text.Equals("")&& textBoxEmail.Text.Equals("")&& textBoxSenha.Text.Equals(""))
+            // Verifica se o valor do campo de email corresponde ao formato de email
+            Regex regex = new Regex(@"^([\w.\-]+)@([\w\-]+)(\.\w{2,3})?((\.com\.br)?)?$");
+            if (textBoxNome.Text.Equals("")&& textBoxRa.Text.Equals("")&& textBoxEmail.Text.Equals("")&& PasswordBoxSenha.Password.Equals(""))
             {
                 textBlockCondiçãoNome.Visibility = Visibility.Visible;
 
@@ -52,7 +53,117 @@ namespace JobStack
 
                 textBlockCondiçãoSenha.Text = "Campo Senha vazio";
             }
-           else if (textBoxNome.Text.Equals(""))
+
+            else if (!regex.IsMatch(textBoxEmail.Text))
+            {
+                // Se o valor não corresponder, exibe uma mensagem de erro
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Formato de email inválido";
+                return;
+            }
+            else if (textBoxNome.Text.Equals("") && textBoxRa.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
+            {
+                textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
+                // Nome, Ra e Senha estão vazios
+                textBlockCondiçãoNome.Visibility = Visibility.Visible;
+                textBlockCondiçãoNome.Text = "Campo Nome vazio";
+                textBlockCondiçãoRa.Visibility = Visibility.Visible;
+                textBlockCondiçãoRa.Text = "Campo Ra vazio";
+                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
+                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
+            }
+            else if (textBoxNome.Text.Equals("") && textBoxEmail.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
+            {
+                textBlockCondiçãoRa.Visibility = Visibility.Hidden;
+                // Nome, Email e Senha estão vazios
+                textBlockCondiçãoNome.Visibility = Visibility.Visible;
+                textBlockCondiçãoNome.Text = "Campo Nome vazio";
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Campo Email vazio";
+                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
+                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
+            }
+            else if (textBoxRa.Text.Equals("") && textBoxEmail.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
+            {
+                textBlockCondiçãoNome.Visibility = Visibility.Hidden;
+                // Ra, Email e Senha estão vazios
+                textBlockCondiçãoRa.Visibility = Visibility.Visible;
+                textBlockCondiçãoRa.Text = "Campo Ra vazio";
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Campo Email vazio";
+                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
+                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
+            }
+            else if (textBoxNome.Text.Equals("") && textBoxRa.Text.Equals("") && textBoxEmail.Text.Equals(""))
+            {
+                textBlockCondiçãoSenha.Visibility = Visibility.Hidden;
+                // Nome, Ra e Email estão vazios
+                textBlockCondiçãoNome.Visibility = Visibility.Visible;
+                textBlockCondiçãoNome.Text = "Campo Nome vazio";
+                textBlockCondiçãoRa.Visibility = Visibility.Visible;
+                textBlockCondiçãoRa.Text = "Campo Ra vazio";
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Campo Email vazio";
+            }
+            else if (textBoxNome.Text.Equals("") && textBoxRa.Text.Equals(""))
+            {
+                textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
+                textBlockCondiçãoSenha.Visibility = Visibility.Hidden;
+                // Nome e Ra estão vazios
+                textBlockCondiçãoNome.Visibility = Visibility.Visible;
+                textBlockCondiçãoNome.Text = "Campo Nome vazio";
+                textBlockCondiçãoRa.Visibility = Visibility.Visible;
+                textBlockCondiçãoRa.Text = "Campo Ra vazio";
+            }
+            else if (textBoxNome.Text.Equals("") && textBoxEmail.Text.Equals(""))
+            {
+                textBlockCondiçãoSenha.Visibility = Visibility.Hidden;
+                textBlockCondiçãoRa.Visibility = Visibility.Hidden;
+                // Nome e Email estão vazios
+                textBlockCondiçãoNome.Visibility = Visibility.Visible;
+                textBlockCondiçãoNome.Text = "Campo Nome vazio";
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Campo Email vazio";
+            }
+            else if (textBoxNome.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
+            {
+                textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
+                textBlockCondiçãoRa.Visibility = Visibility.Hidden;
+                // Nome e Senha estão vazios
+                textBlockCondiçãoNome.Visibility = Visibility.Visible;
+                textBlockCondiçãoNome.Text = "Campo Nome vazio";
+                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
+                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
+            }
+            else if (textBoxRa.Text.Equals("") && textBoxEmail.Text.Equals(""))
+            {
+                // Ra e Email estão vazios
+                textBlockCondiçãoRa.Visibility = Visibility.Visible;
+                textBlockCondiçãoRa.Text = "Campo Ra vazio";
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Campo Email vazio";
+            }
+            else if (textBoxRa.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
+            {
+                textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
+                textBlockCondiçãoNome.Visibility = Visibility.Hidden;
+                // Ra e Senha estão vazios
+                textBlockCondiçãoRa.Visibility = Visibility.Visible;
+                textBlockCondiçãoRa.Text = "Campo Ra vazio";
+                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
+                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
+            }
+            else if (textBoxEmail.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
+            {
+                textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
+                textBlockCondiçãoRa.Visibility = Visibility.Hidden;
+                // Email e Senha estão vazios
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Campo Email vazio";
+                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
+                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
+            }
+            else if (textBoxNome.Text.Equals(""))
             {
                 textBlockCondiçãoNome.Visibility = Visibility.Visible;
 
@@ -69,29 +180,29 @@ namespace JobStack
 
                 textBlockCondiçãoEmail.Text = "Campo Email vazio";
             }
-            else if (textBoxSenha.Text.Equals(""))
+            else if (PasswordBoxSenha.Password.Equals(""))
             {
                 textBlockCondiçãoSenha.Visibility = Visibility.Visible;
 
                 textBlockCondiçãoSenha.Text = "Campo Senha vazio";
             }
-          
-            // Verifica se o valor do campo de email corresponde ao formato de email
-            Regex regex = new Regex(@"^([\w.\-]+)@([\w\-]+)(\.\w{2,3})?((\.com\.br)?)?$");
 
-            if (!regex.IsMatch(textBoxEmail.Text) && BancodeDados.BuscarID(textBoxEmail.Text)==0)
+          
+            
+
+            else if (BancodeDados.BuscarID(textBoxEmail.Text) != 0)
             {
-                // Se o valor não corresponder, exibe uma mensagem de erro
                 textBlockCondiçãoEmail.Visibility = Visibility.Visible;
-                textBlockCondiçãoEmail.Text = "Formato de email inválido";
-                return;
+
+                textBlockCondiçãoEmail.Text = "Email já consta no sistema";
+
             }
             else {
                 Aluno N = new Aluno();
 
                 N.SetNome(textBoxNome.Text);
                 N.SetRa(int.Parse(textBoxRa.Text));
-                N.SetSenha(textBoxSenha.Text);
+                N.SetSenha(PasswordBoxSenha.Password);
                 N.SetEmail(textBoxEmail.Text);
                 N.salvar();
                 textBoxID.Text = N.GetID().ToString();
