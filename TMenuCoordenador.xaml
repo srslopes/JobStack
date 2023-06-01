@@ -312,7 +312,7 @@
                                                FontSize="18"
                                                Foreground="White"
                                                VerticalAlignment="Center"
-                                               Padding="60, 13, 0, 0">
+                                               Padding="60, 13, 0, 0" MouseLeftButtonDown="txtBtnLogout_MouseLeftButtonDown">
 
                                     </TextBlock>
                                 </Grid>

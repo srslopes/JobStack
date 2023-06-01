@@ -71,5 +71,16 @@ namespace JobStack
                 ConteudoJanela.Children.Add(notificar);
             }
         }
+
+        private void txtBtnLogout_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "LOG OUT/SAIR")
+            {
+                TesteLogin login = new TesteLogin();
+                this.Close();
+                login.Show();
+            }
+        }
     }
 }

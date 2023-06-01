@@ -119,6 +119,9 @@
     <Compile Include="TMenuEmpresa.xaml.cs">
       <DependentUpon>TMenuEmpresa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TMinhasInscricoesAluno.xaml.cs">
+      <DependentUpon>TMinhasInscricoesAluno.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TNotificacoes.xaml.cs">
       <DependentUpon>TNotificacoes.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,9 @@
     </Compile>
     <Compile Include="TSolicitacoesVagasCoordenador.xaml.cs">
       <DependentUpon>TSolicitacoesVagasCoordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TVagasEmAberto.xaml.cs">
+      <DependentUpon>TVagasEmAberto.xaml</DependentUpon>
     </Compile>
     <Compile Include="TVagasEmpresa.xaml.cs">
       <DependentUpon>TVagasEmpresa.xaml</DependentUpon>
@@ -250,6 +256,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TMinhasInscricoesAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TNotificacoes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -259,6 +269,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TSolicitacoesVagasCoordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TVagasEmAberto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -336,6 +350,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icones\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\job-search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

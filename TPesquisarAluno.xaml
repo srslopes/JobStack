@@ -9,7 +9,7 @@
              d:DesignWidth="954"
              Background="#FFD9EBFB">
     <UserControl.Resources>
-        <!-- ESTILO DA TEXTBOX DA BARRA DE PESQUISA -->
+        <!-- ANTIGO STYLE DA BARRA DE PESQUISA -->
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
@@ -81,6 +81,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#2973AA"/>
@@ -90,62 +91,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        <!-- ESTILO DO BOTÃO DA BARRA DE PESQUISA -->
-        <Style x:Key="BotaoPesquisarStyle" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="1"/>
-            <Setter Property="Effect">
-                <Setter.Value>
-                    <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5"/>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="0, 20, 20, 0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
-                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#FF3C7FB1"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#FF3C7FB1"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="ContentTemplate">
-                <Setter.Value>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Icones/lupa.png"
-                                   Width="25"
-                                   Height="25"
-                                   Margin="-2, 0, 0, 0"/>
-                            <ContentPresenter Content="{Binding}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+
         <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -186,37 +132,15 @@
     </UserControl.Resources>
     <Border CornerRadius="10" BorderBrush="Transparent" BorderThickness="0">
         <Grid>
-            <Grid x:Name="GridBarraPesquisa"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Top" Margin="76,8,76,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <TextBox x:Name="CaixaPesquisa"
-                     Width="600"
-                     Height="50"
-                     Grid.Column="0" 
-                     Margin="14,18,6,2" 
-                     VerticalAlignment="Center"
-                     FontFamily="Century Gothic"
-                     FontSize="20"
-                     Foreground="Gray"
-                     Text="Pesquisar" 
-                     Padding="10"
-                     Style="{DynamicResource TextBoxPesquisaStyle}"
-                     Background="AliceBlue" 
-                     GotFocus="CaixaPesquisa_GotFocus"
-                     />
-                <Button x:Name="BtnPesquisar"
-                    Width="60"
-                    Height="50" 
-                    Margin="613,18,27,2" 
-                    VerticalAlignment="Center" 
-                    Grid.ColumnSpan="2" 
-                    Background="#003964"
-                    Style="{DynamicResource BotaoPesquisarStyle}" />
-            </Grid>
+            <TextBlock Text="VAGAS DISPONÍVEIS"
+                       FontSize="35"
+                        FontFamily="Century Gothic Bold"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="Transparent"
+                        Foreground="#003964"
+                       Margin="30, 30, 0, 0"
+                        />
             <Grid x:Name="GridExibirVagas">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -225,7 +149,7 @@
                 <Rectangle x:Name="FundoGridVagas"
                        RadiusX="10"
                        RadiusY="10" 
-                       Margin="55,102,68,72"
+                       Margin="35.5,87,35.5,18"
                        Fill="AliceBlue" Grid.ColumnSpan="2"
                        >
                     <Rectangle.Effect>
@@ -235,8 +159,8 @@
                 <ScrollViewer x:Name="SVVagas"
                           HorizontalAlignment="Right"
                           VerticalAlignment="Center"
-                          Width="830"
-                          Height="450" Margin="0,110,68,79" RenderTransformOrigin="0,0" Grid.ColumnSpan="2">
+                          Width="873.5"
+                          Height="526.5" Margin="0,91,39.5,22.5" RenderTransformOrigin="0,0" Grid.ColumnSpan="2">
                     <ScrollViewer.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -255,17 +179,6 @@
                                 >
                     </StackPanel>
                 </ScrollViewer>
-                <Button x:Name="BtnVoltar"
-                    Width="80"
-                    Height="25" 
-                    Margin="0,0,30,31"
-                    Content="Voltar"
-                    FontSize="12"
-                    FontFamily="Century Gothic"
-                    Background="#FF27597E"
-                    Foreground="White"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom" Style="{DynamicResource RoundedButtonStyle}" Grid.ColumnSpan="2"/>
             </Grid>
         </Grid>
     </Border>

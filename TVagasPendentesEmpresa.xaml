@@ -103,16 +103,5 @@
                 </StackPanel>
             </ScrollViewer>
         </Grid>
-        <Button x:Name="BtnVoltar"
-                    Width="80"
-                    Height="25" 
-                    Margin="0,0,21.335,15.499"
-                    Content="Voltar"
-                    FontSize="12"
-                    FontFamily="Century Gothic"
-                    Background="#FF27597E"
-                    Foreground="White"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom" Style="{DynamicResource BotaoArredondadoStyle}"/>
     </Grid>
 </UserControl>

@@ -601,7 +601,8 @@
                    Foreground="#003964"
                    VerticalAlignment="Top"
                     />
-        <TextBox x:Name="DescricaoVaga"
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBox x:Name="DescricaoVaga"
                  Width="750"
                  Height="110"
                  Background="White"
@@ -612,7 +613,9 @@
                  VerticalAlignment="Top"
                  Margin="20, 270, 0, 0"
                  Style="{DynamicResource TextBoxStyle1}"
+                     TextWrapping="Wrap" AcceptsReturn="True"
                     />
+        </ScrollViewer>
         <TextBlock Text="Quantidade de vagas:"
                    Margin="20,402.666,0,0"
                    FontSize="22"
@@ -622,23 +625,12 @@
                    Foreground="#003964"
                    VerticalAlignment="Top"
                     />
+        
         <Button x:Name="BtnCriar"
-                 Width="80"
-                 Height="25" 
-                FontFamily="Century Gothic"
-                FontSize="12"
-                Content="Criar"
-                    Background="#FF27597E"
-                    Foreground="White"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center" Margin="0,420.25,22.835,54.75" 
-                Style="{DynamicResource ButtonStyle1}"
-                />
-        <Button x:Name="BtnVoltar"
                     Width="80"
                     Height="25" 
                     Margin="0,0,22.835,18.499"
-                    Content="Voltar"
+                    Content="Criar"
                     FontSize="12"
                     FontFamily="Century Gothic"
                     Background="#FF27597E"

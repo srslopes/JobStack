@@ -24,5 +24,34 @@ namespace JobStack
         {
             InitializeComponent();
         }
+
+        private void BtnCriar_Click(object sender, RoutedEventArgs e)
+        {
+            TCadastrarVagaEmpresa cadv = new TCadastrarVagaEmpresa();
+            GridConteudo.Children.Clear();
+            GridConteudo.Children.Add(cadv);
+            
+        }
+
+        private void BtnPendentes_Click(object sender, RoutedEventArgs e)
+        {
+            TVagasPendentesEmpresa pendentes = new TVagasPendentesEmpresa();
+            GridConteudo.Children.Clear();
+            GridConteudo.Children.Add(pendentes);
+        }
+
+        private void BtnEmAberto_Click(object sender, RoutedEventArgs e)
+        {
+            TVagasEmAberto aberto = new TVagasEmAberto();
+            GridConteudo.Children.Clear();
+            GridConteudo.Children.Add(aberto);
+        }
+
+        private void BtnFinalizadas_Click(object sender, RoutedEventArgs e)
+        {
+            TVagasFinalizadasEmpresa finalizadas = new TVagasFinalizadasEmpresa();
+            GridConteudo.Children.Clear();
+            GridConteudo.Children.Add(finalizadas);
+        }
     }
 }

@@ -517,3 +517,13 @@ C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TSolicitacoesVagasCoordenador.bam
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagasEmpresa.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagasFinalizadasEmpresa.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagasPendentesEmpresa.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignExibiçãoUsuario.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TExibirVagaCompletaAluno.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TFormCurriculoAluno.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignExibiçãoUsuario.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TExibirVagaCompletaAluno.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TFormCurriculoAluno.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagasEmAberto.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagasEmAberto.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMinhasInscricoesAluno.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TMinhasInscricoesAluno.baml

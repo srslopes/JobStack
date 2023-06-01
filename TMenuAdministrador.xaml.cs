@@ -51,5 +51,27 @@ namespace JobStack
                 
             }
         }
+
+        private void txtBtnLogout_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "LOG OUT/SAIR")
+            {
+                TesteLogin login = new TesteLogin();
+                this.Close();
+                login.Show();
+            }
+        }
+
+        private void txtBtnCadUsuarios_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if(textBlock.Text == "CADASTRAR")
+            {
+                TCadastrarUsuarioAdm cad = new TCadastrarUsuarioAdm();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(cad);
+            }
+        }
     }
 }

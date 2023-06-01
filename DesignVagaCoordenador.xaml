@@ -63,13 +63,13 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid>
+    <Grid Height="190" Width="790">
         <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10" 
                    Margin="0,-1,0,1">
             <Rectangle.Effect>
-                <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+                <DropShadowEffect ShadowDepth="2" Opacity="0.2" BlurRadius="3"/>
             </Rectangle.Effect>
         </Rectangle>
         <TextBlock x:Name="NomeEmpresa" 
@@ -105,7 +105,7 @@
         <Button x:Name="BtnVerMais"
                 Width="90" 
                 Height="26" 
-                Margin="0,154,25,20" 
+                Margin="0,149,25,15" 
                 Content="Ver mais" 
                 FontSize="12" 
                 FontFamily="Century Gothic"
@@ -124,7 +124,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Margin="0,118,25,56"
+                Margin="0,113,25,51"
                 Style="{DynamicResource RoundedButtonStyle}"/>
         <Button x:Name="BtnAprovar" 
                 Width="90" 
@@ -136,7 +136,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Margin="0,83,25,92"
+                Margin="0,78,25,87"
                 Style="{DynamicResource RoundedButtonStyle}"
                 />
     </Grid>

@@ -34,7 +34,7 @@ namespace JobStack
             //torna visivel o tooltip
             if (BotaoMenu.IsChecked == true)
             {
-                tt_pesquisar.Visibility = Visibility.Collapsed;
+                tt_vagasdisp.Visibility = Visibility.Collapsed;
                 tt_notificacoes.Visibility = Visibility.Collapsed;
                 tt_logout.Visibility = Visibility.Collapsed;
                 tt_chat.Visibility = Visibility.Collapsed;
@@ -43,7 +43,7 @@ namespace JobStack
             }
             else
             {
-                tt_pesquisar.Visibility = Visibility.Visible;
+                tt_vagasdisp.Visibility = Visibility.Visible;
                 tt_notificacoes.Visibility = Visibility.Visible;
                 tt_logout.Visibility = Visibility.Visible;
                 tt_chat.Visibility = Visibility.Visible;
@@ -66,7 +66,7 @@ namespace JobStack
         private void txtBtnPesquisa_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock textBlock = sender as TextBlock;
-            if (textBlock.Text == "PESQUISAR VAGA")
+            if (textBlock.Text == "VAGAS DISPONÍVEIS")
             {
                 TPesquisarAluno pesquisar = new TPesquisarAluno();
                 ConteudoJanela.Children.Clear();
@@ -82,6 +82,28 @@ namespace JobStack
                 TNotificacoes notificar = new TNotificacoes();
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(notificar);
+            }
+        }
+
+        private void txtBtnLogout_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if(textBlock.Text == "LOG OUT/SAIR")
+            {
+                TesteLogin login = new TesteLogin();
+                this.Close();
+                login.Show();
+            }
+        }
+
+        private void txtBtnInscricoes_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if(textBlock.Text == "MINHAS INSCRIÇÕES")
+            {
+                TMinhasInscricoesAluno insc = new TMinhasInscricoesAluno();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(insc);
             }
         }
     }

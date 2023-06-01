@@ -48,12 +48,12 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -216,7 +216,7 @@
         <Button x:Name="BtnVoltar"
                     Width="80"
                     Height="25" 
-                    Margin="0,0,21.335,15.499"
+                    Margin="0,0,27.668,35.166"
                     Content="Voltar"
                     FontSize="12"
                     FontFamily="Century Gothic"

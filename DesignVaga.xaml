@@ -68,9 +68,9 @@
     </UserControl.Resources>
 
 
-    <Grid Height="200" Width="790">
+    <Grid Height="190" Width="790">
         <Grid.Effect>
-            <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+            <DropShadowEffect ShadowDepth="2" Opacity="0.2" BlurRadius="3"/>
         </Grid.Effect>
         <Grid.Resources>
             <Style TargetType="Border">
@@ -86,7 +86,7 @@
                     VerticalAlignment="Center" HorizontalAlignment="Center"
                    >
                     <Rectangle.Effect>
-                        <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+                        <DropShadowEffect ShadowDepth="2" Opacity="0.2" BlurRadius="3"/>
                     </Rectangle.Effect>
                 </Rectangle>
 

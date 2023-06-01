@@ -63,13 +63,13 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid>
+    <Grid Height="190" Width="790">
         <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10" 
                    Margin="0,-1,0,1">
             <Rectangle.Effect>
-                <DropShadowEffect ShadowDepth="2" Opacity="0.4" BlurRadius="3"/>
+                <DropShadowEffect ShadowDepth="2" Opacity="0.2" BlurRadius="3"/>
             </Rectangle.Effect>
         </Rectangle>
         <Grid x:Name="GridIconeEmpresa"/>
@@ -92,7 +92,7 @@
         <Button x:Name="BtnVerMais"
                 Width="90" 
                 Height="26" 
-                Margin="0,152,25,22" 
+                Margin="0,147,25,17" 
                 Content="Ver mais" 
                 FontSize="12" 
                 FontFamily="Century Gothic"
@@ -111,7 +111,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Margin="0,118,25,56"
+                Margin="0,112.333,25,51.667"
                 Style="{DynamicResource RoundedButtonStyle}"/>
         <Button x:Name="BtnFinalizar" 
                 Width="90" 
@@ -123,7 +123,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Margin="0,83,25,92"
+                Margin="0,78,25,87"
                 Style="{DynamicResource RoundedButtonStyle}"
                 />
 

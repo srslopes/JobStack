@@ -81,7 +81,7 @@
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center"
                   >
-                
+
             </Grid>
             <Grid>
                 <Grid x:Name="barra_menu"
@@ -162,16 +162,16 @@
                                       Margin="0, 0, 0, 15" 
                                       MouseEnter="ListViewItem_MouseEnter"
                                       >
-                                
+
                                 <Grid
                                     x:Name="LVbtnPesquisa"
                                     Width="250"
                                     Height="50"
                                     HorizontalAlignment="Left">
-                                    <Image Source="Icones/icon search.png"
+                                    <Image Source="Icones/job-search.png"
                                            Name="iconbtnpesquisa"
                                            HorizontalAlignment="Left"
-                                           Width="37.467" Margin="9.451,7.468,0,5.206" 
+                                           Width="38.134" Margin="12,7.469,0,5.205" 
                                            RenderTransformOrigin="0.5,0.5" 
                                            Stretch="UniformToFill"
                                            >
@@ -184,24 +184,24 @@
                                             </TransformGroup>
                                         </Image.RenderTransform>
                                     </Image>
-                                    <TextBlock Name="txtBtnPesquisa"
+                                    <TextBlock Name="txtBtnVagasDisponiveis"
                                                Width="250"
                                                Height="50"
                                                FontFamily="Century Gothic"
-                                               FontSize="18"
+                                               FontSize="17.5"
                                                Foreground="White"
-                                               Text="PESQUISAR VAGA"
+                                               Text="VAGAS DISPONÍVEIS"
                                                VerticalAlignment="Center"
-                                               Padding="62, 13, 0, 0" Margin="-0.334,0,0.333,0" MouseLeftButtonDown="txtBtnPesquisa_MouseLeftButtonDown" >
+                                               Padding="61, 16, 0, 0" Margin="-0.334,0,0.333,0" MouseLeftButtonDown="txtBtnPesquisa_MouseLeftButtonDown" >
 
                                     </TextBlock>
-                                   
+
                                 </Grid>
                                 <ListViewItem.ToolTip>
-                                    <ToolTip x:Name="tt_pesquisar"
-                                             Content="Pesquisar vagas"
+                                    <ToolTip x:Name="tt_vagasdisp"
+                                             Content="Vagas disponíveis"
                                              Style="{StaticResource tt_style}"
-                                             Width="150"
+                                             Width="160"
                                              Height="50"
                                              />
                                 </ListViewItem.ToolTip>
@@ -294,7 +294,7 @@
                                                FontSize="17"
                                                Foreground="White"
                                                VerticalAlignment="Center"
-                                               Padding="62, 13, 0, 0"
+                                               Padding="62, 13, 0, 0" MouseLeftButtonDown="txtBtnInscricoes_MouseLeftButtonDown"
                                                >
 
                                     </TextBlock>
@@ -358,7 +358,7 @@
                                                FontSize="18"
                                                Foreground="White"
                                                VerticalAlignment="Center"
-                                               Padding="60, 13, 0, 0">
+                                               Padding="60, 13, 0, 0" MouseLeftButtonDown="txtBtnLogout_MouseLeftButtonDown">
 
                                     </TextBlock>
                                 </Grid>
