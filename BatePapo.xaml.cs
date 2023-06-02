@@ -110,7 +110,7 @@ namespace JobStack
                 if ( BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(msgs[i].GetParticipante()).GetType().ToString())) adicionarMensagemR(msgs[i].GetMensagem(), msgs[i].GetData());
                 else adicionarMensagemL(msgs[i].GetMensagem(), msgs[i].GetData());
             }
-            Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(BancodeDados.BuscarOutroParticipante(idChat))).GetEmail();
+            Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(BancodeDados.BuscarOutroParticipante(idChat))).GetNome();
             Img.ImageSource = BancodeDados.BuscarImg(((Usuario)BancodeDados.BuscarUsuario(BancodeDados.BuscarOutroParticipante(idChat))).GetIdImg());
             Cabecalho.Visibility = Visibility.Visible;
         }

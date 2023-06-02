@@ -9,7 +9,8 @@
              HorizontalAlignment="Center"
              Margin="0,0,0,12">
     <Grid>
-        <Button Background="#FF003964"
+        <Button x:Name="Bt"
+                Background="#FF003964"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 Height="74" Width="381" BorderBrush="{x:Null}" Click="Button_Click"
                 >
@@ -30,7 +31,7 @@
                         <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                     </Border.Effect>
                 </Border>
-                <TextBlock x:Name="Nome" Text="Nome" FontSize="24" Margin="75,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Century Gothic"/>
+                <TextBlock x:Name="Nome" Text="Nome" FontSize="24" Margin="75,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Century Gothic" Foreground="White"/>
                 <Grid x:Name="Notificacao" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,22,0" Height="30" Width="30">
                     <Rectangle RadiusX="15" RadiusY="15" Fill="Red">
                         <Rectangle.Effect>

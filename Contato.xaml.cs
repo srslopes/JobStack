@@ -29,8 +29,20 @@ namespace JobStack
             parent = janela;
             conversa = BancodeDados.BuscarChat(id);
             InitializeComponent();
-            Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetEmail();
-            Img.ImageSource = BancodeDados.BuscarImg(((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetIdImg());            
+            Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetNome();
+            var converter = new System.Windows.Media.BrushConverter();
+            var brush = (Brush)converter.ConvertFromString("#FF04121D");
+            if (conversa.GetParticipante() < 100)
+            {
+                Nome.Text = "Suporte Técnico";
+                Bt.Background = brush;
+            }
+            else if(conversa.GetParticipante() < 1000)
+            {
+                Nome.Text = "Coordenação";
+                Bt.Background = brush;
+            }
+             Img.ImageSource = BancodeDados.BuscarImg(((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetIdImg());            
             if (conversa.GetNotificacoes() == 0) Notificacao.Visibility = Visibility.Hidden;
             else
             {

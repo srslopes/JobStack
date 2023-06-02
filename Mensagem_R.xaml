@@ -20,7 +20,7 @@
             </Grid.Effect>
             <Border x:Name="Borda" Height="70" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" CornerRadius="25" Margin="0,0,6,8">
                 <Grid>
-                    <Rectangle x:Name="Msg" Fill="#006CBB"
+                    <Rectangle x:Name="Msg" Fill="#0F7CCF"
                        Height="45" Width="50"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
