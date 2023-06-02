@@ -402,21 +402,43 @@ namespace JobStack
 
         private void PopularUsuarios()
         {
-            Admin n1 = new Admin(emails[4], senhas[4]);
-            Admin n2 = new Admin(emails[5], senhas[5]);
+            Admin n1 = new Admin("admin1", "123");
+            
+            Admin n2 = new Admin("admin2", "234");
 
-            Coordenador n3 = new Coordenador(emails[6], senhas[6]);
-            Coordenador n4 = new Coordenador(emails[7], senhas[7]);
+            Coordenador n3 = new Coordenador("coord1", "123");
+            Coordenador n4 = new Coordenador("coord2", "234");
 
             IdUser = 101;
             Chat c = new Chat(1);
             IdUser = 0;
 
-            Aluno n5 = new Aluno(emails[0], senhas[0]);
-            Aluno n6 = new Aluno(emails[1], senhas[1]);
+            Aluno n5 = new Aluno("e", "efg");
+            n5.SetNome("Estevan Ferreira Rodrigues");
+            n5.SetRa(966049137);
+            Aluno n6 = new Aluno("b", "bcd");
+            n6.SetNome("Beatrice Azevedo Santos");
+            n6.SetRa(537388102);
+            Aluno n7 = new Aluno("f", "fgh");
+            n7.SetNome("Felipe Araujo Fernandes");
+            n7.SetRa(872998654);
+            Aluno n8 = new Aluno("i", "ijk");
+            n8.SetNome("Isabelle Oliveira Goncalves");
+            n8.SetRa(275375787);
+            Aluno n9 = new Aluno("j", "jkl");
+            n9.SetNome("Júlio Pinto Pereira");
+            n9.SetRa(555101220);
 
-            Empresa n7 = new Empresa(emails[2], senhas[2]);
-            Empresa n8 = new Empresa(emails[3], senhas[3]);
+            Empresa n10 = new Empresa("n", "nop");
+            n10.SetNome("Nestlé SA");            
+            Empresa n11 = new Empresa("a", "abc");
+            n11.SetNome("Ambev");
+            Empresa n12 = new Empresa("p", "pqr");
+            n12.SetNome("Pastelaria Mixaria");
+            Empresa n13 = new Empresa("r", "rst");
+            n13.SetNome("Rosalina Supermercados");
+            Empresa n14 = new Empresa("m", "mno");
+            n14.SetNome("Maxion");
         }
         //----------------------------------- Métodos - Vagas ---------------------------------------------------------
 

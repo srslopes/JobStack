@@ -8,10 +8,10 @@
         Title="MainWindow" Height="720" Width="1280"
         >
     <Window.Clip>
-        <RectangleGeometry Rect="0,0,1280,720" RadiusX="25" RadiusY="16"/>
+        <RectangleGeometry Rect="0,0,1280,720" RadiusX="10" RadiusY="10"/>
     </Window.Clip>
 
-    <Grid Background="#006CBB">
+    <Grid Background="#FFD9EBFB">
         <Grid x:Name="ListaContatos"
               HorizontalAlignment="Left"
               Height="640" Margin="25,20,0,20"
@@ -22,13 +22,13 @@
                 <RowDefinition Height="459*"/>
             </Grid.RowDefinitions>
             <Rectangle  
-                   Fill="#FF28A7EA" 
+                   Fill="AliceBlue" 
                    HorizontalAlignment="Left" 
                    Height="640" Width="405"
                    VerticalAlignment="Center"                   
-                   RadiusX="15" RadiusY="15" Grid.RowSpan="2">
+                   RadiusX="10" RadiusY="10" Grid.RowSpan="2">
                 <Rectangle.Effect>
-                    <DropShadowEffect/>
+                    <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                 </Rectangle.Effect>
             </Rectangle>
             <ScrollViewer x:Name="ScrollContatos" VerticalScrollBarVisibility="Auto"
@@ -49,13 +49,13 @@
               Height="555" Width="800"
               Margin="0,25,25,0" >
             <Rectangle 
-                Fill="#FF28A7EA" 
+                Fill="AliceBlue" 
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Height="555" Width="800"
-                RadiusY="15" RadiusX="15">
+                RadiusY="10" RadiusX="10">
                 <Rectangle.Effect>
-                    <DropShadowEffect/>
+                    <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                 </Rectangle.Effect>
             </Rectangle>
 
@@ -73,10 +73,10 @@
                         <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
                     </Border.Background>
                     <Border.Effect>
-                        <DropShadowEffect/>
+                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                     </Border.Effect>
                 </Border>
-                <TextBlock x:Name="Nome" HorizontalAlignment="Left" Height="30" Margin="75,0,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Center" Width="670.5" FontSize="24" FontStyle="Italic" />
+                <TextBlock x:Name="Nome" HorizontalAlignment="Left" Height="30" Margin="75,0,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Center" Width="670.5" FontSize="24" FontFamily="Century Gothic"/>
 
             </Grid>
             
@@ -90,30 +90,30 @@
               VerticalAlignment="Bottom"
               Margin="0,0,25,25"
               Height="66" Width="800">
-            <Rectangle Fill="#FF28A7EA" 
+            <Rectangle Fill="AliceBlue" 
                        HorizontalAlignment="Left" 
                        Height="66" Width="800"                       
-                       RadiusY="15" RadiusX="15"
+                       RadiusY="10" RadiusX="10"
                        VerticalAlignment="Center" >
                 <Rectangle.Effect>
-                    <DropShadowEffect/>
+                    <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                 </Rectangle.Effect>
             </Rectangle>
             <Button x:Name="BotaoEnviar" 
                     Content="Enviar"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
-                    Margin="0,0,10,5"
+                    Margin="0,0,10,0"
                     Height="50"                    
                     Width="145" 
-                    Background="#FF1A61A8" AutomationProperties.HelpText="Envia Mensagem" BorderBrush="{x:Null}" FontSize="24" FontStyle="Italic" Foreground="White" Click="BotaoEnviar_Click">
+                    Background="#FF003964" AutomationProperties.HelpText="Envia Mensagem" BorderBrush="{x:Null}" FontSize="24" FontFamily="Century Gothic" Foreground="White" Click="BotaoEnviar_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="15"/>
+                        <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
                 <Button.Effect>
-                    <DropShadowEffect/>
+                    <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                 </Button.Effect>
             </Button>
             <TextBox x:Name="CaixaDeTexto" 
@@ -124,8 +124,9 @@
                      Height="65" Width="608"
                      Text="Mensagem" AcceptsReturn="False" 
                      FontSize="24" VerticalScrollBarVisibility="Disabled"
-                     Background="{x:Null}" BorderBrush="{x:Null}" 
-                     FontStyle="Italic" UseLayoutRounding="False"
+                     Background="{x:Null}" BorderBrush="{x:Null}"
+                     BorderThickness="0"
+                     FontFamily="Century Gothic" UseLayoutRounding="False"
                      KeyDown="OnKeyDownHandler" PreviewMouseDown="CaixaDeTexto_PreviewMouseDown" >
             </TextBox>
 
