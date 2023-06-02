@@ -30,9 +30,10 @@ namespace JobStack
             InitializeComponent();
             vaga = BancodeDados.BuscarVaga(id);
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
-            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetEmail();
+            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
             TipoVaga.Text = vaga.GetTipo();
-            DescricaoVaga.Text = vaga.getDescricao();      
+            DescricaoVaga.Text = vaga.getDescricao();
+            Img.ImageSource = BancodeDados.BuscarImg((BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa())).GetIdImg());
         }
 
         private void BtnInscreverse_Click(object sender, RoutedEventArgs e)

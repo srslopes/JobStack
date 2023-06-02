@@ -416,29 +416,39 @@ namespace JobStack
             Aluno n5 = new Aluno("e", "efg");
             n5.SetNome("Estevan Ferreira Rodrigues");
             n5.SetRa(966049137);
+            n5.SetIdImg(3);
             Aluno n6 = new Aluno("b", "bcd");
             n6.SetNome("Beatrice Azevedo Santos");
             n6.SetRa(537388102);
+            n6.SetIdImg(4);
             Aluno n7 = new Aluno("f", "fgh");
             n7.SetNome("Felipe Araujo Fernandes");
             n7.SetRa(872998654);
+            n7.SetIdImg(5);
             Aluno n8 = new Aluno("i", "ijk");
             n8.SetNome("Isabelle Oliveira Goncalves");
             n8.SetRa(275375787);
+            n8.SetIdImg(12);
             Aluno n9 = new Aluno("j", "jkl");
             n9.SetNome("Júlio Pinto Pereira");
             n9.SetRa(555101220);
+            n9.SetIdImg(6);
 
             Empresa n10 = new Empresa("n", "nop");
-            n10.SetNome("Nestlé SA");            
+            n10.SetNome("Nestlé SA");
+            n10.SetIdImg(9);
             Empresa n11 = new Empresa("a", "abc");
             n11.SetNome("Ambev");
+            n11.SetIdImg(10);
             Empresa n12 = new Empresa("p", "pqr");
             n12.SetNome("Pastelaria Mixaria");
-            Empresa n13 = new Empresa("r", "rst");
+            n12.SetIdImg(8);
+            Empresa n13 = new Empresa("r", "rst");            
             n13.SetNome("Rosalina Supermercados");
+            n13.SetIdImg(11);
             Empresa n14 = new Empresa("m", "mno");
             n14.SetNome("Maxion");
+            n14.SetIdImg(7);
         }
         //----------------------------------- Métodos - Vagas ---------------------------------------------------------
 
@@ -487,38 +497,38 @@ namespace JobStack
         {
             IdUser = 6001;
             Vaga n1 = new Vaga(6001);
-            n1.SetNome("vaga 1");
-            n1.SetTipo("estágio");
-            n1.SetDescricao("desc 1");
+            n1.SetNome("Suporte Técnico");
+            n1.SetTipo("Estágio");
+            n1.SetDescricao("Auxilie na resolução de problemas técnicos, suporte remoto e presencial aos usuários, garantindo o bom funcionamento dos sistemas e equipamentos, em uma das maiores empresas de alimentos do mundo.");
             Vaga n2 = new Vaga(6001);
-            n2.SetNome("vaga 2");
-            n2.SetTipo("estágio");
-            n2.SetDescricao("desc 2");
+            n2.SetNome("Desenvolvimento");
+            n2.SetTipo("Estágio");
+            n2.SetDescricao("Faça parte da equipe responsável por criar soluções tecnológicas inovadoras, desenvolvendo e aprimorando sistemas para impulsionar o crescimento e a eficiência em uma das líderes globais da indústria alimentícia.");
             Vaga n3 = new Vaga(6001);
-            n3.SetNome("vaga 3");
+            n3.SetNome("Analista de Processos");
             n3.SetTipo("Junior");
-            n3.SetDescricao("desc 3");
+            n3.SetDescricao("Contribua para otimizar os processos internos, identificando oportunidades de melhoria e implementando soluções eficientes, garantindo a qualidade e eficácia das operações em uma renomada empresa de alimentos e bebidas.");
             Vaga n4 = new Vaga(6001);
-            n4.SetNome("vaga 4");
+            n4.SetNome("Gerente de TI");
             n4.SetTipo("Junior");
-            n4.SetDescricao("desc 4");
+            n4.SetDescricao("Suporte à equipe de TI, supervisionando projetos e processos, garantindo a entrega de soluções tecnológicas alinhadas aos objetivos estratégicos da empresa, em uma das principais empresas globais do setor alimentício.");
             IdUser = 6002;
             Vaga n5 = new Vaga(6002);
-            n5.SetNome("vaga 5");
-            n5.SetTipo("estágio");
-            n5.SetDescricao("desc 5");
+            n5.SetNome("Jovem Aprendiz");
+            n5.SetTipo("Estágio");
+            n5.SetDescricao("Oportunidade de aprendizado prático no setor de bebidas, adquirindo conhecimentos em diferentes áreas, auxiliando nas rotinas administrativas e contribuindo para o crescimento de uma das maiores empresas do ramo.");
             Vaga n6 = new Vaga(6002);
-            n6.SetNome("vaga 6");
-            n6.SetTipo("estágio");
-            n6.SetDescricao("desc 6");
+            n6.SetNome("Ajudante de Logística");
+            n6.SetTipo("Estágio");
+            n6.SetDescricao("Apoie as atividades de recebimento, armazenagem e distribuição de produtos, auxiliando na organização do estoque e no cumprimento de prazos, em uma das principais empresas do segmento de bebidas.");
             Vaga n7 = new Vaga(6002);
-            n7.SetNome("vaga 7");
+            n7.SetNome("Técnico em TI");
             n7.SetTipo("Junior");
-            n7.SetDescricao("desc 7");
+            n7.SetDescricao("Suporte técnico aos usuários, manutenção de equipamentos, instalação e configuração de softwares, garantindo o funcionamento eficiente da infraestrutura tecnológica em uma empresa líder no mercado de bebidas.");
             Vaga n8 = new Vaga(6002);
-            n8.SetNome("vaga 8");
+            n8.SetNome("Desenvolvimento");
             n8.SetTipo("Junior");
-            n8.SetDescricao("desc 8");
+            n8.SetDescricao("Participe da criação e manutenção de sistemas, desenvolvendo soluções inovadoras para impulsionar a eficiência dos processos, em uma das maiores empresas do setor de bebidas.");
         }
         //--------------------------------------- Métodos - Chats --------------------------------------------------------
         public static int AdicionarChat(Chat chat)
@@ -598,9 +608,19 @@ namespace JobStack
         }
         public static void AdicionarImagens()
         {
-            Imgs.Add(new BitmapImage(new Uri("Imagens/73027003-bd4d-4c64-8d94-2fcf04792ed6.png", UriKind.Relative)));
-            Imgs.Add(new BitmapImage(new Uri("Imagens/dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png", UriKind.Relative)));
-            Imgs.Add(new BitmapImage(new Uri("Imagens/f7b6822a-38f7-4974-bb0f-acda7e4b1916.png", UriKind.Relative)));
+            Imgs.Add(new BitmapImage(new Uri("Imagens/73027003-bd4d-4c64-8d94-2fcf04792ed6.png", UriKind.Relative)));//0
+            Imgs.Add(new BitmapImage(new Uri("Imagens/dd839fb9-4ecd-4e6a-a424-1f07c4c32811.png", UriKind.Relative)));//1
+            Imgs.Add(new BitmapImage(new Uri("Imagens/f7b6822a-38f7-4974-bb0f-acda7e4b1916.png", UriKind.Relative)));//2
+            Imgs.Add(new BitmapImage(new Uri("Imagens/estevan.png", UriKind.Relative)));//3
+            Imgs.Add(new BitmapImage(new Uri("Imagens/beatrice.png", UriKind.Relative)));//4
+            Imgs.Add(new BitmapImage(new Uri("Imagens/felipe.png", UriKind.Relative)));//5
+            Imgs.Add(new BitmapImage(new Uri("Imagens/julio.png", UriKind.Relative)));//6
+            Imgs.Add(new BitmapImage(new Uri("Imagens/maxion.png", UriKind.Relative)));//7
+            Imgs.Add(new BitmapImage(new Uri("Imagens/mixaria.png", UriKind.Relative)));//8
+            Imgs.Add(new BitmapImage(new Uri("Imagens/nestle.png", UriKind.Relative)));//9
+            Imgs.Add(new BitmapImage(new Uri("Imagens/ambev.png", UriKind.Relative)));//10
+            Imgs.Add(new BitmapImage(new Uri("Imagens/rosalina.png", UriKind.Relative)));//11
+            Imgs.Add(new BitmapImage(new Uri("Imagens/isabelle.png", UriKind.Relative)));//12
         }
 
         public static BitmapImage BuscarImg(int id)

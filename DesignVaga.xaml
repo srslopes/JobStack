@@ -99,12 +99,14 @@
                    FontFamily="Century Gothic"
                    Foreground="Black"/>
                 <Grid x:Name="GridIconeEmpresa">
-                    <Rectangle Width="30" 
-                       Height="30" 
-                       HorizontalAlignment="Left" 
-                       VerticalAlignment="Top" 
-                       Fill="LightGray" 
-                       Margin="27,28,0,0"/>
+                    <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="40" Width="40" CornerRadius="25">
+                        <Border.Background>
+                            <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+                        </Border.Effect>
+                    </Border>
                 </Grid>
                 <TextBlock x:Name="TipoVaga" 
                    Text="Tipo da Vaga" 
@@ -117,10 +119,11 @@
                 <TextBlock x:Name="DescricaoVaga" 
                    Text="Descrição da Vaga" 
                    VerticalAlignment="Top" 
+                   TextWrapping="Wrap"
                    HorizontalAlignment="Left" 
                    Margin="30,103,0,0" 
-                   FontSize="16" 
-                   FontFamily="Century Gothic" />
+                   FontSize="11" 
+                   FontFamily="Century Gothic" Height="49" Width="750" />
                 <Button x:Name="BtnVerMais"
                 Width="90" 
                 Height="25" 
