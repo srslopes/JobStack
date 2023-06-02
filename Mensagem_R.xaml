@@ -16,7 +16,7 @@
                 </Style>                
             </Grid.Resources>
             <Grid.Effect>
-                <DropShadowEffect/>
+                <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
             </Grid.Effect>
             <Border x:Name="Borda" Height="70" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" CornerRadius="25" Margin="0,0,6,8">
                 <Grid>
@@ -24,9 +24,9 @@
                        Height="45" Width="50"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       RadiusY="15" RadiusX="15">
+                       RadiusY="10" RadiusX="10">
                     </Rectangle>
-                    <TextBlock x:Name="Mensagem" Text="M" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontStyle="Italic" MaxWidth="180" TextWrapping="Wrap"  Height="Auto" Width="Auto">
+                    <TextBlock x:Name="Mensagem" Text="M" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Century Gothic" MaxWidth="180" TextWrapping="Wrap"  Height="Auto" Width="Auto">
 
                     </TextBlock>
                 </Grid>
@@ -35,8 +35,8 @@
             </Border>
             
         </Grid>
-        
-        <TextBlock x:Name="Data" Text="Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="12" Margin="0,0,18,0" FontStyle="Italic">
+
+        <TextBlock x:Name="Data" Text="Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="12" Margin="0,0,18,0" FontFamily="Century Gothic">
             
         </TextBlock>
 

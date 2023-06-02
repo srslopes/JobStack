@@ -9,17 +9,17 @@
              HorizontalAlignment="Center"
              Margin="0,0,0,12">
     <Grid>
-        <Button Background="#032F64"
+        <Button Background="#FF003964"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 Height="74" Width="381" BorderBrush="{x:Null}" Click="Button_Click"
                 >
             <Button.Resources>
                 <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="CornerRadius" Value="10"/>
                 </Style>                
             </Button.Resources>
             <Button.Effect>
-                <DropShadowEffect/>
+                <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
             </Button.Effect>
             <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="74" Width="381">
                 <Border x:Name="FotoPerfil" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="12,0,0,0" Height="50" Width="50" CornerRadius="25">
@@ -27,16 +27,14 @@
                         <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
                     </Border.Background>
                     <Border.Effect>
-                        <DropShadowEffect/>
+                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                     </Border.Effect>
                 </Border>
-                <TextBlock x:Name="Nome" Text="Nome" FontSize="24" Margin="75,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left">
-                    
-                </TextBlock>
+                <TextBlock x:Name="Nome" Text="Nome" FontSize="24" Margin="75,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Century Gothic"/>
                 <Grid x:Name="Notificacao" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,22,0" Height="30" Width="30">
                     <Rectangle RadiusX="15" RadiusY="15" Fill="Red">
                         <Rectangle.Effect>
-                            <DropShadowEffect></DropShadowEffect>
+                            <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                         </Rectangle.Effect>
                     </Rectangle>
                     <TextBlock x:Name="Notif" Text="X"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Foreground="White" Margin ="0,0,0,3" />
