@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JobStack
 {
     /// <summary>
-    /// Interação lógica para TExibirVagaCompletaAluno.xam
+    /// Lógica interna para TVagaCompletaCoordenador.xaml
     /// </summary>
-    public partial class TExibirVagaCompletaAluno : UserControl
+    public partial class TVagaCompletaCoordenador : Window
     {
-        public TExibirVagaCompletaAluno()
+        public TVagaCompletaCoordenador()
         {
             InitializeComponent();
         }

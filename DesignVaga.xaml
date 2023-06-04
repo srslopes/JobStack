@@ -65,6 +65,43 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
 
 
@@ -78,7 +115,7 @@
             </Style>
         </Grid.Resources>
         <Border x:Name="Borda" Height="200" Width="790" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="10">
-            <Grid>   
+            <Grid>
                 <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10"
@@ -135,7 +172,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom" 
-                Style="{DynamicResource RoundedButtonStyle}"/>
+                Style="{DynamicResource ButtonStyle1}" Click="BtnVerMais_Click"/>
                 <Button x:Name="BtnInscreverse"
                 Width="100"
                 Height="25"
@@ -147,11 +184,11 @@
                 Margin="0,0,129,18"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Style="{DynamicResource RoundedButtonStyle}" Click="BtnInscreverse_Click"
+                Style="{DynamicResource ButtonStyle1}" Click="BtnInscreverse_Click"
             />
             </Grid>
         </Border>
-        
+
 
 
     </Grid>

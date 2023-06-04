@@ -13,7 +13,8 @@
         Topmost="True"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="False"
-        Background="#FFD9EBFB">
+        Background="#FFD9EBFB"
+        Icon="{StaticResource AppIcon}">
     <Window.Resources>
         <!-- Definindo estilo dos textos -->
         <Style x:Key="font_style" TargetType="TextBlock">
@@ -147,10 +148,10 @@
                             Width="250" 
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top">
-                            <Image Source="Icones/icon-jobstack.png"
+                            <Image Source="Icones/jobstack-v3.png"
                                    Width="250"
                                    Height="65"
-                                   HorizontalAlignment="Left" Margin="11,-9,-11,0" VerticalAlignment="Top">
+                                   HorizontalAlignment="Left" Margin="2.5,-0.332,-2.5,-4.668" VerticalAlignment="Top">
 
                             </Image>
 

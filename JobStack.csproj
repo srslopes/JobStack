@@ -95,9 +95,6 @@
     <Compile Include="TExibirUsuários.xaml.cs">
       <DependentUpon>TExibirUsuários.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TExibirVagaCompletaAluno.xaml.cs">
-      <DependentUpon>TExibirVagaCompletaAluno.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TFormCurriculoAluno.xaml.cs">
       <DependentUpon>TFormCurriculoAluno.xaml</DependentUpon>
     </Compile>
@@ -130,6 +127,15 @@
     </Compile>
     <Compile Include="TSolicitacoesVagasCoordenador.xaml.cs">
       <DependentUpon>TSolicitacoesVagasCoordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TVagaCompletaAluno.xaml.cs">
+      <DependentUpon>TVagaCompletaAluno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TVagaCompletaCoordenador.xaml.cs">
+      <DependentUpon>TVagaCompletaCoordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TVagaCompletaEmpresa.xaml.cs">
+      <DependentUpon>TVagaCompletaEmpresa.xaml</DependentUpon>
     </Compile>
     <Compile Include="TVagasEmAberto.xaml.cs">
       <DependentUpon>TVagasEmAberto.xaml</DependentUpon>
@@ -224,10 +230,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TExibirVagaCompletaAluno.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TFormCurriculoAluno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -269,6 +271,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TSolicitacoesVagasCoordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TVagaCompletaAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TVagaCompletaCoordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TVagaCompletaEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -353,6 +367,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icones\job-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\jobstack-logo-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\jobstack-v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\logo-jobstack-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

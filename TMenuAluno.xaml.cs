@@ -22,6 +22,8 @@ namespace JobStack
         public TMenuAluno()
         {
             InitializeComponent();
+
+            
         }
 
         private void BotaoMenu_Unchecked(object sender, RoutedEventArgs e)

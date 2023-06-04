@@ -24,5 +24,12 @@ namespace JobStack
         {
             InitializeComponent();
         }
+
+        private void BtnVerMais_Click(object sender, RoutedEventArgs e)
+        {
+            TVagaCompletaCoordenador vaga = new TVagaCompletaCoordenador();
+            vaga.Topmost = true;
+            vaga.Show();
+        }
     }
 }

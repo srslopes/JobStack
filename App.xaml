@@ -4,7 +4,8 @@
              xmlns:local="clr-namespace:JobStack"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-
+        <!-- DEFININDO O ICONE DO SISTEMA -->
+        <BitmapImage x:Key="AppIcon" UriSource="Icones/logo-jobstack-icon.ico" />
         <Style x:Key="tituloText" TargetType="TextBlock">
             <Setter Property="FontSize" Value="40"/>
             <Setter Property="FontWeight" Value="Bold"/>

@@ -100,7 +100,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Style="{DynamicResource RoundedButtonStyle}" />
+                Style="{DynamicResource RoundedButtonStyle}" Click="BtnVerMais_Click" />
         <Button x:Name="BtnEditar"
                 Width="90" 
                 Height="26" 

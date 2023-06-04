@@ -24,5 +24,12 @@ namespace JobStack
         {
             InitializeComponent();
         }
+
+        private void BtnVerMais_Click(object sender, RoutedEventArgs e)
+        {
+            TVagaCompletaEmpresa vaga = new TVagaCompletaEmpresa();            
+            vaga.Topmost = true;
+            vaga.Show();
+        }
     }
 }

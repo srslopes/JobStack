@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/job-search.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/logo-jobstack-icon.ico")]
 
 

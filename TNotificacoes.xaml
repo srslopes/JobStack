@@ -47,12 +47,12 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -72,10 +72,10 @@
                    Height="50"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
-                       Text="Notificações"
+                       Text="NOTIFICAÇÕES"
                        FontSize="35"
                        FontFamily="Century Gothic Bold"
-                       Foreground="#003964" Margin="30,17,0,0"
+                       Foreground="#003964" Margin="30,30,0,0"
                        />
         <Grid x:Name="GridNotificacoes" Margin="0,17,0,-17">
             <Grid.ColumnDefinitions>
@@ -117,7 +117,7 @@
             <Button x:Name="BtnVoltar"
                     Width="80"
                     Height="25" 
-                    Margin="0,0,30,31"
+                    Margin="0,0,30,45"
                     Content="Voltar"
                     FontSize="12"
                     FontFamily="Century Gothic"

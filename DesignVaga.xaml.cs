@@ -42,5 +42,13 @@ namespace JobStack
             vaga.Inscrever(aluno.GetID());
             parent.AttVagas();
         }
+
+        private void BtnVerMais_Click(object sender, RoutedEventArgs e)
+        {
+            TVagaCompletaAluno vaga = new TVagaCompletaAluno();
+            vaga.Topmost = true;
+            vaga.Show();
+
+        }
     }
 }

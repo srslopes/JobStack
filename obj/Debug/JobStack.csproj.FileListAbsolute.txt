@@ -607,3 +607,9 @@ C:\Users\aluno\Documents\GitHub\JobStack\JobStack\obj\Debug\JobStack.csproj.Gene
 C:\Users\aluno\Documents\GitHub\JobStack\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 C:\Users\aluno\Documents\GitHub\JobStack\JobStack\obj\Debug\JobStack.exe
 C:\Users\aluno\Documents\GitHub\JobStack\JobStack\obj\Debug\JobStack.pdb
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagaCompletaAluno.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagaCompletaAluno.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagaCompletaCoordenador.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagaCompletaEmpresa.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagaCompletaCoordenador.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TVagaCompletaEmpresa.baml
