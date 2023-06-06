@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JobStack"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280"
+        Title="MainWindow" Height="640" Width="954"
         >
     <Window.Clip>
-        <RectangleGeometry Rect="0,0,1280,720" RadiusX="10" RadiusY="10"/>
+        <RectangleGeometry Rect="0,0,954,640" RadiusX="10" RadiusY="10"/>
     </Window.Clip>
 
     <Grid Background="#FFD9EBFB">
         <Grid x:Name="ListaContatos"
               HorizontalAlignment="Left"
-              Height="640" Margin="25,20,0,20"
+              Height="569" Margin="25,20,0,20"
               VerticalAlignment="Center"
-              Width="405">
+              Width="302">
             <Grid.RowDefinitions>
-                <RowDefinition Height="181*"/>
-                <RowDefinition Height="459*"/>
+                <RowDefinition Height="159*"/>
+                <RowDefinition Height="403*"/>
             </Grid.RowDefinitions>
             <Rectangle  
                    Fill="AliceBlue" 
                    HorizontalAlignment="Left" 
-                   Height="640" Width="405"
+                   Height="563" Width="302"
                    VerticalAlignment="Center"                   
                    RadiusX="10" RadiusY="10" Grid.RowSpan="2">
                 <Rectangle.Effect>
@@ -32,11 +32,11 @@
                 </Rectangle.Effect>
             </Rectangle>
             <ScrollViewer x:Name="ScrollContatos" VerticalScrollBarVisibility="Auto"
-                          Width="415" Height="616" 
+                          Width="290" Height="542" 
                           HorizontalScrollBarVisibility="Disabled" 
                           HorizontalAlignment="Left" VerticalAlignment="Center"
                           Margin="0,13" Grid.RowSpan="2">
-                <StackPanel Name="Lista" Width="405" Height="0" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <StackPanel Name="Lista" Width="301" Height="0" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
 
 
                 </StackPanel>
@@ -46,13 +46,13 @@
         <Grid x:Name="Conversa"
               HorizontalAlignment="Right"
               VerticalAlignment="Top"
-              Height="555" Width="800"
+              Height="488" Width="577"
               Margin="0,25,25,0" >
             <Rectangle 
                 Fill="AliceBlue" 
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
-                Height="555" Width="800"
+                Height="488" Width="577"
                 RadiusY="10" RadiusX="10">
                 <Rectangle.Effect>
                     <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
@@ -60,15 +60,15 @@
             </Rectangle>
 
             <ScrollViewer x:Name="ScrollMensagens" VerticalScrollBarVisibility="Auto"
-                          Width="810" Height="531" 
+                          Width="577" Height="467" 
                           HorizontalScrollBarVisibility="Disabled" 
-                          HorizontalAlignment="Left" VerticalAlignment="Center" >
-                <StackPanel Name="Chat" Width="800" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                          HorizontalAlignment="Right" VerticalAlignment="Center" >
+                <StackPanel Name="Chat" Width="596" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Left">
                     
                 </StackPanel>
             </ScrollViewer>
             <Grid x:Name="Cabecalho" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0">
-                <Border x:Name="FotoPerfil"  Height="50" Width="50" CornerRadius="25" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border x:Name="FotoPerfil"  Height="40" Width="40" CornerRadius="25" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Border.Background>
                         <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
                     </Border.Background>
@@ -76,7 +76,7 @@
                         <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                     </Border.Effect>
                 </Border>
-                <TextBlock x:Name="Nome" HorizontalAlignment="Left" Height="30" Margin="75,0,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Center" Width="670.5" FontSize="24" FontFamily="Century Gothic"/>
+                <TextBlock x:Name="Nome" HorizontalAlignment="Left" Height="30" Margin="60,12,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Center" Width="500" FontSize="18" FontFamily="Century Gothic"/>
 
             </Grid>
             
@@ -89,10 +89,10 @@
               HorizontalAlignment="Right"
               VerticalAlignment="Bottom"
               Margin="0,0,25,25"
-              Height="66" Width="800">
+              Height="58" Width="577">
             <Rectangle Fill="AliceBlue" 
                        HorizontalAlignment="Left" 
-                       Height="66" Width="800"                       
+                       Height="58" Width="577"                       
                        RadiusY="10" RadiusX="10"
                        VerticalAlignment="Center" >
                 <Rectangle.Effect>
@@ -104,9 +104,9 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Margin="0,0,10,0"
-                    Height="50"                    
-                    Width="145" 
-                    Background="#FF003964" AutomationProperties.HelpText="Envia Mensagem" BorderBrush="{x:Null}" FontSize="24" FontFamily="Century Gothic" Foreground="White" Click="BotaoEnviar_Click">
+                    Height="44"                    
+                    Width="108" 
+                    Background="#FF003964" AutomationProperties.HelpText="Envia Mensagem" BorderBrush="{x:Null}" FontSize="18" FontFamily="Century Gothic" Foreground="White" Click="BotaoEnviar_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -121,9 +121,9 @@
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center"                     
                      Margin="24,0,0,0" TextWrapping="Wrap"
-                     Height="65" Width="608"
+                     Height="57" Width="452"
                      Text="Mensagem" AcceptsReturn="False" 
-                     FontSize="24" VerticalScrollBarVisibility="Disabled"
+                     FontSize="18" VerticalScrollBarVisibility="Disabled"
                      Background="{x:Null}" BorderBrush="{x:Null}"
                      BorderThickness="0"
                      FontFamily="Century Gothic" UseLayoutRounding="False"

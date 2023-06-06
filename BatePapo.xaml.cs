@@ -40,7 +40,7 @@ namespace JobStack
             Contato novo = new Contato(id, this);
             Lista.Children.Add(novo);
             ScrollContatos.ScrollToTop();
-            Lista.Height += 86;
+            Lista.Height += 65;
         }
 
         public void adicionarMensagemR(string mensagem, DateTime data)
@@ -100,7 +100,7 @@ namespace JobStack
             if (!CaixaDeTexto.IsSelectionActive) CaixaDeTexto.Text = "Mensagem";
             Chat.Children.Clear();
             ChatFiller x = new ChatFiller();
-            Chat.Height += 200;
+            Chat.Height += 100;
             Chat.Children.Add(x);
             ScrollMensagens.ScrollToBottom();
             if (idChat == -1) return;
