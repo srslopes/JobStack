@@ -30,7 +30,6 @@ namespace JobStack
             InitializeComponent();
             Cabecalho.Visibility = Visibility.Hidden;
             idChat = -1;
-            BancodeDados.SetIdUser(1001);
             attContatos();
 
         }

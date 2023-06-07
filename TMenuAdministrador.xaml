@@ -215,6 +215,7 @@
                                                FontSize="18"
                                                VerticalAlignment="Center"
                                                Padding="62, 13, 0, 0"
+                                               PreviewMouseDown="txtBtnChat_PreviewMouseDown"
                                                >
 
                                     </TextBlock>

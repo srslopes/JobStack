@@ -56,18 +56,21 @@ namespace JobStack
 
         private void btnMenuEmpresa_Click(object sender, RoutedEventArgs e)
         {
+            BancodeDados.SetIdUser(6001);
             TMenuEmpresa s = new TMenuEmpresa();
             s.Show();
         }
 
         private void BtnMenuCoordenador_Click(object sender, RoutedEventArgs e)
         {
+            BancodeDados.SetIdUser(101);
             TMenuCoordenador a = new TMenuCoordenador();
             a.Show();
         }
 
         private void BtnMenuAdm_Click(object sender, RoutedEventArgs e)
         {
+            BancodeDados.SetIdUser(1);
             TMenuAdministrador i = new TMenuAdministrador();
             i.Show();
         }

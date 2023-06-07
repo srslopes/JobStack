@@ -71,5 +71,16 @@ namespace JobStack
                 login.Show();
             }
         }
+
+        private void txtBtnChat_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "CHAT")
+            {
+                TBatePapo bp = new TBatePapo();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(bp);
+            }
+        }
     }
 }
