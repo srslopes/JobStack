@@ -39,8 +39,14 @@ namespace JobStack
                 {
                     DesignVagaInscrita v = new DesignVagaInscrita(i, this);
                     SPVagas.Children.Add(v);
-                    SPVagas.Height += 210;
+                    SPVagas.Height += 210; 
                 }
+            }
+            if (SPVagas.Children.Count == 0)
+            {
+                SPVagas.Height = 35;
+                SemVagas sv = new SemVagas();
+                SPVagas.Children.Add(sv);
             }
         }
 

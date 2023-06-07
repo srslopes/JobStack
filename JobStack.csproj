@@ -75,6 +75,9 @@
     <Compile Include="DesignVaga_Empresa.xaml.cs">
       <DependentUpon>DesignVaga_Empresa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SemVagas.xaml.cs">
+      <DependentUpon>SemVagas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TAdmin.xaml.cs">
       <DependentUpon>TAdmin.xaml</DependentUpon>
     </Compile>
@@ -209,6 +212,10 @@
     <Page Include="Mensagem_R.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SemVagas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TAdmin.xaml">
       <SubType>Designer</SubType>

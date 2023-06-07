@@ -655,3 +655,5 @@ C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVagaInscrita.g.cs
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TBatePapo.g.cs
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TBatePapo.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVagaInscrita.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\SemVagas.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\SemVagas.baml
