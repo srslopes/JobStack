@@ -68,6 +68,7 @@
     <Compile Include="DesignExibiçãoUsuario.xaml.cs">
       <DependentUpon>DesignExibiçãoUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DesignVagaInscrita.xaml .cs" />
     <Compile Include="DesignVagaCoordenador.xaml.cs">
       <DependentUpon>DesignVagaCoordenador.xaml</DependentUpon>
     </Compile>
@@ -167,6 +168,10 @@
     <Page Include="DesignExibiçãoUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DesignVagaInscrita.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="DesignVaga.xaml">
       <Generator>MSBuild:Compile</Generator>

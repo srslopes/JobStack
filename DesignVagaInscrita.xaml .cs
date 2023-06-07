@@ -18,32 +18,25 @@ namespace JobStack
     /// <summary>
     /// Interação lógica para DesignVaga.xam
     /// </summary>
-    public partial class DesignVaga : UserControl
+    public partial class DesignVagaInscrita : UserControl
     {
         private Vaga vaga;
         private Aluno aluno;
-        private TPesquisarAluno parent;
+        private TMinhasInscricoesAluno parent;
 
-        public DesignVaga(int id, TPesquisarAluno janela)
+        public DesignVagaInscrita(int id, TMinhasInscricoesAluno janela)
         {
             parent = janela;
             InitializeComponent();
             vaga = BancodeDados.BuscarVaga(id);
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
             NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
-
             NomeVaga.Text = vaga.GetNome();
             TipoVaga.Text = vaga.GetTipo();
             DescricaoVaga.Text = vaga.getDescricao();
             Img.ImageSource = BancodeDados.BuscarImg((BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa())).GetIdImg());
         }
-
-        private void BtnInscreverse_Click(object sender, RoutedEventArgs e)
-        {
-            aluno.AdicionarVaga(vaga.GetID());
-            vaga.Inscrever(aluno.GetID());
-            parent.AttVagas();
-        }
+       
 
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
@@ -51,6 +44,12 @@ namespace JobStack
             vaga.Topmost = true;
             vaga.Show();
 
+        }
+        private void BtnDesinscrever_Click(object sender, RoutedEventArgs e)
+        {
+            vaga.Desinscrever(aluno.GetID());
+            aluno.RemoverVaga(vaga.GetID());
+            parent.AttVagas();
         }
     }
 }

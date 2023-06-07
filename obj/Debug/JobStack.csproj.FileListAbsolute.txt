@@ -651,3 +651,7 @@ C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagaCompletaEmpresa.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagasEmAberto.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TBatePapo.g.cs
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TBatePapo.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVagaInscrita.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TBatePapo.g.cs
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TBatePapo.baml
+C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\DesignVagaInscrita.baml

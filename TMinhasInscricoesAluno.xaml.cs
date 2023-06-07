@@ -20,9 +20,38 @@ namespace JobStack
     /// </summary>
     public partial class TMinhasInscricoesAluno : UserControl
     {
+        private Aluno aluno;
         public TMinhasInscricoesAluno()
         {
+            aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
             InitializeComponent();
+            AttVagas();
+        }
+
+        public void AttVagas()
+        {
+            SPVagas.Children.Clear();
+            SPVagas.Height = 0;
+            List<Vaga> Vagas = BancodeDados.GetListaVagas();
+            for (int i = 0; i < Vagas.Count; i++)
+            {
+                if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 2)
+                {
+                    DesignVagaInscrita v = new DesignVagaInscrita(i, this);
+                    SPVagas.Children.Add(v);
+                    SPVagas.Height += 210;
+                }
+            }
+        }
+
+        private void BtnEmAberto_Click(object sender, RoutedEventArgs e)
+        {
+            AttVagas();
+        }
+
+        private void BtnFinalizadas_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

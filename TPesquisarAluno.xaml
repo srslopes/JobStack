@@ -139,46 +139,52 @@
                         VerticalAlignment="Top"
                         Background="Transparent"
                         Foreground="#003964"
-                       Margin="30, 30, 0, 0"
+                       Margin="300, 25, 0, 0"
                         />
             <Grid x:Name="GridExibirVagas">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Rectangle x:Name="FundoGridVagas"
+                <Grid x:Name="Lista"
+                      Margin="60,30,0,0"
+                      Height="526" Width="825"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center">
+                    <Rectangle x:Name="FundoGridVagas"
                        RadiusX="10"
-                       RadiusY="10" 
-                       Margin="35.5,87,35.5,18"
+                       RadiusY="10"
                        Fill="AliceBlue" Grid.ColumnSpan="2"
                        >
-                    <Rectangle.Effect>
-                        <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
-                    </Rectangle.Effect>
-                </Rectangle>
-                <ScrollViewer x:Name="SVVagas"
+                        <Rectangle.Effect>
+                            <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <ScrollViewer x:Name="SVVagas"
                           HorizontalAlignment="Right"
                           VerticalAlignment="Center"
-                          Width="873.5"
-                          Height="526.5" Margin="0,91,39.5,22.5" RenderTransformOrigin="0,0" Grid.ColumnSpan="2">
-                    <ScrollViewer.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform AngleY="0"/>
-                            <RotateTransform/>
-                            <TranslateTransform Y="0"/>
-                        </TransformGroup>
-                    </ScrollViewer.RenderTransform>
-                    <StackPanel x:Name="SPVagas"
+                          Width="825"
+                          Height="526.5" RenderTransformOrigin="0,0" Grid.ColumnSpan="2">
+                        <ScrollViewer.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleY="0"/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="0"/>
+                            </TransformGroup>
+                        </ScrollViewer.RenderTransform>
+                        <StackPanel x:Name="SPVagas"
                                 Orientation="Vertical"
                             Width="790"
                             Height="0"
-                                Margin="10,0,0,0"
+                                Margin="10,10,0,0"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Left"
                                 >
-                    </StackPanel>
-                </ScrollViewer>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+                
             </Grid>
         </Grid>
     </Border>

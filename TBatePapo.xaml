@@ -9,7 +9,7 @@
     <Grid Background="#FFD9EBFB">
         <Grid x:Name="Elementos" VerticalAlignment="Top"
               HorizontalAlignment ="Center" 
-              Margin="0,40,0,0"
+              Margin="-10,40,0,0"
               Height="560" Width="894">
             <Grid x:Name="ListaContatos"
               HorizontalAlignment="Left"

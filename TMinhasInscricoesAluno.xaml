@@ -74,8 +74,8 @@
                 FontFamily="Century Gothic"
                 FontSize="14"
                 Foreground="White"
-                 Margin="290.736,28.635,533.263,571.364" 
-                 Style="{DynamicResource ButtonStyle1}"
+                 Margin="290.736,20,533.263,571.364" 
+                 Style="{DynamicResource ButtonStyle1}" Click="BtnEmAberto_Click"
             />
         <Button x:Name="BtnFinalizadas"
                 Width="130"
@@ -85,32 +85,47 @@
                 FontFamily="Century Gothic"
                 FontSize="14"
                 Foreground="White"
-                Style="{DynamicResource ButtonStyle1}" Margin="516.615,28.599,307.384,571.4" 
+                Style="{DynamicResource ButtonStyle1}" Margin="516.615,20,307.384,571.4" Click="BtnFinalizadas_Click" 
             />
         <!-- GRID PARA PUXAR AS PÁGINAS DAS VAGAS E FORMULÁRIOS -->
-        <Grid x:Name="GridConteudo"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Center"
-              Width="910"
-              Height="500" Margin="22,83.5,22,56.5"
-              Background="AliceBlue">
-            <Grid.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </Grid.Resources>
-            
+        <Grid x:Name="Lista"
+                      Margin="-10,30,0,0"
+                      Height="526" Width="825"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center">
+            <Rectangle x:Name="FundoGridVagas"
+                       RadiusX="10"
+                       RadiusY="10"
+                       Fill="AliceBlue" Grid.ColumnSpan="2"
+                       >
+                <Rectangle.Effect>
+                    <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+                </Rectangle.Effect>
+            </Rectangle>
+            <ScrollViewer x:Name="SVVagas"
+                          HorizontalAlignment="Right"
+                          VerticalAlignment="Center"
+                          Width="825"
+                          Height="526.5" RenderTransformOrigin="0,0" Grid.ColumnSpan="2">
+                <ScrollViewer.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0"/>
+                    </TransformGroup>
+                </ScrollViewer.RenderTransform>
+                <StackPanel x:Name="SPVagas"
+                                Orientation="Vertical"
+                            Width="790"
+                            Height="0"
+                                Margin="10,10,0,0"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                >
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
-        <Button x:Name="BtnVoltar"
-                    Width="80"
-                    Height="25" 
-                    Margin="0,0,13.667,23.5"
-                    Content="Voltar"
-                    FontSize="12"
-                    FontFamily="Century Gothic"
-                    Background="#FF27597E"
-                    Foreground="White"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"  Style="{DynamicResource ButtonStyle1}" />
+
     </Grid>
 </UserControl>
