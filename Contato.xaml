@@ -7,12 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="65" d:DesignWidth="283"
              HorizontalAlignment="Center"
-             Margin="0,0,0,12">
-    <Grid>
+             Margin="0,0,0,6">
+    <Grid Margin="0,0,6,0">
         <Button x:Name="Bt"
                 Background="#FF003964"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                Height="65" Width="283" BorderBrush="{x:Null}" Click="Button_Click"
+                Height="65" Width="277" BorderBrush="{x:Null}" Click="Button_Click"
                 >
             <Button.Resources>
                 <Style TargetType="Border">
@@ -31,14 +31,14 @@
                         <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                     </Border.Effect>
                 </Border>
-                <TextBlock x:Name="Nome" Text="Nome" FontSize="16" Margin="75,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Century Gothic" Foreground="White"/>
+                <TextBlock x:Name="Nome" Text="Nome" FontSize="16" Margin="58,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Century Gothic" Foreground="White"/>
                 <Grid x:Name="Notificacao" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,22,0" Height="20" Width="20">
                     <Rectangle RadiusX="15" RadiusY="15" Fill="Red">
                         <Rectangle.Effect>
                             <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                         </Rectangle.Effect>
                     </Rectangle>
-                    <TextBlock x:Name="Notif" Text="X"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Foreground="White" Margin ="0,0,0,3" />
+                    <TextBlock x:Name="Notif" Text="X"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Foreground="White" Margin ="0,0,0,0" />
                 </Grid>
 
                 

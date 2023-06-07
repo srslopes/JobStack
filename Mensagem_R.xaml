@@ -5,28 +5,28 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="70" d:DesignWidth="200"
+             d:DesignHeight="50" d:DesignWidth="200"
              HorizontalAlignment="Right" VerticalAlignment="Bottom"
-             Margin="0,0,25,0">
+             Margin="0,0,20,0">
     <Grid>
         <Grid Margin="0,0,6,0">
             <Grid.Resources>
                 <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="CornerRadius" Value="10"/>
                 </Style>                
             </Grid.Resources>
             <Grid.Effect>
                 <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
             </Grid.Effect>
-            <Border x:Name="Borda" Height="70" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" CornerRadius="25" Margin="0,0,6,8">
+            <Border x:Name="Borda" Height="50" Width="35" HorizontalAlignment="Right" VerticalAlignment="Bottom" CornerRadius="10" Margin="0,0,6,8">
                 <Grid>
                     <Rectangle x:Name="Msg" Fill="#0F7CCF"
-                       Height="45" Width="50"
+                       Height="35" Width="35"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        RadiusY="10" RadiusX="10">
                     </Rectangle>
-                    <TextBlock x:Name="Mensagem" Text="M" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Century Gothic" MaxWidth="180" TextWrapping="Wrap"  Height="Auto" Width="Auto">
+                    <TextBlock x:Name="Mensagem" Text="M" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontFamily="Century Gothic" MaxWidth="180" TextWrapping="Wrap"  Height="Auto" Width="Auto">
 
                     </TextBlock>
                 </Grid>
@@ -36,7 +36,7 @@
             
         </Grid>
 
-        <TextBlock x:Name="Data" Text="Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="12" Margin="0,0,18,0" FontFamily="Century Gothic">
+        <TextBlock x:Name="Data" Text="Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="9" Margin="0,0,18,4" FontFamily="Century Gothic">
             
         </TextBlock>
 

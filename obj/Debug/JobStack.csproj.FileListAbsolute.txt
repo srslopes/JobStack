@@ -639,3 +639,15 @@ C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TVagaCompletaEmpresa.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TVagasEmAberto.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TVagasFinalizadasEmpresa.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TVagasPendentesEmpresa.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TMinhasInscricoesAluno.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagaCompletaAluno.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagaCompletaCoordenador.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagaCompletaEmpresa.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagasEmAberto.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TMinhasInscricoesAluno.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagaCompletaAluno.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagaCompletaCoordenador.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagaCompletaEmpresa.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TVagasEmAberto.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TBatePapo.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TBatePapo.baml

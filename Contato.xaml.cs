@@ -22,13 +22,16 @@ namespace JobStack
     {        
         private Chat conversa;
 
-        private BatePapo parent;
+        private TBatePapo parent;
 
-        public Contato(int id, BatePapo janela)
+        private BatePapo parent2;
+
+        public Contato(int id, TBatePapo janela)
         {
             parent = janela;
             conversa = BancodeDados.BuscarChat(id);
             InitializeComponent();
+            
             Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetNome();
             var converter = new System.Windows.Media.BrushConverter();
             var brush = (Brush)converter.ConvertFromString("#FF04121D");
@@ -51,9 +54,39 @@ namespace JobStack
             }
         }
 
+        public Contato(int id, BatePapo janela)
+        {
+            parent = null;
+            parent2 = janela;
+            conversa = BancodeDados.BuscarChat(id);
+            InitializeComponent();
+
+            Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetNome();
+            var converter = new System.Windows.Media.BrushConverter();
+            var brush = (Brush)converter.ConvertFromString("#FF04121D");
+            if (conversa.GetParticipante() < 100)
+            {
+                Nome.Text = "Suporte Técnico";
+                Bt.Background = brush;
+            }
+            else if (conversa.GetParticipante() < 1000)
+            {
+                Nome.Text = "Coordenação";
+                Bt.Background = brush;
+            }
+            Img.ImageSource = BancodeDados.BuscarImg(((Usuario)BancodeDados.BuscarUsuario(conversa.GetParticipante())).GetIdImg());
+            if (conversa.GetNotificacoes() == 0) Notificacao.Visibility = Visibility.Hidden;
+            else
+            {
+                Notificacao.Visibility = Visibility.Visible;
+                Notif.Text = conversa.GetNotificacoes().ToString();
+            }
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            parent.setIdChat(conversa.GetID());
+            if(parent!=null)parent.setIdChat(conversa.GetID());
+            else parent2.setIdChat(conversa.GetID());
             Notificacao.Visibility = Visibility.Hidden;
             conversa.SetNotificacoes();
         }

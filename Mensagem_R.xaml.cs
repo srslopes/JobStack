@@ -25,7 +25,7 @@ namespace JobStack
 
         private int limite = 16;
 
-        private int borda = 16;
+        private int borda = 14;
 
         private int altura;
 
@@ -58,8 +58,8 @@ namespace JobStack
                 linhas = tam / limite;
                 if (tam % limite > 0) linhas++;
             }
-            altura = 2 * borda + linhas*25 + 8;
-            largura = 2 * borda + comprimento * 12 +6;
+            altura = 2 * borda + linhas*19 + 8;
+            largura = 2 * borda + comprimento * 10 +5;
             
             this.Height = altura + 25;
             Borda.Height = altura + 31;

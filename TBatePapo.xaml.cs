@@ -16,14 +16,14 @@ using System.Windows.Shapes;
 namespace JobStack
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para TBatePapo.xam
     /// </summary>
-    public partial class BatePapo : Window
+    public partial class TBatePapo : UserControl
     {
         private int idChat;
         private bool msg;
 
-        public BatePapo()
+        public TBatePapo()
         {
 
             msg = true;
@@ -82,7 +82,7 @@ namespace JobStack
             Chat.Children.Clear();
             Lista.Children.Clear();
             List<int> chats = ((Usuario)BancodeDados.BuscarUsuario(BancodeDados.GetIdUser())).GetChats();
-            for(int i=0; i<chats.Count; i++)
+            for (int i = 0; i < chats.Count; i++)
             {
                 adicionarChat(chats[i]);
             }
@@ -104,10 +104,10 @@ namespace JobStack
             Chat.Children.Add(x);
             ScrollMensagens.ScrollToBottom();
             if (idChat == -1) return;
-            List <Mensagem> msgs = BancodeDados.BuscarChat(idChat).GetChat();
-            for(int i =0; i<msgs.Count; i++)
+            List<Mensagem> msgs = BancodeDados.BuscarChat(idChat).GetChat();
+            for (int i = 0; i < msgs.Count; i++)
             {
-                if ( BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(msgs[i].GetParticipante()).GetType().ToString())) adicionarMensagemR(msgs[i].GetMensagem(), msgs[i].GetData());
+                if (BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()).GetType().ToString().Equals(BancodeDados.BuscarUsuario(msgs[i].GetParticipante()).GetType().ToString())) adicionarMensagemR(msgs[i].GetMensagem(), msgs[i].GetData());
                 else adicionarMensagemL(msgs[i].GetMensagem(), msgs[i].GetData());
             }
             Nome.Text = ((Usuario)BancodeDados.BuscarUsuario(BancodeDados.BuscarOutroParticipante(idChat))).GetNome();
@@ -115,24 +115,9 @@ namespace JobStack
             Cabecalho.Visibility = Visibility.Visible;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            BancodeDados.SetIdUser(int.Parse(ID.Text));
-            attContatos();
-        }
-
-        private void ID_KeyDown(object sender, KeyEventArgs e)
-        {
-            if ((e.Key == Key.Enter) || (e.Key == Key.Return))
-            {
-                BancodeDados.SetIdUser(int.Parse(ID.Text));
-                attContatos();
-            }            
-        }
-
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-            if ((idChat != -1) && ((e.Key == Key.Enter)||(e.Key == Key.Return)))
+            if ((idChat != -1) && ((e.Key == Key.Enter) || (e.Key == Key.Return)))
             {
                 BancodeDados.BuscarChat(idChat).NovaMensagem(CaixaDeTexto.Text);
                 CaixaDeTexto.Text = "";
@@ -142,7 +127,7 @@ namespace JobStack
 
         private void CaixaDeTexto_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(msg)
+            if (msg)
             {
                 msg = false;
                 CaixaDeTexto.Text = "";
