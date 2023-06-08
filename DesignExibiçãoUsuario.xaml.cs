@@ -20,9 +20,39 @@ namespace JobStack
     /// </summary>
     public partial class DesignExibiçãoUsuario : UserControl
     {
-        public DesignExibiçãoUsuario()
+        private object user;
+        public DesignExibiçãoUsuario(int id)
         {
             InitializeComponent();
+            user = BancodeDados.BuscarUsuario(id);
+            AttDados();
+        }
+
+        public void AttDados()
+        {
+            NomeUsuario.Text = ((Usuario)user).GetNome();
+            IDUsuario.Text = "ID: " + ((Usuario)user).GetID();
+            TipoUsuario.Text = user.GetType().ToString();
+            var converter = new BrushConverter();
+            if (((Usuario)user).GetStatus())
+            {
+                Status.Text = "Ativo";
+                BtnDesativar.Content = "Desativar";
+                BtnDesativar.Background = (Brush)converter.ConvertFromString("Red");
+            }
+            else
+            {
+                Status.Text = "Desativado";
+                BtnDesativar.Content = "Ativar";
+                BtnDesativar.Background = (Brush)converter.ConvertFromString("#FF27597E");
+            }
+            Img.ImageSource = BancodeDados.BuscarImg(((Usuario)user).GetIdImg());
+        }
+
+        private void BtnDesativar_Click(object sender, RoutedEventArgs e)
+        {
+            ((Usuario)user).SetStatus(!((Usuario)user).GetStatus());
+            AttDados();
         }
     }
 }

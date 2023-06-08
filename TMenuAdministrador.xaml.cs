@@ -99,5 +99,16 @@ namespace JobStack
             if (n == 0) Notificacao.Visibility = Visibility.Hidden;
             else Notificacao.Visibility = Visibility.Visible;
         }
+
+        private void txtBtnUsuarios_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "USUÁRIOS")
+            {
+                TExibirUsuários eu = new TExibirUsuários();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(eu);
+            }
+        }
     }
 }

@@ -73,14 +73,29 @@
             </Rectangle.Effect>
         </Rectangle>
         <Grid x:Name="GridIconeEmpresa"/>
-        <TextBlock x:Name="TituloVaga" 
-                   Text="Título da Vaga" 
-                   VerticalAlignment="Top" 
+        <StackPanel Orientation="Horizontal" 
+                            VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
-                   Margin="29,17,0,0" 
-                   FontSize="24" 
+                   Margin="29,17,0,0" >
+
+            <TextBlock x:Name="NomeVaga" Text="Nome da Vaga" FontSize="24" 
                    FontFamily="Century Gothic" 
                    Foreground="#FF003964"/>
+
+            <TextBlock x:Name="TipoVaga" 
+                   Text="Tipo da Vaga" 
+                    Margin="10,5,0,0"
+                   FontSize="18" 
+                   FontFamily="Century Gothic" 
+                   Foreground="#FF003964"/>
+            <TextBlock x:Name="StatusVaga" 
+                   Text="Status" 
+                    Margin="15,8,0,0"
+                   FontSize="14" 
+                   FontFamily="Century Gothic" 
+                   Foreground="#FF003964"/>
+        </StackPanel>
+        
         <TextBlock x:Name="DescricaoVaga" 
                    Text="Descrição da Vaga" 
                    VerticalAlignment="Top" 
@@ -124,7 +139,7 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
                 Margin="0,78,25,87"
-                Style="{DynamicResource RoundedButtonStyle}"
+                Style="{DynamicResource RoundedButtonStyle}" Click="BtnFinalizar_Click"
                 />
 
     </Grid>

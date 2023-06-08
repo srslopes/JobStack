@@ -35,6 +35,22 @@ namespace JobStack
             NomeVaga.Text = vaga.GetNome();
             TipoVaga.Text = vaga.GetTipo();
             DescricaoVaga.Text = vaga.GetDescricao();
+            switch(vaga.GetStatus())
+            {
+                case 0:
+                    StatusVaga.Text = "Agurdando";
+                    break;
+                case 1:
+                    StatusVaga.Text = "Rejeitada";
+                    break;
+                case 2:
+                    StatusVaga.Text = "Aberta";
+                    break;
+                case 3:
+                    StatusVaga.Text = "Encerrada";
+                    break;
+            }
+            
             Img.ImageSource = BancodeDados.BuscarImg((BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa())).GetIdImg());
         }
 

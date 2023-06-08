@@ -110,8 +110,9 @@ namespace JobStack
 
         public static Aluno BuscarAluno(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            if (id / 1000 >= 1 && id / 1000 < 6) return Alunos[(id % 1000) - 1];
-            return null;
+            if (id / 1000 < 1 || id / 1000 > 5) return null;
+            if ((id % 1000) - 1 >= Alunos.Count) return null;
+            return Alunos[(id % 1000) - 1];
         }
 
         public static Aluno CarregarAluno()         //Retorna o objeto aluno com o ID indicado,
@@ -169,8 +170,9 @@ namespace JobStack
 
         public static Empresa BuscarEmpresa(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            if (id / 1000 >= 6 && id / 1000 < 10) return Empresas[(id % 1000) - 1];
-            return null;
+            if (id / 1000 < 6 || id / 1000 > 9) return null;
+            if ((id % 1000) - 1 >= Empresas.Count) return null;
+            return Empresas[(id % 1000) - 1];
         }
 
         public static Empresa CarregarEmpresa()         //Retorna o objeto aluno logado,
@@ -227,8 +229,9 @@ namespace JobStack
 
         public static Admin BuscarAdmin(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            if (id / 1000 == 0 && id / 100 == 0) return Admins[(id % 100) - 1];
-            return null;
+            if (id / 1000 != 0 || id / 100 !=0) return null;
+            if ((id % 100) - 1 >= Admins.Count) return null;
+            return Admins[(id % 100) - 1];
         }
 
         public static Admin CarregarAdmin()         //Retorna o objeto aluno com o ID indicado,
@@ -278,8 +281,9 @@ namespace JobStack
 
         public static Coordenador BuscarCoordenador(int id)         //Retorna o objeto aluno com o ID indicado,
         {
-            if (id / 1000 == 0 && id / 100 == 1) return Coordenadores[(id % 100) - 1];
-            return null;
+            if (id / 1000 != 0 || id / 100 != 1) return null;
+            if ((id % 100) - 1 >= Coordenadores.Count) return null;
+            return Coordenadores[(id % 100) - 1];
         }
 
         public static Coordenador CarregarCoordenador()         //Retorna o objeto aluno com o ID indicado,

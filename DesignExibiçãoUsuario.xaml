@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="820">
+             d:DesignHeight="200" d:DesignWidth="700"
+             Margin="0,0,0,10">
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -64,7 +65,7 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid Height="190" Width="790">
+    <Grid Height="190" Width="700">
         <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10" 
@@ -75,13 +76,15 @@
         </Rectangle>
         <Grid x:Name="GridIconeEmpresa">
             <!-- FOTO DO USUARIO -->
-            <Ellipse x:Name="FotoUsuario"
-                     HorizontalAlignment="Left"
-                     VerticalAlignment="Center"
-                     Width="100"
-                     Height="100"
-                     Margin="20, 0, 0, 0"
-                     Fill="Gray"/>
+            <Border x:Name="FotoPerfil" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Height="100" Width="100" CornerRadius="50">
+                <Border.Background>
+                    <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+                </Border.Effect>
+            </Border>
+            
         </Grid>
         <TextBlock x:Name="NomeUsuario" 
                    Text="Nome do Usuario" 
@@ -148,7 +151,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Margin="0,78,25,87" Style="{DynamicResource ButtonStyle1}"
+                Margin="0,78,25,87" Style="{DynamicResource ButtonStyle1}" Click="BtnDesativar_Click"
                 />
 
     </Grid>

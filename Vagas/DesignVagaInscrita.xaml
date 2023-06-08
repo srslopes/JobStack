@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="JobStack.DesignVaga"
+﻿<UserControl x:Class="JobStack.DesignVagaInscrita"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -160,7 +160,16 @@
                    FontSize="18" 
                    FontFamily="Century Gothic" 
                    Foreground="#FF003964"/>
+
+                    <TextBlock x:Name="StatusVaga" 
+                   Text="Status" 
+                    Margin="15,8,0,0"
+                   FontSize="14" 
+                   FontFamily="Century Gothic" 
+                   Foreground="#FF003964"/>
+
                 </StackPanel>
+                
                 <TextBlock x:Name="DescricaoVaga" 
                    Text="Descrição da Vaga" 
                    VerticalAlignment="Top" 
@@ -181,18 +190,18 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom" 
                 Style="{DynamicResource ButtonStyle1}" Click="BtnVerMais_Click"/>
-                <Button x:Name="BtnInscreverse"
+                <Button x:Name="BtnDesinscrever"
                 Width="100"
                 Height="25"
-                Content="Inscrever-se"
+                Content="Desinscrever"
                 FontSize="12"
                 FontFamily="Century Gothic"
-                Background="#FF27597E"
+                Background="Red"
                 Foreground="White" 
                 Margin="0,0,129,18"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Style="{DynamicResource ButtonStyle1}" Click="BtnInscreverse_Click"
+                Style="{DynamicResource ButtonStyle1}" Click="BtnDesinscrever_Click"
             />
             </Grid>
         </Border>

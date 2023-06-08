@@ -74,13 +74,13 @@
                    HorizontalAlignment="Left"
                    Background="Transparent"
                    Foreground="#003964"
-                   VerticalAlignment="Top" Margin="20,20,0,0"
+                   VerticalAlignment="Top" Margin="30,20,0,0"
                         />
         <Grid x:Name="GridExibirVaga"
-                Width="900"
+                Width="740"
                 Height="500"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Center" Margin="20,69.52,22.177,50.98">
+              HorizontalAlignment="Left"
+              VerticalAlignment="Center" Margin="30,69.52,22.177,50.98">
             <Rectangle
                 Fill="White"
                 RadiusX="10"
@@ -90,31 +90,59 @@
                     <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                 </Rectangle.Effect>
             </Rectangle>
-            <ScrollViewer x:Name="SVVagas"
+            <ScrollViewer x:Name="SVUsuarios"
                           HorizontalAlignment="Right"
                           VerticalAlignment="Center"
-                          Width="900"
+                          Width="740"
                           Height="500" Margin="-0.5,-1,0.5,1" RenderTransformOrigin="0,0">
-                <StackPanel x:Name="SPVagas"
-                                Orientation="Vertical"
-                            Width="740"
+                <StackPanel x:Name="SPUsers"
+                            Orientation="Vertical"
+                            Margin="10,10,0,0"
+                            Width="720"
                             Height="0"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Center"
                                 >
                 </StackPanel>
-            </ScrollViewer>
+            </ScrollViewer>            
         </Grid>
-        <Button x:Name="BtnVoltar"
-                    Width="80"
-                    Height="25" 
-                    Margin="0,0,21.335,15.499"
-                    Content="Voltar"
-                    FontSize="12"
-                    FontFamily="Century Gothic"
-                    Background="#FF27597E"
-                    Foreground="White"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom" Style="{DynamicResource ButtonStyle1}"/>
+        <StackPanel x:Name="Botoes"
+                    Margin="0,80,30,0">
+            <Button x:Name="BtnAlunos"
+                Width="120" 
+                Height="30" 
+                Content="Alunos" 
+                FontSize="14" 
+                FontFamily="Century Gothic"
+                Background="#FF27597E"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnAlunos_Click"/>
+
+            <Button x:Name="BtnEmpresas" 
+                    Margin="0,20,0,0"
+                Width="120" 
+                Height="30" 
+                Content="Empresas" 
+                FontSize="14" 
+                FontFamily="Century Gothic"
+                Background="#FF27597E"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnEmpresas_Click"/>
+
+            <Button x:Name="BtnCoordenadores"
+                    Margin="0,20,0,0"
+                Width="120" 
+                Height="30" 
+                Content="Coordenadores" 
+                FontSize="14" 
+                FontFamily="Century Gothic"
+                Background="#FF27597E"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnCoordenadores_Click"/>
+        </StackPanel>
+        
     </Grid>
 </UserControl>
