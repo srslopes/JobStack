@@ -46,6 +46,9 @@ namespace JobStack
         private static List<int> ChatsCoord;
 
         public static TMenuAluno MenuAluno;
+        public static TMenuEmpresa MenuEmpresa;
+        public static TMenuCoordenador MenuCoordenador;
+        public static TMenuAdministrador MenuAdministrador;
 
 
         //O sistema utiliza um sistema de ID onde cada usuário possui um ID de 4 dígitos que identificam não só o usúario individualmente como também o tipo de usuário
@@ -332,15 +335,15 @@ namespace JobStack
 
 
         public static int BuscarID(string email)    //Procura no banco de dados o usuário com o  email inserido e retorna o id dele,
-        {                                           //Retorna 0 se nao existir usuario com esse email    
-            IdUser = BuscarIdAluno(email);
-            if (IdUser != 0) return IdUser;
-            IdUser = BuscarIdEmpresa(email);
-            if (IdUser != 0) return IdUser;
-            IdUser = BuscarIdAdmin(email);
-            if (IdUser != 0) return IdUser;
-            IdUser = BuscarIdCoordenador(email);
-            if (IdUser != 0) return IdUser;
+        {            //Retorna 0 se nao existir usuario com esse email
+            int id = BuscarIdAluno(email);
+            if (id != 0) return id;
+            id = BuscarIdEmpresa(email);
+            if (id != 0) return id;
+            id = BuscarIdAdmin(email);
+            if (id != 0) return id;
+            id = BuscarIdCoordenador(email);
+            if (id != 0) return id;
             return 0;
         }
 
@@ -673,7 +676,14 @@ namespace JobStack
             return null;
         }
       
+        public static void AttNtChat()
+        {
+            if (GetIdUser() > 1000 && GetIdUser() < 6000) MenuAluno.NtChat();
+            else if (GetIdUser() > 6000 && GetIdUser() < 10000) MenuEmpresa.NtChat();
+            else if (GetIdUser() > 100 && GetIdUser() < 1000) MenuCoordenador.NtChat();
+            else if (GetIdUser() > 0 && GetIdUser() < 100) MenuAdministrador.NtChat();
 
+        }
 
     }
 }

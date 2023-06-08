@@ -19,9 +19,13 @@ namespace JobStack
     /// </summary>
     public partial class TMenuEmpresa : Window
     {
+        private Empresa empresa;
+
         public TMenuEmpresa()
         {
             InitializeComponent();
+            empresa = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser());
+            NtChat();
         }
 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
@@ -92,6 +96,17 @@ namespace JobStack
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(bp);
             }
+        }
+        public void NtChat()
+        {
+            int n = 0;
+            for (int i = 0; i < empresa.GetChats().Count; i++)
+            {
+                n += BancodeDados.BuscarChat(empresa.GetChats()[i]).GetNotificacoes();
+            }
+            Notif.Text = n.ToString();
+            if (n == 0) Notificacao.Visibility = Visibility.Hidden;
+            else Notificacao.Visibility = Visibility.Visible;
         }
     }
 }

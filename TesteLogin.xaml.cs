@@ -136,6 +136,7 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
             string senha = StringSegura(passwordBoxSenha.SecurePassword);
             // Obtém o ID do usuário a partir do e-mail inserido
             int id = BancodeDados.BuscarID(email);
+            BancodeDados.SetIdUser(id);
             // Verifica se o campo senha está vazio e exibe uma mensagem de erro caso esteja
             if (passwordBoxSenha.SecurePassword.Length == 0)
             {
@@ -157,6 +158,7 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
                 this.Hide();
                 // Cria e exibe a janela do formulário TMenuAluno (menu do aluno)
                 TMenuAluno p = new TMenuAluno();
+                BancodeDados.MenuAluno = p;
                 p.ShowDialog();
             }
             else if (id / 1000 > 5) // se for uma empresa
@@ -165,6 +167,7 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
                 this.Hide();
                 // Cria e exibe a janela do formulário Empresa1
                 TMenuEmpresa p = new TMenuEmpresa();
+                BancodeDados.MenuEmpresa = p;
                 p.ShowDialog();
             }
             else if (id / 100 == 1) // se for um coordenador
@@ -173,6 +176,7 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
                 this.Hide();
                 // Cria e exibe a janela do formulário Coordenador1
                 TMenuCoordenador p = new TMenuCoordenador();
+                BancodeDados.MenuCoordenador = p;
                 p.ShowDialog();
             }
             else // se for um admin
@@ -180,7 +184,8 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
                 // Esconde a tela atual
                 this.Hide();
                 // Cria e exibe a janela do formulário TAdmin
-                TAdmin p = new TAdmin();
+                TMenuAdministrador p = new TMenuAdministrador();
+                BancodeDados.MenuAdministrador = p;
                 p.ShowDialog();
             }
         }

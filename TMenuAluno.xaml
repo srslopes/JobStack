@@ -267,6 +267,14 @@
                                                >
 
                                     </TextBlock>
+                                    <Grid x:Name="Notificacao" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="35,0,0,20" Height="20" Width="20">
+                                        <Rectangle RadiusX="15" RadiusY="15" Fill="Red">
+                                            <Rectangle.Effect>
+                                                <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+                                            </Rectangle.Effect>
+                                        </Rectangle>
+                                        <TextBlock x:Name="Notif" Text="X"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Foreground="White" Margin ="0,0,0,0" />
+                                    </Grid>
                                 </Grid>
                                 <ListViewItem.ToolTip>
                                     <ToolTip x:Name="tt_chat"

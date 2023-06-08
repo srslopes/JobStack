@@ -89,6 +89,7 @@ namespace JobStack
             else parent2.setIdChat(conversa.GetID());
             Notificacao.Visibility = Visibility.Hidden;
             conversa.SetNotificacoes();
+            BancodeDados.AttNtChat();
         }
     }
 }

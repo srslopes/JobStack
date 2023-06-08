@@ -29,8 +29,8 @@ namespace JobStack
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BatePapo bp = new BatePapo();
-            bp.Show();
+            //BatePapo bp = new BatePapo();
+            //bp.Show();
         }
 
         private void botaoLogin_Click(object sender, RoutedEventArgs e)

@@ -26,12 +26,12 @@
                         <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                     </Rectangle.Effect>
                 </Rectangle>
-                <ScrollViewer x:Name="ScrollContatos" VerticalScrollBarVisibility="Auto"
+                <ScrollViewer x:Name="ScrollContatos" VerticalScrollBarVisibility="Visible"
                           Width="290" Height="540" 
                           HorizontalScrollBarVisibility="Disabled" 
                           HorizontalAlignment="Left" VerticalAlignment="Center"
                           Margin="0,13" Grid.RowSpan="2">
-                    <StackPanel Name="Lista" Width="301" Height="0" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <StackPanel Name="Lista" Width="280" Height="0" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
 
 
                     </StackPanel>
@@ -53,11 +53,11 @@
                     </Rectangle.Effect>
                 </Rectangle>
 
-                <ScrollViewer x:Name="ScrollMensagens" VerticalScrollBarVisibility="Auto"
+                <ScrollViewer x:Name="ScrollMensagens" VerticalScrollBarVisibility="Visible"
                           Width="572" Height="472" 
-                          HorizontalScrollBarVisibility="Disabled" 
+                          HorizontalScrollBarVisibility="Hidden" 
                           HorizontalAlignment="Right" VerticalAlignment="Center" >
-                    <StackPanel Name="Chat" Width="596" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                    <StackPanel Name="Chat" Width="552" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Left">
 
                     </StackPanel>
                 </ScrollViewer>

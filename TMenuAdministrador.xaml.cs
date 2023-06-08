@@ -19,9 +19,13 @@ namespace JobStack
     /// </summary>
     public partial class TMenuAdministrador : Window
     {
+        private Admin admin;
+
         public TMenuAdministrador()
         {
             InitializeComponent();
+            admin = BancodeDados.BuscarAdmin(BancodeDados.GetIdUser());
+            NtChat();
         }
 
         private void BotaoMenu_Unchecked(object sender, RoutedEventArgs e)
@@ -83,6 +87,17 @@ namespace JobStack
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(bp);
             }
+        }
+        public void NtChat()
+        {
+            int n = 0;
+            for (int i = 0; i < admin.GetChats().Count; i++)
+            {
+                n += BancodeDados.BuscarChat(admin.GetChats()[i]).GetNotificacoes();
+            }
+            Notif.Text = n.ToString();
+            if (n == 0) Notificacao.Visibility = Visibility.Hidden;
+            else Notificacao.Visibility = Visibility.Visible;
         }
     }
 }

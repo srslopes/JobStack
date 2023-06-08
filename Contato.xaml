@@ -5,14 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="65" d:DesignWidth="283"
+             d:DesignHeight="65" d:DesignWidth="270"
              HorizontalAlignment="Center"
-             Margin="0,0,0,6">
+             Margin="10,0,0,6">
     <Grid Margin="0,0,6,0">
         <Button x:Name="Bt"
                 Background="#FF003964"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                Height="65" Width="277" BorderBrush="{x:Null}" Click="Button_Click"
+                Height="65" Width="260" BorderBrush="{x:Null}" Click="Button_Click"
                 >
             <Button.Resources>
                 <Style TargetType="Border">
@@ -22,7 +22,7 @@
             <Button.Effect>
                 <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
             </Button.Effect>
-            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="65" Width="283">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="65" Width="270">
                 <Border x:Name="FotoPerfil" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="12,0,0,0" Height="40" Width="40" CornerRadius="25">
                     <Border.Background>
                         <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />

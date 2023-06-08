@@ -19,9 +19,12 @@ namespace JobStack
     /// </summary>
     public partial class TMenuCoordenador : Window
     {
+        private Coordenador coordenador;
         public TMenuCoordenador()
         {
             InitializeComponent();
+            coordenador = BancodeDados.BuscarCoordenador(BancodeDados.GetIdUser());
+            NtChat();
         }
 
         private void BotaoMenu_Unchecked(object sender, RoutedEventArgs e)
@@ -81,6 +84,17 @@ namespace JobStack
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(bp);
             }
+        }
+        public void NtChat()
+        {
+            int n = 0;
+            for (int i = 0; i < coordenador.GetChats().Count; i++)
+            {
+                n += BancodeDados.BuscarChat(coordenador.GetChats()[i]).GetNotificacoes();
+            }
+            Notif.Text = n.ToString();
+            if (n == 0) Notificacao.Visibility = Visibility.Hidden;
+            else Notificacao.Visibility = Visibility.Visible;
         }
     }
 }

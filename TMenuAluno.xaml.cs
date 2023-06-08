@@ -19,10 +19,12 @@ namespace JobStack
     /// </summary>
     public partial class TMenuAluno : Window
     {
+        private Aluno aluno;
         public TMenuAluno()
         {
             InitializeComponent();
-
+            aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
+            NtChat();
             
         }
 
@@ -124,6 +126,18 @@ namespace JobStack
             TBatePapo bp = new TBatePapo(id);
             ConteudoJanela.Children.Clear();
             ConteudoJanela.Children.Add(bp);
+        }
+
+        public void NtChat()
+        {
+            int n = 0;
+            for(int i=0; i<aluno.GetChats().Count; i++)
+            {
+                n+=BancodeDados.BuscarChat(aluno.GetChats()[i]).GetNotificacoes();
+            }
+            Notif.Text = n.ToString();
+            if (n==0)Notificacao.Visibility = Visibility.Hidden;
+            else Notificacao.Visibility = Visibility.Visible;
         }
     }
 }
