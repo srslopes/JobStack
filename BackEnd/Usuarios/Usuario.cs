@@ -107,6 +107,14 @@ namespace JobStack
         {
             IdImg = id;
         }
+        public int ChatExiste(int id)
+        {
+            for(int i=0; i<Chats.Count; i++)
+            {
+                if (BancodeDados.BuscarChat(Chats[i]).GetParticipante() == id) return Chats[i];
+            }
+            return -1;
+        }
 
     }
 }

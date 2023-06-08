@@ -33,22 +33,26 @@ namespace JobStack
             NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
             NomeVaga.Text = vaga.GetNome();
             TipoVaga.Text = vaga.GetTipo();
-            DescricaoVaga.Text = vaga.getDescricao();
+            DescricaoVaga.Text = vaga.GetDescricao();
             Img.ImageSource = BancodeDados.BuscarImg((BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa())).GetIdImg());
         }
        
 
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
-            TVagaCompletaAluno vaga = new TVagaCompletaAluno();
-            vaga.Topmost = true;
-            vaga.Show();
+            TVagaCompletaAluno vg = new TVagaCompletaAluno(vaga.GetID(), this);
+            vg.Topmost = true;
+            vg.Show();
 
         }
         private void BtnDesinscrever_Click(object sender, RoutedEventArgs e)
         {
             vaga.Desinscrever(aluno.GetID());
             aluno.RemoverVaga(vaga.GetID());
+            AttVagas();
+        }
+        public void AttVagas()
+        {
             parent.AttVagas();
         }
     }

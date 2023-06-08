@@ -33,7 +33,17 @@ namespace JobStack
             attContatos();
 
         }
+        public TBatePapo(int id)
+        {
 
+            msg = true;
+            InitializeComponent();
+            Cabecalho.Visibility = Visibility.Hidden;
+            idChat = -1;
+            attContatos();
+            setIdChat(id);
+
+        }
         public void adicionarChat(int id)
         {
             Contato novo = new Contato(id, this);

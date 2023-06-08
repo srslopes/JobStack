@@ -83,18 +83,32 @@
                    Foreground="#003964"
                    Margin="20, 20, 0,0"
                         />
-        <TextBlock x:Name="NomeEmpresa"
+        <StackPanel Orientation="Horizontal"                    
+                   Margin="20, 60, 0,0">
+            <TextBlock x:Name="NomeEmpresa"
                    Text="Nome da Empresa"
                    FontSize="22"
                    Height="40"
-                   Width="400"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
                    FontFamily="Century Gothic"
                    Background="Transparent"
                    Foreground="#003964"
-                   Margin="20, 60, 0,0"
                         />
+            <Button x:Name="BtnMsg"
+                Width="120"
+                    Height="25"
+                    Content="Contatar Empresa"
+                    FontSize="12"
+                    FontFamily="Century Gothic"
+                    Background="#FF27597E"
+                    Foreground="White"
+                    HorizontalAlignment="Left"
+                    Margin="20,0,0,0"
+                    VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnMsg_Click" 
+                    />
+        </StackPanel>
+        
         <Button x:Name="BtnInscreverse"
                 Width="100"
                     Height="25" 
@@ -105,7 +119,7 @@
                     Background="#FF27597E"
                     Foreground="White"
                     HorizontalAlignment="Left"
-                    VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" 
+                    VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnInscreverse_Click" 
                     />
         <TextBlock Text="DESCRIÇÃO:"
                    FontSize="20"

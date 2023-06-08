@@ -119,5 +119,11 @@ namespace JobStack
                 ConteudoJanela.Children.Add(bp);
             }
         }
+        public void AbrirChat(int id)
+        {
+            TBatePapo bp = new TBatePapo(id);
+            ConteudoJanela.Children.Clear();
+            ConteudoJanela.Children.Add(bp);
+        }
     }
 }

@@ -66,27 +66,15 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Button x:Name="BtnEmAberto"
-                Width="130"
-                Height="40"
-                Content="EM ABERTO"
-                Background="#FF27597E"
-                FontFamily="Century Gothic"
-                FontSize="14"
-                Foreground="White"
-                 Margin="290.736,20,533.263,571.364" 
-                 Style="{DynamicResource ButtonStyle1}" Click="BtnEmAberto_Click"
-            />
-        <Button x:Name="BtnFinalizadas"
-                Width="130"
-                Height="40"
-                Content="FINALIZADAS"
-                Background="#FF27597E"
-                FontFamily="Century Gothic"
-                FontSize="14"
-                Foreground="White"
-                Style="{DynamicResource ButtonStyle1}" Margin="516.615,20,307.384,571.4" Click="BtnFinalizadas_Click" 
-            />
+        <TextBlock Text="MINHAS INSCRIÇÕES"
+                       FontSize="35"
+                        FontFamily="Century Gothic Bold"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="Transparent"
+                        Foreground="#003964"
+                       Margin="300, 25, 0, 0"
+                        />
         <!-- GRID PARA PUXAR AS PÁGINAS DAS VAGAS E FORMULÁRIOS -->
         <Grid x:Name="Lista"
                       Margin="-10,30,0,0"

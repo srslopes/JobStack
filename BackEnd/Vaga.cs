@@ -13,8 +13,12 @@ namespace JobStack
         private string nome;
         private string descricao;
         private string tipo;
+        private string curso;
+        private string turno;
+        private string jornada;
         private List<int> Inscritos;
         private int status;
+        private int nvagas;
 
         //         Status
         // 0 : Aguardando aprovação
@@ -29,6 +33,11 @@ namespace JobStack
             status = 0;
             nome = "";
             descricao = "";
+            tipo = "";
+            curso = "";
+            turno = "";
+            jornada = "";
+            nvagas = 0;
             BancodeDados.AdicionarVaga(this);
         }
         
@@ -92,11 +101,7 @@ namespace JobStack
         public string GetNome()
         {
             return nome;
-        }
-        public void SetDescricao(string Descricao)
-        {
-            descricao = Descricao;
-        }
+        }        
         public string GetTipo()
         {
             return tipo;
@@ -105,10 +110,45 @@ namespace JobStack
         {
             tipo = Tipo;
         }
-
-        public string getDescricao()
+        public void SetDescricao(string Descricao)
+        {
+            descricao = Descricao;
+        }
+        public string GetDescricao()
         {
             return descricao;
+        }
+        public void SetCurso(string Curso)
+        {
+            curso = Curso;
+        }
+        public string GetCurso()
+        {
+            return curso;
+        }
+        public void SetTurno(string Turno)
+        {
+            turno = Turno;
+        }
+        public string GetTurno()
+        {
+            return turno;
+        }
+        public void SetJornada(string Jornada)
+        {
+            jornada = Jornada;
+        }
+        public string GetJornada()
+        {
+            return jornada;
+        }
+        public void SetNVagas(int nVagas)
+        {
+            nvagas = nVagas;
+        }
+        public int GetNVagas()
+        {
+            return nvagas;
         }
     }
 }

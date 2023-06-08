@@ -34,7 +34,7 @@ namespace JobStack
 
             NomeVaga.Text = vaga.GetNome();
             TipoVaga.Text = vaga.GetTipo();
-            DescricaoVaga.Text = vaga.getDescricao();
+            DescricaoVaga.Text = vaga.GetDescricao();
             Img.ImageSource = BancodeDados.BuscarImg((BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa())).GetIdImg());
         }
 
@@ -42,14 +42,19 @@ namespace JobStack
         {
             aluno.AdicionarVaga(vaga.GetID());
             vaga.Inscrever(aluno.GetID());
+            AttVagas();
+        }
+
+        public void AttVagas()
+        {
             parent.AttVagas();
         }
 
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
-            TVagaCompletaAluno vaga = new TVagaCompletaAluno();
-            vaga.Topmost = true;
-            vaga.Show();
+            TVagaCompletaAluno vg = new TVagaCompletaAluno(vaga.GetID(), this);
+            vg.Topmost = true;
+            vg.Show();
 
         }
     }
