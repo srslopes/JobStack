@@ -50,7 +50,6 @@ namespace JobStack
 
                 textBlockCondiçãoSenha.Text = "Campo Senha vazio";
             }
-
             else if (!regex.IsMatch(textBoxEmail.Text))
             {
                 // Se o valor não corresponder, exibe uma mensagem de erro
@@ -204,6 +203,12 @@ namespace JobStack
                 textBlockCondiçãoEmail.Visibility = Visibility.Visible;
 
                 textBlockCondiçãoEmail.Text = "Email já consta no sistema";
+            }
+          else  if (textBoxNome.Text.All(char.IsDigit))
+            {            // Mostra uma mensagem de erro e interrompe o processamento da função
+                textBlockCondiçãoNome.Visibility = Visibility.Visible;
+                textBlockCondiçãoNome.Text = "Por favor, insira apenas carecteres .";
+                return;
             }
             else {
                 Aluno N = new Aluno();
