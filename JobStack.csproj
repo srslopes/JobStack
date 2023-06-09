@@ -61,30 +61,30 @@
     <Compile Include="Teste\TesteCadastrarEmpresa.xaml.cs">
       <DependentUpon>TesteCadastrarEmpresa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vagas\Vaga.cs" />
+    <Compile Include="Vaga.cs" />
     <Compile Include="BackEnd\Usuarios\Coordenador.cs" />
     <Compile Include="BackEnd\Usuarios\Empresa.cs" />
     <Compile Include="BackEnd\Usuarios\Usuario.cs" />
-    <Compile Include="BatePapo\ChatFiller.xaml.cs">
+    <Compile Include="ChatFiller.xaml.cs">
       <DependentUpon>ChatFiller.xaml</DependentUpon>
     </Compile>
     <Compile Include="DesignExibiçãoUsuario.xaml.cs">
       <DependentUpon>DesignExibiçãoUsuario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vagas\DesignVagaInscrita.xaml .cs" />
-    <Compile Include="Vagas\DesignVagaCoordenador.xaml.cs">
+    <Compile Include="DesignVagaInscrita.xaml .cs" />
+    <Compile Include="DesignVagaCoordenador.xaml.cs">
       <DependentUpon>DesignVagaCoordenador.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vagas\DesignVaga_Empresa.xaml.cs">
+    <Compile Include="DesignVaga_Empresa.xaml.cs">
       <DependentUpon>DesignVaga_Empresa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vagas\SemVagas.xaml.cs">
+    <Compile Include="SemVagas.xaml.cs">
       <DependentUpon>SemVagas.xaml</DependentUpon>
     </Compile>
     <Compile Include="TAdmin.xaml.cs">
       <DependentUpon>TAdmin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BatePapo\TBatePapo.xaml.cs">
+    <Compile Include="TBatePapo.xaml.cs">
       <DependentUpon>TBatePapo.xaml</DependentUpon>
     </Compile>
     <Compile Include="TCadastrarUsuarioAdm.xaml.cs">
@@ -159,15 +159,15 @@
     <Compile Include="TVagasPendentesEmpresa.xaml.cs">
       <DependentUpon>TVagasPendentesEmpresa.xaml</DependentUpon>
     </Compile>
-    <Page Include="BatePapo\BatePapo.xaml">
+    <Page Include="BatePapo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BatePapo\ChatFiller.xaml">
+    <Page Include="ChatFiller.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BatePapo\Contato.xaml">
+    <Page Include="Contato.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -179,19 +179,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vagas\DesignVagaInscrita.xaml">
+    <Page Include="DesignVagaInscrita.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Vagas\DesignVaga.xaml">
+    <Page Include="DesignVaga.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Vagas\DesignVagaCoordenador.xaml">
+    <Page Include="DesignVagaCoordenador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vagas\DesignVaga_Empresa.xaml">
+    <Page Include="DesignVaga_Empresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,23 +204,23 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BackEnd\Chat.cs" />
-    <Compile Include="BatePapo\Contato.xaml.cs" />
+    <Compile Include="Contato.xaml.cs" />
     <Compile Include="BackEnd\BancodeDados.cs" />
-    <Compile Include="BatePapo\BatePapo.xaml.cs" />
-    <Compile Include="Vagas\DesignVaga.xaml.cs" />
+    <Compile Include="BatePapo.xaml.cs" />
+    <Compile Include="DesignVaga.xaml.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="BatePapo\Mensagem_L.xaml">
+    <Page Include="Mensagem_L.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="BatePapo\Mensagem_R.xaml">
+    <Page Include="Mensagem_R.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Vagas\SemVagas.xaml">
+    <Page Include="SemVagas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -228,7 +228,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BatePapo\TBatePapo.xaml">
+    <Page Include="TBatePapo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -331,8 +331,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackEnd\Mensagem.cs" />
-    <Compile Include="BatePapo\Mensagem_L.xaml.cs" />
-    <Compile Include="BatePapo\Mensagem_R.xaml.cs" />
+    <Compile Include="Mensagem_L.xaml.cs" />
+    <Compile Include="Mensagem_R.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -403,6 +403,9 @@
   <ItemGroup>
     <Resource Include="Icones\logo-jobstack-icon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BatePapo\" />
+    <Folder Include="Vagas\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

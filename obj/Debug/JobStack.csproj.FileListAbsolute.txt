@@ -721,3 +721,9 @@ C:\Users\BRUNO\Documents\JobStack\obj\Debug\TVagaCompletaAluno.baml
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\TVagaCompletaCoordenador.baml
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\TVagaCompletaEmpresa.baml
 C:\Users\BRUNO\Documents\JobStack\obj\Debug\TVagasEmAberto.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Teste\TesteCadastrarEmpresa.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Teste\TesteCadastrarAluno.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Teste\TesteImagem.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Teste\TesteCadastrarEmpresa.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Teste\TesteCadastrarAluno.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\Teste\TesteImagem.baml

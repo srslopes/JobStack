@@ -34,7 +34,7 @@ namespace JobStack
             Vagas = new List<int>();
             BancodeDados.AdicionarAluno(this);
             Chat adm = new Chat(GetID(), 1);
-            Chat coo = new Chat(GetID(), 101);
+            Chat coo = new Chat(GetID(), 101); 
         }
         
         public void AdicionarVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
