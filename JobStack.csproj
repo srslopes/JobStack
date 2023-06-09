@@ -58,6 +58,9 @@
     </ApplicationDefinition>
     <Compile Include="BackEnd\Usuarios\Admin.cs" />
     <Compile Include="BackEnd\Usuarios\Aluno.cs" />
+    <Compile Include="Teste\TesteCadastrarEmpresa.xaml.cs">
+      <DependentUpon>TesteCadastrarEmpresa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vagas\Vaga.cs" />
     <Compile Include="BackEnd\Usuarios\Coordenador.cs" />
     <Compile Include="BackEnd\Usuarios\Empresa.cs" />
@@ -90,10 +93,10 @@
     <Compile Include="TCadastrarVagaEmpresa.xaml.cs">
       <DependentUpon>TCadastrarVagaEmpresa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TesteCadastrarAluno.xaml.cs">
+    <Compile Include="Teste\TesteCadastrarAluno.xaml.cs">
       <DependentUpon>TesteCadastrarAluno.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TesteImagem.xaml.cs">
+    <Compile Include="Teste\TesteImagem.xaml.cs">
       <DependentUpon>TesteImagem.xaml</DependentUpon>
     </Compile>
     <Compile Include="TesteLogin.xaml.cs">
@@ -172,6 +175,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Teste\TesteCadastrarEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vagas\DesignVagaInscrita.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -233,11 +240,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TesteCadastrarAluno.xaml">
+    <Page Include="Teste\TesteCadastrarAluno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TesteImagem.xaml">
+    <Page Include="Teste\TesteImagem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -396,5 +403,6 @@
   <ItemGroup>
     <Resource Include="Icones\logo-jobstack-icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

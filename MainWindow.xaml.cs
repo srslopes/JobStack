@@ -81,5 +81,11 @@ namespace JobStack
 
             c.Show();
         }
+
+        private void bCadastrarEmpresa_Click(object sender, RoutedEventArgs e)
+        {
+            TesteCadastrarEmpresa t = new TesteCadastrarEmpresa();
+            t.Show();
+        }
     }
 }

@@ -17,5 +17,6 @@
         <Button Content="MenuCoordenador" x:Name="BtnMenuCoordenador" HorizontalAlignment="Left" Height="28" Margin="30,385,0,0" VerticalAlignment="Top" Width="150" Click="BtnMenuCoordenador_Click"/>
         <Button Content="MenuAdministrador" x:Name="BtnMenuAdm" HorizontalAlignment="Left" Height="30" Margin="30,422,0,0" VerticalAlignment="Top" Width="167" Click="BtnMenuAdm_Click"/>
         <Button x:Name="botaoCadastrar" Content="Cadastrar Aluno" HorizontalAlignment="Left" Margin="10,457,0,0" VerticalAlignment="Top" Width="187" Height="53" Click="BotaoCadastrar_Click"/>
+        <Button x:Name="bCadastrarEmpresa" Content="Cadastrar Empresa" HorizontalAlignment="Left" Margin="21,521,0,0" VerticalAlignment="Top" Width="159" Height="73" Click="bCadastrarEmpresa_Click"/>
     </Grid>
 </Window>
