@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/logo-jobstack-icon.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagens/fatec_colorido.png")]
 
 

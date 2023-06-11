@@ -23,5 +23,10 @@ namespace JobStack
         {
             InitializeComponent();
         }
+
+        private void BtnFechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

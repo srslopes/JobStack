@@ -1,0 +1,255 @@
+﻿<Window x:Class="JobStack.TExibirPerfilEmpresa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JobStack"
+        mc:Ignorable="d"
+        Title="TExibirPerfilEmpresa" WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Height="640" 
+        Width="954"
+        Background="#FFD9EBFB">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="BtnFecharStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="10.45,1.49,9.95,3.99" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- STYLE BTN CHAT -->
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FFD9EBFB">
+        <Grid.Resources>
+            <Style TargetType="Border" x:Key="CustomBorder">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="BorderBrush" Value="#003964"/>
+                <Setter Property="Background" Value="#FFD9EBFB"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Black" Direction="315" ShadowDepth="3" Opacity="0.5"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Border Style="{StaticResource CustomBorder}" />
+
+        <Ellipse x:Name="FotoAluno"
+                 Fill="LightGray"
+                 Width="110"
+                 Height="110"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="27,38.952,0,0" Stroke="#FF003964" StrokeThickness="2">
+
+        </Ellipse>
+        <TextBlock x:Name="NomeEmpresa"
+                    Text="Nome da empresa"
+                   FontSize="26"
+                   FontFamily="Century Gothic Bold"
+                   Foreground="#003964"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Margin="154,58.331,0,0"
+                    />
+        <TextBlock Text="CNPJ: "
+                   FontSize="20"
+                   FontFamily="Century Gothic"
+                   Foreground="#003964"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Margin="154,92.155,0,0"
+                    />
+        <Button x:Name="BtnFechar"
+                Width="30"
+                Height="30"
+                Content="x"
+                FontFamily="Century Gothic"
+                FontSize="20"
+                Background="#003964"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" Margin="0,13.335,18.669,0" Style="{DynamicResource BtnFecharStyle}" Click="BtnFechar_Click"
+                    />
+        <TextBlock x:Name="cnpj"
+                   Text="CNPJ da empresa"
+                   FontSize="20"
+                   FontFamily="Century Gothic"
+                   Foreground="#003964"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Margin="219.236,92.155,0,0"
+                   />
+        <Grid x:Name="GridInfoEmpresa"
+              Width="910" Margin="22,165.039,14,26.67">
+            <Rectangle x:Name="FundoInfo"
+                       Fill="AliceBlue"
+                       RadiusX="10"
+                       RadiusY="10"
+                       Width="910"
+                       >
+                <Rectangle.Effect>
+                    <DropShadowEffect ShadowDepth="2" Opacity="0.2" BlurRadius="3"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBlock Text="SOBRE NÓS"
+                       FontSize="24"
+                       FontFamily="Century Gothic Bold"
+                       Foreground="#003964"
+                       Margin="10, 10, 0, 0"
+                       Width="200"
+                       Height="25"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                        />
+            <Button x:Name="BtnChat" 
+                    Width="180"
+                    Height="30"
+                    Content="Contatar Empresa"
+                    FontFamily="Century Gothic"
+                    FontSize="16"
+                    Background="#003964"
+                    Foreground="White" Margin="701,9.145,9,401.145" Style="{DynamicResource ButtonStyle1}"
+                    />
+            <Grid x:Name="GridInfo"
+                  Width="910"
+                  Height="120"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Top" Margin="0,53.872,0,0">
+                <ScrollViewer x:Name="SVInfo"
+                              Width="910"
+                              Height="120"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center">
+                    <TextBlock x:Name="InfoEmpresa"
+                               FontSize="20"
+                               FontFamily="Century Gothic"
+                               Text="Informações da empresa"
+                               Foreground="Black"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="10, 10, 0, 0"
+                                />
+                </ScrollViewer>
+            </Grid>
+
+            <TextBlock Text="VAGAS PUBLICADAS:"
+                               FontSize="21"
+                           FontFamily="Century Gothic Bold"
+                           Foreground="#003964"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Margin="10,186.534,0,228.01"
+                                    />
+            <Grid x:Name="GridVagas"
+                  Width="910"
+                  Height="210" 
+                  Margin="0,0,0,12.887"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Bottom">
+
+                <ScrollViewer x:Name="SVVagas"
+                              Width="910"
+                              Height="210"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center">
+                    <StackPanel x:Name="SPVagas"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Width="910"
+                                Height="0">
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

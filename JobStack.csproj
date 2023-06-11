@@ -58,8 +58,29 @@
     </ApplicationDefinition>
     <Compile Include="BackEnd\Usuarios\Admin.cs" />
     <Compile Include="BackEnd\Usuarios\Aluno.cs" />
+    <Compile Include="DesignUsuarioInscrito.xaml.cs">
+      <DependentUpon>DesignUsuarioInscrito.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Teste\TesteCadastrarEmpresa.xaml.cs">
       <DependentUpon>TesteCadastrarEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TExibirPerfilAluno.xaml.cs">
+      <DependentUpon>TExibirPerfilAluno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TExibirPerfilEmpresa.xaml.cs">
+      <DependentUpon>TExibirPerfilEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TFormInfoEmpresa.xaml.cs">
+      <DependentUpon>TFormInfoEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TGerarSenhaADM.xaml.cs">
+      <DependentUpon>TGerarSenhaADM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TPerfilAluno.xaml.cs">
+      <DependentUpon>TPerfilAluno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TPerfilEmpresa.xaml.cs">
+      <DependentUpon>TPerfilEmpresa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vaga.cs" />
     <Compile Include="BackEnd\Usuarios\Coordenador.cs" />
@@ -175,6 +196,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DesignUsuarioInscrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Teste\TesteCadastrarEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -252,11 +277,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TExibirPerfilAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TExibirPerfilEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TExibirUsuários.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TFormCurriculoAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TFormInfoEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TGerarSenhaADM.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -289,6 +330,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TNotificacoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TPerfilAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TPerfilEmpresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -406,6 +455,15 @@
   <ItemGroup>
     <Folder Include="BatePapo\" />
     <Folder Include="Vagas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\background-login-of.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\fatec_colorido.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

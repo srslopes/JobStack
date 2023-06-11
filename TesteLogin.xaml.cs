@@ -328,6 +328,7 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
             Grid.SetColumn(gridProblema, 1);
             gridProblema.Margin = gridEmail.Margin;
             gridProblema.Visibility = Visibility.Visible;
+            textBlockEmailProblema.Visibility = Visibility.Visible;
             gridEmail.Visibility = Visibility.Hidden;
             gridSenha.Visibility = Visibility.Hidden;
             botãoVoltar.Visibility = Visibility.Visible;

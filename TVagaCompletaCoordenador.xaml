@@ -8,6 +8,7 @@
         Title="TVagaCompletaCoordenador" 
         Height="450" 
         Width="850"
+        WindowStyle="None"
         Background="#FFD9EBFB"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -68,6 +69,44 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <!-- STYLE BTN FECHAR -->
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="10.366,1.571,10.033,3.908" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <TextBlock x:Name="TituloVaga"
@@ -82,6 +121,18 @@
                    Foreground="#003964"
                    Margin="20, 20, 0,0"
                         />
+        <Button x:Name="BtnFechar"
+                Width="30"
+                Height="30"
+                Content="x"
+                FontFamily="Century Gothic"
+                FontSize="20"
+                Background="#003964"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" Margin="0,10,14,0"  
+                Click="BtnFechar_Click" Style="{DynamicResource ButtonStyle2}"
+                    />
         <TextBlock x:Name="NomeEmpresa"
                    Text="Nome da Empresa"
                    FontSize="22"
@@ -246,6 +297,6 @@
             Width="50"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"/>
-       
+
     </Grid>
 </Window>

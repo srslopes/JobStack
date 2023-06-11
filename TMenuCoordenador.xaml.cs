@@ -37,18 +37,14 @@ namespace JobStack
             //torna visivel o tooltip
             if (BotaoMenu.IsChecked == true)
             {
-                tt_notificacoes.Visibility = Visibility.Collapsed;
                 tt_logout.Visibility = Visibility.Collapsed;
                 tt_chat.Visibility = Visibility.Collapsed;
-                tt_perfil.Visibility = Visibility.Collapsed;
                 tt_analisar.Visibility = Visibility.Collapsed;
             }
             else
             {
-                tt_notificacoes.Visibility = Visibility.Visible;
                 tt_logout.Visibility = Visibility.Visible;
                 tt_chat.Visibility = Visibility.Visible;
-                tt_perfil.Visibility = Visibility.Visible;
                 tt_analisar.Visibility = Visibility.Visible;
             }
         }

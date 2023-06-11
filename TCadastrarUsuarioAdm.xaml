@@ -53,8 +53,8 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -72,7 +72,7 @@
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
         <Style x:Key="TextboxArredondadaStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="BorderBrush" Value="#003964"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
@@ -111,13 +111,14 @@
                 </MultiTrigger>
             </Style.Triggers>
         </Style>
+        <!-- STYLE DA COMBOBOX -->
         <LinearGradientBrush x:Key="ComboBox.Static.Background" EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="White" Offset="0.0"/>
             <GradientStop Color="White" Offset="1.0"/>
         </LinearGradientBrush>
-        <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#FFACACAC"/>
+        <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#003964"/>
         <SolidColorBrush x:Key="ComboBox.Static.Editable.Background" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="ComboBox.Static.Editable.Border" Color="#FFABADB3"/>
+        <SolidColorBrush x:Key="ComboBox.Static.Editable.Border" Color="#003964"/>
         <SolidColorBrush x:Key="ComboBox.Static.Editable.Button.Background" Color="Transparent"/>
         <SolidColorBrush x:Key="ComboBox.Static.Editable.Button.Border" Color="Transparent"/>
         <SolidColorBrush x:Key="ComboBox.MouseOver.Glyph" Color="#FF000000"/>
@@ -248,7 +249,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <!-- STYLE COMBOBOX -->
         <ControlTemplate x:Key="ComboBoxTemplate" TargetType="{x:Type ComboBox}">
             <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
                 <Grid.ColumnDefinitions>
@@ -257,7 +257,7 @@
                 </Grid.ColumnDefinitions>
                 <Popup x:Name="PART_Popup" AllowsTransparency="true" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom">
                     <Themes:SystemDropShadowChrome x:Name="shadow" Color="Transparent" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=templateRoot}">
-                        <Border x:Name="dropDownBorder" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+                        <Border x:Name="dropDownBorder" CornerRadius="5" BorderBrush="#003964" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
                             <ScrollViewer x:Name="DropDownScrollViewer">
                                 <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
                                     <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
@@ -386,14 +386,14 @@
     </UserControl.Resources>
     <Grid>
         <TextBlock 
-            Text="Crie um novo usuário"
+            Text="CRIE UM NOVO USUÁRIO"
             FontSize="35"
             FontFamily="Century Gothic Bold"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="Transparent"
             Foreground="#003964"
-            Margin="28,38,0,0"
+            Margin="30,30,0,0"
                         />
         <Rectangle Width="900"
                    Height="238"
@@ -401,14 +401,14 @@
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    RadiusX="10"
-                   RadiusY="10" Margin="25,117,29,285"
+                   RadiusY="10" Margin="25,100,29,302"
                     />
         <TextBlock Text="Tipo de usuário:"
                    FontSize="22"
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="54.5,155.513,0,457.513"
+                   VerticalAlignment="Center" Margin="54,141,0,472"
             />
         <ComboBox x:Name="TipoUsuario"
                   Text="Escolha"
@@ -416,10 +416,10 @@
                   Height="24"
                   Background="White"
                   FontFamily="Century Gothic"
-                  FontSize="20"
+                  FontSize="18"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Center"
-                  Margin="229.5,158.167,0,457.833" Style="{DynamicResource ComboBoxStyle1}">
+                  Margin="230,143,0,473" Style="{DynamicResource ComboBoxStyle1}">
             <ComboBoxItem Content="Aluno" />
             <ComboBoxItem Content="Empresa" />
             <ComboBoxItem Content="Coordenador" />
@@ -430,32 +430,32 @@
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="57.5,195.18,0,417.846"
+                   VerticalAlignment="Center" Margin="58,180,0,433"
                     />
         <TextBox x:Name="NomeUsuario"
-                 Width="367.333"
+                 Width="368"
                  Height="24"
                  FontFamily="Century Gothic"
-                 FontSize="20"
+                 FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
-                 Margin="137.667,198,0,418" Style="{DynamicResource TextboxArredondadaStyle}"
+                 Margin="138,183,0,433" Style="{DynamicResource TextboxArredondadaStyle}"
                     />
         <TextBlock Text="E-mail:"
                    FontSize="22"
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="56.833,238.513,0,374.513"
+                   VerticalAlignment="Center" Margin="57,224,0,389"
                     />
         <TextBox x:Name="EmailUsuario"
-                 Width="368"
+                 Width="434"
                  Height="24"
                  FontFamily="Century Gothic"
-                 FontSize="20"
+                 FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
-                 Margin="137.667,240.667,0,375.333"
+                 Margin="138,226,0,390"
                  Style="{DynamicResource TextboxArredondadaStyle}"
                         />
         <TextBlock Text="Senha inicial:"
@@ -463,16 +463,16 @@
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="57.5,277.013,0,336.013"
+                   VerticalAlignment="Center" Margin="58,262,0,351"
                    />
         <TextBox x:Name="SenhaUsuario"
             Width="300"
             Height="24"
             FontFamily="Century Gothic"
-            FontSize="20"
+            FontSize="18"
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
-            Margin="205,280,0,336"
+            Margin="205,265,0,351"
                  Style="{DynamicResource TextboxArredondadaStyle}"
                         />
         <Button x:Name="BtnSalvar"
@@ -484,19 +484,7 @@
                     Background="#FF27597E"
                     Foreground="White"
                     HorizontalAlignment="Right"
-                    VerticalAlignment="Center" Margin="0,293,54,307" Style="{DynamicResource BotaoArredondadoStyle}"
+                    VerticalAlignment="Center" Margin="0,278,54,322" Style="{DynamicResource BotaoArredondadoStyle}"
                 />
-        <Button x:Name="BtnVoltar"
-                    Width="80"
-                    Height="25" 
-                    Margin="0,0,27.668,35.166"
-                    Content="Voltar"
-                    FontSize="12"
-                    FontFamily="Century Gothic"
-                    Background="#FF27597E"
-                    Foreground="White"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom" 
-                    Style="{DynamicResource BotaoArredondadoStyle}"/>
     </Grid>
 </UserControl>

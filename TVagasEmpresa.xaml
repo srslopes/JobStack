@@ -149,7 +149,7 @@
               HorizontalAlignment="Center"
               VerticalAlignment="Center"
               Width="910"
-              Height="500" Margin="22,83.5,22,56.5"
+              Height="500" Margin="22,97.5,22,42.5"
               Background="AliceBlue">
             <Grid.Resources>
                 <Style TargetType="Border">
@@ -168,16 +168,5 @@
 
             </Rectangle> -->
         </Grid>
-        <Button x:Name="BtnVoltar"
-                    Width="80"
-                    Height="25" 
-                    Margin="0,0,13.667,23.5"
-                    Content="Voltar"
-                    FontSize="12"
-                    FontFamily="Century Gothic"
-                    Background="#FF27597E"
-                    Foreground="White"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom" Style="{DynamicResource ButtonStyle1}" />
     </Grid>
 </UserControl>

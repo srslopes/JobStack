@@ -8,7 +8,8 @@
         Title="TVagaCompletaAluno" 
         Height="450" 
         Width="850"
-        Background="#FFD9EBFB"
+        WindowStyle="None"
+        Background="Transparent"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Icon="{StaticResource AppIcon}">
@@ -56,8 +57,46 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- STYLE BTN FECHAR -->
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="10.533,1.237,9.866,4.242" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="#2973AA"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -70,7 +109,22 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid Background="#FFD9EBFB">
+        <Grid.Resources>
+            <Style TargetType="Border" x:Key="CustomBorder">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="BorderBrush" Value="#003964"/>
+                <Setter Property="Background" Value="#FFD9EBFB"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Black" Direction="315" ShadowDepth="3" Opacity="0.5"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Border Style="{StaticResource CustomBorder}" />
         <TextBlock x:Name="TituloVaga"
                    Text="TÍTULO DA VAGA"
                     FontSize="30"
@@ -83,6 +137,17 @@
                    Foreground="#003964"
                    Margin="20, 20, 0,0"
                         />
+        <Button x:Name="BtnFechar"
+                Width="30"
+                Height="30"
+                Content="x"
+                FontFamily="Century Gothic"
+                FontSize="20"
+                Background="#003964"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" Margin="0,10,14,0" Style="{DynamicResource ButtonStyle2}" Click="BtnFechar_Click"
+                    />
         <StackPanel Orientation="Horizontal"                    
                    Margin="20, 60, 0,0">
             <TextBlock x:Name="NomeEmpresa"
@@ -104,11 +169,11 @@
                     Background="#FF27597E"
                     Foreground="White"
                     HorizontalAlignment="Left"
-                    Margin="20,0,0,0"
+                    Margin="20,2.5,0,0"
                     VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnMsg_Click" 
                     />
         </StackPanel>
-        
+
         <Button x:Name="BtnInscreverse"
                 Width="100"
                     Height="25" 

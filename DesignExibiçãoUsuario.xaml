@@ -51,8 +51,8 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -115,24 +115,11 @@
                    Margin="142,129,0,0" 
                    FontSize="16" 
                    FontFamily="Century Gothic" />
-        <Button x:Name="BtnDetalhes"
-                Width="90" 
+        <Button x:Name="BtnGerarSenha"
+                Width="120" 
                 Height="26" 
-                Margin="0,147,25,17" 
-                Content="Detalhes" 
-                FontSize="12" 
-                FontFamily="Century Gothic"
-                Background="#FF27597E"
-                Foreground="White"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Center" 
-                Style="{DynamicResource ButtonStyle1}"
-                />
-        <Button x:Name="BtnEditar"
-                Width="90" 
-                Height="26" 
-                Content="Editar" 
-                FontSize="12" 
+                Content="Gerar nova senha" 
+                FontSize="11" 
                 FontFamily="Century Gothic"
                 Background="#FF27597E"
                 Foreground="White"

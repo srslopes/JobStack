@@ -117,5 +117,10 @@ namespace JobStack
             BancodeDados.MenuAluno.AbrirChat(id);
             this.Hide();
         }
+
+        private void BtnFechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

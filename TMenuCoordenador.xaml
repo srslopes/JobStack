@@ -160,39 +160,6 @@
                               Background="Transparent"
                               BorderBrush="Transparent" Height="542.167">
 
-
-                            <!-- NOTIFICAÇÕES -->
-                            <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
-                                <Grid x:Name="LVbtnNotificacoes"
-                                      Width="250"
-                                      Height="50"
-                                      HorizontalAlignment="Left">
-                                    <Image Source="Icones/icon notifications 2.png"
-                                          x:Name="iconBtnNotifications"
-                                          Width="40.75"
-                                          Stretch="UniformToFill"
-                                          HorizontalAlignment="Left" Margin="7.925,4.5,0,2"
-                                         />
-                                    <TextBlock x:Name="txtBtnNotificacoes"
-                                               Width="250"
-                                               Height="50"
-                                               FontFamily="Century Gothic"
-                                               FontSize="18"
-                                               Foreground="White"
-                                               Text="NOTIFICAÇÕES"
-                                               VerticalAlignment="Center"
-                                               Padding="62, 13, 0, 0">
-                                    </TextBlock>
-                                </Grid>
-                                <ListViewItem.ToolTip>
-                                    <ToolTip x:Name="tt_notificacoes"
-                                             Content="Notificações"
-                                             Style="{StaticResource tt_style}"
-                                             Width="140"
-                                             Height="50"/>
-                                </ListViewItem.ToolTip>
-                            </ListViewItem>
                             <!-- CHAT -->
                             <ListViewItem HorizontalAlignment="Left"
                                       Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
@@ -270,38 +237,7 @@
                                 </ListViewItem.ToolTip>
                             </ListViewItem>
 
-                            <!--MEU PERFIL-->
-                            <ListViewItem HorizontalAlignment="Left" Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
-                               
-                                <Grid x:Name="LVBtnPerfil"
-                                      Width="250"
-                                      Height="50"
-                                      HorizontalAlignment="Center"
-                                                                    >
-                                    <Image Source="Icones/icon perfil.png"
-                                       Stretch="UniformToFill"
-                                       HorizontalAlignment="Left"
-                                       Width="38.5" Margin="14.674,6.085,0,5.416"/>
-                                    <TextBlock x:Name="txtBtnPerfil"
-                                           Height="50"
-                                           Width="250"
-                                           Text="MEU PERFIL"
-                                           FontFamily="Century Gothic"
-                                           FontSize="18"
-                                           Foreground="White"
-                                           VerticalAlignment="Center"
-                                           Padding="65, 13, 0, 0"
-                                           />
-                                </Grid>
-                                <ListViewItem.ToolTip>
-                                    <ToolTip x:Name="tt_perfil"
-                                             Content="Meu perfil"
-                                             Style="{StaticResource tt_style}"
-                                             Width="110"
-                                             Height="50"/>
-                                </ListViewItem.ToolTip>
-                            </ListViewItem>
-
+                            
                             <!--LOG OUT-->
                             <ListViewItem HorizontalAlignment="Left" Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
                                 

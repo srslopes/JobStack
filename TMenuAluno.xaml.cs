@@ -39,7 +39,6 @@ namespace JobStack
             if (BotaoMenu.IsChecked == true)
             {
                 tt_vagasdisp.Visibility = Visibility.Collapsed;
-                tt_notificacoes.Visibility = Visibility.Collapsed;
                 tt_logout.Visibility = Visibility.Collapsed;
                 tt_chat.Visibility = Visibility.Collapsed;
                 tt_perfil.Visibility = Visibility.Collapsed;
@@ -48,7 +47,6 @@ namespace JobStack
             else
             {
                 tt_vagasdisp.Visibility = Visibility.Visible;
-                tt_notificacoes.Visibility = Visibility.Visible;
                 tt_logout.Visibility = Visibility.Visible;
                 tt_chat.Visibility = Visibility.Visible;
                 tt_perfil.Visibility = Visibility.Visible;
@@ -138,6 +136,17 @@ namespace JobStack
             Notif.Text = n.ToString();
             if (n==0)Notificacao.Visibility = Visibility.Hidden;
             else Notificacao.Visibility = Visibility.Visible;
+        }
+
+        private void txtBtnPerfil_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "MEU PERFIL")
+            {
+                TPerfilAluno pf = new TPerfilAluno();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(pf);
+            }
         }
     }
 }

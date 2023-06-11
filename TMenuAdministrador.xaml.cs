@@ -39,7 +39,7 @@ namespace JobStack
             if (BotaoMenu.IsChecked == true)
             {
                 tt_usuarios.Visibility = Visibility.Collapsed;
-                tt_notificacoes.Visibility = Visibility.Collapsed;
+             
                 tt_logout.Visibility = Visibility.Collapsed;
                 tt_chat.Visibility = Visibility.Collapsed;
                 tt_cadusuario.Visibility = Visibility.Collapsed;
@@ -48,7 +48,7 @@ namespace JobStack
             else
             {
                 tt_usuarios.Visibility = Visibility.Visible;
-                tt_notificacoes.Visibility = Visibility.Visible;
+             
                 tt_logout.Visibility = Visibility.Visible;
                 tt_chat.Visibility = Visibility.Visible;
                 tt_cadusuario.Visibility = Visibility.Visible;

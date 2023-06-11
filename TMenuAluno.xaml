@@ -71,6 +71,7 @@
             <Setter Property="VerticalOffset" Value="6"/>
             <Setter Property="HasDropShadow" Value="True"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            
         </Style>
     </Window.Resources>
     <Border CornerRadius="20" BorderThickness="0" Background="Transparent">
@@ -208,40 +209,7 @@
                                 </ListViewItem.ToolTip>
                             </ListViewItem>
 
-                            <!-- NOTIFICAÇÕES -->
-                            <ListViewItem x:Name="NT"
-                                      HorizontalAlignment="Left"
-                                      Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
-                                <Grid x:Name="LVbtnNotificacoes"
-                                      Width="250"
-                                      Height="50"
-                                      HorizontalAlignment="Left">
-                                    <Image Source="Icones/icon notifications 2.png"
-                                          x:Name="iconBtnNotifications"
-                                          Width="40.75"
-                                          Stretch="UniformToFill"
-                                          HorizontalAlignment="Left" Margin="7.925,4.5,0,2"
-                                         />
-                                    <TextBlock x:Name="txtBtnNotificacoes"
-                                               Width="250"
-                                               Height="50"
-                                               FontFamily="Century Gothic"
-                                               FontSize="18"
-                                               Foreground="White"
-                                               Text="NOTIFICAÇÕES"
-                                               VerticalAlignment="Center"
-                                               Padding="62, 13, 0, 0"
-                                               MouseLeftButtonDown="txtBtnNotificacoes_MouseLeftButtonDown">
-                                    </TextBlock>
-                                </Grid>
-                                <ListViewItem.ToolTip>
-                                    <ToolTip x:Name="tt_notificacoes"
-                                             Content="Notificações"
-                                             Style="{StaticResource tt_style}"
-                                             Width="140"
-                                             Height="50"/>
-                                </ListViewItem.ToolTip>
-                            </ListViewItem>
+                           
                             <!-- CHAT -->
                             <ListViewItem HorizontalAlignment="Left"
                                       Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
@@ -337,7 +305,7 @@
                                            FontSize="18"
                                            Foreground="White"
                                            VerticalAlignment="Center"
-                                           Padding="65, 13, 0, 0"
+                                           Padding="65, 13, 0, 0" MouseLeftButtonDown="txtBtnPerfil_MouseLeftButtonDown"
                                            />
                                 </Grid>
                                 <ListViewItem.ToolTip>
