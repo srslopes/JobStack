@@ -50,7 +50,21 @@ namespace JobStack
             NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
             DescricaoVaga.Text = vaga.GetDescricao();
             TipoVaga.Text = vaga.GetTipo();
-            Curso.Text = vaga.GetCurso();
+            switch (aluno.GetCurso())
+            {
+                case 0:
+                    Curso.Text = "Análise e Desenvolvimento de Sistemas";
+                    break;
+                case 1:
+                    Curso.Text = "Gestão Empresarial";
+                    break;
+                case 2:
+                    Curso.Text = "Eventos";
+                    break;
+                case 3:
+                    Curso.Text = "Gestão de Produção Industrial";
+                    break;
+            }
             Jornada.Text = vaga.GetJornada();
             QtdeVaga.Text = vaga.GetNVagas().ToString();
 

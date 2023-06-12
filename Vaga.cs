@@ -8,12 +8,12 @@ namespace JobStack
 {
    class Vaga
     {
-        private int ID;                 //ID de 4 digitos, se o primeiro digito for 0 a vaga ainda não foi aprovada
+        private int ID;                
         private int IdEmpresa;
         private string nome;
         private string descricao;
         private string tipo;
-        private string curso;
+        private int curso;
         private string turno;
         private string jornada;
         private List<int> Inscritos;
@@ -34,7 +34,7 @@ namespace JobStack
             nome = "";
             descricao = "";
             tipo = "";
-            curso = "";
+            curso = -1;
             turno = "";
             jornada = "";
             nvagas = 0;
@@ -118,11 +118,11 @@ namespace JobStack
         {
             return descricao;
         }
-        public void SetCurso(string Curso)
+        public void SetCurso(int Curso)
         {
             curso = Curso;
         }
-        public string GetCurso()
+        public int GetCurso()
         {
             return curso;
         }

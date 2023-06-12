@@ -11,11 +11,24 @@ namespace JobStack
         private List<int> Vagas;
 
         private int ra;
-      
+
+        private int curso;
+
+        private int semestre;
+
+        public string formacao;
+
+        public string experiencia;
+
         public Aluno(string e, string p)
         {
             SetEmail(e);
             SetSenha(p);
+            curso = -1;
+            semestre = 0;
+            formacao = "";
+            experiencia = "";
+            SetIdImg(0);
             Vagas = new List<int>();
             BancodeDados.AdicionarAluno(this);
             BancodeDados.SetIdUser(GetID());
@@ -26,12 +39,16 @@ namespace JobStack
         public Aluno()
         {
             SetID(-1);
+            semestre = 0;
+            formacao = "";
+            experiencia = "";
+            SetIdImg(0);
+            Vagas = new List<int>();
         }
 
         public void salvar()
         {
             if (GetID() != -1) return;
-            Vagas = new List<int>();
             BancodeDados.AdicionarAluno(this);
             Chat adm = new Chat(GetID(), 1);
             Chat coo = new Chat(GetID(), 101); 
@@ -77,8 +94,44 @@ namespace JobStack
             ra = Ra;
         }
        
-
+        public void SetCurso(int Curso)
+        {
+            curso = Curso;
+        }
         
+        public int GetCurso()
+        {
+            return curso;
+        }
 
+        public void SetSemestre(int Semestre)
+        {
+            semestre = Semestre;
+        }
+
+        public int GetSemestre()
+        {
+            return semestre;
+        }
+
+        public void SetFormacao(string Formacao)
+        {
+            formacao = Formacao;
+        }
+
+        public string GetFormacao()
+        {
+            return formacao;
+        }
+
+        public void SetExperiencia(string Experiencias)
+        {
+            experiencia = Experiencias;
+        }
+
+        public string GetExperiencia()
+        {
+            return experiencia;
+        }
     }
 }

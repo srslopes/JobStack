@@ -91,8 +91,17 @@
                  HorizontalAlignment="Left"
                  VerticalAlignment="Top"
                  Margin="27,87,0,0" Stroke="#FF003964" StrokeThickness="2">
-
         </Ellipse>
+        <Border x:Name="FotoPerfil" HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="27,87,0,0"  Height="110" Width="110" CornerRadius="55">
+            <Border.Background>
+                <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+            </Border.Effect>
+        </Border>
         <TextBlock x:Name="NomeAluno"
                     Text="Nome do aluno"
                    FontSize="20"

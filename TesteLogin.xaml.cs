@@ -81,6 +81,11 @@ namespace JobStack
                 textBlockCondiçãoEmail.Visibility = Visibility.Visible;
                 textBlockCondiçãoEmail.Text = "Usuario não cadastrado";
             }
+            else if (((Usuario)BancodeDados.BuscarUsuario(id)).GetStatus() == false)
+            {
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Usuario desativado";
+            }
             // Se o usuário está cadastrado, identifica o tipo de usuário com base em seu ID
             else
             {
@@ -245,6 +250,11 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
             {
                 textBlockCondiçãoEmail.Visibility = Visibility.Visible;
                 textBlockCondiçãoEmail.Text = "Usuario não cadastrado";
+            }
+            else if(((Usuario)BancodeDados.BuscarUsuario(id)).GetStatus()==false)
+            {
+                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
+                textBlockCondiçãoEmail.Text = "Usuario desativado";
             }
             // Se for a primeira vez que o botão é clicado, exibir o campo de senha e mudar o texto do botão
             else

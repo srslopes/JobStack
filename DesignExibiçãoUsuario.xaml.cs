@@ -51,7 +51,8 @@ namespace JobStack
 
         private void BtnDesativar_Click(object sender, RoutedEventArgs e)
         {
-            ((Usuario)user).SetStatus(!((Usuario)user).GetStatus());
+            if (((Usuario)user).GetStatus()) ((Usuario)user).SetStatus(false);
+            else ((Usuario)user).SetStatus(true);
             AttDados();
         }
     }

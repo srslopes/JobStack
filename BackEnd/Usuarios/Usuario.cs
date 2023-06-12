@@ -21,7 +21,7 @@ namespace JobStack
             ID = 0;
             IdImg = 0;
             nome = "";
-            SetStatus(false);
+            SetStatus(true);
             Chats = new List<int>();
         }
 

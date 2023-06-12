@@ -141,15 +141,14 @@
               VerticalAlignment="Top" Margin="0,88.24,9,0">
             <Image Source="Imagens/fatec_colorido.png" Margin="-3,-32.044,-11,22.044" />
         </Grid>
-        <Ellipse x:Name="FotoAluno"
-                 Fill="LightGray"
-                 Width="110"
-                 Height="110"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Top"
-                 Margin="27,58.5,0,0" Stroke="#FF003964" StrokeThickness="2">
-
-        </Ellipse>
+        <Border x:Name="FotoPerfil" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="27,48,0,484" Height="100" Width="100" CornerRadius="50">
+            <Border.Background>
+                <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+            </Border.Effect>
+        </Border>
         <TextBlock x:Name="NomeAluno"
                     Text="Nome do aluno"
                    FontSize="20"
@@ -157,7 +156,7 @@
                    Foreground="#003964"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="154,75,0,0"
+                   Margin="154,57,0,0"
                     />
         <TextBlock Text="Estudante de: "
                    FontSize="20"
@@ -165,7 +164,7 @@
                    Foreground="#003964"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="154,103,0,0"
+                   Margin="154,85,0,0"
                     />
         <TextBlock x:Name="Curso"
                    Text="Nome do curso"
@@ -174,7 +173,7 @@
                    Foreground="#003964"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="295,103,0,0"
+                   Margin="295,85,0,0"
                    />
         <TextBlock Text="Período: "
                    FontSize="20"
@@ -182,7 +181,7 @@
                    Foreground="#003964"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="154,131,0,0"
+                   Margin="154,113,0,0"
                     />
         <TextBlock x:Name="Periodo"
                    Text="Semestre"
@@ -191,7 +190,7 @@
                    Foreground="#003964"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Margin="243.5,131,0,0"
+                   Margin="244,113,0,0"
                     />
         <Grid x:Name="GridCurriculo"
               Width="910"

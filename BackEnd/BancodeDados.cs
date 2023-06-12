@@ -424,6 +424,10 @@ namespace JobStack
             n5.SetNome("Estevan Ferreira Rodrigues");
             n5.SetRa(966049137);
             n5.SetIdImg(3);
+            n5.SetCurso(0);
+            n5.SetSemestre(3);
+            n5.SetFormacao("Ensino Médio completo");
+            n5.SetExperiencia("nenhuma");
             Aluno n6 = new Aluno("b", "bcd");
             n6.SetNome("Beatrice Azevedo Santos");
             n6.SetRa(537388102);
@@ -506,7 +510,7 @@ namespace JobStack
             Vaga n1 = new Vaga(6001);
             n1.SetNome("Suporte Técnico");
             n1.SetTipo("Estágio");
-            n1.SetCurso("ADS");
+            n1.SetCurso(0);
             n1.SetTurno("Tarde");
             n1.SetJornada("40h");
             n1.SetNVagas(5);
@@ -515,7 +519,7 @@ namespace JobStack
             Vaga n2 = new Vaga(6001);
             n2.SetNome("Desenvolvimento");
             n2.SetTipo("Estágio");
-            n2.SetCurso("ADS");
+            n2.SetCurso(0);
             n2.SetTurno("Tarde");
             n2.SetJornada("40h");
             n2.SetNVagas(5);
@@ -524,7 +528,7 @@ namespace JobStack
             Vaga n3 = new Vaga(6001);
             n3.SetNome("Analista de Processos");
             n3.SetTipo("Junior");
-            n3.SetCurso("ADS");
+            n3.SetCurso(0);
             n3.SetTurno("Tarde");
             n3.SetJornada("40h");
             n3.SetNVagas(5);
@@ -533,7 +537,7 @@ namespace JobStack
             Vaga n4 = new Vaga(6001);
             n4.SetNome("Gerente de TI");
             n4.SetTipo("Junior");
-            n4.SetCurso("ADS");
+            n4.SetCurso(0);
             n4.SetTurno("Tarde");
             n4.SetJornada("40h");
             n4.SetNVagas(5);
@@ -543,7 +547,7 @@ namespace JobStack
             Vaga n5 = new Vaga(6002);
             n5.SetNome("Jovem Aprendiz");
             n5.SetTipo("Estágio");
-            n5.SetCurso("ADS");
+            n5.SetCurso(0);
             n5.SetTurno("Tarde");
             n5.SetJornada("40h");
             n5.SetNVagas(5);
@@ -552,7 +556,7 @@ namespace JobStack
             Vaga n6 = new Vaga(6002);
             n6.SetNome("Ajudante de Logística");
             n6.SetTipo("Estágio");
-            n6.SetCurso("ADS");
+            n6.SetCurso(0);
             n6.SetTurno("Tarde");
             n6.SetJornada("40h");
             n6.SetNVagas(5);
@@ -561,7 +565,7 @@ namespace JobStack
             Vaga n7 = new Vaga(6002);
             n7.SetNome("Técnico em TI");
             n7.SetTipo("Junior");
-            n7.SetCurso("ADS");
+            n7.SetCurso(0);
             n7.SetTurno("Tarde");
             n7.SetJornada("40h");
             n7.SetNVagas(5);
@@ -570,7 +574,7 @@ namespace JobStack
             Vaga n8 = new Vaga(6002);
             n8.SetNome("Desenvolvimento");
             n8.SetTipo("Junior");
-            n8.SetCurso("ADS");
+            n8.SetCurso(0);
             n8.SetTurno("Tarde");
             n8.SetJornada("40h");
             n8.SetNVagas(5);

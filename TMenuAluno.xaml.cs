@@ -25,7 +25,14 @@ namespace JobStack
             InitializeComponent();
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
             NtChat();
-            
+            if (aluno.GetNome().Equals(""))
+            {
+                TPerfilAluno pf = new TPerfilAluno();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(pf);
+            }
+
+
         }
 
         private void BotaoMenu_Unchecked(object sender, RoutedEventArgs e)
@@ -147,6 +154,12 @@ namespace JobStack
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(pf);
             }
+        }
+
+        public void CarregarJanela(UserControl Janela)
+        {
+            ConteudoJanela.Children.Clear();
+            ConteudoJanela.Children.Add(Janela);
         }
     }
 }
