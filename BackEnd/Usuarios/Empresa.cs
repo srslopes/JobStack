@@ -9,11 +9,17 @@ namespace JobStack
     class Empresa : Usuario
     {
         private List<int> Vagas;
+
+        private string sobre;
+
+        private int cnpj;
      
         public Empresa(string e, string s)
         {
             SetEmail(e);
             SetSenha(s);
+            cnpj = 0;
+            sobre = "";
             Vagas = new List<int>();
             BancodeDados.AdicionarEmpresa(this);
             BancodeDados.SetIdUser(GetID());
@@ -24,12 +30,14 @@ namespace JobStack
         public Empresa()
         {
             SetID(-1);
+            cnpj = 0;
+            sobre = "";
+            Vagas = new List<int>();
         }
 
         public void salvar()
         {
             if (GetID() != -1) return;
-            Vagas = new List<int>();
             BancodeDados.AdicionarEmpresa(this);            
             Chat adm = new Chat(GetID(),1);
             Chat coo = new Chat(GetID(),101);
@@ -53,6 +61,26 @@ namespace JobStack
         public void RemoverVaga(int id)   //Adiciona o ID da vaga à lista de vagas inscritas
         {
             for (int i = 0; i < Vagas.Count; i++) if (Vagas[i] == id) Vagas.RemoveAt(i);
+        }
+
+        public void SetSobre(string Sobre)
+        {
+            sobre = Sobre;
+        }
+
+        public string GetSobre()
+        {
+            return sobre;
+        }
+
+        public void SetCNPJ(int CNPJ)
+        {
+            cnpj = CNPJ;
+        }
+
+        public int GetCNPJ()
+        {
+            return cnpj;
         }
 
     }

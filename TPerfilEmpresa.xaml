@@ -77,16 +77,17 @@
             FontFamily="Century Gothic Bold"
             Foreground="#003964" Margin="30,30,0,0"
                        />
- 
-        <Ellipse x:Name="FotoAluno"
-                 Fill="LightGray"
-                 Width="110"
-                 Height="110"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Top"
-                 Margin="27,87,0,0" Stroke="#FF003964" StrokeThickness="2">
 
-        </Ellipse>
+        <Border x:Name="FotoPerfil" HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="27,87,0,0"  Height="110" Width="110" CornerRadius="55">
+            <Border.Background>
+                <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+            </Border.Effect>
+        </Border>
         <TextBlock x:Name="NomeEmpresa"
                     Text="Nome da empresa"
                    FontSize="26"
@@ -119,7 +120,7 @@
             <Rectangle x:Name="FundoCurriculo"
                        Fill="AliceBlue"
                        RadiusX="10"
-                       RadiusY="10">
+                       RadiusY="10" Margin="0,0,0,181">
                 <Rectangle.Effect>
                     <DropShadowEffect ShadowDepth="2" Opacity="0.2" BlurRadius="3"/>
                 </Rectangle.Effect>
@@ -168,36 +169,12 @@
                                 />
                 </ScrollViewer>
             </Grid>
-
-            <TextBlock Text="VAGAS PUBLICADAS:"
-                               FontSize="21"
-                           FontFamily="Century Gothic Bold"
-                           Foreground="#003964"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"
-                           Margin="10,185.323,0,188.93"
-                                    />
             <Grid x:Name="GridVagas"
                   Width="910"
                   Height="170" 
                   Margin="0,0,0,11.431"
                   HorizontalAlignment="Center"
-                  VerticalAlignment="Bottom">
-
-                <ScrollViewer x:Name="SVVagas"
-                              Width="910"
-                              Height="170"
-                              HorizontalAlignment="Center"
-                              VerticalAlignment="Center">
-                    <StackPanel x:Name="SPVagas"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Top"
-                                Width="910"
-                                Height="0">
-
-                    </StackPanel>
-                </ScrollViewer>
-            </Grid>
+                  VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </UserControl>

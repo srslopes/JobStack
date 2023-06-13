@@ -15,6 +15,7 @@ namespace JobStack
         private bool status;
         private List<int> Chats;
         private int IdImg;
+        private bool novo;
 
         public Usuario()
         {
@@ -23,6 +24,7 @@ namespace JobStack
             nome = "";
             SetStatus(true);
             Chats = new List<int>();
+            novo = true;
         }
 
         public string GetNome()
@@ -115,6 +117,14 @@ namespace JobStack
             }
             return -1;
         }
+        public bool IsNovo()
+        {
+            return novo;
+        }
 
+        public void SetNovo(bool Novo)
+        {
+            novo = Novo;
+        }
     }
 }

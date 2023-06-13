@@ -20,14 +20,27 @@ namespace JobStack
     /// </summary>
     public partial class TPerfilEmpresa : UserControl
     {
+        private Empresa empresa;
         public TPerfilEmpresa()
         {
             InitializeComponent();
+            empresa = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser());
+            AttDados();
+        }
+
+        public void AttDados()
+        {
+            Img.ImageSource = BancodeDados.BuscarImg(empresa.GetIdImg());
+            if (!empresa.GetNome().Equals("")) NomeEmpresa.Text = empresa.GetNome();
+            if (empresa.GetCNPJ() != 0) cnpj.Text = empresa.GetCNPJ().ToString();
+            if (!empresa.GetSobre().Equals("")) InfoEmpresa.Text = empresa.GetSobre();
+
         }
 
         private void BtnEditar_Click(object sender, RoutedEventArgs e)
         {
-
+            TFormInfoEmpresa ie = new TFormInfoEmpresa(this);
+            BancodeDados.MenuEmpresa.CarregarJanela(ie);
         }
     }
 }

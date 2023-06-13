@@ -773,3 +773,17 @@ C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TFormInfoEmpresa.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TGerarSenhaADM.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TPerfilAluno.baml
 C:\Users\aluno\Documents\GitHub\JobStack\obj\Debug\TPerfilEmpresa.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignUsuarioInscrito.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TExibirPerfilAluno.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TExibirPerfilEmpresa.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TFormInfoEmpresa.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TGerarSenhaADM.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TPerfilAluno.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TPerfilEmpresa.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignUsuarioInscrito.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TExibirPerfilAluno.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TExibirPerfilEmpresa.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TFormInfoEmpresa.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TGerarSenhaADM.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TPerfilAluno.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TPerfilEmpresa.baml

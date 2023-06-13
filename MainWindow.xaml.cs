@@ -59,6 +59,7 @@ namespace JobStack
         {
             BancodeDados.SetIdUser(6001);
             TMenuEmpresa s = new TMenuEmpresa();
+            BancodeDados.MenuEmpresa = s;
             s.Show();
         }
 
@@ -66,6 +67,7 @@ namespace JobStack
         {
             BancodeDados.SetIdUser(101);
             TMenuCoordenador a = new TMenuCoordenador();
+            BancodeDados.MenuCoordenador = a;
             a.Show();
         }
 
@@ -73,6 +75,7 @@ namespace JobStack
         {
             BancodeDados.SetIdUser(1);
             TMenuAdministrador i = new TMenuAdministrador();
+            BancodeDados.MenuAdministrador = i;
             i.Show();
         }
 

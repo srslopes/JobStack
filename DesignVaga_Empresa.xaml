@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="820">
+             d:DesignHeight="200" d:DesignWidth="820"
+             Margin="0,0,0,10">
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -100,9 +101,11 @@
                    Text="Descrição da Vaga" 
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
+                   Width="620"
                    Margin="30,54,0,0" 
                    FontSize="16" 
-                   FontFamily="Century Gothic" />
+                   FontFamily="Century Gothic" Height="119"
+                   TextWrapping="Wrap"/>
 
         <Button x:Name="BtnVerMais"
                 Width="90" 

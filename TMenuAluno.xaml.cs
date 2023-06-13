@@ -25,8 +25,9 @@ namespace JobStack
             InitializeComponent();
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
             NtChat();
-            if (aluno.GetNome().Equals(""))
+            if (aluno.IsNovo())
             {
+                aluno.SetNovo(false);
                 TPerfilAluno pf = new TPerfilAluno();
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(pf);

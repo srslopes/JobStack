@@ -95,10 +95,11 @@
                           Height="380" Margin="-0.5,-1,0.5,1" RenderTransformOrigin="0,0">
                 <StackPanel x:Name="SPVagas"
                                 Orientation="Vertical"
-                            Width="740"
+                            Width="820"
                             Height="0"
+                            Margin="10,10,0,0"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Center"
+                                HorizontalAlignment="Left"
                                 >
                 </StackPanel>
             </ScrollViewer>

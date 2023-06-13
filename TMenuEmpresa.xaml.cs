@@ -26,6 +26,10 @@ namespace JobStack
             InitializeComponent();
             empresa = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser());
             NtChat();
+            if(empresa.IsNovo())
+            {
+                empresa.SetNovo(false);
+            }
         }
 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
@@ -117,6 +121,12 @@ namespace JobStack
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(pf);
             }
+        }
+
+        public void CarregarJanela(UserControl Janela)
+        {
+            ConteudoJanela.Children.Clear();
+            ConteudoJanela.Children.Add(Janela);
         }
     }
 }
