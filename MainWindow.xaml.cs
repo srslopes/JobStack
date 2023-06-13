@@ -88,7 +88,7 @@ namespace JobStack
 
         private void bCadastrarEmpresa_Click(object sender, RoutedEventArgs e)
         {
-            TesteCadastrarEmpresa t = new TesteCadastrarEmpresa();
+            TMenuAdministrador t = new TMenuAdministrador();
             t.Show();
         }
     }

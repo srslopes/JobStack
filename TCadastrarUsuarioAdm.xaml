@@ -403,28 +403,6 @@
                    RadiusX="10"
                    RadiusY="10" Margin="25,100,31,85"
                     />
-        <TextBlock Text="Tipo de usuário:"
-                   FontSize="22"
-                   FontFamily="Century Gothic"
-                   Foreground="#003964"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="54,141,0,472"
-            />
-        <ComboBox x:Name="TipoUsuario"
-                  Text="Escolha"
-                  Width="200"
-                  Height="24"
-                  Background="White"
-                  FontFamily="Century Gothic"
-                  FontSize="18"
-                  HorizontalAlignment="Left"
-                  VerticalAlignment="Center"
-                  Margin="230,143,0,473" Style="{DynamicResource ComboBoxStyle1}">
-            <ComboBoxItem Content="Aluno" />
-            <ComboBoxItem Content="Empresa" />
-            <ComboBoxItem Content="Coordenador" />
-            <ComboBoxItem Content="Administrador" />
-        </ComboBox>
         <TextBlock Text="Nome:"
                    FontSize="22"
                    FontFamily="Century Gothic"
@@ -445,8 +423,6 @@
         <TextBlock x:Name="textBlockCondiçãoEmail" HorizontalAlignment="Center" Margin="169,317,462,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição email" Width="323"/>
         <TextBlock x:Name="textBlockCondiçãoSenha" HorizontalAlignment="Center" Margin="230,436,552,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="172"><Run Text="Condição senha"/></TextBlock>
         <PasswordBox x:Name="PasswordBoxSenha" Margin="214,379,489,238"/>
-        <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Height="23" Margin="151,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="textBlockID" HorizontalAlignment="Left" Margin="105,113,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" RenderTransformOrigin="2.647,-2.804"/>
 
         <TextBlock Text="E-mail:"
                    FontSize="22"

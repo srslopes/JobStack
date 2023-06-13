@@ -18,6 +18,18 @@ namespace JobStack
             BancodeDados.AdicionarCoordenador(this);
             
         }
+        public Coordenador()
+        {
+            SetID(-1);
+        
+            SetIdImg(0);
+        }
+        public void Salvar()
+        {
+            if (GetID() != -1) return;
+            BancodeDados.AdicionarCoordenador(this);
+           
+        }
         public new void AddTopo(int id)
         {
             GetChats().Remove(id);

@@ -88,7 +88,7 @@ namespace JobStack
                 ConteudoJanela.Children.Add(bp);
             }
         }
-        public void NtChat()
+      public void NtChat()
         {
             int n = 0;
             for (int i = 0; i < admin.GetChats().Count; i++)
