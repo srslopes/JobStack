@@ -395,13 +395,13 @@
             Foreground="#003964"
             Margin="30,30,0,0"
                         />
-        <Rectangle Width="900"
-                   Height="238"
+        <Rectangle Width="898"
+                   Height="455"
                    Fill="AliceBlue" 
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    RadiusX="10"
-                   RadiusY="10" Margin="25,100,29,302"
+                   RadiusY="10" Margin="25,100,31,85"
                     />
         <TextBlock Text="Tipo de usuário:"
                    FontSize="22"
@@ -432,7 +432,7 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center" Margin="58,180,0,433"
                     />
-        <TextBox x:Name="NomeUsuario"
+        <TextBox x:Name="textBoxNome"
                  Width="368"
                  Height="24"
                  FontFamily="Century Gothic"
@@ -441,21 +441,28 @@
                  VerticalAlignment="Center"
                  Margin="138,183,0,433" Style="{DynamicResource TextboxArredondadaStyle}"
                     />
+        <TextBlock x:Name="textBlockCondiçãoNome" HorizontalAlignment="Center" Margin="138,212,560,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição nome" Width="256"/>
+        <TextBlock x:Name="textBlockCondiçãoEmail" HorizontalAlignment="Center" Margin="169,317,462,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição email" Width="323"/>
+        <TextBlock x:Name="textBlockCondiçãoSenha" HorizontalAlignment="Center" Margin="230,436,552,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="172"><Run Text="Condição senha"/></TextBlock>
+        <PasswordBox x:Name="PasswordBoxSenha" Margin="214,379,489,238"/>
+        <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Height="23" Margin="151,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlockID" HorizontalAlignment="Left" Margin="105,113,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" RenderTransformOrigin="2.647,-2.804"/>
+
         <TextBlock Text="E-mail:"
                    FontSize="22"
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="57,224,0,389"
+                   VerticalAlignment="Center" Margin="58,288,0,325"
                     />
-        <TextBox x:Name="EmailUsuario"
+        <TextBox x:Name="textBoxEmail"
                  Width="434"
                  Height="24"
                  FontFamily="Century Gothic"
                  FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
-                 Margin="138,226,0,390"
+                 Margin="169,288,0,328"
                  Style="{DynamicResource TextboxArredondadaStyle}"
                         />
         <TextBlock Text="Senha inicial:"
@@ -463,18 +470,8 @@
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="58,262,0,351"
+                   VerticalAlignment="Center" Margin="40,379,0,234"
                    />
-        <TextBox x:Name="SenhaUsuario"
-            Width="300"
-            Height="24"
-            FontFamily="Century Gothic"
-            FontSize="18"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Center"
-            Margin="205,265,0,351"
-                 Style="{DynamicResource TextboxArredondadaStyle}"
-                        />
         <Button x:Name="BtnSalvar"
                 Width="150"
                 Height="40"
@@ -484,7 +481,7 @@
                     Background="#FF27597E"
                     Foreground="White"
                     HorizontalAlignment="Right"
-                    VerticalAlignment="Center" Margin="0,278,54,322" Style="{DynamicResource BotaoArredondadoStyle}"
+                    VerticalAlignment="Center" Margin="0,495,590,105" Style="{DynamicResource BotaoArredondadoStyle}" RenderTransformOrigin="0.513,1.75" Click="BtnSalvar_Click"
                 />
     </Grid>
 </UserControl>
