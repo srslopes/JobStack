@@ -10,7 +10,7 @@ namespace JobStack
     {
         private List<int> Vagas;
 
-        private int ra;
+        private long ra;
 
         private int curso;
 
@@ -84,12 +84,12 @@ namespace JobStack
             }
             return false;
         }
-        public int GetRa()
+        public long GetRa()
         {
             return ra;
         }
 
-        public void SetRa(int Ra)
+        public void SetRa(long Ra)
         {
             ra = Ra;
         }

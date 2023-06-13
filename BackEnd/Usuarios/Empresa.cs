@@ -12,7 +12,7 @@ namespace JobStack
 
         private string sobre;
 
-        private int cnpj;
+        private long cnpj;
      
         public Empresa(string e, string s)
         {
@@ -73,12 +73,12 @@ namespace JobStack
             return sobre;
         }
 
-        public void SetCNPJ(int CNPJ)
+        public void SetCNPJ(long CNPJ)
         {
             cnpj = CNPJ;
         }
 
-        public int GetCNPJ()
+        public long GetCNPJ()
         {
             return cnpj;
         }

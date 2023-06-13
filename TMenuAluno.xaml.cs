@@ -32,7 +32,12 @@ namespace JobStack
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(pf);
             }
-
+            else
+            {
+                TMinhasInscricoesAluno insc = new TMinhasInscricoesAluno();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(insc);
+            }
 
         }
 

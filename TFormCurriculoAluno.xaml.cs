@@ -23,6 +23,7 @@ namespace JobStack
         private TPerfilAluno parent;
         private Aluno aluno;
         private BitmapImage bitmap;
+
         public TFormCurriculoAluno(TPerfilAluno Janela)
         {
             parent = Janela;
@@ -41,7 +42,7 @@ namespace JobStack
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
             aluno.SetNome(NomeAluno.Text);
-            aluno.SetRa(int.Parse(RAAluno.Text));
+            aluno.SetRa(long.Parse(RAAluno.Text));
             aluno.SetCurso(CBCursos.SelectedIndex);
             aluno.SetSemestre(CBPeriodo.SelectedIndex +1);
             aluno.SetFormacao(CampoFormacao.Text);
