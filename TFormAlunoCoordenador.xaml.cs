@@ -20,9 +20,17 @@ namespace JobStack
     /// </summary>
     public partial class TFormAlunoCoordenador : UserControl
     {
-        public TFormAlunoCoordenador(TAlunosCoordenador alunosCoordenador)
+        private TAlunosCoordenador parent;
+
+        public TFormAlunoCoordenador(TAlunosCoordenador janela)
         {
+            parent = janela;
             InitializeComponent();
+        }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            BancodeDados.MenuCoordenador.CarregarJanela(parent);
         }
     }
 }

@@ -23,6 +23,30 @@ namespace JobStack
         public TSolicitacoesVagasCoordenador()
         {
             InitializeComponent();
+            AttLista();
+        }
+        public void AttLista()
+        {
+            SPVagas.Children.Clear();
+            SPVagas.Height = 0;
+            List<Vaga> vagas = BancodeDados.GetListaVagas();
+            bool vazia = true;
+            for(int i= vagas.Count-1; i>=0; i--)
+            {
+                if(vagas[i].GetStatus()==0)
+                {
+                    vazia = false;
+                    DesignVagaCoordenador v = new DesignVagaCoordenador(vagas[i].GetID());
+                    SPVagas.Children.Add(v);
+                    SPVagas.Height += 210;
+                }
+            }
+            if(vazia)
+            {
+                SemVagas sv = new SemVagas();
+                SPVagas.Children.Add(sv);
+                SPVagas.Height = 40;
+            }
         }
     }
 }

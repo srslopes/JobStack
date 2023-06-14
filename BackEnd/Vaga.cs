@@ -19,6 +19,7 @@ namespace JobStack
         private List<int> Inscritos;
         private int status;
         private int nvagas;
+        private string salario;
         private List<int> aprovados;
 
         //         Status
@@ -40,6 +41,7 @@ namespace JobStack
             turno = "";
             jornada = "";
             nvagas = 0;
+            salario = "";
             BancodeDados.AdicionarVaga(this);
             BancodeDados.BuscarEmpresa(IdEmpresa).AdicionarVaga(GetID());
         }
@@ -144,6 +146,14 @@ namespace JobStack
         public string GetJornada()
         {
             return jornada;
+        }
+        public void SetSalario(string Salario)
+        {
+            salario = Salario;
+        }
+        public string GetSalario()
+        {
+            return salario;
         }
         public void SetNVagas(int nVagas)
         {

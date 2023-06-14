@@ -24,6 +24,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Rectangle x:Name="FundoGridVagas"
+                           Height="501"
+                           Width="860"
                        RadiusX="10"
                        RadiusY="10" 
                        Margin="21,86,23,27"
@@ -36,11 +38,14 @@
                 <ScrollViewer x:Name="SVVagas"
                           HorizontalAlignment="Center"
                           VerticalAlignment="Center"
-                          Width="900"
+                          Width="860"
                           Height="501" Margin="21,99,33,40" Grid.ColumnSpan="2">
                     <StackPanel x:Name="SPVagas"
-                            Width="810"
-                            Height="440"
+                            Width="840"
+                            Height="0"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                Margin="10,10,0,0"
                             >
                     </StackPanel>
                 </ScrollViewer>

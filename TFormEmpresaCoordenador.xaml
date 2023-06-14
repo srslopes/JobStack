@@ -183,7 +183,7 @@
             Content="Cancelar"
             FontFamily="Century Gothic"
             FontSize="18" Margin="804,585,30,25"
-            Style="{DynamicResource BotaoArredondadoStyle}"
+            Style="{DynamicResource BotaoArredondadoStyle}" Click="BtnCancelar_Click"
            />
         <TextBlock Text="Nome:"
             FontSize="22"

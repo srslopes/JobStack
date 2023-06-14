@@ -35,7 +35,7 @@ namespace JobStack
             SPVagas.Height = 0;
             List<int> vagas = empresa.GetVagas();
             bool vazia = true;
-            for (int i = 0; i < vagas.Count; i++)
+            for (int i = vagas.Count-1; i>=0; i--)
             {
                 Vaga vaga = BancodeDados.BuscarVaga(vagas[i]);
                 if (vaga.GetStatus() == 2)

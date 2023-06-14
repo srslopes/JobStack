@@ -28,7 +28,8 @@ namespace JobStack
 
         private void BtnNovoAluno_Click(object sender, RoutedEventArgs e)
         {
-            
+            TFormAlunoCoordenador t = new TFormAlunoCoordenador(this);
+            BancodeDados.MenuCoordenador.CarregarJanela(t);
         }
     }
 }

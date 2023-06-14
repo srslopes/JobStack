@@ -27,7 +27,8 @@ namespace JobStack
 
         private void BtnNovaEmpresa_Click(object sender, RoutedEventArgs e)
         {
-
+            TFormEmpresaCoordenador t = new TFormEmpresaCoordenador(this);
+            BancodeDados.MenuCoordenador.CarregarJanela(t);
         }
     }
 }

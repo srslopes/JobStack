@@ -33,7 +33,7 @@ namespace JobStack
             SPVagas.Children.Clear();
             SPVagas.Height = 0;
             List<Vaga> Vagas = BancodeDados.GetListaVagas();
-            for (int i = 0; i < Vagas.Count; i++)
+            for (int i = Vagas.Count-1; i >=0 ; i--)
             {
                 if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 2)
                 {

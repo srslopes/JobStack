@@ -118,5 +118,14 @@ namespace JobStack
                 ConteudoJanela.Children.Add(empresas);
             }
         }
+        public void CarregarJanela(UserControl Janela)
+        {
+            ConteudoJanela.Children.Clear();
+            ConteudoJanela.Children.Add(Janela);
+        }
+        public void AttListas()
+        {
+
+        }
     }
 }

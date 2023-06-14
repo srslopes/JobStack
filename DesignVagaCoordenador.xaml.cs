@@ -20,16 +20,55 @@ namespace JobStack
     /// </summary>
     public partial class DesignVagaCoordenador : UserControl
     {
-        public DesignVagaCoordenador()
+        private Vaga vaga;
+        public DesignVagaCoordenador(int id)
         {
             InitializeComponent();
+            vaga = BancodeDados.BuscarVaga(id);
+            AttDados();
         }
+        private void AttDados()
+        {
+            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
+            NomeVaga.Text = vaga.GetNome();
+            TipoVaga.Text = vaga.GetTipo();
+            DescricaoVaga.Text = vaga.GetDescricao();
+            var converter = new BrushConverter();
+            switch (vaga.GetStatus())
+            {
+                case 0:
+                    StatusVaga.Text = "Aguardando";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Yellow");
+                    break;
+                case 1:
+                    StatusVaga.Text = "Rejeitada";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
+                    break;
+                case 2:
+                    StatusVaga.Text = "Aberta";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Green");
+                    break;
+                case 3:
+                    StatusVaga.Text = "Encerrada";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
+                    break;
+            }
 
+        }
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
-            TVagaCompletaCoordenador vaga = new TVagaCompletaCoordenador();
-            vaga.Topmost = true;
-            vaga.Show();
+            /*
+                TVagaCompletaEmpresa vg = new TVagaCompletaEmpresa(vaga.GetID());            
+                vg.Show();
+            */
+        }
+
+        private void BtnFinalizar_Click(object sender, RoutedEventArgs e)
+        {
+            vaga.Encerrar();
+            AttDados();
+            BancodeDados.MenuCoordenador.AttListas();
+
         }
     }
 }
