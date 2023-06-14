@@ -50,33 +50,29 @@ namespace JobStack
         {
 
             BancodeDados.SetIdUser(1001);
-            TMenuAluno x = new TMenuAluno();
-            BancodeDados.MenuAluno = x;
+            BancodeDados.MenuAluno = new TMenuAluno();
             BancodeDados.MenuAluno.Show();
         }
 
         private void btnMenuEmpresa_Click(object sender, RoutedEventArgs e)
         {
             BancodeDados.SetIdUser(6001);
-            TMenuEmpresa s = new TMenuEmpresa();
-            BancodeDados.MenuEmpresa = s;
-            s.Show();
+            BancodeDados.MenuEmpresa = new TMenuEmpresa();
+            BancodeDados.MenuEmpresa.Show();
         }
 
         private void BtnMenuCoordenador_Click(object sender, RoutedEventArgs e)
         {
             BancodeDados.SetIdUser(101);
-            TMenuCoordenador a = new TMenuCoordenador();
-            BancodeDados.MenuCoordenador = a;
-            a.Show();
+            BancodeDados.MenuCoordenador = new TMenuCoordenador();
+            BancodeDados.MenuCoordenador.Show();
         }
 
         private void BtnMenuAdm_Click(object sender, RoutedEventArgs e)
         {
             BancodeDados.SetIdUser(1);
-            TMenuAdministrador i = new TMenuAdministrador();
-            BancodeDados.MenuAdministrador = i;
-            i.Show();
+            BancodeDados.MenuAdministrador = new TMenuAdministrador();
+            BancodeDados.MenuAdministrador.Show();
         }
 
         private void BotaoCadastrar_Click(object sender, RoutedEventArgs e)

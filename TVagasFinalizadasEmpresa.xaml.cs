@@ -33,16 +33,23 @@ namespace JobStack
             SPVagas.Children.Clear();
             SPVagas.Height = 0;
             List<int> vagas = empresa.GetVagas();
+            bool vazia = true;
             for (int i = 0; i < vagas.Count; i++)
             {
                 Vaga vaga = BancodeDados.BuscarVaga(vagas[i]);
                 if (vaga.GetStatus() == 3)
                 {
+                    vazia = false;
                     DesignVaga_Empresa v = new DesignVaga_Empresa(vaga.GetID());
                     SPVagas.Children.Add(v);
                     SPVagas.Height += 210;
                 }
-
+            }
+            if (vazia)
+            {
+                SemVagas sv = new SemVagas();
+                SPVagas.Children.Add(sv);
+                SPVagas.Height = 40;
             }
         }
     }

@@ -66,6 +66,8 @@ namespace JobStack
         {
             vaga.Encerrar();
             AttDados();
+            BancodeDados.MenuEmpresa.AttListas();
+
         }
     }
 }

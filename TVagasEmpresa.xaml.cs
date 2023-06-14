@@ -20,9 +20,16 @@ namespace JobStack
     /// </summary>
     public partial class TVagasEmpresa : UserControl
     {
+        private TVagasPendentesEmpresa pendentes;
+        private TVagasEmAberto aberto;
+        private TVagasFinalizadasEmpresa finalizadas;
+
         public TVagasEmpresa()
         {
             InitializeComponent();
+            pendentes = null;
+            aberto = null;
+            finalizadas = null;
         }
 
         private void BtnCriar_Click(object sender, RoutedEventArgs e)
@@ -35,21 +42,21 @@ namespace JobStack
 
         private void BtnPendentes_Click(object sender, RoutedEventArgs e)
         {
-            TVagasPendentesEmpresa pendentes = new TVagasPendentesEmpresa();
+            pendentes = new TVagasPendentesEmpresa();
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(pendentes);
         }
 
         private void BtnEmAberto_Click(object sender, RoutedEventArgs e)
         {
-            TVagasEmAberto aberto = new TVagasEmAberto();
+            aberto = new TVagasEmAberto();
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(aberto);
         }
 
         private void BtnFinalizadas_Click(object sender, RoutedEventArgs e)
         {
-            TVagasFinalizadasEmpresa finalizadas = new TVagasFinalizadasEmpresa();
+            finalizadas = new TVagasFinalizadasEmpresa();
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(finalizadas);
         }
@@ -57,6 +64,15 @@ namespace JobStack
         {
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(Janela);
+        }
+        public void AttListas()
+        {
+            if (pendentes != null) pendentes.AttLista();
+            else Console.WriteLine("Etapa 2 Falhou");
+            if (aberto != null) aberto.AttLista();
+            else Console.WriteLine("Etapa 2 Falhou");
+            if (finalizadas != null) finalizadas.AttLista();
+            else Console.WriteLine("Etapa 2 Falhou");
         }
     }
 }

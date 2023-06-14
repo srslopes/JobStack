@@ -63,10 +63,9 @@ namespace JobStack
             TextBlock textBlock = sender as TextBlock;
             if (textBlock.Text == "VAGAS")
             {
-                TVagasEmpresa vagas = new TVagasEmpresa();
-                sub = vagas;
+                sub = new TVagasEmpresa();
                 ConteudoJanela.Children.Clear();
-                ConteudoJanela.Children.Add(vagas);
+                ConteudoJanela.Children.Add(sub);
             }
         }
 
@@ -133,8 +132,13 @@ namespace JobStack
 
         public void CarregarSubJanela(UserControl Janela)
         {
-            if (sub == null) return;
-            sub.CarregarJanela(Janela);
+            if (sub != null) sub.CarregarJanela(Janela);
+        }
+
+        public void AttListas()
+        {
+            if (sub != null) sub.AttListas();
+            else Console.WriteLine("Etapa 1 Falhou");
         }
     }
 }
