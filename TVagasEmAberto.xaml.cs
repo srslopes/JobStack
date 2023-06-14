@@ -20,9 +20,31 @@ namespace JobStack
     /// </summary>
     public partial class TVagasEmAberto : UserControl
     {
+        private Empresa empresa;
+
         public TVagasEmAberto()
         {
             InitializeComponent();
+            empresa = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser());
+            AttLista();
+        }
+
+        public void AttLista()
+        {
+            SPVagas.Children.Clear();
+            SPVagas.Height = 0;
+            List<int> vagas = empresa.GetVagas();
+            for (int i = 0; i < vagas.Count; i++)
+            {
+                Vaga vaga = BancodeDados.BuscarVaga(vagas[i]);
+                if (vaga.GetStatus() == 2)
+                {
+                    DesignVaga_Empresa v = new DesignVaga_Empresa(vaga.GetID());
+                    SPVagas.Children.Add(v);
+                    SPVagas.Height += 210;
+                }
+
+            }
         }
     }
 }

@@ -20,9 +20,23 @@ namespace JobStack
     /// </summary>
     public partial class DesignUsuarioInscrito : UserControl
     {
-        public DesignUsuarioInscrito()
+        private Aluno aluno;
+        private Vaga vaga;
+
+        public DesignUsuarioInscrito(int id_aluno, int id_vaga)
         {
             InitializeComponent();
+            aluno = BancodeDados.BuscarAluno(id_aluno);
+            vaga = BancodeDados.BuscarVaga(id_vaga);
+            Img.ImageSource = BancodeDados.BuscarImg(aluno.GetIdImg());
+            NomeUsuario.Text = aluno.GetNome();
+            if (vaga.IsAlunoAprovado(aluno.GetID())) Status.Visibility = Visibility.Visible;
+            else Status.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnVerPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            TExibirPerfilAluno pa = new TExibirPerfilAluno(aluno.GetID(), vaga.GetID());
         }
     }
 }

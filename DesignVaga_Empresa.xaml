@@ -119,18 +119,6 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
                 Style="{DynamicResource RoundedButtonStyle}" Click="BtnVerMais_Click" />
-        <Button x:Name="BtnEditar"
-                Width="90" 
-                Height="26" 
-                Content="Editar" 
-                FontSize="12" 
-                FontFamily="Century Gothic"
-                Background="#FF27597E"
-                Foreground="White"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Center" 
-                Margin="0,112.333,25,51.667"
-                Style="{DynamicResource RoundedButtonStyle}"/>
         <Button x:Name="BtnFinalizar" 
                 Width="90" 
                 Height="25" 
@@ -141,7 +129,7 @@
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
-                Margin="0,78,25,87"
+                Margin="0,117,25,48"
                 Style="{DynamicResource RoundedButtonStyle}" Click="BtnFinalizar_Click"
                 />
 

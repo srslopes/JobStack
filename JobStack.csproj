@@ -82,7 +82,7 @@
     <Compile Include="TPerfilEmpresa.xaml.cs">
       <DependentUpon>TPerfilEmpresa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vaga.cs" />
+    <Compile Include="BackEnd\Vaga.cs" />
     <Compile Include="BackEnd\Usuarios\Coordenador.cs" />
     <Compile Include="BackEnd\Usuarios\Empresa.cs" />
     <Compile Include="BackEnd\Usuarios\Usuario.cs" />
@@ -452,10 +452,7 @@
   <ItemGroup>
     <Resource Include="Icones\logo-jobstack-icon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BatePapo\" />
-    <Folder Include="Vagas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Icones\back.png" />
   </ItemGroup>

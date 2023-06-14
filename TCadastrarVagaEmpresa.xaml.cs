@@ -42,5 +42,15 @@ namespace JobStack
                 BtnNumero.Content = i - 1;
             }
         }
+
+        private void BtnCriar_Click(object sender, RoutedEventArgs e)
+        {
+
+            if()
+            {
+                Vaga v = new Vaga(BancodeDados.GetIdUser());
+                v.SetNome()
+            }
+        }
     }
 }

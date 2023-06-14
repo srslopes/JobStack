@@ -20,10 +20,11 @@ namespace JobStack
     /// </summary>
     public partial class TVagasPendentesEmpresa : UserControl
     {
-        private TVagasEmpresa parent;
+        private Empresa empresa;
         public TVagasPendentesEmpresa()
         {
             InitializeComponent();
+            empresa = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser());
             AttLista();
         }
 
@@ -31,12 +32,13 @@ namespace JobStack
         {
             SPVagas.Children.Clear();
             SPVagas.Height = 0;
-            List<Vaga> vagas = BancodeDados.GetListaVagas();
+            List<int> vagas = empresa.GetVagas();
             for (int i = 0; i < vagas.Count; i++)
             {
-                if(vagas[i].GetIdEmpresa()==BancodeDados.GetIdUser() && (vagas[i].GetStatus()==0 || vagas[i].GetStatus() == 1))
+                Vaga vaga = BancodeDados.BuscarVaga(vagas[i]);
+                if(vaga.GetStatus()==0 || vaga.GetStatus() == 1)
                 {
-                    DesignVaga_Empresa v = new DesignVaga_Empresa(vagas[i].GetID());
+                    DesignVaga_Empresa v = new DesignVaga_Empresa(vaga.GetID());
                     SPVagas.Children.Add(v);
                     SPVagas.Height += 210;
                 }

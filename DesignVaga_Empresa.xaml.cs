@@ -32,26 +32,32 @@ namespace JobStack
             NomeVaga.Text = vaga.GetNome();
             TipoVaga.Text = vaga.GetTipo();
             DescricaoVaga.Text = vaga.GetDescricao();
+            var converter = new BrushConverter();
             switch (vaga.GetStatus())
             {
                 case 0:
                     StatusVaga.Text = "Aguardando";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Yellow");
                     break;
                 case 1:
-                    StatusVaga.Text = "Rejeitada";
+                    StatusVaga.Text = "Rejeitada";                    
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
                     break;
                 case 2:
                     StatusVaga.Text = "Aberta";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Green");
                     break;
                 case 3:
                     StatusVaga.Text = "Encerrada";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
+                    BtnFinalizar.Visibility = Visibility.Hidden;
                     break;
             }
 
         }
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
-            TVagaCompletaEmpresa vg = new TVagaCompletaEmpresa();            
+            TVagaCompletaEmpresa vg = new TVagaCompletaEmpresa(vaga.GetID());            
             vg.Topmost = true;
             vg.Show();
         }

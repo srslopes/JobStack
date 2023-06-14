@@ -20,11 +20,12 @@ namespace JobStack
     public partial class TMenuEmpresa : Window
     {
         private Empresa empresa;
-
+        private TVagasEmpresa sub;
         public TMenuEmpresa()
         {
             InitializeComponent();
             empresa = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser());
+            sub = null;
             NtChat();
             if(empresa.IsNovo())
             {
@@ -63,6 +64,7 @@ namespace JobStack
             if (textBlock.Text == "VAGAS")
             {
                 TVagasEmpresa vagas = new TVagasEmpresa();
+                sub = vagas;
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(vagas);
             }
@@ -127,6 +129,12 @@ namespace JobStack
         {
             ConteudoJanela.Children.Clear();
             ConteudoJanela.Children.Add(Janela);
+        }
+
+        public void CarregarSubJanela(UserControl Janela)
+        {
+            if (sub == null) return;
+            sub.CarregarJanela(Janela);
         }
     }
 }

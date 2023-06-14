@@ -19,6 +19,7 @@ namespace JobStack
         private List<int> Inscritos;
         private int status;
         private int nvagas;
+        private List<int> aprovados;
 
         //         Status
         // 0 : Aguardando aprovação
@@ -30,6 +31,7 @@ namespace JobStack
         {                                           //Vaga salva na lista de vagas não aprovadas
             IdEmpresa = idEmpresa;                  //Status estabelecido como "Aguardando Aprovação"
             Inscritos = new List<int>();
+            aprovados = new List<int>();
             status = 0;
             nome = "";
             descricao = "";
@@ -39,6 +41,7 @@ namespace JobStack
             jornada = "";
             nvagas = 0;
             BancodeDados.AdicionarVaga(this);
+            BancodeDados.BuscarEmpresa(IdEmpresa).AdicionarVaga(GetID());
         }
         
         public int GetID()
@@ -150,5 +153,22 @@ namespace JobStack
         {
             return nvagas;
         }
+
+        public void AprovarAluno(int ID_Aluno)
+        {
+            for(int i=0; i<aprovados.Count; i++)if (aprovados[i] == ID_Aluno) return;
+            aprovados.Add(ID_Aluno);
+        }
+        public void DesaprovarAluno(int ID_Aluno)
+        {
+            aprovados.Remove(ID_Aluno);
+        }
+
+        public bool IsAlunoAprovado(int ID_Aluno)
+        {
+            for (int i = 0; i < aprovados.Count; i++) if (aprovados[i] == ID_Aluno) return true;
+            return false;
+        }
+
     }
 }

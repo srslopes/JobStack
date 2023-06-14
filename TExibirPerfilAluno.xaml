@@ -192,6 +192,7 @@
                    HorizontalAlignment="Left"
                    Margin="244,113,0,0"
                     />
+        
         <Grid x:Name="GridCurriculo"
               Width="910"
               Height="400" Margin="22,192,14,40">
@@ -213,6 +214,17 @@
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
                         />
+            <Button x:Name="BtnSelecionar" 
+                    Width="200"
+                    Height="30"
+                    Content="Selecionar para Vaga"
+                    FontFamily="Century Gothic"
+                    FontSize="16"
+                    Background="#003964"
+                    Foreground="White" Margin="250,10,0,0" Style="{DynamicResource ButtonStyle1}"
+                VerticalAlignment="Top"
+                Click="BtnSelecionar_Click"
+                    />
             <Button x:Name="BtnChat" 
                     Width="200"
                     Height="30"
@@ -220,7 +232,7 @@
                     FontFamily="Century Gothic"
                     FontSize="16"
                     Background="#003964"
-                    Foreground="White" Margin="698,10,12,360" Style="{DynamicResource ButtonStyle1}"
+                    Foreground="White" Margin="698,10,12,360" Style="{DynamicResource ButtonStyle1}" Click="BtnChat_Click"
                     />
             <TextBlock Text="FORMAÇÃO ACADÊMICA E HABILIDADES:"
                            FontSize="21"

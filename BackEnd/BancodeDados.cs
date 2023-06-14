@@ -523,7 +523,8 @@ namespace JobStack
             n2.SetTurno("Tarde");
             n2.SetJornada("40h");
             n2.SetNVagas(5);
-            n2.SetDescricao("Faça parte da equipe responsável por criar soluções tecnológicas inovadoras, desenvolvendo e aprimorando sistemas para impulsionar o crescimento e a eficiência em uma das líderes globais da indústria alimentícia.");            
+            n2.SetDescricao("Faça parte da equipe responsável por criar soluções tecnológicas inovadoras, desenvolvendo e aprimorando sistemas para impulsionar o crescimento e a eficiência em uma das líderes globais da indústria alimentícia.");
+            n2.Rejeitar();
             Vaga n3 = new Vaga(6001);
             n3.SetNome("Analista de Processos");
             n3.SetTipo("Junior");
@@ -541,6 +542,7 @@ namespace JobStack
             n4.SetJornada("40h");
             n4.SetNVagas(5);
             n4.SetDescricao("Suporte à equipe de TI, supervisionando projetos e processos, garantindo a entrega de soluções tecnológicas alinhadas aos objetivos estratégicos da empresa, em uma das principais empresas globais do setor alimentício.");
+            n4.Encerrar();
             IdUser = 6002;
             Vaga n5 = new Vaga(6002);
             n5.SetNome("Jovem Aprendiz");

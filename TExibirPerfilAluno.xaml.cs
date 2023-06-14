@@ -19,14 +19,73 @@ namespace JobStack
     /// </summary>
     public partial class TExibirPerfilAluno : Window
     {
-        public TExibirPerfilAluno()
+        private Aluno aluno;
+        private Vaga vaga;
+        private bool status;
+        public TExibirPerfilAluno(int id_aluno, int id_vaga)
         {
             InitializeComponent();
+            aluno = BancodeDados.BuscarAluno(id_aluno);
+            vaga = BancodeDados.BuscarVaga(id_vaga);
+            AttDados();
         }
-
+        public void AttDados()
+        {
+            NomeAluno.Text = aluno.GetNome();
+            switch (aluno.GetCurso())
+            {
+                case 0:
+                    Curso.Text = "Análise e Desenvolvimento de Sistemas";
+                    break;
+                case 1:
+                    Curso.Text = "Gestão Empresarial";
+                    break;
+                case 2:
+                    Curso.Text = "Eventos";
+                    break;
+                case 3:
+                    Curso.Text = "Gestão de Produção Industrial";
+                    break;
+            }
+            Periodo.Text = aluno.GetSemestre() + "º Semestre";
+            FormAluno.Text = aluno.GetFormacao();
+            ExpAluno.Text = aluno.GetExperiencia();
+            var converter = new BrushConverter();
+            if (vaga.IsAlunoAprovado(aluno.GetID()))
+            {
+                BtnSelecionar.Content = "Desaprovar para vaga";
+                BtnSelecionar.Background = (Brush)converter.ConvertFromString("Red");
+                status = true;
+            }
+            else
+            {
+                BtnSelecionar.Content = "Aprovar para vaga";
+                BtnSelecionar.Background = (Brush)converter.ConvertFromString("#003964");
+                status = false;
+            }
+        }
         private void BtnFechar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnSelecionar_Click(object sender, RoutedEventArgs e)
+        {
+            if(status) vaga.DesaprovarAluno(aluno.GetID());
+            else vaga.AprovarAluno(aluno.GetID());
+            AttDados();
+        }
+
+        private void BtnChat_Click(object sender, RoutedEventArgs e)
+        {
+            int id = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser()).ChatExiste(aluno.GetID());
+            if(id<0)
+            {
+                Chat n = new Chat(aluno.GetID());
+                id = n.GetID();
+            }
+            TBatePapo bp = new TBatePapo(id);
+            BancodeDados.MenuEmpresa.CarregarJanela(bp);
         }
     }
 }

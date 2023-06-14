@@ -53,5 +53,10 @@ namespace JobStack
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(finalizadas);
         }
+        public void CarregarJanela(UserControl Janela)
+        {
+            GridConteudo.Children.Clear();
+            GridConteudo.Children.Add(Janela);
+        }
     }
 }

@@ -675,6 +675,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom" 
                     Style="{DynamicResource ButtonStyle1}"
+                Click="BtnCriar_Click"
                     />
         <Grid x:Name="GridBotaoNumerico">
             <Rectangle Width="110"
