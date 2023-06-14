@@ -37,6 +37,8 @@ namespace JobStack
         private void BtnVerPerfil_Click(object sender, RoutedEventArgs e)
         {
             TExibirPerfilAluno pa = new TExibirPerfilAluno(aluno.GetID(), vaga.GetID());
+            pa.Topmost = true;
+            pa.Show();
         }
     }
 }

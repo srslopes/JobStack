@@ -26,6 +26,7 @@ namespace JobStack
             InitializeComponent();
             vaga = BancodeDados.BuscarVaga(id);
             AttDados();
+            AttLista();
         }
 
         public void AttDados()
@@ -52,6 +53,31 @@ namespace JobStack
             }
             Jornada.Text = vaga.GetJornada();
             QtdeVaga.Text = vaga.GetNVagas().ToString();
+        }
+
+        public void AttLista()
+        {
+            List<int> inscritos = vaga.GetLista();
+            SPInscritos.Children.Clear();
+            SPInscritos.Height = 0;
+            for (int i=0; i<inscritos.Count; i++)
+            {                
+                if(vaga.IsAlunoAprovado(inscritos[i]))
+                {
+                    DesignUsuarioInscrito ui = new DesignUsuarioInscrito(inscritos[i], vaga.GetID());
+                    SPInscritos.Children.Add(ui);
+                    SPInscritos.Height +=160;
+                }
+            }
+            for (int i = 0; i < inscritos.Count; i++)
+            {
+                if (!vaga.IsAlunoAprovado(inscritos[i]))
+                {
+                    DesignUsuarioInscrito ui = new DesignUsuarioInscrito(inscritos[i], vaga.GetID());
+                    SPInscritos.Children.Add(ui);
+                    SPInscritos.Height += 160;
+                }
+            }
         }
 
         private void BtnFechar_Click(object sender, RoutedEventArgs e)

@@ -31,6 +31,7 @@ namespace JobStack
         }
         public void AttDados()
         {
+            Img.ImageSource = BancodeDados.BuscarImg(aluno.GetIdImg());
             NomeAluno.Text = aluno.GetNome();
             switch (aluno.GetCurso())
             {
