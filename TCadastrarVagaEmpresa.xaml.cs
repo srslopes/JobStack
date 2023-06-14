@@ -47,44 +47,44 @@ namespace JobStack
         private void BtnCriar_Click(object sender, RoutedEventArgs e)
         {
             bool clear = true;
-            if(TituloVaga.Text.Equals(""))
+            if(TituloVaga.Text.Equals(""))//usuario deve inserir um titulo para a vaga
             {
                 //Inserir Avisos
                 clear = false;
             }
-            if (Tipo.Text.Equals(""))
+            if (Tipo.Text.Equals(""))//usuario deve inserir um tipo para a vaga
             {
                 //Inserir Avisos
                 clear = false;
             }
-            if (Turno.Text.Equals(""))
+            if (Turno.Text.Equals(""))//usuario deve inserir um turno para a vaga
             {
                 //Inserir Avisos
                 clear = false;
             }
-            if (Jornada.Text.Equals(""))
+            if (Jornada.Text.Equals(""))//usuario deve inserir uma jornada para a vaga
             {
                 //Inserir Avisos
                 clear = false;
             }
-            if (SalarioVaga.Text.Equals(""))
+            if (SalarioVaga.Text.Equals(""))//usuario deve inserir um salario para a vaga
             {
                 //Inserir Avisos
                 clear = false;
             }
-            if (DescricaoVaga.Text.Equals(""))
+            if (DescricaoVaga.Text.Equals(""))//usuario deve inserir uma descrição para a vaga
             {
                 //Inserir Avisos
                 clear = false;
             }
-            if(CBCursos.SelectedIndex == -1)
+            if(CBCursos.SelectedIndex == -1)//usuario deve selecionar um curso para a vaga
             {
                 //Inserir Avisos
                 clear = false;
             }
-            if (int.Parse(BtnNumero.Content.ToString()) <=0)
+            if (int.Parse(BtnNumero.Content.ToString()) <=0)//numero de vaga disponiveis não pode ser 0
             {
-                //Inserir Avisos
+                //Inserir Aviso
                 clear = false;
             }
             if (clear)
