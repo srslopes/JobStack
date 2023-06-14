@@ -10,83 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JobStack
 {
     /// <summary>
-    /// Lógica interna para TVagaCompletaEmpresa.xaml
+    /// Interação lógica para TVagaCompletaEmpresa.xam
     /// </summary>
-    public partial class TVagaCompletaEmpresa : Window
+    public partial class TVagaCompletaEmpresa : UserControl
     {
-        private Vaga vaga;
-
-        public TVagaCompletaEmpresa(int id)
+        public TVagaCompletaEmpresa()
         {
             InitializeComponent();
-            vaga = BancodeDados.BuscarVaga(id);
-            AttDados();
-            AttLista();
-        }
-
-        public void AttDados()
-        {
-            TituloVaga.Text = vaga.GetNome();
-            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
-            DescricaoVaga.Text = vaga.GetDescricao();
-            TipoVaga.Text = vaga.GetTipo();
-            Turno.Text = vaga.GetTurno();
-            switch (vaga.GetCurso())
-            {
-                case 0:
-                    Curso.Text = "Análise e Desenvolvimento de Sistemas";
-                    break;
-                case 1:
-                    Curso.Text = "Gestão Empresarial";
-                    break;
-                case 2:
-                    Curso.Text = "Eventos";
-                    break;
-                case 3:
-                    Curso.Text = "Gestão de Produção Industrial";
-                    break;
-            }
-            Jornada.Text = vaga.GetJornada();
-            QtdeVaga.Text = vaga.GetNVagas().ToString();
-        }
-
-        public void AttLista()
-        {
-            List<int> inscritos = vaga.GetLista();
-            SPInscritos.Children.Clear();
-            SPInscritos.Height = 0;
-            for (int i=0; i<inscritos.Count; i++)
-            {                
-                if(vaga.IsAlunoAprovado(inscritos[i]))
-                {
-                    DesignUsuarioInscrito ui = new DesignUsuarioInscrito(inscritos[i], vaga.GetID());
-                    SPInscritos.Children.Add(ui);
-                    SPInscritos.Height +=160;
-                }
-            }
-            for (int i = 0; i < inscritos.Count; i++)
-            {
-                if (!vaga.IsAlunoAprovado(inscritos[i]))
-                {
-                    DesignUsuarioInscrito ui = new DesignUsuarioInscrito(inscritos[i], vaga.GetID());
-                    SPInscritos.Children.Add(ui);
-                    SPInscritos.Height += 160;
-                }
-            }
-        }
-
-        private void BtnFechar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
 
         private void BtnEditar_Click(object sender, RoutedEventArgs e)
         {
+            //é o nome antigo da tela TEditarCadVagaEmpresa
+            TEditarCadEmpresa cad = new TEditarCadEmpresa(this);
+            cad.Owner = TMenuEmpresa.GetWindow(this);
+            cad.ShowDialog();
+
 
         }
     }

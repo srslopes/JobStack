@@ -57,9 +57,10 @@ namespace JobStack
         }
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
-            TVagaCompletaEmpresa vg = new TVagaCompletaEmpresa(vaga.GetID());            
-            vg.Topmost = true;
-            vg.Show();
+            /*
+                TVagaCompletaEmpresa vg = new TVagaCompletaEmpresa(vaga.GetID());            
+                vg.Show();
+            */
         }
 
         private void BtnFinalizar_Click(object sender, RoutedEventArgs e)

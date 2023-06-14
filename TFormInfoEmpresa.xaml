@@ -118,7 +118,7 @@
                    HorizontalAlignment="Left"
                    Background="Transparent"
                    Foreground="#003964"
-                   VerticalAlignment="Top" Margin="66,37.5,0,0"
+                   VerticalAlignment="Top" Margin="36,37.5,0,0"
                         />
 
         <TextBlock Text="Adicione/Atualize suas informações"
@@ -127,11 +127,11 @@
                    HorizontalAlignment="Left"
                    Background="Transparent"
                    Foreground="#003964"
-                   VerticalAlignment="Top" Margin="66,77.5,0,0"
+                   VerticalAlignment="Top" Margin="36,77.5,0,0"
                     />
         <Border x:Name="FotoPerfil" HorizontalAlignment="Right"
                  VerticalAlignment="Top"
-                 Margin="0,28,151,0"  Height="70" Width="70" CornerRadius="35">
+                 Margin="0,131.503,847,0"  Height="70" Width="70" CornerRadius="35">
             <Border.Background>
                 <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
             </Border.Background>
@@ -140,13 +140,13 @@
             </Border.Effect>
         </Border>
         <Button x:Name="AlterarImagem"
-                    Width="120"
+                    Width="180"
                     Height="30" 
-                    Margin="0,50,20,0"
-                    Content="Alterar Imagem"
+                    Margin="0,153.998,650.637,0"
+                    Content="Alterar foto de perfil"
                     FontSize="14"
                     FontFamily="Century Gothic"
-                    Background="#FF27597E"
+                    Background="#003964"
                     Foreground="White"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}"
@@ -159,16 +159,16 @@
                    Background="Transparent"
                    Foreground="#003964"
                    VerticalAlignment="Top"
-                   Margin="66,186.005,0,0"
+                   Margin="36,234.005,0,0"
                     />
         <TextBox x:Name="CampoInfoEmpresa"
                  Width="810"
                  Height="130"
-                 FontSize="22"
+                 FontSize="18"
                    FontFamily="Century Gothic"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
-                   Margin="66,219.04,0,0" Style="{DynamicResource TextBoxStyle1}"
+                   Margin="36,267.04,0,0" Style="{DynamicResource TextBoxStyle1}"
                  TextWrapping="Wrap" AcceptsReturn="True"
             />
         <TextBlock
@@ -187,7 +187,7 @@
                     Content="Salvar"
                     FontSize="14"
                     FontFamily="Century Gothic"
-                    Background="#FF27597E"
+                    Background="#003964"
                     Foreground="White"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom" Style="{DynamicResource ButtonStyle1}" Click="BtnSalvar_Click" 
@@ -199,51 +199,11 @@
                     Content="Cancelar"
                     FontSize="14"
                     FontFamily="Century Gothic"
-                    Background="#FF27597E"
+                    Background="#003964"
                     Foreground="White"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom" Style="{DynamicResource ButtonStyle1}"
                 Click="BtnCancelar_Click"
                     />
-        <TextBlock Text="Nome:"
-            FontSize="22"
-            FontFamily="Century Gothic"
-            HorizontalAlignment="Left"
-            Background="Transparent"
-            Foreground="#003964"
-            VerticalAlignment="Top"
-            Margin="66,142.5,0,0"
-                    />
-        <TextBox x:Name="NomeEmpresa"
-                 Width="355"
-                 Height="25"
-                 FontSize="22"
-                 TextWrapping="NoWrap"
-                 FontFamily="Century Gothic"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Top"
-                Margin="142.5,144,0,0" Style="{DynamicResource TextBoxStyle1}"
-                        />
-        <TextBlock Text="CNPJ:"
-            FontSize="22"
-            FontFamily="Century Gothic"
-            HorizontalAlignment="Left"
-            Background="Transparent"
-            Foreground="#003964"
-            VerticalAlignment="Top"
-            Margin="526.5,142.5,0,0"
-            
-                    />
-        <TextBox x:Name="CnpjEmpresa"
-            Width="282.039"
-            TextWrapping="NoWrap"
-            Height="25"
-            FontSize="22"
-            FontFamily="Century Gothic"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Margin="596.12,144,0,0"
-            Style="{DynamicResource TextBoxStyle1}"
-                        />
     </Grid>
 </UserControl>

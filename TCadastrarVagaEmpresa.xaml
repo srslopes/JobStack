@@ -479,15 +479,16 @@
                    Margin="20, 70, 0, 0"
                     />
         <TextBox x:Name="TituloVaga"
-                 Width="400"
+                 Width="438"
                  Height="24"
                  Background="White"
                  Foreground="Black"
                  FontFamily="Century Gothic"
-                 FontSize="20"
+                 FontSize="18"
+                 Padding="5, 0, 0, 0"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Top"
-                 Margin="85, 72, 0, 0" 
+                 Margin="85,72.667,0,0" 
                  Style="{DynamicResource TextBoxStyle1}"
                     />
         <TextBlock Text="Criador:"
@@ -501,8 +502,8 @@
                     />
         <TextBlock x:Name="NomeEmpresa"
                    Text="NomeEmpresa"
-                   Margin="110, 110, 0, 0"
-                   FontSize="22"
+                   Margin="110.666,112.664,0,0"
+                   FontSize="20"
                    FontFamily="Century Gothic"
                    HorizontalAlignment="Left"
                    Background="Transparent"
@@ -524,7 +525,7 @@
                   Background="White"
                   Foreground="Black"
                   FontFamily="Century Gothic"
-                  FontSize="18"
+                  FontSize="16"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top"
                   Margin="520,112,0,0" 
@@ -552,7 +553,7 @@
                   Background="White"
                   Foreground="Black"
                   FontFamily="Century Gothic"
-                  FontSize="18" 
+                  FontSize="16" 
                   Style="{DynamicResource ComboBoxStyle1}">
             <ComboBoxItem Content="Estágio" />
             <ComboBoxItem Content="Contrato" />
@@ -575,7 +576,7 @@
                   Background="White"
                   Foreground="Black"
                   FontFamily="Century Gothic"
-                  FontSize="18"
+                  FontSize="16"
                   Margin="550, 152, 0, 0"
                   Style="{DynamicResource ComboBoxStyle1}"
                   >
@@ -601,7 +602,7 @@
                   Background="White"
                   Foreground="Black"
                   FontFamily="Century Gothic"
-                  FontSize="18"
+                  FontSize="16"
                   Style="{DynamicResource ComboBoxStyle1}">
             <ComboBoxItem Content="Análise e Desenvolvimento de Sistemas" />
             <ComboBoxItem Content="Gestão Empresarial" />
@@ -609,6 +610,7 @@
             <ComboBoxItem Content="Gestão de Produção Industrial" />
         </ComboBox>
         <TextBlock  Text="Faixa salarial: R$"
+
                     Margin="450, 190, 0, 0"
                     FontSize="22"
                    FontFamily="Century Gothic"
@@ -620,10 +622,11 @@
         <TextBox x:Name="SalarioVaga"
                  Width="140"
                  Height="24"
+                 Padding="5, 0, 0, 0"
                  Background="White"
                  Foreground="Black"
                  FontFamily="Century Gothic"
-                 FontSize="20"
+                 FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Top"
                  Margin="630, 192, 0, 0"
@@ -638,21 +641,21 @@
                    Foreground="#003964"
                    VerticalAlignment="Top"
                     />
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <TextBox x:Name="DescricaoVaga"
+
+        <TextBox x:Name="DescricaoVaga"
                  Width="750"
                  Height="110"
+                 Padding="5, 0, 5, 0"
                  Background="White"
                  Foreground="Black"
                  FontFamily="Century Gothic"
-                 FontSize="20"
+                 FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Top"
                  Margin="20, 270, 0, 0"
                  Style="{DynamicResource TextBoxStyle1}"
-                     TextWrapping="Wrap" AcceptsReturn="True"
+                 TextWrapping="Wrap" AcceptsReturn="True"
                     />
-        </ScrollViewer>
         <TextBlock Text="Quantidade de vagas:"
                    Margin="20,402.666,0,0"
                    FontSize="22"
@@ -668,14 +671,13 @@
                     Height="25" 
                     Margin="0,0,22.835,18.499"
                     Content="Criar"
-                    FontSize="12"
+                    FontSize="14"
                     FontFamily="Century Gothic"
                     Background="#FF27597E"
                     Foreground="White"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom" 
                     Style="{DynamicResource ButtonStyle1}"
-                Click="BtnCriar_Click"
                     />
         <Grid x:Name="GridBotaoNumerico">
             <Rectangle Width="110"

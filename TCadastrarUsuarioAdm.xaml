@@ -446,7 +446,7 @@
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="40,379,0,234"
+                   VerticalAlignment="Center" Margin="64,379.013,0,234.013"
                    />
         <Button x:Name="BtnSalvar"
                 Width="150"
@@ -454,10 +454,10 @@
                 FontFamily="Century Gothic"
                 FontSize="22"
                 Content="Salvar"
-                    Background="#FF27597E"
+                    Background="#003964"
                     Foreground="White"
                     HorizontalAlignment="Right"
-                    VerticalAlignment="Center" Margin="0,495,590,105" Style="{DynamicResource BotaoArredondadoStyle}" RenderTransformOrigin="0.513,1.75" Click="BtnSalvar_Click"
+                    VerticalAlignment="Center" Margin="0,495,57.5,105" Style="{DynamicResource BotaoArredondadoStyle}" RenderTransformOrigin="0.513,1.75" Click="BtnSalvar_Click"
                 />
     </Grid>
 </UserControl>

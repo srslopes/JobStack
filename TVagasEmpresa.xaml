@@ -113,7 +113,7 @@
                 FontSize="14"
                 Foreground="White"
                 Style="{DynamicResource BotaoSubMenuStyle}" 
-                Margin="188.376,31.25,665.623,568.75" Click="BtnCriar_Click"/>
+                Margin="188.376,38.75,665.623,561.25" Click="BtnCriar_Click"/>
         <Button x:Name="BtnPendentes"
                 Width="130"
                 Height="40"
@@ -122,7 +122,7 @@
                 FontFamily="Century Gothic"
                 FontSize="14"
                 Foreground="White"
-                Style="{DynamicResource BotaoSubMenuStyle}" Margin="316.537,31.426,507.462,568.573" Click="BtnPendentes_Click" 
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="316.537,38.926,507.462,561.073" Click="BtnPendentes_Click" 
                 />
         <Button x:Name="BtnEmAberto"
                 Width="130"
@@ -132,7 +132,7 @@
                 FontFamily="Century Gothic"
                 FontSize="14"
                 Foreground="White"
-                Style="{DynamicResource BotaoSubMenuStyle}" Margin="477.104,31.669,346.895,568.33" Click="BtnEmAberto_Click"
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="477.104,39.169,346.895,560.83" Click="BtnEmAberto_Click"
             />
         <Button x:Name="BtnFinalizadas"
                 Width="130"
@@ -142,14 +142,14 @@
                 FontFamily="Century Gothic"
                 FontSize="14"
                 Foreground="White"
-                Style="{DynamicResource BotaoSubMenuStyle}" Margin="637.464,31.511,186.536,568.488" Click="BtnFinalizadas_Click"
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="637.464,39.011,186.536,560.988" Click="BtnFinalizadas_Click"
             />
         <!-- GRID PARA PUXAR AS PÁGINAS DAS VAGAS E FORMULÁRIOS -->
         <Grid x:Name="GridConteudo"
               HorizontalAlignment="Center"
               VerticalAlignment="Center"
               Width="910"
-              Height="500" Margin="22,97.5,22,42.5"
+              Height="500" Margin="22,103.5,22,36.5"
               Background="AliceBlue">
             <Grid.Resources>
                 <Style TargetType="Border">

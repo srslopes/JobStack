@@ -167,5 +167,10 @@ namespace JobStack
             ConteudoJanela.Children.Clear();
             ConteudoJanela.Children.Add(Janela);
         }
+
+        private void Window_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }

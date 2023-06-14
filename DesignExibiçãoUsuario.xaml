@@ -126,7 +126,7 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
                 Margin="0,113,25,51"
-                Style="{DynamicResource ButtonStyle1}"
+                Style="{DynamicResource ButtonStyle1}" Click="BtnGerarSenha_Click"
                 />
         <Button x:Name="BtnDesativar" 
                 Width="90" 

@@ -10,14 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JobStack
 {
     /// <summary>
-    /// Lógica interna para TExibirPerfilAluno.xaml
+    /// Interação lógica para TExibirPerfilAluno.xam
     /// </summary>
-    public partial class TExibirPerfilAluno : Window
+    public partial class TExibirPerfilAluno : UserControl
     {
         private Aluno aluno;
         private Vaga vaga;
@@ -65,14 +66,15 @@ namespace JobStack
                 status = false;
             }
         }
-        private void BtnFechar_Click(object sender, RoutedEventArgs e)
+
+        public TExibirPerfilAluno()
         {
-            this.Close();
+            InitializeComponent();
         }
 
         private void BtnSelecionar_Click(object sender, RoutedEventArgs e)
         {
-            if(status) vaga.DesaprovarAluno(aluno.GetID());
+            if (status) vaga.DesaprovarAluno(aluno.GetID());
             else vaga.AprovarAluno(aluno.GetID());
             AttDados();
         }
@@ -80,7 +82,7 @@ namespace JobStack
         private void BtnChat_Click(object sender, RoutedEventArgs e)
         {
             int id = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser()).ChatExiste(aluno.GetID());
-            if(id<0)
+            if (id < 0)
             {
                 Chat n = new Chat(aluno.GetID());
                 id = n.GetID();

@@ -185,7 +185,7 @@
                           HorizontalAlignment="Center"
                           VerticalAlignment="Center">
                  <TextBlock x:Name="FormAluno"
-                               FontSize="20"
+                               FontSize="18"
                                FontFamily="Century Gothic"
                                Text="Formação academica e habilidades"
                                Foreground="Black"
@@ -208,7 +208,7 @@
                           Height="115" Margin="0,275.216,0,24.783">
                 <TextBlock x:Name="ExpAluno"
                                Text="Experiencia de trabalho aluno"
-                               FontSize="20"
+                               FontSize="18"
                                FontFamily="Century Gothic"
                                Foreground="Black"
                                HorizontalAlignment="Left"

@@ -392,7 +392,7 @@
                    HorizontalAlignment="Left"
                    Background="Transparent"
                    Foreground="#003964"
-                   VerticalAlignment="Top" Margin="66,37.5,0,0"
+                   VerticalAlignment="Top" Margin="37.5,37.5,0,0"
                         />
 
         <TextBlock Text="Adicione/Atualize suas informações"
@@ -401,11 +401,11 @@
                    HorizontalAlignment="Left"
                    Background="Transparent"
                    Foreground="#003964"
-                   VerticalAlignment="Top" Margin="66,77.5,0,0"
+                   VerticalAlignment="Top" Margin="37.5,77.5,0,0"
                     />
         <Border x:Name="FotoPerfil" HorizontalAlignment="Right"
                  VerticalAlignment="Top"
-                 Margin="0,28,151,0"  Height="70" Width="70" CornerRadius="35">
+                 Margin="0,121.003,847,0"  Height="70" Width="70" CornerRadius="35">
             <Border.Background>
                 <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
             </Border.Background>
@@ -414,70 +414,18 @@
             </Border.Effect>
         </Border>
         <Button x:Name="AlterarImagem"
-                    Width="120"
+                    Width="180"
                     Height="30" 
-                    Margin="0,50,20,0"
-                    Content="Alterar Imagem"
+                    Margin="0,143.498,650.637,0"
+                    Content="Alterar foto de perfil"
                     FontSize="14"
                     FontFamily="Century Gothic"
-                    Background="#FF27597E"
+                    Background="#003964"
                     Foreground="White"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}"
                 Click="AlterarImagem_Click"
                     />
-        <TextBlock Text="Curso:"
-                   FontSize="22"
-                   FontFamily="Century Gothic"
-                   HorizontalAlignment="Left"
-                   Background="Transparent"
-                   Foreground="#003964"
-                   VerticalAlignment="Top"
-                   Margin="66,172.5,0,0"
-                    />
-        <ComboBox x:Name="CBCursos"
-                  Width="360"
-                  Height="30"
-                  FontSize="18"
-                   FontFamily="Century Gothic"
-                   HorizontalAlignment="Left"
-                   Background="Transparent"
-                   Foreground="#003964"
-                   VerticalAlignment="Top"
-                   Margin="138,171,0,0" Style="{DynamicResource ComboBoxStyle1}">
-            <ComboBoxItem Content="Análise e Desenvolvimento de Sistemas" />
-            <ComboBoxItem Content="Gestão Empresarial" />
-            <ComboBoxItem Content="Eventos" />
-            <ComboBoxItem Content="Gestão de Produção Industrial" />
-        </ComboBox>
-        <TextBlock Text="Período:"
-                   FontSize="22"
-                   FontFamily="Century Gothic"
-                   HorizontalAlignment="Left"
-                   Background="Transparent"
-                   Foreground="#003964"
-                   VerticalAlignment="Top"
-                   Margin="526.5,172.5,0,0"
-                    />
-        <ComboBox x:Name="CBPeriodo"
-                  Width="250"
-                  Height="30"
-                  FontSize="18"
-                   FontFamily="Century Gothic"
-                   HorizontalAlignment="Left"
-                   Background="Transparent"
-                   Foreground="#003964"
-                   VerticalAlignment="Top"
-                  Margin="621,171,0,0"
-                  Style="{DynamicResource ComboBoxStyle1}">
-            <ComboBoxItem Content="1º semestre" />
-            <ComboBoxItem Content="2º semestre" />
-            <ComboBoxItem Content="3º semestre" />
-            <ComboBoxItem Content="4º semestre" />
-            <ComboBoxItem Content="5º semestre" />
-            <ComboBoxItem Content="6º semestre" />
-            <ComboBoxItem Content="Concluído" />
-        </ComboBox>
         <TextBlock Text="Formação Acadêmica e Habilidades:"
                    FontSize="22"
                    FontFamily="Century Gothic"
@@ -485,16 +433,16 @@
                    Background="Transparent"
                    Foreground="#003964"
                    VerticalAlignment="Top"
-                   Margin="66,217.5,0,0"
+                   Margin="37.5,210,0,0"
                     />
         <TextBox x:Name="CampoFormacao"
                  Width="810"
                  Height="130"
-                 FontSize="22"
+                 FontSize="18"
                    FontFamily="Century Gothic"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
-                   Margin="66,250.5,0,0" Style="{DynamicResource TextBoxStyle1}"
+                   Margin="37.5,243,0,0" Style="{DynamicResource TextBoxStyle1}"
                  TextWrapping="Wrap" AcceptsReturn="True"
             />
         <TextBlock Text="Experiência e Informações Adicionais:"
@@ -504,7 +452,7 @@
                    Background="Transparent"
                    Foreground="#003964"
                    VerticalAlignment="Top"
-                   Margin="66,397.5,0,0"
+                   Margin="37.5,390,0,0"
                     />
         <Button x:Name="BtnSalvar"
                     Width="90"
@@ -513,7 +461,7 @@
                     Content="Salvar"
                     FontSize="14"
                     FontFamily="Century Gothic"
-                    Background="#FF27597E"
+                    Background="#003964"
                     Foreground="White"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom" Style="{DynamicResource ButtonStyle1}" Click="BtnSalvar_Click" 
@@ -525,7 +473,7 @@
                     Content="Cancelar"
                     FontSize="14"
                     FontFamily="Century Gothic"
-                    Background="#FF27597E"
+                    Background="#003964"
                     Foreground="White"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom" Style="{DynamicResource ButtonStyle1}"
@@ -534,53 +482,13 @@
         <TextBox x:Name="CampoExperiencia"
             Width="810"
             Height="130"
-            FontSize="22"
+            FontSize="18"
             FontFamily="Century Gothic"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="68,438.5,0,0"
+            Margin="39.5,431,0,0"
             Style="{DynamicResource TextBoxStyle1}"
                  TextWrapping="Wrap" AcceptsReturn="True"
             />
-        <TextBlock Text="Nome:"
-            FontSize="22"
-            FontFamily="Century Gothic"
-            HorizontalAlignment="Left"
-            Background="Transparent"
-            Foreground="#003964"
-            VerticalAlignment="Top"
-            Margin="66,123,0,0"
-                    />
-        <TextBox x:Name="NomeAluno"
-                 Width="355"
-                 Height="25"
-                 FontSize="22"
-                 TextWrapping="NoWrap"
-                 FontFamily="Century Gothic"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Top"
-                Margin="142.5,124.5,0,0" Style="{DynamicResource TextBoxStyle1}"
-                        />
-        <TextBlock Text="RA:"
-            FontSize="22"
-            FontFamily="Century Gothic"
-            HorizontalAlignment="Left"
-            Background="Transparent"
-            Foreground="#003964"
-            VerticalAlignment="Top"
-            Margin="526.5,123,0,0"
-            
-                    />
-        <TextBox x:Name="RAAluno"
-            Width="305"
-            TextWrapping="NoWrap"
-            Height="25"
-            FontSize="22"
-            FontFamily="Century Gothic"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Margin="567,124.5,0,0"
-            Style="{DynamicResource TextBoxStyle1}"
-                        />
     </Grid>
 </UserControl>

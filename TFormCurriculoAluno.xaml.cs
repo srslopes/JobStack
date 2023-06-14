@@ -30,10 +30,7 @@ namespace JobStack
             bitmap = null;
             InitializeComponent();
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
-            NomeAluno.Text = aluno.GetNome();
-            RAAluno.Text = aluno.GetRa().ToString();
-            CBCursos.SelectedIndex = aluno.GetCurso();
-            CBPeriodo.SelectedIndex = aluno.GetSemestre()-1;
+            
             CampoFormacao.Text = aluno.GetFormacao();
             CampoExperiencia.Text = aluno.GetExperiencia();
             Img.ImageSource = BancodeDados.BuscarImg(aluno.GetIdImg());
@@ -41,10 +38,7 @@ namespace JobStack
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            aluno.SetNome(NomeAluno.Text);
-            aluno.SetRa(long.Parse(RAAluno.Text));
-            aluno.SetCurso(CBCursos.SelectedIndex);
-            aluno.SetSemestre(CBPeriodo.SelectedIndex +1);
+           
             aluno.SetFormacao(CampoFormacao.Text);
             aluno.SetExperiencia(CampoExperiencia.Text);
             if(bitmap!=null) aluno.SetIdImg(BancodeDados.SalvarImg(bitmap));

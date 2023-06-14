@@ -74,7 +74,7 @@
                    HorizontalAlignment="Left"
                    Background="Transparent"
                    Foreground="#003964"
-                   VerticalAlignment="Top" Margin="30,20,0,0"
+                   VerticalAlignment="Top" Margin="30,26,0,0"
                         />
         <Grid x:Name="GridExibirVaga"
                 Width="740"
@@ -82,7 +82,7 @@
               HorizontalAlignment="Left"
               VerticalAlignment="Center" Margin="30,69.52,22.177,50.98">
             <Rectangle
-                Fill="White"
+                Fill="AliceBlue"
                 RadiusX="10"
                 RadiusY="10"
                         >

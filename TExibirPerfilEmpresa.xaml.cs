@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JobStack
 {
     /// <summary>
-    /// Lógica interna para TExibirPerfilEmpresa.xaml
+    /// Interação lógica para TExibirPerfilEmpresa.xam
     /// </summary>
-    public partial class TExibirPerfilEmpresa : Window
+    public partial class TExibirPerfilEmpresa : UserControl
     {
         public TExibirPerfilEmpresa()
         {
             InitializeComponent();
-        }
-
-        private void BtnFechar_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

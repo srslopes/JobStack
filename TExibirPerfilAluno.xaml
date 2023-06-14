@@ -1,17 +1,14 @@
-﻿<Window x:Class="JobStack.TExibirPerfilAluno"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:JobStack"
-        mc:Ignorable="d"
-        Title="TExibirPerfilAluno" 
-        WindowStyle="None"
-        WindowStartupLocation="CenterScreen"
-        Height="640" 
-        Width="954"
-        Background="#FFD9EBFB">
-    <Window.Resources>
+﻿<UserControl x:Class="JobStack.TExibirPerfilAluno"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JobStack"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" 
+             d:DesignWidth="954"
+             Background="#FFD9EBFB">
+    <UserControl.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -21,7 +18,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <!-- STYLE BTN FECHAR -->
+        <!-- STYLE BTN -->
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
@@ -31,44 +28,6 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        <Style x:Key="BtnFecharStyle" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="1"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
-                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="10.366,1.404,10.033,4.075" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <!-- STYLE BTN CHAT -->
         <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -106,34 +65,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Window.Resources>
-    <Grid Background="#FFD9EBFB">
-        <Grid.Resources>
-            <Style TargetType="Border" x:Key="CustomBorder">
-                <Setter Property="CornerRadius" Value="10"/>
-                <Setter Property="BorderThickness" Value="1"/>
-                <Setter Property="BorderBrush" Value="#003964"/>
-                <Setter Property="Background" Value="#FFD9EBFB"/>
-                <Setter Property="Padding" Value="5"/>
-                <Setter Property="Effect">
-                    <Setter.Value>
-                        <DropShadowEffect Color="Black" Direction="315" ShadowDepth="3" Opacity="0.5"/>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </Grid.Resources>
-        <Border Style="{StaticResource CustomBorder}" />
-        <Button x:Name="BtnFechar"
-                Width="30"
-                Height="30"
-                Content="x"
-                FontFamily="Century Gothic"
-                FontSize="20"
-                Background="#003964"
-                Foreground="White"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top" Margin="0,13.335,18.669,0" Style="{DynamicResource BtnFecharStyle}" Click="BtnFechar_Click"
-                    />
+    </UserControl.Resources>
+    <Grid>
         <Grid x:Name="LogoFatec"
               Width="200"
               Height="100"
@@ -192,7 +125,7 @@
                    HorizontalAlignment="Left"
                    Margin="244,113,0,0"
                     />
-        
+
         <Grid x:Name="GridCurriculo"
               Width="910"
               Height="400" Margin="22,192,14,40">
@@ -217,23 +150,24 @@
             <Button x:Name="BtnSelecionar" 
                     Width="200"
                     Height="30"
-                    Content="Selecionar para Vaga"
+                    Content="Selecionar para vaga"
                     FontFamily="Century Gothic"
                     FontSize="16"
                     Background="#003964"
-                    Foreground="White" Margin="250,10,0,0" Style="{DynamicResource ButtonStyle1}"
+                    Foreground="White" Margin="641,14.831,69,0" Style="{DynamicResource ButtonStyle1}"
                 VerticalAlignment="Top"
                 Click="BtnSelecionar_Click"
                     />
             <Button x:Name="BtnChat" 
-                    Width="200"
-                    Height="30"
-                    Content="Contatar Candidato"
+                    Width="40"
+                    Height="40"
                     FontFamily="Century Gothic"
                     FontSize="16"
                     Background="#003964"
-                    Foreground="White" Margin="698,10,12,360" Style="{DynamicResource ButtonStyle1}" Click="BtnChat_Click"
-                    />
+                    Foreground="White" Margin="857,9,13,351" Style="{DynamicResource ButtonStyle1}" Click="BtnChat_Click"
+                    >
+                <Image Source="Icones/icon_chat.png" Width="25" Height="25"/>
+            </Button>
             <TextBlock Text="FORMAÇÃO ACADÊMICA E HABILIDADES:"
                            FontSize="21"
                            FontFamily="Century Gothic Bold"
@@ -282,4 +216,4 @@
 
         </Grid>
     </Grid>
-</Window>
+</UserControl>

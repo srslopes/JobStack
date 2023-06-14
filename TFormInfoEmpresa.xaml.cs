@@ -31,8 +31,7 @@ namespace JobStack
             parent = Janela;
             bitmap = null;
             CampoInfoEmpresa.Text = empresa.GetSobre();
-            NomeEmpresa.Text = empresa.GetNome();
-            CnpjEmpresa.Text = empresa.GetCNPJ().ToString();
+           
             Img.ImageSource = BancodeDados.BuscarImg(empresa.GetIdImg());
         }
 
@@ -57,8 +56,7 @@ namespace JobStack
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            empresa.SetNome(NomeEmpresa.Text);
-            empresa.SetCNPJ(int.Parse(CnpjEmpresa.Text));
+            
             empresa.SetSobre(CampoInfoEmpresa.Text);
             if (bitmap != null) empresa.SetIdImg(BancodeDados.SalvarImg(bitmap));
             parent.AttDados();

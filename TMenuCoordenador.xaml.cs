@@ -39,20 +39,24 @@ namespace JobStack
             {
                 tt_logout.Visibility = Visibility.Collapsed;
                 tt_chat.Visibility = Visibility.Collapsed;
-                tt_analisar.Visibility = Visibility.Collapsed;
+                tt_empresa.Visibility = Visibility.Collapsed;
+                tt_alunos.Visibility = Visibility.Collapsed;
+                tt_vagas.Visibility = Visibility.Collapsed;
             }
             else
             {
                 tt_logout.Visibility = Visibility.Visible;
                 tt_chat.Visibility = Visibility.Visible;
-                tt_analisar.Visibility = Visibility.Visible;
+                tt_vagas.Visibility = Visibility.Visible;
+                tt_empresa.Visibility = Visibility.Visible;
+                tt_alunos.Visibility = Visibility.Visible;
             }
         }
 
         private void txtBtnAnalisar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock textBlock = sender as TextBlock;
-            if (textBlock.Text == "ANALISAR")
+            if (textBlock.Text == "VAGAS")
             {
                 TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
                 ConteudoJanela.Children.Clear();
@@ -91,6 +95,28 @@ namespace JobStack
             Notif.Text = n.ToString();
             if (n == 0) Notificacao.Visibility = Visibility.Hidden;
             else Notificacao.Visibility = Visibility.Visible;
+        }
+
+        private void txtBtnAlunos_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if (textBlock.Text == "ALUNOS")
+            {
+                TAlunosCoordenador alunos = new TAlunosCoordenador();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(alunos);
+            }
+        }
+
+        private void txtBtnEmpresa_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            if(textBlock.Text == "EMPRESAS")
+            {
+                TEmpresasCoordenador empresas = new TEmpresasCoordenador();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(empresas);
+            }
         }
     }
 }

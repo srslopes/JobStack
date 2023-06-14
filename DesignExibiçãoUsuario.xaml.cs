@@ -55,5 +55,12 @@ namespace JobStack
             else ((Usuario)user).SetStatus(true);
             AttDados();
         }
+
+        private void BtnGerarSenha_Click(object sender, RoutedEventArgs e)
+        {
+            TGerarSenhaADM s = new TGerarSenhaADM();
+            s.Topmost = true;
+            s.Show();
+        }
     }
 }

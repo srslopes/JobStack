@@ -69,8 +69,8 @@ namespace JobStack
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
             TVagaCompletaAluno vg = new TVagaCompletaAluno(vaga.GetID(), this);
-            vg.Topmost = true;
-            vg.Show();
+            vg.Owner = TMenuAluno.GetWindow(this);
+            vg.ShowDialog();
 
         }
     }

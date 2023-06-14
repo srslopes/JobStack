@@ -10,7 +10,7 @@
              HorizontalAlignment="Center"
              VerticalAlignment="Center">
     <Grid>
-        <TextBox Text="sem vagas para exibir" FontSize="24" 
+        <TextBox Text="Sem vagas para exibir" FontSize="24" 
                    FontFamily="Century Gothic" 
                    Foreground="#FF003964"
                  Background="Transparent"

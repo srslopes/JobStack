@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
-             d:DesignHeight="150" 
-             d:DesignWidth="760"
+             d:DesignHeight="100" 
+             d:DesignWidth="910"
              Margin="0,0,0,10">
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
@@ -66,17 +66,19 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid Height="150" Width="760">
+    <Grid Height="100" Width="910">
         <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10" 
-                   Margin="0,-1,0,1">
+                   Width="910"
+                   Height="100" Margin="0,1,0,-1"
+                  >
             <Rectangle.Effect>
                 <DropShadowEffect ShadowDepth="2" Opacity="0.2" BlurRadius="3"/>
             </Rectangle.Effect>
         </Rectangle>
         <!-- FOTO DO USUARIO -->
-        <Border x:Name="FotoPerfil" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="25,0,0,0" Height="100" Width="100" CornerRadius="50">
+        <Border x:Name="FotoPerfil" HorizontalAlignment="Left" Margin="22,11,0,7.5" Width="80" Height="80" CornerRadius="50">
             <Border.Background>
                 <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
             </Border.Background>
@@ -88,19 +90,19 @@
                    Text="Nome do Usuario" 
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
-                   Margin="160,59,0,0" 
-                   FontSize="26" 
+                   Margin="115.5,27,0,0" 
+                   FontSize="24" 
                    FontFamily="Century Gothic" 
                    Foreground="#FF003964"/>
         <TextBlock x:Name="Status" 
                    Text="Selecionado" 
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
-                   Margin="160,90,0,0" 
+                   Margin="115.5,56,0,0" 
                    FontSize="20" 
                    FontFamily="Century Gothic" 
                    Foreground="Green"/>
-        
+
         <Button x:Name="BtnVerPerfil"
                 Width="110"
                 Height="30"
@@ -108,7 +110,7 @@
                 FontSize="16"
                 Background="#003964"
                 Foreground="White"
-                Content="Ver perfil" Margin="625,61,25,59" Style="{DynamicResource ButtonStyle1}" Click="BtnVerPerfil_Click"
+                Content="Ver perfil" Margin="784.5,38,15.5,32" Style="{DynamicResource ButtonStyle1}" Click="BtnVerPerfil_Click"
             />
     </Grid>
 </UserControl>

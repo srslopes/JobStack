@@ -58,8 +58,23 @@
     </ApplicationDefinition>
     <Compile Include="BackEnd\Usuarios\Admin.cs" />
     <Compile Include="BackEnd\Usuarios\Aluno.cs" />
+    <Compile Include="DesignUsuarioAluno_Coordenador.xaml.cs">
+      <DependentUpon>DesignUsuarioAluno_Coordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DesignUsuarioEmpresa_Coordenador.xaml.cs">
+      <DependentUpon>DesignUsuarioEmpresa_Coordenador.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DesignUsuarioInscrito.xaml.cs">
       <DependentUpon>DesignUsuarioInscrito.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TAlunosCoordenador.xaml.cs">
+      <DependentUpon>TAlunosCoordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TEditarCadVagaEmpresa.xaml.cs">
+      <DependentUpon>TEditarCadVagaEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TEmpresasCoordenador.xaml.cs">
+      <DependentUpon>TEmpresasCoordenador.xaml</DependentUpon>
     </Compile>
     <Compile Include="Teste\TesteCadastrarEmpresa.xaml.cs">
       <DependentUpon>TesteCadastrarEmpresa.xaml</DependentUpon>
@@ -67,8 +82,20 @@
     <Compile Include="TExibirPerfilAluno.xaml.cs">
       <DependentUpon>TExibirPerfilAluno.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TExibirPerfilAluno_Coordenador.xaml.cs">
+      <DependentUpon>TExibirPerfilAluno_Coordenador.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TExibirPerfilEmpresa.xaml.cs">
       <DependentUpon>TExibirPerfilEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TExibirPerfilEmpresa_Coordenador.xaml.cs">
+      <DependentUpon>TExibirPerfilEmpresa_Coordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TFormAlunoCoordenador.xaml.cs">
+      <DependentUpon>TFormAlunoCoordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TFormEmpresaCoordenador.xaml.cs">
+      <DependentUpon>TFormEmpresaCoordenador.xaml</DependentUpon>
     </Compile>
     <Compile Include="TFormInfoEmpresa.xaml.cs">
       <DependentUpon>TFormInfoEmpresa.xaml</DependentUpon>
@@ -196,7 +223,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DesignUsuarioAluno_Coordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DesignUsuarioEmpresa_Coordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DesignUsuarioInscrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TAlunosCoordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TEditarCadVagaEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TEmpresasCoordenador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -281,7 +328,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TExibirPerfilAluno_Coordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TExibirPerfilEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TExibirPerfilEmpresa_Coordenador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -289,7 +344,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TFormAlunoCoordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TFormCurriculoAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TFormEmpresaCoordenador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -452,7 +515,9 @@
   <ItemGroup>
     <Resource Include="Icones\logo-jobstack-icon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icones\building.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Icones\back.png" />
   </ItemGroup>
@@ -461,6 +526,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\fatec_colorido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\education.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

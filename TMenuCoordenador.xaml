@@ -97,7 +97,7 @@
                     </Grid.Background>
                     <StackPanel x:Name="panel_btnmenu">
                         <Grid Height="88.667">
-                            
+
 
                             <!-- Criando o botão que diminui e expande o menu -->
                             <ToggleButton x:Name="BotaoMenu"
@@ -182,7 +182,7 @@
                                                FontSize="18"
                                                VerticalAlignment="Center"
                                                Padding="62, 13, 0, 0"
-                                               PreviewMouseDown="txtBtnChat_PreviewMouseDown"
+                                               PreviewMouseDown="txtBtnChat_PreviewMouseDown" Margin="0,1.332,0,-1.332"
                                                >
 
                                     </TextBlock>
@@ -210,37 +210,99 @@
                                       Width="250"
                                       Height="50"
                                       HorizontalAlignment="Left">
-                                    <Image Source="Icones/icon analisar.png"
+                                    <Image Source="Icones/icon vagas.png"
                                            Stretch="UniformToFill"
                                            HorizontalAlignment="Left"
-                                           Width="38" Margin="12,8.002,0,6.998"/>
-                                    <TextBlock x:Name="txtBtnAnalisar"
+                                           Width="40.583" Margin="8.748,4.835,0,5.582"/>
+                                    <TextBlock x:Name="txtBtnVagas"
                                                Width="250"
-                                               Height="50"
+                                               Height="49.167"
                                                HorizontalAlignment="Left"
-                                               Text="ANALISAR"
+                                               Text="VAGAS"
                                                FontFamily="Century Gothic"
                                                FontSize="18"
                                                Foreground="White"
                                                VerticalAlignment="Center"
                                                Padding="62, 13, 0, 0"
-                                               MouseLeftButtonDown="txtBtnAnalisar_MouseLeftButtonDown">
+                                               MouseLeftButtonDown="txtBtnAnalisar_MouseLeftButtonDown" Margin="0,0.999,0,-0.166">
 
                                     </TextBlock>
                                 </Grid>
                                 <ListViewItem.ToolTip>
-                                    <ToolTip x:Name="tt_analisar"
-                                             Content="Analisar"
+                                    <ToolTip x:Name="tt_vagas"
+                                             Content="Vagas"
+                                             Style="{StaticResource tt_style}"
+                                             Width="90"
+                                             Height="50"/>
+                                </ListViewItem.ToolTip>
+                            </ListViewItem>
+                            <!-- ALUNOS -->
+                            <ListViewItem HorizontalAlignment="Left" Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
+                                <Grid x:Name="LVBtnAlunos"
+                                       Width="250"
+                                       Height="50"
+                                       HorizontalAlignment="Left">
+                                    <Image Source="Icones/education.png"
+                                           Stretch="UniformToFill"
+                                           HorizontalAlignment="Left"
+                                           Width="41.917" Margin="8.336,5.169,0,8.165"/>
+                                    <TextBlock x:Name="txtBtnAlunos"
+                                               Width="250"
+                                               Height="50"
+                                               HorizontalAlignment="Left"
+                                               Text="ALUNOS"
+                                               FontFamily="Century Gothic"
+                                               FontSize="18"
+                                               Foreground="White"
+                                               VerticalAlignment="Center"
+                                               Padding="62, 13, 0, 0" MouseLeftButtonDown="txtBtnAlunos_MouseLeftButtonDown" Margin="0,2.667,0,-2.667"
+                                               >
+
+                                    </TextBlock>
+                                </Grid>
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tt_alunos"
+                                             Content="Alunos"
+                                             Style="{StaticResource tt_style}"
+                                             Width="90"
+                                             Height="50"/>
+                                </ListViewItem.ToolTip>
+                            </ListViewItem>
+
+                            <!-- EMPRESAS -->
+                            <ListViewItem HorizontalAlignment="Left" Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
+                                <Grid x:Name="LVBtnEmpresa"
+                                      Width="250"
+                                      Height="50"
+                                      HorizontalAlignment="Left">
+                                    <Image Source="Icones/building.png"
+                                           Stretch="UniformToFill"
+                                           HorizontalAlignment="Left"
+                                           Width="42.917" Margin="7.336,4.669,0,7.165"/>
+                                    <TextBlock x:Name="txtBtnEmpresa"
+                                               Width="250"
+                                               Height="50"
+                                               HorizontalAlignment="Left"
+                                               Text="EMPRESAS"
+                                               FontFamily="Century Gothic"
+                                               FontSize="18"
+                                               Foreground="White"
+                                               VerticalAlignment="Center"
+                                               Padding="62, 13, 0, 0" MouseLeftButtonDown="txtBtnEmpresa_MouseLeftButtonDown"
+                                               />
+                                </Grid>
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tt_empresa"
+                                             Content="Empresa"
                                              Style="{StaticResource tt_style}"
                                              Width="100"
                                              Height="50"/>
                                 </ListViewItem.ToolTip>
                             </ListViewItem>
 
-                            
                             <!--LOG OUT-->
                             <ListViewItem HorizontalAlignment="Left" Margin="0, 0, 0, 15" MouseEnter="ListViewItem_MouseEnter">
-                                
+
                                 <Grid x:Name="LVBtnLogout"
                                       Width="250"
                                       Height="50"

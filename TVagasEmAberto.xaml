@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="900"
-             Background="AliceBlue">
+             Background="#FFD9EBFB">
     <Grid>
         <TextBlock x:Name="TxtPendentes"
                    Text="Essas são suas vagas em aberto:"
@@ -23,7 +23,7 @@
               HorizontalAlignment="Center"
               VerticalAlignment="Center" Margin="25.323,69.52,22.177,50.98">
             <Rectangle
-                Fill="White"
+                Fill="AliceBlue"
                 RadiusX="10"
                 RadiusY="10"
                         >
