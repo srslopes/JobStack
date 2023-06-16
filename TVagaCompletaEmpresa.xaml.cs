@@ -26,7 +26,12 @@ namespace JobStack
         {
             InitializeComponent();
             vaga = BancodeDados.BuscarVaga(id);
-            status = vaga.GetStatus();            
+            status = vaga.GetStatus(); 
+            if(status==3)
+            {
+                BtnEditar.Visibility = Visibility.Hidden;
+                BtnFinalizar.Visibility = Visibility.Hidden;
+            }
             AttDados();
         }
         public void AttDados()
