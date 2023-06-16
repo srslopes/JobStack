@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -57,10 +57,8 @@ namespace JobStack
         }
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
-            /*
-                TVagaCompletaEmpresa vg = new TVagaCompletaEmpresa(vaga.GetID());            
-                vg.Show();
-            */
+            TVagaCompletaCoordenador tv = new TVagaCompletaCoordenador(vaga.GetID());
+            BancodeDados.MenuCoordenador.CarregarJanela(tv);
         }
 
         private void BtnFinalizar_Click(object sender, RoutedEventArgs e)
@@ -69,6 +67,13 @@ namespace JobStack
             AttDados();
             BancodeDados.MenuCoordenador.AttListas();
 
+        }
+
+        private void BtnAprovar_Click(object sender, RoutedEventArgs e)
+        {
+            vaga.Aprovar();
+            AttDados();
+            BancodeDados.MenuCoordenador.AttListas();
         }
     }
 }
