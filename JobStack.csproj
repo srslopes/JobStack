@@ -70,8 +70,8 @@
     <Compile Include="TAlunosCoordenador.xaml.cs">
       <DependentUpon>TAlunosCoordenador.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TEditarCadVagaEmpresa.xaml.cs">
-      <DependentUpon>TEditarCadVagaEmpresa.xaml</DependentUpon>
+    <Compile Include="TEditarVaga.xaml.cs">
+      <DependentUpon>TEditarVaga.xaml</DependentUpon>
     </Compile>
     <Compile Include="TEmpresasCoordenador.xaml.cs">
       <DependentUpon>TEmpresasCoordenador.xaml</DependentUpon>
@@ -239,7 +239,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TEditarCadVagaEmpresa.xaml">
+    <Page Include="TEditarVaga.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

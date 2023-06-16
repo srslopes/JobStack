@@ -132,7 +132,20 @@ namespace JobStack
 
         public void CarregarSubJanela(UserControl Janela)
         {
-            if (sub != null) sub.CarregarJanela(Janela);
+            if (sub != null)
+            {
+                CarregarJanela(sub);
+                sub.CarregarJanela(Janela);
+            }
+        }
+
+        public void CarregarSubJanela(int i)
+        {
+            if (sub != null)
+            {
+                CarregarJanela(sub);
+                sub.CarregarJanela(i);                
+            }
         }
 
         public void AttListas()

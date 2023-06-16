@@ -17,7 +17,7 @@ namespace JobStack
     /// <summary>
     /// Lógica interna para TVagaCompletaAluno.xaml
     /// </summary>
-    public partial class TVagaCompletaAluno : Window
+    public partial class TVagaCompletaAluno : UserControl
     {
         private Vaga vaga;
         private Aluno aluno;
@@ -129,12 +129,12 @@ namespace JobStack
                 id = ch.GetID();
             }
             BancodeDados.MenuAluno.AbrirChat(id);
-            this.Hide();
         }
 
         private void BtnFechar_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            if (parent != null) BancodeDados.MenuAluno.AbrirVagasDisponiveis();
+            else BancodeDados.MenuAluno.AbrirVagasInscritas();
         }
 
         private void Window_PreviewMouseDown(object sender, MouseButtonEventArgs e)

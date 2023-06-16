@@ -823,3 +823,5 @@ C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TExibirPerfilAluno_Coordenador.ba
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TExibirPerfilEmpresa_Coordenador.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TFormAlunoCoordenador.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TFormEmpresaCoordenador.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TEditarVaga.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TEditarVaga.baml

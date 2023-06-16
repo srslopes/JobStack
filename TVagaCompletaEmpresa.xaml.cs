@@ -20,19 +20,72 @@ namespace JobStack
     /// </summary>
     public partial class TVagaCompletaEmpresa : UserControl
     {
-        public TVagaCompletaEmpresa()
+        private Vaga vaga;
+        private int status;
+        public TVagaCompletaEmpresa(int id)
         {
             InitializeComponent();
+            vaga = BancodeDados.BuscarVaga(id);
+            status = vaga.GetStatus();            
+            AttDados();
         }
-
+        public void AttDados()
+        {
+            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser()).GetNome();
+            TituloVaga.Text = vaga.GetNome();
+            TipoVaga.Text = vaga.GetTipo();
+            Jornada.Text = vaga.GetJornada();
+            FaixaSalarial.Text = vaga.GetSalario();
+            DescricaoVaga.Text = vaga.GetDescricao();
+            QtdeVaga.Text = vaga.GetNVagas().ToString();
+            switch(vaga.GetCurso())
+            {
+                case 0:
+                    Curso.Text = "Análise e Desenvolvimento de Sistemas";
+                    break;
+                case 1:
+                    Curso.Text = "Gestão Empresarial";
+                    break;
+                case 2:
+                    Curso.Text = "Eventos";
+                    break;
+                case 3:
+                    Curso.Text = "Gestão de Produção Industrial";
+                    break;
+            }
+        }
         private void BtnEditar_Click(object sender, RoutedEventArgs e)
         {
-            //é o nome antigo da tela TEditarCadVagaEmpresa
-            TEditarCadEmpresa cad = new TEditarCadEmpresa(this);
-            cad.Owner = TMenuEmpresa.GetWindow(this);
-            cad.ShowDialog();
+            TEditarVaga cad = new TEditarVaga(vaga.GetID(), this);
+            BancodeDados.MenuEmpresa.CarregarJanela(cad);
 
 
+        }
+
+        private void BtnFinalizar_Click(object sender, RoutedEventArgs e)
+        {
+            vaga.Encerrar();
+            BancodeDados.MenuEmpresa.CarregarSubJanela(2);
+        }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            switch(status)
+            {
+                case 0:
+                    BancodeDados.MenuEmpresa.CarregarSubJanela(0);
+                    break;
+                case 1:
+                    BancodeDados.MenuEmpresa.CarregarSubJanela(0);
+                    break;
+                case 2:
+                    BancodeDados.MenuEmpresa.CarregarSubJanela(1);
+                    break;
+                case 3:
+                    BancodeDados.MenuEmpresa.CarregarSubJanela(2);
+                    break;
+
+            }
         }
     }
 }

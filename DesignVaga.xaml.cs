@@ -35,22 +35,27 @@ namespace JobStack
             NomeVaga.Text = vaga.GetNome();
             TipoVaga.Text = vaga.GetTipo();
             DescricaoVaga.Text = vaga.GetDescricao();
-            switch(vaga.GetStatus())
+            var converter = new BrushConverter();
+            switch (vaga.GetStatus())
             {
                 case 0:
-                    StatusVaga.Text = "Agurdando";
+                    StatusVaga.Text = "Aguardando";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Orange");
                     break;
                 case 1:
                     StatusVaga.Text = "Rejeitada";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
                     break;
                 case 2:
                     StatusVaga.Text = "Aberta";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Green");
                     break;
                 case 3:
                     StatusVaga.Text = "Encerrada";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
                     break;
             }
-            
+
             Img.ImageSource = BancodeDados.BuscarImg((BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa())).GetIdImg());
         }
 
@@ -69,9 +74,7 @@ namespace JobStack
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
             TVagaCompletaAluno vg = new TVagaCompletaAluno(vaga.GetID(), this);
-            vg.Owner = TMenuAluno.GetWindow(this);
-            vg.ShowDialog();
-
+            BancodeDados.MenuAluno.CarregarJanela(vg);
         }
     }
 }

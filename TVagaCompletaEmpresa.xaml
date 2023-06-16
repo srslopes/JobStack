@@ -88,8 +88,8 @@
                 Background="#003964"
                 Foreground="White"
                 FontFamily="Century Gothic"
-                FontSize="14" Margin="0,24.679,110.055,0" 
-                Style="{DynamicResource ButtonStyle1}"
+                FontSize="14" Margin="0,26,214,0" 
+                Style="{DynamicResource ButtonStyle1}" Click="BtnFinalizar_Click"
                 />
         <TextBlock x:Name="NomeEmpresa"
                    Text="Nome da Empresa"
@@ -302,9 +302,23 @@
             Background="#003964"
             Foreground="White"
             FontFamily="Century Gothic"
-            FontSize="14" Margin="0,24.679,21.344,0"
+            FontSize="14" Margin="0,26,125,0"
             Style="{DynamicResource ButtonStyle1}"
                 Click="BtnEditar_Click"
                 />
+        <Button x:Name="BtnCancelar"
+                    Width="30"
+                    Height="30" 
+                    Margin="0,26,33,0"
+                    Content="X"
+                    FontSize="14"
+                    FontFamily="Century Gothic"
+                    Background="#003964"
+                    Foreground="White"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top" 
+                    Style="{DynamicResource ButtonStyle1}"
+                Click="BtnCancelar_Click"
+                    />
     </Grid>
 </UserControl>

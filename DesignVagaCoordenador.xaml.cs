@@ -38,7 +38,7 @@ namespace JobStack
             {
                 case 0:
                     StatusVaga.Text = "Aguardando";
-                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Yellow");
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Orange");
                     break;
                 case 1:
                     StatusVaga.Text = "Rejeitada";

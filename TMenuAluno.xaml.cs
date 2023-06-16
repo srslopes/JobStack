@@ -87,7 +87,19 @@ namespace JobStack
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(pesquisar);
             }
-            }
+        }
+        public void AbrirVagasDisponiveis()
+        {
+            TPesquisarAluno pesquisar = new TPesquisarAluno();
+            ConteudoJanela.Children.Clear();
+            ConteudoJanela.Children.Add(pesquisar);
+        }
+        public void AbrirVagasInscritas()
+        {
+            TMinhasInscricoesAluno insc = new TMinhasInscricoesAluno();
+            ConteudoJanela.Children.Clear();
+            ConteudoJanela.Children.Add(insc);
+        }
 
         private void txtBtnNotificacoes_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

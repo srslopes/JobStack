@@ -64,6 +64,11 @@ namespace JobStack
             return status;
         }
 
+        public void Reavaliar()
+        {
+            status = 0;
+        }
+
         public void Aprovar()
         {
             status = 2;

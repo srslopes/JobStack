@@ -65,6 +65,29 @@ namespace JobStack
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(Janela);
         }
+        public void CarregarJanela(int i)
+        {
+            AttListas();
+            switch(i)
+            {
+                case 0:
+                    pendentes = new TVagasPendentesEmpresa();
+                    GridConteudo.Children.Clear();
+                    GridConteudo.Children.Add(pendentes);
+                    break;
+                case 1:
+                    aberto = new TVagasEmAberto();
+                    GridConteudo.Children.Clear();
+                    GridConteudo.Children.Add(aberto);
+                    break;
+                case 2:
+                    finalizadas = new TVagasFinalizadasEmpresa();
+                    GridConteudo.Children.Clear();
+                    GridConteudo.Children.Add(finalizadas);
+                    break;
+
+            }
+        }
         public void AttListas()
         {
             if (pendentes != null) pendentes.AttLista();

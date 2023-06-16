@@ -37,7 +37,7 @@ namespace JobStack
             {
                 case 0:
                     StatusVaga.Text = "Aguardando";
-                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Yellow");
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Orange");
                     break;
                 case 1:
                     StatusVaga.Text = "Rejeitada";                    
@@ -57,10 +57,9 @@ namespace JobStack
         }
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
-            /*
-                TVagaCompletaEmpresa vg = new TVagaCompletaEmpresa(vaga.GetID());            
-                vg.Show();
-            */
+            
+                TVagaCompletaEmpresa vg = new TVagaCompletaEmpresa(vaga.GetID());
+            BancodeDados.MenuEmpresa.CarregarJanela(vg);
         }
 
         private void BtnFinalizar_Click(object sender, RoutedEventArgs e)

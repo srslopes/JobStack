@@ -16,21 +16,42 @@ using System.Windows.Shapes;
 namespace JobStack
 {
     /// <summary>
-    /// Interação lógica para TCadastrarVagaEmpresa.xam
+    /// Interação lógica para TEditarVaga.xam
     /// </summary>
-    public partial class TCadastrarVagaEmpresa : UserControl
+    public partial class TEditarVaga : UserControl
     {
-        public TCadastrarVagaEmpresa()
-        {
+
+        private Vaga vaga;
+        private int status;
+        private TVagaCompletaEmpresa parent;
+
+        public TEditarVaga(int id, TVagaCompletaEmpresa janela)
+        {            
             InitializeComponent();
-            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser()).GetNome();
+            parent = janela;
+            vaga = BancodeDados.BuscarVaga(id);
+            status = vaga.GetStatus();
             BtnNumero.Content = 0;
+            AttDados();
+            
+        }
+
+        public void AttDados()
+        {
+            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser()).GetNome();
+            TituloVaga.Text = vaga.GetNome();
+            Tipo.Text = vaga.GetTipo();
+            Jornada.Text = vaga.GetJornada();
+            SalarioVaga.Text = vaga.GetSalario();
+            DescricaoVaga.Text = vaga.GetDescricao();
+            BtnNumero.Content = vaga.GetNVagas();
+            CBCursos.SelectedIndex = vaga.GetCurso();
         }
 
         private void BtnMais_Click(object sender, RoutedEventArgs e)
         {
             int i = Convert.ToInt32(BtnNumero.Content);
-            if(i < 99)
+            if (i < 99)
             {
                 BtnNumero.Content = i + 1;
             }
@@ -39,16 +60,16 @@ namespace JobStack
         private void BtnMenos_Click(object sender, RoutedEventArgs e)
         {
             int i = Convert.ToInt32(BtnNumero.Content);
-            if(i > 0)
+            if (i > 0)
             {
                 BtnNumero.Content = i - 1;
             }
         }
 
-        private void BtnCriar_Click(object sender, RoutedEventArgs e)
+        private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
             bool clear = true;
-            if(TituloVaga.Text.Equals(""))//usuario deve inserir um titulo para a vaga
+            if (TituloVaga.Text.Equals(""))//usuario deve inserir um titulo para a vaga
             {
                 //Inserir Avisos
                 clear = false;
@@ -78,46 +99,43 @@ namespace JobStack
                 //Inserir Avisos
                 clear = false;
             }
-            if(CBCursos.SelectedIndex == -1)//usuario deve selecionar um curso para a vaga
+            if (CBCursos.SelectedIndex == -1)//usuario deve selecionar um curso para a vaga
             {
                 //Inserir Avisos
                 clear = false;
             }
-            if (int.Parse(BtnNumero.Content.ToString()) <=0)//numero de vaga disponiveis não pode ser 0
+            if (int.Parse(BtnNumero.Content.ToString()) <= 0)//numero de vaga disponiveis não pode ser 0
             {
                 //Inserir Aviso
                 clear = false;
             }
             if (clear)
             {
-                Vaga nova = new Vaga(BancodeDados.GetIdUser());
-                nova.SetNome(TituloVaga.Text);
-                nova.SetTurno(Turno.Text);
-                nova.SetTipo(Tipo.Text);
-                nova.SetJornada(Jornada.Text);
-                nova.SetCurso(CBCursos.SelectedIndex);
-                nova.SetSalario(SalarioVaga.Text);
-                nova.SetDescricao(DescricaoVaga.Text);
-                nova.SetNVagas(int.Parse(BtnNumero.Content.ToString()));
+                vaga.SetNome(TituloVaga.Text);
+                vaga.SetTurno(Turno.Text);
+                vaga.SetTipo(Tipo.Text);
+                vaga.SetJornada(Jornada.Text);
+                vaga.SetCurso(CBCursos.SelectedIndex);
+                vaga.SetSalario(SalarioVaga.Text);
+                vaga.SetDescricao(DescricaoVaga.Text);
+                vaga.SetNVagas(int.Parse(BtnNumero.Content.ToString()));
                 TituloVaga.Text = "";
                 Tipo.Text = "";
                 Jornada.Text = "";
                 SalarioVaga.Text = "";
                 DescricaoVaga.Text = "";
                 BtnNumero.Content = 0;
-                TVagasPendentesEmpresa p = new TVagasPendentesEmpresa();
-                BancodeDados.MenuEmpresa.CarregarSubJanela(p);
+                parent.AttDados();
+                BancodeDados.MenuEmpresa.CarregarJanela(parent);
+
             }
-        }
-
-        private void BtnSalvar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
-
+            BancodeDados.MenuEmpresa.CarregarJanela(parent);            
         }
     }
 }
+
+
