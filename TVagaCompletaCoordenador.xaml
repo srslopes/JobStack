@@ -1,4 +1,4 @@
-﻿<Window x:Class="JobStack.TVagaCompletaCoordenador"
+<Window x:Class="JobStack.TVagaCompletaCoordenador"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -155,7 +155,8 @@
                     Background="#FF27597E"
                     Foreground="White"
                     HorizontalAlignment="Left"
-                    VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" 
+                    VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}"
+                Click="BtnAceitar_Click"
                     />
         <Button x:Name="BtnRejeitar"
             Width="100"
@@ -167,7 +168,8 @@
             Background="#FF27597E"
             Foreground="White"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" 
+            VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}"
+                Click="BtnRejeitar_Click"
                     />
         <TextBlock Text="DESCRIÇÃO:"
                    FontSize="20"
