@@ -59,21 +59,22 @@ namespace JobStack
         {
             TVagaCompletaCoordenador tv = new TVagaCompletaCoordenador(vaga.GetID());
             BancodeDados.MenuCoordenador.CarregarJanela(tv);
-        }
+        }        
 
-        private void BtnFinalizar_Click(object sender, RoutedEventArgs e)
-        {
-            vaga.Encerrar();
-            AttDados();
-            BancodeDados.MenuCoordenador.AttListas();
-
-        }
-
-        private void BtnAprovar_Click(object sender, RoutedEventArgs e)
+        private void BtnAprovar_Click_1(object sender, RoutedEventArgs e)
         {
             vaga.Aprovar();
             AttDados();
-            BancodeDados.MenuCoordenador.AttListas();
+            TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
+            BancodeDados.MenuCoordenador.CarregarJanela(analisar);
+        }
+
+        private void BtnRejeitar_Click(object sender, RoutedEventArgs e)
+        {
+            vaga.Rejeitar();
+            AttDados();
+            TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
+            BancodeDados.MenuCoordenador.CarregarJanela(analisar);
         }
     }
 }

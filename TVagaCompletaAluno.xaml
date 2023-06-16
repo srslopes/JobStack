@@ -181,6 +181,7 @@
                    Height="130"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
+                   TextWrapping="Wrap"
                     />
         <TextBlock Text="TIPO DE VAGA:"
                    FontSize="20"

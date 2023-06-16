@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="JobStack.SemAlunos"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JobStack"
+             mc:Ignorable="d" 
+             d:DesignHeight="35" d:DesignWidth="265"
+             Background="Transparent"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center">
+    <Grid>
+        <TextBox Text="Sem alunos para exibir" FontSize="24" 
+                   FontFamily="Century Gothic" 
+                   Foreground="#FF003964"
+                 Background="Transparent"
+                 BorderThickness="0"/>
+    </Grid>
+</UserControl>

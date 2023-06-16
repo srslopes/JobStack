@@ -30,6 +30,15 @@ namespace JobStack
             if(empresa.IsNovo())
             {
                 empresa.SetNovo(false);
+                TPerfilEmpresa pf = new TPerfilEmpresa();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(pf);
+            }
+            else
+            {
+                sub = new TVagasEmpresa();
+                ConteudoJanela.Children.Clear();
+                ConteudoJanela.Children.Add(sub);
             }
         }
 

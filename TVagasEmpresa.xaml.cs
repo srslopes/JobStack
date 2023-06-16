@@ -28,7 +28,9 @@ namespace JobStack
         {
             InitializeComponent();
             pendentes = null;
-            aberto = null;
+            aberto = new TVagasEmAberto();
+            GridConteudo.Children.Clear();
+            GridConteudo.Children.Add(aberto);
             finalizadas = null;
         }
 

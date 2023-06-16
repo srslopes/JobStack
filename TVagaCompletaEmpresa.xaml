@@ -125,6 +125,7 @@
                    Height="122.5"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
+                   TextWrapping="Wrap"
                     />
         <TextBlock Text="TIPO DE VAGA:"
                    FontSize="20"
@@ -280,11 +281,11 @@
             <ScrollViewer x:Name="SVInscritos"
                           Width="920"
                           Height="200"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Center" Margin="0,0,1.5,1.5">
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Top">
                 <StackPanel x:Name="SPInscritos"
                             Orientation="Vertical"
-                            Width="800"
+                            Width="880"
                             Height="0"
                             Margin="10,10,0,0"
                             VerticalAlignment="Top"

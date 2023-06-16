@@ -25,6 +25,9 @@ namespace JobStack
             InitializeComponent();
             coordenador = BancodeDados.BuscarCoordenador(BancodeDados.GetIdUser());
             NtChat();
+            TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
+            ConteudoJanela.Children.Clear();
+            ConteudoJanela.Children.Add(analisar);
         }
 
         private void BotaoMenu_Unchecked(object sender, RoutedEventArgs e)

@@ -41,6 +41,7 @@ namespace JobStack
             NomeEmpresa.Text = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser()).GetNome();
             TituloVaga.Text = vaga.GetNome();
             Tipo.Text = vaga.GetTipo();
+            Turno.Text = vaga.GetTurno();
             Jornada.Text = vaga.GetJornada();
             SalarioVaga.Text = vaga.GetSalario();
             DescricaoVaga.Text = vaga.GetDescricao();
@@ -125,6 +126,7 @@ namespace JobStack
                 SalarioVaga.Text = "";
                 DescricaoVaga.Text = "";
                 BtnNumero.Content = 0;
+                vaga.Reavaliar();
                 parent.AttDados();
                 BancodeDados.MenuEmpresa.CarregarJanela(parent);
 

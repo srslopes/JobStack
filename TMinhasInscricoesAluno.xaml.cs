@@ -35,7 +35,7 @@ namespace JobStack
             List<Vaga> Vagas = BancodeDados.GetListaVagas();
             for (int i = Vagas.Count-1; i >=0 ; i--)
             {
-                if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 2)
+                if (aluno.VagaInscrita(i) && (Vagas[i].GetStatus() == 2 || Vagas[i].GetStatus() == 3))
                 {
                     DesignVagaInscrita v = new DesignVagaInscrita(i, this);
                     SPVagas.Children.Add(v);

@@ -70,6 +70,9 @@
     <Compile Include="DesignUsuarioInscrito.xaml.cs">
       <DependentUpon>DesignUsuarioInscrito.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SemAlunos.xaml.cs">
+      <DependentUpon>SemAlunos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TAlunosCoordenador.xaml.cs">
       <DependentUpon>TAlunosCoordenador.xaml</DependentUpon>
     </Compile>
@@ -248,6 +251,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DesignUsuarioInscrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SemAlunos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

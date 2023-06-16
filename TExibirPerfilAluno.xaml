@@ -212,8 +212,20 @@
                                VerticalAlignment="Top"
                            Margin="10, 10, 0, 0"/>
             </ScrollViewer>
-
+            
 
         </Grid>
+        <Button x:Name="BtnVoltar"
+                Width="100"
+                Height="30"
+                Content="Voltar"
+                FontFamily="Century Gothic"
+                FontSize="18"
+                Background="#003964"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                Foreground="White" Margin="0,0,10,10" Style="{DynamicResource ButtonStyle1}"
+                Click="BtnVoltar_Click"
+            />
     </Grid>
 </UserControl>

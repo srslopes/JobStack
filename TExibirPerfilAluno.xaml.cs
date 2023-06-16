@@ -90,5 +90,11 @@ namespace JobStack
             TBatePapo bp = new TBatePapo(id);
             BancodeDados.MenuEmpresa.CarregarJanela(bp);
         }
+
+        private void BtnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            TVagaCompletaEmpresa tv = new TVagaCompletaEmpresa(vaga.GetID());
+            BancodeDados.MenuEmpresa.CarregarJanela(tv);
+        }
     }
 }

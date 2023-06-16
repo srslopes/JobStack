@@ -50,6 +50,8 @@ namespace JobStack
             NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
             DescricaoVaga.Text = vaga.GetDescricao();
             TipoVaga.Text = vaga.GetTipo();
+            Turno.Text = vaga.GetTurno();
+            FaixaSalarial.Text = vaga.GetSalario();
             switch (aluno.GetCurso())
             {
                 case 0:
@@ -92,7 +94,6 @@ namespace JobStack
             BtnInscreverse.Content = "Desinscrever";
             var converter = new BrushConverter();
             BtnInscreverse.Background = (Brush)converter.ConvertFromString("Red");
-            
         }
         public void AttVagas()
         {

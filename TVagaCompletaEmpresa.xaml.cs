@@ -33,6 +33,7 @@ namespace JobStack
                 BtnFinalizar.Visibility = Visibility.Hidden;
             }
             AttDados();
+            AttLista();
         }
         public void AttDados()
         {
@@ -58,6 +59,40 @@ namespace JobStack
                 case 3:
                     Curso.Text = "Gestão de Produção Industrial";
                     break;
+            }
+        }
+        public void AttLista()
+        {
+            SPInscritos.Children.Clear();
+            SPInscritos.Height = 0;
+            bool vazia = true;
+            List<int> lista = vaga.GetLista();
+            for(int i = 0; i<lista.Count; i++)
+            {
+                if(vaga.IsAlunoAprovado(lista[i]))
+                {
+                    DesignUsuarioInscrito d = new DesignUsuarioInscrito(lista[i], vaga.GetID());
+                    SPInscritos.Children.Add(d);
+                    SPInscritos.Height += 110;
+                    vazia = false;
+                }
+                
+            }
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (!vaga.IsAlunoAprovado(lista[i]))
+                {
+                    DesignUsuarioInscrito d = new DesignUsuarioInscrito(lista[i], vaga.GetID());
+                    SPInscritos.Children.Add(d);
+                    SPInscritos.Height += 110;
+                    vazia = false;
+                }
+            }
+            if(vazia)
+            {
+                SemAlunos s = new SemAlunos();
+                SPInscritos.Children.Add(s);
+                SPInscritos.Height = 40;
             }
         }
         private void BtnEditar_Click(object sender, RoutedEventArgs e)
