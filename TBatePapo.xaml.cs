@@ -70,7 +70,7 @@ namespace JobStack
 
         private void BotaoEnviar_Click(object sender, RoutedEventArgs e)
         {
-            if (idChat != -1)
+            if (idChat != -1 && !"Mensagem".Equals(CaixaDeTexto.Text) && !CaixaDeTexto.Text.Equals(""))
             {
                 BancodeDados.BuscarChat(idChat).NovaMensagem(CaixaDeTexto.Text);
                 CaixaDeTexto.Text = "";

@@ -61,6 +61,7 @@ namespace JobStack
 
         private void BtnInscreverse_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Vaga Inscrita com sucesso!");
             aluno.AdicionarVaga(vaga.GetID());
             vaga.Inscrever(aluno.GetID());
             AttVagas();
