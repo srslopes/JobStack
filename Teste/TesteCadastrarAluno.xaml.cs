@@ -24,25 +24,39 @@ namespace JobStack
         {
             InitializeComponent();
             passo1();
+            passo2();
         }
         private void passo1(){
             textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
             textBlockCondiçãoNome.Visibility = Visibility.Hidden;
             textBlockCondiçãoSenha.Visibility = Visibility.Hidden;
-            textBlockCondiçãoRa.Visibility = Visibility.Hidden;
+        }
+      private void  passo2()
+        {
+
+            if (CTipoUsuario.Items.Count == 0)
+            {
+                // Adiciona os valores no combo box
+                CTipoUsuario.Items.Add("Aluno");
+                CTipoUsuario.Items.Add("Empresa");
+              
+                // Seleciona o primeiro valor do combo box
+                CTipoUsuario.SelectedIndex = 0;
+
+                // Define que o usuário não pode digitar no combo box
+            }
+
         }
         private void BotaoCadastrar_Click(object sender, RoutedEventArgs e)
         {
             // Verifica se o valor do campo de email corresponde ao formato de email
             Regex regex = new Regex(@"^([\w.\-]+)@([\w\-]+)(\.\w{2,3})?((\.com\.br)?)?$");
-            if (textBoxNome.Text.Equals("")&& textBoxRa.Text.Equals("")&& textBoxEmail.Text.Equals("")&& PasswordBoxSenha.Password.Equals(""))
+            if (textBoxNome.Text.Equals("")  && textBoxEmail.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
             {
                 textBlockCondiçãoNome.Visibility = Visibility.Visible;
 
                 textBlockCondiçãoNome.Text = "Campo Nome vazio";
-                textBlockCondiçãoRa.Visibility = Visibility.Visible;
-
-                textBlockCondiçãoRa.Text = "Campo Ra vazio";
+              
                 textBlockCondiçãoEmail.Visibility = Visibility.Visible;
 
                 textBlockCondiçãoEmail.Text = "Campo Email vazio";
@@ -57,22 +71,10 @@ namespace JobStack
                 textBlockCondiçãoEmail.Text = "Formato de email inválido";
                 return;
             }
-            else if (textBoxNome.Text.Equals("") && textBoxRa.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
-            {
-                passo1();
-                textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
-                // Nome, Ra e Senha estão vazios
-                textBlockCondiçãoNome.Visibility = Visibility.Visible;
-                textBlockCondiçãoNome.Text = "Campo Nome vazio";
-                textBlockCondiçãoRa.Visibility = Visibility.Visible;
-                textBlockCondiçãoRa.Text = "Campo Ra vazio";
-                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
-                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
-            }
+           
             else if (textBoxNome.Text.Equals("") && textBoxEmail.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
             {
                 passo1();
-                textBlockCondiçãoRa.Visibility = Visibility.Hidden;
                 // Nome, Email e Senha estão vazios
                 textBlockCondiçãoNome.Visibility = Visibility.Visible;
                 textBlockCondiçãoNome.Text = "Campo Nome vazio";
@@ -81,46 +83,12 @@ namespace JobStack
                 textBlockCondiçãoSenha.Visibility = Visibility.Visible;
                 textBlockCondiçãoSenha.Text = "Campo Senha vazio";
             }
-            else if (textBoxRa.Text.Equals("") && textBoxEmail.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
-            {
-                passo1();
-                textBlockCondiçãoNome.Visibility = Visibility.Hidden;
-                // Ra, Email e Senha estão vazios
-                textBlockCondiçãoRa.Visibility = Visibility.Visible;
-                textBlockCondiçãoRa.Text = "Campo Ra vazio";
-                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
-                textBlockCondiçãoEmail.Text = "Campo Email vazio";
-                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
-                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
-            }
-            else if (textBoxNome.Text.Equals("") && textBoxRa.Text.Equals("") && textBoxEmail.Text.Equals(""))
+        
+            
+        if (textBoxNome.Text.Equals("") && textBoxEmail.Text.Equals(""))
             {
                 passo1();
                 textBlockCondiçãoSenha.Visibility = Visibility.Hidden;
-                // Nome, Ra e Email estão vazios
-                textBlockCondiçãoNome.Visibility = Visibility.Visible;
-                textBlockCondiçãoNome.Text = "Campo Nome vazio";
-                textBlockCondiçãoRa.Visibility = Visibility.Visible;
-                textBlockCondiçãoRa.Text = "Campo Ra vazio";
-                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
-                textBlockCondiçãoEmail.Text = "Campo Email vazio";
-            }
-            else if (textBoxNome.Text.Equals("") && textBoxRa.Text.Equals(""))
-            {
-                passo1();
-                textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
-                textBlockCondiçãoSenha.Visibility = Visibility.Hidden;
-                // Nome e Ra estão vazios
-                textBlockCondiçãoNome.Visibility = Visibility.Visible;
-                textBlockCondiçãoNome.Text = "Campo Nome vazio";
-                textBlockCondiçãoRa.Visibility = Visibility.Visible;
-                textBlockCondiçãoRa.Text = "Campo Ra vazio";
-            }
-            else if (textBoxNome.Text.Equals("") && textBoxEmail.Text.Equals(""))
-            {
-                passo1();
-                textBlockCondiçãoSenha.Visibility = Visibility.Hidden;
-                textBlockCondiçãoRa.Visibility = Visibility.Hidden;
                 // Nome e Email estão vazios
                 textBlockCondiçãoNome.Visibility = Visibility.Visible;
                 textBlockCondiçãoNome.Text = "Campo Nome vazio";
@@ -131,38 +99,17 @@ namespace JobStack
             {
                 passo1();
                 textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
-                textBlockCondiçãoRa.Visibility = Visibility.Hidden;
                 // Nome e Senha estão vazios
                 textBlockCondiçãoNome.Visibility = Visibility.Visible;
                 textBlockCondiçãoNome.Text = "Campo Nome vazio";
                 textBlockCondiçãoSenha.Visibility = Visibility.Visible;
                 textBlockCondiçãoSenha.Text = "Campo Senha vazio";
             }
-            else if (textBoxRa.Text.Equals("") && textBoxEmail.Text.Equals(""))
-            {
-                passo1();
-                // Ra e Email estão vazios
-                textBlockCondiçãoRa.Visibility = Visibility.Visible;
-                textBlockCondiçãoRa.Text = "Campo Ra vazio";
-                textBlockCondiçãoEmail.Visibility = Visibility.Visible;
-                textBlockCondiçãoEmail.Text = "Campo Email vazio";
-            }
-            else if (textBoxRa.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
-            {
-                passo1();
-                textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
-                textBlockCondiçãoNome.Visibility = Visibility.Hidden;
-                // Ra e Senha estão vazios
-                textBlockCondiçãoRa.Visibility = Visibility.Visible;
-                textBlockCondiçãoRa.Text = "Campo Ra vazio";
-                textBlockCondiçãoSenha.Visibility = Visibility.Visible;
-                textBlockCondiçãoSenha.Text = "Campo Senha vazio";
-            }
+         
             else if (textBoxEmail.Text.Equals("") && PasswordBoxSenha.Password.Equals(""))
             {
                 passo1();
                 textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
-                textBlockCondiçãoRa.Visibility = Visibility.Hidden;
                 // Email e Senha estão vazios
                 textBlockCondiçãoEmail.Visibility = Visibility.Visible;
                 textBlockCondiçãoEmail.Text = "Campo Email vazio";
@@ -176,13 +123,7 @@ namespace JobStack
 
                 textBlockCondiçãoNome.Text = "Campo Nome vazio";
             }
-            else if(textBoxRa.Text.Equals(""))
-            {
-                passo1();
-                textBlockCondiçãoRa.Visibility = Visibility.Visible;
-
-                textBlockCondiçãoRa.Text = "Campo Ra vazio";
-        }
+       
             else if (textBoxEmail.Text.Equals(""))
             {
                 passo1();
@@ -204,17 +145,18 @@ namespace JobStack
 
                 textBlockCondiçãoEmail.Text = "Email já consta no sistema";
             }
-          else  if (textBoxNome.Text.All(char.IsDigit))
+            else if (textBoxNome.Text.All(char.IsDigit))
             {            // Mostra uma mensagem de erro e interrompe o processamento da função
                 textBlockCondiçãoNome.Visibility = Visibility.Visible;
                 textBlockCondiçãoNome.Text = "Por favor, insira apenas carecteres .";
                 return;
             }
-            else {
-                Aluno N = new Aluno();
+            else
+            {
+                if (CTipoUsuario.SelectedIndex== 0) { 
+                    Aluno N = new Aluno();
 
                 N.SetNome(textBoxNome.Text);
-                N.SetRa(int.Parse(textBoxRa.Text));
                 N.SetSenha(PasswordBoxSenha.Password);
                 N.SetEmail(textBoxEmail.Text);
                 N.salvar();
@@ -222,6 +164,20 @@ namespace JobStack
                 passo1();
 
                 MessageBox.Show("cadastrado com sucesso");
+            }
+                else if(CTipoUsuario.SelectedIndex == 1)
+                {
+                   Empresa N = new Empresa();
+
+                    N.SetNome(textBoxNome.Text);
+                    N.SetSenha(PasswordBoxSenha.Password);
+                    N.SetEmail(textBoxEmail.Text);
+                    N.salvar();
+                    textBoxID.Text = N.GetID().ToString();
+                    passo1();
+
+                    MessageBox.Show("cadastrado com sucesso");
+                }
             }
         }
     }
