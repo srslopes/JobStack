@@ -514,6 +514,7 @@ namespace JobStack
             n1.SetTurno("Tarde");
             n1.SetJornada("40h");
             n1.SetNVagas(5);
+            n1.SetSalario("1000,00");
             n1.SetDescricao("Auxilie na resolução de problemas técnicos, suporte remoto e presencial aos usuários, garantindo o bom funcionamento dos sistemas e equipamentos, em uma das maiores empresas de alimentos do mundo.");
             n1.Aprovar();
             Vaga n2 = new Vaga(6001);
@@ -523,6 +524,7 @@ namespace JobStack
             n2.SetTurno("Tarde");
             n2.SetJornada("40h");
             n2.SetNVagas(5);
+            n2.SetSalario("1000,00");
             n2.SetDescricao("Faça parte da equipe responsável por criar soluções tecnológicas inovadoras, desenvolvendo e aprimorando sistemas para impulsionar o crescimento e a eficiência em uma das líderes globais da indústria alimentícia.");
             Vaga n3 = new Vaga(6001);
             n3.SetNome("Analista de Processos");
@@ -531,6 +533,7 @@ namespace JobStack
             n3.SetTurno("Tarde");
             n3.SetJornada("40h");
             n3.SetNVagas(5);
+            n3.SetSalario("1000,00");
             n3.SetDescricao("Contribua para otimizar os processos internos, identificando oportunidades de melhoria e implementando soluções eficientes, garantindo a qualidade e eficácia das operações em uma renomada empresa de alimentos e bebidas.");
             n3.Aprovar();
             Vaga n4 = new Vaga(6001);
@@ -540,6 +543,7 @@ namespace JobStack
             n4.SetTurno("Tarde");
             n4.SetJornada("40h");
             n4.SetNVagas(5);
+            n4.SetSalario("1000,00");
             n4.SetDescricao("Suporte à equipe de TI, supervisionando projetos e processos, garantindo a entrega de soluções tecnológicas alinhadas aos objetivos estratégicos da empresa, em uma das principais empresas globais do setor alimentício.");
             n4.Encerrar();
             IdUser = 6002;
@@ -550,6 +554,7 @@ namespace JobStack
             n5.SetTurno("Tarde");
             n5.SetJornada("40h");
             n5.SetNVagas(5);
+            n5.SetSalario("1000,00");
             n5.SetDescricao("Oportunidade de aprendizado prático no setor de bebidas, adquirindo conhecimentos em diferentes áreas, auxiliando nas rotinas administrativas e contribuindo para o crescimento de uma das maiores empresas do ramo.");
             n5.Aprovar();
             Vaga n6 = new Vaga(6002);
@@ -559,6 +564,7 @@ namespace JobStack
             n6.SetTurno("Tarde");
             n6.SetJornada("40h");
             n6.SetNVagas(5);
+            n6.SetSalario("1000,00");
             n6.SetDescricao("Apoie as atividades de recebimento, armazenagem e distribuição de produtos, auxiliando na organização do estoque e no cumprimento de prazos, em uma das principais empresas do segmento de bebidas.");
             n6.Aprovar();
             Vaga n7 = new Vaga(6002);
@@ -568,6 +574,7 @@ namespace JobStack
             n7.SetTurno("Tarde");
             n7.SetJornada("40h");
             n7.SetNVagas(5);
+            n7.SetSalario("1000,00");
             n7.SetDescricao("Suporte técnico aos usuários, manutenção de equipamentos, instalação e configuração de softwares, garantindo o funcionamento eficiente da infraestrutura tecnológica em uma empresa líder no mercado de bebidas.");
             Vaga n8 = new Vaga(6002);
             n8.SetNome("Desenvolvimento");
@@ -576,6 +583,7 @@ namespace JobStack
             n8.SetTurno("Tarde");
             n8.SetJornada("40h");
             n8.SetNVagas(5);
+            n8.SetSalario("1000,00");
             n8.SetDescricao("Participe da criação e manutenção de sistemas, desenvolvendo soluções inovadoras para impulsionar a eficiência dos processos, em uma das maiores empresas do setor de bebidas.");
             n8.Aprovar();
         }
