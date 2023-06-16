@@ -52,8 +52,8 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -74,13 +74,13 @@
                    HorizontalAlignment="Left"
                    Background="Transparent"
                    Foreground="#003964"
-                   VerticalAlignment="Top" Margin="30,26,0,0"
+                   VerticalAlignment="Top" Margin="30,36.5,0,0"
                         />
         <Grid x:Name="GridExibirVaga"
                 Width="740"
                 Height="500"
               HorizontalAlignment="Left"
-              VerticalAlignment="Center" Margin="30,69.52,22.177,50.98">
+              VerticalAlignment="Center" Margin="30,83.77,0,56.23">
             <Rectangle
                 Fill="AliceBlue"
                 RadiusX="10"
@@ -104,7 +104,7 @@
                                 HorizontalAlignment="Center"
                                 >
                 </StackPanel>
-            </ScrollViewer>            
+            </ScrollViewer>
         </Grid>
         <StackPanel x:Name="Botoes"
                     Margin="0,80,30,0">
@@ -114,7 +114,7 @@
                 Content="Alunos" 
                 FontSize="14" 
                 FontFamily="Century Gothic"
-                Background="#FF27597E"
+                Background="#003964"
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnAlunos_Click"/>
@@ -126,7 +126,7 @@
                 Content="Empresas" 
                 FontSize="14" 
                 FontFamily="Century Gothic"
-                Background="#FF27597E"
+                Background="#003964"
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnEmpresas_Click"/>
@@ -138,11 +138,11 @@
                 Content="Coordenadores" 
                 FontSize="14" 
                 FontFamily="Century Gothic"
-                Background="#FF27597E"
+                Background="#003964"
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnCoordenadores_Click"/>
         </StackPanel>
-        
+
     </Grid>
 </UserControl>

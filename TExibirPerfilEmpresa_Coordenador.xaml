@@ -99,7 +99,7 @@
                    Margin="219.236,93.956,0,0"
                    />
         <Grid x:Name="GridInfoEmpresa"
-              Width="910" Margin="26,159.567,18,29.229">
+              Width="910" Margin="26,175.567,18,13.229">
             <Rectangle x:Name="FundoInfo"
                        Fill="AliceBlue"
                        RadiusX="10"
@@ -183,15 +183,7 @@
                 </ScrollViewer>
             </Grid>
         </Grid>
-        <Button x:Name="BtnVoltar"
-            Width="100"
-            Height="30"
-            Content="Voltar"
-            FontFamily="Century Gothic"
-            FontSize="18"
-            Background="#003964"
-            Foreground="White" Margin="831.854,583.507,22.145,26.492" Style="{DynamicResource ButtonStyle1}"
-            />
+        
         <Button x:Name="BtnEditar" 
             Width="90"
             Height="30"
@@ -199,9 +191,23 @@
             FontFamily="Century Gothic"
             FontSize="16"
             Background="#003964"
-            Foreground="White" Margin="781.115,176.003,82.884,0" Style="{DynamicResource ButtonStyle1}"
+            Foreground="White" Margin="781.115,191.337,82.884,0" Style="{DynamicResource ButtonStyle1}"
             VerticalAlignment="Top"
                 
                     />
+        <Button x:Name="BtnVoltar_Copy"
+            Width="30"
+            Height="30"
+                
+            FontFamily="Century Gothic"
+            FontSize="18"
+            Background="#003964"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}"
+            
+            >
+            <Image Source="Icones/back.png" Height="19.625" Width="20.292" />
+        </Button>
     </Grid>
 </UserControl>

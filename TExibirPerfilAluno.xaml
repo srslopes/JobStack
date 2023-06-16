@@ -216,16 +216,18 @@
 
         </Grid>
         <Button x:Name="BtnVoltar"
-                Width="100"
+                Width="30"
                 Height="30"
-                Content="Voltar"
+                
                 FontFamily="Century Gothic"
                 FontSize="18"
                 Background="#003964"
                     HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                Foreground="White" Margin="0,0,10,10" Style="{DynamicResource ButtonStyle1}"
+                    VerticalAlignment="Top"
+                Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}"
                 Click="BtnVoltar_Click"
-            />
+            >
+            <Image Source="Icones/back.png" Height="19.625" Width="20.292" />
+        </Button>
     </Grid>
 </UserControl>

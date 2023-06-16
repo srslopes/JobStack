@@ -68,5 +68,13 @@ namespace JobStack
             parent.AttDados();
             BancodeDados.MenuEmpresa.CarregarJanela(parent);
         }
+
+        private void AlterarSenha_Click(object sender, RoutedEventArgs e)
+        {
+            TAlterarSenha esenha = new TAlterarSenha(this);
+            esenha.Owner = TMenuEmpresa.GetWindow(this);
+            esenha.ShowDialog();
+
+        }
     }
 }

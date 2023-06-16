@@ -383,6 +383,49 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <!-- STYLE TEXTBOX  SENHA -->
+        <Style x:Key="PasswordBoxStyle1" TargetType="{x:Type PasswordBox}">
+            <Setter Property="PasswordChar" Value="●"/>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="#003964"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border x:Name="border" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <TextBlock 
@@ -393,52 +436,86 @@
             VerticalAlignment="Top"
             Background="Transparent"
             Foreground="#003964"
-            Margin="30,30,0,0"
+            Margin="30,44,0,0"
                         />
         <Rectangle Width="898"
-                   Height="455"
+                   Height="278"
                    Fill="AliceBlue" 
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    RadiusX="10"
-                   RadiusY="10" Margin="25,100,31,85"
+                   RadiusY="10" Margin="23.666,120,32.334,242"
                     />
         <TextBlock Text="Nome:"
                    FontSize="22"
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="58,180,0,433"
+                   VerticalAlignment="Center" Margin="58,153.513,0,459.513"
                     />
         <TextBox x:Name="textBoxNome"
                  Width="368"
-                 Height="24"
+                 Padding="5, 0, 0, 0"
+                 Height="30"
                  FontFamily="Century Gothic"
                  FontSize="18"
+                 TextWrapping="NoWrap"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
-                 Margin="138,183,0,433" Style="{DynamicResource TextboxArredondadaStyle}"
+                 Margin="137.333,152.833,0,457.167" Style="{DynamicResource TextboxArredondadaStyle}"
                     />
-        <TextBlock x:Name="textBlockCondiçãoNome" HorizontalAlignment="Center" Margin="138,212,560,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição nome" Width="256"/>
-        <TextBlock x:Name="textBlockCondiçãoEmail" HorizontalAlignment="Center" Margin="169,317,462,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Condição email" Width="323"/>
-        <TextBlock x:Name="textBlockCondiçãoSenha" HorizontalAlignment="Center" Margin="230,436,552,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="172"><Run Text="Condição senha"/></TextBlock>
-        <PasswordBox x:Name="PasswordBoxSenha" Margin="214,379,489,238"/>
+        <TextBlock x:Name="textBlockCondiçãoNome" 
+                   HorizontalAlignment="Center" 
+                   Margin="144.333,185.5,553.667,0" 
+                   TextWrapping="Wrap" 
+                   FontFamily="Century Gothic"
+                   VerticalAlignment="Top" 
+                   FontSize="16" 
+                   Text="Condição nome" 
+                   Width="256"/>
+        <TextBlock x:Name="textBlockCondiçãoEmail" 
+                   HorizontalAlignment="Center" 
+                   Margin="145.5,255.164,485.5,0" 
+                   TextWrapping="Wrap" 
+                   FontFamily="Century Gothic"
+                   VerticalAlignment="Top" 
+                   FontSize="16" 
+                   Text="Condição email" 
+                   Width="323"/>
+        <TextBlock x:Name="textBlockCondiçãoSenha" 
+                   HorizontalAlignment="Center" 
+                   Margin="212,325.157,448.667,0" 
+                   FontFamily="Century Gothic"
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   FontSize="16" 
+                   Width="293.333"><Run Text="Condição senha"/></TextBlock>
+        <PasswordBox x:Name="PasswordBoxSenha" 
+                     Width="300"
+                     Height="30"
+                     
+                     Padding="5, 0, 0, 0"
+                     FontSize="18"
+                     FontFamily="Century Gothic"
+                     Margin="206.999,292.833,447,317.166" Style="{DynamicResource PasswordBoxStyle1}"/>
 
         <TextBlock Text="E-mail:"
                    FontSize="22"
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="58,288,0,325"
+                   VerticalAlignment="Center" Margin="58,223.513,0,389.513"
                     />
         <TextBox x:Name="textBoxEmail"
                  Width="434"
-                 Height="24"
+                 TextWrapping="NoWrap"
+                 Height="30"
+                 Padding="5, 0, 0, 0"
                  FontFamily="Century Gothic"
                  FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
-                 Margin="169,288,0,328"
+                 Margin="138.496,223.5,0,386.5"
                  Style="{DynamicResource TextboxArredondadaStyle}"
                         />
         <TextBlock Text="Senha inicial:"
@@ -446,7 +523,7 @@
                    FontFamily="Century Gothic"
                    Foreground="#003964"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="64,379.013,0,234.013"
+                   VerticalAlignment="Center" Margin="57,293.513,0,319.513"
                    />
         <Button x:Name="BtnSalvar"
                 Width="150"
@@ -457,7 +534,7 @@
                     Background="#003964"
                     Foreground="White"
                     HorizontalAlignment="Right"
-                    VerticalAlignment="Center" Margin="0,495,57.5,105" Style="{DynamicResource BotaoArredondadoStyle}" RenderTransformOrigin="0.513,1.75" Click="BtnSalvar_Click"
+                    VerticalAlignment="Center" Margin="0,332.5,57.5,267.5" Style="{DynamicResource BotaoArredondadoStyle}" RenderTransformOrigin="0.513,1.75" Click="BtnSalvar_Click"
                 />
     </Grid>
 </UserControl>

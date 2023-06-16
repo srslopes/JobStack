@@ -10,19 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JobStack
 {
     /// <summary>
-    /// Interação lógica para TVagaCompletaCoordenador.xam
+    /// Lógica interna para TAlterarSenha.xaml
     /// </summary>
-    public partial class TVagaCompletaCoordenador : UserControl
+    public partial class TAlterarSenha : Window
     {
-        public TVagaCompletaCoordenador()
+        private TFormInfoEmpresa formInfoEmpresa;
+
+        public TAlterarSenha(TFormCurriculoAluno formCurriculoAluno)
         {
             InitializeComponent();
+        }
+
+        public TAlterarSenha(TFormInfoEmpresa formInfoEmpresa)
+        {
+            this.formInfoEmpresa = formInfoEmpresa;
+        }
+
+        private void BtnFechar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

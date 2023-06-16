@@ -895,3 +895,7 @@ C:\Users\aluno\Documents\GitHub\JobStack\JobStack\obj\Debug\TVagaCompletaCoorden
 C:\Users\aluno\Documents\GitHub\JobStack\JobStack\obj\Debug\TVagaCompletaEmpresa.baml
 C:\Users\aluno\Documents\GitHub\JobStack\JobStack\obj\Debug\SemAlunos.g.cs
 C:\Users\aluno\Documents\GitHub\JobStack\JobStack\obj\Debug\SemAlunos.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\SemAlunos.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TAlterarSenha.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\SemAlunos.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TAlterarSenha.baml

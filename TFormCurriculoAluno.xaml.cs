@@ -70,5 +70,12 @@ namespace JobStack
                 Img.ImageSource = bitmap;
             }
         }
+
+        private void AlterarSenha_Click(object sender, RoutedEventArgs e)
+        {
+            TAlterarSenha senha = new TAlterarSenha(this);
+            senha.Owner = TMenuAluno.GetWindow(this);
+            senha.ShowDialog();
+        }
     }
 }

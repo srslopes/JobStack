@@ -186,5 +186,19 @@
                 </ScrollViewer>
             </Grid>
         </Grid>
+        <Button x:Name="BtnVoltar"
+            Width="30"
+            Height="30"
+                
+            FontFamily="Century Gothic"
+            FontSize="18"
+            Background="#003964"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}"
+            
+            >
+            <Image Source="Icones/back.png" Height="19.625" Width="20.292" />
+        </Button>
     </Grid>
 </UserControl>

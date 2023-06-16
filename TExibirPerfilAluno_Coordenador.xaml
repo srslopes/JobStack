@@ -128,7 +128,7 @@
 
         <Grid x:Name="GridCurriculo"
               Width="910"
-              Height="400" Margin="26,174.159,18,65.84">
+              Height="400" Margin="26,180.159,18,59.84">
             <Rectangle x:Name="FundoCurriculo"
                        Fill="AliceBlue"
                        RadiusX="10"
@@ -215,14 +215,20 @@
 
 
         </Grid>
-        <Button x:Name="BtnVoltar"
-                Width="100"
-                Height="30"
-                Content="Voltar"
-                FontFamily="Century Gothic"
-                FontSize="18"
-                Background="#003964"
-                Foreground="White" Margin="831.854,583.155,22.145,26.844" Style="{DynamicResource ButtonStyle1}"
-            />
+        
+        <Button x:Name="BtnVoltar_Copy"
+            Width="30"
+            Height="30"
+                
+            FontFamily="Century Gothic"
+            FontSize="18"
+            Background="#003964"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}"
+           
+            >
+            <Image Source="Icones/back.png" Height="19.625" Width="20.292" />
+        </Button>
     </Grid>
 </UserControl>

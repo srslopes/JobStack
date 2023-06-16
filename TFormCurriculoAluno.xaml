@@ -405,7 +405,7 @@
                     />
         <Border x:Name="FotoPerfil" HorizontalAlignment="Right"
                  VerticalAlignment="Top"
-                 Margin="0,121.003,847,0"  Height="70" Width="70" CornerRadius="35">
+                 Margin="0,116.503,847,0"  Height="70" Width="70" CornerRadius="35">
             <Border.Background>
                 <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
             </Border.Background>
@@ -416,7 +416,7 @@
         <Button x:Name="AlterarImagem"
                     Width="180"
                     Height="30" 
-                    Margin="0,143.498,650.637,0"
+                    Margin="0,138.998,650.637,0"
                     Content="Alterar foto de perfil"
                     FontSize="14"
                     FontFamily="Century Gothic"
@@ -433,7 +433,7 @@
                    Background="Transparent"
                    Foreground="#003964"
                    VerticalAlignment="Top"
-                   Margin="37.5,210,0,0"
+                   Margin="37.5,205.5,0,0"
                     />
         <TextBox x:Name="CampoFormacao"
                  Width="810"
@@ -443,7 +443,7 @@
                    FontFamily="Century Gothic"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
-                   Margin="37.5,243,0,0" Style="{DynamicResource TextBoxStyle1}"
+                   Margin="37.5,238.5,0,0" Style="{DynamicResource TextBoxStyle1}"
                  TextWrapping="Wrap" AcceptsReturn="True"
             />
         <TextBlock Text="Experiência e Informações Adicionais:"
@@ -453,12 +453,12 @@
                    Background="Transparent"
                    Foreground="#003964"
                    VerticalAlignment="Top"
-                   Margin="37.5,390,0,0"
+                   Margin="37.5,385.5,0,0"
                     />
         <Button x:Name="BtnSalvar"
                     Width="90"
                     Height="30" 
-                    Margin="0,0,145,30"
+                    Margin="0,0,38.28,30"
                     Content="Salvar"
                     FontSize="14"
                     FontFamily="Century Gothic"
@@ -470,7 +470,7 @@
         <Button x:Name="BtnCancelar"
                     Width="90"
                     Height="30" 
-                    Margin="0,0,41,30"
+                    Margin="0,0,142.384,30"
                     Content="Cancelar"
                     FontSize="14"
                     FontFamily="Century Gothic"
@@ -488,9 +488,22 @@
             HorizontalAlignment="Left"
                  Padding="5, 0, 5, 0"
             VerticalAlignment="Top"
-            Margin="39.5,431,0,0"
+            Margin="39.5,426.5,0,0"
             Style="{DynamicResource TextBoxStyle1}"
                  TextWrapping="Wrap" AcceptsReturn="True"
             />
+        <Button x:Name="AlterarSenha"
+            Width="180"
+            Height="30" 
+            Margin="0,578.498,730.637,0"
+            Content="Alterar minha senha"
+            FontSize="14"
+            FontFamily="Century Gothic"
+            Background="#003964"
+            Foreground="White"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="AlterarSenha_Click"
+            
+                    />
     </Grid>
 </UserControl>
