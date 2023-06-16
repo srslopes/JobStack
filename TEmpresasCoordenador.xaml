@@ -85,7 +85,7 @@
                 Content="Nova empresa"
                 FontFamily="Century Gothic"
                 FontSize="16"
-                Margin="0,30,30.5,0"
+                Margin="0,44.497,30.5,0"
                 Background="#003964"
                 Foreground="White" Style="{DynamicResource ButtonStyle1}" Click="BtnNovaEmpresa_Click" 
                 />

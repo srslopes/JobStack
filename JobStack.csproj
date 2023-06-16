@@ -58,6 +58,9 @@
     </ApplicationDefinition>
     <Compile Include="BackEnd\Usuarios\Admin.cs" />
     <Compile Include="BackEnd\Usuarios\Aluno.cs" />
+    <Compile Include="DesignCandidatoSelecionado.xaml.cs">
+      <DependentUpon>DesignCandidatoSelecionado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DesignUsuarioAluno_Coordenador.xaml.cs">
       <DependentUpon>DesignUsuarioAluno_Coordenador.xaml</DependentUpon>
     </Compile>
@@ -69,6 +72,12 @@
     </Compile>
     <Compile Include="TAlunosCoordenador.xaml.cs">
       <DependentUpon>TAlunosCoordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TEditarPerfilAluno_Coordenador.xaml.cs">
+      <DependentUpon>TEditarPerfilAluno_Coordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TEditarPerfilEmpresa_Coordenador.xaml.cs">
+      <DependentUpon>TEditarPerfilEmpresa_Coordenador.xaml</DependentUpon>
     </Compile>
     <Compile Include="TEditarVaga.xaml.cs">
       <DependentUpon>TEditarVaga.xaml</DependentUpon>
@@ -90,6 +99,9 @@
     </Compile>
     <Compile Include="TExibirPerfilEmpresa_Coordenador.xaml.cs">
       <DependentUpon>TExibirPerfilEmpresa_Coordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TExibirVagaFinalizada.xaml.cs">
+      <DependentUpon>TExibirVagaFinalizada.xaml</DependentUpon>
     </Compile>
     <Compile Include="TFormAlunoCoordenador.xaml.cs">
       <DependentUpon>TFormAlunoCoordenador.xaml</DependentUpon>
@@ -219,6 +231,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="DesignCandidatoSelecionado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DesignExibiçãoUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -236,6 +252,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TAlunosCoordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TEditarPerfilAluno_Coordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TEditarPerfilEmpresa_Coordenador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -341,6 +365,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TExibirUsuários.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TExibirVagaFinalizada.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

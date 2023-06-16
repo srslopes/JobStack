@@ -825,3 +825,13 @@ C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TFormAlunoCoordenador.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TFormEmpresaCoordenador.baml
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TEditarVaga.g.cs
 C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TEditarVaga.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TEditarVaga.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TEditarVaga.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignCandidatoSelecionado.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TEditarPerfilAluno_Coordenador.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TEditarPerfilEmpresa_Coordenador.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TExibirVagaFinalizada.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignCandidatoSelecionado.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TEditarPerfilAluno_Coordenador.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TEditarPerfilEmpresa_Coordenador.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\TExibirVagaFinalizada.baml

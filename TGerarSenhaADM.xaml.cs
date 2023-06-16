@@ -19,7 +19,7 @@ namespace JobStack
     /// </summary>
     public partial class TGerarSenhaADM : Window
     {
-        public TGerarSenhaADM()
+        public TGerarSenhaADM(DesignExibiçãoUsuario designExibiçãoUsuario)
         {
             InitializeComponent();
         }
