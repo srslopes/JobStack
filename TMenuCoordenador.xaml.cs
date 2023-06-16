@@ -123,6 +123,11 @@ namespace JobStack
             ConteudoJanela.Children.Clear();
             ConteudoJanela.Children.Add(Janela);
         }
+        public void CarregarJanela(Window Janela)
+        {
+            ConteudoJanela.Children.Clear();
+            ConteudoJanela.Children.Add(Janela);
+        }
         public void AttListas()
         {
 
