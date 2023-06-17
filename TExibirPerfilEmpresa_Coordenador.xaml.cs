@@ -53,5 +53,6 @@ namespace JobStack
             TEmpresasCoordenador te = new TEmpresasCoordenador();
             BancodeDados.MenuCoordenador.CarregarJanela(te);
         }
+
     }
 }

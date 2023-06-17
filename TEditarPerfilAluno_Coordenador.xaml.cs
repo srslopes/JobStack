@@ -21,11 +21,13 @@ namespace JobStack
     public partial class TEditarPerfilAluno_Coordenador : UserControl
     {
         private Aluno aluno;
+        private bool bt;
         public TEditarPerfilAluno_Coordenador(int id)
         {
             InitializeComponent();
             aluno = BancodeDados.BuscarAluno(id);
             AttDados();
+            bt = false;
         }
         public void AttDados()
         {
@@ -87,6 +89,12 @@ namespace JobStack
                 clear = false;
             }
 
+            if(bt && SenhaAluno.Password.Equals(""))
+            {
+                //senha vazia
+                clear = false;
+            }
+
             if (clear)
             {
                 aluno.SetNome(NomeAluno.Text);
@@ -94,22 +102,35 @@ namespace JobStack
                 aluno.SetSemestre(CBPeriodo.SelectedIndex +1);
                 aluno.SetRa(long.Parse(RAAluno.Text));
                 aluno.SetEmail(EmailAluno.Text);
+                if(bt) aluno.SetSenha(SenhaAluno.Password);
+
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this);
+                notificationWindow.Topmost = true;
+                notificationWindow.AtualizarMensagemSucesso("Os dados do usuário foram atualizados.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 TExibirPerfilAluno_Coordenador te = new TExibirPerfilAluno_Coordenador(aluno.GetID());
                 BancodeDados.MenuCoordenador.CarregarJanela(te);
             }
             
         }
-
-        private void BtnSalvar_Click(object sender, RoutedEventArgs e)
+        private void BtnSenha_Click(object sender, RoutedEventArgs e)
         {
-            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
-            notificationWindow.Owner = TMenuCoordenador.GetWindow(this);
-            notificationWindow.Topmost = true;
-            //aqui atualiza o texto da notificação
-            notificationWindow.AtualizarMensagemSucesso("Os dados do usuário foram atualizados.");
-            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            notificationWindow.ShowDialog();
-
+            if(bt)
+            {
+                SenhaAluno.Password = "";
+                SenhaAluno.IsEnabled = false;
+                BtnSenha.Content = "Nova Senha";
+                bt = false;
+            }
+            else
+            {
+                SenhaAluno.Password = "";
+                SenhaAluno.IsEnabled = true;
+                BtnSenha.Content = "Cancelar";
+                bt = true;
+            }
         }
     }
 }
