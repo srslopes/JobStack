@@ -24,5 +24,16 @@ namespace JobStack
         {
             InitializeComponent();
         }
+
+        private void BtnSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Owner = TMenuCoordenador.GetWindow(this);
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Os dados do usuário foram atualizados.");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
+        }
     }
 }

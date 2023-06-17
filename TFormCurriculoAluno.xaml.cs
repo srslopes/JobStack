@@ -44,6 +44,15 @@ namespace JobStack
             if(bitmap!=null) aluno.SetIdImg(BancodeDados.SalvarImg(bitmap));
             parent.AttDados();
             BancodeDados.MenuAluno.CarregarJanela(parent);
+
+            //chamando a notificação de inscrição bem sucedida
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Owner = TMenuAluno.GetWindow(this);
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Seu perfil foi atualizado.");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)

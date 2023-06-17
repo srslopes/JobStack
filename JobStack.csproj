@@ -70,6 +70,15 @@
     <Compile Include="DesignUsuarioInscrito.xaml.cs">
       <DependentUpon>DesignUsuarioInscrito.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NotificacaoAtencao.xaml.cs">
+      <DependentUpon>NotificacaoAtencao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NotificacaoErro.xaml.cs">
+      <DependentUpon>NotificacaoErro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NotificacaoSucesso.xaml.cs">
+      <DependentUpon>NotificacaoSucesso.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SemAlunos.xaml.cs">
       <DependentUpon>SemAlunos.xaml</DependentUpon>
     </Compile>
@@ -93,6 +102,9 @@
     </Compile>
     <Compile Include="Teste\TesteCadastrarEmpresa.xaml.cs">
       <DependentUpon>TesteCadastrarEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teste\TesteNotificacoes.xaml.cs">
+      <DependentUpon>TesteNotificacoes.xaml</DependentUpon>
     </Compile>
     <Compile Include="TExibirPerfilAluno.xaml.cs">
       <DependentUpon>TExibirPerfilAluno.xaml</DependentUpon>
@@ -257,6 +269,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NotificacaoAtencao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NotificacaoErro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NotificacaoSucesso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SemAlunos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -359,6 +383,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TesteLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teste\TesteNotificacoes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -571,6 +599,19 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icones\education.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\fechar.png" />
+    <Resource Include="Icones\sucesso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icones\enviar-mensagem.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -149,8 +149,17 @@ namespace JobStack
                     N.Salvar();
                     passo1();
 
-                    MessageBox.Show("cadastrado com sucesso");
-                }
+                //MessageBox.Show("cadastrado com sucesso");
+
+                //chamando a notificação de inscrição bem sucedida
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Owner = TMenuAdministrador.GetWindow(this);
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemSucesso("O usuário foi cadastrado.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
+            }
                
                 }
         }

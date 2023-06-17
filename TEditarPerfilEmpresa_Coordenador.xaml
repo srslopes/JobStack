@@ -180,7 +180,7 @@
             Background="#003964"
             Foreground="White"
             HorizontalAlignment="Right"
-            VerticalAlignment="Center" Margin="0,333.662,52.998,266.338" Style="{DynamicResource ButtonStyle1}" RenderTransformOrigin="0.513,1.75"
+            VerticalAlignment="Center" Margin="0,333.662,52.998,266.338" Style="{DynamicResource ButtonStyle1}" RenderTransformOrigin="0.513,1.75" Click="BtnSalvar_Click"
                 />
         <Button x:Name="BtnCancelar"
             Width="110"

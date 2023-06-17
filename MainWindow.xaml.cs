@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JobStack.Teste;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -86,6 +87,12 @@ namespace JobStack
         {
             TMenuAdministrador t = new TMenuAdministrador();
             t.Show();
+        }
+
+        private void TesteNotificacoes_Click(object sender, RoutedEventArgs e)
+        {
+            TesteNotificacoes n = new TesteNotificacoes();
+            n.Show();
         }
     }
 }

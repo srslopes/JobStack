@@ -1035,3 +1035,11 @@ C:\Users\danie\OneDrive\Documentos\repositorios\JobStack\obj\Debug\JobStack.cspr
 C:\Users\danie\OneDrive\Documentos\repositorios\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 C:\Users\danie\OneDrive\Documentos\repositorios\JobStack\obj\Debug\JobStack.exe
 C:\Users\danie\OneDrive\Documentos\repositorios\JobStack\obj\Debug\JobStack.pdb
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\NotificacaoSucesso.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\NotificacaoSucesso.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\NotificacaoAtencao.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\NotificacaoErro.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\Teste\TesteNotificacoes.g.cs
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\NotificacaoAtencao.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\NotificacaoErro.baml
+C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\Teste\TesteNotificacoes.baml

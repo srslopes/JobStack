@@ -152,12 +152,12 @@
                     </Rectangle.Effect>
                 </Rectangle>
                 <Button x:Name="BotaoEnviar" 
-                    Content="Enviar"
+                    
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Margin="0,0,10,0"
                     Height="44"                    
-                    Width="108" 
+                    Width="44" 
                     Background="#FF003964" 
                     AutomationProperties.HelpText="Envia Mensagem" 
                     BorderBrush="{x:Null}" 
@@ -174,13 +174,18 @@
                     <Button.Effect>
                         <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
                     </Button.Effect>
+                    <Image Source="Icones/enviar-mensagem.png" 
+                           Width="25"
+                           Height="25"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
                 </Button>
                 <TextBox x:Name="CaixaDeTexto" 
                      HorizontalAlignment="Left"
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center"                     
-                     Margin="10,0,0,0" TextWrapping="Wrap"
-                     Height="57" Width="452"
+                     Margin="10,0.5,0,0.5" TextWrapping="Wrap"
+                     Height="57" Width="508"
                      Text="Mensagem" AcceptsReturn="False" 
                      FontSize="18" VerticalScrollBarVisibility="Disabled"
                      Background="{x:Null}" BorderBrush="{x:Null}"

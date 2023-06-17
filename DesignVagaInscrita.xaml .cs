@@ -69,6 +69,15 @@ namespace JobStack
             vaga.Desinscrever(aluno.GetID());
             aluno.RemoverVaga(vaga.GetID());
             AttVagas();
+
+
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Owner = TMenuAluno.GetWindow(this);
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Você não está mais inscrito nessa vaga.");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
         }
         public void AttVagas()
         {
