@@ -63,15 +63,14 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Ellipse x:Name="FotoAluno"
-                 Fill="LightGray"
-                 Width="110"
-                 Height="110"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Top"
-                 Margin="27,37.848,0,0" Stroke="#FF003964" StrokeThickness="2">
-
-        </Ellipse>
+        <Border x:Name="FotoPerfil" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="27,48,0,484" Height="100" Width="100" CornerRadius="50">
+            <Border.Background>
+                <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+            </Border.Effect>
+        </Border>
         <TextBlock x:Name="NomeEmpresa"
                     Text="Nome da empresa"
                    FontSize="26"
@@ -127,7 +126,7 @@
                     FontSize="16"
                     Background="#003964"
                     Foreground="White" Margin="862,5.145,8,395.146" 
-                    Style="{DynamicResource ButtonStyle1}"
+                    Style="{DynamicResource ButtonStyle1}" Click="BtnChat_Click"
                     >
                 <Image Source="Icones/icon_chat.png" Width="25" Height="25"/>
             </Button>
@@ -192,7 +191,7 @@
             FontSize="16"
             Background="#003964"
             Foreground="White" Margin="781.115,191.337,82.884,0" Style="{DynamicResource ButtonStyle1}"
-            VerticalAlignment="Top"
+            VerticalAlignment="Top" Click="BtnEditar_Click"
                 
                     />
         <Button x:Name="BtnVoltar_Copy"
@@ -204,7 +203,7 @@
             Background="#003964"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}"
+            Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}" Click="BtnVoltar_Copy_Click"
             
             >
             <Image Source="Icones/back.png" Height="19.625" Width="20.292" />

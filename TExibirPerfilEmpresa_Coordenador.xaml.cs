@@ -20,9 +20,38 @@ namespace JobStack
     /// </summary>
     public partial class TExibirPerfilEmpresa_Coordenador : UserControl
     {
-        public TExibirPerfilEmpresa_Coordenador()
+        private Empresa empresa;
+
+        public TExibirPerfilEmpresa_Coordenador(int id)
         {
             InitializeComponent();
+            empresa = BancodeDados.BuscarEmpresa(id);
+            AttDados();
+        }
+        public void AttDados()
+        {
+            Img.ImageSource = BancodeDados.BuscarImg(empresa.GetIdImg());
+            NomeEmpresa.Text = empresa.GetNome();
+            cnpj.Text = empresa.GetCNPJ().ToString();
+            InfoEmpresa.Text = empresa.GetSobre();
+        }
+
+        private void BtnChat_Click(object sender, RoutedEventArgs e)
+        {
+            TBatePapo bp = new TBatePapo(BancodeDados.BuscarCoordenador(BancodeDados.GetIdUser()).ChatExiste(empresa.GetID()));
+            BancodeDados.MenuCoordenador.CarregarJanela(bp);
+        }
+
+        private void BtnEditar_Click(object sender, RoutedEventArgs e)
+        {
+            TEditarPerfilEmpresa_Coordenador te = new TEditarPerfilEmpresa_Coordenador(empresa.GetID());
+            BancodeDados.MenuCoordenador.CarregarJanela(te);
+        }
+
+        private void BtnVoltar_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            TEmpresasCoordenador te = new TEmpresasCoordenador();
+            BancodeDados.MenuCoordenador.CarregarJanela(te);
         }
     }
 }

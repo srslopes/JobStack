@@ -118,7 +118,7 @@
                 </ScrollViewer.RenderTransform>
                 <StackPanel x:Name="SPEmpresas"
                                 Orientation="Vertical"
-                            Width="890"
+                            Width="870"
                             Height="0"
                                 Margin="10,10,0,0"
                                 VerticalAlignment="Top"

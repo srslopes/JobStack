@@ -24,6 +24,22 @@ namespace JobStack
         public TAlunosCoordenador()
         {
             InitializeComponent();
+            AttLista();
+        }
+
+        public void AttLista()
+        {
+            SPAlunos.Children.Clear();
+            SPAlunos.Height = 0;
+            int i;
+            i = 1001;
+            while (BancodeDados.BuscarAluno(i) != null)
+            {
+                DesignUsuarioAluno_Coordenador us = new DesignUsuarioAluno_Coordenador(i);
+                SPAlunos.Children.Insert(0,us);
+                SPAlunos.Height += 110;
+                i++;
+            }
         }
 
         private void BtnNovoAluno_Click(object sender, RoutedEventArgs e)

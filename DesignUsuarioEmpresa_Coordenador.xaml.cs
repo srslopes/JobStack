@@ -20,9 +20,19 @@ namespace JobStack
     /// </summary>
     public partial class DesignUsuarioEmpresa_Coordenador : UserControl
     {
-        public DesignUsuarioEmpresa_Coordenador()
+        private Empresa empresa;
+        public DesignUsuarioEmpresa_Coordenador(int id)
         {
             InitializeComponent();
+            empresa = BancodeDados.BuscarEmpresa(id);
+            Img.ImageSource = BancodeDados.BuscarImg(empresa.GetIdImg());
+            NomeEmpresa.Text = empresa.GetNome();
+        }
+
+        private void BtnVerPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            TExibirPerfilEmpresa_Coordenador te = new TExibirPerfilEmpresa_Coordenador(empresa.GetID());
+            BancodeDados.MenuCoordenador.CarregarJanela(te);
         }
     }
 }

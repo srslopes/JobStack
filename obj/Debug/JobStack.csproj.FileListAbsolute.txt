@@ -1035,3 +1035,15 @@ C:\Users\danie\OneDrive\Documentos\repositorios\JobStack\obj\Debug\JobStack.cspr
 C:\Users\danie\OneDrive\Documentos\repositorios\JobStack\obj\Debug\JobStack.csproj.CoreCompileInputs.cache
 C:\Users\danie\OneDrive\Documentos\repositorios\JobStack\obj\Debug\JobStack.exe
 C:\Users\danie\OneDrive\Documentos\repositorios\JobStack\obj\Debug\JobStack.pdb
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignCandidatoSelecionado.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\SemAlunos.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TAlterarSenha.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TEditarPerfilAluno_Coordenador.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TEditarPerfilEmpresa_Coordenador.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TExibirVagaFinalizada.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignCandidatoSelecionado.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\SemAlunos.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TAlterarSenha.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TEditarPerfilAluno_Coordenador.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TEditarPerfilEmpresa_Coordenador.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\TExibirVagaFinalizada.baml

@@ -20,19 +20,34 @@ namespace JobStack
     public partial class TAlterarSenha : Window
     {
         private TFormInfoEmpresa formInfoEmpresa;
+        private Usuario user;
 
         public TAlterarSenha(TFormCurriculoAluno formCurriculoAluno)
         {
+            user = ((Usuario)BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()));
             InitializeComponent();
         }
 
         public TAlterarSenha(TFormInfoEmpresa formInfoEmpresa)
         {
-            this.formInfoEmpresa = formInfoEmpresa;
+            user = ((Usuario)BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()));
+            InitializeComponent();
+        }
+
+        public TAlterarSenha()
+        {
+            user = ((Usuario)BancodeDados.BuscarUsuario(BancodeDados.GetIdUser()));
+            InitializeComponent();
         }
 
         private void BtnFechar_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void BtnSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            user.SetSenha(NovaSenha.Password);
             this.Close();
         }
     }

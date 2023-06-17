@@ -218,7 +218,7 @@
             Foreground="White"
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom" Margin="641,0,29,27"
-            Style="{DynamicResource ButtonStyle1}"
+            Style="{DynamicResource ButtonStyle1}" Click="BtnSalvar_Click"
                 />
     </Grid>
 </Window>

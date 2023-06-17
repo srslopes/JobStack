@@ -631,7 +631,7 @@
             Background="#003964"
             Foreground="White"
             HorizontalAlignment="Right"
-            VerticalAlignment="Center" Margin="0,367.662,55.998,232.338" Style="{DynamicResource ButtonStyle1}" RenderTransformOrigin="0.513,1.75"
+            VerticalAlignment="Center" Margin="0,367.662,55.998,232.338" Style="{DynamicResource ButtonStyle1}" RenderTransformOrigin="0.513,1.75" Click="BtnSalvar_Click"
                 />
         <Button x:Name="BtnCancelar"
                 Width="110"
@@ -641,7 +641,7 @@
                 Content="Cancelar"
                 FontFamily="Century Gothic"
                 FontSize="16" Margin="806.087,583.543,37.912,26.456"
-                Style="{DynamicResource ButtonStyle1}" 
+                Style="{DynamicResource ButtonStyle1}" Click="BtnCancelar_Click" 
            />
     </Grid>
 </UserControl>

@@ -20,9 +20,60 @@ namespace JobStack
     /// </summary>
     public partial class TVagaCompletaCoordenador : UserControl
     {
-        public TVagaCompletaCoordenador()
+        private Vaga vaga;
+        public TVagaCompletaCoordenador(int id)
         {
             InitializeComponent();
+            vaga = BancodeDados.BuscarVaga(id);
+            AttDados();
+        }
+        public void AttDados()
+        {
+            TituloVaga.Text = vaga.GetNome();
+            NomeEmpresa.Text = BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).GetNome();
+            DescricaoVaga.Text = vaga.GetDescricao();
+            TipoVaga.Text = vaga.GetTipo();
+            Turno.Text = vaga.GetTurno();
+            switch (vaga.GetCurso())
+            {
+                case 0:
+                    Curso.Text = "Análise e Desenvolvimento de Sistemas";
+                    break;
+                case 1:
+                    Curso.Text = "Gestão Empresarial";
+                    break;
+                case 2:
+                    Curso.Text = "Eventos";
+                    break;
+                case 3:
+                    Curso.Text = "Gestão de Produção Industrial";
+                    break;
+            }
+            Jornada.Text = vaga.GetJornada();
+            Turno_Copy.Text = vaga.GetTurno();
+            QtdeVaga.Text = vaga.GetNVagas().ToString();
+            FaixaSalarial.Text = vaga.GetSalario();
+
+        }
+
+        private void BtnAceitar_Click(object sender, RoutedEventArgs e)
+        {
+            vaga.Aprovar();
+            TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
+            BancodeDados.MenuCoordenador.CarregarJanela(analisar);
+        }
+
+        private void BtnRejeitar_Click(object sender, RoutedEventArgs e)
+        {
+            vaga.Rejeitar();
+            TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
+            BancodeDados.MenuCoordenador.CarregarJanela(analisar);
+        }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
+            BancodeDados.MenuCoordenador.CarregarJanela(analisar);
         }
     }
 }

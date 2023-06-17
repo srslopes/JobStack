@@ -57,8 +57,8 @@ namespace JobStack
         }
         private void BtnVerMais_Click(object sender, RoutedEventArgs e)
         {
-           // TVagaCompletaCoordenador tv = new TVagaCompletaCoordenador(vaga.GetID());
-          //  BancodeDados.MenuCoordenador.CarregarJanela(tv);
+           TVagaCompletaCoordenador tv = new TVagaCompletaCoordenador(vaga.GetID());
+           BancodeDados.MenuCoordenador.CarregarJanela(tv);
         }        
 
         private void BtnAprovar_Click_1(object sender, RoutedEventArgs e)

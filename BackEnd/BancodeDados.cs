@@ -678,6 +678,7 @@ namespace JobStack
             Imgs.Add(new BitmapImage(new Uri("Imagens/ambev.png", UriKind.Relative)));//10
             Imgs.Add(new BitmapImage(new Uri("Imagens/rosalina.png", UriKind.Relative)));//11
             Imgs.Add(new BitmapImage(new Uri("Imagens/isabelle.png", UriKind.Relative)));//12
+            Imgs.Add(new BitmapImage(new Uri("Imagens/empresa.png", UriKind.Relative)));//13
         }
 
         public static BitmapImage BuscarImg(int id)

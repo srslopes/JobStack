@@ -85,7 +85,7 @@
             Foreground="White"
             HorizontalAlignment="Right"
             VerticalAlignment="Top" 
-            Style="{DynamicResource ButtonStyle1}"
+            Style="{DynamicResource ButtonStyle1}" Click="BtnCancelar_Click"
             
                     >
             <Image Source="Icones/back.png" Height="19.625" Width="20.292" />
@@ -112,7 +112,7 @@
             Background="#003964"
             Foreground="White"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" 
+            VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnAceitar_Click" 
                     />
         <Button x:Name="BtnRejeitar"
             Width="100"
@@ -124,7 +124,7 @@
             Background="#003964"
             Foreground="White"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" 
+            VerticalAlignment="Top" Style="{DynamicResource ButtonStyle1}" Click="BtnRejeitar_Click" 
                     />
         <TextBlock Text="DESCRIÇÃO:"
             FontSize="20"
@@ -148,6 +148,7 @@
             Height="134.5"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+                   TextWrapping="Wrap"
                     />
         <TextBlock Text="TIPO DE VAGA:"
             FontSize="20"

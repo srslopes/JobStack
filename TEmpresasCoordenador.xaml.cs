@@ -23,6 +23,21 @@ namespace JobStack
         public TEmpresasCoordenador()
         {
             InitializeComponent();
+            AttLista();
+        }
+
+        public void AttLista()
+        {
+            SPEmpresas.Children.Clear();
+            SPEmpresas.Height = 0;
+            int i = 6001;
+            while (BancodeDados.BuscarEmpresa(i) != null)
+            {
+                DesignUsuarioEmpresa_Coordenador us = new DesignUsuarioEmpresa_Coordenador(i);
+                SPEmpresas.Children.Insert(0, us);
+                SPEmpresas.Height += 110;
+                i++;
+            }
         }
 
         private void BtnNovaEmpresa_Click(object sender, RoutedEventArgs e)

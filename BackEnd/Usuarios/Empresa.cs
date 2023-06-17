@@ -21,6 +21,7 @@ namespace JobStack
             cnpj = 0;
             sobre = "";
             Vagas = new List<int>();
+            SetIdImg(13);
             BancodeDados.AdicionarEmpresa(this);
             BancodeDados.SetIdUser(GetID());
             Chat adm = new Chat(1);
@@ -32,6 +33,7 @@ namespace JobStack
             SetID(-1);
             cnpj = 0;
             sobre = "";
+            SetIdImg(13);
             Vagas = new List<int>();
         }
 

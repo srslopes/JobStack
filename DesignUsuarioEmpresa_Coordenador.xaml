@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
              d:DesignHeight="100" 
-             d:DesignWidth="880"
+             d:DesignWidth="860"
              Margin="0,0,0,10">
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
@@ -67,11 +67,11 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Grid Height="100" Width="880">
+        <Grid Height="100" Width="860">
             <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10" 
-                   Width="880"
+                   Width="860"
                    Height="100" Margin="0,1,0,-1"
                   >
                 <Rectangle.Effect>
@@ -103,7 +103,9 @@
                 FontSize="16"
                 Background="#003964"
                 Foreground="White"
-                Content="Ver perfil" Margin="746.642,38,23.357,32" Style="{DynamicResource ButtonStyle1}" 
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                Content="Ver perfil" Margin="0,0,30,0" Style="{DynamicResource ButtonStyle1}" Click="BtnVerPerfil_Click" 
             />
         </Grid>
     </Grid>

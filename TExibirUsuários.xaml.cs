@@ -24,6 +24,7 @@ namespace JobStack
         {
             InitializeComponent();
             SPUsers.Children.Clear();
+            AttLista(0);
         }
 
         public void AttLista(int tipo)

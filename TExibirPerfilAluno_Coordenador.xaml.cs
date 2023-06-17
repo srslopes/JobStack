@@ -20,9 +20,54 @@ namespace JobStack
     /// </summary>
     public partial class TExibirPerfilAluno_Coordenador : UserControl
     {
-        public TExibirPerfilAluno_Coordenador()
+        private Aluno aluno;
+        public TExibirPerfilAluno_Coordenador(int id)
         {
             InitializeComponent();
+            aluno = BancodeDados.BuscarAluno(id);
+            AttDados();
+        }
+        public void AttDados()
+        {
+            NomeAluno.Text = aluno.GetNome();
+            Img.ImageSource = BancodeDados.BuscarImg(aluno.GetIdImg());
+            NomeAluno.Text = aluno.GetNome();
+            switch (aluno.GetCurso())
+            {
+                case 0:
+                    Curso.Text = "Análise e Desenvolvimento de Sistemas";
+                    break;
+                case 1:
+                    Curso.Text = "Gestão Empresarial";
+                    break;
+                case 2:
+                    Curso.Text = "Eventos";
+                    break;
+                case 3:
+                    Curso.Text = "Gestão de Produção Industrial";
+                    break;
+            }
+            Periodo.Text = aluno.GetSemestre() + "º Semestre";
+            FormAluno.Text = aluno.GetFormacao();
+            ExpAluno.Text = aluno.GetExperiencia();
+        }
+
+        private void BtnEditar_Click(object sender, RoutedEventArgs e)
+        {
+            TEditarPerfilAluno_Coordenador te = new TEditarPerfilAluno_Coordenador(aluno.GetID());
+            BancodeDados.MenuCoordenador.CarregarJanela(te);
+        }
+
+        private void BtnChat_Click(object sender, RoutedEventArgs e)
+        {
+            TBatePapo bp = new TBatePapo(BancodeDados.BuscarCoordenador(BancodeDados.GetIdUser()).ChatExiste(aluno.GetID()));
+            BancodeDados.MenuCoordenador.CarregarJanela(bp);
+        }
+
+        private void BtnVoltar_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            TAlunosCoordenador t = new TAlunosCoordenador();
+            BancodeDados.MenuCoordenador.CarregarJanela(t);
         }
     }
 }
