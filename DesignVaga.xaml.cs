@@ -61,10 +61,19 @@ namespace JobStack
 
         private void BtnInscreverse_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Vaga Inscrita com sucesso!");
+            //MessageBox.Show("Vaga Inscrita com sucesso!");
             aluno.AdicionarVaga(vaga.GetID());
             vaga.Inscrever(aluno.GetID());
             AttVagas();
+
+            //chamando a notificação de inscrição bem sucedida
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Owner = TMenuAluno.GetWindow(this);
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Você se inscreveu nessa vaga.");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
         }
 
         public void AttVagas()

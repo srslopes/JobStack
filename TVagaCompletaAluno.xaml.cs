@@ -109,6 +109,14 @@ namespace JobStack
                 vaga.Inscrever(aluno.GetID());
                 BtDes();
                 st = false;
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Owner = TMenuAluno.GetWindow(this);
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemSucesso("Você se inscreveu nessa vaga.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
+
             }
             else
             {
@@ -116,6 +124,13 @@ namespace JobStack
                 aluno.RemoverVaga(vaga.GetID());
                 BtInsc();
                 st = true;
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Owner = TMenuAluno.GetWindow(this);
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemSucesso("Você não está mais inscrito nessa vaga.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
             }
             AttVagas();
         }
