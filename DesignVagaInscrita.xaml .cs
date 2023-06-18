@@ -53,6 +53,8 @@ namespace JobStack
                 case 3:
                     StatusVaga.Text = "Encerrada";
                     StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
+                    BtnDesinscrever.Visibility = Visibility.Hidden;
+                    if (vaga.IsAlunoAprovado(BancodeDados.GetIdUser())) Selecao.Visibility = Visibility.Visible;
                     break;
             }
         }
@@ -62,7 +64,6 @@ namespace JobStack
         {
             TVagaCompletaAluno vg = new TVagaCompletaAluno(vaga.GetID(), this);
             BancodeDados.MenuAluno.CarregarJanela(vg);
-
         }
         private void BtnDesinscrever_Click(object sender, RoutedEventArgs e)
         {

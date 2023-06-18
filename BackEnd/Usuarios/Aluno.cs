@@ -16,9 +16,13 @@ namespace JobStack
 
         private int semestre;
 
-        public string formacao;
+        private string formacao;
 
-        public string experiencia;
+        private string experiencia;
+
+        private int aprov;
+
+
 
         public Aluno(string e, string p)
         {
@@ -26,6 +30,7 @@ namespace JobStack
             SetSenha(p);
             curso = -1;
             semestre = 0;
+            aprov = 0;
             formacao = "";
             experiencia = "";
             SetIdImg(0);
@@ -40,6 +45,7 @@ namespace JobStack
         {
             SetID(-1);
             semestre = 0;
+            aprov = 0;
             formacao = "";
             experiencia = "";
             SetIdImg(0);
@@ -55,6 +61,7 @@ namespace JobStack
                 SetNome(n);
                 curso = -1;
                 semestre = 0;
+                aprov = 0;
                 formacao = "";
                 experiencia = "";
                 SetIdImg(14);
@@ -150,6 +157,20 @@ namespace JobStack
         public string GetExperiencia()
         {
             return experiencia;
+        }
+
+        public void Aprovar()
+        {
+            aprov++;
+        }
+
+        public int GetAprov()
+        {
+            return aprov;
+        }
+        public void ResetAprov()
+        {
+            aprov = 0;
         }
     }
 }

@@ -169,6 +169,11 @@ namespace JobStack
             return nvagas;
         }
 
+        public List<int> GetAprovados()
+        {
+            return aprovados;
+        }
+
         public void AprovarAluno(int ID_Aluno)
         {
             for(int i=0; i<aprovados.Count; i++)if (aprovados[i] == ID_Aluno) return;

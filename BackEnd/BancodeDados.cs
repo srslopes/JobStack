@@ -628,10 +628,10 @@ namespace JobStack
          private static void PopularChat()
         {
             
-            BancodeDados.SetIdUser(1001);
+            BancodeDados.SetIdUser(1002);
             Chat n2 = new Chat(6001);
             Chat n3 = new Chat(6002);            
-            BancodeDados.SetIdUser(1002);
+            BancodeDados.SetIdUser(1003);
             Chat n4 = new Chat(6001);
             Chat n5 = new Chat(6002);            
             BancodeDados.SetIdUser(0);

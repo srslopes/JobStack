@@ -69,6 +69,7 @@ namespace JobStack
             }
             Jornada.Text = vaga.GetJornada();
             QtdeVaga.Text = vaga.GetNVagas().ToString();
+            if (vaga.GetStatus() == 3) BtnInscreverse.Visibility = Visibility.Hidden;
 
             if (BancodeDados.BuscarAluno(BancodeDados.GetIdUser()).VagaInscrita(vaga.GetID()))
             {

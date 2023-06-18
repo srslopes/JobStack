@@ -64,6 +64,43 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="BotaoSubMenuStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" >
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <TextBlock Text="MINHAS INSCRIÇÕES"
@@ -73,8 +110,36 @@
                         VerticalAlignment="Top"
                         Background="Transparent"
                         Foreground="#003964"
-                       Margin="300, 25, 0, 0"
+                       Margin="60,24,0,0"
                         />
+        <Button x:Name="BtnEmAberto"
+                Width="130"
+                Height="40"
+                Content="EM ABERTO"
+                Background="#FF27597E"
+                FontFamily="Century Gothic"
+                FontSize="14"
+                Foreground="White"
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="477,26,347,574" Click="BtnEmAberto_Click"
+            />
+        <Button x:Name="BtnFinalizadas"
+                Width="130"
+                Height="40"
+                Content="FINALIZADAS"
+                Background="#FF27597E"
+                FontFamily="Century Gothic"
+                FontSize="14"
+                Foreground="White"
+                Style="{DynamicResource BotaoSubMenuStyle}" Margin="637,26,187,574" Click="BtnFinalizadas_Click"
+            />
+        <Grid x:Name="Notificacao" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,25,185,0" Height="20" Width="20">
+            <Rectangle RadiusX="15" RadiusY="15" Fill="Red">
+                <Rectangle.Effect>
+                    <DropShadowEffect ShadowDepth="3" Color="Black" Opacity="0.2" BlurRadius="5" />
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBlock x:Name="Notif" Text="X"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Foreground="White" Margin ="0,0,0,0" />
+        </Grid>
         <!-- GRID PARA PUXAR AS PÁGINAS DAS VAGAS E FORMULÁRIOS -->
         <Grid x:Name="Lista"
                       Margin="-10,30,0,0"

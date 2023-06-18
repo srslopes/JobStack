@@ -24,6 +24,7 @@ namespace JobStack
         {
             InitializeComponent();
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
+            NtVagas();
             NtChat();
             if (aluno.IsNovo())
             {
@@ -128,6 +129,7 @@ namespace JobStack
             TextBlock textBlock = sender as TextBlock;
             if(textBlock.Text == "MINHAS INSCRIÇÕES")
             {
+                NtVagas();
                 TMinhasInscricoesAluno insc = new TMinhasInscricoesAluno();
                 ConteudoJanela.Children.Clear();
                 ConteudoJanela.Children.Add(insc);
@@ -161,6 +163,13 @@ namespace JobStack
             Notif.Text = n.ToString();
             if (n==0)Notificacao.Visibility = Visibility.Hidden;
             else Notificacao.Visibility = Visibility.Visible;
+        }
+        public void NtVagas()
+        {
+            int x = aluno.GetAprov();
+            NotifV.Text = x.ToString();
+            if (x == 0) NotificacaoV.Visibility = Visibility.Hidden;
+            else NotificacaoV.Visibility = Visibility.Visible;
         }
 
         private void txtBtnPerfil_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

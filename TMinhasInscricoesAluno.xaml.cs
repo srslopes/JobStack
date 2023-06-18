@@ -25,7 +25,9 @@ namespace JobStack
         {
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
             InitializeComponent();
-            AttVagas();
+            attFull();
+            NtVagas();
+            BancodeDados.MenuAluno.NtVagas();
         }
 
         public void AttVagas()
@@ -35,7 +37,7 @@ namespace JobStack
             List<Vaga> Vagas = BancodeDados.GetListaVagas();
             for (int i = Vagas.Count-1; i >=0 ; i--)
             {
-                if (aluno.VagaInscrita(i) && (Vagas[i].GetStatus() == 2 || Vagas[i].GetStatus() == 3))
+                if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 2)
                 {
                     DesignVagaInscrita v = new DesignVagaInscrita(i, this);
                     SPVagas.Children.Add(v);
@@ -49,15 +51,91 @@ namespace JobStack
                 SPVagas.Children.Add(sv);
             }
         }
+        public void NtVagas()
+        {
+            int n = 0;
+            n = aluno.GetAprov();
+            Notif.Text = n.ToString();
+            if (n == 0) Notificacao.Visibility = Visibility.Hidden;
+            else Notificacao.Visibility = Visibility.Visible;
+        }
+        private void attFull()
+        {
+            SPVagas.Children.Clear();
+            SPVagas.Height = 0;
+            List<Vaga> Vagas = BancodeDados.GetListaVagas();
+            for (int i = Vagas.Count - 1; i >= 0; i--)
+            {
+                if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 2)
+                {
+                    DesignVagaInscrita v = new DesignVagaInscrita(i, this);
+                    SPVagas.Children.Add(v);
+                    SPVagas.Height += 210;
+                }
+            }
+            for (int i = Vagas.Count - 1; i >= 0; i--)
+            {
+                if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 3 && Vagas[i].IsAlunoAprovado(BancodeDados.GetIdUser()))
+                {
+                    DesignVagaInscrita v = new DesignVagaInscrita(i, this);
+                    SPVagas.Children.Add(v);
+                    SPVagas.Height += 210;
+                }
+            }
+            for (int i = Vagas.Count - 1; i >= 0; i--)
+            {
+                if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 3 && !Vagas[i].IsAlunoAprovado(BancodeDados.GetIdUser()))
+                {
+                    DesignVagaInscrita v = new DesignVagaInscrita(i, this);
+                    SPVagas.Children.Add(v);
+                    SPVagas.Height += 210;
+                }
+            }
+            if (SPVagas.Children.Count == 0)
+            {
+                SPVagas.Height = 35;
+                SemVagas sv = new SemVagas();
+                SPVagas.Children.Add(sv);
+            }
+        }
 
         private void BtnEmAberto_Click(object sender, RoutedEventArgs e)
-        {
+        {            
             AttVagas();
         }
 
         private void BtnFinalizadas_Click(object sender, RoutedEventArgs e)
         {
-
+            aluno.ResetAprov();
+            NtVagas();
+            BancodeDados.MenuAluno.NtVagas();
+            SPVagas.Children.Clear();
+            SPVagas.Height = 0;
+            List<Vaga> Vagas = BancodeDados.GetListaVagas();
+            for (int i = Vagas.Count - 1; i >= 0; i--)
+            {
+                if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 3 && Vagas[i].IsAlunoAprovado(BancodeDados.GetIdUser()))
+                {
+                    DesignVagaInscrita v = new DesignVagaInscrita(i, this);
+                    SPVagas.Children.Add(v);
+                    SPVagas.Height += 210;
+                }
+            }
+            for (int i = Vagas.Count - 1; i >= 0; i--)
+            {
+                if (aluno.VagaInscrita(i) && Vagas[i].GetStatus() == 3 && !Vagas[i].IsAlunoAprovado(BancodeDados.GetIdUser()))
+                {
+                    DesignVagaInscrita v = new DesignVagaInscrita(i, this);
+                    SPVagas.Children.Add(v);
+                    SPVagas.Height += 210;
+                }
+            }
+            if (SPVagas.Children.Count == 0)
+            {
+                SPVagas.Height = 35;
+                SemVagas sv = new SemVagas();
+                SPVagas.Children.Add(sv);
+            }
         }
     }
 }

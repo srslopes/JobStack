@@ -50,7 +50,7 @@ namespace JobStack
         private void btnMenuAluno_Click(object sender, RoutedEventArgs e)
         {
 
-            BancodeDados.SetIdUser(1001);
+            BancodeDados.SetIdUser(1002);
             BancodeDados.MenuAluno = new TMenuAluno();
             BancodeDados.MenuAluno.Show();
         }

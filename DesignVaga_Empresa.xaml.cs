@@ -65,6 +65,10 @@ namespace JobStack
         private void BtnFinalizar_Click(object sender, RoutedEventArgs e)
         {
             vaga.Encerrar();
+            for(int i=0; i< vaga.GetAprovados().Count; i++)
+            {
+                BancodeDados.BuscarAluno(vaga.GetAprovados()[i]).Aprovar();
+            }
             AttDados();
             BancodeDados.MenuEmpresa.AttListas();
 
