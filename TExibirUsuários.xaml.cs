@@ -35,7 +35,7 @@ namespace JobStack
             switch(tipo)
             {
                 case 0:
-                    i = 1001;
+                    i = 1002;
                     while(BancodeDados.BuscarAluno(i)!=null)
                     {
                         DesignExibiçãoUsuario us = new DesignExibiçãoUsuario(i);

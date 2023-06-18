@@ -46,6 +46,24 @@ namespace JobStack
             Vagas = new List<int>();
         }
 
+        public Aluno(string n)
+        {
+            if(n.Equals("Login"))
+            {
+                SetEmail("login");
+                SetSenha("login");
+                SetNome(n);
+                curso = -1;
+                semestre = 0;
+                formacao = "";
+                experiencia = "";
+                SetIdImg(14);
+                BancodeDados.AdicionarAluno(this);
+                BancodeDados.SetIdUser(GetID());
+                Chat adm = new Chat(1);
+            }
+        }
+
         public void salvar()
         {
             if (GetID() != -1) return;

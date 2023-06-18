@@ -277,6 +277,7 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
 
         private void botãoVoltar_Click_1(object sender, RoutedEventArgs e)
         {
+            BancodeDados.SetIdUser(0);
             // Oculta o painel de senha e exibe o painel de e-mail
             gridSenha.Visibility = Visibility.Hidden;
             gridEmail.Visibility = Visibility.Visible;
@@ -321,7 +322,6 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
                 condiçãoEmailProblema.Text = "Formato de email inválido";
                 return;
             }
-
             // Caso contrário, oculta a mensagem de erro
             condiçãoEmailProblema.Visibility = Visibility.Hidden;
 
@@ -330,11 +330,32 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
             {
                 // Se houver algum erro selecionado, informa que a mensagem foi enviada para o email
                 // e exibe uma mensagem de sucesso ao usuário.
-                MessageBox.Show("Mensagem enviada para o email");
+                Aluno aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
+                Chat chat = BancodeDados.BuscarChat(aluno.ChatExiste(1));
+                chat.NovaMensagem($"Problema:\n" +erro.SelectedItem.ToString() +"\nEmail:\n" +textBoxEmailProblema.Text);
+
+                BancodeDados.SetIdUser(0);
+                // Oculta o painel de senha e exibe o painel de e-mail
+                gridSenha.Visibility = Visibility.Hidden;
+                gridEmail.Visibility = Visibility.Visible;
+                // Oculta o painel de suporte
+                gridProblema.Visibility = Visibility.Hidden;
+                // Oculta o botão "Voltar"
+                botãoVoltar.Visibility = Visibility.Hidden;
+
+                // Limpa o campo de e-mail pessoal
+                textBoxEmailProblema.Clear();
+
+                // Verifica se os itens já foram adicionados antes de adicioná-los novamente
+
+                // Chama o método Passo1() para atualizar a interface do usuário
+                Passo1();
+                InicializarComboBox();
             }
         }
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
+            BancodeDados.SetIdUser(1001);
             Grid.SetColumn(gridProblema, 1);
             gridProblema.Margin = gridEmail.Margin;
             gridProblema.Visibility = Visibility.Visible;

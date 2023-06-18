@@ -420,6 +420,8 @@ namespace JobStack
             Chat c = new Chat(1);
             IdUser = 0;
 
+            Aluno x = new Aluno("Login");
+
             Aluno n5 = new Aluno("e", "efg");
             n5.SetNome("Estevan Ferreira Rodrigues");
             n5.SetRa(966049137);
@@ -679,6 +681,7 @@ namespace JobStack
             Imgs.Add(new BitmapImage(new Uri("Imagens/rosalina.png", UriKind.Relative)));//11
             Imgs.Add(new BitmapImage(new Uri("Imagens/isabelle.png", UriKind.Relative)));//12
             Imgs.Add(new BitmapImage(new Uri("Imagens/empresa.png", UriKind.Relative)));//13
+            Imgs.Add(new BitmapImage(new Uri("Imagens/login.jpg", UriKind.Relative)));//14
         }
 
         public static BitmapImage BuscarImg(int id)

@@ -32,7 +32,7 @@ namespace JobStack
             SPAlunos.Children.Clear();
             SPAlunos.Height = 0;
             int i;
-            i = 1001;
+            i = 1002;
             while (BancodeDados.BuscarAluno(i) != null)
             {
                 DesignUsuarioAluno_Coordenador us = new DesignUsuarioAluno_Coordenador(i);
