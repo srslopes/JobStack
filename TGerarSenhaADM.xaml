@@ -108,6 +108,52 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <!-- STYLE CAMPO SENHA -->
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        <Style x:Key="PasswordBoxStyle1" TargetType="{x:Type PasswordBox}">
+            <Setter Property="PasswordChar" Value="●"/>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="#003964"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border x:Name="border" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
     <Grid Background="#FFD9EBFB">
         <Grid.Resources>
@@ -148,24 +194,21 @@
                 VerticalAlignment="Top" Margin="0,10,14,0" 
                 Click="BtnFechar_Click" Style="{DynamicResource BtnFecharStyle}"
                     />
-        <TextBlock x:Name="NovaSenha"
-                   Text="Nova Senha"
-                   FontSize="24"
-                   FontFamily="Century Gothic Bold"
+        <TextBlock 
+                   Text="Digite no campo abaixo:"
+                   FontSize="22"
+                   FontFamily="Century Gothic"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center" Margin="327.696,215.286,330.696,155.286"
+                   VerticalAlignment="Center" Margin="263,166,269,207"
                     />
-        <Button x:Name="BtnCriar"
-                Content="Criar"
-                Width="130"
-                Height="40"
-                FontFamily="Century Gothic"
-                FontSize="22"
-                Background="#003964"
-                Foreground="White"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top" Margin="335,120,335,0" Style="{DynamicResource ButtonStyle1}"
-                />
+        <PasswordBox x:Name="NovaSenha"
+                 Width="400"
+                 Height="30"
+                 FontFamily="Century Gothic"
+                 FontSize="18"
+                 Foreground="Black"
+                 Padding="5, 0, 5, 0" Margin="200,207,200,163" Style="{DynamicResource PasswordBoxStyle1}"
+            />
         <Button x:Name="BtnSalvar"
             Content="Salvar"
             Width="130"

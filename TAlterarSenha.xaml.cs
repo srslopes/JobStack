@@ -48,6 +48,7 @@ namespace JobStack
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
             user.SetSenha(NovaSenha.Password);
+
             this.Close();
         }
     }

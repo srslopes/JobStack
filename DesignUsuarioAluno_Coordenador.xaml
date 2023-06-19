@@ -79,7 +79,7 @@
                 </Rectangle.Effect>
             </Rectangle>
             <!-- FOTO DO USUARIO -->
-            <Border x:Name="FotoPerfil" HorizontalAlignment="Left" Margin="22,11,0,7.5" Width="80" Height="80" CornerRadius="50">
+            <Border x:Name="FotoPerfil" HorizontalAlignment="Left" Margin="22,8,0,12" Width="80" Height="80" CornerRadius="50">
                 <Border.Background>
                     <ImageBrush x:Name="Img" ImageSource="blank-profile-picture-973460_1280-1-705x705.png" Stretch="Fill" />
                 </Border.Background>
@@ -94,7 +94,7 @@
                    Margin="115.5,35.736,0,0" 
                    FontSize="24" 
                    FontFamily="Century Gothic" 
-                   Foreground="#FF003964"/>
+                   Foreground="#003964"/>
 
             <Button x:Name="BtnVerPerfil"
                 Width="110"

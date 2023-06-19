@@ -27,7 +27,17 @@
                        HorizontalAlignment="Center"
                        RadiusY="10" RadiusX="10">
                     </Rectangle>
-                    <TextBlock x:Name="Mensagem" Text="M" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontFamily="Century Gothic" MaxWidth="180" TextWrapping="Wrap"  Height="Auto" Width="Auto">
+                    <TextBlock x:Name="Mensagem" 
+                               Text="M" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" 
+                               FontSize="18" 
+                               FontFamily="Century Gothic" 
+                               MaxWidth="180" 
+                               Foreground="White"
+                               TextWrapping="Wrap"  
+                               Height="Auto" 
+                               Width="Auto">
 
                     </TextBlock>
                 </Grid>

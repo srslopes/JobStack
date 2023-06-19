@@ -37,7 +37,13 @@ namespace JobStack
             bool clear = true;
             if (NomeEmpresa.Text.Equals(""))
             {
-                //nome vazio
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuEmpresa.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("A empresa precisa ter um nome.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
 
@@ -47,25 +53,49 @@ namespace JobStack
             }
             catch (FormatException)
             {
-                //Ra inválida
+                NotificacaoErro notificationWindow = new NotificacaoErro();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemErro("O CNPJ inserido é inválido.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 CnpjEmpresa.Text = "";
                 clear = false;
             }
 
             if (EmailEmpresa.Text.Equals(""))
             {
-                //email vazio
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("Insira um e-mail para o usuário.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
             else if (BancodeDados.BuscarID(EmailEmpresa.Text) != 0)
             {
-                //email ja existe
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("Esse e-mail já existe.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
 
             if(SenhaEmpresa.Password.Equals(""))
             {
-                //senha vazia
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("Crie uma senha inicial para o usuário.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
 
@@ -79,6 +109,14 @@ namespace JobStack
                 empresa.salvar();
                 parent.AttLista();
                 BancodeDados.MenuCoordenador.CarregarJanela(parent);
+
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this);
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemSucesso("A empresa foi cadastrada.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
             }
         }
     }

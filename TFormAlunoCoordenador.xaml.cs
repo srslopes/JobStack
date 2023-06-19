@@ -39,19 +39,37 @@ namespace JobStack
 
             if (NomeAluno.Text.Equals(""))
             {
-                //nome esta vazio
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("O usuário precisa ter um nome.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
 
             if (CBCursos.SelectedIndex == -1)
             {
-                //selecionar curso
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("O usuário deve participar de um curso.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
 
             if (CBPeriodo.SelectedIndex == -1)
             {
-                //selecionar periodo
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuEmpresa.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("Selecione o período cursado.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
 
@@ -61,7 +79,13 @@ namespace JobStack
             }
             catch (FormatException)
             {
-                //Ra inválida
+                NotificacaoErro notificationWindow = new NotificacaoErro();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemErro("O RA inserido é inválido.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 RAAluno.Text = "";
                 clear = false;
             }
@@ -73,13 +97,25 @@ namespace JobStack
             }
             else if (BancodeDados.BuscarID(EmailAluno.Text) != 0)
             {
-                //email ja existe
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("Esse e-mail já existe.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
 
             if(SenhaAluno.Password.Equals(""))
             {
-                //senha vazia
+                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemAtencao("Crie uma senha inicial para o usuário.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
                 clear = false;
             }
 
@@ -95,6 +131,14 @@ namespace JobStack
                 aluno.salvar();
                 parent.AttLista();
                 BancodeDados.MenuCoordenador.CarregarJanela(parent);
+
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Owner = TMenuCoordenador.GetWindow(this);
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemSucesso("O aluno foi cadastrado.");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
             }
         }
     }

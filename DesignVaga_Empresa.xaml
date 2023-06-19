@@ -50,8 +50,8 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#2973AA"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#2973AA"/>
+                                <Setter Property="Background" TargetName="border" Value="#67A8D8"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#67A8D8"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -81,20 +81,20 @@
 
             <TextBlock x:Name="NomeVaga" Text="Nome da Vaga" FontSize="24" 
                    FontFamily="Century Gothic" 
-                   Foreground="#FF003964"/>
+                   Foreground="#003964"/>
 
             <TextBlock x:Name="TipoVaga" 
                    Text="Tipo da Vaga" 
                     Margin="10,5,0,0"
                    FontSize="18" 
                    FontFamily="Century Gothic" 
-                   Foreground="#FF003964"/>
+                   Foreground="#003964"/>
             <TextBlock x:Name="StatusVaga" 
                    Text="Status" 
                     Margin="15,8,0,0"
                    FontSize="14" 
                    FontFamily="Century Gothic" 
-                   Foreground="#FF003964"/>
+                   Foreground="#003964"/>
         </StackPanel>
         
         <TextBlock x:Name="DescricaoVaga" 
@@ -114,7 +114,7 @@
                 Content="Ver mais" 
                 FontSize="12" 
                 FontFamily="Century Gothic"
-                Background="#FF27597E"
+                Background="#003964"
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
@@ -125,7 +125,7 @@
                 Content="Finalizar" 
                 FontSize="12" 
                 FontFamily="Century Gothic"
-                Background="#FF27597E"
+                Background="#003964"
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 

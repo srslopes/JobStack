@@ -103,7 +103,7 @@
                        Fill="AliceBlue"
                        RadiusX="10"
                        RadiusY="10"
-                       Width="910" Margin="0,0,0,46.602"
+                       Width="910" Margin="0,0,0,9.204"
                        >
                 <Rectangle.Effect>
                     <DropShadowEffect ShadowDepth="2" Opacity="0.2" BlurRadius="3"/>
@@ -169,9 +169,9 @@
 
                 <ScrollViewer x:Name="SVVagas"
                               Width="910"
-                              Height="161.942"
+                              Height="210"
                               HorizontalAlignment="Center"
-                              VerticalAlignment="Center" Margin="0,0,0,48.058">
+                              VerticalAlignment="Center" Margin="0,1,0,0.369">
                     <StackPanel x:Name="SPVagas"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Top"
@@ -182,7 +182,7 @@
                 </ScrollViewer>
             </Grid>
         </Grid>
-        
+
         <Button x:Name="BtnEditar" 
             Width="90"
             Height="30"

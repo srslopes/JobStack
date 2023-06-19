@@ -93,7 +93,7 @@
                    Margin="139,43,0,0" 
                    FontSize="24" 
                    FontFamily="Century Gothic" 
-                   Foreground="#FF003964"/>
+                   Foreground="#003964"/>
         <TextBlock x:Name="IDUsuario" 
                    Text="ID" 
                    VerticalAlignment="Top" 
@@ -121,7 +121,7 @@
                 Content="Gerar nova senha" 
                 FontSize="11" 
                 FontFamily="Century Gothic"
-                Background="#FF27597E"
+                Background="#003964"
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 
@@ -134,7 +134,7 @@
                 Content="Desativar" 
                 FontSize="12" 
                 FontFamily="Century Gothic"
-                Background="#FF27597E"
+                Background="#003964"
                 Foreground="White"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center" 

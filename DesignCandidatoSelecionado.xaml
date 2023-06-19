@@ -94,7 +94,7 @@
                    Margin="115.5,35.736,0,0" 
                    FontSize="24" 
                    FontFamily="Century Gothic" 
-                   Foreground="#FF003964"/>
+                   Foreground="#003964"/>
 
             <Button x:Name="BtnVerPerfil"
                 Width="110"

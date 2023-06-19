@@ -61,6 +61,9 @@
     <Compile Include="DesignCandidatoSelecionado.xaml.cs">
       <DependentUpon>DesignCandidatoSelecionado.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DesignListaAluno_Coordenador.xaml.cs">
+      <DependentUpon>DesignListaAluno_Coordenador.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DesignUsuarioAluno_Coordenador.xaml.cs">
       <DependentUpon>DesignUsuarioAluno_Coordenador.xaml</DependentUpon>
     </Compile>
@@ -69,6 +72,12 @@
     </Compile>
     <Compile Include="DesignUsuarioInscrito.xaml.cs">
       <DependentUpon>DesignUsuarioInscrito.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DesignVagaLista_Coordenador.xaml.cs">
+      <DependentUpon>DesignVagaLista_Coordenador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExibirPerfilAluno_Coordenador2.xaml.cs">
+      <DependentUpon>ExibirPerfilAluno_Coordenador2.xaml</DependentUpon>
     </Compile>
     <Compile Include="NotificacaoAtencao.xaml.cs">
       <DependentUpon>NotificacaoAtencao.xaml</DependentUpon>
@@ -237,6 +246,9 @@
     <Compile Include="TVagasPendentesEmpresa.xaml.cs">
       <DependentUpon>TVagasPendentesEmpresa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VagaCompleta_Coordenador.xaml.cs">
+      <DependentUpon>VagaCompleta_Coordenador.xaml</DependentUpon>
+    </Compile>
     <Page Include="BatePapo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -257,6 +269,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DesignListaAluno_Coordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DesignUsuarioAluno_Coordenador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -266,6 +282,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DesignUsuarioInscrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DesignVagaLista_Coordenador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExibirPerfilAluno_Coordenador2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -507,6 +531,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TVagasPendentesEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VagaCompleta_Coordenador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

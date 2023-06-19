@@ -158,7 +158,7 @@
                     Margin="0,0,10,0"
                     Height="44"                    
                     Width="44" 
-                    Background="#FF003964" 
+                    Background="#003964" 
                     AutomationProperties.HelpText="Envia Mensagem" 
                     BorderBrush="{x:Null}" 
                     FontSize="18" 

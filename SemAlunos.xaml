@@ -12,7 +12,7 @@
     <Grid>
         <TextBox Text="Sem alunos para exibir" FontSize="24" 
                    FontFamily="Century Gothic" 
-                   Foreground="#FF003964"
+                   Foreground="#003964"
                  Background="Transparent"
                  BorderThickness="0"/>
     </Grid>

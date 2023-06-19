@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JobStack"
         mc:Ignorable="d"
-        Title="TMenuAdministrador" 
+        Title="Menu" 
         Height="640" 
         Width="1024"
         ResizeMode="NoResize"
