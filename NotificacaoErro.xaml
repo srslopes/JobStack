@@ -87,20 +87,11 @@
               HorizontalAlignment="Left"
               VerticalAlignment="Center"
               Margin="20, 0, 0, 0">
-            <Ellipse 
-                 Width="70"
-                 Height="70"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Center"
-                 Margin="-0.01,0,0,0"
-                 Fill="White">
-
-            </Ellipse>
-            <Image Source="Icones/error.png"  
-                   VerticalAlignment="Center" 
-                   HorizontalAlignment="Center"
-                   Height="35" 
-                   Width="35" Margin="18,19,17,16"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="151" Source="Imagens/alerta_falha.png" Margin="-23,-16,-58,-14" Grid.RowSpan="2"/>
         </Grid>
         <TextBlock Text="Erro."
                    FontFamily="Century Gothic Bold"
@@ -109,18 +100,17 @@
                    Background="Transparent"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Top"
-                   Margin="98.623,40,305.623,0"
+                   Margin="144,38,260,0"
             />
         <TextBlock x:Name="MsgErro"
-                   Text="Insira o texto aqui"
                    FontSize="16"
                    FontFamily="Century Gothic"
                    Background="Transparent"
                    Foreground="White"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"
-                   Margin="99.387,70.191,0,40.191" Width="343.807"
-                        />
+                   Margin="144,75,-38,35" Width="344"
+                        ><Run Text="Que tal deslogar da próxima vez?"/><Run Text="😉 "/></TextBlock>
         <Button x:Name="BtnFechar"
                 Width="30"
                 Height="30"
