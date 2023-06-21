@@ -20,9 +20,43 @@ namespace JobStack
     /// </summary>
     public partial class DesignVagaLista_Coordenador : UserControl
     {
-        public DesignVagaLista_Coordenador()
+        private Vaga vaga;
+        public DesignVagaLista_Coordenador(int id)
         {
             InitializeComponent();
+            vaga = BancodeDados.BuscarVaga(id);
+            AttDados();
+        }
+
+        public void AttDados()
+        {
+            NomeVaga.Text = vaga.GetNome();
+            var converter = new BrushConverter();
+            switch (vaga.GetStatus())
+            {
+                case 0:
+                    StatusVaga.Text = "Aguardando";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Orange");
+                    break;
+                case 1:
+                    StatusVaga.Text = "Rejeitada";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
+                    break;
+                case 2:
+                    StatusVaga.Text = "Aberta";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Green");
+                    break;
+                case 3:
+                    StatusVaga.Text = "Encerrada";
+                    StatusVaga.Foreground = (Brush)converter.ConvertFromString("Red");
+                    break;
+            }
+        }
+
+        private void BtnVerMais_Click(object sender, RoutedEventArgs e)
+        {
+            VagaCompleta_Coordenador vc = new VagaCompleta_Coordenador(vaga.GetID());
+            BancodeDados.MenuCoordenador.CarregarJanela(vc);
         }
     }
 }

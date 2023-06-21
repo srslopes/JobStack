@@ -143,7 +143,8 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                         />
-            <Button x:Name="BtnEditar" 
+            <Button x:Name="BtnEditar"
+                    Visibility="Hidden"
                 Width="90"
                 Height="30"
                 Content="Editar"
@@ -160,7 +161,7 @@
                 FontFamily="Century Gothic"
                 FontSize="16"
                 Background="#003964"
-                Foreground="White" Margin="857,9,13,351" Style="{DynamicResource ButtonStyle1}" 
+                Foreground="White" Margin="857,9,13,351" Style="{DynamicResource ButtonStyle1}" Click="BtnChat_Click" 
                     >
                 <Image Source="Icones/icon_chat.png" Width="25" Height="25"/>
             </Button>
@@ -221,7 +222,7 @@
             Background="#003964"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}" 
+            Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}" Click="BtnVoltar_Copy_Click" 
            
             >
             <Image Source="Icones/back.png" Height="19.625" Width="20.292" />

@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
              d:DesignHeight="100" 
-             d:DesignWidth="910">
+             d:DesignWidth="870"
+             Margin="0,0,0,10"
+             HorizontalAlignment="Center" VerticalAlignment="Top">
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -60,7 +62,7 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Rectangle Width="900"
+        <Rectangle Width="870"
                    Height="100"
                    Fill="White"
                    RadiusX="10"
@@ -100,6 +102,6 @@
             Foreground="White"
             HorizontalAlignment="Right"
             VerticalAlignment="Center" 
-            Style="{DynamicResource RoundedButtonStyle}"  />
+            Style="{DynamicResource RoundedButtonStyle}" Click="BtnVerMais_Click"  />
     </Grid>
 </UserControl>

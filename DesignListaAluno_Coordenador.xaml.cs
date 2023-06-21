@@ -20,9 +20,28 @@ namespace JobStack
     /// </summary>
     public partial class DesignListaAluno_Coordenador : UserControl
     {
-        public DesignListaAluno_Coordenador()
+        private Vaga vaga;
+        private Aluno aluno;
+
+        public DesignListaAluno_Coordenador(int idAluno, int idVaga)
         {
             InitializeComponent();
+            vaga = BancodeDados.BuscarVaga(idVaga);
+            aluno = BancodeDados.BuscarAluno(idAluno);
+            AttDados();
+        }
+
+        public void AttDados()
+        {
+            Img.ImageSource = BancodeDados.BuscarImg(aluno.GetIdImg());
+            NomeAluno.Text = aluno.GetNome();
+            if (!vaga.IsAlunoAprovado(aluno.GetID())) Aprovacao.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnVerPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            ExibirPerfilAluno_Coordenador2 ep = new ExibirPerfilAluno_Coordenador2(aluno.GetID(), vaga.GetID());
+            BancodeDados.MenuCoordenador.CarregarJanela(ep);
         }
     }
 }
