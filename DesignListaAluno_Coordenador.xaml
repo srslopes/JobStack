@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:JobStack"
              mc:Ignorable="d" 
              d:DesignHeight="100" 
-             d:DesignWidth="910"
+             d:DesignWidth="880"
+             Margin="0,0,0,10"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Top"
              >
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
@@ -66,7 +69,7 @@
         <Rectangle Fill="White" 
                    RadiusX="10" 
                    RadiusY="10" 
-                   Width="910"
+                   Width="880"
                    Height="100" Margin="0,1,0,-1"
                   >
             <Rectangle.Effect>
@@ -90,7 +93,9 @@
             FontSize="24" 
             FontFamily="Century Gothic" 
             Foreground="#003964" Width="565"/>
-
+        <TextBlock x:Name="Aprovacao" Text="Aprovado" Foreground="Green" FontSize="20" 
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="116,62,0,0"
+                   FontFamily="Century Gothic" />
         <Button x:Name="BtnVerPerfil"
             Width="110"
             Height="30"
@@ -100,7 +105,7 @@
             Foreground="White" 
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
-            Content="Ver perfil" Margin="0,35,33,35" Style="{DynamicResource ButtonStyle1}"  
+            Content="Ver perfil" Margin="0,35,33,35" Style="{DynamicResource ButtonStyle1}" Click="BtnVerPerfil_Click"  
             />
 
     </Grid>

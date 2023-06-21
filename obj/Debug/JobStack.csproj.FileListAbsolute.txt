@@ -1071,3 +1071,11 @@ C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignListaAl
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\DesignVagaLista_Coordenador.baml
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\ExibirPerfilAluno_Coordenador2.baml
 C:\Users\nicol\OneDrive\Documentos\Repositorios\JobStack\obj\Debug\VagaCompleta_Coordenador.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignListaAluno_Coordenador.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignVagaLista_Coordenador.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\ExibirPerfilAluno_Coordenador2.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\VagaCompleta_Coordenador.g.cs
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignListaAluno_Coordenador.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\DesignVagaLista_Coordenador.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\ExibirPerfilAluno_Coordenador2.baml
+C:\Users\SaMuK\source\repos\JobStack\obj\Debug\VagaCompleta_Coordenador.baml
