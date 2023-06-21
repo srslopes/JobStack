@@ -54,6 +54,7 @@ namespace JobStack
             textBlockSuporteTécnico.Visibility = Visibility.Visible;
             botãoVoltar.Visibility = Visibility.Hidden;
             textBlockCondiçãoEmail.Visibility = Visibility.Hidden;
+            condiçãoEmailProblema.Visibility= Visibility.Hidden;
         }
 
        
