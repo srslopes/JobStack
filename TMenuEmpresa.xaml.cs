@@ -24,9 +24,11 @@ namespace JobStack
         public TMenuEmpresa()
         {
             InitializeComponent();
+            NotificacaoV.Visibility = Visibility.Visible;
             empresa = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser());
             sub = null;
             NtChat();
+            NtVagas();
             if(empresa.IsNovo())
             {
                 empresa.SetNovo(false);
@@ -120,6 +122,13 @@ namespace JobStack
             Notif.Text = n.ToString();
             if (n == 0) Notificacao.Visibility = Visibility.Hidden;
             else Notificacao.Visibility = Visibility.Visible;
+        }
+
+        public void NtVagas()
+        {
+            NotifV.Text = empresa.GetNotificacoes().ToString();
+            if (empresa.GetNotificacoes() == 0) NotificacaoV.Visibility = Visibility.Hidden;
+            else NotificacaoV.Visibility = Visibility.Visible;
         }
 
         private void txtBtnPerfil_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

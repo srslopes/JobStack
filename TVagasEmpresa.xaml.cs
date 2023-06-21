@@ -23,7 +23,7 @@ namespace JobStack
         private TVagasPendentesEmpresa pendentes;
         private TVagasEmAberto aberto;
         private TVagasFinalizadasEmpresa finalizadas;
-
+        private Empresa empresa;
         public TVagasEmpresa()
         {
             InitializeComponent();
@@ -32,6 +32,8 @@ namespace JobStack
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(aberto);
             finalizadas = null;
+            empresa = BancodeDados.BuscarEmpresa(BancodeDados.GetIdUser());
+            NtVagas();
         }
 
         private void BtnCriar_Click(object sender, RoutedEventArgs e)
@@ -44,13 +46,19 @@ namespace JobStack
 
         private void BtnPendentes_Click(object sender, RoutedEventArgs e)
         {
-            pendentes = new TVagasPendentesEmpresa();
+            empresa.ResetNtRejeicoes();
+            BancodeDados.MenuEmpresa.NtVagas();
+            NtVagas();
+            pendentes = new TVagasPendentesEmpresa();            
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(pendentes);
         }
 
         private void BtnEmAberto_Click(object sender, RoutedEventArgs e)
         {
+            empresa.ResetNtAprovacoes();
+            BancodeDados.MenuEmpresa.NtVagas();
+            NtVagas();
             aberto = new TVagasEmAberto();
             GridConteudo.Children.Clear();
             GridConteudo.Children.Add(aberto);
@@ -98,6 +106,15 @@ namespace JobStack
             else Console.WriteLine("Etapa 2 Falhou");
             if (finalizadas != null) finalizadas.AttLista();
             else Console.WriteLine("Etapa 2 Falhou");
+        }
+        public void NtVagas()
+        {
+            NotifA.Text = empresa.GetNtAprovacoes().ToString();
+            NotifP.Text = empresa.GetNtRejeicoes().ToString();
+            if (empresa.GetNtAprovacoes() == 0) NotificacaoA.Visibility = Visibility.Hidden;
+            else NotificacaoA.Visibility = Visibility.Visible;
+            if (empresa.GetNtRejeicoes() == 0) NotificacaoP.Visibility = Visibility.Hidden;
+            else NotificacaoP.Visibility = Visibility.Visible;
         }
     }
 }

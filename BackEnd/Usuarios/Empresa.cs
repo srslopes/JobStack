@@ -13,7 +13,10 @@ namespace JobStack
         private string sobre;
 
         private long cnpj;
-     
+
+        private int ntAprovacoes;
+        private int ntRejeicoes;
+
         public Empresa(string e, string s)
         {
             SetEmail(e);
@@ -22,6 +25,8 @@ namespace JobStack
             sobre = "";
             Vagas = new List<int>();
             SetIdImg(13);
+            ntAprovacoes = 0;
+            ntRejeicoes = 0;
             BancodeDados.AdicionarEmpresa(this);
             BancodeDados.SetIdUser(GetID());
             Chat adm = new Chat(1);
@@ -32,6 +37,8 @@ namespace JobStack
         {
             SetID(-1);
             cnpj = 0;
+            ntAprovacoes = 0;
+            ntRejeicoes = 0;
             sobre = "";
             SetIdImg(13);
             Vagas = new List<int>();
@@ -83,6 +90,40 @@ namespace JobStack
         public long GetCNPJ()
         {
             return cnpj;
+        }
+
+        public int GetNtAprovacoes()
+        {
+            return ntAprovacoes;
+        }
+
+        public void AddNtAprovacoes()
+        {
+            ntAprovacoes++;
+        }
+
+        public void ResetNtAprovacoes()
+        {
+            ntAprovacoes = 0;
+        }
+        public int GetNtRejeicoes()
+        {
+            return ntRejeicoes;
+        }
+
+        public void AddNtRejeicoes()
+        {
+            ntRejeicoes++;
+        }
+
+        public void ResetNtRejeicoes()
+        {
+            ntRejeicoes = 0;
+        }
+
+        public int GetNotificacoes()
+        {
+            return GetNtAprovacoes() + GetNtRejeicoes();
         }
 
     }

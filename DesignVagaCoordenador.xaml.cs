@@ -64,6 +64,7 @@ namespace JobStack
         private void BtnAprovar_Click_1(object sender, RoutedEventArgs e)
         {
             vaga.Aprovar();
+            BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).AddNtAprovacoes();
             AttDados();
             TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
             BancodeDados.MenuCoordenador.CarregarJanela(analisar);
@@ -72,6 +73,7 @@ namespace JobStack
         private void BtnRejeitar_Click(object sender, RoutedEventArgs e)
         {
             vaga.Rejeitar();
+            BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).AddNtRejeicoes();
             AttDados();
             TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
             BancodeDados.MenuCoordenador.CarregarJanela(analisar);
