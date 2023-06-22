@@ -70,6 +70,12 @@ namespace JobStack
                 BancodeDados.BuscarAluno(vaga.GetAprovados()[i]).Aprovar();
             }
             AttDados();
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Vaga finalizada");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
             BancodeDados.MenuEmpresa.AttListas();
 
         }

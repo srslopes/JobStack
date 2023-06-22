@@ -208,6 +208,7 @@
                  Foreground="Black"
                  Padding="5, 0, 5, 0" Margin="200,205.384,200,164.615" Style="{DynamicResource PasswordBoxStyle1}"
             />
+        <TextBlock x:Name="Erro" Text="Campo vazio" Foreground="Red" FontFamily="Century Gothic" FontSize ="18" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,100,0,0" Visibility="Hidden" />
         <Button x:Name="BtnSalvar"
             Content="Salvar"
             Width="130"

@@ -99,7 +99,11 @@ namespace JobStack
         {
             for (int i = 0; i < Inscritos.Count; i++)
             {
-                if (Inscritos[i] == id) Inscritos.RemoveAt(i);
+                if (Inscritos[i] == id)
+                {
+                    Inscritos.RemoveAt(i);
+                    if (IsAlunoAprovado(id)) DesaprovarAluno(id);
+                }
             }
         }
 

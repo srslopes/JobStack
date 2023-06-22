@@ -286,5 +286,13 @@
             VerticalAlignment="Top" Style="{DynamicResource PasswordBoxStyle1}"
                      IsEnabled="False"
                         />
+
+        <TextBlock x:Name="ErroNome" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="272,181,0,0" />
+        <TextBlock x:Name="ErroCNPJvazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="231,226,0,0" />
+        <TextBlock x:Name="ErroCNPJinvalido" Text="Valor invalido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="231,226,0,0" />
+        <TextBlock x:Name="ErroEmailExiste" Text="Email já existe" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="316,272,0,0" />
+        <TextBlock x:Name="ErroEmailVazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="318,272,0,0" />
+        <TextBlock x:Name="ErroSenha" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="439,326,0,0" />
+       
     </Grid>
 </UserControl>

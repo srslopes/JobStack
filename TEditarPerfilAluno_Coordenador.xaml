@@ -659,5 +659,15 @@
                 FontSize="16" Margin="806.087,583.543,37.912,26.456"
                 Style="{DynamicResource ButtonStyle1}" Click="BtnCancelar_Click" 
            />
+
+        <TextBlock x:Name="ErroNome" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,170,0,0" />
+        <TextBlock x:Name="ErroRAvazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,170,0,0" />
+        <TextBlock x:Name="ErroRAinvalido" Text="Valor invalido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,170,0,0" />
+        <TextBlock x:Name="ErroEmailExiste" Text="Email já existe" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="308,218,0,0" />
+        <TextBlock x:Name="ErroEmailVazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="310,218,0,0" />
+        <TextBlock x:Name="ErroSenha" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="444,264,0,0" />
+        <TextBlock x:Name="ErroCurso" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,317,0,0" />
+        <TextBlock x:Name="ErroPeriodo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="246,368,0,0" />
+       
     </Grid>
 </UserControl>

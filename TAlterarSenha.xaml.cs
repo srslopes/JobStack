@@ -47,9 +47,22 @@ namespace JobStack
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            user.SetSenha(NovaSenha.Password);
-
-            this.Close();
+            Erro.Visibility = Visibility.Hidden;
+            if (!NovaSenha.Password.Equals(""))
+            {
+                user.SetSenha(NovaSenha.Password);
+                this.Close();
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Topmost = true;
+                notificationWindow.AtualizarMensagemSucesso("Senha alterada com sucesso");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
+            }
+            else
+            {
+                Erro.Visibility = Visibility.Visible;
+            }
+            
         }
     }
 }

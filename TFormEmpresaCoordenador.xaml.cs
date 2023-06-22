@@ -25,79 +25,67 @@ namespace JobStack
         {
             InitializeComponent();
             parent = janela;
+            EsconderErros();
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
             BancodeDados.MenuCoordenador.CarregarJanela(parent);
         }
-
+        public void EsconderErros()
+        {
+            ErroNome.Visibility = Visibility.Hidden;
+            ErroCNPJvazio.Visibility = Visibility.Hidden;
+            ErroCNPJinvalido.Visibility = Visibility.Hidden;
+            ErroEmailExiste.Visibility = Visibility.Hidden;
+            ErroEmailVazio.Visibility = Visibility.Hidden;
+            ErroSenha.Visibility = Visibility.Hidden;
+        }
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
+            EsconderErros();
             bool clear = true;
             if (NomeEmpresa.Text.Equals(""))
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuEmpresa.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("A empresa precisa ter um nome.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroNome.Visibility = Visibility.Visible;
                 clear = false;
+            }
+            if (CnpjEmpresa.Text.Equals(""))
+            {
+                ErroCNPJvazio.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                try
+                {
+                    long x = long.Parse(CnpjEmpresa.Text);
+                }
+                catch (FormatException)
+                {
+                    ErroCNPJinvalido.Visibility = Visibility.Visible;
+                    CnpjEmpresa.Text = "";
+                    clear = false;
+                }
             }
 
-            try
-            {
-                long x = long.Parse(CnpjEmpresa.Text);
-            }
-            catch (FormatException)
-            {
-                NotificacaoErro notificationWindow = new NotificacaoErro();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemErro("O CNPJ inserido é inválido.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
-                CnpjEmpresa.Text = "";
-                clear = false;
-            }
 
             if (EmailEmpresa.Text.Equals(""))
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("Insira um e-mail para o usuário.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroEmailVazio.Visibility = Visibility.Visible;
                 clear = false;
             }
             else if (BancodeDados.BuscarID(EmailEmpresa.Text) != 0)
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("Esse e-mail já existe.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroEmailExiste.Visibility = Visibility.Visible;
                 clear = false;
             }
 
-            if(SenhaEmpresa.Password.Equals(""))
+            if (SenhaEmpresa.Password.Equals(""))
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("Crie uma senha inicial para o usuário.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroSenha.Visibility = Visibility.Visible;
                 clear = false;
             }
+
 
             if (clear)
             {

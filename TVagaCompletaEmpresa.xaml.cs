@@ -111,6 +111,12 @@ namespace JobStack
                 BancodeDados.BuscarAluno(vaga.GetAprovados()[i]).Aprovar();
             }
             BancodeDados.MenuEmpresa.CarregarSubJanela(2);
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Vaga finalizada");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            //notificationWindow.ShowDialog();
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)

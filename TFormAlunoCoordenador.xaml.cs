@@ -26,6 +26,7 @@ namespace JobStack
         {
             parent = janela;
             InitializeComponent();
+            EsconderErros();
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
@@ -33,89 +34,74 @@ namespace JobStack
             BancodeDados.MenuCoordenador.CarregarJanela(parent);
         }
 
+        public void EsconderErros()
+        {
+            ErroNome.Visibility = Visibility.Hidden;
+            ErroRAvazio.Visibility = Visibility.Hidden;
+            ErroRAinvalido.Visibility = Visibility.Hidden;
+            ErroEmailExiste.Visibility = Visibility.Hidden;
+            ErroEmailVazio.Visibility = Visibility.Hidden;
+            ErroSenha.Visibility = Visibility.Hidden;
+            ErroCurso.Visibility = Visibility.Hidden;
+            ErroPeriodo.Visibility = Visibility.Hidden;
+        }
+
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
+            EsconderErros();
             bool clear = true;
+
 
             if (NomeAluno.Text.Equals(""))
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("O usuário precisa ter um nome.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroNome.Visibility = Visibility.Visible;
                 clear = false;
             }
 
             if (CBCursos.SelectedIndex == -1)
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("O usuário deve participar de um curso.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroCurso.Visibility = Visibility.Visible;
                 clear = false;
             }
 
             if (CBPeriodo.SelectedIndex == -1)
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuEmpresa.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("Selecione o período cursado.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroPeriodo.Visibility = Visibility.Visible;
                 clear = false;
+            }
+            if (RAAluno.Text.Equals(""))
+            {
+                ErroRAvazio.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                try
+                {
+                    long x = long.Parse(RAAluno.Text);
+                }
+                catch (FormatException)
+                {
+                    ErroRAinvalido.Visibility = Visibility.Visible;
+                    RAAluno.Text = "";
+                    clear = false;
+                }
             }
 
-            try
-            {
-                long x = long.Parse(RAAluno.Text);
-            }
-            catch (FormatException)
-            {
-                NotificacaoErro notificationWindow = new NotificacaoErro();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemErro("O RA inserido é inválido.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
-                RAAluno.Text = "";
-                clear = false;
-            }
 
             if (EmailAluno.Text.Equals(""))
             {
-
+                ErroEmailVazio.Visibility = Visibility.Visible;
                 clear = false;
             }
             else if (BancodeDados.BuscarID(EmailAluno.Text) != 0)
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("Esse e-mail já existe.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroEmailExiste.Visibility = Visibility.Visible;
                 clear = false;
             }
 
-            if(SenhaAluno.Password.Equals(""))
+            if (SenhaAluno.Password.Equals(""))
             {
-                NotificacaoAtencao notificationWindow = new NotificacaoAtencao();
-                notificationWindow.Owner = TMenuCoordenador.GetWindow(this); //sempre precisa determinar a janela que a notificação vai se sobrepor
-                notificationWindow.Topmost = true;
-                //aqui atualiza o texto da notificação
-                notificationWindow.AtualizarMensagemAtencao("Crie uma senha inicial para o usuário.");
-                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                notificationWindow.ShowDialog();
+                ErroSenha.Visibility = Visibility.Visible;
                 clear = false;
             }
 

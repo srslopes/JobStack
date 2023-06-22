@@ -28,6 +28,7 @@ namespace JobStack
             empresa = BancodeDados.BuscarEmpresa(id);
             bt = false;
             AttDados();
+            EsconderErros();
         }
 
         public void AttDados()
@@ -38,40 +39,58 @@ namespace JobStack
 
         }
 
+        public void EsconderErros()
+        {
+            ErroNome.Visibility = Visibility.Hidden;
+            ErroCNPJvazio.Visibility = Visibility.Hidden;
+            ErroCNPJinvalido.Visibility = Visibility.Hidden;
+            ErroEmailExiste.Visibility = Visibility.Hidden;
+            ErroEmailVazio.Visibility = Visibility.Hidden;
+            ErroSenha.Visibility = Visibility.Hidden;
+        }
+
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
+            EsconderErros();
             bool clear = true;
             if(NomeEmpresa.Text.Equals(""))
             {
-                //nome vazio
+                ErroNome.Visibility = Visibility.Visible;
                 clear = false;
             }
-
-            try
+            if(CnpjEmpresa.Text.Equals(""))
             {
-                long x = long.Parse(CnpjEmpresa.Text);
+                ErroCNPJvazio.Visibility = Visibility.Visible;
             }
-            catch (FormatException)
+            else
             {
-                //Ra inválida
-                CnpjEmpresa.Text = "";
-                clear = false;
+                try
+                {
+                    long x = long.Parse(CnpjEmpresa.Text);
+                }
+                catch (FormatException)
+                {
+                    ErroCNPJinvalido.Visibility = Visibility.Visible;
+                    CnpjEmpresa.Text = "";
+                    clear = false;
+                }
             }
+            
 
             if(EmailEmpresa.Text.Equals(""))
             {
-                //email vazio
+                ErroEmailVazio.Visibility = Visibility.Visible;
                 clear = false;
             }
             else if(BancodeDados.BuscarID(EmailEmpresa.Text)!=0 && BancodeDados.BuscarID(EmailEmpresa.Text) != empresa.GetID())
             {
-                //email ja existe
+                ErroEmailExiste.Visibility = Visibility.Visible;
                 clear = false;
             }
 
             if(bt && SenhaEmpresa.Password.Equals(""))
             {
-                //senha vazia
+                ErroSenha.Visibility = Visibility.Visible;
                 clear = false;
             }
 

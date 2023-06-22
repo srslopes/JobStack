@@ -457,6 +457,14 @@
                    Foreground="#003964"
                    VerticalAlignment="Top" Margin="32,50,0,0"
                         />
+        <TextBlock x:Name="ErroTitulo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="261,155,0,0" />
+        <TextBlock x:Name="ErroTurno" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="580,196,0,0" />
+        <TextBlock x:Name="ErroTipo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="234,234,0,0" />
+        <TextBlock x:Name="ErroJornada" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="613,234,0,0" />
+        <TextBlock x:Name="ErroCurso" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="296,278,0,0" />
+        <TextBlock x:Name="ErroSalario" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="674,278,0,0" />
+        <TextBlock x:Name="ErroDescricao" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="379,446,0,0" />
+        <TextBlock x:Name="ErroQtd" Text="Valor Inválido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="47,538,0,0" />
         <TextBlock Text="Título:"
                    FontSize="22"
                    FontFamily="Century Gothic"

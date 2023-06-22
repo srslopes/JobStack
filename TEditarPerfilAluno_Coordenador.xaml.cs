@@ -28,6 +28,7 @@ namespace JobStack
             aluno = BancodeDados.BuscarAluno(id);
             AttDados();
             bt = false;
+            EsconderErros();
         }
         public void AttDados()
         {
@@ -44,54 +45,74 @@ namespace JobStack
             BancodeDados.MenuCoordenador.CarregarJanela(te);
         }
 
+        public void EsconderErros()
+        {
+            ErroNome.Visibility = Visibility.Hidden;
+            ErroRAvazio.Visibility = Visibility.Hidden;
+            ErroRAinvalido.Visibility = Visibility.Hidden;
+            ErroEmailExiste.Visibility = Visibility.Hidden;
+            ErroEmailVazio.Visibility = Visibility.Hidden;
+            ErroSenha.Visibility = Visibility.Hidden;
+            ErroCurso.Visibility = Visibility.Hidden;
+            ErroPeriodo.Visibility = Visibility.Hidden;
+        }
+
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
+            EsconderErros();
             bool clear = true;
             
 
             if(NomeAluno.Text.Equals(""))
             {
-                //nome esta vazio
+                ErroNome.Visibility = Visibility.Visible;
                 clear = false;
             }
 
             if(CBCursos.SelectedIndex == -1)
             {
-                //selecionar curso
+                ErroCurso.Visibility = Visibility.Visible;
                 clear = false;
             }
 
             if(CBPeriodo.SelectedIndex == -1)
             {
-                //selecionar periodo
+                ErroPeriodo.Visibility = Visibility.Visible;
                 clear = false;
             }
-
-            try
+            if(RAAluno.Text.Equals(""))
             {
-                long x = long.Parse(RAAluno.Text);
+                ErroRAvazio.Visibility = Visibility.Visible;
             }
-            catch(FormatException)
+            else
             {
-                //Ra inválida
-                RAAluno.Text = "";
-                clear = false;
+                try
+                {
+                    long x = long.Parse(RAAluno.Text);
+                }
+                catch (FormatException)
+                {
+                    ErroRAinvalido.Visibility = Visibility.Visible;
+                    RAAluno.Text = "";
+                    clear = false;
+                }
             }
+            
 
             if (EmailAluno.Text.Equals(""))
             {
-
+                ErroEmailVazio.Visibility = Visibility.Visible;
                 clear = false;
             }
             else if (BancodeDados.BuscarID(EmailAluno.Text) != 0 && BancodeDados.BuscarID(EmailAluno.Text) != aluno.GetID())
             {
-                //email ja existe
+                ErroEmailExiste.Visibility = Visibility.Visible;
                 clear = false;
             }
 
             if(bt && SenhaAluno.Password.Equals(""))
             {
-                //senha vazia
+                ErroSenha.Visibility = Visibility.Visible;
                 clear = false;
             }
 

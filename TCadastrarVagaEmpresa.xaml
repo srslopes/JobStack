@@ -491,6 +491,8 @@
                  Margin="85,72.667,0,0" 
                  Style="{DynamicResource TextBoxStyle1}"
                     />
+
+
         <TextBlock Text="Criador:"
                    Margin="20, 110, 0, 0"
                    FontSize="22"
@@ -648,6 +650,16 @@
                  Style="{DynamicResource TextBoxStyle1}"
                  TextWrapping="Wrap" AcceptsReturn="True"
                     />
+
+        <TextBlock x:Name="ErroTitulo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="254,99,0,0" />
+        <TextBlock x:Name="ErroTurno" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="570,133,0,0" />
+        <TextBlock x:Name="ErroTipo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="218,173,0,0" />
+        <TextBlock x:Name="ErroJornada" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="599,173,0,0" />
+        <TextBlock x:Name="ErroCurso" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="279,214,0,0" />
+        <TextBlock x:Name="ErroSalario" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="657,214,0,0" />
+        <TextBlock x:Name="ErroDescricao" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="356,380,0,0" />
+        <TextBlock x:Name="ErroQtd" Text="Valor Inválido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="32,473,0,0" />
+
         <TextBlock Text="Quantidade de vagas:"
                    Margin="20,402.666,0,0"
                    FontSize="22"
