@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo-jobstack-icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
@@ -198,9 +201,6 @@
     <Compile Include="THistoricoVagasEmpresa.xaml.cs">
       <DependentUpon>THistoricoVagasEmpresa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TLogin.xaml.cs">
-      <DependentUpon>TLogin.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TMenuAdministrador.xaml.cs">
       <DependentUpon>TMenuAdministrador.xaml</DependentUpon>
     </Compile>
@@ -215,9 +215,6 @@
     </Compile>
     <Compile Include="TMinhasInscricoesAluno.xaml.cs">
       <DependentUpon>TMinhasInscricoesAluno.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TNotificacoes.xaml.cs">
-      <DependentUpon>TNotificacoes.xaml</DependentUpon>
     </Compile>
     <Compile Include="TPesquisarAluno.xaml.cs">
       <DependentUpon>TPesquisarAluno.xaml</DependentUpon>
@@ -462,10 +459,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TMenuAdministrador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -483,10 +476,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TMinhasInscricoesAluno.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TNotificacoes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -640,6 +629,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icones\enviar-mensagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo-jobstack-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

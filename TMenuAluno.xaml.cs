@@ -102,16 +102,7 @@ namespace JobStack
             ConteudoJanela.Children.Add(insc);
         }
 
-        private void txtBtnNotificacoes_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            TextBlock textBlock = sender as TextBlock;
-            if (textBlock.Text == "NOTIFICAÇÕES")
-            {
-                TNotificacoes notificar = new TNotificacoes();
-                ConteudoJanela.Children.Clear();
-                ConteudoJanela.Children.Add(notificar);
-            }
-        }
+        
 
         private void txtBtnLogout_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

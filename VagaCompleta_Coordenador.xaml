@@ -72,12 +72,12 @@
             VerticalAlignment="Top"
             Background="Transparent"
             Foreground="#003964"
-            Margin="20,20,0,0"
+            Margin="20,30,0,0"
                         />
         <Button x:Name="BtnCancelar"
             Width="30"
             Height="30" 
-            Margin="0,21,32,0"
+            Margin="0,30,27,0"
                     
             FontSize="14"
             FontFamily="Century Gothic"
@@ -100,7 +100,7 @@
             FontFamily="Century Gothic"
             Background="Transparent"
             Foreground="#003964"
-            Margin="20,60,0,0"
+            Margin="20,70,0,0"
                         />
         <TextBlock Text="DESCRIÇÃO:"
             FontSize="20"

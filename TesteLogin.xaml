@@ -724,12 +724,12 @@
             </Grid>
             <TextBlock x:Name="textBlockSuporteTécnico" 
                    HorizontalAlignment="Left" 
-                   Margin="146.995,424.333,0,0" 
+                   Margin="151,424,0,0" 
                    VerticalAlignment="Top"
                    FontFamily="Century Gothic"
                    Width="153" 
                    FontSize="16" 
-                   Grid.Column="1" Height="19.617"><Hyperlink NavigateUri="http://www.example.com" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="SUPORTE TÉCNICO"/></Hyperlink></TextBlock>
+                   Grid.Column="1" Height="20"><Hyperlink NavigateUri="http://www.example.com" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="SUPORTE TÉCNICO"/></Hyperlink></TextBlock>
             <TextBlock Grid.Column="1" 
                    HorizontalAlignment="Left" 
                    FontFamily="Century Gothic Bold"

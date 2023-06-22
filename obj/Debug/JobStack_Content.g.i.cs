@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icones/enviar-mensagem.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logo-jobstack-icon.ico")]
 
 

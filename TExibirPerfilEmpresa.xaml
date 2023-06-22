@@ -195,7 +195,7 @@
             Background="#003964"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Foreground="White" Margin="0,20.5,22,0" Style="{DynamicResource ButtonStyle1}"
+            Foreground="White" Margin="0,23,22,0" Style="{DynamicResource ButtonStyle1}"
             
             >
             <Image Source="Icones/back.png" Height="19.625" Width="20.292" />
