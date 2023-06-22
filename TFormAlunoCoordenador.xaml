@@ -475,7 +475,7 @@
             Margin="66.087,340.46,0,0"
                     />
         <ComboBox x:Name="CBPeriodo"
-        Width="250"
+        Width="337"
         Height="30"
         FontSize="18"
         FontFamily="Century Gothic"
@@ -483,7 +483,7 @@
         Background="Transparent"
         Foreground="#003964"
         VerticalAlignment="Top"
-        Margin="160.904,338.968,0,0"
+        Margin="161,339,0,0"
         Style="{DynamicResource ComboBoxStyle1}">
             <ComboBoxItem Content="1º semestre" />
             <ComboBoxItem Content="2º semestre" />
@@ -545,7 +545,7 @@
             Margin="66,189.02,0,0"
                     />
         <TextBox x:Name="EmailAluno"
-            Width="429.272"
+            Width="728"
             Height="30"
                  Padding="5, 0, 0, 0"
             FontSize="18"
@@ -553,7 +553,7 @@
             FontFamily="Century Gothic"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="143.956,187.88,0,0" Style="{DynamicResource TextBoxStyle1}"
+            Margin="144,188,0,0" Style="{DynamicResource TextBoxStyle1}"
                         />
         <TextBlock Text="Senha inicial:"
             FontSize="22"
@@ -565,12 +565,12 @@
             Margin="66,237.055,0,0"
                     />
         <PasswordBox x:Name="SenhaAluno"
-                     Width="350"
+                     Width="660"
                      Height="30"
                      Padding="5, 0, 0, 0"
                      FontSize="18"
                      FontFamily="Century Gothic"
-                     Margin="212.388,237.262,0,0"
+                     Margin="212,237,0,0"
                      HorizontalAlignment="Left"
                      VerticalAlignment="Top" Style="{DynamicResource PasswordBoxStyle1}"
                         />
@@ -595,14 +595,14 @@
                 FontSize="16" Margin="810,583,24,27"
                 Style="{DynamicResource BotaoArredondadoStyle}" Click="BtnCancelar_Click"
            />
-        <TextBlock x:Name="ErroNome" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="275,168,0,0" />
-        <TextBlock x:Name="ErroRAvazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="675,168,0,0" />
-        <TextBlock x:Name="ErroRAinvalido" Text="Valor invalido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="675,168,0,0" />
-        <TextBlock x:Name="ErroEmailExiste" Text="Email já existe" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="300,216,0,0" />
-        <TextBlock x:Name="ErroEmailVazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="305,216,0,0" />
-        <TextBlock x:Name="ErroSenha" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="340,262,0,0" />
-        <TextBlock x:Name="ErroCurso" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="265,315,0,0" />
-        <TextBlock x:Name="ErroPeriodo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="241,366,0,0" />
+        <TextBlock x:Name="ErroNome" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="142,170,0,0" />
+        <TextBlock x:Name="ErroRAvazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="568,168,0,0" />
+        <TextBlock x:Name="ErroRAinvalido" Text="Valor invalido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="568,168,0,0" />
+        <TextBlock x:Name="ErroEmailExiste" Text="Email já existe" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="144,220,0,0" />
+        <TextBlock x:Name="ErroEmailVazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="144,218,0,0" />
+        <TextBlock x:Name="ErroSenha" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="212,266,0,0" />
+        <TextBlock x:Name="ErroCurso" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="138,317,0,0" />
+        <TextBlock x:Name="ErroPeriodo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="161,368,0,0" />
 
 
     </Grid>

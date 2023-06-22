@@ -195,7 +195,7 @@
             Margin="66,154.5,0,0"
                     />
         <TextBox x:Name="NomeEmpresa"
-            Width="355"
+            Width="431"
             Height="30"
             FontSize="22"
             Padding="5, 0, 0, 0"
@@ -203,7 +203,7 @@
             FontFamily="Century Gothic"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="142.5,154,0,0" Style="{DynamicResource TextBoxStyle1}"
+            Margin="142,154,0,0" Style="{DynamicResource TextBoxStyle1}"
                         />
         <TextBlock Text="CNPJ:"
             FontSize="22"
@@ -216,7 +216,7 @@
             
                     />
         <TextBox x:Name="CnpjEmpresa"
-            Width="282.039"
+            Width="437"
             TextWrapping="NoWrap"
             Height="30"
                  Padding="5, 0, 0, 0"
@@ -224,7 +224,7 @@
             FontFamily="Century Gothic"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="135.936,199.856,0,0"
+            Margin="136,200,0,0"
             Style="{DynamicResource TextBoxStyle1}"
                         />
         <TextBlock Text="E-mail:"
@@ -257,22 +257,22 @@
             Margin="66,292.087,0,0"
                     />
         <PasswordBox x:Name="SenhaEmpresa"
-            Width="350"
+            Width="361"
             Height="30"
             FontSize="18"
             Padding="5, 0, 0, 0"
             FontFamily="Century Gothic"
-            Margin="212.388,292.294,0,0"
+            Margin="212,292,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top" Style="{DynamicResource PasswordBoxStyle1}"
                         />
 
-        <TextBlock x:Name="ErroNome" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="272,181,0,0" />
-        <TextBlock x:Name="ErroCNPJvazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="231,226,0,0" />
-        <TextBlock x:Name="ErroCNPJinvalido" Text="Valor invalido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="231,226,0,0" />
-        <TextBlock x:Name="ErroEmailExiste" Text="Email já existe" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="316,272,0,0" />
-        <TextBlock x:Name="ErroEmailVazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="318,272,0,0" />
-        <TextBlock x:Name="ErroSenha" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="341,327,0,0" />
+        <TextBlock x:Name="ErroNome" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="144,184,0,0" />
+        <TextBlock x:Name="ErroCNPJvazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="136,230,0,0" />
+        <TextBlock x:Name="ErroCNPJinvalido" Text="Valor invalido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="136,229,0,0" />
+        <TextBlock x:Name="ErroEmailExiste" Text="Email já existe" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="144,275,0,0" />
+        <TextBlock x:Name="ErroEmailVazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="144,275,0,0" />
+        <TextBlock x:Name="ErroSenha" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="212,320,0,0" />
 
     </Grid>
 </UserControl>

@@ -202,7 +202,7 @@
             Margin="66,154.5,0,0"
                     />
         <TextBox x:Name="NomeEmpresa"
-            Width="355"
+            Width="548"
             Height="30"
             FontSize="22"
             Padding="5, 0, 0, 0"
@@ -210,7 +210,7 @@
             FontFamily="Century Gothic"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="142.5,154,0,0" Style="{DynamicResource TextBoxStyle1}"
+            Margin="142,154,0,0" Style="{DynamicResource TextBoxStyle1}"
                         />
         <TextBlock Text="CNPJ:"
             FontSize="22"
@@ -223,7 +223,7 @@
             
                     />
         <TextBox x:Name="CnpjEmpresa"
-            Width="282.039"
+            Width="554"
             TextWrapping="NoWrap"
             Height="30"
             FontSize="22"
@@ -231,7 +231,7 @@
             FontFamily="Century Gothic"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="135.936,199.856,0,0"
+            Margin="136,200,0,0"
             Style="{DynamicResource TextBoxStyle1}"
                         />
         <TextBlock Text="E-mail:"
@@ -244,7 +244,7 @@
             Margin="66,247.052,0,0"
                     />
         <TextBox x:Name="EmailEmpresa"
-            Width="429.272"
+            Width="546"
             Height="30"
             FontSize="18"
             TextWrapping="NoWrap"
@@ -252,7 +252,7 @@
             FontFamily="Century Gothic"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="143.956,245.912,0,0" Style="{DynamicResource TextBoxStyle1}"
+            Margin="144,246,0,0" Style="{DynamicResource TextBoxStyle1}"
                         />
         <Button x:Name="BtnSenha"
             Width="110"
@@ -287,12 +287,12 @@
                      IsEnabled="False"
                         />
 
-        <TextBlock x:Name="ErroNome" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="272,181,0,0" />
-        <TextBlock x:Name="ErroCNPJvazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="231,226,0,0" />
-        <TextBlock x:Name="ErroCNPJinvalido" Text="Valor invalido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="231,226,0,0" />
-        <TextBlock x:Name="ErroEmailExiste" Text="Email já existe" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="316,272,0,0" />
-        <TextBlock x:Name="ErroEmailVazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="318,272,0,0" />
-        <TextBlock x:Name="ErroSenha" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="439,326,0,0" />
-       
+        <TextBlock x:Name="ErroNome" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="143,183,0,0" />
+        <TextBlock x:Name="ErroCNPJvazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="136,229,0,0" RenderTransformOrigin="-0.04,0.706" />
+        <TextBlock x:Name="ErroCNPJinvalido" Text="Valor invalido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="136,229,0,0" />
+        <TextBlock x:Name="ErroEmailExiste" Text="Email já existe" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="144,276,0,0" />
+        <TextBlock x:Name="ErroEmailVazio" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="144,276,0,0" />
+        <TextBlock x:Name="ErroSenha" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="272,326,0,0" />
+
     </Grid>
 </UserControl>

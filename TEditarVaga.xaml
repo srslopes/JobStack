@@ -457,14 +457,14 @@
                    Foreground="#003964"
                    VerticalAlignment="Top" Margin="32,50,0,0"
                         />
-        <TextBlock x:Name="ErroTitulo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="261,155,0,0" />
-        <TextBlock x:Name="ErroTurno" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="580,196,0,0" />
-        <TextBlock x:Name="ErroTipo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="234,234,0,0" />
-        <TextBlock x:Name="ErroJornada" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="613,234,0,0" />
-        <TextBlock x:Name="ErroCurso" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="296,278,0,0" />
-        <TextBlock x:Name="ErroSalario" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="674,278,0,0" />
-        <TextBlock x:Name="ErroDescricao" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="379,446,0,0" />
-        <TextBlock x:Name="ErroQtd" Text="Valor Inválido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="47,538,0,0" />
+        <TextBlock x:Name="ErroTitulo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="99,157,0,0" />
+        <TextBlock x:Name="ErroTurno" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="534,196,0,0" />
+        <TextBlock x:Name="ErroTipo" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="186,234,0,0" />
+        <TextBlock x:Name="ErroJornada" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="565,237,0,0" />
+        <TextBlock x:Name="ErroCurso" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="239,278,0,0" />
+        <TextBlock x:Name="ErroSalario" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="644,278,0,0" />
+        <TextBlock x:Name="ErroDescricao" Text="Campo vazio" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="34,442,0,0" />
+        <TextBlock x:Name="ErroQtd" Text="Valor Inválido" Foreground="Red" FontSize="14" FontFamily="Century Gothic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,538,0,0" />
         <TextBlock Text="Título:"
                    FontSize="22"
                    FontFamily="Century Gothic"
@@ -475,7 +475,7 @@
                    Margin="34,131.5,0,0"
                     />
         <TextBox x:Name="TituloVaga"
-                 Width="438"
+                 Width="685"
                  Height="24"
                  Background="White"
                  Foreground="Black"
@@ -484,7 +484,7 @@
                  Padding="5, 0, 0, 0"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Top"
-                 Margin="99,134.167,0,0" 
+                 Margin="99,134,0,0" 
                  Style="{DynamicResource TextBoxStyle1}"
                     />
         <TextBlock Text="Criador:"
@@ -516,7 +516,7 @@
                    VerticalAlignment="Top"
                     />
         <TextBox x:Name="Turno"
-                 Width="180"
+                 Width="250"
                  Height="24"
                  Padding="5, 0, 0, 0"
                  Background="White"
@@ -525,7 +525,7 @@
                  FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Top"
-                 Margin="534,173.5,0,0"
+                 Margin="534,174,0,0"
                   Style="{DynamicResource TextBoxStyle1}"
                     />
         <TextBlock Text="Tipo de vaga:"
@@ -538,7 +538,7 @@
                    VerticalAlignment="Top"
                         />
         <TextBox x:Name="Tipo"
-                 Width="180"
+                 Width="253"
                  Height="24"
                  Padding="5, 0, 0, 0"
                  Background="White"
@@ -547,7 +547,7 @@
                  FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Top"
-                 Margin="186,213.5,0,0"
+                 Margin="186,214,0,0"
                   Style="{DynamicResource TextBoxStyle1}"
                     />
         <TextBlock Text="Jornada:"
@@ -560,7 +560,7 @@
                    VerticalAlignment="Top"
                     />
         <TextBox x:Name="Jornada"
-                 Width="180"
+                 Width="220"
                  Height="24"
                  Padding="5, 0, 0, 0"
                  Background="White"
@@ -569,7 +569,7 @@
                  FontSize="18"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Top"
-                 Margin="564,213.5,0,0"
+                 Margin="564,214,0,0"
                   Style="{DynamicResource TextBoxStyle1}"
                     />
         <TextBlock Text="Curso de interesse:"

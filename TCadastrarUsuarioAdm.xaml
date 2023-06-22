@@ -454,7 +454,7 @@
                    VerticalAlignment="Center" Margin="58,153.513,0,459.513"
                     />
         <TextBox x:Name="textBoxNome"
-                 Width="368"
+                 Width="435"
                  Padding="5, 0, 0, 0"
                  Height="30"
                  FontFamily="Century Gothic"
@@ -462,7 +462,7 @@
                  TextWrapping="NoWrap"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
-                 Margin="137.333,152.833,0,457.167" Style="{DynamicResource TextboxArredondadaStyle}"
+                 Margin="137,153,0,457" Style="{DynamicResource TextboxArredondadaStyle}"
                     />
         <TextBlock x:Name="textBlockCondiçãoNome" 
                    HorizontalAlignment="Center" 
@@ -490,14 +490,13 @@
                    VerticalAlignment="Top" 
                    FontSize="16" 
                    Width="293.333"><Run Text="Condição senha"/></TextBlock>
-        <PasswordBox x:Name="PasswordBoxSenha" 
-                     Width="300"
+        <PasswordBox x:Name="PasswordBoxSenha"
                      Height="30"
                      
                      Padding="5, 0, 0, 0"
                      FontSize="18"
                      FontFamily="Century Gothic"
-                     Margin="206.999,292.833,447,317.166" Style="{DynamicResource PasswordBoxStyle1}"/>
+                     Margin="207,293,382,317" Style="{DynamicResource PasswordBoxStyle1}"/>
 
         <TextBlock Text="E-mail:"
                    FontSize="22"
