@@ -65,9 +65,11 @@ namespace JobStack
                 formacao = "";
                 experiencia = "";
                 SetIdImg(14);
+                Vagas = new List<int>();
                 BancodeDados.AdicionarAluno(this);
                 BancodeDados.SetIdUser(GetID());
                 Chat adm = new Chat(1);
+                Chat coord = new Chat(101);
             }
         }
 

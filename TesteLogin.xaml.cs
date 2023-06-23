@@ -332,9 +332,11 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
                 // Se houver algum erro selecionado, informa que a mensagem foi enviada para o email
                 // e exibe uma mensagem de sucesso ao usuário.
                 Aluno aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
+
                 Chat chat = BancodeDados.BuscarChat(aluno.ChatExiste(1));
                 chat.NovaMensagem($"Problema:\n" +erro.SelectedItem.ToString() +"\nEmail:\n" +textBoxEmailProblema.Text);
-
+                Chat chat2 = BancodeDados.BuscarChat(aluno.ChatExiste(101));
+                chat2.NovaMensagem($"Problema:\n" + erro.SelectedItem.ToString() + "\nEmail:\n" + textBoxEmailProblema.Text);
                 BancodeDados.SetIdUser(0);
                 // Oculta o painel de senha e exibe o painel de e-mail
                 gridSenha.Visibility = Visibility.Hidden;
@@ -352,6 +354,12 @@ textBlockSenha.Margin.Top - botãoVoltar.ActualHeight - 5,  // Define a margem s
                 // Chama o método Passo1() para atualizar a interface do usuário
                 Passo1();
                 InicializarComboBox();
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemSucesso("Mensagem enviada");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
             }
         }
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)

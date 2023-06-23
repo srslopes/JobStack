@@ -209,6 +209,8 @@
                  Foreground="Black"
                  Padding="5, 0, 5, 0" Margin="200,207,200,163" Style="{DynamicResource PasswordBoxStyle1}"
             />
+        <TextBlock x:Name="Erro" Text="Campo vazio" Foreground="Red" FontFamily="Century Gothic" FontSize="14" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Margin="0,90,0,0" Visibility="Hidden"/>
         <Button x:Name="BtnSalvar"
             Content="Salvar"
             Width="130"
@@ -219,7 +221,7 @@
             Foreground="White"
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom" Margin="641,0,29,27"
-            Style="{DynamicResource ButtonStyle1}"
+            Style="{DynamicResource ButtonStyle1}" Click="BtnSalvar_Click"
                 />
     </Grid>
 </Window>

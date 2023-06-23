@@ -244,8 +244,8 @@
             FontFamily="Century Gothic"
             Background="Transparent"
             Foreground="Black"
-            Margin="618.009,334.166,0,0"
-            Width="50"
+            Margin="618,334,0,0"
+            Width="167"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"/>
         <Grid x:Name="GridExibirInscritos" Margin="13.841,405,20.159,35"

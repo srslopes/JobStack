@@ -20,7 +20,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
         <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
-            
+
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
@@ -58,7 +58,7 @@
         </Style>
         <!-- STYLE BTN FECHAR -->
         <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
-           
+
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
@@ -305,8 +305,8 @@
             FontFamily="Century Gothic"
             Background="Transparent"
             Foreground="Black"
-            Margin="622.509,388.166,0,0"
-            Width="50"
+            Margin="623,388,0,0"
+            Width="128"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"/>
         <TextBlock Text="CURSO DE INTERESSE:"

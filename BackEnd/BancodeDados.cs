@@ -409,12 +409,12 @@ namespace JobStack
 
         private void PopularUsuarios()
         {
-            Admin n1 = new Admin("admin1", "123");
+            Admin n1 = new Admin("admin1@jobstack.com", "123");
             
-            Admin n2 = new Admin("admin2", "234");
+            Admin n2 = new Admin("admin2@jobstack.com", "123");
 
-            Coordenador n3 = new Coordenador("coord1", "123");
-            Coordenador n4 = new Coordenador("coord2", "234");
+            Coordenador n3 = new Coordenador("coord1@fatec.com", "123");
+            Coordenador n4 = new Coordenador("coord2@fatec.com", "123");
 
             IdUser = 101;
             Chat c = new Chat(1);
@@ -422,46 +422,72 @@ namespace JobStack
 
             Aluno x = new Aluno("Login");
 
-            Aluno n5 = new Aluno("e", "efg");
+            Aluno n5 = new Aluno("estevan@email.com", "123");
             n5.SetNome("Estevan Ferreira Rodrigues");
-            n5.SetRa(966049137);
+            n5.SetRa(1270482211055);
             n5.SetIdImg(3);
             n5.SetCurso(0);
             n5.SetSemestre(3);
-            n5.SetFormacao("Ensino Médio completo");
+            n5.SetFormacao("Ensino Médio completo\nCurso Técnico em ADS");
             n5.SetExperiencia("nenhuma");
-            Aluno n6 = new Aluno("b", "bcd");
+            Aluno n6 = new Aluno("beatrice@email.com", "123");
             n6.SetNome("Beatrice Azevedo Santos");
-            n6.SetRa(537388102);
+            n6.SetRa(1270482111022);
             n6.SetIdImg(4);
-            Aluno n7 = new Aluno("f", "fgh");
+            n6.SetCurso(0);
+            n6.SetSemestre(4);
+            n6.SetFormacao("Ensino Médio completo\nCurso Udemy Python, 40h\nCurso Cisco Redes, 80h");
+            n6.SetExperiencia("Estágio TI Maxion, 6 meses");
+            Aluno n7 = new Aluno("felipe@email.com", "123");
             n7.SetNome("Felipe Araujo Fernandes");
-            n7.SetRa(872998654);
+            n7.SetRa(1270482311012);
             n7.SetIdImg(5);
-            Aluno n8 = new Aluno("i", "ijk");
+            n7.SetCurso(0);
+            n7.SetSemestre(1);
+            n7.SetFormacao("Ensino Médio completo");
+            n7.SetExperiencia("nenhuma");
+            Aluno n8 = new Aluno("isabelle@email.com", "123");
             n8.SetNome("Isabelle Oliveira Goncalves");
-            n8.SetRa(275375787);
             n8.SetIdImg(12);
-            Aluno n9 = new Aluno("j", "jkl");
+            n8.SetRa(1270482311010);
+            n8.SetCurso(0);
+            n8.SetSemestre(1);
+            n8.SetFormacao("Ensino Médio completo");
+            n8.SetExperiencia("nenhuma");
+            Aluno n9 = new Aluno("julio@email.com", "123");
             n9.SetNome("Júlio Pinto Pereira");
-            n9.SetRa(555101220);
             n9.SetIdImg(6);
+            n9.SetRa(1270482311033);
+            n9.SetCurso(0);
+            n9.SetSemestre(1);
+            n9.SetFormacao("Ensino Médio completo");
+            n9.SetExperiencia("nenhuma");
 
-            Empresa n10 = new Empresa("n", "nop");
+            Empresa n10 = new Empresa("rh@nestle.com", "123");
             n10.SetNome("Nestlé SA");
             n10.SetIdImg(9);
-            Empresa n11 = new Empresa("a", "abc");
+            n10.SetCNPJ(6409075000152);
+            n10.SetSobre("A Nestlé Brasil está presente em 99% dos lares brasileiros, líder mundial em alimentos e bebidas atua em 190 países e tem o propósito de revelar o poder dos alimentos para melhorar a qualidade de vida de todos, hoje e para as próximas gerações.");
+            Empresa n11 = new Empresa("rh@ambev.com", "123");
             n11.SetNome("Ambev");
             n11.SetIdImg(10);
-            Empresa n12 = new Empresa("p", "pqr");
+            n11.SetCNPJ(07526557000100);
+            n11.SetSobre("A Ambev faz parte da Anheuser-Busch Inbev, conhecida como AB Inbev, que nasceu da união entre o espírito pioneiro da Ambev, com a qualidade belga da Interbrew e a tradição da Anheuser-Busch.\nContamos com cerca mais de duzentas marcas de bebidas.Além da Budweiser®, temos a Stella Artois® e Beck’s®, ao lado de Leffe®, Hoegaarden®, Bud Light®, Skol®, Brahma®, Antarctica®, Quilmes®, Michelob Ultra®, Harbin®, Sedrin®, Klinskoye®, Sibirskaya Korona®, Chernigivske®, Hasseröder® e Jupiler®.");
+            Empresa n12 = new Empresa("rh@mixaria.com", "123");
             n12.SetNome("Pastelaria Mixaria");
             n12.SetIdImg(8);
-            Empresa n13 = new Empresa("r", "rst");            
+            n12.SetCNPJ(22925672000140);
+            n12.SetSobre("Trabalhamos com salgados fritos na hora e pastéis doces e salgados. No recheio maioria e no preço ");
+            Empresa n13 = new Empresa("rh@rosalina.com", "123");            
             n13.SetNome("Rosalina Supermercados");
             n13.SetIdImg(11);
-            Empresa n14 = new Empresa("m", "mno");
+            n13.SetCNPJ(05318087000163);
+            n13.SetSobre("Qualidade, dedicação e respeito aos clientes são marcas registradas da Rede Rosalina, enraizadas pelo seu fundador, que até hoje direciona as atividades da empresa.");
+            Empresa n14 = new Empresa("maxion@email.com", "123");
             n14.SetNome("Maxion");
             n14.SetIdImg(7);
+            n14.SetCNPJ(61156113000175);
+            n14.SetSobre("A Iochpe-Maxion é uma companhia global, líder mundial na produção de rodas automotivas e um dos principais produtores de componentes estruturais automotivos nas Américas. Contamos com 32 unidades fabris, localizadas em 14 países e cerca de 17 mil funcionários, o que nos capacita a atender os nossos clientes ao redor do mundo nos prazos e padrões de qualidade e competitividade exigidos por eles.");
         }
         //----------------------------------- Métodos - Vagas ---------------------------------------------------------
 

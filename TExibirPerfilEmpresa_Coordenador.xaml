@@ -146,8 +146,9 @@
                                Text="Informações da empresa"
                                Foreground="Black"
                                HorizontalAlignment="Left"
-                               VerticalAlignment="Top"
-                               Margin="10, 10, 0, 0"
+                               VerticalAlignment="Top" Width="879"
+                               TextWrapping="WrapWithOverflow"
+                               Margin="10,0,0,0"
                                 />
                 </ScrollViewer>
             </Grid>

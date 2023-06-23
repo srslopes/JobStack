@@ -68,6 +68,12 @@ namespace JobStack
             AttDados();
             TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
             BancodeDados.MenuCoordenador.CarregarJanela(analisar);
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Vaga aprovada");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
         }
 
         private void BtnRejeitar_Click(object sender, RoutedEventArgs e)
@@ -77,6 +83,12 @@ namespace JobStack
             AttDados();
             TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
             BancodeDados.MenuCoordenador.CarregarJanela(analisar);
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Vaga rejeitada");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
         }
     }
 }

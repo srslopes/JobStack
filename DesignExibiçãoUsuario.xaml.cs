@@ -58,7 +58,7 @@ namespace JobStack
 
         private void BtnGerarSenha_Click(object sender, RoutedEventArgs e)
         {
-            TGerarSenhaADM senha = new TGerarSenhaADM(this);
+            TGerarSenhaADM senha = new TGerarSenhaADM(this, ((Usuario)user).GetID());
             senha.Owner = TMenuAdministrador.GetWindow(this);
             senha.ShowDialog();
         }

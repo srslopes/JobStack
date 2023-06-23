@@ -270,7 +270,7 @@
             Background="Transparent"
             Foreground="Black"
             Margin="623,330,0,0"
-            Width="50"
+            Width="113"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"/>
         <TextBlock 

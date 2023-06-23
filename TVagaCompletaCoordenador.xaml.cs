@@ -62,6 +62,12 @@ namespace JobStack
             BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).AddNtAprovacoes();
             TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
             BancodeDados.MenuCoordenador.CarregarJanela(analisar);
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Vaga aprovada");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
         }
 
         private void BtnRejeitar_Click(object sender, RoutedEventArgs e)
@@ -70,6 +76,12 @@ namespace JobStack
             BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa()).AddNtRejeicoes();
             TSolicitacoesVagasCoordenador analisar = new TSolicitacoesVagasCoordenador();
             BancodeDados.MenuCoordenador.CarregarJanela(analisar);
+            NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+            notificationWindow.Topmost = true;
+            //aqui atualiza o texto da notificação
+            notificationWindow.AtualizarMensagemSucesso("Vaga rejeitada");
+            notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            notificationWindow.ShowDialog();
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)

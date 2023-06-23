@@ -19,14 +19,37 @@ namespace JobStack
     /// </summary>
     public partial class TGerarSenhaADM : Window
     {
-        public TGerarSenhaADM(DesignExibiçãoUsuario designExibiçãoUsuario)
+        private Usuario user;
+        public TGerarSenhaADM(DesignExibiçãoUsuario designExibiçãoUsuario, int id)
         {
             InitializeComponent();
+            user = (Usuario)BancodeDados.BuscarUsuario(id);
         }
 
         private void BtnFechar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            Erro.Visibility = Visibility.Hidden;
+            if(NovaSenha.Password.Equals(""))
+            {
+                Erro.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                user.SetSenha(NovaSenha.Password);
+                this.Close();
+                NotificacaoSucesso notificationWindow = new NotificacaoSucesso();
+                notificationWindow.Topmost = true;
+                //aqui atualiza o texto da notificação
+                notificationWindow.AtualizarMensagemSucesso("Senha alterada");
+                notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                notificationWindow.ShowDialog();
+                
+            }
         }
     }
 }

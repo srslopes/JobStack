@@ -293,8 +293,8 @@
             FontFamily="Century Gothic"
             Background="Transparent"
             Foreground="Black"
-            Margin="638.509,489.666,0,0"
-            Width="50"
+            Margin="639,490,0,0"
+            Width="97"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"/>
 
