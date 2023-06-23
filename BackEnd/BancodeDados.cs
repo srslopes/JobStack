@@ -534,27 +534,8 @@ namespace JobStack
 
         public static void PopularVagas()
         {
-            IdUser = 6001;
-            Vaga n1 = new Vaga(6001);
-            n1.SetNome("Suporte Técnico");
-            n1.SetTipo("Estágio");
-            n1.SetCurso(0);
-            n1.SetTurno("Tarde");
-            n1.SetJornada("40h");
-            n1.SetNVagas(5);
-            n1.SetSalario("1000,00");
-            n1.SetDescricao("Auxilie na resolução de problemas técnicos, suporte remoto e presencial aos usuários, garantindo o bom funcionamento dos sistemas e equipamentos, em uma das maiores empresas de alimentos do mundo.");
-            n1.Aprovar();
-            Vaga n2 = new Vaga(6001);
-            n2.SetNome("Desenvolvimento");
-            n2.SetTipo("Estágio");
-            n2.SetCurso(0);
-            n2.SetTurno("Tarde");
-            n2.SetJornada("40h");
-            n2.SetNVagas(5);
-            n2.SetSalario("1000,00");
-            n2.SetDescricao("Faça parte da equipe responsável por criar soluções tecnológicas inovadoras, desenvolvendo e aprimorando sistemas para impulsionar o crescimento e a eficiência em uma das líderes globais da indústria alimentícia.");
-            Vaga n3 = new Vaga(6001);
+            IdUser = 6002;
+            Vaga n3 = new Vaga(6002);
             n3.SetNome("Analista de Processos");
             n3.SetTipo("Junior");
             n3.SetCurso(0);
@@ -563,19 +544,9 @@ namespace JobStack
             n3.SetNVagas(5);
             n3.SetSalario("1000,00");
             n3.SetDescricao("Contribua para otimizar os processos internos, identificando oportunidades de melhoria e implementando soluções eficientes, garantindo a qualidade e eficácia das operações em uma renomada empresa de alimentos e bebidas.");
-            n3.Aprovar();
-            Vaga n4 = new Vaga(6001);
-            n4.SetNome("Gerente de TI");
-            n4.SetTipo("Junior");
-            n4.SetCurso(0);
-            n4.SetTurno("Tarde");
-            n4.SetJornada("40h");
-            n4.SetNVagas(5);
-            n4.SetSalario("1000,00");
-            n4.SetDescricao("Suporte à equipe de TI, supervisionando projetos e processos, garantindo a entrega de soluções tecnológicas alinhadas aos objetivos estratégicos da empresa, em uma das principais empresas globais do setor alimentício.");
-            n4.Encerrar();
-            IdUser = 6002;
-            Vaga n5 = new Vaga(6002);
+            n3.Aprovar();           
+            IdUser = 6003;
+            Vaga n5 = new Vaga(6003);
             n5.SetNome("Jovem Aprendiz");
             n5.SetTipo("Estágio");
             n5.SetCurso(0);
@@ -585,7 +556,39 @@ namespace JobStack
             n5.SetSalario("1000,00");
             n5.SetDescricao("Oportunidade de aprendizado prático no setor de bebidas, adquirindo conhecimentos em diferentes áreas, auxiliando nas rotinas administrativas e contribuindo para o crescimento de uma das maiores empresas do ramo.");
             n5.Aprovar();
-            Vaga n6 = new Vaga(6002);
+            IdUser = 6004;
+            Vaga n7 = new Vaga(6001);
+            n7.SetNome("Técnico em TI");
+            n7.SetTipo("Junior");
+            n7.SetCurso(0);
+            n7.SetTurno("Tarde");
+            n7.SetJornada("40h");
+            n7.SetNVagas(5);
+            n7.SetSalario("1000,00");
+            n7.SetDescricao("Suporte técnico aos usuários, manutenção de equipamentos, instalação e configuração de softwares, garantindo o funcionamento eficiente da infraestrutura tecnológica em uma empresa líder no mercado de bebidas.");
+            IdUser = 6001;
+            Vaga n2 = new Vaga(6001);
+            n2.SetNome("Desenvolvimento");
+            n2.SetTipo("Estágio");
+            n2.SetCurso(0);
+            n2.SetTurno("Tarde");
+            n2.SetJornada("40h");
+            n2.SetNVagas(5);
+            n2.SetSalario("1000,00");
+            n2.SetDescricao("Faça parte da equipe responsável por criar soluções tecnológicas inovadoras, desenvolvendo e aprimorando sistemas para impulsionar o crescimento e a eficiência em uma das líderes globais da indústria alimentícia.");
+            IdUser = 6002;
+            Vaga n4 = new Vaga(6002);
+            n4.SetNome("Gerente de TI");
+            n4.SetTipo("Junior");
+            n4.SetCurso(0);
+            n4.SetTurno("Tarde");
+            n4.SetJornada("40h");
+            n4.SetNVagas(5);
+            n4.SetSalario("1000,00");
+            n4.SetDescricao("Suporte à equipe de TI, supervisionando projetos e processos, garantindo a entrega de soluções tecnológicas alinhadas aos objetivos estratégicos da empresa, em uma das principais empresas globais do setor alimentício.");
+            n4.Encerrar();
+            IdUser = 6005;
+            Vaga n6 = new Vaga(6005);
             n6.SetNome("Ajudante de Logística");
             n6.SetTipo("Estágio");
             n6.SetCurso(0);
@@ -595,16 +598,8 @@ namespace JobStack
             n6.SetSalario("1000,00");
             n6.SetDescricao("Apoie as atividades de recebimento, armazenagem e distribuição de produtos, auxiliando na organização do estoque e no cumprimento de prazos, em uma das principais empresas do segmento de bebidas.");
             n6.Aprovar();
-            Vaga n7 = new Vaga(6002);
-            n7.SetNome("Técnico em TI");
-            n7.SetTipo("Junior");
-            n7.SetCurso(0);
-            n7.SetTurno("Tarde");
-            n7.SetJornada("40h");
-            n7.SetNVagas(5);
-            n7.SetSalario("1000,00");
-            n7.SetDescricao("Suporte técnico aos usuários, manutenção de equipamentos, instalação e configuração de softwares, garantindo o funcionamento eficiente da infraestrutura tecnológica em uma empresa líder no mercado de bebidas.");
-            Vaga n8 = new Vaga(6002);
+            IdUser = 6004;
+            Vaga n8 = new Vaga(6004);
             n8.SetNome("Desenvolvimento");
             n8.SetTipo("Junior");
             n8.SetCurso(0);
@@ -614,6 +609,33 @@ namespace JobStack
             n8.SetSalario("1000,00");
             n8.SetDescricao("Participe da criação e manutenção de sistemas, desenvolvendo soluções inovadoras para impulsionar a eficiência dos processos, em uma das maiores empresas do setor de bebidas.");
             n8.Aprovar();
+            IdUser = 6001;
+            Vaga n1 = new Vaga(6001);
+            n1.SetNome("Suporte Técnico");
+            n1.SetTipo("Estágio");
+            n1.SetCurso(0);
+            n1.SetTurno("Tarde");
+            n1.SetJornada("40h");
+            n1.SetNVagas(2);
+            n1.SetSalario("1000,00");
+            n1.SetDescricao("Auxilie na resolução de problemas técnicos, suporte remoto e presencial aos usuários, garantindo o bom funcionamento dos sistemas e equipamentos, em uma das maiores empresas de alimentos do mundo.");
+            n1.Aprovar();
+
+            int idVaga = n1.GetID();
+
+            for(int i = 1002; i<1007; i++)
+            {
+                Aluno a = BancodeDados.BuscarAluno(i);
+                n1.Inscrever(a.GetID());
+                a.AdicionarVaga(n1.GetID());
+                n6.Inscrever(a.GetID());
+                a.AdicionarVaga(n6.GetID());
+            }
+            
+
+
+
+
         }
         //--------------------------------------- Métodos - Chats --------------------------------------------------------
         public static int AdicionarChat(Chat chat)

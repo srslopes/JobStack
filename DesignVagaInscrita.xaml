@@ -181,7 +181,7 @@
                 <TextBlock x:Name="Selecao" Text="Selecionado" Foreground="Green"
                            FontFamily="Century Gothic" FontSize="20"
                            HorizontalAlignment="Right" VerticalAlignment="Top"
-                           Margin="0,40,30,0" Visibility="Hidden"/>
+                           Margin="0,40,30,0" Visibility="Visible"/>
                 <Button x:Name="BtnVerMais"
                 Width="90" 
                 Height="25" 

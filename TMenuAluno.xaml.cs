@@ -157,6 +157,7 @@ namespace JobStack
         }
         public void NtVagas()
         {
+            NotificacaoV.Visibility = Visibility.Visible;
             int x = aluno.GetAprov();
             NotifV.Text = x.ToString();
             if (x == 0) NotificacaoV.Visibility = Visibility.Hidden;

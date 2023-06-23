@@ -25,7 +25,7 @@ namespace JobStack
         {
             aluno = BancodeDados.BuscarAluno(BancodeDados.GetIdUser());
             InitializeComponent();
-            attFull();
+            AttVagas();
             NtVagas();
             BancodeDados.MenuAluno.NtVagas();
         }

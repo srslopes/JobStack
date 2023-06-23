@@ -43,11 +43,42 @@ namespace JobStack
             SPVagas.Height = 0;
             for(int i=0; i<empresa.GetVagas().Count; i++)
             {
-                DesignVagaLista_Coordenador vaga = new DesignVagaLista_Coordenador(empresa.GetVagas()[i]);
-                SPVagas.Children.Add(vaga);
-                SPVagas.Height += 110;
+                if(BancodeDados.BuscarVaga(empresa.GetVagas()[i]).GetStatus()==3)
+                {
+                    DesignVagaLista_Coordenador vaga = new DesignVagaLista_Coordenador(empresa.GetVagas()[i]);
+                    SPVagas.Children.Add(vaga);
+                    SPVagas.Height += 110;
+                }
+                
             }
-            if(empresa.GetVagas().Count==0)
+            for (int i = 0; i < empresa.GetVagas().Count; i++)
+            {
+                if (BancodeDados.BuscarVaga(empresa.GetVagas()[i]).GetStatus() == 2)
+                {
+                    DesignVagaLista_Coordenador vaga = new DesignVagaLista_Coordenador(empresa.GetVagas()[i]);
+                    SPVagas.Children.Add(vaga);
+                    SPVagas.Height += 110;
+                }
+            }
+            for (int i = 0; i < empresa.GetVagas().Count; i++)
+            {
+                if (BancodeDados.BuscarVaga(empresa.GetVagas()[i]).GetStatus() == 0)
+                {
+                    DesignVagaLista_Coordenador vaga = new DesignVagaLista_Coordenador(empresa.GetVagas()[i]);
+                    SPVagas.Children.Add(vaga);
+                    SPVagas.Height += 110;
+                }
+            }
+            for (int i = 0; i < empresa.GetVagas().Count; i++)
+            {
+                if (BancodeDados.BuscarVaga(empresa.GetVagas()[i]).GetStatus() == 1)
+                {
+                    DesignVagaLista_Coordenador vaga = new DesignVagaLista_Coordenador(empresa.GetVagas()[i]);
+                    SPVagas.Children.Add(vaga);
+                    SPVagas.Height += 110;
+                }
+            }
+            if (empresa.GetVagas().Count==0)
             {
                 SemVagas sv = new SemVagas();
                 SPVagas.Children.Add(sv);

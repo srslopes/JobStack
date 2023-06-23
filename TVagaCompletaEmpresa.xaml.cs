@@ -116,7 +116,7 @@ namespace JobStack
             //aqui atualiza o texto da notificação
             notificationWindow.AtualizarMensagemSucesso("Vaga finalizada");
             notificationWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            //notificationWindow.ShowDialog();
+            notificationWindow.ShowDialog();
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)

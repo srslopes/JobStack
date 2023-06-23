@@ -25,7 +25,10 @@ namespace JobStack
         {
 
             BancodeDados bd = new BancodeDados();
-            InitializeComponent();
+            TesteLogin x = new TesteLogin();
+            x.Show();
+            this.Close();
+            //InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

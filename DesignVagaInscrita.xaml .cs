@@ -35,6 +35,7 @@ namespace JobStack
             TipoVaga.Text = vaga.GetTipo();
             DescricaoVaga.Text = vaga.GetDescricao();
             Img.ImageSource = BancodeDados.BuscarImg((BancodeDados.BuscarEmpresa(vaga.GetIdEmpresa())).GetIdImg());
+            Selecao.Visibility = Visibility.Hidden;
             var converter = new BrushConverter();
             switch (vaga.GetStatus())
             {
